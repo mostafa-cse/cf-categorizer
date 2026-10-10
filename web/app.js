@@ -24,6 +24,7 @@ const state = {
   pagination: { total: 0, page: 1, totalPages: 1 },
   userProgress: { solved: new Set(), bookmarked: new Set(), notes: {} },
   activeProblem: null,
+  activeModalTab: 'statement',
   expandedTopics: new Set()
 };
 
@@ -55,11 +56,11 @@ function getRatingTitle(rating) {
 
 function getStarBadgeHtml(star) {
   if (star === '***') {
-    return `<span class="px-2 py-0.5 rounded text-xs font-semibold star-badge-3 inline-flex items-center gap-1">★★★ Masterpiece</span>`;
+    return `<span class="px-2 py-0.5 rounded text-xs font-semibold star-badge-3 inline-flex items-center gap-1" title="Top-tier Masterpiece problem">★★★ Masterpiece</span>`;
   } else if (star === '**') {
-    return `<span class="px-2 py-0.5 rounded text-xs font-medium star-badge-2 inline-flex items-center gap-1">★★ Core</span>`;
+    return `<span class="px-2 py-0.5 rounded text-xs font-medium star-badge-2 inline-flex items-center gap-1" title="Core Technique essential problem">★★ Core</span>`;
   } else {
-    return `<span class="px-2 py-0.5 rounded text-xs star-badge-1 inline-flex items-center gap-1">★ Practice</span>`;
+    return `<span class="px-2 py-0.5 rounded text-xs star-badge-1 inline-flex items-center gap-1" title="Practice problem">★ Practice</span>`;
   }
 }
 
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // Setup UI Listeners
 function setupEventListeners() {
-  // Global search input
+  // Global search input with debounce
   const searchInput = document.getElementById('global-search');
   let searchTimeout;
   if (searchInput) {
@@ -83,7 +84,7 @@ function setupEventListeners() {
         state.filters.searchQuery = e.target.value.trim();
         state.filters.page = 1;
         loadProblems();
-      }, 300);
+      }, 250);
     });
   }
 
@@ -95,7 +96,7 @@ function setupEventListeners() {
     });
   }
 
-  // Keyboard shortcut '/' to search
+  // Keyboard shortcut '/' to search & Escape to close modal
   window.addEventListener('keydown', (e) => {
     if (e.key === '/' && document.activeElement !== searchInput) {
       e.preventDefault();
@@ -149,16 +150,16 @@ function renderTopStats(stats) {
   const pct = ((solvedCount / (stats.curriculum_quality_count || 1)) * 100).toFixed(1);
 
   container.innerHTML = `
-    <div class="flex items-center gap-4 text-xs font-medium text-slate-300">
-      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60">
+    <div class="flex items-center gap-3 text-xs font-medium text-slate-300">
+      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800">
         <span class="text-amber-400 font-bold">${stats.curriculum_quality_count?.toLocaleString()}</span>
-        <span class="text-slate-400">Quality Problems</span>
+        <span class="text-slate-400">Curated Problems</span>
       </div>
-      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60">
+      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800">
         <span class="text-amber-300 font-bold">${stats.stars?.['***']?.toLocaleString()}</span>
         <span class="text-slate-400">Masterpieces</span>
       </div>
-      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-slate-800/80 border border-slate-700/60">
+      <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800">
         <span class="text-emerald-400 font-bold">${solvedCount}</span>
         <span class="text-slate-400">Solved (${pct}%)</span>
       </div>
@@ -172,6 +173,10 @@ function updateHeaderCounters() {
 
   const bookmarkedBadge = document.getElementById('header-bookmarked-count');
   if (bookmarkedBadge) bookmarkedBadge.textContent = state.userProgress.bookmarked.size;
+
+  if (state.stats) {
+    renderTopStats(state.stats);
+  }
 }
 
 // Load Taxonomy Tree
@@ -206,38 +211,38 @@ function renderTaxonomyTree() {
 
   let html = `
     <div class="mb-2">
-      <button onclick="selectAllTopics()" class="w-full text-left px-3 py-2 rounded-lg text-sm font-semibold flex items-center justify-between transition-colors ${!state.activeMainTopic ? 'bg-sky-500/15 text-sky-400 border border-sky-500/30 font-bold' : 'text-slate-300 hover:bg-slate-800/60'}">
+      <button onclick="selectAllTopics()" class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex items-center justify-between transition-colors ${!state.activeMainTopic ? 'bg-sky-500/15 text-sky-300 border border-sky-500/30 font-bold' : 'text-slate-300 hover:bg-slate-900/60 border border-transparent'}">
         <span class="flex items-center gap-2"><span>📚</span> All Topics</span>
-        <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">7,068</span>
+        <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono border border-slate-700/60">7,068</span>
       </button>
     </div>
   `;
 
-  state.taxonomy.forEach((main, mIdx) => {
-    const isMainActive = state.activeMainTopic === main.name;
+  state.taxonomy.forEach((main) => {
+    const isMainActive = state.activeMainTopic === main.name && !state.activeSubtopic && !state.activeSubsubtopicId;
     const isExpanded = state.expandedTopics.has(main.name);
     const icon = topicIcons[main.name] || '📌';
 
     html += `
-      <div class="mb-1 rounded-lg overflow-hidden border border-slate-800/80 bg-slate-900/40" data-topic-name="${main.name.toLowerCase()}">
-        <div class="flex items-center justify-between px-3 py-2 cursor-pointer select-none transition-colors ${isMainActive ? 'bg-sky-500/10 text-sky-300' : 'hover:bg-slate-800/50 text-slate-200'}" onclick="toggleMainTopicAccordion('${main.name}')">
-          <div class="flex items-center gap-2 font-medium text-sm">
+      <div class="mb-1 rounded-xl overflow-hidden border border-slate-800/80 bg-slate-900/40" data-topic-name="${main.name.toLowerCase()}">
+        <div class="flex items-center justify-between px-3 py-2 cursor-pointer select-none transition-colors ${isMainActive ? 'bg-sky-500/15 text-sky-300 font-bold' : 'hover:bg-slate-800/50 text-slate-200'}" onclick="toggleMainTopicAccordion('${main.name}')">
+          <div class="flex items-center gap-2 text-xs font-semibold">
             <span>${icon}</span>
             <span class="truncate">${main.name}</span>
           </div>
           <div class="flex items-center gap-1.5 text-xs">
-            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[11px]">${main.total_problems}</span>
-            <span class="text-slate-500 text-xs transition-transform ${isExpanded ? 'rotate-90' : ''}">▶</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[10px]">${main.total_problems}</span>
+            <span class="text-slate-500 text-[10px] transition-transform duration-200 ${isExpanded ? 'rotate-90' : ''}">▶</span>
           </div>
         </div>
 
-        <div class="subtopics-list pl-3 pr-2 py-1 space-y-1 bg-slate-950/40 border-t border-slate-800/50 ${isExpanded ? 'block' : 'hidden'}">
+        <div class="subtopics-list pl-2 pr-1.5 py-1 space-y-1 bg-slate-950/40 border-t border-slate-800/50 ${isExpanded ? 'block' : 'hidden'}">
           ${main.subtopics.map(sub => {
-            const isSubActive = state.activeSubtopic === sub.name;
+            const isSubActive = state.activeMainTopic === main.name && state.activeSubtopic === sub.name && !state.activeSubsubtopicId;
             return `
               <div class="subtopic-node" data-subtopic-name="${sub.name.toLowerCase()}">
-                <div class="flex items-center justify-between py-1 px-2 rounded text-xs cursor-pointer ${isSubActive ? 'bg-slate-800 text-sky-400 font-semibold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30'}" onclick="selectSubtopic('${main.name}', '${sub.name}')">
-                  <span class="truncate">${sub.name}</span>
+                <div class="flex items-center justify-between py-1 px-2 rounded-lg text-xs cursor-pointer ${isSubActive ? 'bg-sky-500/15 text-sky-300 font-bold' : 'text-slate-300 hover:text-white hover:bg-slate-800/40'}" onclick="selectSubtopic('${main.name}', '${sub.name}')">
+                  <span class="truncate font-medium">${sub.name}</span>
                   <span class="text-[10px] text-slate-500 font-mono">${sub.total_problems}</span>
                 </div>
                 <div class="subsub-list pl-2 pt-0.5 space-y-0.5">
@@ -245,7 +250,7 @@ function renderTaxonomyTree() {
                     const isSstActive = state.activeSubsubtopicId === sst.id;
                     return `
                       <div onclick="selectSubsubtopic('${main.name}', '${sub.name}', ${sst.id})" 
-                           class="flex items-center justify-between py-1 px-2 rounded text-[11px] cursor-pointer transition-colors ${isSstActive ? 'bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}"
+                           class="flex items-center justify-between py-1 px-2 rounded-lg text-[11px] cursor-pointer transition-colors ${isSstActive ? 'bg-sky-500/25 text-sky-200 border border-sky-500/40 font-bold' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/30'}"
                            data-sst-name="${sst.name.toLowerCase()}">
                         <span class="truncate" title="${sst.full_title}">${sst.name}</span>
                         <div class="flex items-center gap-1 text-[10px] shrink-0">
@@ -273,8 +278,19 @@ function toggleMainTopicAccordion(mainTopicName) {
   } else {
     state.expandedTopics.add(mainTopicName);
   }
-  // Also select this main topic if clicking header
   selectMainTopic(mainTopicName);
+}
+
+function toggleExpandAllTree() {
+  const btn = document.getElementById('tree-expand-toggle-btn');
+  if (state.expandedTopics.size >= state.taxonomy.length) {
+    state.expandedTopics.clear();
+    if (btn) btn.textContent = 'Expand All';
+  } else {
+    state.taxonomy.forEach(m => state.expandedTopics.add(m.name));
+    if (btn) btn.textContent = 'Collapse All';
+  }
+  renderTaxonomyTree();
 }
 
 function filterTaxonomyTree(query) {
@@ -293,7 +309,7 @@ function filterTaxonomyTree(query) {
   });
 }
 
-// Topic Selection
+// Topic Selection Handlers
 function selectAllTopics() {
   state.activeMainTopic = null;
   state.activeSubtopic = null;
@@ -374,18 +390,21 @@ function updateBreadcrumbs() {
     if (state.activeSubsubtopicObj) {
       headerCard.classList.remove('hidden');
       headerCard.innerHTML = `
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded text-xs font-mono bg-sky-500/20 text-sky-400 border border-sky-500/30">#${state.activeSubsubtopicObj.id}</span>
-              <h2 class="text-lg font-bold text-white">${state.activeSubsubtopicObj.name}</h2>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">#${state.activeSubsubtopicObj.id}</span>
+              <h2 class="text-base sm:text-lg font-bold text-white">${state.activeSubsubtopicObj.name}</h2>
             </div>
             <p class="text-xs text-slate-400 mt-1">${state.activeMainTopic} &gt; ${state.activeSubtopic}</p>
           </div>
-          <div class="flex items-center gap-3">
+          <div class="flex items-center gap-4">
             <div class="text-right">
-              <div class="text-xs text-slate-400 font-medium">Available Problems</div>
-              <div class="text-base font-bold text-white font-mono">${state.activeSubsubtopicObj.problem_count} <span class="text-xs font-normal text-amber-400">(${state.activeSubsubtopicObj.masterpiece_count} ★★★)</span></div>
+              <div class="text-xs text-slate-400 font-medium">Curated Problems</div>
+              <div class="text-sm sm:text-base font-bold text-white font-mono">
+                ${state.activeSubsubtopicObj.problem_count} 
+                <span class="text-xs font-normal text-amber-400">(${state.activeSubsubtopicObj.masterpiece_count} ★★★)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -395,8 +414,8 @@ function updateBreadcrumbs() {
       headerCard.innerHTML = `
         <div class="flex items-center justify-between">
           <div>
-            <h2 class="text-lg font-bold text-white">${state.activeMainTopic}</h2>
-            <p class="text-xs text-slate-400 mt-1">Viewing all problems in category</p>
+            <h2 class="text-base sm:text-lg font-bold text-white">${state.activeMainTopic}</h2>
+            <p class="text-xs text-slate-400 mt-1">Viewing all curriculum problems in this main domain</p>
           </div>
         </div>
       `;
@@ -412,9 +431,9 @@ async function loadProblems() {
   if (!grid) return;
 
   grid.innerHTML = `
-    <div class="col-span-full py-16 flex flex-col items-center justify-center text-slate-400">
+    <div class="col-span-full py-20 flex flex-col items-center justify-center text-slate-400">
       <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-sky-500 mb-4"></div>
-      <p class="text-sm">Loading curated problems...</p>
+      <p class="text-sm font-medium">Loading problems from curriculum database...</p>
     </div>
   `;
 
@@ -434,14 +453,14 @@ async function loadProblems() {
   try {
     const res = await fetch(`/api/problems?${params.toString()}`);
     const data = await res.json();
-    state.problems = data.problems;
-    state.pagination = { total: data.total, page: data.page, totalPages: data.total_pages };
+    state.problems = data.problems || [];
+    state.pagination = { total: data.total || 0, page: data.page || 1, totalPages: data.total_pages || 1 };
 
     renderProblems();
     renderPagination();
   } catch (err) {
     console.error('Failed to load problems:', err);
-    grid.innerHTML = `<div class="col-span-full py-12 text-center text-rose-400 text-sm">Failed to fetch problems. Please try again.</div>`;
+    grid.innerHTML = `<div class="col-span-full py-16 text-center text-rose-400 text-sm">Failed to fetch problems. Please try refreshing.</div>`;
   }
 }
 
@@ -450,18 +469,18 @@ function renderProblems() {
   const container = document.getElementById('problems-container');
   const countBadge = document.getElementById('problems-count-badge');
   if (countBadge) {
-    countBadge.textContent = `${state.pagination.total} problems found`;
+    countBadge.textContent = `${state.pagination.total?.toLocaleString()} problems found`;
   }
 
   if (!container) return;
 
   if (state.problems.length === 0) {
     container.innerHTML = `
-      <div class="col-span-full py-20 text-center glass-panel rounded-xl p-8 border border-slate-800">
+      <div class="col-span-full py-24 text-center glass-panel rounded-2xl p-8 border border-slate-800">
         <div class="text-4xl mb-3">🔍</div>
-        <h3 class="text-base font-semibold text-slate-200">No problems found</h3>
-        <p class="text-sm text-slate-400 mt-1 max-w-md mx-auto">Try adjusting your filters, rating range, or search terms.</p>
-        <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-lg bg-sky-500/20 text-sky-400 text-xs font-semibold hover:bg-sky-500/30 transition-colors">Reset All Filters</button>
+        <h3 class="text-base font-bold text-slate-200">No matching problems found</h3>
+        <p class="text-xs text-slate-400 mt-1 max-w-md mx-auto">Try clearing search filters or broadening your rating range.</p>
+        <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-xl bg-sky-500/20 text-sky-400 text-xs font-semibold hover:bg-sky-500/30 transition-colors">Reset All Filters</button>
       </div>
     `;
     return;
@@ -475,32 +494,32 @@ function renderProblems() {
     const starBadge = getStarBadgeHtml(p.importance);
 
     return `
-      <div class="glass-card rounded-xl p-4 flex flex-col justify-between relative group animate-fade-in ${isSolved ? 'border-emerald-500/40 bg-emerald-950/10' : ''}">
+      <div class="glass-card rounded-2xl p-4 flex flex-col justify-between relative group animate-fade-in ${isSolved ? 'border-emerald-500/40 bg-emerald-950/10' : ''}">
         <div>
-          <!-- Header: Stars, Rating, ID, Solves -->
+          <!-- Header: Rating, ID, Star, Bookmark -->
           <div class="flex items-center justify-between gap-2 mb-2.5">
             <div class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded text-xs font-mono font-bold ${ratingClass}" title="${ratingTitle}">
                 ${p.rating || 'Unrated'}
               </span>
-              <span class="text-xs font-mono font-semibold text-slate-400">${p.id}</span>
+              <span class="text-xs font-mono font-bold text-slate-300">${p.id}</span>
             </div>
             <div class="flex items-center gap-1.5">
               ${starBadge}
-              <button onclick="event.stopPropagation(); toggleBookmark('${p.id}')" class="p-1 rounded hover:bg-slate-800 transition-colors ${isBookmarked ? 'text-amber-400' : 'text-slate-500 hover:text-slate-300'}" title="Bookmark">
+              <button onclick="event.stopPropagation(); toggleBookmark('${p.id}')" class="p-1 rounded-lg hover:bg-slate-800 transition-colors ${isBookmarked ? 'text-amber-400' : 'text-slate-500 hover:text-slate-300'}" title="Toggle Bookmark">
                 ★
               </button>
             </div>
           </div>
 
           <!-- Problem Title -->
-          <h3 class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors line-clamp-2 cursor-pointer mb-2" onclick="openProblemModal('${p.id}')">
+          <h3 class="text-sm font-bold text-white group-hover:text-sky-300 transition-colors line-clamp-2 cursor-pointer mb-2" onclick="openProblemModal('${p.id}', 'statement')">
             ${p.name}
           </h3>
 
           <!-- Solution Approach Trick Preview -->
-          <div class="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800/90 text-xs text-slate-300 leading-relaxed mb-3 line-clamp-3">
-            <span class="text-amber-400 font-semibold">💡 Trick:</span> ${p.approach_summary || 'Standard algorithmic technique application.'}
+          <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-800/90 text-xs text-slate-300 leading-relaxed mb-3 line-clamp-3">
+            <span class="text-amber-400 font-semibold">💡 Trick:</span> ${p.approach_summary || 'Apply standard techniques under this category.'}
           </div>
 
           <!-- Subtopic Tag Pill -->
@@ -518,19 +537,21 @@ function renderProblems() {
 
         <!-- Footer Actions -->
         <div class="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs mt-auto">
-          <div class="flex items-center gap-1.5 text-slate-400 text-[11px]">
-            <span>👥</span> ${p.solved_count?.toLocaleString() || 0}
-          </div>
-
           <div class="flex items-center gap-2">
             <label class="flex items-center gap-1 text-[11px] cursor-pointer text-slate-300 hover:text-emerald-400 select-none">
               <input type="checkbox" ${isSolved ? 'checked' : ''} onchange="toggleSolved('${p.id}')" class="rounded border-slate-700 text-emerald-500 focus:ring-0 bg-slate-800 cursor-pointer">
               <span>Solved</span>
             </label>
-            <button onclick="openProblemModal('${p.id}', 'statement')" class="px-2.5 py-1 rounded bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 transition-colors font-medium text-[11px]">
-              View Details
+            <a href="${p.problem_url}" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 text-[11px] flex items-center gap-0.5" title="Open on Codeforces">
+              CF ↗
+            </a>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <button onclick="openProblemModal('${p.id}', 'statement')" class="px-2.5 py-1 rounded-lg bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 transition-colors font-medium text-[11px]">
+              Statement
             </button>
-            <button onclick="openProblemModal('${p.id}', 'editorial')" class="px-2.5 py-1 rounded bg-purple-500/15 text-purple-300 hover:bg-purple-500/25 border border-purple-500/30 transition-colors font-medium text-[11px] flex items-center gap-1">
+            <button onclick="openProblemModal('${p.id}', 'editorial')" class="px-2.5 py-1 rounded-lg bg-purple-500/15 text-purple-300 hover:bg-purple-500/25 border border-purple-500/30 transition-colors font-medium text-[11px] flex items-center gap-1">
               <span>📖</span> Editorial
             </button>
           </div>
@@ -545,27 +566,31 @@ function renderPagination() {
   const container = document.getElementById('pagination-container');
   if (!container) return;
 
-  const { page, totalPages } = state.pagination;
+  const { page, totalPages, total } = state.pagination;
   if (totalPages <= 1) {
     container.innerHTML = '';
     return;
   }
 
-  let html = `
+  container.innerHTML = `
     <div class="flex items-center justify-center gap-2 py-4">
-      <button onclick="goToPage(${page - 1})" ${page <= 1 ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors">
+      <button onclick="goToPage(1)" ${page <= 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-2.5 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors" title="First Page">
+        ⇤
+      </button>
+      <button onclick="goToPage(${page - 1})" ${page <= 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors">
         ◀ Previous
       </button>
       <span class="px-3 py-1.5 text-xs text-slate-400 font-mono">
         Page <strong class="text-white">${page}</strong> of <strong class="text-white">${totalPages}</strong>
       </span>
-      <button onclick="goToPage(${page + 1})" ${page >= totalPages ? 'disabled class="opacity-40 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors">
+      <button onclick="goToPage(${page + 1})" ${page >= totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-3 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors">
         Next ▶
+      </button>
+      <button onclick="goToPage(${totalPages})" ${page >= totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-slate-800"'} class="px-2.5 py-1.5 rounded-lg border border-slate-800 bg-slate-900 text-slate-300 text-xs font-medium transition-colors" title="Last Page">
+        ⇥
       </button>
     </div>
   `;
-
-  container.innerHTML = html;
 }
 
 function goToPage(newPage) {
@@ -585,6 +610,20 @@ function setImportanceFilter(imp) {
       btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 text-white transition-colors shadow-sm";
     } else {
       btn.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-colors";
+    }
+  });
+  loadProblems();
+}
+
+function setStatusFilter(status) {
+  state.filters.status = status;
+  state.filters.page = 1;
+  document.querySelectorAll('[data-filter-status]').forEach(btn => {
+    const val = btn.getAttribute('data-filter-status');
+    if (val === status) {
+      btn.className = "px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 text-white transition-colors shadow-sm";
+    } else {
+      btn.className = "px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-colors";
     }
   });
   loadProblems();
@@ -610,14 +649,14 @@ function applyCustomRating() {
   loadProblems();
 }
 
-function setStatusFilter(status) {
-  state.filters.status = status;
+function setSortOrder(sortBy) {
+  state.filters.sortBy = sortBy;
   state.filters.page = 1;
   loadProblems();
 }
 
-function setSortOrder(sortBy) {
-  state.filters.sortBy = sortBy;
+function setPageSize(size) {
+  state.filters.pageSize = parseInt(size) || 30;
   state.filters.page = 1;
   loadProblems();
 }
@@ -630,6 +669,7 @@ function resetFilters() {
   state.filters.searchQuery = '';
   state.filters.sortBy = 'rating_asc';
   state.filters.page = 1;
+  state.filters.pageSize = 30;
 
   const searchInput = document.getElementById('global-search');
   if (searchInput) searchInput.value = '';
@@ -638,6 +678,13 @@ function resetFilters() {
   if (minInput) minInput.value = '';
   if (maxInput) maxInput.value = '';
 
+  const sortSelect = document.getElementById('sort-by-select');
+  if (sortSelect) sortSelect.value = 'rating_asc';
+  const sizeSelect = document.getElementById('page-size-select');
+  if (sizeSelect) sizeSelect.value = '30';
+
+  setImportanceFilter('all');
+  setStatusFilter('all');
   selectAllTopics();
 }
 
@@ -706,11 +753,12 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
   const modalContent = document.getElementById('problem-modal-content');
   if (!modal || !modalContent) return;
 
+  state.activeModalTab = defaultTab;
   modal.classList.remove('hidden');
   modalContent.innerHTML = `
     <div class="py-24 flex flex-col items-center justify-center text-slate-400">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-500 mb-4"></div>
-      <p>Loading problem statement, topic editorial & C++ solution...</p>
+      <p class="text-sm font-medium">Loading problem statement, topic editorial & C++ solution...</p>
     </div>
   `;
 
@@ -730,24 +778,24 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
     if (Array.isArray(p.sample_testcases) && p.sample_testcases.length > 0) {
       samplesHtml = `
         <div class="mt-6">
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Sample Tests</h4>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Sample Tests</h4>
           <div class="space-y-4">
             ${p.sample_testcases.map((sample, idx) => `
-              <div class="rounded-xl border border-slate-800 bg-slate-950/60 overflow-hidden">
+              <div class="rounded-xl border border-slate-800 bg-slate-950/70 overflow-hidden shadow-sm">
                 <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-800">
                   <div class="p-3">
                     <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
                       <span class="font-semibold text-slate-300">Input ${idx + 1}</span>
                       <button onclick="copyToClipboard(\`${escapeForAttr(sample.input)}\`, 'Input copied!')" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-sky-400 hover:bg-slate-700 transition-colors">Copy</button>
                     </div>
-                    <pre class="text-xs text-slate-200 font-mono bg-slate-900/90 p-2.5 rounded overflow-x-auto whitespace-pre">${escapeHtml(sample.input)}</pre>
+                    <pre class="text-xs text-slate-200 font-mono bg-slate-900/90 p-2.5 rounded-lg overflow-x-auto whitespace-pre">${escapeHtml(sample.input)}</pre>
                   </div>
                   <div class="p-3">
                     <div class="flex items-center justify-between text-xs text-slate-400 mb-1.5">
                       <span class="font-semibold text-slate-300">Output ${idx + 1}</span>
                       <button onclick="copyToClipboard(\`${escapeForAttr(sample.output)}\`, 'Output copied!')" class="px-2 py-0.5 rounded text-[11px] bg-slate-800 text-sky-400 hover:bg-slate-700 transition-colors">Copy</button>
                     </div>
-                    <pre class="text-xs text-emerald-400 font-mono bg-slate-900/90 p-2.5 rounded overflow-x-auto whitespace-pre">${escapeHtml(sample.output)}</pre>
+                    <pre class="text-xs text-emerald-400 font-mono bg-slate-900/90 p-2.5 rounded-lg overflow-x-auto whitespace-pre">${escapeHtml(sample.output)}</pre>
                   </div>
                 </div>
               </div>
@@ -788,40 +836,40 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
 
     modalContent.innerHTML = `
       <!-- Modal Top Bar -->
-      <div class="p-6 border-b border-slate-800 bg-slate-900/60 sticky top-0 z-10 backdrop-blur-md flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="p-5 md:p-6 border-b border-slate-800 bg-slate-900/70 sticky top-0 z-20 backdrop-blur-md flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <div class="flex items-center gap-2.5 flex-wrap">
             <span class="px-2.5 py-1 rounded text-sm font-mono font-bold ${ratingClass}">${p.rating || 'Unrated'}</span>
             <span class="text-xs text-slate-400 font-medium">${ratingTitle}</span>
             <span class="text-slate-600">•</span>
-            <span class="text-xs font-mono text-slate-400">ID: ${p.id}</span>
+            <span class="text-xs font-mono text-slate-300 font-bold">ID: ${p.id}</span>
             <span class="text-slate-600">•</span>
             ${starBadge}
             <span class="text-slate-600">•</span>
             <span class="text-xs text-slate-400">👥 ${p.solved_count?.toLocaleString()} solves</span>
           </div>
-          <h2 class="text-xl font-extrabold text-white mt-1.5">${p.name}</h2>
+          <h2 class="text-lg md:text-xl font-extrabold text-white mt-1.5">${p.name}</h2>
           <div class="text-xs text-slate-400 mt-1">
             <span>${p.main_topic}</span> &gt; <span>${p.subtopic}</span> &gt; <span class="text-sky-400 font-semibold">${p.subsubtopic}</span>
           </div>
         </div>
 
-        <div class="flex items-center gap-2" id="modal-actions-container">
-          <button onclick="toggleSolved('${p.id}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${isSolved ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}">
+        <div class="flex items-center gap-2 flex-wrap" id="modal-actions-container">
+          <button onclick="toggleSolved('${p.id}')" class="px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-colors ${isSolved ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}">
             <span>${isSolved ? '✓ Solved' : 'Mark Solved'}</span>
           </button>
-          <button onclick="toggleBookmark('${p.id}')" class="px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${isBookmarked ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}">
+          <button onclick="toggleBookmark('${p.id}')" class="px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-colors ${isBookmarked ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}">
             <span>${isBookmarked ? '★ Bookmarked' : '☆ Bookmark'}</span>
           </button>
-          <a href="${p.problem_url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-sky-500 text-white text-xs font-semibold hover:bg-sky-400 transition-colors flex items-center gap-1">
+          <a href="${p.problem_url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-sky-500 text-white text-xs font-semibold hover:bg-sky-400 transition-colors flex items-center gap-1">
             Solve on CF ↗
           </a>
           ${p.editorial_url ? `
-            <a href="${p.editorial_url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-semibold hover:bg-purple-600/40 transition-colors">
-              Official CF Blog ↗
+            <a href="${p.editorial_url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-semibold hover:bg-purple-600/40 transition-colors">
+              CF Blog ↗
             </a>
           ` : ''}
-          <button onclick="closeProblemModal()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors text-base font-bold ml-2">
+          <button onclick="closeProblemModal()" class="p-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors text-base font-bold ml-1">
             ✕
           </button>
         </div>
@@ -829,11 +877,14 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
 
       <!-- Modal Tabs Header -->
       <div class="flex items-center gap-2 px-6 pt-3 border-b border-slate-800 bg-slate-900/40">
-        <button id="modal-tab-btn-statement" onclick="switchModalTab('statement')" class="px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 ${defaultTab === 'statement' ? 'border-b-2 border-sky-500 text-sky-400 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
+        <button id="modal-tab-btn-statement" onclick="switchModalTab('statement')" class="px-4 py-2.5 text-xs font-semibold rounded-t-xl transition-colors flex items-center gap-1.5 ${defaultTab === 'statement' ? 'border-b-2 border-sky-500 text-sky-400 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
           <span>📄</span> Problem Statement & Samples
         </button>
-        <button id="modal-tab-btn-editorial" onclick="switchModalTab('editorial')" class="px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 ${defaultTab === 'editorial' ? 'border-b-2 border-purple-500 text-purple-300 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
-          <span>💡</span> Topic Editorial & C++ Solution
+        <button id="modal-tab-btn-editorial" onclick="switchModalTab('editorial')" class="px-4 py-2.5 text-xs font-semibold rounded-t-xl transition-colors flex items-center gap-1.5 ${defaultTab === 'editorial' ? 'border-b-2 border-purple-500 text-purple-300 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
+          <span>💡</span> Topic Editorial & Walkthrough
+        </button>
+        <button id="modal-tab-btn-solution" onclick="switchModalTab('solution')" class="px-4 py-2.5 text-xs font-semibold rounded-t-xl transition-colors flex items-center gap-1.5 ${defaultTab === 'solution' ? 'border-b-2 border-emerald-500 text-emerald-300 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
+          <span>⚡</span> C++ Reference Implementation
         </button>
       </div>
 
@@ -841,9 +892,9 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
       <div id="modal-tab-statement" class="${defaultTab === 'statement' ? '' : 'hidden'} p-6 md:p-8 space-y-6">
         <!-- Prominent Solution Trick & Technique Callout -->
         <div class="p-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/30 text-slate-200">
-          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm mb-1.5">
-            <span class="text-base">💡</span>
-            <span>Core Algorithmic Solution Trick & Invariant</span>
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-xs mb-1.5">
+            <span class="text-sm">💡</span>
+            <span>Core Solution Invariant</span>
           </div>
           <p class="text-sm leading-relaxed text-amber-100/90 font-medium">
             ${p.approach_summary || 'Apply standard techniques under this category.'}
@@ -863,14 +914,14 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
           <div class="flex items-center gap-1.5 ml-auto">
             <span class="text-slate-500">Tags:</span>
             <div class="flex flex-wrap gap-1">
-              ${(p.tags || []).map(t => `<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[11px]">${t}</span>`).join('')}
+              ${(p.tags || []).map(t => `<span class="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 text-[11px]">${t}</span>`).join('')}
             </div>
           </div>
         </div>
 
         <!-- Description -->
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Statement</h4>
+          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Statement</h4>
           <div class="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap font-normal prose prose-invert max-w-none">
             ${escapeHtml(p.description || 'No statement available.')}
           </div>
@@ -879,8 +930,8 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
         <!-- Input Specification -->
         ${p.input_specification ? `
           <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Input Specification</h4>
-            <div class="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap bg-slate-900/40 p-3.5 rounded-lg border border-slate-800/80">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Input Specification</h4>
+            <div class="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/80">
               ${escapeHtml(p.input_specification)}
             </div>
           </div>
@@ -889,8 +940,8 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
         <!-- Output Specification -->
         ${p.output_specification ? `
           <div>
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Output Specification</h4>
-            <div class="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap bg-slate-900/40 p-3.5 rounded-lg border border-slate-800/80">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-2">Output Specification</h4>
+            <div class="text-slate-300 text-sm leading-relaxed whitespace-pre-wrap bg-slate-900/40 p-3.5 rounded-xl border border-slate-800/80">
               ${escapeHtml(p.output_specification)}
             </div>
           </div>
@@ -902,10 +953,10 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
         <!-- Personal Notes Section -->
         <div class="mt-8 pt-6 border-t border-slate-800">
           <div class="flex items-center justify-between mb-2">
-            <h4 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
               <span>📝</span> Personal Learning Notes
             </h4>
-            <button onclick="saveNotes('${p.id}')" class="px-3 py-1 rounded bg-sky-500 text-white text-xs font-semibold hover:bg-sky-400 transition-colors">
+            <button onclick="saveNotes('${p.id}')" class="px-3 py-1 rounded-lg bg-sky-500 text-white text-xs font-semibold hover:bg-sky-400 transition-colors">
               Save Notes
             </button>
           </div>
@@ -913,36 +964,48 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
         </div>
       </div>
 
-      <!-- Tab 2: Topic-Based Editorial & C++ Solution Pane -->
+      <!-- Tab 2: Topic-Based Editorial Pane -->
       <div id="modal-tab-editorial" class="${defaultTab === 'editorial' ? '' : 'hidden'} p-6 md:p-8 space-y-6">
         <!-- Technique Callout Bar -->
         <div class="flex items-center justify-between p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs">
           <div class="flex items-center gap-2 text-purple-300 font-mono">
-            <span>🎯 Curriculum Technique:</span>
+            <span>🎯 Technique:</span>
             <span class="font-bold text-white px-2 py-0.5 rounded bg-purple-900/60 border border-purple-600/40">${p.subsubtopic}</span>
           </div>
-          <button onclick="copyToClipboard(\`${escapeForAttr(cppCode)}\`, 'C++ Code copied!')" class="px-3 py-1 rounded-lg bg-sky-500 text-white hover:bg-sky-400 transition-colors text-xs font-semibold flex items-center gap-1.5 shadow-sm">
-            <span>📋</span> Copy C++ Code
-          </button>
+          <div class="flex items-center gap-2">
+            <button onclick="copyToClipboard(\`${escapeForAttr(p.editorial_full_markdown || '')}\`, 'Editorial Markdown copied!')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-purple-300 text-xs font-medium transition-colors">
+              Copy Markdown
+            </button>
+            <button onclick="switchModalTab('solution')" class="px-3 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/30 transition-colors text-xs font-semibold flex items-center gap-1">
+              <span>⚡</span> View C++ Code
+            </button>
+          </div>
         </div>
 
         <!-- Rendered Editorial Body -->
         <div class="prose prose-invert max-w-none text-slate-200 text-sm leading-relaxed space-y-4">
           ${editorialBodyHtml}
         </div>
+      </div>
 
-        <!-- Standalone C++ Solution Box -->
-        <div class="mt-8 rounded-xl border border-slate-800 bg-slate-950 overflow-hidden shadow-xl">
-          <div class="flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-800">
+      <!-- Tab 3: C++ Solution Implementation Pane -->
+      <div id="modal-tab-solution" class="${defaultTab === 'solution' ? '' : 'hidden'} p-6 md:p-8 space-y-6">
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 overflow-hidden shadow-2xl">
+          <div class="flex items-center justify-between px-4 py-3 bg-slate-900/90 border-b border-slate-800">
             <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 font-mono">
               <span class="text-emerald-400">⚡</span>
-              <span>C++ Reference Implementation — ${p.id} (${p.subsubtopic})</span>
+              <span>solution_${p.id}.cpp — (${p.subsubtopic})</span>
             </div>
-            <button onclick="copyToClipboard(\`${escapeForAttr(cppCode)}\`, 'C++ Code copied!')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-xs font-medium transition-colors flex items-center gap-1">
-              <span>📋</span> Copy
-            </button>
+            <div class="flex items-center gap-2">
+              <button onclick="downloadCode('${p.id}', \`${escapeForAttr(cppCode)}\`)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium transition-colors flex items-center gap-1">
+                <span>💾</span> Download .cpp
+              </button>
+              <button onclick="copyToClipboard(\`${escapeForAttr(cppCode)}\`, 'C++ Code copied!')" class="px-3 py-1 rounded-lg bg-sky-500 hover:bg-sky-400 text-white text-xs font-semibold transition-colors flex items-center gap-1 shadow-sm">
+                <span>📋</span> Copy Code
+              </button>
+            </div>
           </div>
-          <pre class="p-4 text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre leading-relaxed bg-slate-950/90 select-all"><code>${escapeHtml(cppCode)}</code></pre>
+          <pre class="p-5 text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre leading-relaxed bg-[#060a12] select-all"><code>${escapeHtml(cppCode)}</code></pre>
         </div>
       </div>
     `;
@@ -953,31 +1016,46 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
     }
   } catch (err) {
     console.error('Failed to load problem detail:', err);
-    modalContent.innerHTML = `<div class="p-12 text-center text-rose-400">Failed to load problem statement and editorial.</div>`;
+    modalContent.innerHTML = `<div class="p-16 text-center text-rose-400">Failed to load problem statement and editorial.</div>`;
   }
 }
 
 function switchModalTab(tab) {
+  state.activeModalTab = tab;
   const btnStatement = document.getElementById('modal-tab-btn-statement');
   const btnEditorial = document.getElementById('modal-tab-btn-editorial');
+  const btnSolution = document.getElementById('modal-tab-btn-solution');
+
   const paneStatement = document.getElementById('modal-tab-statement');
   const paneEditorial = document.getElementById('modal-tab-editorial');
+  const paneSolution = document.getElementById('modal-tab-solution');
+
   if (!btnStatement || !btnEditorial || !paneStatement || !paneEditorial) return;
 
+  // Reset tab button states
+  [btnStatement, btnEditorial, btnSolution].forEach(b => {
+    if (b) b.className = 'px-4 py-2.5 text-xs font-semibold rounded-t-xl transition-colors flex items-center gap-1.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40';
+  });
+
+  // Hide all panes
+  [paneStatement, paneEditorial, paneSolution].forEach(p => {
+    if (p) p.classList.add('hidden');
+  });
+
   if (tab === 'statement') {
-    btnStatement.className = 'px-4 py-2.5 text-xs font-bold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-sky-500 text-sky-400 bg-slate-800/80';
-    btnEditorial.className = 'px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40';
+    btnStatement.className = 'px-4 py-2.5 text-xs font-bold rounded-t-xl transition-colors flex items-center gap-1.5 border-b-2 border-sky-500 text-sky-400 bg-slate-800/80';
     paneStatement.classList.remove('hidden');
-    paneEditorial.classList.add('hidden');
-  } else {
-    btnEditorial.className = 'px-4 py-2.5 text-xs font-bold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-purple-500 text-purple-300 bg-slate-800/80';
-    btnStatement.className = 'px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40';
-    paneStatement.classList.add('hidden');
+  } else if (tab === 'editorial') {
+    btnEditorial.className = 'px-4 py-2.5 text-xs font-bold rounded-t-xl transition-colors flex items-center gap-1.5 border-b-2 border-purple-500 text-purple-300 bg-slate-800/80';
     paneEditorial.classList.remove('hidden');
+  } else if (tab === 'solution') {
+    if (btnSolution) btnSolution.className = 'px-4 py-2.5 text-xs font-bold rounded-t-xl transition-colors flex items-center gap-1.5 border-b-2 border-emerald-500 text-emerald-300 bg-slate-800/80';
+    if (paneSolution) paneSolution.classList.remove('hidden');
   }
 
-  if (window.MathJax && window.MathJax.typesetPromise) {
-    window.MathJax.typesetPromise([tab === 'statement' ? paneStatement : paneEditorial]).catch(() => {});
+  const activePane = tab === 'statement' ? paneStatement : (tab === 'editorial' ? paneEditorial : paneSolution);
+  if (activePane && window.MathJax && window.MathJax.typesetPromise) {
+    window.MathJax.typesetPromise([activePane]).catch(() => {});
   }
 }
 
@@ -990,13 +1068,12 @@ function updateModalActionButtons() {
   const container = document.getElementById('modal-actions-container');
   if (!container) return;
 
-  // Just re-render the modal or update the buttons
   const buttons = container.querySelectorAll('button');
   if (buttons.length >= 2) {
-    buttons[0].className = `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${isSolved ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}`;
+    buttons[0].className = `px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-colors ${isSolved ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}`;
     buttons[0].innerHTML = `<span>${isSolved ? '✓ Solved' : 'Mark Solved'}</span>`;
 
-    buttons[1].className = `px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors ${isBookmarked ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}`;
+    buttons[1].className = `px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-colors ${isBookmarked ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-700'}`;
     buttons[1].innerHTML = `<span>${isBookmarked ? '★ Bookmarked' : '☆ Bookmark'}</span>`;
   }
 }
@@ -1011,7 +1088,7 @@ function closeProblemModal() {
 function pickRandomProblem() {
   if (state.problems.length > 0) {
     const randomIdx = Math.floor(Math.random() * state.problems.length);
-    openProblemModal(state.problems[randomIdx].id);
+    openProblemModal(state.problems[randomIdx].id, 'statement');
   }
 }
 
@@ -1024,10 +1101,24 @@ function copyToClipboard(text, message = 'Copied to clipboard!') {
   });
 }
 
+// Download Code Helper
+function downloadCode(problemId, code) {
+  const blob = new Blob([code], { type: 'text/x-c++src' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `solution_${problemId}.cpp`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast(`solution_${problemId}.cpp downloaded!`);
+}
+
 function showToast(msg) {
   const toast = document.createElement('div');
-  toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-xs font-medium shadow-2xl animate-fade-in flex items-center gap-2';
-  toast.innerHTML = `<span>✓</span> <span>${msg}</span>`;
+  toast.className = 'fixed bottom-6 right-6 z-50 px-4 py-2.5 rounded-xl bg-slate-800/95 border border-slate-700 text-white text-xs font-medium shadow-2xl animate-fade-in flex items-center gap-2 backdrop-blur-md';
+  toast.innerHTML = `<span class="text-emerald-400">✓</span> <span>${msg}</span>`;
   document.body.appendChild(toast);
   setTimeout(() => {
     toast.remove();
