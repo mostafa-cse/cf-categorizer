@@ -1,0 +1,30 @@
+{
+  "id": "802D3",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "D3",
+  "name": "Marmots (hard)",
+  "rating": 2800,
+  "tags": [
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 158,
+  "problem_url": "https://codeforces.com/problemset/problem/802/D3",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Your task is the exact same as for the easy version. But this time, the marmots subtract the village's population P from their random number before responding to Heidi's request. Also, there are now villages with as few as a single inhabitant, meaning that . Can you help Heidi find out whether a village follows a Poisson or a uniform distribution?",
+  "input_specification": "Same as for the easy and medium versions. But remember that now 1 ≤ P ≤ 1000 and that the marmots may provide positive as well as negative integers.",
+  "output_specification": "Output one line per village, in the same order as provided in the input. The village's line shall state poisson if the village's distribution is of the Poisson type, and uniform if the answers came from a uniform distribution.",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

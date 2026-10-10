@@ -1,0 +1,52 @@
+{
+  "id": "1767E",
+  "source": "problemset",
+  "contest_id": 1767,
+  "problem_index": "E",
+  "name": "Algebra Flash",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "graphs",
+    "math",
+    "meet-in-the-middle",
+    "trees"
+  ],
+  "solved_count": 1350,
+  "problem_url": "https://codeforces.com/problemset/problem/1767/E",
+  "editorial_url": "https://codeforces.com/blog/entry/110225",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Algebra Flash 2.2 has just been released! Changelog: New gamemode! Thank you for the continued support of the game! Huh, is that it? Slightly disappointed, you boot up the game and click on the new gamemode. It says \" Colored platforms \". There are $$$n$$$ platforms, numbered from $$$1$$$ to $$$n$$$, placed one after another. There are $$$m$$$ colors available in the game, numbered from $$$1$$$ to $$$m$$$. The $$$i$$$-th platform is colored $$$c_i$$$. You start on the platform $$$1$$$ and want to reach platform $$$n$$$. In one move, you can jump from some platform $$$i$$$ to platforms $$$i + 1$$$ or $$$i + 2$$$. All platforms are initially deactivated (including platforms $$$1$$$ and $$$n$$$). For each color $$$j$$$, you can pay $$$x_j$$$ coins to activate all platforms of that color. You want to activate some platforms so that you could start on an activated platform $$$1$$$, jump through some activated platforms and reach an activated platform $$$n$$$. What's the smallest amount of coins you can spend to achieve that?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le m \\le 40$$$) — the number of platforms and the number of colors, respectively. The second line contains $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$1 \\le c_i \\le m$$$) — the colors of the platforms. The third line contains $$$m$$$ integers $$$x_1, x_2, \\dots, x_m$$$ ($$$1 \\le x_i \\le 10^7$$$) — the cost of activating all platforms of each color.",
+  "output_specification": "Print the smallest amount of coins you can spend to activate some platforms so that you could start on an activated platform $$$1$$$, jump through some activated platforms and reach an activated platform $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 3 2 3 1\n1 10 100",
+      "output": "11"
+    },
+    {
+      "input": "5 3\n1 3 2 3 1\n1 200 20",
+      "output": "21"
+    },
+    {
+      "input": "4 2\n2 2 1 1\n5 5",
+      "output": "10"
+    },
+    {
+      "input": "10 10\n3 8 6 2 10 5 2 3 7 3\n9 7 4 2 1 8 2 6 2 2",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2048G",
+  "source": "problemset",
+  "contest_id": 2048,
+  "problem_index": "G",
+  "name": "Kevin and Matrices",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 804,
+  "problem_url": "https://codeforces.com/problemset/problem/2048/G",
+  "editorial_url": "https://codeforces.com//www.luogu.com/article/nw6aryed",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kevin has been transported to Sacred Heart Hospital, which contains all the $$$ n \\times m $$$ matrices with integer values in the range $$$ [1,v] $$$. Now, Kevin wants to befriend some matrices, but he is willing to befriend a matrix $$$ a $$$ if and only if the following condition is satisfied: $$$$$$ \\min_{1\\le i\\le n}\\left(\\max_{1\\le j\\le m}a_{i,j}\\right)\\le\\max_{1\\le j\\le m}\\left(\\min_{1\\le i\\le n}a_{i,j}\\right). $$$$$$ Please count how many matrices in Sacred Heart Hospital can be friends with Kevin. Since Kevin is very friendly, there could be many matrices that meet this condition. Therefore, you only need to output the result modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$ t $$$ ($$$ 1 \\le t \\le 8\\cdot 10^3 $$$). The only line of each test case contains three integers $$$n$$$, $$$m$$$, $$$v$$$ ($$$ 1 \\le n, v, n \\cdot v \\leq 10^6$$$, $$$1 \\le m \\le 10^9 $$$). It is guaranteed that the sum of $$$ n \\cdot v $$$ over all test cases doesn't exceed $$$ 10^6 $$$.",
+  "output_specification": "For each test case, output one integer — the number of matrices that can be friends with Kevin modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 2\n2 3 4\n11 45 14",
+      "output": "14\n2824\n883799966"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1862G",
+  "source": "problemset",
+  "contest_id": 1862,
+  "problem_index": "G",
+  "name": "The Great Equalizer",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "data structures",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 3560,
+  "problem_url": "https://codeforces.com/problemset/problem/1862/G",
+  "editorial_url": "https://codeforces.com/blog/entry/119715",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Tema bought an old device with a small screen and a worn-out inscription \"The Great Equalizer\" on the side. The seller said that the device needs to be given an array $$$a$$$ of integers as input, after which \"The Great Equalizer\" will work as follows: Sort the current array in non-decreasing order and remove duplicate elements leaving only one occurrence of each element. If the current length of the array is equal to $$$1$$$, the device stops working and outputs the single number in the array — output value of the device. Add an arithmetic progression {$$$n,\\ n - 1,\\ n - 2,\\ \\ldots,\\ 1$$$} to the current array, where $$$n$$$ is the length of the current array. In other words, $$$n - i$$$ is added to the $$$i$$$-th element of the array, when indexed from zero. Go to the first step. To test the operation of the device, Tema came up with a certain array of integers $$$a$$$, and then wanted to perform $$$q$$$ operations on the array $$$a$$$ of the following type: Assign the value $$$x$$$ ($$$1 \\le x \\le 10^9$$$) to the element $$$a_i$$$ ($$$1 \\le i \\le n$$$). Give the array $$$a$$$ as input to the device and find out the result of the device's operation, while the array $$$a$$$ remains unchanged during the operation of the device . Help Tema find out the output values of the device after each operation.",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then follows the description of each test case. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the size of the array $$$a$$$ that Tema initially came up with. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, a_3, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. The third line of a set contains a single integer $$$q$$$ ($$$1 \\le q \\le 2 \\cdot 10^5$$$) — the number of operations. Each of the next $$$q$$$ lines of a test case contains two integers $$$i$$$ ($$$1 \\le i \\le n$$$) and $$$x$$$ ($$$1 \\le x \\le 10^9$$$) - the descriptions of the operations. It is guaranteed that the sum of the values of $$$n$$$ and the sum of the values of $$$q$$$ for all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$q$$$ integers — the output values of the device after each operation.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n2 4 8\n3\n1 6\n2 10\n3 1\n5\n1 2 2 2 2\n1\n5 3\n2\n5 6\n7\n1 2\n1 7\n1 7\n2 5\n1 2\n2 7\n2 2\n5\n2 5 1 10 6\n10\n1 7\n4 8\n2 5\n1 4\n2 8\n3 4\n1 9\n3 7\n3 4\n3 1",
+      "output": "10 12 15 \n4 \n10 8 8 9 8 12 2 \n14 12 12 11 11 10 11 10 11 14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

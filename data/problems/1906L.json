@@ -1,0 +1,46 @@
+{
+  "id": "1906L",
+  "source": "problemset",
+  "contest_id": 1906,
+  "problem_index": "L",
+  "name": "Palindromic Parentheses",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 806,
+  "problem_url": "https://codeforces.com/problemset/problem/1906/L",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2023/problem_analysis.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "Construct a parentheses sequence consisting of $$$N$$$ characters such that it is balanced and the length of its longest palindromic subsequence (LPS) is exactly $$$K$$$. Determine whether such a construction is possible. If there are several possible sequences, construct any of them. A parentheses sequence consists of only character ( and ) . A parentheses sequence is balanced if each character ( has a corresponding character ) and the pairs of parentheses are properly nested. For example, () , (()) , (())() , and ((())()) are balanced. However, )( , (() , and ()) are not balanced. A sequence is palindromic if it reads the same backwards as forwards. For example, (( , ) , ())( , and (()(( are palindromic. However, () , )( , and (()) are not palindromic. A subsequence can be derived from another sequence by removing zero or more characters without changing the order of the remaining characters. For example, ( , ))) , ())( , and (())() are subsequence of (())() . However, )(( and ((())) are not subsequence of (())() . The longest palindromic subsequence (LPS) of a sequence is a subsequence with the maximum number of characters, derived from that sequence and it is palindromic. For example, the LPS of sequence (())() is ())( , which can be obtained by removing the second and sixth characters. Therefore, the length of the LPS of (())() is $$$4$$$.",
+  "input_specification": "Input consists of two integers $$$N$$$ $$$K$$$ ($$$2 \\leq N \\leq 2000; 1 \\leq K \\leq N$$$). $$$N$$$ is an even number.",
+  "output_specification": "If there is no such parentheses sequence such that it is balanced and the length of its LPS is exactly $$$K$$$, then output -1 . Otherwise, output a string of $$$N$$$ characters, representing the parentheses sequence. If there are several possible answers, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "6 4",
+      "output": "(())()"
+    },
+    {
+      "input": "6 3",
+      "output": "(()())"
+    },
+    {
+      "input": "4 1",
+      "output": "-1"
+    },
+    {
+      "input": "14 11",
+      "output": "()((())()())()"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

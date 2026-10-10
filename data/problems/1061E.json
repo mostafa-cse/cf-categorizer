@@ -1,0 +1,43 @@
+{
+  "id": "1061E",
+  "source": "problemset",
+  "contest_id": 1061,
+  "problem_index": "E",
+  "name": "Politics",
+  "rating": 2600,
+  "tags": [
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 696,
+  "problem_url": "https://codeforces.com/problemset/problem/1061/E",
+  "editorial_url": "https://codeforces.com/blog/entry/63384",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ cities in the country. Two candidates are fighting for the post of the President. The elections are set in the future, and both candidates have already planned how they are going to connect the cities with roads. Both plans will connect all cities using $$$n - 1$$$ roads only. That is, each plan can be viewed as a tree. Both of the candidates had also specified their choice of the capital among $$$n$$$ cities ($$$x$$$ for the first candidate and $$$y$$$ for the second candidate), which may or may not be same. Each city has a potential of building a port (one city can have at most one port). Building a port in $$$i$$$-th city brings $$$a_i$$$ amount of money. However, each candidate has his specific demands. The demands are of the form: $$$k$$$ $$$x$$$, which means that the candidate wants to build exactly $$$x$$$ ports in the subtree of the $$$k$$$-th city of his tree (the tree is rooted at the capital of his choice). Find out the maximum revenue that can be gained while fulfilling all demands of both candidates, or print -1 if it is not possible to do. It is additionally guaranteed, that each candidate has specified the port demands for the capital of his choice.",
+  "input_specification": "The first line contains integers $$$n$$$, $$$x$$$ and $$$y$$$ ($$$1 \\le n \\le 500$$$, $$$1 \\le x, y \\le n$$$) — the number of cities, the capital of the first candidate and the capital of the second candidate respectively. Next line contains integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 100\\,000$$$) — the revenue gained if the port is constructed in the corresponding city. Each of the next $$$n - 1$$$ lines contains integers $$$u_i$$$ and $$$v_i$$$ ($$$1 \\le u_i, v_i \\le n$$$, $$$u_i \\ne v_i$$$), denoting edges between cities in the tree of the first candidate. Each of the next $$$n - 1$$$ lines contains integers $$$u'_i$$$ and $$$v'_i$$$ ($$$1 \\le u'_i, v'_i \\le n$$$, $$$u'_i \\ne v'_i$$$), denoting edges between cities in the tree of the second candidate. Next line contains an integer $$$q_1$$$ ($$$1 \\le q_1 \\le n$$$), denoting the number of demands of the first candidate. Each of the next $$$q_1$$$ lines contains two integers $$$k$$$ and $$$x$$$ ($$$1 \\le k \\le n$$$, $$$1 \\le x \\le n$$$) — the city number and the number of ports in its subtree. Next line contains an integer $$$q_2$$$ ($$$1 \\le q_2 \\le n$$$), denoting the number of demands of the second candidate. Each of the next $$$q_2$$$ lines contain two integers $$$k$$$ and $$$x$$$ ($$$1 \\le k \\le n$$$, $$$1 \\le x \\le n$$$) — the city number and the number of ports in its subtree. It is guaranteed, that given edges correspond to valid trees, each candidate has given demand about each city at most once and that each candidate has specified the port demands for the capital of his choice. That is, the city $$$x$$$ is always given in demands of the first candidate and city $$$y$$$ is always given in the demands of the second candidate.",
+  "output_specification": "Print exactly one integer — the maximum possible revenue that can be gained, while satisfying demands of both candidates, or -1 if it is not possible to satisfy all of the demands.",
+  "sample_testcases": [
+    {
+      "input": "4 1 2\n1 2 3 4\n1 2\n1 3\n3 4\n1 2\n2 3\n1 4\n2\n1 3\n4 1\n1\n2 3",
+      "output": "9"
+    },
+    {
+      "input": "5 1 1\n3 99 99 100 2\n1 2\n1 3\n3 4\n3 5\n1 3\n1 2\n2 4\n2 5\n2\n1 2\n3 1\n2\n1 2\n2 1",
+      "output": "198"
+    },
+    {
+      "input": "4 1 2\n1 2 3 4\n1 2\n1 3\n3 4\n2 1\n2 4\n4 3\n1\n1 4\n2\n4 1\n2 4",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

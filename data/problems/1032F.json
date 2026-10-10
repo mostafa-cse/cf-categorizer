@@ -1,0 +1,43 @@
+{
+  "id": "1032F",
+  "source": "problemset",
+  "contest_id": 1032,
+  "problem_index": "F",
+  "name": "Vasya and Maximum Matching",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 1203,
+  "problem_url": "https://codeforces.com/problemset/problem/1032/F",
+  "editorial_url": "https://codeforces.com/blog/entry/63324",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has got a tree consisting of $$$n$$$ vertices. He wants to delete some (possibly zero) edges in this tree such that the maximum matching in the resulting graph is unique. He asks you to calculate the number of ways to choose a set of edges to remove. A matching in the graph is a subset of its edges such that there is no vertex incident to two (or more) edges from the subset. A maximum matching is a matching such that the number of edges in the subset is maximum possible among all matchings in this graph. Since the answer may be large, output it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of vertices in the tree. Each of the next $$$n − 1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n, u \\neq v$$$) denoting an edge between vertex $$$u$$$ and vertex $$$v$$$. It is guaranteed that these edges form a tree.",
+  "output_specification": "Print one integer — the number of ways to delete some (possibly empty) subset of edges so that the maximum matching in the resulting graph is unique. Print the answer modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n1 3\n1 4",
+      "output": "4"
+    },
+    {
+      "input": "4\n1 2\n2 3\n3 4",
+      "output": "6"
+    },
+    {
+      "input": "1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "1009F",
+  "source": "problemset",
+  "contest_id": 1009,
+  "problem_index": "F",
+  "name": "Dominant Indices",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dsu",
+    "trees"
+  ],
+  "solved_count": 8495,
+  "problem_url": "https://codeforces.com/problemset/problem/1009/F",
+  "editorial_url": "https://codeforces.com/blog/entry/60630",
+  "time_limit": "4.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a rooted undirected tree consisting of $$$n$$$ vertices. Vertex $$$1$$$ is the root. Let's denote a depth array of vertex $$$x$$$ as an infinite sequence $$$[d_{x, 0}, d_{x, 1}, d_{x, 2}, \\dots]$$$, where $$$d_{x, i}$$$ is the number of vertices $$$y$$$ such that both conditions hold: $$$x$$$ is an ancestor of $$$y$$$; the simple path from $$$x$$$ to $$$y$$$ traverses exactly $$$i$$$ edges. The dominant index of a depth array of vertex $$$x$$$ (or, shortly, the dominant index of vertex $$$x$$$) is an index $$$j$$$ such that: for every $$$k \\lt j$$$, $$$d_{x, k} \\lt d_{x, j}$$$; for every $$$k \\gt j$$$, $$$d_{x, k} \\le d_{x, j}$$$. For every vertex in the tree calculate its dominant index .",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — the number of vertices in a tree. Then $$$n - 1$$$ lines follow, each containing two integers $$$x$$$ and $$$y$$$ ($$$1 \\le x, y \\le n$$$, $$$x \\ne y$$$). This line denotes an edge of the tree. It is guaranteed that these edges form a tree.",
+  "output_specification": "Output $$$n$$$ numbers. $$$i$$$-th number should be equal to the dominant index of vertex $$$i$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n2 3\n3 4",
+      "output": "0\n0\n0\n0"
+    },
+    {
+      "input": "4\n1 2\n1 3\n1 4",
+      "output": "1\n0\n0\n0"
+    },
+    {
+      "input": "4\n1 2\n2 3\n2 4",
+      "output": "2\n1\n0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:16",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2239C",
+  "source": "problemset",
+  "contest_id": 2239,
+  "problem_index": "C",
+  "name": "Revival",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 1638,
+  "problem_url": "https://codeforces.com/problemset/problem/2239/C",
+  "editorial_url": "https://codeforces.com/blog/entry/154788",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a permutation $$$p$$$ of $$$1, 2, \\ldots, n$$$. Let $$$s_i$$$ denote the number of inversions in the entire prefix $$$p_1, p_2, \\ldots, p_i$$$, defined as: $$$$$$ s_i = \\sum_{1 \\le x \\lt y \\le i} [p_x \\gt p_y], $$$$$$ where the square parantheses denote the Iverson bracket notation. For each position $$$i$$$ ($$$1 \\le i \\le n$$$), you are given a condition in the form of either $$$p_i = x$$$ or $$$s_i = x$$$. Your task is to reconstruct the original permutation $$$p$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. For each test case: The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot 10^5$$$). Each of the following $$$n$$$ lines contains a character $$$c$$$ ($$$c \\in \\{\\text{'p'}, \\text{'s'}\\}$$$) and an integer $$$x$$$: If $$$c = \\text{'p'}$$$, it denotes that $$$p_i = x$$$, where $$$1 \\le x \\le n$$$. If $$$c = \\text{'s'}$$$, it denotes that $$$s_i = x$$$, where $$$0 \\le x \\le \\frac{i(i-1)}{2}$$$. The sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$. It is guaranteed that a valid permutation always exists.",
+  "output_specification": "For each test case, output $$$n$$$ integers representing the permutation $$$p$$$. If there are multiple valid permutations, you can output any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\np 1\np 2\np 3\n3\ns 0\ns 1\ns 2\n3\np 1\ns 0\np 2\n5\np 1\np 4\ns 0\np 2\ns 4\n6\ns 0\ns 1\ns 3\ns 6\ns 10\ns 15",
+      "output": "1 2 3\n3 1 2\n1 3 2\n1 4 5 2 3\n6 5 4 3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

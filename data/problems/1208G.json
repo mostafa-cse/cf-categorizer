@@ -1,0 +1,40 @@
+{
+  "id": "1208G",
+  "source": "problemset",
+  "contest_id": 1208,
+  "problem_index": "G",
+  "name": "Polygons",
+  "rating": 2800,
+  "tags": [
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 992,
+  "problem_url": "https://codeforces.com/problemset/problem/1208/G",
+  "editorial_url": "https://codeforces.com/blog/entry/69357",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$n$$$ and $$$k$$$. You need to construct $$$k$$$ regular polygons having same circumcircle , with distinct number of sides $$$l$$$ between $$$3$$$ and $$$n$$$. Illustration for the first example. You can rotate them to minimize the total number of distinct points on the circle. Find the minimum number of such points.",
+  "input_specification": "The only line of input contains two integers $$$n$$$ and $$$k$$$ ($$$3 \\le n \\le 10^{6}$$$, $$$1 \\le k \\le n-2$$$), the maximum number of sides of a polygon and the number of polygons to construct, respectively.",
+  "output_specification": "Print a single integer — the minimum number of points required for $$$k$$$ polygons.",
+  "sample_testcases": [
+    {
+      "input": "6 2",
+      "output": "6"
+    },
+    {
+      "input": "200 50",
+      "output": "708"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "449E",
+  "source": "problemset",
+  "contest_id": 449,
+  "problem_index": "E",
+  "name": "Jzzhu and Squares",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 360,
+  "problem_url": "https://codeforces.com/problemset/problem/449/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13112",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Jzzhu has two integers, n and m . He calls an integer point ( x , y ) of a plane special if 0 ≤ x ≤ n and 0 ≤ y ≤ m . Jzzhu defines a unit square as a square with corners at points ( x , y ) , ( x + 1, y ) , ( x + 1, y + 1) , ( x , y + 1) , where x and y are some integers. Let's look at all the squares (their sides not necessarily parallel to the coordinate axes) with corners at the special points. For each such square Jzzhu paints a dot in every unit square that is fully inside it. After that some unit squares can contain several dots. Now Jzzhu wonders, how many dots he has painted on the plane. Find this number modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains a single integer t (1 ≤ t ≤ 10 5 ) — the number of tests. Each of the next t lines contains the description of the test: two integers n and m (1 ≤ n , m ≤ 10 6 ) — the value of variables for the current test.",
+  "output_specification": "For each test output the total number of dots modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3\n2 2\n2 5\n3 4",
+      "output": "3\n8\n26\n58"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

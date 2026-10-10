@@ -1,0 +1,37 @@
+{
+  "id": "1379B",
+  "source": "problemset",
+  "contest_id": 1379,
+  "problem_index": "B",
+  "name": "Dubious Cyrpto",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 13262,
+  "problem_url": "https://codeforces.com/problemset/problem/1379/B",
+  "editorial_url": "https://codeforces.com/blog/entry/80216",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Pasha loves to send strictly positive integers to his friends. Pasha cares about security, therefore when he wants to send an integer $$$n$$$, he encrypts it in the following way: he picks three integers $$$a$$$, $$$b$$$ and $$$c$$$ such that $$$l \\leq a,b,c \\leq r$$$, and then he computes the encrypted value $$$m = n \\cdot a + b - c$$$. Unfortunately, an adversary intercepted the values $$$l$$$, $$$r$$$ and $$$m$$$. Is it possible to recover the original values of $$$a$$$, $$$b$$$ and $$$c$$$ from this information? More formally, you are asked to find any values of $$$a$$$, $$$b$$$ and $$$c$$$ such that $$$a$$$, $$$b$$$ and $$$c$$$ are integers, $$$l \\leq a, b, c \\leq r$$$, there exists a strictly positive integer $$$n$$$, such that $$$n \\cdot a + b - c = m$$$.",
+  "input_specification": "The first line contains the only integer $$$t$$$ ($$$1 \\leq t \\leq 20$$$) — the number of test cases. The following $$$t$$$ lines describe one test case each. Each test case consists of three integers $$$l$$$, $$$r$$$ and $$$m$$$ ($$$1 \\leq l \\leq r \\leq 500\\,000$$$, $$$1 \\leq m \\leq 10^{10}$$$). The numbers are such that the answer to the problem exists.",
+  "output_specification": "For each test case output three integers $$$a$$$, $$$b$$$ and $$$c$$$ such that, $$$l \\leq a, b, c \\leq r$$$ and there exists a strictly positive integer $$$n$$$ such that $$$n \\cdot a + b - c = m$$$. It is guaranteed that there is at least one possible solution, and you can output any possible combination if there are multiple solutions.",
+  "sample_testcases": [
+    {
+      "input": "2\n4 6 13\n2 3 1",
+      "output": "4 6 5\n2 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:45",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

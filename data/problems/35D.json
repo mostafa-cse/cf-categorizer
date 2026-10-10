@@ -1,0 +1,39 @@
+{
+  "id": "35D",
+  "source": "problemset",
+  "contest_id": 35,
+  "problem_index": "D",
+  "name": "Animals",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3974,
+  "problem_url": "https://codeforces.com/problemset/problem/35/D",
+  "editorial_url": "https://codeforces.com/blog/entry/764",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Once upon a time DravDe, an outstanding person famous for his professional achievements (as you must remember, he works in a warehouse storing Ogudar-Olok, a magical but non-alcoholic drink) came home after a hard day. That day he had to drink 9875 boxes of the drink and, having come home, he went to bed at once. DravDe dreamt about managing a successful farm. He dreamt that every day one animal came to him and asked him to let it settle there. However, DravDe, being unimaginably kind, could send the animal away and it went, rejected. There were exactly n days in DravDe’s dream and the animal that came on the i -th day, ate exactly c i tons of food daily starting from day i . But if one day the animal could not get the food it needed, it got really sad. At the very beginning of the dream there were exactly X tons of food on the farm. DravDe woke up terrified... When he retold the dream to you, he couldn’t remember how many animals were on the farm by the end of the n -th day any more, but he did remember that nobody got sad (as it was a happy farm) and that there was the maximum possible amount of the animals. That’s the number he wants you to find out. It should be noticed that the animals arrived in the morning and DravDe only started to feed them in the afternoon, so that if an animal willing to join them is rejected, it can’t eat any farm food. But if the animal does join the farm, it eats daily from that day to the n -th.",
+  "input_specification": "The first input line contains integers n and X ( 1 ≤ n ≤ 100, 1 ≤ X ≤ 10 4 ) — amount of days in DravDe’s dream and the total amount of food (in tons) that was there initially. The second line contains integers c i ( 1 ≤ c i ≤ 300 ). Numbers in the second line are divided by a space.",
+  "output_specification": "Output the only number — the maximum possible amount of animals on the farm by the end of the n -th day given that the food was enough for everybody.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 1 1",
+      "output": "2"
+    },
+    {
+      "input": "3 6\n1 1 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

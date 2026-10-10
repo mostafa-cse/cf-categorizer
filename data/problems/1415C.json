@@ -1,0 +1,36 @@
+{
+  "id": "1415C",
+  "source": "problemset",
+  "contest_id": 1415,
+  "problem_index": "C",
+  "name": "Bouncing Ball",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 11879,
+  "problem_url": "https://codeforces.com/problemset/problem/1415/C",
+  "editorial_url": "https://codeforces.com/blog/entry/85118",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You're creating a game level for some mobile game. The level should contain some number of cells aligned in a row from left to right and numbered with consecutive integers starting from $$$1$$$, and in each cell you can either put a platform or leave it empty. In order to pass a level, a player must throw a ball from the left so that it first lands on a platform in the cell $$$p$$$, then bounces off it, then bounces off a platform in the cell $$$(p + k)$$$, then a platform in the cell $$$(p + 2k)$$$, and so on every $$$k$$$-th platform until it goes farther than the last cell. If any of these cells has no platform, you can't pass the level with these $$$p$$$ and $$$k$$$. You already have some level pattern $$$a_1$$$, $$$a_2$$$, $$$a_3$$$, ..., $$$a_n$$$, where $$$a_i = 0$$$ means there is no platform in the cell $$$i$$$, and $$$a_i = 1$$$ means there is one. You want to modify it so that the level can be passed with given $$$p$$$ and $$$k$$$. In $$$x$$$ seconds you can add a platform in some empty cell. In $$$y$$$ seconds you can remove the first cell completely, reducing the number of cells by one, and renumerating the other cells keeping their order. You can't do any other operation. You can not reduce the number of cells to less than $$$p$$$. Illustration for the third example test case. Crosses mark deleted cells. Blue platform is the newly added. What is the minimum number of seconds you need to make this level passable with given $$$p$$$ and $$$k$$$?",
+  "input_specification": "The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Description of test cases follows. The first line of each test case contains three integers $$$n$$$, $$$p$$$, and $$$k$$$ ($$$1 \\le p \\le n \\le 10^5$$$, $$$1 \\le k \\le n$$$) — the number of cells you have, the first cell that should contain a platform, and the period of ball bouncing required. The second line of each test case contains a string $$$a_1 a_2 a_3 \\ldots a_n$$$ ($$$a_i = 0$$$ or $$$a_i = 1$$$) — the initial pattern written without spaces . The last line of each test case contains two integers $$$x$$$ and $$$y$$$ ($$$1 \\le x, y \\le 10^4$$$) — the time required to add a platform and to remove the first cell correspondingly. The sum of $$$n$$$ over test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case output a single integer — the minimum number of seconds you need to modify the level accordingly. It can be shown that it is always possible to make the level passable.",
+  "sample_testcases": [
+    {
+      "input": "3\n10 3 2\n0101010101\n2 2\n5 4 1\n00000\n2 10\n11 2 3\n10110011000\n4 3",
+      "output": "2\n4\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:35",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

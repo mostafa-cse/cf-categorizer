@@ -1,0 +1,41 @@
+{
+  "id": "818E",
+  "source": "problemset",
+  "contest_id": 818,
+  "problem_index": "E",
+  "name": "Card Game Again",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 2767,
+  "problem_url": "https://codeforces.com/problemset/problem/818/E",
+  "editorial_url": "https://codeforces.com/blog/entry/52991",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vova again tries to play some computer card game. The rules of deck creation in this game are simple. Vova is given an existing deck of n cards and a magic number k . The order of the cards in the deck is fixed. Each card has a number written on it; number a i is written on the i -th card in the deck. After receiving the deck and the magic number, Vova removes x (possibly x = 0 ) cards from the top of the deck, y (possibly y = 0 ) cards from the bottom of the deck, and the rest of the deck is his new deck (Vova has to leave at least one card in the deck after removing cards). So Vova's new deck actually contains cards x + 1 , x + 2 , ... n - y - 1 , n - y from the original deck. Vova's new deck is considered valid iff the product of all numbers written on the cards in his new deck is divisible by k . So Vova received a deck (possibly not a valid one) and a number k , and now he wonders, how many ways are there to choose x and y so the deck he will get after removing x cards from the top and y cards from the bottom is valid ?",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 100 000 , 1 ≤ k ≤ 10 9 ). The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — the numbers written on the cards.",
+  "output_specification": "Print the number of ways to choose x and y so the resulting deck is valid .",
+  "sample_testcases": [
+    {
+      "input": "3 4\n6 2 8",
+      "output": "4"
+    },
+    {
+      "input": "3 6\n9 1 14",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

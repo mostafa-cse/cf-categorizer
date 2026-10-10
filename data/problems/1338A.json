@@ -1,0 +1,35 @@
+{
+  "id": "1338A",
+  "source": "problemset",
+  "contest_id": 1338,
+  "problem_index": "A",
+  "name": "Powered Addition",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 32371,
+  "problem_url": "https://codeforces.com/problemset/problem/1338/A",
+  "editorial_url": "https://codeforces.com/blog/entry/75913",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array $$$a$$$ of length $$$n$$$. For every positive integer $$$x$$$ you are going to perform the following operation during the $$$x$$$-th second: Select some distinct indices $$$i_{1}, i_{2}, \\ldots, i_{k}$$$ which are between $$$1$$$ and $$$n$$$ inclusive, and add $$$2^{x-1}$$$ to each corresponding position of $$$a$$$. Formally, $$$a_{i_{j}} := a_{i_{j}} + 2^{x-1}$$$ for $$$j = 1, 2, \\ldots, k$$$. Note that you are allowed to not select any indices at all. You have to make $$$a$$$ nondecreasing as fast as possible. Find the smallest number $$$T$$$ such that you can make the array nondecreasing after at most $$$T$$$ seconds. Array $$$a$$$ is nondecreasing if and only if $$$a_{1} \\le a_{2} \\le \\ldots \\le a_{n}$$$. You have to answer $$$t$$$ independent test cases.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^{4}$$$) — the number of test cases. The first line of each test case contains single integer $$$n$$$ ($$$1 \\le n \\le 10^{5}$$$) — the length of array $$$a$$$. It is guaranteed that the sum of values of $$$n$$$ over all test cases in the input does not exceed $$$10^{5}$$$. The second line of each test case contains $$$n$$$ integers $$$a_{1}, a_{2}, \\ldots, a_{n}$$$ ($$$-10^{9} \\le a_{i} \\le 10^{9}$$$).",
+  "output_specification": "For each test case, print the minimum number of seconds in which you can make $$$a$$$ nondecreasing.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n1 7 6 5\n5\n1 2 3 4 5\n2\n0 -4",
+      "output": "2\n0\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

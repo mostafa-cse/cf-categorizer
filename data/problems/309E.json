@@ -1,0 +1,43 @@
+{
+  "id": "309E",
+  "source": "problemset",
+  "contest_id": 309,
+  "problem_index": "E",
+  "name": "Sheep",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "greedy"
+  ],
+  "solved_count": 304,
+  "problem_url": "https://codeforces.com/problemset/problem/309/E",
+  "editorial_url": "https://codeforces.com/blog/entry/7749",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Information technologies are developing and are increasingly penetrating into all spheres of human activity. Incredible as it is, the most modern technology are used in farming! A large farm has a meadow with grazing sheep. Overall there are n sheep and each of them contains a unique number from 1 to n — because the sheep need to be distinguished and you need to remember information about each one, and they are so much alike! The meadow consists of infinite number of regions numbered from 1 to infinity. It's known that sheep i likes regions from l i to r i . There are two shepherds taking care of the sheep: First and Second. First wakes up early in the morning and leads the sheep graze on the lawn. Second comes in the evening and collects all the sheep. One morning, First woke up a little later than usual, and had no time to lead the sheep graze on the lawn. So he tied together every two sheep if there is a region they both like. First thought that it would be better — Second would have less work in the evening, because sheep won't scatter too much, being tied to each other! In the evening Second came on the lawn, gathered the sheep and tried to line them up in a row. But try as he might, the sheep wouldn't line up as Second want! Second had neither the strength nor the ability to untie the sheep so he left them as they are, but with one condition: he wanted to line up the sheep so that the maximum distance between two tied sheep was as small as possible. The distance between the sheep is the number of sheep in the ranks that are between these two. Help Second find the right arrangement.",
+  "input_specification": "The first input line contains one integer n ( 1 ≤ n ≤ 2000 ). Each of the following n lines contains two integers l i and r i (1 ≤ l i , r i ≤ 10 9 ; l i ≤ r i ) .",
+  "output_specification": "In the single output line print n space-separated numbers — the sought arrangement of the sheep. The i -th value in the line must represent the number of the sheep that took the i -th place from left in the optimal arrangement line. If there are multiple optimal arrangements, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 3\n5 7\n2 4",
+      "output": "1 3 2"
+    },
+    {
+      "input": "5\n1 5\n2 4\n3 6\n1 7\n2 6",
+      "output": "2 1 3 5 4"
+    },
+    {
+      "input": "4\n1 3\n4 6\n5 7\n2 3",
+      "output": "1 4 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

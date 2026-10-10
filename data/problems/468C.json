@@ -1,0 +1,40 @@
+{
+  "id": "468C",
+  "source": "problemset",
+  "contest_id": 468,
+  "problem_index": "C",
+  "name": "Hack it!",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 2854,
+  "problem_url": "https://codeforces.com/problemset/problem/468/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13896",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little X has met the following problem recently. Let's define f ( x ) as the sum of digits in decimal representation of number x (for example, f (1234) = 1 + 2 + 3 + 4 ). You are to calculate Of course Little X has solved this problem quickly, has locked it, and then has tried to hack others. He has seen the following C++ code: ans = solve(l, r) % a; if (ans <= 0) ans += a; This code will fail only on the test with . You are given number a , help Little X to find a proper test for hack.",
+  "input_specification": "The first line contains a single integer a (1 ≤ a ≤ 10 18 ) .",
+  "output_specification": "Print two integers: l , r (1 ≤ l ≤ r < 10 200 ) — the required test data. Leading zeros aren't allowed. It's guaranteed that the solution exists.",
+  "sample_testcases": [
+    {
+      "input": "46",
+      "output": "1 10"
+    },
+    {
+      "input": "126444381000032",
+      "output": "2333333 2333333333333"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

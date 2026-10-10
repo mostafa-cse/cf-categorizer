@@ -1,0 +1,46 @@
+{
+  "id": "101D",
+  "source": "problemset",
+  "contest_id": 101,
+  "problem_index": "D",
+  "name": "Castle",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "greedy",
+    "probabilities",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 817,
+  "problem_url": "https://codeforces.com/problemset/problem/101/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2393",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerald is positioned in an old castle which consists of n halls connected with n - 1 corridors. It is exactly one way to go from any hall to any other one. Thus, the graph is a tree. Initially, at the moment of time 0 , Gerald is positioned in hall 1 . Besides, some other hall of the castle contains the treasure Gerald is looking for. The treasure's position is not known; it can equiprobably be in any of other n - 1 halls. Gerald can only find out where the treasure is when he enters the hall with the treasure. That very moment Gerald sees the treasure and the moment is regarded is the moment of achieving his goal. The corridors have different lengths. At that, the corridors are considered long and the halls are considered small and well lit. Thus, it is possible not to take the time Gerald spends in the halls into consideration. The castle is very old, that's why a corridor collapses at the moment when somebody visits it two times, no matter in which direction. Gerald can move around the castle using the corridors; he will go until he finds the treasure. Naturally, Gerald wants to find it as quickly as possible. In other words, he wants to act in a manner that would make the average time of finding the treasure as small as possible. Each corridor can be used no more than two times. That's why Gerald chooses the strategy in such a way, so he can visit every hall for sure. More formally, if the treasure is located in the second hall, then Gerald will find it the moment he enters the second hall for the first time — let it be moment t 2 . If the treasure is in the third hall, then Gerald will find it the moment he enters the third hall for the first time. Let it be the moment of time t 3 . And so on. Thus, the average time of finding the treasure will be equal to .",
+  "input_specification": "The first line contains the only integer n ( 2 ≤ n ≤ 10 5 ) — the number of halls in the castle. Next n - 1 lines each contain three integers. The i -th line contains numbers a i , b i and t i ( 1 ≤ a i , b i ≤ n , a i ≠ b i , 1 ≤ t i ≤ 1000 ) — the numbers of halls connected with the i -th corridor and the time needed to go along the corridor. Initially Gerald is in the hall number 1 . It is guaranteed that one can get from any hall to any other one using corridors.",
+  "output_specification": "Print the only real number: the sought expectation of time needed to find the treasure. The answer should differ from the right one in no less than 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2 1",
+      "output": "1.0"
+    },
+    {
+      "input": "4\n1 3 2\n4 2 1\n3 2 3",
+      "output": "4.333333333333334"
+    },
+    {
+      "input": "5\n1 2 1\n1 3 1\n1 4 1\n1 5 1",
+      "output": "4.0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

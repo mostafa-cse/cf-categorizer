@@ -1,0 +1,43 @@
+{
+  "id": "1106B",
+  "source": "problemset",
+  "contest_id": 1106,
+  "problem_index": "B",
+  "name": "Lunar New Year and Food Ordering",
+  "rating": 1500,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 7041,
+  "problem_url": "https://codeforces.com/problemset/problem/1106/B",
+  "editorial_url": "https://codeforces.com/blog/entry/64928",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lunar New Year is approaching, and Bob is planning to go for a famous restaurant — \"Alice's\". The restaurant \"Alice's\" serves $$$n$$$ kinds of food. The cost for the $$$i$$$-th kind is always $$$c_i$$$. Initially, the restaurant has enough ingredients for serving exactly $$$a_i$$$ dishes of the $$$i$$$-th kind. In the New Year's Eve, $$$m$$$ customers will visit Alice's one after another and the $$$j$$$-th customer will order $$$d_j$$$ dishes of the $$$t_j$$$-th kind of food. The $$$(i + 1)$$$-st customer will only come after the $$$i$$$-th customer is completely served. Suppose there are $$$r_i$$$ dishes of the $$$i$$$-th kind remaining (initially $$$r_i = a_i$$$). When a customer orders $$$1$$$ dish of the $$$i$$$-th kind, the following principles will be processed. If $$$r_i \\gt 0$$$, the customer will be served exactly $$$1$$$ dish of the $$$i$$$-th kind. The cost for the dish is $$$c_i$$$. Meanwhile, $$$r_i$$$ will be reduced by $$$1$$$. Otherwise, the customer will be served $$$1$$$ dish of the cheapest available kind of food if there are any. If there are multiple cheapest kinds of food, the one with the smallest index among the cheapest will be served. The cost will be the cost for the dish served and the remain for the corresponding dish will be reduced by $$$1$$$. If there are no more dishes at all, the customer will leave angrily. Therefore, no matter how many dishes are served previously, the cost for the customer is $$$0$$$. If the customer doesn't leave after the $$$d_j$$$ dishes are served, the cost for the customer will be the sum of the cost for these $$$d_j$$$ dishes. Please determine the total cost for each of the $$$m$$$ customers.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 10^5$$$), representing the number of different kinds of food and the number of customers, respectively. The second line contains $$$n$$$ positive integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\leq a_i \\leq 10^7$$$), where $$$a_i$$$ denotes the initial remain of the $$$i$$$-th kind of dishes. The third line contains $$$n$$$ positive integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\leq c_i \\leq 10^6$$$), where $$$c_i$$$ denotes the cost of one dish of the $$$i$$$-th kind. The following $$$m$$$ lines describe the orders of the $$$m$$$ customers respectively. The $$$j$$$-th line contains two positive integers $$$t_j$$$ and $$$d_j$$$ ($$$1 \\leq t_j \\leq n$$$, $$$1 \\leq d_j \\leq 10^7$$$), representing the kind of food and the number of dishes the $$$j$$$-th customer orders, respectively.",
+  "output_specification": "Print $$$m$$$ lines. In the $$$j$$$-th line print the cost for the $$$j$$$-th customer.",
+  "sample_testcases": [
+    {
+      "input": "8 5\n8 6 2 1 4 5 7 5\n6 3 3 2 6 2 3 2\n2 8\n1 4\n4 7\n3 4\n6 10",
+      "output": "22\n24\n14\n10\n39"
+    },
+    {
+      "input": "6 6\n6 6 6 6 6 6\n6 66 666 6666 66666 666666\n1 6\n2 6\n3 6\n4 6\n5 6\n6 66",
+      "output": "36\n396\n3996\n39996\n399996\n0"
+    },
+    {
+      "input": "6 6\n6 6 6 6 6 6\n6 66 666 6666 66666 666666\n1 6\n2 13\n3 6\n4 11\n5 6\n6 6",
+      "output": "36\n11058\n99996\n4333326\n0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

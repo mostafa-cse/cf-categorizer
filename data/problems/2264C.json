@@ -1,0 +1,36 @@
+{
+  "id": "2264C",
+  "source": "problemset",
+  "contest_id": 2264,
+  "problem_index": "C",
+  "name": "Madamant's Skating Dynasty",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 7180,
+  "problem_url": "https://codeforces.com/problemset/problem/2264/C",
+  "editorial_url": "https://codeforces.com/blog/entry/156680",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Madam Madamant is expecting a baby and already planning a skating dynasty in which every parent is a stronger skater than their children. Formally, Madamant has $$$n$$$ labeled skaters. Skater $$$v$$$ has an integer rating $$$a_v$$$, and all ratings are pairwise distinct. A possible dynasty is represented by a rooted tree on these skaters. Let $$$r$$$ be the root of the tree. For every skater $$$v \\ne r$$$, let $$$p_v$$$ be the parent of $$$v$$$. The dynasty is valid if $$$a_v \\lt a_{p_v}$$$ for every $$$v \\ne r$$$. The cost of a valid dynasty is $$$$$$ \\sum_{v \\ne r} (a_{p_v} - a_v). $$$$$$ Two dynasties are different if their roots are different or if the parent of at least one skater is different. Find the sum of the costs of all valid dynasties Madamant can form, modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of skaters. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — their ratings. It is guaranteed that all $$$a_i$$$ are pairwise distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the sum of the costs of all valid dynasties, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n10\n3\n1 2 3\n4\n4 1 3 2\n2\n1 1000000000\n5\n2 7 1 10 4",
+      "output": "0\n5\n27\n1755646\n414"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:24",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

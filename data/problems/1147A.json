@@ -1,0 +1,42 @@
+{
+  "id": "1147A",
+  "source": "problemset",
+  "contest_id": 1147,
+  "problem_index": "A",
+  "name": "Hide and Seek",
+  "rating": 1500,
+  "tags": [
+    "graphs"
+  ],
+  "solved_count": 5649,
+  "problem_url": "https://codeforces.com/problemset/problem/1147/A",
+  "editorial_url": "https://codeforces.com/blog/entry/66878",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing a game on a line with $$$n$$$ cells. There are $$$n$$$ cells labeled from $$$1$$$ through $$$n$$$. For each $$$i$$$ from $$$1$$$ to $$$n-1$$$, cells $$$i$$$ and $$$i+1$$$ are adjacent. Alice initially has a token on some cell on the line, and Bob tries to guess where it is. Bob guesses a sequence of line cell numbers $$$x_1, x_2, \\ldots, x_k$$$ in order. In the $$$i$$$-th question, Bob asks Alice if her token is currently on cell $$$x_i$$$. That is, Alice can answer either \" YES \" or \" NO \" to each Bob's question. At most one time in this process, before or after answering a question, Alice is allowed to move her token from her current cell to some adjacent cell. Alice acted in such a way that she was able to answer \" NO \" to all of Bob's questions. Note that Alice can even move her token before answering the first question or after answering the last question. Alice can also choose to not move at all. You are given $$$n$$$ and Bob's questions $$$x_1, \\ldots, x_k$$$. You would like to count the number of scenarios that let Alice answer \" NO \" to all of Bob's questions. Let $$$(a,b)$$$ denote a scenario where Alice starts at cell $$$a$$$ and ends at cell $$$b$$$. Two scenarios $$$(a_i, b_i)$$$ and $$$(a_j, b_j)$$$ are different if $$$a_i \\neq a_j$$$ or $$$b_i \\neq b_j$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n,k \\leq 10^5$$$) — the number of cells and the number of questions Bob asked. The second line contains $$$k$$$ integers $$$x_1, x_2, \\ldots, x_k$$$ ($$$1 \\leq x_i \\leq n$$$) — Bob's questions.",
+  "output_specification": "Print a single integer, the number of scenarios that let Alice answer \" NO \" to all of Bob's questions.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n5 1 4",
+      "output": "9"
+    },
+    {
+      "input": "4 8\n1 2 3 4 4 3 2 1",
+      "output": "0"
+    },
+    {
+      "input": "100000 1\n42",
+      "output": "299997"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:46",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

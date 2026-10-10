@@ -1,0 +1,43 @@
+{
+  "id": "140E",
+  "source": "problemset",
+  "contest_id": 140,
+  "problem_index": "E",
+  "name": "New Year Garland",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1109,
+  "problem_url": "https://codeforces.com/problemset/problem/140/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3542",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "As Gerald, Alexander, Sergey and Gennady are already busy with the usual New Year chores, Edward hastily decorates the New Year Tree. And any decent New Year Tree must be decorated with a good garland. Edward has lamps of m colors and he wants to make a garland from them. That garland should represent a sequence whose length equals L . Edward's tree is n layers high and Edward plans to hang the garland so as to decorate the first layer with the first l 1 lamps, the second layer — with the next l 2 lamps and so on. The last n -th layer should be decorated with the last l n lamps, Edward adores all sorts of math puzzles, so he suddenly wondered: how many different ways to assemble the garland are there given that the both following two conditions are met: Any two lamps that follow consecutively in the same layer should have different colors. The sets of used colors in every two neighbouring layers must be different. We consider unordered sets (not multisets), where every color occurs no more than once. So the number of lamps of particular color does not matter. Help Edward find the answer to this nagging problem or else he won't manage to decorate the Tree by New Year. You may consider that Edward has an unlimited number of lamps of each of m colors and it is not obligatory to use all m colors. The garlands are considered different if they differ in at least one position when represented as sequences. Calculate the answer modulo p .",
+  "input_specification": "The first line contains three integers n , m and p ( 1 ≤ n , m ≤ 10 6 , 2 ≤ p ≤ 10 9 ) which are the number of the tree's layers, the number of the lamps' colors and module correspondingly. The next line contains n integers l i ( 1 ≤ l i ≤ 5000 , ).",
+  "output_specification": "Print the only integer — the number of garlands modulo p .",
+  "sample_testcases": [
+    {
+      "input": "3 2 1000\n3 1 2",
+      "output": "8"
+    },
+    {
+      "input": "2 3 1000\n2 2",
+      "output": "24"
+    },
+    {
+      "input": "1 1 1000\n5",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

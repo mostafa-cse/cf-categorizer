@@ -1,0 +1,36 @@
+{
+  "id": "528D",
+  "source": "problemset",
+  "contest_id": 528,
+  "problem_index": "D",
+  "name": "Fuzzy Search",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "fft"
+  ],
+  "solved_count": 3038,
+  "problem_url": "https://codeforces.com/problemset/problem/528/D",
+  "editorial_url": "https://codeforces.com/blog/entry/17020",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Leonid works for a small and promising start-up that works on decoding the human genome. His duties include solving complex problems of finding certain patterns in long strings consisting of letters ' A ', ' T ', ' G ' and ' C '. Let's consider the following scenario. There is a fragment of a human DNA chain, recorded as a string S . To analyze the fragment, you need to find all occurrences of string T in a string S . However, the matter is complicated by the fact that the original chain fragment could contain minor mutations, which, however, complicate the task of finding a fragment. Leonid proposed the following approach to solve this problem. Let's write down integer k ≥ 0 — the error threshold. We will say that string T occurs in string S on position i ( 1 ≤ i ≤ | S | - | T | + 1 ), if after putting string T along with this position, each character of string T corresponds to the some character of the same value in string S at the distance of at most k . More formally, for any j ( 1 ≤ j ≤ | T | ) there must exist such p ( 1 ≤ p ≤ | S | ), that |( i + j - 1) - p | ≤ k and S [ p ] = T [ j ] . For example, corresponding to the given definition, string \" ACAT \" occurs in string \" AGCAATTCAT \" in positions 2 , 3 and 6 . Note that at k = 0 the given definition transforms to a simple definition of the occurrence of a string in a string. Help Leonid by calculating in how many positions the given string T occurs in the given string S with the given error threshold.",
+  "input_specification": "The first line contains three integers | S |, | T |, k ( 1 ≤ | T | ≤ | S | ≤ 200 000 , 0 ≤ k ≤ 200 000 ) — the lengths of strings S and T and the error threshold. The second line contains string S . The third line contains string T . Both strings consist only of uppercase letters ' A ', ' T ', ' G ' and ' C '.",
+  "output_specification": "Print a single number — the number of occurrences of T in S with the error threshold k by the given definition.",
+  "sample_testcases": [
+    {
+      "input": "10 4 1\nAGCAATTCAT\nACAT",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

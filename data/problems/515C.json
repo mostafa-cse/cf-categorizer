@@ -1,0 +1,40 @@
+{
+  "id": "515C",
+  "source": "problemset",
+  "contest_id": 515,
+  "problem_index": "C",
+  "name": "Drazil and Factorial",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 29267,
+  "problem_url": "https://codeforces.com/problemset/problem/515/C",
+  "editorial_url": "https://codeforces.com/blog/entry/16468",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Drazil is playing a math game with Varda. Let's define for positive integer x as a product of factorials of its digits. For example, . First, they choose a decimal number a consisting of n digits that contains at least one digit larger than 1 . This number may possibly start with leading zeroes. Then they should find maximum positive number x satisfying following two conditions: 1. x doesn't contain neither digit 0 nor digit 1 . 2. = . Help friends find such number.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 15 ) — the number of digits in a . The second line contains n digits of a . There is at least one digit in a that is larger than 1 . Number a may possibly contain leading zeroes.",
+  "output_specification": "Output a maximum possible integer satisfying the conditions above. There should be no zeroes and ones in this number decimal representation.",
+  "sample_testcases": [
+    {
+      "input": "4\n1234",
+      "output": "33222"
+    },
+    {
+      "input": "3\n555",
+      "output": "555"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

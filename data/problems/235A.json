@@ -1,0 +1,38 @@
+{
+  "id": "235A",
+  "source": "problemset",
+  "contest_id": 235,
+  "problem_index": "A",
+  "name": "LCM Challenge",
+  "rating": 1600,
+  "tags": [
+    "number theory"
+  ],
+  "solved_count": 21847,
+  "problem_url": "https://codeforces.com/problemset/problem/235/A",
+  "editorial_url": "https://codeforces.com/blog/entry/5592",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Some days ago, I learned the concept of LCM (least common multiple). I've played with it for several times and I want to make a big number with it. But I also don't want to use many numbers, so I'll choose three positive integers (they don't have to be distinct) which are not greater than n . Can you help me to find the maximum possible least common multiple of these three integers?",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 6 ) — the n mentioned in the statement.",
+  "output_specification": "Print a single integer — the maximum possible LCM of three not necessarily distinct positive integers that are not greater than n .",
+  "sample_testcases": [
+    {
+      "input": "9",
+      "output": "504"
+    },
+    {
+      "input": "7",
+      "output": "210"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

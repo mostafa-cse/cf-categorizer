@@ -1,0 +1,42 @@
+{
+  "id": "187A",
+  "source": "problemset",
+  "contest_id": 187,
+  "problem_index": "A",
+  "name": "Permutations",
+  "rating": 1500,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 3092,
+  "problem_url": "https://codeforces.com/problemset/problem/187/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4540",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Happy PMP is freshman and he is learning about algorithmic problems. He enjoys playing algorithmic games a lot. One of the seniors gave Happy PMP a nice game. He is given two permutations of numbers 1 through n and is asked to convert the first one to the second. In one move he can remove the last number from the permutation of numbers and inserts it back in an arbitrary position. He can either insert last number between any two consecutive numbers, or he can place it at the beginning of the permutation. Happy PMP has an algorithm that solves the problem. But it is not fast enough. He wants to know the minimum number of moves to convert the first permutation to the second.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 2·10 5 ) — the quantity of the numbers in the both given permutations. Next line contains n space-separated integers — the first permutation. Each number between 1 to n will appear in the permutation exactly once. Next line describe the second permutation in the same format.",
+  "output_specification": "Print a single integer denoting the minimum number of moves required to convert the first permutation to the second.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2 1\n1 2 3",
+      "output": "2"
+    },
+    {
+      "input": "5\n1 2 3 4 5\n1 5 2 3 4",
+      "output": "1"
+    },
+    {
+      "input": "5\n1 5 2 3 4\n1 2 3 4 5",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

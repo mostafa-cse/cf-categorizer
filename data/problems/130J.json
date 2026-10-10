@@ -1,0 +1,38 @@
+{
+  "id": "130J",
+  "source": "problemset",
+  "contest_id": 130,
+  "problem_index": "J",
+  "name": "Date calculation",
+  "rating": 1800,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 360,
+  "problem_url": "https://codeforces.com/problemset/problem/130/J",
+  "editorial_url": "https://codeforces.com/blog/entry/3226",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "In Gregorian calendar a typical year consists of 365 days and 12 months. The numbers of days in the months are: 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 . If year index is divisible by 400 , or divisible by 4 but not by 100 , the year becomes leap year, with one extra day in the second month (the one which typically has 28 days). You are given the index of the year and the index of the day in the year. Find out the date of this day (day and month it will fall upon).",
+  "input_specification": "The first line of input contains the year index, between 1600 and 2400 , inclusive. The second line contains the day index, between 1 and 366 , inclusive. It is guaranteed that the day index will be valid for this year, i.e., day 366 will occur only in a leap year.",
+  "output_specification": "Output the index of the day and the index of the month, separated with a space.",
+  "sample_testcases": [
+    {
+      "input": "2011\n324",
+      "output": "20 11"
+    },
+    {
+      "input": "2012\n274",
+      "output": "30 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

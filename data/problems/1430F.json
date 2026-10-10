@@ -1,0 +1,47 @@
+{
+  "id": "1430F",
+  "source": "problemset",
+  "contest_id": 1430,
+  "problem_index": "F",
+  "name": "Realistic Gameplay",
+  "rating": 2600,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1091,
+  "problem_url": "https://codeforces.com/problemset/problem/1430/F",
+  "editorial_url": "https://codeforces.com/blog/entry/83614",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Recently you've discovered a new shooter. They say it has realistic game mechanics. Your character has a gun with magazine size equal to $$$k$$$ and should exterminate $$$n$$$ waves of monsters. The $$$i$$$-th wave consists of $$$a_i$$$ monsters and happens from the $$$l_i$$$-th moment of time up to the $$$r_i$$$-th moments of time. All $$$a_i$$$ monsters spawn at moment $$$l_i$$$ and you have to exterminate all of them before the moment $$$r_i$$$ ends (you can kill monsters right at moment $$$r_i$$$). For every two consecutive waves, the second wave starts not earlier than the first wave ends (though the second wave can start at the same moment when the first wave ends) — formally, the condition $$$r_i \\le l_{i + 1}$$$ holds. Take a look at the notes for the examples to understand the process better. You are confident in yours and your character's skills so you can assume that aiming and shooting are instant and you need exactly one bullet to kill one monster. But reloading takes exactly $$$1$$$ unit of time. One of the realistic mechanics is a mechanic of reloading: when you reload you throw away the old magazine with all remaining bullets in it. That's why constant reloads may cost you excessive amounts of spent bullets. You've taken a liking to this mechanic so now you are wondering: what is the minimum possible number of bullets you need to spend (both used and thrown) to exterminate all waves. Note that you don't throw the remaining bullets away after eradicating all monsters, and you start with a full magazine.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2000$$$; $$$1 \\le k \\le 10^9$$$) — the number of waves and magazine size. The next $$$n$$$ lines contain descriptions of waves. The $$$i$$$-th line contains three integers $$$l_i$$$, $$$r_i$$$ and $$$a_i$$$ ($$$1 \\le l_i \\le r_i \\le 10^9$$$; $$$1 \\le a_i \\le 10^9$$$) — the period of time when the $$$i$$$-th wave happens and the number of monsters in it. It's guaranteed that waves don't overlap (but may touch) and are given in the order they occur, i. e. $$$r_i \\le l_{i + 1}$$$.",
+  "output_specification": "If there is no way to clear all waves, print $$$-1$$$. Otherwise, print the minimum possible number of bullets you need to spend (both used and thrown) to clear all waves.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n2 3 6\n3 4 3",
+      "output": "9"
+    },
+    {
+      "input": "2 5\n3 7 11\n10 12 15",
+      "output": "30"
+    },
+    {
+      "input": "5 42\n42 42 42\n42 43 42\n43 44 42\n44 45 42\n45 45 1",
+      "output": "-1"
+    },
+    {
+      "input": "1 10\n100 111 1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

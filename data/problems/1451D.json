@@ -1,0 +1,36 @@
+{
+  "id": "1451D",
+  "source": "problemset",
+  "contest_id": 1451,
+  "problem_index": "D",
+  "name": "Circle Game",
+  "rating": 1700,
+  "tags": [
+    "games",
+    "geometry",
+    "math"
+  ],
+  "solved_count": 10396,
+  "problem_url": "https://codeforces.com/problemset/problem/1451/D",
+  "editorial_url": "https://codeforces.com/blog/entry/84885",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Utkarsh is forced to play yet another one of Ashish's games. The game progresses turn by turn and as usual, Ashish moves first . Consider the 2D plane. There is a token which is initially at $$$(0,0)$$$ . In one move a player must increase either the $$$x$$$ coordinate or the $$$y$$$ coordinate of the token by exactly $$$k$$$. In doing so, the player must ensure that the token stays within a (Euclidean) distance $$$d$$$ from $$$(0,0)$$$. In other words, if after a move the coordinates of the token are $$$(p,q)$$$, then $$$p^2 + q^2 \\leq d^2$$$ must hold. The game ends when a player is unable to make a move. It can be shown that the game will end in a finite number of moves. If both players play optimally, determine who will win.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 100$$$) — the number of test cases. The only line of each test case contains two space separated integers $$$d$$$ ($$$1 \\leq d \\leq 10^5$$$) and $$$k$$$ ($$$1 \\leq k \\leq d$$$).",
+  "output_specification": "For each test case, if Ashish wins the game, print \" Ashish \", otherwise print \" Utkarsh \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "5\n2 1\n5 2\n10 3\n25 4\n15441 33",
+      "output": "Utkarsh\nAshish\nUtkarsh\nUtkarsh\nAshish"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:27",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

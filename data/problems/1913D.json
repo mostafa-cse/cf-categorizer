@@ -1,0 +1,37 @@
+{
+  "id": "1913D",
+  "source": "problemset",
+  "contest_id": 1913,
+  "problem_index": "D",
+  "name": "Array Collapse",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 4371,
+  "problem_url": "https://codeforces.com/problemset/problem/1913/D",
+  "editorial_url": "https://codeforces.com/blog/entry/123493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$[p_1, p_2, \\dots, p_n]$$$, where all elements are distinct. You can perform several (possibly zero) operations with it. In one operation, you can choose a contiguous subsegment of $$$p$$$ and remove all elements from that subsegment, except for the minimum element on that subsegment. For example, if $$$p = [3, 1, 4, 7, 5, 2, 6]$$$ and you choose the subsegment from the $$$3$$$-rd element to the $$$6$$$-th element, the resulting array is $$$[3, 1, 2, 6]$$$. An array $$$a$$$ is called reachable if it can be obtained from $$$p$$$ using several (maybe zero) aforementioned operations. Calculate the number of reachable arrays, and print it modulo $$$998244353$$$.",
+  "input_specification": "The first line of the input contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of two lines. The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$). The second line contains $$$n$$$ distinct integers $$$p_1, p_2, \\dots, p_n$$$ ($$$1 \\le p_i \\le 10^9$$$). Additional constraint on the input: the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the number of reachable arrays, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n2 1\n4\n2 4 1 3\n5\n10 2 6 3 4",
+      "output": "2\n6\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

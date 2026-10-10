@@ -1,0 +1,46 @@
+{
+  "id": "631D",
+  "source": "problemset",
+  "contest_id": 631,
+  "problem_index": "D",
+  "name": "Messenger",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "hashing",
+    "implementation",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 2515,
+  "problem_url": "https://codeforces.com/problemset/problem/631/D",
+  "editorial_url": "https://codeforces.com/blog/entry/43551",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Each employee of the \"Blake Techologies\" company uses a special messaging app \"Blake Messenger\". All the stuff likes this app and uses it constantly. However, some important futures are missing. For example, many users want to be able to search through the message history. It was already announced that the new feature will appear in the nearest update, when developers faced some troubles that only you may help them to solve. All the messages are represented as a strings consisting of only lowercase English letters. In order to reduce the network load strings are represented in the special compressed form. Compression algorithm works as follows: string is represented as a concatenation of n blocks, each block containing only equal characters. One block may be described as a pair ( l i , c i ) , where l i is the length of the i -th block and c i is the corresponding letter. Thus, the string s may be written as the sequence of pairs . Your task is to write the program, that given two compressed string t and s finds all occurrences of s in t . Developers know that there may be many such occurrences, so they only ask you to find the number of them. Note that p is the starting position of some occurrence of s in t if and only if t p t p + 1 ... t p + | s | - 1 = s , where t i is the i -th character of string t . Note that the way to represent the string in compressed form may not be unique. For example string \" aaaa \" may be given as , , ...",
+  "input_specification": "The first line of the input contains two integers n and m ( 1 ≤ n , m ≤ 200 000 ) — the number of blocks in the strings t and s , respectively. The second line contains the descriptions of n parts of string t in the format \" l i - c i \" ( 1 ≤ l i ≤ 1 000 000 ) — the length of the i -th part and the corresponding lowercase English letter. The second line contains the descriptions of m parts of string s in the format \" l i - c i \" ( 1 ≤ l i ≤ 1 000 000 ) — the length of the i -th part and the corresponding lowercase English letter.",
+  "output_specification": "Print a single integer — the number of occurrences of s in t .",
+  "sample_testcases": [
+    {
+      "input": "5 3\n3-a 2-b 4-c 3-a 2-c\n2-a 2-b 1-c",
+      "output": "1"
+    },
+    {
+      "input": "6 1\n3-a 6-b 7-a 4-c 8-e 2-a\n3-a",
+      "output": "6"
+    },
+    {
+      "input": "5 5\n1-h 1-e 1-l 1-l 1-o\n1-w 1-o 1-r 1-l 1-d",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

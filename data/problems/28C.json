@@ -1,0 +1,48 @@
+{
+  "id": "28C",
+  "source": "problemset",
+  "contest_id": 28,
+  "problem_index": "C",
+  "name": "Bath Queue",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "probabilities"
+  ],
+  "solved_count": 1369,
+  "problem_url": "https://codeforces.com/problemset/problem/28/C",
+  "editorial_url": "https://codeforces.com/blog/entry/685",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n students living in the campus. Every morning all students wake up at the same time and go to wash. There are m rooms with wash basins. The i -th of these rooms contains a i wash basins. Every student independently select one the rooms with equal probability and goes to it. After all students selected their rooms, students in each room divide into queues by the number of wash basins so that the size of the largest queue is the least possible. Calculate the expected value of the size of the largest queue among all rooms.",
+  "input_specification": "The first line contains two positive integers n and m ( 1 ≤ n , m ≤ 50 ) — the amount of students and the amount of rooms. The second line contains m integers a 1 , a 2 , ... , a m ( 1 ≤ a i ≤ 50 ). a i means the amount of wash basins in the i -th room.",
+  "output_specification": "Output single number: the expected value of the size of the largest queue. Your answer must have an absolute or relative error less than 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "1 1\n2",
+      "output": "1.00000000000000000000"
+    },
+    {
+      "input": "2 2\n1 1",
+      "output": "1.50000000000000000000"
+    },
+    {
+      "input": "2 3\n1 1 1",
+      "output": "1.33333333333333350000"
+    },
+    {
+      "input": "7 5\n1 1 2 3 1",
+      "output": "2.50216960000000070000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "856D",
+  "source": "problemset",
+  "contest_id": 856,
+  "problem_index": "D",
+  "name": "Masha and Cactus",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 634,
+  "problem_url": "https://codeforces.com/problemset/problem/856/D",
+  "editorial_url": "https://codeforces.com/blog/entry/54452",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Masha is fond of cacti. When she was a little girl, she decided to plant a tree. Now Masha wants to make a nice cactus out of her tree. Recall that tree is a connected undirected graph that has no cycles. Cactus is a connected undirected graph such that each vertex belongs to at most one cycle. Masha has some additional edges that she can add to a tree. For each edge she knows which vertices it would connect and the beauty of this edge. Masha can add some of these edges to the graph if the resulting graph is a cactus. Beauty of the resulting cactus is sum of beauties of all added edges. Help Masha find out what maximum beauty of the resulting cactus she can achieve.",
+  "input_specification": "The first line of the input data contains two integers n and m — the number of vertices in a tree, and the number of additional edges available ( 3 ≤ n ≤ 2·10 5 ; 0 ≤ m ≤ 2·10 5 ). Let us describe Masha's tree. It has a root at vertex 1. The second line contains n - 1 integers: p 2 , p 3 , ..., p n , here p i — is the parent of a vertex i — the first vertex on a path from the vertex i to the root of the tree ( 1 ≤ p i < i ). The following m lines contain three integers u i , v i and c i — pairs of vertices to be connected by the additional edges that Masha can add to the tree and beauty of edge ( 1 ≤ u i , v i ≤ n ; u i ≠ v i ; 1 ≤ c i ≤ 10 4 ). It is guaranteed that no additional edge coincides with the edge of the tree.",
+  "output_specification": "Output one integer — the maximum beauty of a cactus Masha can achieve.",
+  "sample_testcases": [
+    {
+      "input": "7 3\n1 1 2 2 3 3\n4 5 1\n6 7 1\n2 3 1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

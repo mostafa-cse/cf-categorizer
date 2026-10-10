@@ -1,0 +1,39 @@
+{
+  "id": "348D",
+  "source": "problemset",
+  "contest_id": 348,
+  "problem_index": "D",
+  "name": "Turtles",
+  "rating": 2500,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 2358,
+  "problem_url": "https://codeforces.com/problemset/problem/348/D",
+  "editorial_url": "https://codeforces.com/blog/entry/9031",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You've got a table of size n × m . We'll consider the table rows numbered from top to bottom 1 through n , and the columns numbered from left to right 1 through m . Then we'll denote the cell in row x and column y as ( x , y ) . Initially cell (1, 1) contains two similar turtles. Both turtles want to get to cell ( n , m ) . Some cells of the table have obstacles but it is guaranteed that there aren't any obstacles in the upper left and lower right corner. A turtle (one or the other) can go from cell ( x , y ) to one of two cells ( x + 1, y ) and ( x , y + 1) , as long as the required cell doesn't contain an obstacle. The turtles have had an argument so they don't want to have any chance of meeting each other along the way. Help them find the number of ways in which they can go from cell (1, 1) to cell ( n , m ) . More formally, find the number of pairs of non-intersecting ways from cell (1, 1) to cell ( n , m ) modulo 1000000007 (10 9 + 7) . Two ways are called non-intersecting if they have exactly two common points — the starting point and the final point.",
+  "input_specification": "The first line contains two integers n , m (2 ≤ n , m ≤ 3000) . Each of the following n lines contains m characters describing the table. The empty cells are marked by characters \" . \", the cells with obstacles are marked by \" # \". It is guaranteed that the upper left and the lower right cells are empty.",
+  "output_specification": "In a single line print a single integer — the number of pairs of non-intersecting paths from cell (1, 1) to cell ( n , m ) modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "4 5\n.....\n.###.\n.###.\n.....",
+      "output": "1"
+    },
+    {
+      "input": "2 3\n...\n...",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

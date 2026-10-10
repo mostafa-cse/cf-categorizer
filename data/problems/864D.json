@@ -1,0 +1,44 @@
+{
+  "id": "864D",
+  "source": "problemset",
+  "contest_id": 864,
+  "problem_index": "D",
+  "name": "Make a Permutation!",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 6422,
+  "problem_url": "https://codeforces.com/problemset/problem/864/D",
+  "editorial_url": "https://codeforces.com/blog/entry/54765",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ivan has an array consisting of n elements. Each of the elements is an integer from 1 to n . Recently Ivan learned about permutations and their lexicographical order. Now he wants to change (replace) minimum number of elements in his array in such a way that his array becomes a permutation (i.e. each of the integers from 1 to n was encountered in his array exactly once). If there are multiple ways to do it he wants to find the lexicographically minimal permutation among them. Thus minimizing the number of changes has the first priority, lexicographical minimizing has the second priority. In order to determine which of the two permutations is lexicographically smaller, we compare their first elements. If they are equal — compare the second, and so on. If we have two permutations x and y , then x is lexicographically smaller if x i < y i , where i is the first index in which the permutations x and y differ. Determine the array Ivan will obtain after performing all the changes.",
+  "input_specification": "The first line contains an single integer n ( 2 ≤ n ≤ 200 000 ) — the number of elements in Ivan's array. The second line contains a sequence of integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ n ) — the description of Ivan's array.",
+  "output_specification": "In the first line print q — the minimum number of elements that need to be changed in Ivan's array in order to make his array a permutation. In the second line, print the lexicographically minimal permutation which can be obtained from array with q changes.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 2 2 3",
+      "output": "2\n1 2 4 3"
+    },
+    {
+      "input": "6\n4 5 6 3 2 1",
+      "output": "0\n4 5 6 3 2 1"
+    },
+    {
+      "input": "10\n6 8 4 6 7 1 6 3 4 5",
+      "output": "3\n2 8 4 6 7 1 9 3 10 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

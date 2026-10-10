@@ -1,0 +1,35 @@
+{
+  "id": "290D",
+  "source": "problemset",
+  "contest_id": 290,
+  "problem_index": "D",
+  "name": "Orange",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 1919,
+  "problem_url": "https://codeforces.com/problemset/problem/290/D",
+  "editorial_url": "https://codeforces.com/blog/entry/7216",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "",
+  "input_specification": "The first line of the input is a string (between 1 and 50 characters long, inclusive). Each character will be a letter of English alphabet, lowercase or uppercase. The second line of the input is an integer between 0 and 26, inclusive.",
+  "output_specification": "Output the required string.",
+  "sample_testcases": [
+    {
+      "input": "AprilFool\n14",
+      "output": "AprILFooL"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

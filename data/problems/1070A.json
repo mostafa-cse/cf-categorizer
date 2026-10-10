@@ -1,0 +1,45 @@
+{
+  "id": "1070A",
+  "source": "problemset",
+  "contest_id": 1070,
+  "problem_index": "A",
+  "name": "Find a Number",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "graphs",
+    "number theory",
+    "shortest paths"
+  ],
+  "solved_count": 2701,
+  "problem_url": "https://codeforces.com/problemset/problem/1070/A",
+  "editorial_url": "https://codeforces.com/blog/entry/105126",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two positive integers $$$d$$$ and $$$s$$$. Find minimal positive integer $$$n$$$ which is divisible by $$$d$$$ and has sum of digits equal to $$$s$$$.",
+  "input_specification": "The first line contains two positive integers $$$d$$$ and $$$s$$$ ($$$1 \\le d \\le 500, 1 \\le s \\le 5000$$$) separated by space.",
+  "output_specification": "Print the required number or -1 if it doesn't exist.",
+  "sample_testcases": [
+    {
+      "input": "13 50",
+      "output": "699998"
+    },
+    {
+      "input": "61 2",
+      "output": "1000000000000000000000000000001"
+    },
+    {
+      "input": "15 50",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:04",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

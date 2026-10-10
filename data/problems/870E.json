@@ -1,0 +1,41 @@
+{
+  "id": "870E",
+  "source": "problemset",
+  "contest_id": 870,
+  "problem_index": "E",
+  "name": "Points, Lines and Ready-made Titles",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1351,
+  "problem_url": "https://codeforces.com/problemset/problem/870/E",
+  "editorial_url": "https://codeforces.com/blog/entry/55200",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given n distinct points on a plane with integral coordinates. For each point you can either draw a vertical line through it, draw a horizontal line through it, or do nothing. You consider several coinciding straight lines as a single one. How many distinct pictures you can get? Print the answer modulo 10 9 + 7 .",
+  "input_specification": "The first line contains single integer n ( 1 ≤ n ≤ 10 5 ) — the number of points. n lines follow. The ( i + 1 )-th of these lines contains two integers x i , y i ( - 10 9 ≤ x i , y i ≤ 10 9 ) — coordinates of the i -th point. It is guaranteed that all points are distinct.",
+  "output_specification": "Print the number of possible distinct pictures modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1\n1 2\n2 1\n2 2",
+      "output": "16"
+    },
+    {
+      "input": "2\n-1 -1\n0 1",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

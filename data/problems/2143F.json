@@ -1,0 +1,36 @@
+{
+  "id": "2143F",
+  "source": "problemset",
+  "contest_id": 2143,
+  "problem_index": "F",
+  "name": "Increasing Xor",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 476,
+  "problem_url": "https://codeforces.com/problemset/problem/2143/F",
+  "editorial_url": "https://codeforces.com/blog/entry/146526",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You have been gifted a magic sequence of integers: $$$a_1, a_2, \\ldots, a_n$$$. However, this is no ordinary sequence — it can modify itself in a specific way! After observing it carefully, you discovered the rule it follows: Repeatedly, two indices $$$1 \\le i \\le j \\le n$$$ are chosen. Then, the value at index $$$j$$$ is updated as: $$$a_j \\leftarrow a_j \\oplus a_i$$$.$$$^{\\text{∗}}$$$ Being afraid of strictly increasing sequences, you start asking yourself questions: You are given $$$q$$$ queries. Each query consists of two integers $$$l$$$ and $$$r$$$, and you must determine whether the subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ can be transformed into a strictly increasing sequence by applying any number of the described operations only within the range $$$l$$$ to $$$r$$$, that is, only using indices $$$l \\le i \\le j \\le r$$$ . $$$^{\\text{∗}}$$$$$$\\oplus$$$ denotes the bitwise XOR operation .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\leq n, q \\leq 2 \\cdot 10^5$$$) — the length of the sequence and the number of queries. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\leq a_i \\lt 2^{20}$$$) — the contents of the sequence. Each of the next $$$q$$$ lines contains two integers $$$l$$$ and $$$r$$$ ($$$1 \\leq l \\leq r \\leq n$$$), representing a query. For each query, you must determine whether the subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ can be transformed into a strictly increasing sequence using the allowed operations. It is guaranteed that the total sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$, and the total sum of $$$q$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each query, output YES if the subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ can be transformed into a strictly increasing sequence using the allowed operations; otherwise, output NO . You may print each letter of YES or NO in any case. For example, YES , yES , YeS will all be recognized as a positive answer.",
+  "sample_testcases": [
+    {
+      "input": "2\n4 4\n1 2 2 1\n1 1\n1 2\n1 3\n1 4\n8 6\n5 1 1 2 3 2 1 3\n1 8\n2 2\n2 3\n2 6\n4 8\n5 8",
+      "output": "YES\nYES\nYES\nYES\nNO\nYES\nYES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

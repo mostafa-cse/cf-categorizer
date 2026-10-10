@@ -1,0 +1,43 @@
+{
+  "id": "329A",
+  "source": "problemset",
+  "contest_id": 329,
+  "problem_index": "A",
+  "name": "Purification",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 4875,
+  "problem_url": "https://codeforces.com/problemset/problem/329/A",
+  "editorial_url": "https://codeforces.com/blog/entry/8417",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are an adventurer currently journeying inside an evil temple. After defeating a couple of weak zombies, you arrived at a square room consisting of tiles forming an n × n grid. The rows are numbered 1 through n from top to bottom, and the columns are numbered 1 through n from left to right. At the far side of the room lies a door locked with evil magical forces. The following inscriptions are written on the door: The cleaning of all evil will awaken the door! Being a very senior adventurer, you immediately realize what this means. You notice that every single cell in the grid are initially evil. You should purify all of these cells. The only method of tile purification known to you is by casting the \"Purification\" spell. You cast this spell on a single tile — then, all cells that are located in the same row and all cells that are located in the same column as the selected tile become purified (including the selected tile)! It is allowed to purify a cell more than once. You would like to purify all n × n cells while minimizing the number of times you cast the \"Purification\" spell. This sounds very easy, but you just noticed that some tiles are particularly more evil than the other tiles. You cannot cast the \"Purification\" spell on those particularly more evil tiles, not even after they have been purified. They can still be purified if a cell sharing the same row or the same column gets selected by the \"Purification\" spell. Please find some way to purify all the cells with the minimum number of spells cast. Print -1 if there is no such way.",
+  "input_specification": "The first line will contain a single integer n ( 1 ≤ n ≤ 100 ). Then, n lines follows, each contains n characters. The j -th character in the i -th row represents the cell located at row i and column j . It will be the character ' E ' if it is a particularly more evil cell, and ' . ' otherwise.",
+  "output_specification": "If there exists no way to purify all the cells, output -1. Otherwise, if your solution casts x \"Purification\" spells (where x is the minimum possible number of spells), output x lines. Each line should consist of two integers denoting the row and column numbers of the cell on which you should cast the \"Purification\" spell.",
+  "sample_testcases": [
+    {
+      "input": "3\n.E.\nE.E\n.E.",
+      "output": "1 1\n2 2\n3 3"
+    },
+    {
+      "input": "3\nEEE\nE..\nE.E",
+      "output": "-1"
+    },
+    {
+      "input": "5\nEE.EE\nE.EE.\nE...E\n.EE.E\nEE.EE",
+      "output": "3 3\n1 3\n2 2\n4 4\n5 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:21",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

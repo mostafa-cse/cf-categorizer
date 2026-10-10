@@ -1,0 +1,38 @@
+{
+  "id": "1332B",
+  "source": "problemset",
+  "contest_id": 1332,
+  "problem_index": "B",
+  "name": "Composite Coloring",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 19435,
+  "problem_url": "https://codeforces.com/problemset/problem/1332/B",
+  "editorial_url": "https://codeforces.com/blog/entry/75432",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "A positive integer is called composite if it can be represented as a product of two positive integers, both greater than $$$1$$$. For example, the following numbers are composite: $$$6$$$, $$$4$$$, $$$120$$$, $$$27$$$. The following numbers aren't: $$$1$$$, $$$2$$$, $$$3$$$, $$$17$$$, $$$97$$$. Alice is given a sequence of $$$n$$$ composite numbers $$$a_1,a_2,\\ldots,a_n$$$. She wants to choose an integer $$$m \\le 11$$$ and color each element one of $$$m$$$ colors from $$$1$$$ to $$$m$$$ so that: for each color from $$$1$$$ to $$$m$$$ there is at least one element of this color; each element is colored and colored exactly one color; the greatest common divisor of any two elements that are colored the same color is greater than $$$1$$$, i.e. $$$\\gcd(a_i, a_j) \\gt 1$$$ for each pair $$$i, j$$$ if these elements are colored the same color. Note that equal elements can be colored different colors — you just have to choose one of $$$m$$$ colors for each of the indices from $$$1$$$ to $$$n$$$. Alice showed already that if all $$$a_i \\le 1000$$$ then she can always solve the task by choosing some $$$m \\le 11$$$. Help Alice to find the required coloring. Note that you don't have to minimize or maximize the number of colors, you just have to find the solution with some $$$m$$$ from $$$1$$$ to $$$11$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Then the descriptions of the test cases follow. The first line of the test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 1000$$$) — the amount of numbers in a sequence $$$a$$$. The second line of the test case contains $$$n$$$ composite integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$4 \\le a_i \\le 1000$$$). It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$10^4$$$.",
+  "output_specification": "For each test case print $$$2$$$ lines. The first line should contain a single integer $$$m$$$ ($$$1 \\le m \\le 11$$$) — the number of used colors. Consider colors to be numbered from $$$1$$$ to $$$m$$$. The second line should contain any coloring that satisfies the above conditions. Print $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$1 \\le c_i \\le m$$$), where $$$c_i$$$ is the color of the $$$i$$$-th element. If there are multiple solutions then you can print any of them. Note that you don't have to minimize or maximize the number of colors, you just have to find the solution with some $$$m$$$ from $$$1$$$ to $$$11$$$. Remember that each color from $$$1$$$ to $$$m$$$ should be used at least once. Any two elements of the same color should not be coprime (i.e. their GCD should be greater than $$$1$$$).",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n6 10 15\n2\n4 9\n23\n437 519 865 808 909 391 194 291 237 395 323 365 511 497 781 737 871 559 731 697 779 841 961",
+      "output": "1\n1 1 1\n2\n2 1\n11\n4 7 8 10 7 3 10 7 7 8 3 1 1 5 5 9 2 2 3 3 4 11 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

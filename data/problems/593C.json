@@ -1,0 +1,35 @@
+{
+  "id": "593C",
+  "source": "problemset",
+  "contest_id": 593,
+  "problem_index": "C",
+  "name": "Beautiful Function",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 342,
+  "problem_url": "https://codeforces.com/problemset/problem/593/C",
+  "editorial_url": "https://codeforces.com/blog/entry/21371",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Every day Ruslan tried to count sheep to fall asleep, but this didn't help. Now he has found a more interesting thing to do. First, he thinks of some set of circles on a plane, and then tries to choose a beautiful set of points, such that there is at least one point from the set inside or on the border of each of the imagined circles. Yesterday Ruslan tried to solve this problem for the case when the set of points is considered beautiful if it is given as ( x t = f ( t ), y t = g ( t )) , where argument t takes all integer values from 0 to 50 . Moreover, f ( t ) and g ( t ) should be correct functions. Assume that w ( t ) and h ( t ) are some correct functions, and c is an integer ranging from 0 to 50 . The function s ( t ) is correct if it's obtained by one of the following rules: s ( t ) = abs ( w ( t )) , where abs ( x ) means taking the absolute value of a number x , i.e. | x | ; s ( t ) = ( w ( t ) + h ( t )) ; s ( t ) = ( w ( t ) - h ( t )) ; s ( t ) = ( w ( t ) * h ( t )) , where * means multiplication, i.e. ( w ( t )· h ( t )) ; s ( t ) = c ; s ( t ) = t ; Yesterday Ruslan thought on and on, but he could not cope with the task. Now he asks you to write a program that computes the appropriate f ( t ) and g ( t ) for any set of at most 50 circles. In each of the functions f ( t ) and g ( t ) you are allowed to use no more than 50 multiplications. The length of any function should not exceed 100· n characters. The function should not contain spaces. Ruslan can't keep big numbers in his memory, so you should choose f ( t ) and g ( t ) , such that for all integer t from 0 to 50 value of f ( t ) and g ( t ) and all the intermediate calculations won't exceed 10 9 by their absolute value.",
+  "input_specification": "The first line of the input contains number n ( 1 ≤ n ≤ 50 ) — the number of circles Ruslan thinks of. Next follow n lines, each of them containing three integers x i , y i and r i ( 0 ≤ x i , y i ≤ 50 , 2 ≤ r i ≤ 50 ) — the coordinates of the center and the raduis of the i -th circle.",
+  "output_specification": "In the first line print a correct function f ( t ) . In the second line print a correct function g ( t ) . The set of the points ( x t = f ( t ), y t = g ( t )) ( 0 ≤ t ≤ 50 ) must satisfy the condition, that there is at least one point inside or on the border of each of the circles, Ruslan thinks of at the beginning.",
+  "sample_testcases": [
+    {
+      "input": "3\n0 10 4\n10 0 4\n20 10 4",
+      "output": "t\nabs((t-10))"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:55",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

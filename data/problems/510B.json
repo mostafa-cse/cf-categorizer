@@ -1,0 +1,50 @@
+{
+  "id": "510B",
+  "source": "problemset",
+  "contest_id": 510,
+  "problem_index": "B",
+  "name": "Fox And Two Dots",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar"
+  ],
+  "solved_count": 16994,
+  "problem_url": "https://codeforces.com/problemset/problem/510/B",
+  "editorial_url": "https://codeforces.com/blog/entry/16173",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel is playing a mobile puzzle game called \"Two Dots\". The basic levels are played on a board of size n × m cells, like this: Each cell contains a dot that has some color. We will use different uppercase Latin characters to express different colors. The key of this game is to find a cycle that contain dots of same color. Consider 4 blue dots on the picture forming a circle as an example. Formally, we call a sequence of dots d 1 , d 2 , ..., d k a cycle if and only if it meets the following condition: These k dots are different: if i ≠ j then d i is different from d j . k is at least 4. All dots belong to the same color. For all 1 ≤ i ≤ k - 1 : d i and d i + 1 are adjacent. Also, d k and d 1 should also be adjacent. Cells x and y are called adjacent if they share an edge. Determine if there exists a cycle on the field.",
+  "input_specification": "The first line contains two integers n and m ( 2 ≤ n , m ≤ 50 ): the number of rows and columns of the board. Then n lines follow, each line contains a string consisting of m characters, expressing colors of dots in each line. Each character is an uppercase Latin letter.",
+  "output_specification": "Output \" Yes \" if there exists a cycle , and \" No \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3 4\nAAAA\nABCA\nAAAA",
+      "output": "Yes"
+    },
+    {
+      "input": "3 4\nAAAA\nABCA\nAADA",
+      "output": "No"
+    },
+    {
+      "input": "4 4\nYYYR\nBYBY\nBBBY\nBBBY",
+      "output": "Yes"
+    },
+    {
+      "input": "7 6\nAAAAAB\nABBBAB\nABAAAB\nABABBB\nABAAAB\nABBBAB\nAAAAAB",
+      "output": "Yes"
+    },
+    {
+      "input": "2 13\nABCDEFGHIJKLM\nNOPQRSTUVWXYZ",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

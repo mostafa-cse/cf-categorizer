@@ -1,0 +1,46 @@
+{
+  "id": "724G",
+  "source": "problemset",
+  "contest_id": 724,
+  "problem_index": "G",
+  "name": "Xor-matic Number of the Graph",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "graphs",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 1628,
+  "problem_url": "https://codeforces.com/problemset/problem/724/G",
+  "editorial_url": "https://codeforces.com/blog/entry/47644",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected graph, constisting of n vertices and m edges. Each edge of the graph has some non-negative integer written on it. Let's call a triple ( u , v , s ) interesting , if 1 ≤ u < v ≤ n and there is a path ( possibly non-simple , i.e. it can visit the same vertices and edges multiple times) between vertices u and v such that xor of all numbers written on the edges of this path is equal to s . When we compute the value s for some path, each edge is counted in xor as many times, as it appear on this path. It's not hard to prove that there are finite number of such triples. Calculate the sum over modulo 10 9 + 7 of the values of s over all interesting triples.",
+  "input_specification": "The first line of the input contains two integers n and m ( 1 ≤ n ≤ 100 000 , 0 ≤ m ≤ 200 000 ) — numbers of vertices and edges in the given graph. The follow m lines contain three integers u i , v i and t i ( 1 ≤ u i , v i ≤ n , 0 ≤ t i ≤ 10 18 , u i ≠ v i ) — vertices connected by the edge and integer written on it. It is guaranteed that graph doesn't contain self-loops and multiple edges.",
+  "output_specification": "Print the single integer, equal to the described sum over modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4 4\n1 2 1\n1 3 2\n2 3 3\n3 4 1",
+      "output": "12"
+    },
+    {
+      "input": "4 4\n1 2 1\n2 3 2\n3 4 4\n4 1 8",
+      "output": "90"
+    },
+    {
+      "input": "8 6\n1 2 2\n2 3 1\n2 4 4\n4 5 5\n4 6 3\n7 8 5",
+      "output": "62"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:23",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

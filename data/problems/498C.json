@@ -1,0 +1,40 @@
+{
+  "id": "498C",
+  "source": "problemset",
+  "contest_id": 498,
+  "problem_index": "C",
+  "name": "Array and Operations",
+  "rating": 2100,
+  "tags": [
+    "flows",
+    "graph matchings",
+    "number theory"
+  ],
+  "solved_count": 4464,
+  "problem_url": "https://codeforces.com/problemset/problem/498/C",
+  "editorial_url": "https://codeforces.com/blog/entry/15353",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have written on a piece of paper an array of n positive integers a [1], a [2], ..., a [ n ] and m good pairs of integers ( i 1 , j 1 ), ( i 2 , j 2 ), ..., ( i m , j m ) . Each good pair ( i k , j k ) meets the following conditions: i k + j k is an odd number and 1 ≤ i k < j k ≤ n . In one operation you can perform a sequence of actions: take one of the good pairs ( i k , j k ) and some integer v ( v > 1 ), which divides both numbers a [ i k ] and a [ j k ] ; divide both numbers by v , i. e. perform the assignments: and . Determine the maximum number of operations you can sequentially perform on the given array. Note that one pair may be used several times in the described operations.",
+  "input_specification": "The first line contains two space-separated integers n , m ( 2 ≤ n ≤ 100 , 1 ≤ m ≤ 100 ). The second line contains n space-separated integers a [1], a [2], ..., a [ n ] ( 1 ≤ a [ i ] ≤ 10 9 ) — the description of the array. The following m lines contain the description of good pairs. The k -th line contains two space-separated integers i k , j k ( 1 ≤ i k < j k ≤ n , i k + j k is an odd number). It is guaranteed that all the good pairs are distinct.",
+  "output_specification": "Output the answer for the problem.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n8 3 8\n1 2\n2 3",
+      "output": "0"
+    },
+    {
+      "input": "3 2\n8 12 8\n1 2\n2 3",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "1715E",
+  "source": "problemset",
+  "contest_id": 1715,
+  "problem_index": "E",
+  "name": "Long Way Home",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "geometry",
+    "graphs",
+    "greedy",
+    "shortest paths"
+  ],
+  "solved_count": 2464,
+  "problem_url": "https://codeforces.com/problemset/problem/1715/E",
+  "editorial_url": "https://codeforces.com/blog/entry/104261",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Stanley lives in a country that consists of $$$n$$$ cities (he lives in city $$$1$$$). There are bidirectional roads between some of the cities, and you know how long it takes to ride through each of them. Additionally, there is a flight between each pair of cities, the flight between cities $$$u$$$ and $$$v$$$ takes $$$(u - v)^2$$$ time. Stanley is quite afraid of flying because of watching \"Sully: Miracle on the Hudson\" recently, so he can take at most $$$k$$$ flights. Stanley wants to know the minimum time of a journey to each of the $$$n$$$ cities from the city $$$1$$$.",
+  "input_specification": "In the first line of input there are three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$2 \\leq n \\leq 10^{5}$$$, $$$1 \\leq m \\leq 10^{5}$$$, $$$1 \\leq k \\leq 20$$$) — the number of cities, the number of roads, and the maximal number of flights Stanley can take. The following $$$m$$$ lines describe the roads. Each contains three integers $$$u$$$, $$$v$$$, $$$w$$$ ($$$1 \\leq u, v \\leq n$$$, $$$u \\neq v$$$, $$$1 \\leq w \\leq 10^{9}$$$) — the cities the road connects and the time it takes to ride through. Note that some pairs of cities may be connected by more than one road.",
+  "output_specification": "Print $$$n$$$ integers, $$$i$$$-th of which is equal to the minimum time of traveling to city $$$i$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 1 2\n1 3 1",
+      "output": "0 1 1"
+    },
+    {
+      "input": "4 3 1\n1 2 3\n2 4 5\n3 4 7",
+      "output": "0 1 4 6"
+    },
+    {
+      "input": "2 1 1\n2 1 893746473",
+      "output": "0 1"
+    },
+    {
+      "input": "5 5 2\n2 1 33\n1 5 93\n5 3 48\n2 3 21\n4 2 1",
+      "output": "0 1 2 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

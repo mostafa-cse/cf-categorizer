@@ -1,0 +1,39 @@
+{
+  "id": "131C",
+  "source": "problemset",
+  "contest_id": 131,
+  "problem_index": "C",
+  "name": "The World is a Theatre",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 12951,
+  "problem_url": "https://codeforces.com/problemset/problem/131/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n boys and m girls attending a theatre club. To set a play \"The Big Bang Theory\", they need to choose a group containing exactly t actors containing no less than 4 boys and no less than one girl. How many ways are there to choose a group? Of course, the variants that only differ in the composition of the troupe are considered different. Perform all calculations in the 64-bit type: long long for С/С++, int64 for Delphi and long for Java.",
+  "input_specification": "The only line of the input data contains three integers n , m , t ( 4 ≤ n ≤ 30, 1 ≤ m ≤ 30, 5 ≤ t ≤ n + m ).",
+  "output_specification": "Find the required number of ways. Please do not use the %lld specificator to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d specificator.",
+  "sample_testcases": [
+    {
+      "input": "5 2 5",
+      "output": "10"
+    },
+    {
+      "input": "4 3 5",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

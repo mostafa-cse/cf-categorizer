@@ -1,0 +1,39 @@
+{
+  "id": "1670D",
+  "source": "problemset",
+  "contest_id": 1670,
+  "problem_index": "D",
+  "name": "Very Suspicious",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "geometry",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 5757,
+  "problem_url": "https://codeforces.com/problemset/problem/1670/D",
+  "editorial_url": "https://codeforces.com/blog/entry/102579",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sehr Sus is an infinite hexagonal grid as pictured below, controlled by MennaFadali, ZerooCool and Hosssam. They love equilateral triangles and want to create $$$n$$$ equilateral triangles on the grid by adding some straight lines. The triangles must all be empty from the inside (in other words, no straight line or hexagon edge should pass through any of the triangles). You are allowed to add straight lines parallel to the edges of the hexagons. Given $$$n$$$, what is the minimum number of lines you need to add to create at least $$$n$$$ equilateral triangles as described? Adding two red lines results in two new yellow equilateral triangles.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Then $$$t$$$ test cases follow. Each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^{9}$$$) — the required number of equilateral triangles.",
+  "output_specification": "For each test case, print the minimum number of lines needed to have $$$n$$$ or more equilateral triangles.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n2\n3\n4567",
+      "output": "2\n2\n3\n83"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

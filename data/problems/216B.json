@@ -1,0 +1,43 @@
+{
+  "id": "216B",
+  "source": "problemset",
+  "contest_id": 216,
+  "problem_index": "B",
+  "name": "Forming Teams",
+  "rating": 1700,
+  "tags": [
+    "dfs and similar",
+    "implementation"
+  ],
+  "solved_count": 7160,
+  "problem_url": "https://codeforces.com/problemset/problem/216/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5066",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day n students come to the stadium. They want to play football, and for that they need to split into teams, the teams must have an equal number of people. We know that this group of people has archenemies. Each student has at most two archenemies. Besides, if student A is an archenemy to student B , then student B is an archenemy to student A . The students want to split so as no two archenemies were in one team. If splitting in the required manner is impossible, some students will have to sit on the bench. Determine the minimum number of students you will have to send to the bench in order to form the two teams in the described manner and begin the game at last.",
+  "input_specification": "The first line contains two integers n and m ( 2 ≤ n ≤ 100 , 1 ≤ m ≤ 100 ) — the number of students and the number of pairs of archenemies correspondingly. Next m lines describe enmity between students. Each enmity is described as two numbers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ) — the indexes of the students who are enemies to each other. Each enmity occurs in the list exactly once. It is guaranteed that each student has no more than two archenemies. You can consider the students indexed in some manner with distinct integers from 1 to n .",
+  "output_specification": "Print a single integer — the minimum number of students you will have to send to the bench in order to start the game.",
+  "sample_testcases": [
+    {
+      "input": "5 4\n1 2\n2 4\n5 3\n1 4",
+      "output": "1"
+    },
+    {
+      "input": "6 2\n1 4\n3 4",
+      "output": "0"
+    },
+    {
+      "input": "6 6\n1 2\n2 3\n3 1\n4 5\n5 6\n6 4",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:15",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

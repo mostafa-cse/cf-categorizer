@@ -1,0 +1,45 @@
+{
+  "id": "675C",
+  "source": "problemset",
+  "contest_id": 675,
+  "problem_index": "C",
+  "name": "Money Transfers",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3959,
+  "problem_url": "https://codeforces.com/problemset/problem/675/C",
+  "editorial_url": "https://codeforces.com/blog/entry/44902",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n banks in the city where Vasya lives, they are located in a circle, such that any two banks are neighbouring if their indices differ by no more than 1 . Also, bank 1 and bank n are neighbours if n > 1 . No bank is a neighbour of itself. Vasya has an account in each bank. Its balance may be negative, meaning Vasya owes some money to this bank. There is only one type of operations available: transfer some amount of money from any bank to account in any neighbouring bank. There are no restrictions on the size of the sum being transferred or balance requirements to perform this operation. Vasya doesn't like to deal with large numbers, so he asks you to determine the minimum number of operations required to change the balance of each bank account to zero. It's guaranteed, that this is possible to achieve, that is, the total balance of Vasya in all banks is equal to zero.",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 100 000 ) — the number of banks. The second line contains n integers a i ( - 10 9 ≤ a i ≤ 10 9 ), the i -th of them is equal to the initial balance of the account in the i -th bank. It's guaranteed that the sum of all a i is equal to 0 .",
+  "output_specification": "Print the minimum number of operations required to change balance in each bank to zero.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 0 -5",
+      "output": "1"
+    },
+    {
+      "input": "4\n-1 0 1 0",
+      "output": "2"
+    },
+    {
+      "input": "4\n1 2 3 -6",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

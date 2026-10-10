@@ -1,0 +1,38 @@
+{
+  "id": "1523C",
+  "source": "problemset",
+  "contest_id": 1523,
+  "problem_index": "C",
+  "name": "Compression and Expansion",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 9235,
+  "problem_url": "https://codeforces.com/problemset/problem/1523/C",
+  "editorial_url": "https://codeforces.com/blog/entry/91271",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "William is a huge fan of planning ahead. That is why he starts his morning routine by creating a nested list of upcoming errands. A valid nested list is any list which can be created from a list with one item \" 1 \" by applying some operations. Each operation inserts a new item into the list, on a new line , just after one of existing items $$$a_1 \\,.\\, a_2 \\,.\\, a_3 \\,.\\, \\,\\cdots\\, \\,.\\,a_k$$$ and can be one of two types: Add an item $$$a_1 \\,.\\, a_2 \\,.\\, a_3 \\,.\\, \\cdots \\,.\\, a_k \\,.\\, 1$$$ (starting a list of a deeper level), or Add an item $$$a_1 \\,.\\, a_2 \\,.\\, a_3 \\,.\\, \\cdots \\,.\\, (a_k + 1)$$$ (continuing the current level). Operation can only be applied if the list does not contain two identical items afterwards. And also, if we consider every item as a sequence of numbers, then the sequence of items should always remain increasing in lexicographical order. Examples of valid and invalid lists that are shown in the picture can found in the \" Notes \" section. When William decided to save a Word document with the list of his errands he accidentally hit a completely different keyboard shortcut from the \" Ctrl-S \" he wanted to hit. It's not known exactly what shortcut he pressed but after triggering it all items in the list were replaced by a single number: the last number originally written in the item number. William wants you to help him restore a fitting original nested list.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^3$$$), which is the number of lines in the list. Each of the next $$$n$$$ lines contains a single integer $$$a_i$$$ ($$$1 \\le a_i \\le n$$$), which is what remains of William's nested list. It is guaranteed that in each test case at least one fitting list exists. It is guaranteed that the sum of values $$$n$$$ across all test cases does not exceed $$$10^3$$$.",
+  "output_specification": "For each test case output $$$n$$$ lines which represent a valid nested list, which could become the data provided to you by William. If there are multiple answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n1\n1\n2\n3\n9\n1\n1\n1\n2\n2\n1\n2\n1\n2",
+      "output": "1\n1.1\n1.2\n1.3\n1\n1.1\n1.1.1\n1.1.2\n1.2\n1.2.1\n2\n2.1\n2.2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

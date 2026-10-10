@@ -1,0 +1,36 @@
+{
+  "id": "1637E",
+  "source": "problemset",
+  "contest_id": 1637,
+  "problem_index": "E",
+  "name": "Best Pair",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 3947,
+  "problem_url": "https://codeforces.com/problemset/problem/1637/E",
+  "editorial_url": "https://codeforces.com/blog/entry/99883",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of length $$$n$$$. Let $$$cnt_x$$$ be the number of elements from the array which are equal to $$$x$$$. Let's also define $$$f(x, y)$$$ as $$$(cnt_x + cnt_y) \\cdot (x + y)$$$. Also you are given $$$m$$$ bad pairs $$$(x_i, y_i)$$$. Note that if $$$(x, y)$$$ is a bad pair, then $$$(y, x)$$$ is also bad. Your task is to find the maximum value of $$$f(u, v)$$$ over all pairs $$$(u, v)$$$, such that $$$u \\neq v$$$, that this pair is not bad, and also that $$$u$$$ and $$$v$$$ each occur in the array $$$a$$$. It is guaranteed that such a pair exists.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10\\,000$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$, $$$0 \\le m \\le 3 \\cdot 10^5$$$) — the length of the array and the number of bad pairs. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — elements of the array. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i \\lt y_i \\le 10^9$$$), which represent a bad pair. It is guaranteed that no bad pair occurs twice in the input. It is also guaranteed that $$$cnt_{x_i} \\gt 0$$$ and $$$cnt_{y_i} \\gt 0$$$. It is guaranteed that for each test case there is a pair of integers $$$(u, v)$$$, $$$u \\ne v$$$, that is not bad, and such that both of these numbers occur in $$$a$$$. It is guaranteed that the total sum of $$$n$$$ and the total sum of $$$m$$$ don't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 1\n6 3 6 7 3 3\n3 6\n2 0\n3 4\n7 4\n1 2 2 3 1 5 1\n1 5\n3 5\n1 3\n2 5",
+      "output": "40\n14\n15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

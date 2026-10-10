@@ -1,0 +1,38 @@
+{
+  "id": "2128D",
+  "source": "problemset",
+  "contest_id": 2128,
+  "problem_index": "D",
+  "name": "Sum of LDS",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 13169,
+  "problem_url": "https://codeforces.com/problemset/problem/2128/D",
+  "editorial_url": "https://codeforces.com/blog/entry/145080",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You're given a permutation$$$^{\\text{∗}}$$$ $$$p_1, \\ldots, p_n$$$ such that $$$\\max(p_i, p_{i+1}) \\gt p_{i+2}$$$ for all $$$1 \\leq i \\leq n-2$$$. Compute the sum of the length of the longest decreasing subsequence$$$^{\\text{†}}$$$ of the subarray $$$[p_l, p_{l+1}, \\ldots, p_r]$$$ over all pairs $$$1 \\leq l \\leq r \\leq n$$$. $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array). $$$^{\\text{†}}$$$Given an array $$$b$$$ of size $$$|b|$$$, a decreasing subsequence of length $$$k$$$ is a sequence of indices $$$i_1, \\ldots, i_k$$$ such that: $$$1 \\leq i_1 \\lt i_2 \\lt \\ldots \\lt i_k \\leq |b|$$$ $$$b_{i_1} \\gt b_{i_2} \\gt \\ldots \\gt b_{i_k}$$$",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10\\,000$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\leq n \\leq 500\\,000$$$). The second line of each test case contains $$$n$$$ integers $$$p_1, p_2, \\ldots, p_n$$$ ($$$1 \\le p_i \\le n$$$, $$$p_i$$$ are pairwise distinct). It is guaranteed that $$$\\max(p_i, p_{i+1}) \\gt p_{i+2}$$$ for all $$$1 \\leq i \\leq n-2$$$. The sum of $$$n$$$ over all test cases does not exceed $$$500\\,000$$$.",
+  "output_specification": "For each test case, output the sum over all subarrays of the length of its longest decreasing subsequence.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n3 2 1\n4\n4 3 1 2\n6\n6 1 5 2 4 3\n3\n2 3 1",
+      "output": "10\n17\n40\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

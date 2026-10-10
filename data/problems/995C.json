@@ -1,0 +1,47 @@
+{
+  "id": "995C",
+  "source": "problemset",
+  "contest_id": 995,
+  "problem_index": "C",
+  "name": "Leaving the Bar",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "data structures",
+    "geometry",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 2175,
+  "problem_url": "https://codeforces.com/problemset/problem/995/C",
+  "editorial_url": "https://codeforces.com/blog/entry/60217",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "For a vector $$$\\vec{v} = (x, y)$$$, define $$$|v| = \\sqrt{x^2 + y^2}$$$. Allen had a bit too much to drink at the bar, which is at the origin. There are $$$n$$$ vectors $$$\\vec{v_1}, \\vec{v_2}, \\cdots, \\vec{v_n}$$$. Allen will make $$$n$$$ moves. As Allen's sense of direction is impaired, during the $$$i$$$-th move he will either move in the direction $$$\\vec{v_i}$$$ or $$$-\\vec{v_i}$$$. In other words, if his position is currently $$$p = (x, y)$$$, he will either move to $$$p + \\vec{v_i}$$$ or $$$p - \\vec{v_i}$$$. Allen doesn't want to wander too far from home (which happens to also be the bar). You need to help him figure out a sequence of moves (a sequence of signs for the vectors) such that his final position $$$p$$$ satisfies $$$|p| \\le 1.5 \\cdot 10^6$$$ so that he can stay safe.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of moves. Each of the following lines contains two space-separated integers $$$x_i$$$ and $$$y_i$$$, meaning that $$$\\vec{v_i} = (x_i, y_i)$$$. We have that $$$|v_i| \\le 10^6$$$ for all $$$i$$$.",
+  "output_specification": "Output a single line containing $$$n$$$ integers $$$c_1, c_2, \\cdots, c_n$$$, each of which is either $$$1$$$ or $$$-1$$$. Your solution is correct if the value of $$$p = \\sum_{i = 1}^n c_i \\vec{v_i}$$$, satisfies $$$|p| \\le 1.5 \\cdot 10^6$$$. It can be shown that a solution always exists under the given constraints.",
+  "sample_testcases": [
+    {
+      "input": "3\n999999 0\n0 999999\n999999 0",
+      "output": "1 1 -1"
+    },
+    {
+      "input": "1\n-824590 246031",
+      "output": "1"
+    },
+    {
+      "input": "8\n-67761 603277\n640586 -396671\n46147 -122580\n569609 -2112\n400 914208\n131792 309779\n-850150 -486293\n5272 721899",
+      "output": "1 1 1 1 1 1 1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

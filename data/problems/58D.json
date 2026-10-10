@@ -1,0 +1,43 @@
+{
+  "id": "58D",
+  "source": "problemset",
+  "contest_id": 58,
+  "problem_index": "D",
+  "name": "Calendar",
+  "rating": 2000,
+  "tags": [
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 876,
+  "problem_url": "https://codeforces.com/problemset/problem/58/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1771",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "BerOilGasDiamondBank has branches in n cities, at that n is an even number. The bank management wants to publish a calendar with the names of all those cities written in two columns: the calendar should consist of exactly n / 2 lines of strictly equal length, each of which contains exactly two names and exactly one separator character between them. The name of every city should be used in the calendar exactly once. For historical reasons the symbol d is used as the separator of words in the calendar. The BerOilGasDiamondBank management wants to show that all its branches are equally important to it, that's why the order of their appearance in the calendar should be following: if we \"glue\"(concatinate) all the n / 2 calendar lines (from top to bottom) to make a single line, then the lexicographically minimal line is obtained. No separator character will be used to separate calendar lines. For example, if the lines are \"bertown!berville\", \"newberville!bera\", then the resulting line is \"bertown!bervillenewberville!bera\". In some sense one has to find the lexicographically minimal calendar, where the comparison of calendars happens line by line. Help BerOilGasDiamondBank and construct the required calendar.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 4 , n is even) which is the number of branches. Then follow n lines which are the names of the cities. All the names consist of lowercase Latin letters; their lengths are no less than 1 and no more than 10 symbols. The next line contains a single symbol d ( d has an ASCII-code from 33 to 126 inclusively, excluding lowercase Latin letters) which is the separator between words in the calendar lines. It is guaranteed that the calendar is possible to be constructed and all the names are different.",
+  "output_specification": "Print n / 2 lines of similar length which are the required calendar. Every line should contain exactly two words and exactly one separator between them. If there are several solutions, print the lexicographically minimal one. The lexicographical comparison of lines is realized by the \" < \" operator in the modern programming languages.",
+  "sample_testcases": [
+    {
+      "input": "4\nb\naa\nhg\nc\n.",
+      "output": "aa.b\nc.hg"
+    },
+    {
+      "input": "2\naa\na\n!",
+      "output": "a!aa"
+    },
+    {
+      "input": "2\naa\na\n|",
+      "output": "aa|a"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:22",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

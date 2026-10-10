@@ -1,0 +1,36 @@
+{
+  "id": "877E",
+  "source": "problemset",
+  "contest_id": 877,
+  "problem_index": "E",
+  "name": "Danil and a Part-time Job",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 5990,
+  "problem_url": "https://codeforces.com/problemset/problem/877/E",
+  "editorial_url": "https://codeforces.com/blog/entry/55362",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Danil decided to earn some money, so he had found a part-time job. The interview have went well, so now he is a light switcher. Danil works in a rooted tree (undirected connected acyclic graph) with n vertices, vertex 1 is the root of the tree. There is a room in each vertex, light can be switched on or off in each room. Danil's duties include switching light in all rooms of the subtree of the vertex. It means that if light is switched on in some room of the subtree, he should switch it off. Otherwise, he should switch it on. Unfortunately (or fortunately), Danil is very lazy. He knows that his boss is not going to personally check the work. Instead, he will send Danil tasks using Workforces personal messages. There are two types of tasks: pow v describes a task to switch lights in the subtree of vertex v . get v describes a task to count the number of rooms in the subtree of v , in which the light is turned on. Danil should send the answer to his boss using Workforces messages. A subtree of vertex v is a set of vertices for which the shortest path from them to the root passes through v . In particular, the vertex v is in the subtree of v . Danil is not going to perform his duties. He asks you to write a program, which answers the boss instead of him.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 200 000 ) — the number of vertices in the tree. The second line contains n - 1 space-separated integers p 2 , p 3 , ..., p n ( 1 ≤ p i < i ), where p i is the ancestor of vertex i . The third line contains n space-separated integers t 1 , t 2 , ..., t n ( 0 ≤ t i ≤ 1 ), where t i is 1 , if the light is turned on in vertex i and 0 otherwise. The fourth line contains a single integer q ( 1 ≤ q ≤ 200 000 ) — the number of tasks. The next q lines are get v or pow v ( 1 ≤ v ≤ n ) — the tasks described above.",
+  "output_specification": "For each task get v print the number of rooms in the subtree of v , in which the light is turned on.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 1\n1 0 0 1\n9\nget 1\nget 2\nget 3\nget 4\npow 1\nget 1\nget 2\nget 3\nget 4",
+      "output": "2\n0\n0\n1\n2\n1\n1\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:45",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

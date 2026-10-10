@@ -1,0 +1,38 @@
+{
+  "id": "2059E1",
+  "source": "problemset",
+  "contest_id": 2059,
+  "problem_index": "E1",
+  "name": "Stop Gaming (Easy Version)",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 917,
+  "problem_url": "https://codeforces.com/problemset/problem/2059/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/139094",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The difference between the versions is that in this version you only need to find the minimum number of operations. You can hack only if you solved all versions of this problem. You are given $$$n$$$ arrays, each of which has a length of $$$m$$$. Let the $$$j$$$-th element of the $$$i$$$-th array be denoted as $$$a_{i, j}$$$. It is guaranteed that all $$$a_{i, j}$$$ are pairwise distinct . In one operation, you can do the following: Choose some integer $$$i$$$ ($$$1 \\le i \\le n$$$) and an integer $$$x$$$ ($$$1 \\le x \\le 2 \\cdot n \\cdot m$$$). For all integers $$$k$$$ from $$$i$$$ to $$$n$$$ in increasing order, do the following: Add the element $$$x$$$ to the beginning of the $$$k$$$-th array. Assign $$$x$$$ the value of the last element in the $$$k$$$-th array. Remove the last element from the $$$k$$$-th array. In other words, you can insert an element at the beginning of any array, after which all elements in this and all following arrays are shifted by one to the right. The last element of the last array is removed. You are also given a description of the arrays that need to be obtained after all operations. That is, after performing the operations, the $$$j$$$-th element of the $$$i$$$-th array should be equal to $$$b_{i, j}$$$. It is guaranteed that all $$$b_{i, j}$$$ are pairwise distinct . Determine the minimum number of operations that need to be performed to obtain the desired arrays.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 3 \\cdot 10^5$$$) — the number of arrays and the number of elements in each array. The $$$i$$$-th of the following $$$n$$$ lines contains $$$m$$$ integers $$$a_{i, 1}, a_{i, 2}, \\ldots, a_{i, m}$$$ ($$$1 \\le a_{i, j} \\le 2 \\cdot n \\cdot m$$$) — the elements of the $$$i$$$-th original array. It is guaranteed that all $$$a_{i, j}$$$ are pairwise distinct. The $$$i$$$-th of the following $$$n$$$ lines contains $$$m$$$ integers $$$b_{i, 1}, b_{i, 2}, \\ldots, b_{i, m}$$$ ($$$1 \\le b_{i, j} \\le 2 \\cdot n \\cdot m$$$) — the elements of the $$$i$$$-th final array. It is guaranteed that all $$$b_{i, j}$$$ are pairwise distinct. It is guaranteed that the sum of $$$n \\cdot m$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations that need to be performed.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 2\n2 6\n3 4\n1 2\n7 8\n1 5\n5 4 1 2 3\n5 4 3 2 1\n3 3\n1 2 3\n4 5 6\n7 8 9\n11 1 2\n12 3 4\n13 5 6\n4 4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16\n17 1 2 3\n4 18 5 6\n7 19 8 20\n9 21 22 10",
+      "output": "3\n5\n3\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:36",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

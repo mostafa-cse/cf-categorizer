@@ -1,0 +1,44 @@
+{
+  "id": "337E",
+  "source": "problemset",
+  "contest_id": 337,
+  "problem_index": "E",
+  "name": "Divisor Tree",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 1170,
+  "problem_url": "https://codeforces.com/problemset/problem/337/E",
+  "editorial_url": "https://codeforces.com/blog/entry/8629",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A divisor tree is a rooted tree that meets the following conditions: Each vertex of the tree contains a positive integer number. The numbers written in the leaves of the tree are prime numbers. For any inner vertex, the number within it is equal to the product of the numbers written in its children. Manao has n distinct integers a 1 , a 2 , ..., a n . He tries to build a divisor tree which contains each of these numbers. That is, for each a i , there should be at least one vertex in the tree which contains a i . Manao loves compact style, but his trees are too large. Help Manao determine the minimum possible number of vertices in the divisor tree sought.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 8 ). The second line contains n distinct space-separated integers a i ( 2 ≤ a i ≤ 10 12 ).",
+  "output_specification": "Print a single integer — the minimum number of vertices in the divisor tree that contains each of the numbers a i .",
+  "sample_testcases": [
+    {
+      "input": "2\n6 10",
+      "output": "7"
+    },
+    {
+      "input": "4\n6 72 8 4",
+      "output": "12"
+    },
+    {
+      "input": "1\n7",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

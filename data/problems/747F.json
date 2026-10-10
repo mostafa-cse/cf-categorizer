@@ -1,0 +1,41 @@
+{
+  "id": "747F",
+  "source": "problemset",
+  "contest_id": 747,
+  "problem_index": "F",
+  "name": "Igor and Interesting Numbers",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 527,
+  "problem_url": "https://codeforces.com/problemset/problem/747/F",
+  "editorial_url": "https://codeforces.com/blog/entry/49171",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Igor likes hexadecimal notation and considers positive integer in the hexadecimal notation interesting if each digit and each letter in it appears no more than t times. For example, if t = 3 , then integers 13a13322 , aaa , abcdef0123456789 are interesting, but numbers aaaa , abababab and 1000000 are not interesting. Your task is to find the k -th smallest interesting for Igor integer in the hexadecimal notation. The integer should not contain leading zeros.",
+  "input_specification": "The first line contains the two integers k and t ( 1 ≤ k ≤ 2·10 9 , 1 ≤ t ≤ 10 ) — the number of the required integer and the maximum number of times some integer or letter can appear in interesting integer. It can be shown that the answer always exists for such constraints.",
+  "output_specification": "Print in the hexadecimal notation the only integer that is the k -th smallest interesting integer for Igor.",
+  "sample_testcases": [
+    {
+      "input": "17 1",
+      "output": "12"
+    },
+    {
+      "input": "1000000 2",
+      "output": "fca2c"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

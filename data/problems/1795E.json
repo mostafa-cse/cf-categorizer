@@ -1,0 +1,38 @@
+{
+  "id": "1795E",
+  "source": "problemset",
+  "contest_id": 1795,
+  "problem_index": "E",
+  "name": "Explosions?",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2479,
+  "problem_url": "https://codeforces.com/problemset/problem/1795/E",
+  "editorial_url": "https://codeforces.com/blog/entry/112963",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing yet another game where you kill monsters using magic spells. There are $$$n$$$ cells in the row, numbered from $$$1$$$ to $$$n$$$. Initially, the $$$i$$$-th cell contains the $$$i$$$-th monster with $$$h_i$$$ health. You have a basic spell that costs $$$1$$$ MP and deals $$$1$$$ damage to the monster you choose. You can cast it any number of times. Also, you have a special scroll with \"Explosion\" spell you can use only once. You want to finish killing monsters with explosion, that's why you, firstly, cast the basic spell several times (possibly, zero), and then after that, you cast one \"Explosion\". How does \"Explosion\" spell work? Firstly, you choose the power of the spell: if you pour $$$x$$$ MP into it, \"Explosion\" will deal $$$x$$$ damage. Secondly, you choose some monster $$$i$$$, which will be targeted by the spell. That's what happens next: if its current health $$$h_i \\gt x$$$, then he stays alive with health decreased by $$$x$$$; if $$$h_i \\le x$$$, the $$$i$$$-th monster dies with an explosion that deals $$$h_i - 1$$$ damage to monsters in the neighboring cells $$$i - 1$$$ and $$$i + 1$$$, if these cells exist and monsters inside are still alive; if the damage dealt by the explosion is enough to kill the monster $$$i - 1$$$ (or $$$i + 1$$$), i. e. the current $$$h_{i - 1} \\le h_i - 1$$$ (or $$$h_{i + 1} \\le h_i - 1$$$), then that monster also dies creating a secondary explosion of power $$$h_{i-1} - 1$$$ (or $$$h_{i+1} - 1$$$) that may deals damage to their neighbors, and so on, until the explosions end. Your goal is to kill all the remaining monsters with those \"chaining\" explosions, that's why you need a basic spell to decrease $$$h_i$$$ of some monsters or even kill them beforehand (monsters die when their current health $$$h_i$$$ becomes less or equal to zero). Note that monsters don't move between cells, so, for example, monsters $$$i$$$ and $$$i + 2$$$ will never become neighbors. What is the minimum total MP you need to kill all monsters in the way you want? The total MP is counted as the sum of the number of basic spells you cast and the power $$$x$$$ of explosion scroll you've chosen.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains the single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of cells in the row, i. e. the number of monsters. The second line of each test case contains $$$n$$$ integers $$$h_1, h_2, \\dots, h_n$$$ ($$$1 \\le h_i \\le 10^6$$$) — the initial health of the monsters. It's guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the minimum total MP you need to kill all monsters by finishing them with explosion.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n1 1 1\n4\n4 1 2 1\n4\n5 10 15 10\n1\n42\n9\n1 2 3 2 2 2 3 2 1",
+      "output": "3\n6\n15\n42\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

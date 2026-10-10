@@ -1,0 +1,39 @@
+{
+  "id": "1016C",
+  "source": "problemset",
+  "contest_id": 1016,
+  "problem_index": "C",
+  "name": "Vasya And The Mushrooms",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 4024,
+  "problem_url": "https://codeforces.com/problemset/problem/1016/C",
+  "editorial_url": "https://codeforces.com/blog/entry/61015",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya's house is situated in a forest, and there is a mushroom glade near it. The glade consists of two rows, each of which can be divided into n consecutive cells. For each cell Vasya knows how fast the mushrooms grow in this cell (more formally, how many grams of mushrooms grow in this cell each minute). Vasya spends exactly one minute to move to some adjacent cell. Vasya cannot leave the glade. Two cells are considered adjacent if they share a common side. When Vasya enters some cell, he instantly collects all the mushrooms growing there. Vasya begins his journey in the left upper cell. Every minute Vasya must move to some adjacent cell, he cannot wait for the mushrooms to grow. He wants to visit all the cells exactly once and maximize the total weight of the collected mushrooms. Initially, all mushrooms have a weight of 0 . Note that Vasya doesn't need to return to the starting cell. Help Vasya! Calculate the maximum total weight of mushrooms he can collect.",
+  "input_specification": "The first line contains the number n (1 ≤ n ≤ 3·10 5 ) — the length of the glade. The second line contains n numbers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 6 ) — the growth rate of mushrooms in the first row of the glade. The third line contains n numbers b 1 , b 2 , ..., b n (1 ≤ b i ≤ 10 6 ) is the growth rate of mushrooms in the second row of the glade.",
+  "output_specification": "Output one number — the maximum total weight of mushrooms that Vasya can collect by choosing the optimal route. Pay attention that Vasya must visit every cell of the glade exactly once .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3\n6 5 4",
+      "output": "70"
+    },
+    {
+      "input": "3\n1 1000 10000\n10 100 100000",
+      "output": "543210"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1495C",
+  "source": "problemset",
+  "contest_id": 1495,
+  "problem_index": "C",
+  "name": "Garden of the Sun",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "graphs"
+  ],
+  "solved_count": 2952,
+  "problem_url": "https://codeforces.com/problemset/problem/1495/C",
+  "editorial_url": "https://codeforces.com/blog/entry/88533",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are many sunflowers in the Garden of the Sun. Garden of the Sun is a rectangular table with $$$n$$$ rows and $$$m$$$ columns, where the cells of the table are farmlands. All of the cells grow a sunflower on it. Unfortunately, one night, the lightning stroke some (possibly zero) cells, and sunflowers on those cells were burned into ashes. In other words, those cells struck by the lightning became empty. Magically, any two empty cells have no common points (neither edges nor corners). Now the owner wants to remove some (possibly zero) sunflowers to reach the following two goals: When you are on an empty cell, you can walk to any other empty cell. In other words, those empty cells are connected. There is exactly one simple path between any two empty cells. In other words, there is no cycle among the empty cells. You can walk from an empty cell to another if they share a common edge. Could you please give the owner a solution that meets all her requirements? Note that you are not allowed to plant sunflowers. You don't need to minimize the number of sunflowers you remove. It can be shown that the answer always exists.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line contains two integers $$$n$$$, $$$m$$$ ($$$1 \\le n,m \\le 500$$$) — the number of rows and columns. Each of the next $$$n$$$ lines contains $$$m$$$ characters. Each character is either ' X ' or ' . ', representing an empty cell and a cell that grows a sunflower, respectively. It is guaranteed that the sum of $$$n \\cdot m$$$ for all test cases does not exceed $$$250\\,000$$$.",
+  "output_specification": "For each test case, print $$$n$$$ lines. Each should contain $$$m$$$ characters, representing one row of the table. Each character should be either ' X ' or ' . ', representing an empty cell and a cell with a sunflower, respectively. If there are multiple answers, you can print any. It can be shown that the answer always exists.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 3\nX.X\n...\nX.X\n4 4\n....\n.X.X\n....\n.X.X\n5 5\n.X...\n....X\n.X...\n.....\nX.X.X\n1 10\n....X.X.X.\n2 2\n..\n..",
+      "output": "XXX\n..X\nXXX\nXXXX\n.X.X\n.X..\n.XXX\n.X...\n.XXXX\n.X...\n.X...\nXXXXX\nXXXXXXXXXX\n..\n.."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

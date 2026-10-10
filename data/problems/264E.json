@@ -1,0 +1,35 @@
+{
+  "id": "264E",
+  "source": "problemset",
+  "contest_id": 264,
+  "problem_index": "E",
+  "name": "Roadside Trees",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 488,
+  "problem_url": "https://codeforces.com/problemset/problem/264/E",
+  "editorial_url": "https://speakerdeck.com/snuke/codeforces162-div1-e",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Squirrel Liss loves nuts. Liss asks you to plant some nut trees. There are n positions (numbered 1 to n from west to east) to plant a tree along a street. Trees grow one meter per month. At the beginning of each month you should process one query. The query is one of the following types: Plant a tree of height h at position p . Cut down the x -th existent (not cut) tree from the west (where x is 1-indexed). When we cut the tree it drops down and takes all the available place at the position where it has stood. So no tree can be planted at this position anymore. After processing each query, you should print the length of the longest increasing subsequence. A subset of existent trees is called an increasing subsequence if the height of the trees in the set is strictly increasing from west to east (for example, the westmost tree in the set must be the shortest in the set). The length of the increasing subsequence is the number of trees in it. Note that Liss don't like the trees with the same heights, so it is guaranteed that at any time no two trees have the exactly same heights.",
+  "input_specification": "The first line contains two integers: n and m ( 1  ≤ n ≤ 10 5 ; 1 ≤ m ≤ 2·10 5 ) — the number of positions and the number of queries. Next m lines contains the information of queries by following formats: If the i -th query is type 1, the i -th line contains three integers: 1, p i , and h i ( 1 ≤ p i ≤ n , 1 ≤ h i ≤ 10 ), where p i is the position of the new tree and h i is the initial height of the new tree. If the i -th query is type 2, the i -th line contains two integers: 2 and x i ( 1 ≤ x i ≤ 10 ), where the x i is the index of the tree we want to cut. The input is guaranteed to be correct, i.e., For type 1 queries, p i will be pairwise distinct. For type 2 queries, x i will be less than or equal to the current number of trees. At any time no two trees have the exactly same heights. In each line integers are separated by single spaces.",
+  "output_specification": "Print m integers — the length of the longest increasing subsequence after each query. Separate the numbers by whitespaces.",
+  "sample_testcases": [
+    {
+      "input": "4 6\n1 1 1\n1 4 4\n1 3 4\n2 2\n1 2 8\n2 3",
+      "output": "1\n2\n3\n2\n2\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

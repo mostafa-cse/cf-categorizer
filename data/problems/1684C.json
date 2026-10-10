@@ -1,0 +1,38 @@
+{
+  "id": "1684C",
+  "source": "problemset",
+  "contest_id": 1684,
+  "problem_index": "C",
+  "name": "Column Swapping",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 13394,
+  "problem_url": "https://codeforces.com/problemset/problem/1684/C",
+  "editorial_url": "https://codeforces.com/blog/entry/102995",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a grid with $$$n$$$ rows and $$$m$$$ columns, where each cell has a positive integer written on it. Let's call a grid good , if in each row the sequence of numbers is sorted in a non-decreasing order. It means, that for each $$$1 \\le i \\le n$$$ and $$$2 \\le j \\le m$$$ the following holds: $$$a_{i,j} \\ge a_{i, j-1}$$$. You have to to do the following operation exactly once: choose two columns with indexes $$$i$$$ and $$$j$$$ ( not necessarily different ), $$$1 \\le i, j \\le m$$$, and swap them. You are asked to determine whether it is possible to make the grid good after the swap and, if it is, find the columns that need to be swapped.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$) — the number of rows and columns respectively. Each of the next $$$n$$$ rows contains $$$m$$$ integers, $$$j$$$-th element of $$$i$$$-th row is $$$a_{i,j}$$$ ($$$1 \\le a_{i,j} \\le 10^9$$$) — the number written in the $$$j$$$-th cell of the $$$i$$$-th row. It's guaranteed that the sum of $$$n \\cdot m$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "If after the swap it is impossible to get a good grid, output $$$-1$$$. In the other case output $$$2$$$ integers — the indices of the columns that should be swapped to get a good grid. If there are multiple solutions, print any.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 3\n1 2 3\n1 1 1\n2 2\n4 1\n2 3\n2 2\n2 1\n1 1\n2 3\n6 2 1\n5 4 3\n2 1\n1\n2",
+      "output": "1 1\n-1\n1 2\n1 3\n1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

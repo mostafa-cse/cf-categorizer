@@ -1,0 +1,37 @@
+{
+  "id": "1628D2",
+  "source": "problemset",
+  "contest_id": 1628,
+  "problem_index": "D2",
+  "name": "Game on Sum (Hard Version)",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "games",
+    "math"
+  ],
+  "solved_count": 2732,
+  "problem_url": "https://codeforces.com/problemset/problem/1628/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/99276",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The difference is the constraints on $$$n$$$, $$$m$$$ and $$$t$$$. You can make hacks only if all versions of the problem are solved. Alice and Bob are given the numbers $$$n$$$, $$$m$$$ and $$$k$$$, and play a game as follows: The game has a score that Alice tries to maximize, and Bob tries to minimize. The score is initially $$$0$$$. The game consists of $$$n$$$ turns. Each turn, Alice picks a real number from $$$0$$$ to $$$k$$$ (inclusive) which Bob either adds to or subtracts from the score of the game. But throughout the game, Bob has to choose to add at least $$$m$$$ out of the $$$n$$$ turns. Bob gets to know which number Alice picked before deciding whether to add or subtract the number from the score, and Alice gets to know whether Bob added or subtracted the number for the previous turn before picking the number for the current turn (except on the first turn since there was no previous turn). If Alice and Bob play optimally, what will the final score of the game be?",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The description of test cases follows. Each test case consists of a single line containing the three integers, $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1 \\le m \\le n \\le 10^6, 0 \\le k \\lt 10^9 + 7$$$) — the number of turns, how many of those turns Bob has to add, and the biggest number Alice can choose, respectively. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case output a single integer number — the score of the optimal game modulo $$$10^9 + 7$$$. Formally, let $$$M = 10^9 + 7$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n3 3 2\n2 1 10\n6 3 10\n6 4 10\n100 1 1\n4 4 0\n69 4 20",
+      "output": "6\n5\n375000012\n500000026\n958557139\n0\n49735962"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

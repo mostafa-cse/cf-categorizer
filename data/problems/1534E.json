@@ -1,0 +1,41 @@
+{
+  "id": "1534E",
+  "source": "problemset",
+  "contest_id": 1534,
+  "problem_index": "E",
+  "name": "Lost Array",
+  "rating": 2300,
+  "tags": [
+    "graphs",
+    "greedy",
+    "interactive",
+    "shortest paths"
+  ],
+  "solved_count": 2126,
+  "problem_url": "https://codeforces.com/problemset/problem/1534/E",
+  "editorial_url": "https://codeforces.com/blog/entry/91760",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Note: the XOR-sum of an array $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) is defined as $$$a_1 \\oplus a_2 \\oplus \\ldots \\oplus a_n$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . Little Dormi received an array of $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ for Christmas. However, while playing with it over the winter break, he accidentally dropped it into his XOR machine, and the array got lost. The XOR machine is currently configured with a query size of $$$k$$$ (which you cannot change), and allows you to perform the following type of query: by giving the machine $$$k$$$ distinct indices $$$x_1, x_2, \\ldots, x_k$$$, it will output $$$a_{x_1} \\oplus a_{x_2} \\oplus \\ldots \\oplus a_{x_k}$$$. As Little Dormi's older brother, you would like to help him recover the XOR-sum of his array $$$a_1, a_2, \\ldots, a_n$$$ by querying the XOR machine. Little Dormi isn't very patient, so to be as fast as possible, you must query the XOR machine the minimum number of times to find the XOR-sum of his array. Formally, let $$$d$$$ be the minimum number of queries needed to find the XOR-sum of any array of length $$$n$$$ with a query size of $$$k$$$. Your program will be accepted if you find the correct XOR-sum in at most $$$d$$$ queries. Lastly, you also noticed that with certain configurations of the machine $$$k$$$ and values of $$$n$$$, it may not be possible to recover the XOR-sum of Little Dormi's lost array. If that is the case, you should report it as well. The array $$$a_1, a_2, \\ldots, a_n$$$ is fixed before you start querying the XOR machine and does not change with the queries.",
+  "input_specification": "The only line of input contains the integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 500$$$, $$$1 \\le k \\le n$$$), the length of the lost array and the configured query size of the XOR machine. Elements of the original array satisfy $$$1 \\le a_i \\le 10^9$$$. It can be proven that that if it is possible to recover the XOR sum under the given constraints, it can be done in at most $$$500$$$ queries. That is, $$$d \\le 500$$$. After taking $$$n$$$ and $$$k$$$, begin interaction.",
+  "output_specification": "If it is impossible to recover the XOR-sum of the array, output $$$-1$$$ immediately after taking $$$n$$$ and $$$k$$$. Do not begin interaction. Otherwise, when your program finds the XOR-sum of the lost array $$$a_1, a_2, \\ldots, a_n$$$, report the answer in the following format: \" ! x \", where $$$x$$$ is the XOR sum of the array $$$a_1, a_2, \\ldots, a_n$$$, and terminate your program normally immediately after flushing the output stream. Note that answering does not count as a query.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n\n4\n\n0\n\n1",
+      "output": "? 1 2 3\n\n? 2 3 5\n\n? 4 1 5\n\n! 7"
+    },
+    {
+      "input": "3 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "840C",
+  "source": "problemset",
+  "contest_id": 840,
+  "problem_index": "C",
+  "name": "On the Bench",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 2242,
+  "problem_url": "https://codeforces.com/problemset/problem/840/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53943?locale=en",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A year ago on the bench in public park Leha found an array of n numbers. Leha believes that permutation p is right if for all 1 ≤ i < n condition, that a p i · a p i + 1 is not perfect square, holds. Leha wants to find number of right permutations modulo 10 9 + 7 .",
+  "input_specification": "First line of input data contains single integer n ( 1 ≤ n ≤ 300 ) — length of the array. Next line contains n integers a 1 , a 2 , ... , a n ( 1 ≤ a i ≤ 10 9 ) — found array.",
+  "output_specification": "Output single integer — number of right permutations modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 4",
+      "output": "2"
+    },
+    {
+      "input": "7\n5 2 4 2 4 1 1",
+      "output": "144"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

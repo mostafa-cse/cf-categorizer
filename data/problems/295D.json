@@ -1,0 +1,43 @@
+{
+  "id": "295D",
+  "source": "problemset",
+  "contest_id": 295,
+  "problem_index": "D",
+  "name": "Greg and Caves",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 770,
+  "problem_url": "https://codeforces.com/problemset/problem/295/D",
+  "editorial_url": "https://codeforces.com/blog/entry/7329",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Greg has a pad. The pad's screen is an n × m rectangle, each cell can be either black or white. We'll consider the pad rows to be numbered with integers from 1 to n from top to bottom. Similarly, the pad's columns are numbered with integers from 1 to m from left to right. Greg thinks that the pad's screen displays a cave if the following conditions hold: There is a segment [ l , r ] (1 ≤ l ≤ r ≤ n ) , such that each of the rows l , l + 1, ..., r has exactly two black cells and all other rows have only white cells. There is a row number t ( l ≤ t ≤ r ) , such that for all pairs of rows with numbers i and j ( l ≤ i ≤ j ≤ t ) the set of columns between the black cells in row i (with the columns where is these black cells) is the subset of the set of columns between the black cells in row j (with the columns where is these black cells) . Similarly, for all pairs of rows with numbers i and j ( t ≤ i ≤ j ≤ r ) the set of columns between the black cells in row j (with the columns where is these black cells) is the subset of the set of columns between the black cells in row i (with the columns where is these black cells) . Greg wondered, how many ways there are to paint a cave on his pad. Two ways can be considered distinct if there is a cell that has distinct colors on the two pictures. Help Greg.",
+  "input_specification": "The first line contains two integers n , m — the pad's screen size (1 ≤ n , m ≤ 2000) .",
+  "output_specification": "In the single line print the remainder after dividing the answer to the problem by 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "0"
+    },
+    {
+      "input": "4 4",
+      "output": "485"
+    },
+    {
+      "input": "3 5",
+      "output": "451"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

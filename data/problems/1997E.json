@@ -1,0 +1,42 @@
+{
+  "id": "1997E",
+  "source": "problemset",
+  "contest_id": 1997,
+  "problem_index": "E",
+  "name": "Level Up",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "divide and conquer",
+    "implementation"
+  ],
+  "solved_count": 3930,
+  "problem_url": "https://codeforces.com/problemset/problem/1997/E",
+  "editorial_url": "https://codeforces.com/blog/entry/132154",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Monocarp is playing a computer game. He starts the game being level $$$1$$$. He is about to fight $$$n$$$ monsters, in order from $$$1$$$ to $$$n$$$. The level of the $$$i$$$-th monster is $$$a_i$$$. For each monster in the given order, Monocarp's encounter goes as follows: if Monocarp's level is strictly higher than the monster's level, the monster flees (runs away); otherwise, Monocarp fights the monster. After every $$$k$$$-th fight with a monster ( fleeing monsters do not count ), Monocarp's level increases by $$$1$$$. So, his level becomes $$$2$$$ after $$$k$$$ monsters he fights, $$$3$$$ after $$$2k$$$ monsters, $$$4$$$ after $$$3k$$$ monsters, and so on. You need to process $$$q$$$ queries of the following form: $$$i~x$$$: will Monocarp fight the $$$i$$$-th monster (or will this monster flee) if the parameter $$$k$$$ is equal to $$$x$$$?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the number of monsters and the number of queries. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^5$$$) — the levels of the monsters. In the $$$j$$$-th of the following $$$q$$$ lines, two integers $$$i$$$ and $$$x$$$ ($$$1 \\le i, x \\le n$$$) — the index of the monster and the number of fights required for a level up in the $$$j$$$-th query.",
+  "output_specification": "For each query, output \" YES \", if Monocarp will fight the $$$i$$$-th monster in this query, and \" NO \", if the $$$i$$$-th monster flees.",
+  "sample_testcases": [
+    {
+      "input": "4 16\n2 1 2 1\n1 1\n2 1\n3 1\n4 1\n1 2\n2 2\n3 2\n4 2\n1 3\n2 3\n3 3\n4 3\n1 4\n2 4\n3 4\n4 4",
+      "output": "YES\nNO\nYES\nNO\nYES\nYES\nYES\nNO\nYES\nYES\nYES\nNO\nYES\nYES\nYES\nYES"
+    },
+    {
+      "input": "7 15\n1 1 2 1 1 1 1\n5 3\n2 2\n2 2\n1 6\n5 1\n5 5\n7 7\n3 5\n7 4\n4 3\n2 5\n1 2\n5 6\n4 1\n6 1",
+      "output": "NO\nYES\nYES\nYES\nNO\nYES\nYES\nYES\nNO\nNO\nYES\nYES\nYES\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:55",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

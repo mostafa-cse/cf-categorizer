@@ -1,0 +1,43 @@
+{
+  "id": "2206F",
+  "source": "problemset",
+  "contest_id": 2206,
+  "problem_index": "F",
+  "name": "Minesweeper String",
+  "rating": 2400,
+  "tags": [
+    "fft",
+    "number theory"
+  ],
+  "solved_count": 517,
+  "problem_url": "https://codeforces.com/problemset/problem/2206/F",
+  "editorial_url": "https://codeforces.com/contest/2206/attachments/download/36244/analysis.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given a string $$$S$$$ of length $$$n$$$ consisting of digits 0 – 9 . You want to use this string to generate a variant of Minesweeper. In this variant, a cell may contain more than one mine, and the mine count in a cell is based on its 4-neighborhood (edge-adjacent cells), instead of the usual 8-neighborhood. To do that, you choose an integer $$$w$$$ ($$$1 \\le w \\le n$$$) representing the width of the grid. You arrange the $$$n$$$ cells, numbered from $$$0$$$ to $$$n-1$$$, into a grid. The grid has $$$\\left\\lceil n / w \\right\\rceil$$$ rows numbered from $$$0$$$ to $$$\\left\\lceil n / w \\right\\rceil-1$$$ from top to bottom, and $$$w$$$ columns numbered from $$$0$$$ to $$$w-1$$$ from left to right. For each $$$0 \\leq i \\lt n$$$, cell $$$i$$$ is located at row $$$\\left\\lfloor i/w \\right\\rfloor$$$ and column $$$i \\bmod w$$$, and corresponds to the $$$(i+1)$$$-th digit of $$$S$$$. Thus, row $$$0$$$ contains cells $$$0$$$ to $$$w-1$$$, row $$$1$$$ contains cells $$$w$$$ to $$$2w-1$$$, and so on. Note that the bottommost row may contain less than $$$w$$$ cells. After arranging the grid, you perform the following steps: For each cell corresponding to a non-zero digit $$$x$$$ ( 1 – 9 ), you place $$$x$$$ mines in that cell. For each remaining cell corresponding to 0 , you write a number in that cell that is equal to the total number of mines in its adjacent cells. Two cells are adjacent if they share an edge. Note that each cell has at most four adjacent cells. For a width $$$w$$$, define $$$f(w)$$$ as the sum of the numbers in all cells without mines on the generated grid. Given an integer $$$k$$$, your task is to compute the $$$k$$$-th largest value among the values $$$f(1), f(2), \\ldots, f(n)$$$.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$k$$$ ($$$1\\leq k \\leq n \\leq 500\\,000$$$). The second line contains a string $$$S$$$ of length $$$n$$$ consisting of digits 0 – 9 .",
+  "output_specification": "Output the $$$k$$$-th largest value among $$$f(1), f(2), \\ldots, f(n)$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n20103",
+      "output": "7"
+    },
+    {
+      "input": "5 1\n20103",
+      "output": "11"
+    },
+    {
+      "input": "8 4\n60409003",
+      "output": "35"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

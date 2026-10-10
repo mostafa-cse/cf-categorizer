@@ -1,0 +1,36 @@
+{
+  "id": "2245C",
+  "source": "problemset",
+  "contest_id": 2245,
+  "problem_index": "C",
+  "name": "MEXOR",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 7393,
+  "problem_url": "https://codeforces.com/problemset/problem/2245/C",
+  "editorial_url": "https://codeforces.com/blog/entry/155232",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a positive integer $$$n$$$ and a non-negative integer $$$k$$$. Construct a permutation $$$p$$$ of length $$$n$$$ such that the following condition is satisfied: Let $$$f(i)=\\operatorname{mex}([p_0,p_1,\\ldots,p_i])$$$$$$^{\\text{∗}}$$$ for every $$$0 \\le i \\lt n$$$. Then, $$$f(0) \\oplus f(1) \\oplus \\ldots \\oplus f(n-1)$$$ should equal $$$k$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . Note that a permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$0$$$ to $$$n-1$$$ in arbitrary order. For example, $$$[1,2,0,4,3]$$$ is a permutation, but $$$[0,1,1]$$$ is not a permutation ($$$1$$$ appears twice in the array), and $$$[0,2,3]$$$ is also not a permutation ($$$n=3$$$ but there is $$$3$$$ in the array). $$$^{\\text{∗}}$$$The minimum excluded (MEX) of a collection of integers $$$c_1, c_2, \\ldots, c_k$$$ is defined as the smallest non-negative integer $$$x$$$ which does not occur in the collection $$$c$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le k \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if no such permutation exists, output \" NO \". Otherwise, first output \" YES \" on a single line. Then, output $$$n$$$ distinct integers $$$p_0,p_1,\\ldots,p_{n-1}$$$ ($$$0 \\le p_i \\lt n$$$), representing the permutation $$$p$$$ you constructed. If there are multiple permutations satisfying the requirement, you may output any of them. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 0\n1 1\n3 0\n4 8\n5 1\n9 12",
+      "output": "NO\nYES\n0\nYES\n0 1 2\nNO\nYES\n3 0 2 1 4\nYES\n1 4 0 8 2 3 7 5 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

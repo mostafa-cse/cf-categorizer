@@ -1,0 +1,38 @@
+{
+  "id": "2051E",
+  "source": "problemset",
+  "contest_id": 2051,
+  "problem_index": "E",
+  "name": "Best Price",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 12526,
+  "problem_url": "https://codeforces.com/problemset/problem/2051/E",
+  "editorial_url": "https://codeforces.com/blog/entry/137623",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A batch of Christmas trees has arrived at the largest store in Berland. $$$n$$$ customers have already come to the store, wanting to buy them. Before the sales begin, the store needs to determine the price for one tree (the price is the same for all customers). To do this, the store has some information about each customer. For the $$$i$$$-th customer, two integers $$$a_i$$$ and $$$b_i$$$ are known, which define their behavior: if the price of the product is at most $$$a_i$$$, the customer will buy a tree and leave a positive review; otherwise, if the price of the product is at most $$$b_i$$$, the customer will buy a tree but leave a negative review; otherwise, the customer will not buy a tree at all. Your task is to calculate the maximum possible earnings for the store, given that it can receive no more than $$$k$$$ negative reviews.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$0 \\le k \\le n$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^9$$$). The third line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_i \\le 2 \\cdot 10^9$$$; $$$a_i \\lt b_i$$$). Additional constraint on the input: the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the maximum possible earnings for the store, given that it can receive no more than $$$k$$$ negative reviews.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 0\n2 1\n3 4\n1 1\n2\n5\n3 3\n1 5 2\n3 6 4\n4 3\n2 3 2 8\n3 7 3 9\n3 1\n2 9 5\n12 14 9",
+      "output": "2\n5\n9\n14\n15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:39",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "954C",
+  "source": "problemset",
+  "contest_id": 954,
+  "problem_index": "C",
+  "name": "Matrix Walk",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3992,
+  "problem_url": "https://codeforces.com/problemset/problem/954/C",
+  "editorial_url": "https://codeforces.com/blog/entry/58519",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There is a matrix A of size x × y filled with integers. For every , A i , j = y ( i - 1) + j . Obviously, every integer from [1.. xy ] occurs exactly once in this matrix. You have traversed some path in this matrix. Your path can be described as a sequence of visited cells a 1 , a 2 , ..., a n denoting that you started in the cell containing the number a 1 , then moved to the cell with the number a 2 , and so on. From the cell located in i -th line and j -th column (we denote this cell as ( i , j ) ) you can move into one of the following cells: ( i + 1, j ) — only if i < x ; ( i , j + 1) — only if j < y ; ( i - 1, j ) — only if i > 1 ; ( i , j - 1) — only if j > 1 . Notice that making a move requires you to go to an adjacent cell. It is not allowed to stay in the same cell. You don't know x and y exactly, but you have to find any possible values for these numbers such that you could start in the cell containing the integer a 1 , then move to the cell containing a 2 (in one step), then move to the cell containing a 3 (also in one step) and so on. Can you choose x and y so that they don't contradict with your sequence of moves?",
+  "input_specification": "The first line contains one integer number n ( 1 ≤ n ≤ 200000 ) — the number of cells you visited on your path (if some cell is visited twice, then it's listed twice). The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — the integers in the cells on your path.",
+  "output_specification": "If all possible values of x and y such that 1 ≤ x , y ≤ 10 9 contradict with the information about your path, print NO . Otherwise, print YES in the first line, and in the second line print the values x and y such that your path was possible with such number of lines and columns in the matrix. Remember that they must be positive integers not exceeding 10 9 .",
+  "sample_testcases": [
+    {
+      "input": "8\n1 2 3 6 9 8 5 2",
+      "output": "YES\n3 3"
+    },
+    {
+      "input": "6\n1 2 1 2 5 3",
+      "output": "NO"
+    },
+    {
+      "input": "2\n1 10",
+      "output": "YES\n4 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

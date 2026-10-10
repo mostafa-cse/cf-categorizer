@@ -1,0 +1,42 @@
+{
+  "id": "126B",
+  "source": "problemset",
+  "contest_id": 126,
+  "problem_index": "B",
+  "name": "Password",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "dp",
+    "hashing",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 26746,
+  "problem_url": "https://codeforces.com/problemset/problem/126/B",
+  "editorial_url": "https://codeforces.com/blog/entry/3140",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Asterix, Obelix and their temporary buddies Suffix and Prefix has finally found the Harmony temple. However, its doors were firmly locked and even Obelix had no luck opening them. A little later they found a string s , carved on a rock below the temple's gates. Asterix supposed that that's the password that opens the temple and read the string aloud. However, nothing happened. Then Asterix supposed that a password is some substring t of the string s . Prefix supposed that the substring t is the beginning of the string s ; Suffix supposed that the substring t should be the end of the string s ; and Obelix supposed that t should be located somewhere inside the string s , that is, t is neither its beginning, nor its end. Asterix chose the substring t so as to please all his companions. Besides, from all acceptable variants Asterix chose the longest one (as Asterix loves long strings). When Asterix read the substring t aloud, the temple doors opened. You know the string s . Find the substring t or determine that such substring does not exist and all that's been written above is just a nice legend.",
+  "input_specification": "You are given the string s whose length can vary from 1 to 10 6 (inclusive), consisting of small Latin letters.",
+  "output_specification": "Print the string t . If a suitable t string does not exist, then print \" Just a legend \" without the quotes.",
+  "sample_testcases": [
+    {
+      "input": "fixprefixsuffix",
+      "output": "fix"
+    },
+    {
+      "input": "abcdabc",
+      "output": "Just a legend"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

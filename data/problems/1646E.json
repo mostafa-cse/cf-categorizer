@@ -1,0 +1,45 @@
+{
+  "id": "1646E",
+  "source": "problemset",
+  "contest_id": 1646,
+  "problem_index": "E",
+  "name": "Power Board",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2842,
+  "problem_url": "https://codeforces.com/problemset/problem/1646/E",
+  "editorial_url": "https://codeforces.com/blog/entry/100584",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a rectangular board of size $$$n\\times m$$$ ($$$n$$$ rows, $$$m$$$ columns). The $$$n$$$ rows are numbered from $$$1$$$ to $$$n$$$ from top to bottom, and the $$$m$$$ columns are numbered from $$$1$$$ to $$$m$$$ from left to right. The cell at the intersection of row $$$i$$$ and column $$$j$$$ contains the number $$$i^j$$$ ($$$i$$$ raised to the power of $$$j$$$). For example, if $$$n=3$$$ and $$$m=3$$$ the board is as follows: Find the number of distinct integers written on the board.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$1\\le n,m\\le 10^6$$$) — the number of rows and columns of the board.",
+  "output_specification": "Print one integer, the number of distinct integers on the board.",
+  "sample_testcases": [
+    {
+      "input": "3 3",
+      "output": "7"
+    },
+    {
+      "input": "2 4",
+      "output": "5"
+    },
+    {
+      "input": "4 2",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

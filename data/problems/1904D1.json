@@ -1,0 +1,36 @@
+{
+  "id": "1904D1",
+  "source": "problemset",
+  "contest_id": 1904,
+  "problem_index": "D1",
+  "name": "Set To Max (Easy Version)",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 8940,
+  "problem_url": "https://codeforces.com/problemset/problem/1904/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/123160",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only differences between the two versions of this problem are the constraints on $$$n$$$ and the time limit. You can make hacks only if all versions of the problem are solved. You are given two arrays $$$a$$$ and $$$b$$$ of length $$$n$$$. You can perform the following operation some (possibly zero) times: choose $$$l$$$ and $$$r$$$ such that $$$1 \\leq l \\leq r \\leq n$$$. let $$$x=\\max(a_l,a_{l+1},\\ldots,a_r)$$$. for all $$$l \\leq i \\leq r$$$, set $$$a_i := x$$$. Determine if you can make array $$$a$$$ equal to array $$$b$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 1000$$$) — the length of the arrays. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the elements of array $$$a$$$. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le n$$$) — the elements of array $$$b$$$. It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output \" YES \" (without quotes) if you can make $$$a$$$ into $$$b$$$ using any number of operations, and \" NO \" (without quotes) otherwise. You can output \" YES \" and \" NO \" in any case (for example, strings \" yES \", \" yes \" and \" Yes \" will be recognized as a positive response).",
+  "sample_testcases": [
+    {
+      "input": "5\n5\n1 2 3 2 4\n1 3 3 2 4\n5\n3 4 2 2 4\n3 4 3 4 4\n5\n3 2 1 1 1\n3 3 3 2 2\n2\n1 1\n1 2\n3\n1 1 2\n2 1 2",
+      "output": "YES\nNO\nYES\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

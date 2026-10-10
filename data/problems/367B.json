@@ -1,0 +1,39 @@
+{
+  "id": "367B",
+  "source": "problemset",
+  "contest_id": 367,
+  "problem_index": "B",
+  "name": "Sereja ans Anagrams",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 2757,
+  "problem_url": "https://codeforces.com/problemset/problem/367/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9726",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sereja has two sequences a and b and number p . Sequence a consists of n integers a 1 , a 2 , ..., a n . Similarly, sequence b consists of m integers b 1 , b 2 , ..., b m . As usual, Sereja studies the sequences he has. Today he wants to find the number of positions q ( q + ( m - 1)· p ≤ n ; q ≥ 1) , such that sequence b can be obtained from sequence a q , a q + p , a q + 2 p , ..., a q + ( m - 1) p by rearranging elements. Sereja needs to rush to the gym, so he asked to find all the described positions of q .",
+  "input_specification": "The first line contains three integers n , m and p (1 ≤ n , m ≤ 2·10 5 , 1 ≤ p ≤ 2·10 5 ) . The next line contains n integers a 1 , a 2 , ... , a n (1 ≤ a i ≤ 10 9 ) . The next line contains m integers b 1 , b 2 , ... , b m (1 ≤ b i ≤ 10 9 ) .",
+  "output_specification": "In the first line print the number of valid q s. In the second line, print the valid values in the increasing order.",
+  "sample_testcases": [
+    {
+      "input": "5 3 1\n1 2 3 2 1\n1 2 3",
+      "output": "2\n1 3"
+    },
+    {
+      "input": "6 3 2\n1 3 2 2 3 1\n1 2 3",
+      "output": "2\n1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

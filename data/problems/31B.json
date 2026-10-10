@@ -1,0 +1,44 @@
+{
+  "id": "31B",
+  "source": "problemset",
+  "contest_id": 31,
+  "problem_index": "B",
+  "name": "Sysadmin Bob",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 4841,
+  "problem_url": "https://codeforces.com/problemset/problem/31/B",
+  "editorial_url": "https://codeforces.com/blog/entry/704",
+  "time_limit": "0.5 second",
+  "memory_limit": "256 megabytes",
+  "description": "Email address in Berland is a string of the form A @ B , where A and B are arbitrary strings consisting of small Latin letters. Bob is a system administrator in «Bersoft» company. He keeps a list of email addresses of the company's staff. This list is as a large string, where all addresses are written in arbitrary order, separated by commas. The same address can be written more than once. Suddenly, because of unknown reasons, all commas in Bob's list disappeared. Now Bob has a string, where all addresses are written one after another without any separators, and there is impossible to determine, where the boundaries between addresses are. Unfortunately, on the same day his chief asked him to bring the initial list of addresses. Now Bob wants to disjoin addresses in some valid way. Help him to do that.",
+  "input_specification": "The first line contains the list of addresses without separators. The length of this string is between 1 and 200 , inclusive. The string consists only from small Latin letters and characters «@».",
+  "output_specification": "If there is no list of the valid (according to the Berland rules) email addresses such that after removing all commas it coincides with the given string, output No solution . In the other case, output the list. The same address can be written in this list more than once. If there are several solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "a@aa@a",
+      "output": "a@a,a@a"
+    },
+    {
+      "input": "a@a@a",
+      "output": "No solution"
+    },
+    {
+      "input": "@aa@a",
+      "output": "No solution"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

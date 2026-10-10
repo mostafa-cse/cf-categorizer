@@ -1,0 +1,41 @@
+{
+  "id": "1073D",
+  "source": "problemset",
+  "contest_id": 1073,
+  "problem_index": "D",
+  "name": "Berland Fair",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 6781,
+  "problem_url": "https://codeforces.com/problemset/problem/1073/D",
+  "editorial_url": "https://codeforces.com/blog/entry/62742",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "XXI Berland Annual Fair is coming really soon! Traditionally fair consists of $$$n$$$ booths, arranged in a circle. The booths are numbered $$$1$$$ through $$$n$$$ clockwise with $$$n$$$ being adjacent to $$$1$$$. The $$$i$$$-th booths sells some candies for the price of $$$a_i$$$ burles per item. Each booth has an unlimited supply of candies. Polycarp has decided to spend at most $$$T$$$ burles at the fair. However, he has some plan in mind for his path across the booths: at first, he visits booth number $$$1$$$; if he has enough burles to buy exactly one candy from the current booth, then he buys it immediately; then he proceeds to the next booth in the clockwise order (regardless of if he bought a candy or not). Polycarp's money is finite, thus the process will end once he can no longer buy candy at any booth. Calculate the number of candies Polycarp will buy.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$T$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le T \\le 10^{18}$$$) — the number of booths at the fair and the initial amount of burles Polycarp has. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the price of the single candy at booth number $$$i$$$.",
+  "output_specification": "Print a single integer — the total number of candies Polycarp will buy.",
+  "sample_testcases": [
+    {
+      "input": "3 38\n5 2 5",
+      "output": "10"
+    },
+    {
+      "input": "5 21\n2 4 100 2 6",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:04",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

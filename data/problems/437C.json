@@ -1,0 +1,44 @@
+{
+  "id": "437C",
+  "source": "problemset",
+  "contest_id": 437,
+  "problem_index": "C",
+  "name": "The Child and Toy",
+  "rating": 1400,
+  "tags": [
+    "graphs",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 15237,
+  "problem_url": "https://codeforces.com/problemset/problem/437/C",
+  "editorial_url": "https://codeforces.com/blog/entry/12513",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "On Children's Day, the child got a toy from Delayyy as a present. However, the child is so naughty that he can't wait to destroy the toy. The toy consists of n parts and m ropes. Each rope links two parts, but every pair of parts is linked by at most one rope. To split the toy, the child must remove all its parts. The child can remove a single part at a time, and each remove consume an energy. Let's define an energy value of part i as v i . The child spend v f 1 + v f 2 + ... + v f k energy for removing part i where f 1 , f 2 , ..., f k are the parts that are directly connected to the i -th and haven't been removed. Help the child to find out, what is the minimum total energy he should spend to remove all n parts.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n ≤ 1000 ; 0 ≤ m ≤ 2000 ). The second line contains n integers: v 1 , v 2 , ..., v n ( 0 ≤ v i ≤ 10 5 ). Then followed m lines, each line contains two integers x i and y i , representing a rope from part x i to part y i ( 1 ≤ x i , y i ≤ n ; x i ≠ y i ). Consider all the parts are numbered from 1 to n .",
+  "output_specification": "Output the minimum total energy the child should spend to remove all n parts of the toy.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n10 20 30 40\n1 4\n1 2\n2 3",
+      "output": "40"
+    },
+    {
+      "input": "4 4\n100 100 100 100\n1 2\n2 3\n2 4\n3 4",
+      "output": "400"
+    },
+    {
+      "input": "7 10\n40 10 20 10 20 80 40\n1 5\n4 7\n4 5\n5 2\n5 7\n6 4\n1 6\n1 3\n4 3\n1 4",
+      "output": "160"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

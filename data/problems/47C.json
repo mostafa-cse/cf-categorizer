@@ -1,0 +1,42 @@
+{
+  "id": "47C",
+  "source": "problemset",
+  "contest_id": 47,
+  "problem_index": "C",
+  "name": "Crossword",
+  "rating": 2000,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 898,
+  "problem_url": "https://codeforces.com/problemset/problem/47/C",
+  "editorial_url": "https://codeforces.com/blog/entry/931",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya trains to compose crossword puzzles. He can only compose crosswords of a very simplе type so far. All of them consist of exactly six words; the words can be read only from top to bottom vertically and from the left to the right horizontally. The words are arranged in the form of a rectangular \"eight\" or infinity sign, not necessarily symmetrical. The top-left corner of the crossword coincides with the top-left corner of the rectangle. The same thing is correct for the right-bottom corners. The crossword can't degrade, i.e. it always has exactly four blank areas, two of which are surrounded by letters. Look into the output for the samples for clarification. Help Vasya — compose a crossword of the described type using the given six words. It is allowed to use the words in any order.",
+  "input_specification": "Six lines contain the given words. Every word consists of no more than 30 and no less than 3 uppercase Latin letters.",
+  "output_specification": "If it is impossible to solve the problem, print Impossible . Otherwise, print the sought crossword. All the empty squares should be marked as dots. If there can be several solutions to that problem, print the lexicographically minimum one. I.e. the solution where the first line is less than the first line of other solutions should be printed. If the two lines are equal, compare the second lines and so on. The lexicographical comparison of lines is realized by the < operator in the modern programming languages.",
+  "sample_testcases": [
+    {
+      "input": "NOD\nBAA\nYARD\nAIRWAY\nNEWTON\nBURN",
+      "output": "BAA...\nU.I...\nR.R...\nNEWTON\n..A..O\n..YARD"
+    },
+    {
+      "input": "AAA\nAAA\nAAAAA\nAAA\nAAA\nAAAAA",
+      "output": "AAA..\nA.A..\nAAAAA\n..A.A\n..AAA"
+    },
+    {
+      "input": "PTC\nJYNYFDSGI\nZGPPC\nIXEJNDOP\nJJFS\nSSXXQOFGJUZ",
+      "output": "JJFS....\nY..S....\nN..X....\nY..X....\nF..Q....\nD..O....\nS..F....\nG..G....\nIXEJNDOP\n...U...T\n...ZGPPC"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

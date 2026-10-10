@@ -1,0 +1,42 @@
+{
+  "id": "847C",
+  "source": "problemset",
+  "contest_id": 847,
+  "problem_index": "C",
+  "name": "Sum of Nestings",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 2615,
+  "problem_url": "https://codeforces.com/problemset/problem/847/C",
+  "editorial_url": "https://codeforces.com/blog/entry/54603",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recall that the bracket sequence is considered regular if it is possible to insert symbols ' + ' and ' 1 ' into it so that the result is a correct arithmetic expression. For example, a sequence \" (()()) \" is regular, because we can get correct arithmetic expression insering symbols ' + ' and ' 1 ': \" ((1+1)+(1+1)) \". Also the following sequences are regular: \" ()()() \", \" (()) \" and \" () \". The following sequences are not regular bracket sequences: \" )( \", \" (() \" and \" ())(() \". In this problem you are given two integers n and k . Your task is to construct a regular bracket sequence consisting of round brackets with length 2· n with total sum of nesting of all opening brackets equals to exactly k . The nesting of a single opening bracket equals to the number of pairs of brackets in which current opening bracket is embedded. For example, in the sequence \" ()(()) \" the nesting of first opening bracket equals to 0 , the nesting of the second opening bracket equals to 0 and the nesting of the third opening bracket equal to 1 . So the total sum of nestings equals to 1 .",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 3·10 5 , 0 ≤ k ≤ 10 18 ) — the number of opening brackets and needed total nesting.",
+  "output_specification": "Print the required regular bracket sequence consisting of round brackets. If there is no solution print \" Impossible \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "3 1",
+      "output": "()(())"
+    },
+    {
+      "input": "4 6",
+      "output": "(((())))"
+    },
+    {
+      "input": "2 5",
+      "output": "Impossible"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "475D",
+  "source": "problemset",
+  "contest_id": 475,
+  "problem_index": "D",
+  "name": "CGCDSSQ",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 7225,
+  "problem_url": "https://codeforces.com/problemset/problem/475/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14168",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a sequence of integers a 1 , ..., a n and q queries x 1 , ..., x q on it. For each query x i you have to count the number of pairs ( l , r ) such that 1 ≤ l ≤ r ≤ n and gcd ( a l , a l + 1 , ..., a r ) = x i . is a greatest common divisor of v 1 , v 2 , ..., v n , that is equal to a largest positive integer that divides all v i .",
+  "input_specification": "The first line of the input contains integer n , ( 1 ≤ n ≤ 10 5 ), denoting the length of the sequence. The next line contains n space separated integers a 1 , ..., a n , ( 1 ≤ a i ≤ 10 9 ). The third line of the input contains integer q , ( 1 ≤ q ≤ 3 × 10 5 ), denoting the number of queries. Then follows q lines, each contain an integer x i , ( 1 ≤ x i ≤ 10 9 ).",
+  "output_specification": "For each query print the result in a separate line.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 6 3\n5\n1\n2\n3\n4\n6",
+      "output": "1\n2\n2\n0\n1"
+    },
+    {
+      "input": "7\n10 20 3 15 1000 60 16\n10\n1\n2\n3\n4\n5\n6\n10\n20\n60\n1000",
+      "output": "14\n0\n2\n2\n2\n0\n2\n2\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

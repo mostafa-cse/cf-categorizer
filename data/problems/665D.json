@@ -1,0 +1,48 @@
+{
+  "id": "665D",
+  "source": "problemset",
+  "contest_id": 665,
+  "problem_index": "D",
+  "name": "Simple Subset",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 4329,
+  "problem_url": "https://codeforces.com/problemset/problem/665/D",
+  "editorial_url": "https://codeforces.com/blog/entry/44466",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A tuple of positive integers { x 1 , x 2 , ..., x k } is called simple if for all pairs of positive integers ( i , j ) ( 1  ≤ i < j ≤ k ), x i + x j is a prime. You are given an array a with n positive integers a 1 , a 2 ,  ..., a n (not necessary distinct). You want to find a simple subset of the array a with the maximum size. A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. Let's define a subset of the array a as a tuple that can be obtained from a by removing some (possibly all) elements of it.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 1000 ) — the number of integers in the array a . The second line contains n integers a i ( 1 ≤ a i ≤ 10 6 ) — the elements of the array a .",
+  "output_specification": "On the first line print integer m — the maximum possible size of simple subset of a . On the second line print m integers b l — the elements of the simple subset of the array a with the maximum size. If there is more than one solution you can print any of them. You can print the elements of the subset in any order.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 3",
+      "output": "2\n3 2"
+    },
+    {
+      "input": "2\n2 2",
+      "output": "1\n2"
+    },
+    {
+      "input": "3\n2 1 1",
+      "output": "3\n1 1 2"
+    },
+    {
+      "input": "2\n83 14",
+      "output": "2\n14 83"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

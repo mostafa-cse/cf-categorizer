@@ -1,0 +1,42 @@
+{
+  "id": "1200E",
+  "source": "problemset",
+  "contest_id": 1200,
+  "problem_index": "E",
+  "name": "Compress Words",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "hashing",
+    "implementation",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 10210,
+  "problem_url": "https://codeforces.com/problemset/problem/1200/E",
+  "editorial_url": "https://codeforces.com/blog/entry/69035",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Amugae has a sentence consisting of $$$n$$$ words. He want to compress this sentence into one word. Amugae doesn't like repetitions, so when he merges two words into one word, he removes the longest prefix of the second word that coincides with a suffix of the first word. For example, he merges \" sample \" and \" please \" into \" samplease \". Amugae will merge his sentence left to right (i.e. first merge the first two words, then merge the result with the third word and so on). Write a program that prints the compressed word after the merging process ends.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$), the number of the words in Amugae's sentence. The second line contains $$$n$$$ words separated by single space. Each words is non-empty and consists of uppercase and lowercase English letters and digits (' A ', ' B ', ..., ' Z ', ' a ', ' b ', ..., ' z ', ' 0 ', ' 1 ', ..., ' 9 '). The total length of the words does not exceed $$$10^6$$$.",
+  "output_specification": "In the only line output the compressed word after the merging process ends as described in the problem.",
+  "sample_testcases": [
+    {
+      "input": "5\nI want to order pizza",
+      "output": "Iwantorderpizza"
+    },
+    {
+      "input": "5\nsample please ease in out",
+      "output": "sampleaseinout"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:32",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "419. Suffix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct the minimal deterministic finite automaton recognizing all substrings of S online in O(N) time and space. Answer substring count, occurrence, and LCS queries."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2268E",
+  "source": "problemset",
+  "contest_id": 2268,
+  "problem_index": "E",
+  "name": "Kia Kio and Tree of Life",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "fft",
+    "math",
+    "trees"
+  ],
+  "solved_count": 360,
+  "problem_url": "https://codeforces.com/problemset/problem/2268/E",
+  "editorial_url": "https://codeforces.com/blog/entry/157140",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After unlocking the crystal terminal, Kia and Kio discovered the blueprint for the kingdom's forgotten heart: a digital Tree of Life, seeded by the array $$$a_1, a_2, \\ldots, a_n$$$. To restore its pulse, they had to weave every possible incarnation of the Tree together. For any continuous segment, Kia would gently select an index $$$i$$$ to plant the root. Trusting her vision, Kio would carefully weave the branches of life — crafting the left subtree from the preceding segment $$$[1, i-1]$$$ and the right subtree from the succeeding segment $$$[i+1, n]$$$. Once a Tree of Life bloomed, its vital resonance, $$$f(\\text{tree})$$$, was defined by its bonds. If one were to sever any of the $$$n-1$$$ delicate branches, the Tree would split into two disconnected halves, releasing an energy of $$$X+Y$$$, where $$$X$$$ and $$$Y$$$ are the bitwise XOR sums of the array elements remaining in the first and second halves, respectively. The total power of the Tree, $$$f(\\text{tree})$$$, is the sum of these released energies across all $$$n-1$$$ branches. Kia wanted to know the ultimate vital force they could awaken. Help them compute the total sum of $$$f(\\text{tree})$$$ across every valid Tree of Life born from their shared bond, modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot10^5$$$) — the size of the array. The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$0 \\le a_i \\lt 2^{18}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the total sum of $$$f(\\text{tree})$$$ across all valid Trees of Life, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n1 2\n3\n1 1 1\n3\n1 2 3\n4\n2 1 4 7\n5\n5 12 9 14 1",
+      "output": "6\n10\n40\n318\n2520"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:57:34",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

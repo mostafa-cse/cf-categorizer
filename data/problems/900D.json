@@ -1,0 +1,42 @@
+{
+  "id": "900D",
+  "source": "problemset",
+  "contest_id": 900,
+  "problem_index": "D",
+  "name": "Unusual Sequences",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 4011,
+  "problem_url": "https://codeforces.com/problemset/problem/900/D",
+  "editorial_url": "https://codeforces.com/blog/entry/56294",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Count the number of distinct sequences a 1 , a 2 , ..., a n ( 1 ≤ a i ) consisting of positive integers such that gcd ( a 1 , a 2 , ..., a n ) = x and . As this number could be large, print the answer modulo 10 9 + 7 . gcd here means the greatest common divisor .",
+  "input_specification": "The only line contains two positive integers x and y ( 1 ≤ x , y ≤ 10 9 ).",
+  "output_specification": "Print the number of such sequences modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 9",
+      "output": "3"
+    },
+    {
+      "input": "5 8",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

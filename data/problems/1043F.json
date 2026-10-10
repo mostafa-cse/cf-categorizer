@@ -1,0 +1,47 @@
+{
+  "id": "1043F",
+  "source": "problemset",
+  "contest_id": 1043,
+  "problem_index": "F",
+  "name": "Make It One",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory",
+    "shortest paths"
+  ],
+  "solved_count": 3253,
+  "problem_url": "https://codeforces.com/problemset/problem/1043/F",
+  "editorial_url": "https://codeforces.com/blog/entry/62797",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Janusz is a businessman. He owns a company \"Januszex\", which produces games for teenagers. Last hit of Januszex was a cool one-person game \"Make it one\". The player is given a sequence of $$$n$$$ integers $$$a_i$$$. It is allowed to select any subset of them, and the score is equal to the greatest common divisor of selected elements. The goal is to take as little elements as it is possible, getting the score $$$1$$$. Now Janusz wonders, for given sequence, how much elements should the player choose?",
+  "input_specification": "The first line contains an only integer $$$n$$$ ($$$1 \\le n \\le 300\\,000$$$) — the number of integers in the sequence. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 300\\,000$$$).",
+  "output_specification": "If there is no subset of the given sequence with gcd equal to $$$1$$$, output -1 . Otherwise, output exactly one integer — the size of the smallest subset with gcd equal to $$$1$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n10 6 15",
+      "output": "3"
+    },
+    {
+      "input": "3\n2 4 6",
+      "output": "-1"
+    },
+    {
+      "input": "7\n30 60 21 42 70 15 30",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

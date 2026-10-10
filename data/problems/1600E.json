@@ -1,0 +1,44 @@
+{
+  "id": "1600E",
+  "source": "problemset",
+  "contest_id": 1600,
+  "problem_index": "E",
+  "name": "Array Game",
+  "rating": 1900,
+  "tags": [
+    "games",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 2490,
+  "problem_url": "https://codeforces.com/problemset/problem/1600/E",
+  "editorial_url": "https://codeforces.com//bubblecup.org/Content/Media/BubbleCup2021.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing a game. They are given an array $$$A$$$ of length $$$N$$$. The array consists of integers. They are building a sequence together. In the beginning, the sequence is empty. In one turn a player can remove a number from the left or right side of the array and append it to the sequence. The rule is that the sequence they are building must be strictly increasing. The winner is the player that makes the last move. Alice is playing first. Given the starting array, under the assumption that they both play optimally, who wins the game?",
+  "input_specification": "The first line contains one integer $$$N$$$ ($$$1 \\leq N \\leq 2*10^5$$$) - the length of the array $$$A$$$. The second line contains $$$N$$$ integers $$$A_1$$$, $$$A_2$$$,...,$$$A_N$$$ ($$$0 \\leq A_i \\leq 10^9$$$)",
+  "output_specification": "The first and only line of output consists of one string, the name of the winner. If Alice won, print \"Alice\", otherwise, print \"Bob\".",
+  "sample_testcases": [
+    {
+      "input": "1\n5",
+      "output": "Alice"
+    },
+    {
+      "input": "3\n5 4 5",
+      "output": "Alice"
+    },
+    {
+      "input": "6\n5 8 2 1 10 9",
+      "output": "Bob"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2222E",
+  "source": "problemset",
+  "contest_id": 2222,
+  "problem_index": "E",
+  "name": "Seek the Truth",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "constructive algorithms",
+    "interactive"
+  ],
+  "solved_count": 2501,
+  "problem_url": "https://codeforces.com/problemset/problem/2222/E",
+  "editorial_url": "https://codeforces.com/blog/entry/153275",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nanatsukaze - Connect the World This is an interactive problem. There are two hidden integers $$$k$$$ and $$$c$$$ such that $$$k\\in \\{1,2,3\\}$$$ and $$$1\\le c\\le 2^n-1$$$. Note that $$$c\\neq 0$$$. Before any interaction, you need to tell the jury a non-negative integer $$$a\\le 2^n-1$$$. The grader will then use $$$a$$$ as the initial element in the set $$$S$$$, that is, initially $$$S = \\{a\\}$$$. Next, you can make at most $$$n+3$$$ queries of the following two types: Select an integer $$$x$$$ such that $$$0\\leq x\\le 2^n-1$$$. The jury will insert $$$f(x)$$$ into $$$S$$$ and then respond with $$$|S|$$$ (i. e., the size of $$$S$$$ after the insertion); Select an integer $$$y$$$ such that $$$0\\leq y\\le 2^n-1$$$. The jury will respond with the number of integers $$$z$$$ such that $$$z\\in S$$$ and $$$z\\geq y$$$. The definition of $$$f(x)$$$ is as follows: $$$$$$ f(x)= \\begin{cases} x\\,\\&\\,c & \\text{if}\\, k=1,\\\\ x\\,|\\,c & \\text{if}\\, k=2,\\\\ x\\oplus c & \\text{if}\\, k=3.\\\\ \\end{cases} $$$$$$ Here, $$$\\&$$$ denotes the bitwise AND operation , $$$|$$$ denotes the bitwise OR operation , and $$$\\oplus$$$ denotes the bitwise XOR operation . Your task is to determine the values of $$$k$$$ and $$$c$$$ using at most $$$n+3$$$ interactions. Please note that reporting the answer does not count towards the $$$n+3$$$ interactions.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 60$$$). Then, interaction follows. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n\n\n1\n\n2\n\n\n2\n\n1\n\n2\n\n2\n\n3\n\n2\n\n\n2\n\n2\n\n2",
+      "output": "3\nI 3\n\nA 1 3\n\n1\nI 0\n\nQ 2\n\nQ 1\n\nQ 0\n\nI 3\n\nA 2 2\n\n1\nI 1\n\nI 0\n\nA 3 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:29",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "1452D",
+  "source": "problemset",
+  "contest_id": 1452,
+  "problem_index": "D",
+  "name": "Radio Towers",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 8838,
+  "problem_url": "https://codeforces.com/problemset/problem/1452/D",
+  "editorial_url": "https://codeforces.com/blog/entry/84847",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are $$$n + 2$$$ towns located on a coordinate line, numbered from $$$0$$$ to $$$n + 1$$$. The $$$i$$$-th town is located at the point $$$i$$$. You build a radio tower in each of the towns $$$1, 2, \\dots, n$$$ with probability $$$\\frac{1}{2}$$$ (these events are independent). After that, you want to set the signal power on each tower to some integer from $$$1$$$ to $$$n$$$ (signal powers are not necessarily the same, but also not necessarily different). The signal from a tower located in a town $$$i$$$ with signal power $$$p$$$ reaches every city $$$c$$$ such that $$$|c - i| \\lt p$$$. After building the towers, you want to choose signal powers in such a way that: towns $$$0$$$ and $$$n + 1$$$ don't get any signal from the radio towers; towns $$$1, 2, \\dots, n$$$ get signal from exactly one radio tower each. For example, if $$$n = 5$$$, and you have built the towers in towns $$$2$$$, $$$4$$$ and $$$5$$$, you may set the signal power of the tower in town $$$2$$$ to $$$2$$$, and the signal power of the towers in towns $$$4$$$ and $$$5$$$ to $$$1$$$. That way, towns $$$0$$$ and $$$n + 1$$$ don't get the signal from any tower, towns $$$1$$$, $$$2$$$ and $$$3$$$ get the signal from the tower in town $$$2$$$, town $$$4$$$ gets the signal from the tower in town $$$4$$$, and town $$$5$$$ gets the signal from the tower in town $$$5$$$. Calculate the probability that, after building the towers, you will have a way to set signal powers to meet all constraints.",
+  "input_specification": "The first (and only) line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$).",
+  "output_specification": "Print one integer — the probability that there will be a way to set signal powers so that all constraints are met, taken modulo $$$998244353$$$. Formally, the probability can be expressed as an irreducible fraction $$$\\frac{x}{y}$$$. You have to print the value of $$$x \\cdot y^{-1} \\bmod 998244353$$$, where $$$y^{-1}$$$ is an integer such that $$$y \\cdot y^{-1} \\bmod 998244353 = 1$$$.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "748683265"
+    },
+    {
+      "input": "3",
+      "output": "748683265"
+    },
+    {
+      "input": "5",
+      "output": "842268673"
+    },
+    {
+      "input": "200000",
+      "output": "202370013"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:27",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

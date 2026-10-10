@@ -1,0 +1,38 @@
+{
+  "id": "1433F",
+  "source": "problemset",
+  "contest_id": 1433,
+  "problem_index": "F",
+  "name": "Zero Remainder Sum ",
+  "rating": 2100,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 6957,
+  "problem_url": "https://codeforces.com/problemset/problem/1433/F",
+  "editorial_url": "https://codeforces.com/blog/entry/83903",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a matrix $$$a$$$ of size $$$n \\times m$$$ consisting of integers. You can choose no more than $$$\\left\\lfloor\\frac{m}{2}\\right\\rfloor$$$ elements in each row . Your task is to choose these elements in such a way that their sum is divisible by $$$k$$$ and this sum is the maximum . In other words, you can choose no more than a half (rounded down) of elements in each row, you have to find the maximum sum of these elements divisible by $$$k$$$. Note that you can choose zero elements (and the sum of such set is $$$0$$$).",
+  "input_specification": "The first line of the input contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1 \\le n, m, k \\le 70$$$) — the number of rows in the matrix, the number of columns in the matrix and the value of $$$k$$$. The next $$$n$$$ lines contain $$$m$$$ elements each, where the $$$j$$$-th element of the $$$i$$$-th row is $$$a_{i, j}$$$ ($$$1 \\le a_{i, j} \\le 70$$$).",
+  "output_specification": "Print one integer — the maximum sum divisible by $$$k$$$ you can obtain.",
+  "sample_testcases": [
+    {
+      "input": "3 4 3\n1 2 3 4\n5 2 2 2\n7 1 1 4",
+      "output": "24"
+    },
+    {
+      "input": "5 5 4\n1 2 4 2 1\n3 5 1 2 4\n1 5 7 1 2\n3 8 7 1 2\n8 4 7 1 6",
+      "output": "56"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

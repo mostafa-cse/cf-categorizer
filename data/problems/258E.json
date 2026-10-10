@@ -1,0 +1,40 @@
+{
+  "id": "258E",
+  "source": "problemset",
+  "contest_id": 258,
+  "problem_index": "E",
+  "name": "Little Elephant and Tree",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "trees"
+  ],
+  "solved_count": 1418,
+  "problem_url": "https://codeforces.com/problemset/problem/258/E",
+  "editorial_url": "https://codeforces.com/blog/entry/6213",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Little Elephant loves trees very much, he especially loves root trees. He's got a tree consisting of n nodes (the nodes are numbered from 1 to n ), with root at node number 1 . Each node of the tree contains some list of numbers which initially is empty. The Little Elephant wants to apply m operations. On the i -th operation (1 ≤ i ≤ m ) he first adds number i to lists of all nodes of a subtree with the root in node number a i , and then he adds number i to lists of all nodes of the subtree with root in node b i . After applying all operations the Little Elephant wants to count for each node i number c i — the number of integers j (1 ≤ j ≤ n ; j ≠ i ) , such that the lists of the i -th and the j -th nodes contain at least one common number. Help the Little Elephant, count numbers c i for him.",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n , m ≤ 10 5 ) — the number of the tree nodes and the number of operations. Each of the following n - 1 lines contains two space-separated integers, u i and v i (1 ≤ u i , v i ≤ n , u i ≠ v i ) , that mean that there is an edge between nodes number u i and v i . Each of the following m lines contains two space-separated integers, a i and b i (1 ≤ a i , b i ≤ n , a i ≠ b i ) , that stand for the indexes of the nodes in the i -th operation. It is guaranteed that the given graph is an undirected tree.",
+  "output_specification": "In a single line print n space-separated integers — c 1 , c 2 , ..., c n .",
+  "sample_testcases": [
+    {
+      "input": "5 1\n1 2\n1 3\n3 5\n3 4\n2 3",
+      "output": "0 3 3 3 3"
+    },
+    {
+      "input": "11 3\n1 2\n2 3\n2 4\n1 5\n5 6\n5 7\n5 8\n6 9\n8 10\n8 11\n2 9\n3 6\n2 8",
+      "output": "0 6 7 6 0 2 0 5 4 5 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:55",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

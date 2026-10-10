@@ -1,0 +1,45 @@
+{
+  "id": "175D",
+  "source": "problemset",
+  "contest_id": 175,
+  "problem_index": "D",
+  "name": "Plane of Tanks: Duel",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 346,
+  "problem_url": "https://codeforces.com/problemset/problem/175/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4339",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya plays the Plane of Tanks. Tanks are described with the following attributes: the number of hit points; the interval between two gun shots (the time required to recharge the gun); the probability that the gun shot will not pierce armor of the enemy tank; the damage to the enemy's tank. The gun damage is described with a segment [ l , r ] , where l and r are integer numbers. The potential gun damage x is chosen with equal probability among all integer numbers of the segment [ l , r ] . If the shot pierces the armor of an enemy's tank then the enemy loses x hit points. If the number of hit points becomes non-positive then the enemy tank is considered destroyed. It is possible that the shot does not pierce the armor of a tank. In this case the number of hit points doesn't change. The probability that the armor will not be pierced is considered as the shooting tank attribute and does not depend on players' behavior. The victory is near and there is only one enemy tank left. Vasya is ready for the battle — one more battle between the Good and the Evil is inevitable! Two enemies saw each other and each of them fired a shot at the same moment... The last battle has begun! Help Vasya to determine what is the probability that he will win the battle by destroying the enemy tank? If both tanks are destroyed (after simultaneous shots), then Vasya is considered a winner. You can assume that each player fires a shot just after the gun recharge and each tank has infinite number of ammo.",
+  "input_specification": "The first line contains five integer numbers separated with spaces describing Vasya's tank: the number of hit points hp (10 ≤ hp ≤ 200) , the interval between two shots dt (1 ≤ dt ≤ 30) , gun damage segment l and r (10 ≤ l ≤ r ≤ 100) , the probability that the enemy's tank armor will not be pierced p (0 ≤ p ≤ 100) (percents). The second line describes the tank of Vasya's enemy in the same format.",
+  "output_specification": "Print the only number with absolute or relative error no more than 10 - 4 — probability of Vasya's victory.",
+  "sample_testcases": [
+    {
+      "input": "100 3 50 50 0\n100 3 50 50 0",
+      "output": "1.000000"
+    },
+    {
+      "input": "100 3 50 50 0\n100 2 48 50 0",
+      "output": "0.888889"
+    },
+    {
+      "input": "100 3 50 50 0\n100 1 50 50 50",
+      "output": "0.500000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

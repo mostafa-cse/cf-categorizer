@@ -1,0 +1,36 @@
+{
+  "id": "274A",
+  "source": "problemset",
+  "contest_id": 274,
+  "problem_index": "A",
+  "name": "k-Multiple Free Set",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 10933,
+  "problem_url": "https://codeforces.com/problemset/problem/274/A",
+  "editorial_url": "https://codeforces.com/blog/entry/6759",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A k -multiple free set is a set of integers where there is no pair of integers where one is equal to another integer multiplied by k . That is, there are no two integers x and y ( x < y ) from the set, such that y = x · k . You're given a set of n distinct positive integers. Your task is to find the size of it's largest k -multiple free subset.",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ 10 9 ). The next line contains a list of n distinct positive integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) . All the numbers in the lines are separated by single spaces.",
+  "output_specification": "On the only line of the output print the size of the largest k -multiple free subset of { a 1 , a 2 , ..., a n } .",
+  "sample_testcases": [
+    {
+      "input": "6 2\n2 3 6 5 4 10",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

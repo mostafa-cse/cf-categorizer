@@ -1,0 +1,46 @@
+{
+  "id": "1038E",
+  "source": "problemset",
+  "contest_id": 1038,
+  "problem_index": "E",
+  "name": "Maximum Matching",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 1181,
+  "problem_url": "https://codeforces.com/problemset/problem/1038/E",
+  "editorial_url": "https://codeforces.com/blog/entry/61692",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ blocks, each of them is of the form [color$$$_1$$$|value|color$$$_2$$$] , where the block can also be flipped to get [color$$$_2$$$|value|color$$$_1$$$] . A sequence of blocks is called valid if the touching endpoints of neighboring blocks have the same color. For example, the sequence of three blocks A, B and C is valid if the left color of the B is the same as the right color of the A and the right color of the B is the same as the left color of C. The value of the sequence is defined as the sum of the values of the blocks in this sequence. Find the maximum possible value of the valid sequence that can be constructed from the subset of the given blocks. The blocks from the subset can be reordered and flipped if necessary. Each block can be used at most once in the sequence.",
+  "input_specification": "The first line of input contains a single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the number of given blocks. Each of the following $$$n$$$ lines describes corresponding block and consists of $$$\\mathrm{color}_{1,i}$$$, $$$\\mathrm{value}_i$$$ and $$$\\mathrm{color}_{2,i}$$$ ($$$1 \\le \\mathrm{color}_{1,i}, \\mathrm{color}_{2,i} \\le 4$$$, $$$1 \\le \\mathrm{value}_i \\le 100\\,000$$$).",
+  "output_specification": "Print exactly one integer — the maximum total value of the subset of blocks, which makes a valid sequence.",
+  "sample_testcases": [
+    {
+      "input": "6\n2 1 4\n1 2 4\n3 4 4\n2 8 3\n3 16 3\n1 32 2",
+      "output": "63"
+    },
+    {
+      "input": "7\n1 100000 1\n1 100000 2\n1 100000 2\n4 50000 3\n3 50000 4\n4 50000 4\n3 50000 3",
+      "output": "300000"
+    },
+    {
+      "input": "4\n1 1000 1\n2 500 2\n3 250 3\n4 125 4",
+      "output": "1000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

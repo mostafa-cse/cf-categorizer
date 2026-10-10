@@ -1,0 +1,35 @@
+{
+  "id": "161E",
+  "source": "problemset",
+  "contest_id": 161,
+  "problem_index": "E",
+  "name": "Polycarpus the Safecracker",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 544,
+  "problem_url": "https://codeforces.com/problemset/problem/161/E",
+  "editorial_url": "https://codeforces.com/blog/entry/4097",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus has t safes. The password for each safe is a square matrix consisting of decimal digits ' 0 ' ... ' 9 ' (the sizes of passwords to the safes may vary). Alas, Polycarpus has forgotten all passwords, so now he has to restore them. Polycarpus enjoys prime numbers, so when he chose the matrix passwords, he wrote a prime number in each row of each matrix. To his surprise, he found that all the matrices turned out to be symmetrical (that is, they remain the same after transposition). Now, years later, Polycarp was irritated to find out that he remembers only the prime numbers p i , written in the first lines of the password matrices. For each safe find the number of matrices which can be passwords to it. The number of digits in p i determines the number of rows and columns of the i -th matrix. One prime number can occur in several rows of the password matrix or in several matrices. The prime numbers that are written not in the first row of the matrix may have leading zeros.",
+  "input_specification": "The first line of the input contains an integer t ( 1 ≤ t ≤ 30 ) — the number of safes. Next t lines contain integers p i ( 10 ≤ p i ≤ 99999 ), p i is a prime number written in the first row of the password matrix for the i -th safe. All p i 's are written without leading zeros.",
+  "output_specification": "Print t numbers, the i -th of them should be the number of matrices that can be a password to the i -th safe. Print the numbers on separate lines.",
+  "sample_testcases": [
+    {
+      "input": "4\n11\n239\n401\n9001",
+      "output": "4\n28\n61\n2834"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

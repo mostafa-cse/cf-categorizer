@@ -1,0 +1,36 @@
+{
+  "id": "1920E",
+  "source": "problemset",
+  "contest_id": 1920,
+  "problem_index": "E",
+  "name": "Counting Binary Strings",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 3561,
+  "problem_url": "https://codeforces.com/problemset/problem/1920/E",
+  "editorial_url": "https://codeforces.com/blog/entry/122560",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Patrick calls a substring$$$^\\dagger$$$ of a binary string$$$^\\ddagger$$$ good if this substring contains exactly one 1 . Help Patrick count the number of binary strings $$$s$$$ such that $$$s$$$ contains exactly $$$n$$$ good substrings and has no good substring of length strictly greater than $$$k$$$. Note that substrings are differentiated by their location in the string, so if $$$s =$$$ 1010 you should count both occurrences of 10 . $$$^\\dagger$$$ A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end. $$$^\\ddagger$$$ A binary string is a string that only contains the characters 0 and 1 .",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 2500$$$) — the number of test cases. The description of the test cases follows. The only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 2500$$$, $$$1 \\leq k \\leq n$$$) — the number of required good substrings and the maximum allowed length of a good substring. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2500$$$.",
+  "output_specification": "For each test case, output a single integer — the number of binary strings $$$s$$$ such that $$$s$$$ contains exactly $$$n$$$ good substrings and has no good substring of length strictly greater than $$$k$$$. Since this integer can be too large, output it modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n3 2\n4 2\n5 4\n6 2\n2450 2391",
+      "output": "1\n3\n5\n12\n9\n259280854"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "2255B",
+  "source": "problemset",
+  "contest_id": 2255,
+  "problem_index": "B",
+  "name": "A Ribbon for Tomorrow",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 7493,
+  "problem_url": "https://codeforces.com/problemset/problem/2255/B",
+  "editorial_url": "https://codeforces.com/blog/entry/155840",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nephren has never been fond of long farewells. Before Chtholly leaves for her next mission, she says nothing and begins preparing a small ribbon for her instead. She places $$$n$$$ glass beads in a row on the table before threading them onto the ribbon. Each bead is either white or black. A binary$$$^{\\text{∗}}$$$ string $$$s$$$ represents their colors: the character $$$\\mathtt{0}$$$ represents a white bead, and the character $$$\\mathtt{1}$$$ represents a black bead. To make the arrangement less ordinary, Nephren turns it into a small game. She can perform the following operation any number of times (possibly zero): Choose two indices $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) such that $$$s_l=s_r$$$ in the current string, and reverse$$$^{\\text{†}}$$$ the substring $$$s_l s_{l+1}\\ldots s_r$$$. For example, if $$$s=\\mathtt{00110}$$$, Nephren may choose $$$l=1$$$ and $$$r=5$$$, since $$$s_1=s_5=\\mathtt{0}$$$. After the operation, the string becomes $$$\\mathtt{01100}$$$. Determine the number of different binary strings that can be obtained from $$$s$$$. Since this number may be large, output it modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$A binary string is a string where each character is either $$$\\mathtt 0$$$ or $$$\\mathtt 1$$$. $$$^{\\text{†}}$$$To reverse a substring $$$s_l s_{l+1}\\ldots s_r$$$ means to replace it with $$$s_r s_{r-1}\\ldots s_l$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — the number of beads. The second line contains a binary string $$$s$$$ of length $$$n$$$, describing the colors of the beads. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer — the number of different binary strings that can be obtained from $$$s$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n00110\n6\n001010\n5\n01010\n6\n111111",
+      "output": "2\n3\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "712D",
+  "source": "problemset",
+  "contest_id": 712,
+  "problem_index": "D",
+  "name": "Memory and Scores",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 2056,
+  "problem_url": "https://codeforces.com/problemset/problem/712/D",
+  "editorial_url": "https://codeforces.com/blog/entry/47050",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Memory and his friend Lexa are competing to get higher score in one popular computer game. Memory starts with score a and Lexa starts with score b . In a single turn, both Memory and Lexa get some integer in the range [ - k ; k ] (i.e. one integer among - k ,  - k + 1,  - k + 2, ...,  - 2,  - 1, 0, 1, 2, ..., k - 1, k ) and add them to their current scores. The game has exactly t turns. Memory and Lexa, however, are not good at this game, so they both always get a random integer at their turn. Memory wonders how many possible games exist such that he ends with a strictly higher score than Lexa. Two games are considered to be different if in at least one turn at least one player gets different score. There are (2 k + 1) 2 t games in total. Since the answer can be very large, you should print it modulo 10 9 + 7 . Please solve this problem for Memory.",
+  "input_specification": "The first and only line of input contains the four integers a , b , k , and t ( 1 ≤ a , b ≤ 100 , 1 ≤ k ≤ 1000 , 1 ≤ t ≤ 100 ) — the amount Memory and Lexa start with, the number k , and the number of turns respectively.",
+  "output_specification": "Print the number of possible games satisfying the conditions modulo 1 000 000 007 ( 10 9 + 7 ) in one line.",
+  "sample_testcases": [
+    {
+      "input": "1 2 2 1",
+      "output": "6"
+    },
+    {
+      "input": "1 1 1 2",
+      "output": "31"
+    },
+    {
+      "input": "2 12 3 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:25",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

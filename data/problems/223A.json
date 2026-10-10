@@ -1,0 +1,40 @@
+{
+  "id": "223A",
+  "source": "problemset",
+  "contest_id": 223,
+  "problem_index": "A",
+  "name": "Bracket Sequence",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "expression parsing",
+    "implementation"
+  ],
+  "solved_count": 2972,
+  "problem_url": "https://codeforces.com/problemset/problem/223/A",
+  "editorial_url": "https://codeforces.com/blog/entry/5301",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A bracket sequence is a string, containing only characters \" ( \", \" ) \", \" [ \" and \" ] \". A correct bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters \" 1 \" and \" + \" between the original characters of the sequence. For example, bracket sequences \" ()[] \", \" ([]) \" are correct (the resulting expressions are: \" (1)+[1] \", \" ([1+1]+1) \"), and \" ]( \" and \" [ \" are not. The empty string is a correct bracket sequence by definition. A substring s [ l ... r ] (1 ≤ l ≤ r ≤ | s |) of string s = s 1 s 2 ... s | s | (where | s | is the length of string s ) is the string s l s l + 1 ... s r . The empty string is a substring of any string by definition . You are given a bracket sequence, not necessarily correct. Find its substring which is a correct bracket sequence and contains as many opening square brackets « [ » as possible.",
+  "input_specification": "The first and the only line contains the bracket sequence as a string, consisting only of characters \" ( \", \" ) \", \" [ \" and \" ] \". It is guaranteed that the string is non-empty and its length doesn't exceed 10 5 characters.",
+  "output_specification": "In the first line print a single integer — the number of brackets « [ » in the required bracket sequence. In the second line print the optimal sequence. If there are more than one optimal solutions print any of them.",
+  "sample_testcases": [
+    {
+      "input": "([])",
+      "output": "1\n([])"
+    },
+    {
+      "input": "(((",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:11",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

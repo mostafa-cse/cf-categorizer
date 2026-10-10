@@ -1,0 +1,37 @@
+{
+  "id": "2039D",
+  "source": "problemset",
+  "contest_id": 2039,
+  "problem_index": "D",
+  "name": "Shohag Loves GCD",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7276,
+  "problem_url": "https://codeforces.com/problemset/problem/2039/D",
+  "editorial_url": "https://codeforces.com/blog/entry/136523",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Shohag has an integer $$$n$$$ and a set $$$S$$$ of $$$m$$$ unique integers. Help him find the lexicographically largest$$$^{\\text{∗}}$$$ integer array $$$a_1, a_2, \\ldots, a_n$$$ such that $$$a_i \\in S$$$ for each $$$1 \\le i \\le n$$$ and $$$a_{\\operatorname{gcd}(i, j)} \\neq \\operatorname{gcd}(a_i, a_j)$$$$$$^{\\text{†}}$$$ is satisfied over all pairs $$$1 \\le i \\lt j \\le n$$$, or state that no such array exists. $$$^{\\text{∗}}$$$An array $$$a$$$ is lexicographically larger than an array $$$b$$$ of the same length if $$$a \\ne b$$$, and in the first position where $$$a$$$ and $$$b$$$ differ, the array $$$a$$$ has a larger element than the corresponding element in $$$b$$$. $$$^{\\text{†}}$$$$$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le m \\le n \\le 10^5$$$). The second line contains $$$m$$$ unique integers in increasing order, representing the elements of the set $$$S$$$ ($$$1 \\le x \\le n$$$ for each $$$x \\in S$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if there is no solution print $$$-1$$$, otherwise print $$$n$$$ integers — the lexicographically largest integer array that satisfies the conditions.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 3\n3 4 6\n1 1\n1\n2 1\n2",
+      "output": "6 4 4 3 4 3 \n1 \n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

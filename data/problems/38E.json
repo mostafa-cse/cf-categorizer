@@ -1,0 +1,39 @@
+{
+  "id": "38E",
+  "source": "problemset",
+  "contest_id": 38,
+  "problem_index": "E",
+  "name": "Let's Go Rolling!",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "sortings"
+  ],
+  "solved_count": 3060,
+  "problem_url": "https://codeforces.com/problemset/problem/38/E",
+  "editorial_url": "https://codeforces.com/blog/entry/812",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "On a number axis directed from the left rightwards, n marbles with coordinates x 1 , x 2 , ..., x n are situated. Let's assume that the sizes of the marbles are infinitely small, that is in this task each of them is assumed to be a material point. You can stick pins in some of them and the cost of sticking in the marble number i is equal to c i , number c i may be negative. After you choose and stick the pins you need, the marbles will start to roll left according to the rule: if a marble has a pin stuck in it, then the marble doesn't move, otherwise the marble rolls all the way up to the next marble which has a pin stuck in it and stops moving there. If there is no pinned marble on the left to the given unpinned one, it is concluded that the marble rolls to the left to infinity and you will pay an infinitely large fine for it. If no marble rolled infinitely to the left, then the fine will consist of two summands: the sum of the costs of stuck pins; the sum of the lengths of the paths of each of the marbles, that is the sum of absolute values of differences between their initial and final positions. Your task is to choose and pin some marbles in the way that will make the fine for you to pay as little as possible.",
+  "input_specification": "The first input line contains an integer n ( 1 ≤ n ≤ 3000 ) which is the number of marbles. The next n lines contain the descriptions of the marbles in pairs of integers x i , c i ( - 10 9 ≤ x i , c i ≤ 10 9 ). The numbers are space-separated. Each description is given on a separate line. No two marbles have identical initial positions.",
+  "output_specification": "Output the single number — the least fine you will have to pay.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 3\n3 4\n1 2",
+      "output": "5"
+    },
+    {
+      "input": "4\n1 7\n3 1\n5 10\n6 1",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

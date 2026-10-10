@@ -1,0 +1,38 @@
+{
+  "id": "2120C",
+  "source": "problemset",
+  "contest_id": 2120,
+  "problem_index": "C",
+  "name": "Divine Tree",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 13188,
+  "problem_url": "https://codeforces.com/problemset/problem/2120/C",
+  "editorial_url": "https://codeforces.com/blog/entry/144048",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Harshith attained enlightenment in Competitive Programming by training under a Divine Tree. A divine tree is a rooted tree$$$^{\\text{∗}}$$$ with $$$n$$$ nodes, labelled from $$$1$$$ to $$$n$$$. The divineness of a node $$$v$$$, denoted $$$d(v)$$$, is defined as the smallest node label on the unique simple path from the root to node $$$v$$$. Aryan, being a hungry Competitive Programmer, asked Harshith to pass on the knowledge. Harshith agreed on the condition that Aryan would be given two positive integers $$$n$$$ and $$$m$$$, and he had to construct a divine tree with $$$n$$$ nodes such that the total divineness of the tree is $$$m$$$, i.e., $$$\\displaystyle\\sum\\limits_{i=1}^n d(i)=m$$$. If no such tree exists, Aryan must report that it is impossible. Desperate for knowledge, Aryan turned to you for help in completing this task. As a good friend of his, help him solve the task. $$$^{\\text{∗}}$$$A tree is a connected graph without cycles. A rooted tree is a tree where one vertex is special and called the root.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^6$$$, $$$1 \\le m \\le 10^{12}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer $$$k$$$ in one line — the root of the tree. Then $$$n-1$$$ lines follow, each containing a description of an edge of the tree — a pair of positive integers $$$u_i,v_i$$$ ($$$1\\le u_i,v_i\\le n$$$, $$$u_i\\ne v_i$$$), denoting the $$$i$$$-th edge connects vertices $$$u_i$$$ and $$$v_i$$$. The edges and vertices of the edges can be printed in any order. If there are multiple solutions, print any of them. If there is no solution, print \"-1\" instead.",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2\n4 6",
+      "output": "-1\n3\n3 1\n1 2\n2 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:22",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

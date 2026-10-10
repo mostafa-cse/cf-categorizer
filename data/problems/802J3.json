@@ -1,0 +1,53 @@
+{
+  "id": "802J3",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "J3",
+  "name": "Send the Fool Further! (hard)",
+  "rating": 2400,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "math",
+    "trees"
+  ],
+  "solved_count": 417,
+  "problem_url": "https://codeforces.com/problemset/problem/802/J3",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Heidi is terrified by your estimate and she found it unrealistic that her friends would collaborate to drive her into debt. She expects that, actually, each person will just pick a random friend to send Heidi to. (This randomness assumption implies, however, that she can now visit the same friend an arbitrary number of times...) Moreover, if a person only has one friend in common with Heidi (i.e., if that person is in a leaf of the tree), then that person will not send Heidi back (so that Heidi's travel will end at some point). Heidi also found unrealistic the assumption that she can make all the travels in one day. Therefore now she assumes that every time she travels a route between two friends, she needs to buy a new ticket. She wants to know: how much should she expect to spend on the trips? For what it's worth, Heidi knows that Jenny has at least two friends.",
+  "input_specification": "The first line contains the number of friends n ( 3 ≤ n ≤ 10 5 ). The next n - 1 lines each contain three space-separated integers u , v and c ( 0 ≤ u , v ≤ n - 1 , 1 ≤ c ≤ 10 4 ) meaning that u and v are friends and the cost for traveling between u and v is c (paid every time!). It is again guaranteed that the social network of the input forms a tree.",
+  "output_specification": "Assume that the expected cost of the trips is written as an irreducible fraction a / b (that is, a and b are coprime). Then Heidi, the weird cow that she is, asks you to output . (Output a single integer between 0 and 10 9 + 6 .)",
+  "sample_testcases": [
+    {
+      "input": "3\n0 1 10\n0 2 20",
+      "output": "15"
+    },
+    {
+      "input": "4\n0 1 3\n0 2 9\n0 3 27",
+      "output": "13"
+    },
+    {
+      "input": "7\n0 1 3\n0 5 7\n1 2 2\n1 3 1\n1 4 5\n5 6 8",
+      "output": "400000019"
+    },
+    {
+      "input": "11\n1 0 6646\n2 0 8816\n3 2 9375\n4 2 5950\n5 1 8702\n6 2 2657\n7 2 885\n8 7 2660\n9 2 5369\n10 6 3798",
+      "output": "153869806"
+    },
+    {
+      "input": "6\n0 1 8\n0 2 24\n1 3 40\n1 4 16\n4 5 8",
+      "output": "39"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

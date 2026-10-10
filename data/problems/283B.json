@@ -1,0 +1,40 @@
+{
+  "id": "283B",
+  "source": "problemset",
+  "contest_id": 283,
+  "problem_index": "B",
+  "name": "Cow Program",
+  "rating": 1700,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 3983,
+  "problem_url": "https://codeforces.com/problemset/problem/283/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7037",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Farmer John has just given the cows a program to play with! The program contains two integer variables, x and y , and performs the following operations on a sequence a 1 , a 2 , ..., a n of positive integers: Initially, x = 1 and y = 0 . If, after any step, x ≤ 0 or x > n , the program immediately terminates. The program increases both x and y by a value equal to a x simultaneously. The program now increases y by a x while decreasing x by a x . The program executes steps 2 and 3 (first step 2, then step 3) repeatedly until it terminates (it may never terminate). So, the sequence of executed steps may start with: step 2, step 3, step 2, step 3, step 2 and so on. The cows are not very good at arithmetic though, and they want to see how the program works. Please help them! You are given the sequence a 2 , a 3 , ..., a n . Suppose for each i (1 ≤ i ≤ n - 1) we run the program on the sequence i , a 2 , a 3 , ..., a n . For each such run output the final value of y if the program terminates or -1 if it does not terminate.",
+  "input_specification": "The first line contains a single integer, n ( 2 ≤ n ≤ 2·10 5 ). The next line contains n - 1 space separated integers, a 2 , a 3 , ..., a n ( 1 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Output n - 1 lines. On the i -th line, print the requested value when the program is run on the sequence i , a 2 , a 3 , ... a n . Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 4 1",
+      "output": "3\n6\n8"
+    },
+    {
+      "input": "3\n1 2",
+      "output": "-1\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

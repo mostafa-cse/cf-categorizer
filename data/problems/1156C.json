@@ -1,0 +1,42 @@
+{
+  "id": "1156C",
+  "source": "problemset",
+  "contest_id": 1156,
+  "problem_index": "C",
+  "name": "Match Points",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings",
+    "ternary search",
+    "two pointers"
+  ],
+  "solved_count": 6920,
+  "problem_url": "https://codeforces.com/problemset/problem/1156/C",
+  "editorial_url": "https://codeforces.com/blog/entry/66827",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of points $$$x_1$$$, $$$x_2$$$, ..., $$$x_n$$$ on the number line. Two points $$$i$$$ and $$$j$$$ can be matched with each other if the following conditions hold: neither $$$i$$$ nor $$$j$$$ is matched with any other point; $$$|x_i - x_j| \\ge z$$$. What is the maximum number of pairs of points you can match with each other?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$z$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le z \\le 10^9$$$) — the number of points and the constraint on the distance between matched points, respectively. The second line contains $$$n$$$ integers $$$x_1$$$, $$$x_2$$$, ..., $$$x_n$$$ ($$$1 \\le x_i \\le 10^9$$$).",
+  "output_specification": "Print one integer — the maximum number of pairs of points you can match with each other.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n1 3 3 7",
+      "output": "2"
+    },
+    {
+      "input": "5 5\n10 9 5 8 7",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

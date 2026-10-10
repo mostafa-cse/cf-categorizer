@@ -1,0 +1,38 @@
+{
+  "id": "683B",
+  "source": "problemset",
+  "contest_id": 683,
+  "problem_index": "B",
+  "name": "The Teacher of Physical Education",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 340,
+  "problem_url": "https://codeforces.com/problemset/problem/683/B",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "n pupils came to Physical Education lesson. We know the name and the height of each pupil. Your task is to help the teacher of Physical Education to line up all pupils in non-decreasing order of their heights.",
+  "input_specification": "The first line contains the positive integer n ( 1 ≤ n ≤ 5000 ) — the number of pupils. The next n lines contain the pupils' description. In the i -th line there is pupil's name name i (a non-empty string which consists of uppercase and lowercase Latin letters, the length does not exceed five) and pupil's height x i ( 130 ≤ x i ≤ 215 ). Some pupils can have the same name. Uppercase and lowercase letters of the alphabet should be considered different.",
+  "output_specification": "Print n lines — pupils' names in the non-decreasing order of their heights. Each line must contain exactly one name. If there are several answers, print any of them. Uppercase and lowercase letters of the alphabet should be considered different.",
+  "sample_testcases": [
+    {
+      "input": "4\nIvan 150\nIgor 215\nDasha 158\nKatya 150",
+      "output": "Ivan\nKatya\nDasha\nIgor"
+    },
+    {
+      "input": "2\nSASHA 180\nSASHA 170",
+      "output": "SASHA\nSASHA"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

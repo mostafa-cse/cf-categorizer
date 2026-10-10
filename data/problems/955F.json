@@ -1,0 +1,39 @@
+{
+  "id": "955F",
+  "source": "problemset",
+  "contest_id": 955,
+  "problem_index": "F",
+  "name": "Heaps",
+  "rating": 2600,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 2034,
+  "problem_url": "https://codeforces.com/problemset/problem/955/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58547",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You're given a tree with n vertices rooted at 1 . We say that there's a k -ary heap of depth m located at u if the following holds: For m = 1 u itself is a k -ary heap of depth 1 . For m > 1 vertex u is a k -ary heap of depth m if at least k of its children are k -ary heaps of depth at least m - 1 . Denote dp k ( u ) as maximum depth of k -ary heap in the subtree of u (including u ). Your goal is to compute .",
+  "input_specification": "The first line contains an integer n denoting the size of the tree (2 ≤ n ≤ 3·10 5 ) . The next n - 1 lines contain two integers u , v each, describing vertices connected by i -th edge. It's guaranteed that the given configuration forms a tree.",
+  "output_specification": "Output the answer to the task.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3\n2 3\n4 3",
+      "output": "21"
+    },
+    {
+      "input": "4\n1 2\n2 3\n3 4",
+      "output": "22"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

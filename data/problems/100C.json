@@ -1,0 +1,43 @@
+{
+  "id": "100C",
+  "source": "problemset",
+  "contest_id": 100,
+  "problem_index": "C",
+  "name": "A+B",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 643,
+  "problem_url": "https://codeforces.com/problemset/problem/100/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2359",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Bijan is new to programming. He learned recently that programmers do not code every bit of their apps from scratch. For example they never write a code to sum two integers, because their languages have the ability to do the sum. But can they use it? Can an experienced coder who has attended more than 100 contests, sum two integers? Bijan is not sure about this. What's your opinion?",
+  "input_specification": "You are given two integers a and b , one per line ( 1 ≤ a , b < 10 500 ). These numbers will not have any leading zeros.",
+  "output_specification": "Write sum of the two integers. Do not put any leading zeros.",
+  "sample_testcases": [
+    {
+      "input": "2\n3",
+      "output": "5"
+    },
+    {
+      "input": "1390\n2011",
+      "output": "3401"
+    },
+    {
+      "input": "12345\n54321",
+      "output": "66666"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

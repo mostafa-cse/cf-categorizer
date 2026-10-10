@@ -1,0 +1,39 @@
+{
+  "id": "1548B",
+  "source": "problemset",
+  "contest_id": 1548,
+  "problem_index": "B",
+  "name": "Integers Have Friends",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "math",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 11845,
+  "problem_url": "https://codeforces.com/problemset/problem/1548/B",
+  "editorial_url": "https://codeforces.com/blog/entry/93586",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "British mathematician John Littlewood once said about Indian mathematician Srinivasa Ramanujan that \"every positive integer was one of his personal friends.\" It turns out that positive integers can also be friends with each other! You are given an array $$$a$$$ of distinct positive integers. Define a subarray $$$a_i, a_{i+1}, \\ldots, a_j$$$ to be a friend group if and only if there exists an integer $$$m \\ge 2$$$ such that $$$a_i \\bmod m = a_{i+1} \\bmod m = \\ldots = a_j \\bmod m$$$, where $$$x \\bmod y$$$ denotes the remainder when $$$x$$$ is divided by $$$y$$$. Your friend Gregor wants to know the size of the largest friend group in $$$a$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2\\cdot 10^4$$$). Each test case begins with a line containing the integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$), the size of the array $$$a$$$. The next line contains $$$n$$$ positive integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le {10}^{18}$$$), representing the contents of the array $$$a$$$. It is guaranteed that all the numbers in $$$a$$$ are distinct . It is guaranteed that the sum of $$$n$$$ over all test cases is less than $$$2\\cdot 10^5$$$.",
+  "output_specification": "Your output should consist of $$$t$$$ lines. Each line should consist of a single integer, the size of the largest friend group in $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n1 5 2 4 6\n4\n8 2 5 10\n2\n1000 2000\n8\n465 55 3 54 234 12 45 78",
+      "output": "3\n3\n2\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

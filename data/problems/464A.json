@@ -1,0 +1,43 @@
+{
+  "id": "464A",
+  "source": "problemset",
+  "contest_id": 464,
+  "problem_index": "A",
+  "name": "No to Palindromes!",
+  "rating": 1700,
+  "tags": [
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 6281,
+  "problem_url": "https://codeforces.com/problemset/problem/464/A",
+  "editorial_url": "https://codeforces.com/blog/entry/13694",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Paul hates palindromes. He assumes that string s is tolerable if each its character is one of the first p letters of the English alphabet and s doesn't contain any palindrome contiguous substring of length 2 or more. Paul has found a tolerable string s of length n . Help him find the lexicographically next tolerable string of the same length or else state that such string does not exist.",
+  "input_specification": "The first line contains two space-separated integers: n and p ( 1 ≤ n ≤ 1000 ; 1 ≤ p ≤ 26 ). The second line contains string s , consisting of n small English letters. It is guaranteed that the string is tolerable (according to the above definition).",
+  "output_specification": "If the lexicographically next tolerable string of the same length exists, print it. Otherwise, print \" NO \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "3 3\ncba",
+      "output": "NO"
+    },
+    {
+      "input": "3 4\ncba",
+      "output": "cbd"
+    },
+    {
+      "input": "4 4\nabcd",
+      "output": "abda"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

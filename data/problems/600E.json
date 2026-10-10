@@ -1,0 +1,41 @@
+{
+  "id": "600E",
+  "source": "problemset",
+  "contest_id": 600,
+  "problem_index": "E",
+  "name": "Lomsat gelral",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dsu",
+    "trees"
+  ],
+  "solved_count": 20012,
+  "problem_url": "https://codeforces.com/problemset/problem/600/E",
+  "editorial_url": "https://codeforces.com/blog/entry/21827",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a rooted tree with root in vertex 1 . Each vertex is coloured in some colour. Let's call colour c dominating in the subtree of vertex v if there are no other colours that appear in the subtree of vertex v more times than colour c . So it's possible that two or more colours will be dominating in the subtree of some vertex. The subtree of vertex v is the vertex v and all other vertices that contains vertex v in each path to the root. For each vertex v find the sum of all dominating colours in the subtree of vertex v .",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — the number of vertices in the tree. The second line contains n integers c i ( 1 ≤ c i ≤ n ), c i — the colour of the i -th vertex. Each of the next n - 1 lines contains two integers x j , y j ( 1 ≤ x j , y j ≤ n ) — the edge of the tree. The first vertex is the root of the tree.",
+  "output_specification": "Print n integers — the sums of dominating colours for each vertex.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 3 4\n1 2\n2 3\n2 4",
+      "output": "10 9 3 4"
+    },
+    {
+      "input": "15\n1 2 3 1 2 3 3 1 1 3 2 2 1 2 3\n1 2\n1 3\n1 4\n1 14\n1 15\n2 5\n2 6\n2 7\n3 8\n3 9\n3 10\n4 11\n4 12\n4 13",
+      "output": "6 5 4 3 2 3 3 1 1 3 2 2 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

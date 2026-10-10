@@ -1,0 +1,38 @@
+{
+  "id": "1909E",
+  "source": "problemset",
+  "contest_id": 1909,
+  "problem_index": "E",
+  "name": "Multiple Lamps",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1784,
+  "problem_url": "https://codeforces.com/problemset/problem/1909/E",
+  "editorial_url": "https://codeforces.com/blog/entry/123584",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kid2Will - Fire Aura ⠀ You have $$$n$$$ lamps, numbered from $$$1$$$ to $$$n$$$. Initially, all the lamps are turned off. You also have $$$n$$$ buttons. The $$$i$$$-th button toggles all the lamps whose index is a multiple of $$$i$$$. When a lamp is toggled, if it was off it turns on, and if it was on it turns off. You have to press some buttons according to the following rules. You have to press at least one button. You cannot press the same button multiple times. You are given $$$m$$$ pairs $$$(u_i, v_i)$$$. If you press the button $$$u_i$$$, you also have to press the button $$$v_i$$$ (at any moment, not necessarily after pressing the button $$$u_i$$$). Note that, if you press the button $$$v_i$$$, you don't need to press the button $$$u_i$$$. You don't want to waste too much electricity. Find a way to press buttons such that at the end at most $$$\\lfloor n/5 \\rfloor$$$ lamps are on, or print $$$-1$$$ if it is impossible.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$, $$$0 \\leq m \\leq 2 \\cdot 10^5$$$) — the number of lamps and the number of pairs, respectively. Each of the next $$$m$$$ lines contains two integers $$$u_i$$$, $$$v_i$$$ ($$$1 \\leq u_i, v_i \\leq n$$$, $$$u_i \\neq v_i$$$). If you press the button $$$u_i$$$, you also have to press the button $$$v_i$$$. It is guaranteed that the pairs $$$(u_i, v_i)$$$ are distinct. It is guaranteed that the sum of $$$n$$$ and the sum of $$$m$$$ over all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case: If there is no choice of buttons that makes at most $$$\\lfloor n/5 \\rfloor$$$ lamps on at the end, output a single line containing $$$-1$$$. Otherwise, output two lines. The first line should contain an integer $$$k$$$ ($$$1 \\le k \\le n$$$) — the number of pressed buttons. The second line should contain $$$k$$$ integers $$$b_1, b_2, \\dots, b_k$$$ ($$$1 \\le b_i \\le n$$$) — the indices of the pressed buttons (in any order). The $$$b_i$$$ must be distinct, and at the end at most $$$\\lfloor n/5 \\rfloor$$$ lamps must be turned on.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 0\n5 2\n4 1\n5 1\n15 9\n7 8\n8 9\n9 10\n10 9\n11 1\n12 2\n13 3\n14 4\n15 5\n5 4\n1 2\n2 3\n3 4\n4 5",
+      "output": "-1\n4\n3 5 1 2\n3\n8 9 10\n1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:36",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

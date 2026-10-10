@@ -1,0 +1,45 @@
+{
+  "id": "1763E",
+  "source": "problemset",
+  "contest_id": 1763,
+  "problem_index": "E",
+  "name": "Node Pairs",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "graphs",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2300,
+  "problem_url": "https://codeforces.com/problemset/problem/1763/E",
+  "editorial_url": "https://codeforces.com/blog/entry/110278",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call an ordered pair of nodes $$$(u, v)$$$ in a directed graph unidirectional if $$$u \\neq v$$$, there exists a path from $$$u$$$ to $$$v$$$, and there are no paths from $$$v$$$ to $$$u$$$. A directed graph is called $$$p$$$-reachable if it contains exactly $$$p$$$ ordered pairs of nodes $$$(u, v)$$$ such that $$$u \\lt v$$$ and $$$u$$$ and $$$v$$$ are reachable from each other. Find the minimum number of nodes required to create a $$$p$$$-reachable directed graph. Also, among all such $$$p$$$-reachable directed graphs with the minimum number of nodes, let $$$G$$$ denote a graph which maximizes the number of unidirectional pairs of nodes. Find this number.",
+  "input_specification": "The first and only line contains a single integer $$$p$$$ ($$$0 \\le p \\le 2 \\cdot 10^5$$$) — the number of ordered pairs of nodes.",
+  "output_specification": "Print a single line containing two integers — the minimum number of nodes required to create a $$$p$$$-reachable directed graph, and the maximum number of unidirectional pairs of nodes among all such $$$p$$$-reachable directed graphs with the minimum number of nodes.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "3 0"
+    },
+    {
+      "input": "4",
+      "output": "5 6"
+    },
+    {
+      "input": "0",
+      "output": "0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

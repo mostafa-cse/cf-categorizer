@@ -1,0 +1,40 @@
+{
+  "id": "159A",
+  "source": "problemset",
+  "contest_id": 159,
+  "problem_index": "A",
+  "name": "Friends or Not",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 2680,
+  "problem_url": "https://codeforces.com/problemset/problem/159/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4089",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus has a hobby — he develops an unusual social network. His work is almost completed, and there is only one more module to implement — the module which determines friends. Oh yes, in this social network one won't have to add friends manually! Pairs of friends are deduced in the following way. Let's assume that user A sent user B a message at time t 1 , and user B sent user A a message at time t 2 . If 0 < t 2 - t 1 ≤ d , then user B 's message was an answer to user A 's one. Users A and B are considered to be friends if A answered at least one B 's message or B answered at least one A 's message. You are given the log of messages in chronological order and a number d . Find all pairs of users who will be considered to be friends.",
+  "input_specification": "The first line of the input contains two integers n and d ( 1 ≤ n , d ≤ 1000 ). The next n lines contain the messages log. The i -th line contains one line of the log formatted as \" A i B i t i \" (without the quotes), which means that user A i sent a message to user B i at time t i ( 1 ≤ i ≤ n ). A i and B i are non-empty strings at most 20 characters long, consisting of lowercase letters (' a ' ... ' z '), and t i is an integer ( 0 ≤ t i ≤ 10000 ). It is guaranteed that the lines are given in non-decreasing order of t i 's and that no user sent a message to himself. The elements in the lines are separated by single spaces.",
+  "output_specification": "In the first line print integer k — the number of pairs of friends. In the next k lines print pairs of friends as \" A i B i \" (without the quotes). You can print users in pairs and the pairs themselves in any order. Each pair must be printed exactly once.",
+  "sample_testcases": [
+    {
+      "input": "4 1\nvasya petya 1\npetya vasya 2\nanya ivan 2\nivan anya 4",
+      "output": "1\npetya vasya"
+    },
+    {
+      "input": "1 1000\na b 0",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1182E",
+  "source": "problemset",
+  "contest_id": 1182,
+  "problem_index": "E",
+  "name": "Product Oriented Recurrence",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "math",
+    "matrices",
+    "number theory"
+  ],
+  "solved_count": 3525,
+  "problem_url": "https://codeforces.com/problemset/problem/1182/E",
+  "editorial_url": "https://codeforces.com/blog/entry/67614",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$f_{x} = c^{2x-6} \\cdot f_{x-1} \\cdot f_{x-2} \\cdot f_{x-3}$$$ for $$$x \\ge 4$$$. You have given integers $$$n$$$, $$$f_{1}$$$, $$$f_{2}$$$, $$$f_{3}$$$, and $$$c$$$. Find $$$f_{n} \\bmod (10^{9}+7)$$$.",
+  "input_specification": "The only line contains five integers $$$n$$$, $$$f_{1}$$$, $$$f_{2}$$$, $$$f_{3}$$$, and $$$c$$$ ($$$4 \\le n \\le 10^{18}$$$, $$$1 \\le f_{1}$$$, $$$f_{2}$$$, $$$f_{3}$$$, $$$c \\le 10^{9}$$$).",
+  "output_specification": "Print $$$f_{n} \\bmod (10^{9} + 7)$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 1 2 5 3",
+      "output": "72900"
+    },
+    {
+      "input": "17 97 41 37 11",
+      "output": "317451037"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

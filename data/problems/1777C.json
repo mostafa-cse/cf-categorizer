@@ -1,0 +1,38 @@
+{
+  "id": "1777C",
+  "source": "problemset",
+  "contest_id": 1777,
+  "problem_index": "C",
+  "name": "Quiz Master",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "math",
+    "number theory",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 13328,
+  "problem_url": "https://codeforces.com/problemset/problem/1777/C",
+  "editorial_url": "https://codeforces.com/blog/entry/111729",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A school has to decide on its team for an international quiz. There are $$$n$$$ students in the school. We can describe the students using an array $$$a$$$ where $$$a_i$$$ is the smartness of the $$$i$$$-th ($$$1 \\le i \\le n$$$) student. There are $$$m$$$ topics $$$1, 2, 3, \\ldots, m$$$ from which the quiz questions will be formed. The $$$i$$$-th student is considered proficient in a topic $$$T$$$ if $$$(a_i \\bmod T) = 0$$$. Otherwise, he is a rookie in that topic. We say that a team of students is collectively proficient in all the topics if for every topic there is a member of the team proficient in this topic. Find a team that is collectively proficient in all the topics such that the maximum difference between the smartness of any two students in that team is minimized . Output this difference.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains $$$n$$$ and $$$m$$$ ($$$1 \\le n,m \\le 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^5$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the answer on a new line. If there is no solution, output $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 4\n3 7\n4 2\n3 7 2 9\n5 7\n6 4 3 5 7",
+      "output": "-1\n0\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

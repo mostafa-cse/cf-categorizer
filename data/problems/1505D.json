@@ -1,0 +1,47 @@
+{
+  "id": "1505D",
+  "source": "problemset",
+  "contest_id": 1505,
+  "problem_index": "D",
+  "name": "Xenolith? Hippodrome?",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "number theory"
+  ],
+  "solved_count": 898,
+  "problem_url": "https://codeforces.com/problemset/problem/1505/D",
+  "editorial_url": "https://codeforces.com/blog/entry/89260",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "",
+  "input_specification": "The input contains two integers $$$N$$$, $$$M$$$ ($$$1 \\le N \\le 1024, 2 \\le M \\le 16$$$), separated by a single space.",
+  "output_specification": "Output \" YES \" or \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "2 3",
+      "output": "YES"
+    },
+    {
+      "input": "3 2",
+      "output": "NO"
+    },
+    {
+      "input": "33 16",
+      "output": "YES"
+    },
+    {
+      "input": "26 5",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:13",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "65D",
+  "source": "problemset",
+  "contest_id": 65,
+  "problem_index": "D",
+  "name": "Harry Potter and the Sorting Hat",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "hashing"
+  ],
+  "solved_count": 514,
+  "problem_url": "https://codeforces.com/problemset/problem/65/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1431",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "As you know, Hogwarts has four houses: Gryffindor, Hufflepuff, Ravenclaw and Slytherin. The sorting of the first-years into houses is done by the Sorting Hat. The pupils are called one by one in the alphabetical order, each of them should put a hat on his head and, after some thought, the hat solemnly announces the name of the house the student should enter. At that the Hat is believed to base its considerations on the student's personal qualities: it sends the brave and noble ones to Gryffindor, the smart and shrewd ones — to Ravenclaw, the persistent and honest ones — to Hufflepuff and the clever and cunning ones — to Slytherin. However, a first year student Hermione Granger got very concerned about the forthcoming sorting. She studied all the literature on the Sorting Hat and came to the conclusion that it is much simpler than that. If the relatives of the student have already studied at Hogwarts, the hat puts the student to the same house, where his family used to study. In controversial situations, when the relatives studied in different houses or when they were all Muggles like Hermione's parents, then the Hat sorts the student to the house, to which the least number of first years has been sent at that moment. If there are several such houses, the choice is given to the student himself. Then the student can choose any of the houses, to which the least number of first years has been sent so far. Hermione has already asked the students that are on the list before her about their relatives. Now she and her new friends Harry Potter and Ron Weasley want to find out into what house the Hat will put Hermione.",
+  "input_specification": "The first input line contains an integer n ( 1 ≤ n ≤ 10000 ). It is the number of students who are in the list before Hermione. The next line contains n symbols. If all the relatives of a student used to study in the same house, then the i -th character in the string coincides with the first letter of the name of this house. Otherwise, the i -th symbol is equal to \"?\".",
+  "output_specification": "Print all the possible houses where Hermione can be sent. The names of the houses should be printed in the alphabetical order, one per line.",
+  "sample_testcases": [
+    {
+      "input": "11\nG????SS???H",
+      "output": "Gryffindor\nRavenclaw"
+    },
+    {
+      "input": "2\nH?",
+      "output": "Gryffindor\nRavenclaw\nSlytherin"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "2268C",
+  "source": "problemset",
+  "contest_id": 2268,
+  "problem_index": "C",
+  "name": "KiaKio and Energy Intervals",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures",
+    "divide and conquer",
+    "dsu",
+    "greedy",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 1060,
+  "problem_url": "https://codeforces.com/problemset/problem/2268/C",
+  "editorial_url": "https://codeforces.com/blog/entry/157140",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kia and Kio found a glowing array $$$a_1, a_2, \\ldots, a_n$$$ inside a crystal terminal in the ruins of an ancient digital kingdom. The terminal works like this. Kia picks a segment of the array: any two indices $$$l$$$ and $$$r$$$ with $$$l \\lt r$$$ (so the segment always has at least two elements). Kio then finds the strongest energy in that segment, $$$m = \\max\\left(a_l, a_{l+1}, \\ldots, a_r\\right)$$$, and the terminal masks every element of the segment with $$$m$$$ (bitwise AND), then fuses the results together (bitwise XOR): $$$$$$ (a_l \\,\\&\\, m)\\oplus(a_{l+1} \\,\\&\\, m)\\oplus\\cdots\\oplus(a_r \\,\\&\\, m). $$$$$$ That number is the energy released. Kia wants the strongest possible blast. Over all valid segments $$$(l, r)$$$, what is the largest energy the terminal can produce? Here, $$$\\&$$$ denotes the bitwise AND operation, and $$$\\oplus$$$ denotes the bitwise XOR operation.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2\\cdot10^5$$$) — the size of the array. The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$0 \\le a_i \\lt 2^{18}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the maximum possible value of $$$$$$ (a_l \\,\\&\\, m)\\oplus(a_{l+1} \\,\\&\\, m)\\oplus\\cdots\\oplus(a_r \\,\\&\\, m) $$$$$$ among all pairs $$$(l,r)$$$ satisfying $$$l \\lt r$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n1 7 3 7 2\n3\n3 1 2\n5\n1 5 2 3 4\n4\n3 5 2 6",
+      "output": "6\n2\n5\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:57:34",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

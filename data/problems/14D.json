@@ -1,0 +1,47 @@
+{
+  "id": "14D",
+  "source": "problemset",
+  "contest_id": 14,
+  "problem_index": "D",
+  "name": "Two Paths",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "shortest paths",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 5476,
+  "problem_url": "https://codeforces.com/problemset/problem/14/D",
+  "editorial_url": "https://codeforces.com/blog/entry/389",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "As you know, Bob's brother lives in Flatland. In Flatland there are n cities, connected by n - 1 two-way roads. The cities are numbered from 1 to n . You can get from one city to another moving along the roads. The «Two Paths» company, where Bob's brother works, has won a tender to repair two paths in Flatland. A path is a sequence of different cities, connected sequentially by roads. The company is allowed to choose by itself the paths to repair. The only condition they have to meet is that the two paths shouldn't cross (i.e. shouldn't have common cities). It is known that the profit, the «Two Paths» company will get, equals the product of the lengths of the two paths. Let's consider the length of each road equals 1, and the length of a path equals the amount of roads in it. Find the maximum possible profit for the company.",
+  "input_specification": "The first line contains an integer n ( 2 ≤ n ≤ 200 ), where n is the amount of cities in the country. The following n - 1 lines contain the information about the roads. Each line contains a pair of numbers of the cities, connected by the road a i , b i ( 1 ≤ a i , b i ≤ n ).",
+  "output_specification": "Output the maximum possible profit.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n2 3\n3 4",
+      "output": "1"
+    },
+    {
+      "input": "7\n1 2\n1 3\n1 4\n1 5\n1 6\n1 7",
+      "output": "0"
+    },
+    {
+      "input": "6\n1 2\n2 3\n2 4\n5 4\n6 4",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

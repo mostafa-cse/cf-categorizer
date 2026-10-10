@@ -1,0 +1,37 @@
+{
+  "id": "274B",
+  "source": "problemset",
+  "contest_id": 274,
+  "problem_index": "B",
+  "name": "Zero Tree",
+  "rating": 1800,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 5893,
+  "problem_url": "https://codeforces.com/problemset/problem/274/B",
+  "editorial_url": "https://codeforces.com/blog/entry/6759",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A tree is a graph with n vertices and exactly n - 1 edges; this graph should meet the following condition: there exists exactly one shortest (by number of edges) path between any pair of its vertices. A subtree of a tree T is a tree with both vertices and edges as subsets of vertices and edges of T . You're given a tree with n vertices. Consider its vertices numbered with integers from 1 to n . Additionally an integer is written on every vertex of this tree. Initially the integer written on the i -th vertex is equal to v i . In one move you can apply the following operation: Select the subtree of the given tree that includes the vertex with number 1. Increase (or decrease) by one all the integers which are written on the vertices of that subtree. Calculate the minimum number of moves that is required to make all the integers written on the vertices of the given tree equal to zero.",
+  "input_specification": "The first line of the input contains n ( 1 ≤ n ≤ 10 5 ). Each of the next n - 1 lines contains two integers a i and b i ( 1 ≤ a i , b i ≤ n ; a i ≠ b i ) indicating there's an edge between vertices a i and b i . It's guaranteed that the input graph is a tree. The last line of the input contains a list of n space-separated integers v 1 , v 2 , ..., v n ( | v i | ≤ 10 9 ).",
+  "output_specification": "Print the minimum number of operations needed to solve the task. Please, do not write the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n1 3\n1 -1 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

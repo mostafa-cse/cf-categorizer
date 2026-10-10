@@ -1,0 +1,43 @@
+{
+  "id": "1725E",
+  "source": "problemset",
+  "contest_id": 1725,
+  "problem_index": "E",
+  "name": "Electrical Efficiency",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "dp",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 646,
+  "problem_url": "https://codeforces.com/problemset/problem/1725/E",
+  "editorial_url": "https://codeforces.com/blog/entry/106567",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "In the country of Dengkleknesia, there are $$$N$$$ factories numbered from $$$1$$$ to $$$N$$$. Factory $$$i$$$ has an electrical coefficient of $$$A_i$$$. There are also $$$N-1$$$ power lines with the $$$j$$$-th power line connecting factory $$$U_j$$$ and factory $$$V_j$$$. It can be guaranteed that each factory in Dengkleknesia is connected to all other factories in Dengkleknesia through one or more power lines. In other words, the collection of factories forms a tree. Each pair of different factories in Dengkleknesia can use one or more existing power lines to transfer electricity to each other. However, each power line needs to be turned on first so that electricity can pass through it. Define $$$f(x, y, z)$$$ as the minimum number of power lines that need to be turned on so that factory $$$x$$$ can make electrical transfers to factory $$$y$$$ and factory $$$z$$$. Also define $$$g(x, y, z)$$$ as the number of distinct prime factors of $$$\\text{GCD}(A_x, A_y, A_z)$$$. To measure the electrical efficiency, you must find the sum of $$$f(x, y, z) \\times g(x, y, z)$$$ for all combinations of $$$(x, y, z)$$$ such that $$$1 \\leq x \\lt y \\lt z \\leq N$$$. Because the answer can be very large, you just need to output the answer modulo $$$998\\,244\\,353$$$. Note: $$$\\text{GCD}(k_1, k_2, k_3)$$$ is the greatest common divisor of $$$k_1$$$, $$$k_2$$$, and $$$k_3$$$, which is the biggest integer that simultaneously divides $$$k_1$$$, $$$k_2$$$, and $$$k_3$$$.",
+  "input_specification": "The first line contains a single integer $$$N$$$ ($$$1 \\le N \\le 2 \\cdot 10^5$$$) — the number of factories in Dengkleknesia. The second line contains $$$N$$$ integers $$$A_1, A_2, \\dots, A_N$$$ ($$$1 \\leq A_i \\leq 2 \\cdot 10^5$$$) — the electrical coefficients of the factories. The $$$j$$$-th of the next $$$N-1$$$ lines contains two integers $$$U_j$$$ and $$$V_j$$$ ($$$1 \\le U_j, V_j \\le N$$$) — a power line that connects cities $$$U_j$$$ and $$$V_j$$$. The collection of factories forms a tree.",
+  "output_specification": "An integer representing the sum of $$$f(x, y, z) \\times g(x, y, z)$$$ for all combinations of $$$(x, y, z)$$$ such that $$$1 \\leq x \\lt y \\lt z \\leq N$$$, modulo $$$998\\,244\\,353$$$",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3\n1 2\n2 3",
+      "output": "0"
+    },
+    {
+      "input": "4\n6 14 6 6\n1 2\n2 3\n2 4",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

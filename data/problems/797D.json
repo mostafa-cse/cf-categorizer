@@ -1,0 +1,39 @@
+{
+  "id": "797D",
+  "source": "problemset",
+  "contest_id": 797,
+  "problem_index": "D",
+  "name": "Broken BST",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dfs and similar"
+  ],
+  "solved_count": 2325,
+  "problem_url": "https://codeforces.com/problemset/problem/797/D",
+  "editorial_url": "https://codeforces.com/blog/entry/51588",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let T be arbitrary binary tree — tree, every vertex of which has no more than two children. Given tree is rooted, so there exists only one vertex which doesn't have a parent — it's the root of a tree. Every vertex has an integer number written on it. Following algorithm is run on every value from the tree T : Set pointer to the root of a tree. Return success if the value in the current vertex is equal to the number you are looking for Go to the left child of the vertex if the value in the current vertex is greater than the number you are looking for Go to the right child of the vertex if the value in the current vertex is less than the number you are looking for Return fail if you try to go to the vertex that doesn't exist Here is the pseudo-code of the described algorithm: bool find(TreeNode t, int x) { if (t == null) return false; if (t.value == x) return true; if (x < t.value) return find(t.left, x); else return find(t.right, x); } find(root, x); The described algorithm works correctly if the tree is binary search tree (i.e. for each node the values of left subtree are less than the value in the node, the values of right subtree are greater than the value in the node). But it can return invalid result if tree is not a binary search tree. Since the given tree is not necessarily a binary search tree, not all numbers can be found this way. Your task is to calculate, how many times the search will fail being running on every value from the tree. If the tree has multiple vertices with the same values on them then you should run algorithm on every one of them separately.",
+  "input_specification": "First line contains integer number n ( 1 ≤ n ≤ 10 5 ) — number of vertices in the tree. Each of the next n lines contains 3 numbers v , l , r ( 0 ≤ v ≤ 10 9 ) — value on current vertex, index of the left child of the vertex and index of the right child of the vertex, respectively. If some child doesn't exist then number - 1 is set instead. Note that different vertices of the tree may contain the same values.",
+  "output_specification": "Print number of times when search algorithm will fail.",
+  "sample_testcases": [
+    {
+      "input": "3\n15 -1 -1\n10 1 3\n5 -1 -1",
+      "output": "2"
+    },
+    {
+      "input": "8\n6 2 3\n3 4 5\n12 6 7\n1 -1 8\n4 -1 -1\n5 -1 -1\n14 -1 -1\n2 -1 -1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

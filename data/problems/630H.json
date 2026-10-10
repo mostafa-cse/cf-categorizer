@@ -1,0 +1,35 @@
+{
+  "id": "630H",
+  "source": "problemset",
+  "contest_id": 630,
+  "problem_index": "H",
+  "name": "Benches",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 5829,
+  "problem_url": "https://codeforces.com/problemset/problem/630/H",
+  "editorial_url": "https://codeforces.com/blog/entry/24160",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "The city park of IT City contains n east to west paths and n north to south paths. Each east to west path crosses each north to south path, so there are n 2 intersections. The city funded purchase of five benches. To make it seems that there are many benches it was decided to place them on as many paths as possible. Obviously this requirement is satisfied by the following scheme: each bench is placed on a cross of paths and each path contains not more than one bench. Help the park administration count the number of ways to place the benches.",
+  "input_specification": "The only line of the input contains one integer n ( 5 ≤ n ≤ 100 ) — the number of east to west paths and north to south paths.",
+  "output_specification": "Output one integer — the number of ways to place the benches.",
+  "sample_testcases": [
+    {
+      "input": "5",
+      "output": "120"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

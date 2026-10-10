@@ -1,0 +1,38 @@
+{
+  "id": "1924A",
+  "source": "problemset",
+  "contest_id": 1924,
+  "problem_index": "A",
+  "name": "Did We Get Everything Covered?",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "shortest paths",
+    "strings"
+  ],
+  "solved_count": 17210,
+  "problem_url": "https://codeforces.com/problemset/problem/1924/A",
+  "editorial_url": "https://codeforces.com/blog/entry/125137",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$n$$$ and $$$k$$$ along with a string $$$s$$$. Your task is to check whether all possible strings of length $$$n$$$ that can be formed using the first $$$k$$$ lowercase English alphabets occur as a subsequence of $$$s$$$. If the answer is NO , you also need to print a string of length $$$n$$$ that can be formed using the first $$$k$$$ lowercase English alphabets which does not occur as a subsequence of $$$s$$$. If there are multiple answers, you may print any of them. Note: A string $$$a$$$ is called a subsequence of another string $$$b$$$ if $$$a$$$ can be obtained by deleting some (possibly zero) characters from $$$b$$$ without changing the order of the remaining characters.",
+  "input_specification": "The first line of input contains a single integer $$$t \\, (1 \\le t \\le 10^5)$$$, the number of test cases. The first line of each test case contains $$$3$$$ integers $$$n \\, (1 \\le n \\le 26), \\: k \\, (1 \\le k \\le 26), \\: m \\, (1 \\le m \\le 1000)$$$, where $$$n$$$ and $$$k$$$ are the same as described in the input and $$$m$$$ is the length of the string $$$s$$$. The second line of each test case contains a single string $$$s$$$ of length $$$m$$$, comprising only of the first $$$k$$$ lowercase English alphabets. It is guaranteed that the sum of $$$m$$$ and the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print YES if all possible strings of length $$$n$$$ that can be formed using the first $$$k$$$ lowercase English alphabets occur as a subsequence of $$$s$$$, else print NO . If your answer is NO , print a string of length $$$n$$$ that can be formed using the first $$$k$$$ lowercase English alphabets which does not occur as a subsequence of $$$s$$$ in the next line. You may print each letter of YES or NO in any case (for example, YES , yES , YeS will all be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 4\nabba\n2 2 3\nabb\n3 3 10\naabbccabab",
+      "output": "YES\nNO\naa\nNO\nccc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

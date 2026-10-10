@@ -1,0 +1,43 @@
+{
+  "id": "613B",
+  "source": "problemset",
+  "contest_id": 613,
+  "problem_index": "B",
+  "name": "Skills",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dp",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 2523,
+  "problem_url": "https://codeforces.com/problemset/problem/613/B",
+  "editorial_url": "https://codeforces.com/blog/entry/22832",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lesha plays the recently published new version of the legendary game hacknet. In this version character skill mechanism was introduced. Now, each player character has exactly n skills. Each skill is represented by a non-negative integer a i — the current skill level. All skills have the same maximum level A . Along with the skills, global ranking of all players was added. Players are ranked according to the so-called Force. The Force of a player is the sum of the following values: The number of skills that a character has perfected (i.e., such that a i = A ), multiplied by coefficient c f . The minimum skill level among all skills ( min a i ), multiplied by coefficient c m . Now Lesha has m hacknetian currency units, which he is willing to spend. Each currency unit can increase the current level of any skill by 1 (if it's not equal to A yet). Help him spend his money in order to achieve the maximum possible value of the Force.",
+  "input_specification": "The first line of the input contains five space-separated integers n , A , c f , c m and m ( 1 ≤ n ≤ 100 000 , 1 ≤ A ≤ 10 9 , 0 ≤ c f , c m ≤ 1000 , 0 ≤ m ≤ 10 15 ). The second line contains exactly n integers a i ( 0 ≤ a i ≤ A ), separated by spaces, — the current levels of skills.",
+  "output_specification": "On the first line print the maximum value of the Force that the character can achieve using no more than m currency units. On the second line print n integers a ' i ( a i ≤ a ' i ≤ A ), skill levels which one must achieve in order to reach the specified value of the Force, while using no more than m currency units. Numbers should be separated by spaces.",
+  "sample_testcases": [
+    {
+      "input": "3 5 10 1 5\n1 3 1",
+      "output": "12\n2 5 2"
+    },
+    {
+      "input": "3 5 10 1 339\n1 3 1",
+      "output": "35\n5 5 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1909F2",
+  "source": "problemset",
+  "contest_id": 1909,
+  "problem_index": "F2",
+  "name": "Small Permutation Problem (Hard Version)",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1306,
+  "problem_url": "https://codeforces.com/problemset/problem/1909/F2",
+  "editorial_url": "https://codeforces.com/blog/entry/123584",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andy Tunstall - MiniBoss ⠀ In the easy version, the $$$a_i$$$ are in the range $$$[0, n]$$$; in the hard version, the $$$a_i$$$ are in the range $$$[-1, n]$$$ and the definition of good permutation is slightly different. You can make hacks only if all versions of the problem are solved. You are given an integer $$$n$$$ and an array $$$a_1, a_2, \\dots, a_n$$$ of integers in the range $$$[-1, n]$$$. A permutation $$$p_1, p_2, \\dots, p_n$$$ of $$$[1, 2, \\dots, n]$$$ is good if, for each $$$i$$$, the following condition is true: if $$$a_i \\neq -1$$$, the number of values $$$\\leq i$$$ in $$$[p_1, p_2, \\dots, p_i]$$$ is exactly $$$a_i$$$. Count the good permutations of $$$[1, 2, \\dots, n]$$$, modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$-1 \\le a_i \\le n$$$), which describe the conditions for a good permutation. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing the number of good permutations, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "10\n5\n-1 -1 -1 -1 -1\n5\n1 2 3 4 5\n6\n0 2 2 2 -1 -1\n6\n-1 -1 -1 -1 -1 5\n6\n-1 -1 3 2 -1 -1\n15\n0 0 -1 -1 -1 2 2 -1 -1 -1 -1 9 11 13 15\n6\n0 2 2 2 4 6\n6\n0 1 3 4 5 5\n6\n1 2 3 2 4 6\n15\n0 0 1 1 1 2 3 4 5 6 7 9 11 13 15",
+      "output": "120\n1\n4\n0\n0\n494403526\n4\n0\n0\n532305727"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

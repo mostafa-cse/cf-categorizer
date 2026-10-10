@@ -1,0 +1,39 @@
+{
+  "id": "204C",
+  "source": "problemset",
+  "contest_id": 204,
+  "problem_index": "C",
+  "name": "Little Elephant and Furik and Rubik",
+  "rating": 2000,
+  "tags": [
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1335,
+  "problem_url": "https://codeforces.com/problemset/problem/204/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4849",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Elephant loves Furik and Rubik, who he met in a small city Kremenchug. The Little Elephant has two strings of equal length a and b , consisting only of uppercase English letters. The Little Elephant selects a pair of substrings of equal length — the first one from string a , the second one from string b . The choice is equiprobable among all possible pairs. Let's denote the substring of a as x , and the substring of b — as y . The Little Elephant gives string x to Furik and string y — to Rubik. Let's assume that f ( x , y ) is the number of such positions of i ( 1 ≤ i ≤ | x | ), that x i = y i (where | x | is the length of lines x and y , and x i , y i are the i -th characters of strings x and y , correspondingly). Help Furik and Rubik find the expected value of f ( x , y ) .",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 2·10 5 ) — the length of strings a and b . The second line contains string a , the third line contains string b . The strings consist of uppercase English letters only. The length of both strings equals n .",
+  "output_specification": "On a single line print a real number — the answer to the problem. The answer will be considered correct if its relative or absolute error does not exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2\nAB\nBA",
+      "output": "0.400000000"
+    },
+    {
+      "input": "3\nAAB\nCAA",
+      "output": "0.642857143"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:21",
+  "main_topic": "Math",
+  "subtopic": "Probabilities and Expected Values",
+  "subsubtopic": "393. Probabilities and Expected Values",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Probabilities and Expected Values paradigm under the Math framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

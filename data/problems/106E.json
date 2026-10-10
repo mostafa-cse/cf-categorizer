@@ -1,0 +1,35 @@
+{
+  "id": "106E",
+  "source": "problemset",
+  "contest_id": 106,
+  "problem_index": "E",
+  "name": "Space Rescuers",
+  "rating": 2100,
+  "tags": [
+    "geometry",
+    "ternary search"
+  ],
+  "solved_count": 1034,
+  "problem_url": "https://codeforces.com/problemset/problem/106/E",
+  "editorial_url": "https://codeforces.com/blog/entry/2493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Galaxy contains n planets, there are many different living creatures inhabiting each planet. And each creature can get into troubles! Space rescuers know it perfectly well and they are always ready to help anyone who really needs help. All you need to do is call for them. Now the space rescuers plan to build the largest in the history of the Galaxy rescue station; however, the rescue station's location is yet to be determined. As some cases are real emergencies, the rescuers want to find such a point in the Galaxy from which it would be possible to get to the remotest planet in the minimum possible time. In other words, the rescuers need such point in the space that the distance between it and the planet remotest from it was minimal (if we compare this point with all other possible points in the space). Unfortunately, the rescuers can't sole this problem. As the planets are quite remote from each other, they can be considered as points in Euclidean three-dimensional space. The distance between points ( x i , y i , z i ) and ( x j , y j , z j ) can be calculated by the formula . The rescue station can be positioned in any point in the space. It can also coincide with some planet. Galaxy is in danger! Save the space rescuers and find the required point for them.",
+  "input_specification": "The first line of the input file contains integer n — the number of planets ( 1 ≤ N ≤ 100 ). Each of the following n lines contains information about the planets. The i -th line contains three integers x i , y i , z i — the coordinates of the i -th planet ( - 10 4 ≤ x i , y i , z i ≤ 10 4 , 1 ≤ i ≤ n ). No two planets coincide.",
+  "output_specification": "Print on the first line of the output file three space-separated real numbers x 0 , y 0 , z 0 — the coordinates for the future base. If there are several solutions, you are allowed to print any of them. The answer will be accepted if the distance from this point to the remotest planet will differ from the juries' variant in no more than 10 - 6 in absolute or relative value.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 0 0\n-5 0 0\n0 3 4\n4 -3 0\n2 2 -2",
+      "output": "0.000 0.000 0.000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

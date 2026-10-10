@@ -1,0 +1,35 @@
+{
+  "id": "630I",
+  "source": "problemset",
+  "contest_id": 630,
+  "problem_index": "I",
+  "name": "Parking Lot",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 8695,
+  "problem_url": "https://codeforces.com/problemset/problem/630/I",
+  "editorial_url": "https://codeforces.com/blog/entry/24160",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "To quickly hire highly skilled specialists one of the new IT City companies made an unprecedented move. Every employee was granted a car, and an employee can choose one of four different car makes. The parking lot before the office consists of one line of (2 n - 2) parking spaces. Unfortunately the total number of cars is greater than the parking lot capacity. Furthermore even amount of cars of each make is greater than the amount of parking spaces! That's why there are no free spaces on the parking lot ever. Looking on the straight line of cars the company CEO thought that parking lot would be more beautiful if it contained exactly n successive cars of the same make. Help the CEO determine the number of ways to fill the parking lot this way.",
+  "input_specification": "The only line of the input contains one integer n ( 3 ≤ n ≤ 30 ) — the amount of successive cars of the same make.",
+  "output_specification": "Output one integer — the number of ways to fill the parking lot by cars of four makes using the described way.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

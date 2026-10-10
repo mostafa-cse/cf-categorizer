@@ -1,0 +1,38 @@
+{
+  "id": "661H",
+  "source": "problemset",
+  "contest_id": 661,
+  "problem_index": "H",
+  "name": "Rotate Matrix",
+  "rating": 2400,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 103,
+  "problem_url": "https://codeforces.com/problemset/problem/661/H",
+  "editorial_url": "https://codeforces.com/blog/entry/44292",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given a square matrix of integer numbers. Rotate it 90 degrees clockwise (see examples for clarification of rotation).",
+  "input_specification": "The input consists of n lines ( 1 ≤ n ≤ 10 , n is not given explicitly). Each of the lines contains n space-separated integers; j -th integer in i -th line corresponds to matrix element m ij ( 1 ≤ m ij ≤ 100 ).",
+  "output_specification": "Output the rotated matrix in the same format as the input.",
+  "sample_testcases": [
+    {
+      "input": "1 2 3\n4 5 6\n7 8 9",
+      "output": "7 4 1\n8 5 2\n9 6 3"
+    },
+    {
+      "input": "1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16",
+      "output": "13 9 5 1\n14 10 6 2\n15 11 7 3\n16 12 8 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

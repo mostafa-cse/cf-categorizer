@@ -1,0 +1,47 @@
+{
+  "id": "899F",
+  "source": "problemset",
+  "contest_id": 899,
+  "problem_index": "F",
+  "name": "Letters Removing",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "strings"
+  ],
+  "solved_count": 2111,
+  "problem_url": "https://codeforces.com/problemset/problem/899/F",
+  "editorial_url": "https://codeforces.com/blog/entry/56392",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya has a string of length n consisting of small and large English letters and digits. He performs m operations. Each operation is described with two integers l and r and a character c : Petya removes from the string all characters c on positions between l and r , inclusive. It's obvious that the length of the string remains the same or decreases after each operation. Find how the string will look like after Petya performs all m operations.",
+  "input_specification": "The first string contains two integers n and m ( 1 ≤ n , m ≤ 2·10 5 ) — the length of the string and the number of operations. The second line contains the string of length n , consisting of small and large English letters and digits. Positions in the string are enumerated from 1 . Each of the next m lines contains two integers l and r ( 1 ≤ l ≤ r ), followed by a character c , which is a small or large English letter or a digit. This line describes one operation. It is guaranteed that r doesn't exceed the length of the string s before current operation.",
+  "output_specification": "Print the string Petya will obtain after performing all m operations. If the strings becomes empty after all operations, print an empty line.",
+  "sample_testcases": [
+    {
+      "input": "4 2\nabac\n1 3 a\n2 2 c",
+      "output": "b"
+    },
+    {
+      "input": "3 2\nA0z\n1 3 0\n1 1 z",
+      "output": "Az"
+    },
+    {
+      "input": "10 4\nagtFrgF4aF\n2 5 g\n4 9 F\n1 5 4\n1 7 a",
+      "output": "tFrg4"
+    },
+    {
+      "input": "9 5\naAAaBBccD\n1 4 a\n5 6 c\n2 3 B\n4 4 D\n2 3 A",
+      "output": "AB"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

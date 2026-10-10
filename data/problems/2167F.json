@@ -1,0 +1,37 @@
+{
+  "id": "2167F",
+  "source": "problemset",
+  "contest_id": 2167,
+  "problem_index": "F",
+  "name": "Tree, TREE!!!",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "math",
+    "trees"
+  ],
+  "solved_count": 7939,
+  "problem_url": "https://codeforces.com/problemset/problem/2167/F",
+  "editorial_url": "https://codeforces.com//www.youtube.com/watch?v=M-4064cqWJ8",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Roots change, but the tree stands strong — so should your logic. Behruzbek received a tree $$$^{\\text{∗}}$$$ with $$$n$$$ nodes. For a chosen root $$$^{\\text{†}}$$$ $$$r$$$, Behruzbek wants to find cuteness of the tree. Consider every set of $$$k$$$ distinct nodes of the tree. For each such set, compute its lowest common ancestor ( LCA ) in the tree when it is rooted at $$$r$$$. Let $$$S_r$$$ be the set of all distinct nodes obtained this way; then cuteness of the tree is $$$|S_r|$$$, where $$$|S|$$$ means the number of distinct elements. After discovering the cuteness of trees, Behruzbek became interested in finding the kawaiiness of the tree! Kawaiiness is defined as: $$$$$$ \\sum_{r = 1}^{n} |S_r| = |S_1| + |S_2| + \\dots + |S_n| $$$$$$ Unfortunately, Behruzbek is feeling sleepy now. Please help Behruzbek by finding the kawaiiness of the tree! $$$^{\\text{∗}}$$$A tree is a connected graph without cycles. $$$^{\\text{†}}$$$A rooted tree is a tree where one vertex is special and called the root.",
+  "input_specification": "The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10^{4}$$$). The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\leq k \\leq n \\leq 2\\cdot 10^{5}$$$) — the number of vertices in the tree and the number of distinct integers to be chosen. The following $$$n-1$$$ lines of each test case describe the tree. Each of the lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u,v \\leq n$$$, $$$u \\ne v$$$) that indicate an edge between vertex $$$u$$$ and $$$v$$$. It is guaranteed that these edges form a tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^{5}$$$.",
+  "output_specification": "For each test case, output one integer — the value of $$$\\sum\\limits_{r=1}^n |S_r|$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 2\n1 2\n5 3\n1 2\n1 3\n1 4\n1 5\n6 3\n1 2\n1 3\n2 4\n2 5\n3 6\n10 5\n5 6\n4 9\n3 9\n2 6\n2 8\n8 9\n6 10\n1 6\n4 7",
+      "output": "2\n9\n17\n35"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

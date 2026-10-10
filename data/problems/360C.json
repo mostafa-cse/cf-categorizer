@@ -1,0 +1,43 @@
+{
+  "id": "360C",
+  "source": "problemset",
+  "contest_id": 360,
+  "problem_index": "C",
+  "name": "Levko and Strings",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1283,
+  "problem_url": "https://codeforces.com/problemset/problem/360/C",
+  "editorial_url": "https://codeforces.com/blog/entry/9529",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Levko loves strings of length n , consisting of lowercase English letters, very much. He has one such string s . For each string t of length n , Levko defines its beauty relative to s as the number of pairs of indexes i , j (1 ≤ i ≤ j ≤ n ) , such that substring t [ i .. j ] is lexicographically larger than substring s [ i .. j ] . The boy wondered how many strings t are there, such that their beauty relative to s equals exactly k . Help him, find the remainder after division this number by 1000000007 (10 9 + 7) . A substring s [ i .. j ] of string s = s 1 s 2 ... s n is string s i s i +  1 ... s j . String x = x 1 x 2 ... x p is lexicographically larger than string y = y 1 y 2 ... y p , if there is such number r ( r < p ), that x 1 = y 1 , x 2 = y 2 ,  ... , x r = y r and x r +  1 > y r +  1 . The string characters are compared by their ASCII codes.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 2000 , 0 ≤ k ≤ 2000 ). The second line contains a non-empty string s of length n . String s consists only of lowercase English letters.",
+  "output_specification": "Print a single number — the answer to the problem modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "2 2\nyz",
+      "output": "26"
+    },
+    {
+      "input": "2 3\nyx",
+      "output": "2"
+    },
+    {
+      "input": "4 7\nabcd",
+      "output": "21962"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

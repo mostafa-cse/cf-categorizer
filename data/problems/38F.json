@@ -1,0 +1,40 @@
+{
+  "id": "38F",
+  "source": "problemset",
+  "contest_id": 38,
+  "problem_index": "F",
+  "name": "Smart Boy",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "games",
+    "strings"
+  ],
+  "solved_count": 465,
+  "problem_url": "https://codeforces.com/problemset/problem/38/F",
+  "editorial_url": "https://codeforces.com/blog/entry/812",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Once Petya and Vasya invented a new game and called it \"Smart Boy\". They located a certain set of words — the dictionary — for the game. It is admissible for the dictionary to contain similar words. The rules of the game are as follows: first the first player chooses any letter (a word as long as 1 ) from any word from the dictionary and writes it down on a piece of paper. The second player adds some other letter to this one's initial or final position, thus making a word as long as 2 , then it's the first player's turn again, he adds a letter in the beginning or in the end thus making a word as long as 3 and so on. But the player mustn't break one condition: the newly created word must be a substring of a word from a dictionary. The player who can't add a letter to the current word without breaking the condition loses. Also if by the end of a turn a certain string s is written on paper, then the player, whose turn it just has been, gets a number of points according to the formula: where is a sequence number of symbol c in Latin alphabet, numbered starting from 1 . For example, , and . is the number of words from the dictionary where the line s occurs as a substring at least once. Your task is to learn who will win the game and what the final score will be. Every player plays optimally and most of all tries to win, then — to maximize the number of his points, then — to minimize the number of the points of the opponent.",
+  "input_specification": "The first input line contains an integer n which is the number of words in the located dictionary (1 ≤ n ≤ 30) . The n lines contain the words from the dictionary — one word is written on one line. Those lines are nonempty, consisting of Latin lower-case characters no longer than 30 characters. Equal words can be in the list of words.",
+  "output_specification": "On the first output line print a line \"First\" or \"Second\" which means who will win the game. On the second line output the number of points of the first player and the number of points of the second player after the game ends. Separate the numbers by a single space.",
+  "sample_testcases": [
+    {
+      "input": "2\naba\nabac",
+      "output": "Second\n29 35"
+    },
+    {
+      "input": "3\nartem\nnik\nmax",
+      "output": "First\n2403 1882"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

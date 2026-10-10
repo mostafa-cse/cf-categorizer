@@ -1,0 +1,46 @@
+{
+  "id": "362D",
+  "source": "problemset",
+  "contest_id": 362,
+  "problem_index": "D",
+  "name": "Fools and Foolproof Roads",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 1128,
+  "problem_url": "https://codeforces.com/problemset/problem/362/D",
+  "editorial_url": "https://codeforces.com/blog/entry/9584",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You must have heard all about the Foolland on your Geography lessons. Specifically, you must know that federal structure of this country has been the same for many centuries. The country consists of n cities, some pairs of cities are connected by bidirectional roads, each road is described by its length l i . The fools lived in their land joyfully, but a recent revolution changed the king. Now the king is Vasily the Bear. Vasily divided the country cities into regions, so that any two cities of the same region have a path along the roads between them and any two cities of different regions don't have such path. Then Vasily decided to upgrade the road network and construct exactly p new roads in the country. Constructing a road goes like this: We choose a pair of distinct cities u , v that will be connected by a new road (at that, it is possible that there already is a road between these cities). We define the length of the new road: if cities u , v belong to distinct regions, then the length is calculated as min (10 9 , S + 1) ( S — the total length of all roads that exist in the linked regions), otherwise we assume that the length equals 1000 . We build a road of the specified length between the chosen cities. If the new road connects two distinct regions, after construction of the road these regions are combined into one new region. Vasily wants the road constructing process to result in the country that consists exactly of q regions. Your task is to come up with such road constructing plan for Vasily that it meets the requirement and minimizes the total length of the built roads.",
+  "input_specification": "The first line contains four integers n ( 1 ≤ n ≤ 10 5 ), m ( 0 ≤ m ≤ 10 5 ), p ( 0 ≤ p ≤ 10 5 ), q ( 1 ≤ q ≤ n ) — the number of cities in the Foolland, the number of existing roads, the number of roads that are planned to construct and the required number of regions. Next m lines describe the roads that exist by the moment upgrading of the roads begun. Each of these lines contains three integers x i , y i , l i : x i , y i — the numbers of the cities connected by this road ( 1 ≤ x i , y i ≤ n , x i ≠ y i ), l i — length of the road ( 1 ≤ l i ≤ 10 9 ) . Note that one pair of cities can be connected with multiple roads.",
+  "output_specification": "If constructing the roads in the required way is impossible, print a single string \" NO \" (without the quotes). Otherwise, in the first line print word \" YES \" (without the quotes), and in the next p lines print the road construction plan. Each line of the plan must consist of two distinct integers, giving the numbers of the cities connected by a road. The road must occur in the plan in the order they need to be constructed. If there are multiple optimal solutions, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "9 6 2 2\n1 2 2\n3 2 1\n4 6 20\n1 3 8\n7 8 3\n5 7 2",
+      "output": "YES\n9 5\n1 9"
+    },
+    {
+      "input": "2 0 1 2",
+      "output": "NO"
+    },
+    {
+      "input": "2 0 0 2",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

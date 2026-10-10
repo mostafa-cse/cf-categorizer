@@ -1,0 +1,42 @@
+{
+  "id": "1847D",
+  "source": "problemset",
+  "contest_id": 1847,
+  "problem_index": "D",
+  "name": "Professor Higashikata",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "dsu",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 4354,
+  "problem_url": "https://codeforces.com/problemset/problem/1847/D",
+  "editorial_url": "https://codeforces.com/blog/entry/117928",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Josuke is tired of his peaceful life in Morioh. Following in his nephew Jotaro's footsteps, he decides to study hard and become a professor of computer science. While looking up competitive programming problems online, he comes across the following one: Let $$$s$$$ be a binary string of length $$$n$$$. An operation on $$$s$$$ is defined as choosing two distinct integers $$$i$$$ and $$$j$$$ ($$$1 \\leq i \\lt j \\leq n$$$), and swapping the characters $$$s_i, s_j$$$. Consider the $$$m$$$ strings $$$t_1, t_2, \\ldots, t_m$$$, where $$$t_i$$$ is the substring $$$^\\dagger$$$ of $$$s$$$ from $$$l_i$$$ to $$$r_i$$$. Define $$$t(s) = t_1+t_2+\\ldots+t_m$$$ as the concatenation of the strings $$$t_i$$$ in that order. There are $$$q$$$ updates to the string. In the $$$i$$$-th update $$$s_{x_i}$$$ gets flipped. That is if $$$s_{x_i}=1$$$, then $$$s_{x_i}$$$ becomes $$$0$$$ and vice versa. After each update, find the minimum number of operations one must perform on $$$s$$$ to make $$$t(s)$$$ lexicographically as large$$$^\\ddagger$$$ as possible. Note that no operation is actually performed. We are only interested in the number of operations. Help Josuke in his dream by solving the problem for him. —————————————————————— $$$\\dagger$$$ A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end. $$$\\ddagger$$$ A string $$$a$$$ is lexicographically larger than a string $$$b$$$ of the same length if and only if the following holds: in the first position where $$$a$$$ and $$$b$$$ differ, the string $$$a$$$ has a $$$1$$$, and the string $$$b$$$ has a $$$0$$$.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$, $$$q$$$ ($$$1 \\leq n,m,q \\leq 2 \\cdot 10^5$$$). The next line contains a binary string $$$s$$$ of length $$$n$$$, consisting only of digits $$$0$$$ and $$$1$$$. The $$$i$$$-th line of the next $$$m$$$ lines contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\leq l_i \\leq r_i \\leq n$$$). The $$$i$$$-th line of the next $$$q$$$ lines contains a single integer $$$x_i$$$ ($$$1 \\leq x_i \\leq n$$$).",
+  "output_specification": "Print $$$q$$$ integers. The $$$i$$$-th integer is the minimum number of operations that need to be performed on $$$s$$$ to get the lexicographically largest possible string $$$t(s)$$$ in the $$$i$$$-th round.",
+  "sample_testcases": [
+    {
+      "input": "2 2 4\n01\n1 2\n1 2\n1\n1\n2\n2",
+      "output": "0\n1\n0\n1"
+    },
+    {
+      "input": "8 6 10\n10011010\n5 6\n2 3\n6 8\n5 7\n5 8\n6 8\n3\n5\n6\n2\n5\n2\n5\n8\n4\n1",
+      "output": "2\n3\n2\n2\n1\n2\n2\n2\n2\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

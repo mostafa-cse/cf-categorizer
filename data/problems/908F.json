@@ -1,0 +1,40 @@
+{
+  "id": "908F",
+  "source": "problemset",
+  "contest_id": 908,
+  "problem_index": "F",
+  "name": "New Year and Rainbow Roads",
+  "rating": 2400,
+  "tags": [
+    "graphs",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 1663,
+  "problem_url": "https://codeforces.com/problemset/problem/908/F",
+  "editorial_url": "https://codeforces.com/blog/entry/56713",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Roy and Biv have a set of n points on the infinite number line. Each point has one of 3 colors: red, green, or blue. Roy and Biv would like to connect all the points with some edges. Edges can be drawn between any of the two of the given points. The cost of an edge is equal to the distance between the two points it connects. They want to do this in such a way that they will both see that all the points are connected (either directly or indirectly). However, there is a catch: Roy cannot see the color red and Biv cannot see the color blue. Therefore, they have to choose the edges in such a way that if all the red points are removed, the remaining blue and green points are connected (and similarly, if all the blue points are removed, the remaining red and green points are connected). Help them compute the minimum cost way to choose edges to satisfy the above constraints.",
+  "input_specification": "The first line will contain an integer n ( 1 ≤ n ≤ 300 000 ), the number of points. The next n lines will contain two tokens p i and c i ( p i is an integer, 1 ≤ p i ≤ 10 9 , c i is a uppercase English letter ' R ', ' G ' or ' B '), denoting the position of the i -th point and the color of the i -th point. ' R ' means red, ' G ' denotes green, and ' B ' means blue. The positions will be in strictly increasing order.",
+  "output_specification": "Print a single integer, the minimum cost way to solve the problem.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 G\n5 R\n10 B\n15 G",
+      "output": "23"
+    },
+    {
+      "input": "4\n1 G\n2 R\n3 B\n10 G",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

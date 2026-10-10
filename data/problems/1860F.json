@@ -1,0 +1,38 @@
+{
+  "id": "1860F",
+  "source": "problemset",
+  "contest_id": 1860,
+  "problem_index": "F",
+  "name": "Evaluate RBS",
+  "rating": 2900,
+  "tags": [
+    "data structures",
+    "geometry",
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 364,
+  "problem_url": "https://codeforces.com/problemset/problem/1860/F",
+  "editorial_url": "https://codeforces.com/blog/entry/119504",
+  "time_limit": "10 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given $$$2n$$$ tuples of values $$$(a, b, c)$$$, where $$$a$$$ and $$$b$$$ are positive integers and $$$c$$$ is a bracket ' ( ' or ' ) '. Exactly $$$n$$$ tuples have $$$c = $$$' ( ' and the other $$$n$$$ tuples have $$$c =$$$ ' ) '. You are asked to choose two positive values $$$x$$$ and $$$y$$$ ($$$x \\gt 0$$$ and $$$y \\gt 0$$$; not necessarily integers ) and sort the tuples in the increasing value of $$$a \\cdot x + b \\cdot y$$$. If several tuples have the same value, you can place them in any order among themselves. Is it possible to choose such $$$x$$$ and $$$y$$$ that taking brackets $$$c$$$ from the tuples in the resulting order produces a regular bracket sequence? A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters \" 1 \" and \" + \" between the original characters of the sequence.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1500$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$1 \\le n \\le 1500$$$). The $$$i$$$-th of the next $$$2n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 10^6$$$) and a character $$$c_i$$$ ($$$c_i = $$$' ( ' or $$$c_i = $$$' ) '). Exactly $$$n$$$ tuples have $$$c_i = $$$' ( ' and the other $$$n$$$ tuples have $$$c_i =$$$ ' ) '. The sum of $$$n$$$ over all testcases doesn't exceed $$$1500$$$.",
+  "output_specification": "For each testcase, print \" YES \" if it's possible to choose such $$$x$$$ and $$$y$$$ that taking brackets $$$c$$$ from the tuples in the resulting order produces a regular bracket sequence. Otherwise, print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n1 4 (\n2 3 )\n1\n1 2 )\n3 4 (\n4\n16 5 (\n12 3 (\n19 6 )\n4 10 )\n3 10 )\n19 11 (\n19 7 )\n7 14 (\n4\n16 8 (\n11 9 )\n20 10 )\n20 19 )\n2 13 (\n18 7 (\n15 19 )\n5 6 (",
+      "output": "YES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

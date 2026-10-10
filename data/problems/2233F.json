@@ -1,0 +1,46 @@
+{
+  "id": "2233F",
+  "source": "problemset",
+  "contest_id": 2233,
+  "problem_index": "F",
+  "name": "Shortest GCD Paths",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "graphs",
+    "math",
+    "number theory",
+    "shortest paths"
+  ],
+  "solved_count": 547,
+  "problem_url": "https://codeforces.com/problemset/problem/2233/F",
+  "editorial_url": "https://codeforces.com/blog/entry/154371",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given three integers $$$n$$$, $$$a$$$, $$$b$$$. Consider a weighted undirected graph with $$$n$$$ vertices, where for every pair of distinct vertices $$$(u, v)$$$ there is an edge with weight: $$$$$$ w(u, v) = \\frac{\\max(u, v)}{\\gcd(u, v)} $$$$$$ Here $$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$. Find the shortest path from vertex $$$a$$$ to vertex $$$b$$$ in this graph.",
+  "input_specification": "The only line contains three integers $$$n$$$, $$$a$$$, $$$b$$$ ($$$2 \\le n \\le 10^{9}, 1 \\le a, b \\le n, a \\neq b$$$).",
+  "output_specification": "Print one integer — the length of the shortest path from vertex $$$a$$$ to vertex $$$b$$$.",
+  "sample_testcases": [
+    {
+      "input": "10 9 8",
+      "output": "7"
+    },
+    {
+      "input": "100 16 27",
+      "output": "10"
+    },
+    {
+      "input": "100 55 11",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

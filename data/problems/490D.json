@@ -1,0 +1,46 @@
+{
+  "id": "490D",
+  "source": "problemset",
+  "contest_id": 490,
+  "problem_index": "D",
+  "name": "Chocolate",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "math",
+    "meet-in-the-middle",
+    "number theory"
+  ],
+  "solved_count": 2339,
+  "problem_url": "https://codeforces.com/problemset/problem/490/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14849",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus likes giving presents to Paraskevi. He has bought two chocolate bars, each of them has the shape of a segmented rectangle. The first bar is a 1 × b 1 segments large and the second one is a 2 × b 2 segments large. Polycarpus wants to give Paraskevi one of the bars at the lunch break and eat the other one himself. Besides, he wants to show that Polycarpus's mind and Paraskevi's beauty are equally matched, so the two bars must have the same number of squares. To make the bars have the same number of squares, Polycarpus eats a little piece of chocolate each minute. Each minute he does the following: he either breaks one bar exactly in half (vertically or horizontally) and eats exactly a half of the bar, or he chips of exactly one third of a bar (vertically or horizontally) and eats exactly a third of the bar. In the first case he is left with a half , of the bar and in the second case he is left with two thirds of the bar. Both variants aren't always possible, and sometimes Polycarpus cannot chip off a half nor a third. For example, if the bar is 16 × 23 , then Polycarpus can chip off a half, but not a third. If the bar is 20 × 18 , then Polycarpus can chip off both a half and a third. If the bar is 5 × 7 , then Polycarpus cannot chip off a half nor a third. What is the minimum number of minutes Polycarpus needs to make two bars consist of the same number of squares? Find not only the required minimum number of minutes, but also the possible sizes of the bars after the process.",
+  "input_specification": "The first line of the input contains integers a 1 , b 1 ( 1 ≤ a 1 , b 1 ≤ 10 9 ) — the initial sizes of the first chocolate bar. The second line of the input contains integers a 2 , b 2 ( 1 ≤ a 2 , b 2 ≤ 10 9 ) — the initial sizes of the second bar. You can use the data of type int64 (in Pascal), long long (in С++), long (in Java) to process large integers (exceeding 2 31 - 1 ).",
+  "output_specification": "In the first line print m — the sought minimum number of minutes. In the second and third line print the possible sizes of the bars after they are leveled in m minutes. Print the sizes using the format identical to the input format. Print the sizes (the numbers in the printed pairs) in any order. The second line must correspond to the first bar and the third line must correspond to the second bar. If there are multiple solutions, print any of them. If there is no solution, print a single line with integer -1 .",
+  "sample_testcases": [
+    {
+      "input": "2 6\n2 3",
+      "output": "1\n1 6\n2 3"
+    },
+    {
+      "input": "36 5\n10 16",
+      "output": "3\n16 5\n5 16"
+    },
+    {
+      "input": "3 5\n2 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

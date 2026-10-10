@@ -1,0 +1,39 @@
+{
+  "id": "962E",
+  "source": "problemset",
+  "contest_id": 962,
+  "problem_index": "E",
+  "name": "Byteland, Berland and Disputed Cities",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 1173,
+  "problem_url": "https://codeforces.com/problemset/problem/962/E",
+  "editorial_url": "https://codeforces.com/blog/entry/58845",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The cities of Byteland and Berland are located on the axis $$$Ox$$$. In addition, on this axis there are also disputed cities, which belong to each of the countries in their opinion. Thus, on the line $$$Ox$$$ there are three types of cities: the cities of Byteland, the cities of Berland, disputed cities. Recently, the project BNET has been launched — a computer network of a new generation. Now the task of the both countries is to connect the cities so that the network of this country is connected . The countries agreed to connect the pairs of cities with BNET cables in such a way that: If you look at the only cities of Byteland and the disputed cities, then in the resulting set of cities, any city should be reachable from any other one by one or more cables, If you look at the only cities of Berland and the disputed cities, then in the resulting set of cities, any city should be reachable from any other one by one or more cables. Thus, it is necessary to choose a set of pairs of cities to connect by cables in such a way that both conditions are satisfied simultaneously. Cables allow bi-directional data transfer. Each cable connects exactly two distinct cities. The cost of laying a cable from one city to another is equal to the distance between them. Find the minimum total cost of laying a set of cables so that two subsets of cities (Byteland and disputed cities, Berland and disputed cities) are connected. Each city is a point on the line $$$Ox$$$. It is technically possible to connect the cities $$$a$$$ and $$$b$$$ with a cable so that the city $$$c$$$ ($$$a \\lt c \\lt b$$$) is not connected to this cable, where $$$a$$$, $$$b$$$ and $$$c$$$ are simultaneously coordinates of the cities $$$a$$$, $$$b$$$ and $$$c$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^{5}$$$) — the number of cities. The following $$$n$$$ lines contains an integer $$$x_i$$$ and the letter $$$c_i$$$ ($$$-10^{9} \\le x_i \\le 10^{9}$$$) — the coordinate of the city and its type. If the city belongs to Byteland, $$$c_i$$$ equals to ' B '. If the city belongs to Berland, $$$c_i$$$ equals to « R ». If the city is disputed, $$$c_i$$$ equals to ' P '. All cities have distinct coordinates. Guaranteed, that the cities are given in the increasing order of their coordinates.",
+  "output_specification": "Print the minimal total length of such set of cables, that if we delete all Berland cities ($$$c_i$$$=' R '), it will be possible to find a way from any remaining city to any other remaining city, moving only by cables. Similarly, if we delete all Byteland cities ($$$c_i$$$=' B '), it will be possible to find a way from any remaining city to any other remaining city, moving only by cables.",
+  "sample_testcases": [
+    {
+      "input": "4\n-5 R\n0 P\n3 P\n7 B",
+      "output": "12"
+    },
+    {
+      "input": "5\n10 R\n14 B\n16 B\n21 R\n32 R",
+      "output": "24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

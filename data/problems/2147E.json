@@ -1,0 +1,38 @@
+{
+  "id": "2147E",
+  "source": "problemset",
+  "contest_id": 2147,
+  "problem_index": "E",
+  "name": "Maximum OR Popcount",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 2390,
+  "problem_url": "https://codeforces.com/problemset/problem/2147/E",
+  "editorial_url": "https://codeforces.com/blog/entry/146633",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array of $$$n$$$ non-negative integers. You want to answer given $$$q$$$ independent scenarios. In the $$$i$$$-th scenario, you are allowed to perform the following operation at most $$$b_i$$$ times: Choose an element of the array and increase it by $$$1$$$. Your goal is to maximize the number of bits that are equal to $$$1$$$ in the bitwise OR of all numbers in the array. Find this number for each scenario.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^3$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\leq n, q \\leq 10^{5}$$$) — the size of the array and the number of scenarios. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 10^{9}$$$) — the elements of the array. The $$$i$$$-th of the next $$$q$$$ lines contains a single integer $$$b_i$$$ ($$$0 \\leq b_i \\leq 10^{9}$$$) — the maximum number of operations allowed in the $$$i$$$-th scenario. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^{5}$$$, and the sum of $$$q$$$ over all test cases does not exceed $$$10^{5}$$$.",
+  "output_specification": "For each test case, output $$$q$$$ lines, the $$$i$$$-th of them containing a single integer — the maximum possible number of bits equal to $$$1$$$ in the bitwise OR in the $$$i$$$-th scenario.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 3\n0\n0\n2\n4\n2 2\n1 3\n0\n3\n2 1\n1000000000 1000000000\n1000000000",
+      "output": "0\n1\n2\n2\n3\n31"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

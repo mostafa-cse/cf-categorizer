@@ -1,0 +1,44 @@
+{
+  "id": "1084C",
+  "source": "problemset",
+  "contest_id": 1084,
+  "problem_index": "C",
+  "name": "The Fair Nut and String",
+  "rating": 1500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 12865,
+  "problem_url": "https://codeforces.com/problemset/problem/1084/C",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The Fair Nut found a string $$$s$$$. The string consists of lowercase Latin letters. The Nut is a curious guy, so he wants to find the number of strictly increasing sequences $$$p_1, p_2, \\ldots, p_k$$$, such that: For each $$$i$$$ ($$$1 \\leq i \\leq k$$$), $$$s_{p_i} =$$$ 'a' . For each $$$i$$$ ($$$1 \\leq i \\lt k$$$), there is such $$$j$$$ that $$$p_i \\lt j \\lt p_{i + 1}$$$ and $$$s_j =$$$ 'b' . The Nut is upset because he doesn't know how to find the number. Help him. This number should be calculated modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line contains the string $$$s$$$ ($$$1 \\leq |s| \\leq 10^5$$$) consisting of lowercase Latin letters.",
+  "output_specification": "In a single line print the answer to the problem — the number of such sequences $$$p_1, p_2, \\ldots, p_k$$$ modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "abbaa",
+      "output": "5"
+    },
+    {
+      "input": "baaaa",
+      "output": "4"
+    },
+    {
+      "input": "agaa",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

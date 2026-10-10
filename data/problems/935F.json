@@ -1,0 +1,39 @@
+{
+  "id": "935F",
+  "source": "problemset",
+  "contest_id": 935,
+  "problem_index": "F",
+  "name": "Fafa and Array",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 517,
+  "problem_url": "https://codeforces.com/problemset/problem/935/F",
+  "editorial_url": "https://codeforces.com/blog/entry/57889",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fafa has an array A of n positive integers, the function f ( A ) is defined as . He wants to do q queries of two types: 1 l r x — find the maximum possible value of f ( A ) , if x is to be added to one element in the range [ l , r ] . You can choose to which element to add x . 2 l r x — increase all the elements in the range [ l , r ] by value x . Note that queries of type 1 don't affect the array elements.",
+  "input_specification": "The first line contains one integer n (3 ≤ n ≤ 10 5 ) — the length of the array. The second line contains n positive integers a 1 , a 2 , ..., a n (0 < a i ≤ 10 9 ) — the array elements. The third line contains an integer q (1 ≤ q ≤ 10 5 ) — the number of queries. Then q lines follow, line i describes the i -th query and contains four integers t i l i r i x i . It is guaranteed that at least one of the queries is of type 1 .",
+  "output_specification": "For each query of type 1 , print the answer to the query.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 1 1 1 1\n5\n1 2 4 1\n2 2 3 1\n2 4 4 2\n2 3 4 1\n1 3 3 2",
+      "output": "2\n8"
+    },
+    {
+      "input": "5\n1 2 3 4 5\n4\n1 2 4 2\n2 2 4 1\n2 3 4 1\n1 2 4 2",
+      "output": "6\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

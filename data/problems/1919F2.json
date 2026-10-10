@@ -1,0 +1,42 @@
+{
+  "id": "1919F2",
+  "source": "problemset",
+  "contest_id": 1919,
+  "problem_index": "F2",
+  "name": "Wine Factory (Hard Version)",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "dp",
+    "flows",
+    "greedy",
+    "matrices"
+  ],
+  "solved_count": 1270,
+  "problem_url": "https://codeforces.com/problemset/problem/1919/F2",
+  "editorial_url": "https://codeforces.com/blog/entry/124220",
+  "time_limit": "5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the hard version of the problem. The only difference between the two versions is the constraint on $$$c_i$$$ and $$$z$$$. You can make hacks only if both versions of the problem are solved. There are three arrays $$$a$$$, $$$b$$$ and $$$c$$$. $$$a$$$ and $$$b$$$ have length $$$n$$$ and $$$c$$$ has length $$$n-1$$$. Let $$$W(a,b,c)$$$ denote the liters of wine created from the following process. Create $$$n$$$ water towers. The $$$i$$$-th water tower initially has $$$a_i$$$ liters of water and has a wizard with power $$$b_i$$$ in front of it. Furthermore, for each $$$1 \\le i \\le n - 1$$$, there is a valve connecting water tower $$$i$$$ to $$$i + 1$$$ with capacity $$$c_i$$$. For each $$$i$$$ from $$$1$$$ to $$$n$$$ in this order, the following happens: The wizard in front of water tower $$$i$$$ removes at most $$$b_i$$$ liters of water from the tower and turns the removed water into wine. If $$$i \\neq n$$$, at most $$$c_i$$$ liters of the remaining water left in water tower $$$i$$$ flows through the valve into water tower $$$i + 1$$$. There are $$$q$$$ updates. In each update, you will be given integers $$$p$$$, $$$x$$$, $$$y$$$ and $$$z$$$ and you will update $$$a_p := x$$$, $$$b_p := y$$$ and $$$c_p := z$$$. After each update, find the value of $$$W(a,b,c)$$$. Note that previous updates to arrays $$$a$$$, $$$b$$$ and $$$c$$$ persist throughout future updates.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$2 \\le n \\le 5\\cdot 10^5$$$, $$$1 \\le q \\le 5\\cdot 10^5$$$) — the number of water towers and the number of updates. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the number of liters of water in water tower $$$i$$$. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$0 \\le b_i \\le 10^9$$$) — the power of the wizard in front of water tower $$$i$$$. The fourth line contains $$$n - 1$$$ integers $$$c_1, c_2, \\ldots, c_{n - 1}$$$ ($$$0 \\le c_i \\color{red}{\\le} 10^{18}$$$) — the capacity of the pipe connecting water tower $$$i$$$ to $$$i + 1$$$. Each of the next $$$q$$$ lines contains four integers $$$p$$$, $$$x$$$, $$$y$$$ and $$$z$$$ ($$$1 \\le p \\le n$$$, $$$0 \\le x, y \\le 10^9$$$, $$$0 \\le z \\color{red}{\\le} 10^{18}$$$) — the updates done to arrays $$$a$$$, $$$b$$$ and $$$c$$$. Note that $$$c_n$$$ does not exist, so the value of $$$z$$$ does not matter when $$$p = n$$$.",
+  "output_specification": "Print $$$q$$$ lines, each line containing a single integer representing $$$W(a, b, c)$$$ after each update.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n3 3 3 3\n1 4 2 8\n5 2 1\n4 3 8 1000000000\n2 5 1 1\n3 0 0 0",
+      "output": "11\n8\n5"
+    },
+    {
+      "input": "5 5\n10 3 8 9 2\n3 4 10 8 1\n6 5 9 2\n5 4 9 1\n1 1 1 1\n2 7 4 8\n4 1 1 1\n1 8 3 3",
+      "output": "31\n25\n29\n21\n23"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

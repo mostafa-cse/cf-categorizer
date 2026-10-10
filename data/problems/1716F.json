@@ -1,0 +1,37 @@
+{
+  "id": "1716F",
+  "source": "problemset",
+  "contest_id": 1716,
+  "problem_index": "F",
+  "name": "Bags with Balls",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1491,
+  "problem_url": "https://codeforces.com/problemset/problem/1716/F",
+  "editorial_url": "https://codeforces.com/blog/entry/105653",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are $$$n$$$ bags, each bag contains $$$m$$$ balls with numbers from $$$1$$$ to $$$m$$$. For every $$$i \\in [1, m]$$$, there is exactly one ball with number $$$i$$$ in each bag. You have to take exactly one ball from each bag (all bags are different, so, for example, taking the ball $$$1$$$ from the first bag and the ball $$$2$$$ from the second bag is not the same as taking the ball $$$2$$$ from the first bag and the ball $$$1$$$ from the second bag). After that, you calculate the number of balls with odd numbers among the ones you have taken. Let the number of these balls be $$$F$$$. Your task is to calculate the sum of $$$F^k$$$ over all possible ways to take $$$n$$$ balls, one from each bag.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of test cases. Each test case consists of one line containing three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1 \\le n, m \\le 998244352$$$; $$$1 \\le k \\le 2000$$$).",
+  "output_specification": "For each test case, print one integer — the sum of $$$F^k$$$ over all possible ways to take $$$n$$$ balls, one from each bag. Since it can be huge, print it modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 3 8\n1 1 1\n1 5 10\n3 7 2000\n1337666 42424242 2000",
+      "output": "1028\n1\n3\n729229716\n652219904"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

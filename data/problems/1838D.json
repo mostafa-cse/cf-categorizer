@@ -1,0 +1,40 @@
+{
+  "id": "1838D",
+  "source": "problemset",
+  "contest_id": 1838,
+  "problem_index": "D",
+  "name": "Bracket Walk",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 3818,
+  "problem_url": "https://codeforces.com/problemset/problem/1838/D",
+  "editorial_url": "https://codeforces.com/blog/entry/116995",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a string $$$s$$$ of length $$$n$$$ consisting of the characters ' ( ' and ' ) '. You are walking on this string. You start by standing on top of the first character of $$$s$$$, and you want to make a sequence of moves such that you end on the $$$n$$$-th character. In one step, you can move one space to the left (if you are not standing on the first character), or one space to the right (if you are not standing on the last character). You may not stay in the same place, however you may visit any character, including the first and last character, any number of times. At each point in time, you write down the character you are currently standing on. We say the string is walkable if there exists some sequence of moves that take you from the first character to the last character, such that the string you write down is a regular bracket sequence. A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters ' 1 ' and ' + ' between the original characters of the sequence. For example, bracket sequences \" ()() \", \" (()) \" are regular (the resulting expressions are: \" (1)+(1) \", \" ((1+1)+1) \"), and \" )( \" and \" ( \" are not. One possible valid walk on $$$s=\\mathtt{(())()))}$$$. The red dot indicates your current position, and the red string indicates the string you have written down. Note that the red string is a regular bracket sequence at the end of the process. You are given $$$q$$$ queries. Each query flips the value of a character from ' ( ' to ' ) ' or vice versa. After each query, determine whether the string is walkable. Queries are cumulative , so the effects of each query carry on to future queries.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2\\cdot 10^5$$$) — the size of the string and the number of queries, respectively. The second line of the input contains a string $$$s$$$ of size $$$n$$$, consisting of the characters ' ( ' and ' ) ' — the initial bracket string. Each of the next $$$q$$$ lines contains a single integer $$$i$$$ ($$$1\\le i \\le n$$$) — the index of the character to flip for that query.",
+  "output_specification": "For each query, print \" YES \" if the string is walkable after that query, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "10 9\n(())()()))\n9\n7\n2\n6\n3\n6\n7\n4\n8",
+      "output": "YES\nYES\nNO\nNO\nYES\nNO\nYES\nNO\nNO"
+    },
+    {
+      "input": "3 2\n(()\n2\n3",
+      "output": "NO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:53",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

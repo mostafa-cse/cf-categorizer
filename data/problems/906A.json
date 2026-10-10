@@ -1,0 +1,43 @@
+{
+  "id": "906A",
+  "source": "problemset",
+  "contest_id": 906,
+  "problem_index": "A",
+  "name": "Shockers",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 4507,
+  "problem_url": "https://codeforces.com/problemset/problem/906/A",
+  "editorial_url": "https://codeforces.com/blog/entry/56601",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Valentin participates in a show called \"Shockers\". The rules are quite easy: jury selects one letter which Valentin doesn't know. He should make a small speech, but every time he pronounces a word that contains the selected letter, he receives an electric shock. He can make guesses which letter is selected, but for each incorrect guess he receives an electric shock too. The show ends when Valentin guesses the selected letter correctly. Valentin can't keep in mind everything, so he could guess the selected letter much later than it can be uniquely determined and get excessive electric shocks. Excessive electric shocks are those which Valentin got after the moment the selected letter can be uniquely determined. You should find out the number of excessive electric shocks.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 10 5 ) — the number of actions Valentin did. The next n lines contain descriptions of his actions, each line contains description of one action. Each action can be of one of three types: Valentin pronounced some word and didn't get an electric shock. This action is described by the string \" . w \" (without quotes), in which \" . \" is a dot (ASCII-code 46), and w is the word that Valentin said. Valentin pronounced some word and got an electric shock. This action is described by the string \" ! w \" (without quotes), in which \" ! \" is an exclamation mark (ASCII-code 33), and w is the word that Valentin said. Valentin made a guess about the selected letter. This action is described by the string \" ? s \" (without quotes), in which \" ? \" is a question mark (ASCII-code 63), and s is the guess — a lowercase English letter. All words consist only of lowercase English letters. The total length of all words does not exceed 10 5 . It is guaranteed that last action is a guess about the selected letter. Also, it is guaranteed that Valentin didn't make correct guesses about the selected letter before the last action. Moreover, it's guaranteed that if Valentin got an electric shock after pronouncing some word, then it contains the selected letter; and also if Valentin didn't get an electric shock after pronouncing some word, then it does not contain the selected letter.",
+  "output_specification": "Output a single integer — the number of electric shocks that Valentin could have avoided if he had told the selected letter just after it became uniquely determined.",
+  "sample_testcases": [
+    {
+      "input": "5\n! abc\n. ad\n. b\n! cd\n? c",
+      "output": "1"
+    },
+    {
+      "input": "8\n! hello\n! codeforces\n? c\n. o\n? d\n? h\n. l\n? e",
+      "output": "2"
+    },
+    {
+      "input": "7\n! ababahalamaha\n? a\n? b\n? a\n? b\n? a\n? h",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

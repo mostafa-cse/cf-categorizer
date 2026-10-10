@@ -1,0 +1,46 @@
+{
+  "id": "659E",
+  "source": "problemset",
+  "contest_id": 659,
+  "problem_index": "E",
+  "name": "New Reform",
+  "rating": 1600,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 8197,
+  "problem_url": "https://codeforces.com/problemset/problem/659/E",
+  "editorial_url": "https://codeforces.com/blog/entry/44093",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Berland has n cities connected by m bidirectional roads. No road connects a city to itself, and each pair of cities is connected by no more than one road. It is not guaranteed that you can get from any city to any other one, using only the existing roads. The President of Berland decided to make changes to the road system and instructed the Ministry of Transport to make this reform. Now, each road should be unidirectional (only lead from one city to another). In order not to cause great resentment among residents, the reform needs to be conducted so that there can be as few separate cities as possible. A city is considered separate , if no road leads into it, while it is allowed to have roads leading from this city. Help the Ministry of Transport to find the minimum possible number of separate cities after the reform.",
+  "input_specification": "The first line of the input contains two positive integers, n and m — the number of the cities and the number of roads in Berland ( 2 ≤ n ≤ 100 000 , 1 ≤ m ≤ 100 000 ). Next m lines contain the descriptions of the roads: the i -th road is determined by two distinct integers x i , y i ( 1 ≤ x i , y i ≤ n , x i ≠ y i ), where x i and y i are the numbers of the cities connected by the i -th road. It is guaranteed that there is no more than one road between each pair of cities, but it is not guaranteed that from any city you can get to any other one, using only roads.",
+  "output_specification": "Print a single integer — the minimum number of separated cities after the reform.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n2 1\n1 3\n4 3",
+      "output": "1"
+    },
+    {
+      "input": "5 5\n2 1\n1 3\n2 3\n2 5\n4 3",
+      "output": "0"
+    },
+    {
+      "input": "6 5\n1 2\n2 3\n4 5\n4 6\n5 6",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

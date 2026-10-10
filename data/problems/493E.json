@@ -1,0 +1,38 @@
+{
+  "id": "493E",
+  "source": "problemset",
+  "contest_id": 493,
+  "problem_index": "E",
+  "name": "Vasya and Polynomial",
+  "rating": 2800,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 575,
+  "problem_url": "https://codeforces.com/problemset/problem/493/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14985",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya is studying in the last class of school and soon he will take exams. He decided to study polynomials. Polynomial is a function P ( x ) = a 0 + a 1 x 1 + ... + a n x n . Numbers a i are called coefficients of a polynomial, non-negative integer n is called a degree of a polynomial. Vasya has made a bet with his friends that he can solve any problem with polynomials. They suggested him the problem: \"Determine how many polynomials P ( x ) exist with integer non-negative coefficients so that , and , where and b are given positive integers\"? Vasya does not like losing bets, but he has no idea how to solve this task, so please help him to solve the problem.",
+  "input_specification": "The input contains three integer positive numbers no greater than 10 18 .",
+  "output_specification": "If there is an infinite number of such polynomials, then print \" inf \" without quotes , otherwise print the reminder of an answer modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2 2 2",
+      "output": "2"
+    },
+    {
+      "input": "2 3 3",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2145E",
+  "source": "problemset",
+  "contest_id": 2145,
+  "problem_index": "E",
+  "name": "Predicting Popularity",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3312,
+  "problem_url": "https://codeforces.com/problemset/problem/2145/E",
+  "editorial_url": "https://codeforces.com/blog/entry/147164",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Imagine that you are working at Berflix — the largest streaming service in Berland, specialized in movie distribution. The audience of this service consists of $$$n$$$ users, and for each of them, some preferences are known: the level of action in a movie $$$a_i$$$ and the level of drama $$$d_i$$$. Your current task is to try to predict the popularity of a certain movie. Let the movie you are interested in contain $$$ac$$$ \"units\" of action and $$$dr$$$ \"units\" of drama (data kindly provided by the analytics team). If both the action and drama levels in the movie meet or exceed the threshold values for a certain user, they will definitely watch the movie. If the movie falls short in either action or drama, the user will hesitate. However, the popularity of the movie among other viewers may sway them to watch it. After lengthy discussions, your team has chosen the following model of events. Let $$$p$$$ be the number of people who have already watched the movie (initially $$$p = 0$$$). We will consider that the movie is suitable for user $$$i$$$ if $$$\\max(a_i - ac, 0) + \\max(d_i - dr, 0) \\le p$$$. Users constantly check recommendations. Therefore, we will assume that as long as there exists a user who has not yet watched the movie but finds it suitable, they will definitely watch it. Watching the movie will increase its popularity $$$p$$$ by one and may make it suitable for other users. This process will conclude when either everyone has watched the movie, or none of the remaining viewers find it suitable. Your task is to count how many people will watch the movie in total. There is one last problem — the users' preferences are constantly changing. Specifically, there are $$$m$$$ requests to change the values of $$$a_k$$$ and $$$d_k$$$ for some user $$$k$$$, and you need to recalculate the final popularity of the movie $$$p$$$ after each change.",
+  "input_specification": "The first line contains two numbers $$$ac$$$ and $$$dr$$$ ($$$1 \\le ac, dr \\le 10^6$$$) — the action and drama ratings of the movie. The second line contains one integer $$$n$$$ ($$$1 \\le n \\le 5 \\cdot 10^5$$$) — the number of users of Berflix. The third line contains $$$n$$$ numbers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$) — the users' preferences for action. The fourth line contains $$$n$$$ numbers $$$d_1, d_2, \\dots, d_n$$$ ($$$1 \\le d_i \\le 10^6$$$) — the users' preferences for drama. The fifth line contains one integer $$$m$$$ ($$$1 \\le m \\le 3 \\cdot 10^5$$$) — the number of changes in user preferences. The following $$$m$$$ lines contain the changes in the format: \"$$$k_j$$$ $$$na_j$$$ $$$nd_j$$$\" ($$$1 \\le k_j \\le n$$$; $$$1 \\le na_j, nd_j \\le 10^6$$$), where $$$na_j$$$ is the new preference of user $$$k_j$$$ for action, and $$$nd_j$$$ — for drama.",
+  "output_specification": "For each change request, output the total number of views of the movie $$$p$$$ after updating the information about the corresponding user.",
+  "sample_testcases": [
+    {
+      "input": "20 25\n4\n1 22 1 30\n1 22 50 30\n5\n3 1 25\n2 23 22\n4 10 27\n1 21 21\n3 20 26",
+      "output": "3\n2\n4\n4\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

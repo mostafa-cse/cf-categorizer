@@ -1,0 +1,42 @@
+{
+  "id": "745B",
+  "source": "problemset",
+  "contest_id": 745,
+  "problem_index": "B",
+  "name": "Hongcow Solves A Puzzle",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3912,
+  "problem_url": "https://codeforces.com/problemset/problem/745/B",
+  "editorial_url": "https://codeforces.com/blog/entry/49126",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hongcow likes solving puzzles. One day, Hongcow finds two identical puzzle pieces, with the instructions \"make a rectangle\" next to them. The pieces can be described by an n by m grid of characters, where the character ' X ' denotes a part of the puzzle and ' . ' denotes an empty part of the grid. It is guaranteed that the puzzle pieces are one 4-connected piece. See the input format and samples for the exact details on how a jigsaw piece will be specified. The puzzle pieces are very heavy, so Hongcow cannot rotate or flip the puzzle pieces. However, he is allowed to move them in any directions. The puzzle pieces also cannot overlap . You are given as input the description of one of the pieces. Determine if it is possible to make a rectangle from two identical copies of the given input. The rectangle should be solid, i.e. there should be no empty holes inside it or on its border. Keep in mind that Hongcow is not allowed to flip or rotate pieces and they cannot overlap, i.e. no two ' X ' from different pieces can share the same position.",
+  "input_specification": "The first line of input will contain two integers n and m ( 1 ≤ n , m ≤ 500 ), the dimensions of the puzzle piece. The next n lines will describe the jigsaw piece. Each line will have length m and will consist of characters ' . ' and ' X ' only. ' X ' corresponds to a part of the puzzle piece, ' . ' is an empty space. It is guaranteed there is at least one ' X ' character in the input and that the ' X ' characters form a 4-connected region.",
+  "output_specification": "Output \" YES \" if it is possible for Hongcow to make a rectangle. Output \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2 3\nXXX\nXXX",
+      "output": "YES"
+    },
+    {
+      "input": "2 2\n.X\nXX",
+      "output": "NO"
+    },
+    {
+      "input": "5 5\n.....\n..X..\n.....\n.....\n.....",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

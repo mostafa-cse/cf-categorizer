@@ -1,0 +1,35 @@
+{
+  "id": "489E",
+  "source": "problemset",
+  "contest_id": 489,
+  "problem_index": "E",
+  "name": "Hiking",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "dp"
+  ],
+  "solved_count": 1218,
+  "problem_url": "https://codeforces.com/problemset/problem/489/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14741",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A traveler is planning a water hike along the river. He noted the suitable rest points for the night and wrote out their distances from the starting point. Each of these locations is further characterized by its picturesqueness , so for the i -th rest point the distance from the start equals x i , and its picturesqueness equals b i . The traveler will move down the river in one direction, we can assume that he will start from point 0 on the coordinate axis and rest points are points with coordinates x i . Every day the traveler wants to cover the distance l . In practice, it turns out that this is not always possible, because he needs to end each day at one of the resting points. In addition, the traveler is choosing between two desires: cover distance l every day and visit the most picturesque places. Let's assume that if the traveler covers distance r j in a day, then he feels frustration , and his total frustration over the hike is calculated as the total frustration on all days. Help him plan the route so as to minimize the relative total frustration : the total frustration divided by the total picturesqueness of all the rest points he used. The traveler's path must end in the farthest rest point.",
+  "input_specification": "The first line of the input contains integers n , l ( 1 ≤ n ≤ 1000, 1 ≤ l ≤ 10 5 ) — the number of rest points and the optimal length of one day path. Then n lines follow, each line describes one rest point as a pair of integers x i , b i ( 1 ≤ x i , b i ≤ 10 6 ). No two rest points have the same x i , the lines are given in the order of strictly increasing x i .",
+  "output_specification": "Print the traveler's path as a sequence of the numbers of the resting points he used in the order he used them. Number the points from 1 to n in the order of increasing x i . The last printed number must be equal to n .",
+  "sample_testcases": [
+    {
+      "input": "5 9\n10 10\n20 10\n30 1\n31 5\n40 10",
+      "output": "1 2 4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

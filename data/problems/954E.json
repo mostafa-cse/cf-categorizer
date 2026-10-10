@@ -1,0 +1,44 @@
+{
+  "id": "954E",
+  "source": "problemset",
+  "contest_id": 954,
+  "problem_index": "E",
+  "name": "Water Taps",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 2201,
+  "problem_url": "https://codeforces.com/problemset/problem/954/E",
+  "editorial_url": "https://codeforces.com/blog/entry/58519",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a system of n water taps all pouring water into the same container. The i -th water tap can be set to deliver any amount of water from 0 to a i ml per second (this amount may be a real number). The water delivered by i -th tap has temperature t i . If for every you set i -th tap to deliver exactly x i ml of water per second, then the resulting temperature of water will be (if , then to avoid division by zero we state that the resulting water temperature is 0 ). You have to set all the water taps in such a way that the resulting temperature is exactly T . What is the maximum amount of water you may get per second if its temperature has to be T ?",
+  "input_specification": "The first line contains two integers n and T ( 1 ≤ n ≤ 200000 , 1 ≤ T ≤ 10 6 ) — the number of water taps and the desired temperature of water, respectively. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 6 ) where a i is the maximum amount of water i -th tap can deliver per second. The third line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 10 6 ) — the temperature of water each tap delivers.",
+  "output_specification": "Print the maximum possible amount of water with temperature exactly T you can get per second (if it is impossible to obtain water with such temperature, then the answer is considered to be 0 ). Your answer is considered correct if its absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2 100\n3 10\n50 150",
+      "output": "6.000000000000000"
+    },
+    {
+      "input": "3 9\n5 5 30\n6 6 10",
+      "output": "40.000000000000000"
+    },
+    {
+      "input": "2 12\n1 3\n10 15",
+      "output": "1.666666666666667"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

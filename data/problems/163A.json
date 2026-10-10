@@ -1,0 +1,38 @@
+{
+  "id": "163A",
+  "source": "problemset",
+  "contest_id": 163,
+  "problem_index": "A",
+  "name": "Substring and Subsequence",
+  "rating": 1700,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 3055,
+  "problem_url": "https://codeforces.com/problemset/problem/163/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4187",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day Polycarpus got hold of two non-empty strings s and t , consisting of lowercase Latin letters. Polycarpus is quite good with strings, so he immediately wondered, how many different pairs of \" x y \" are there, such that x is a substring of string s , y is a subsequence of string t , and the content of x and y is the same. Two pairs are considered different, if they contain different substrings of string s or different subsequences of string t . Read the whole statement to understand the definition of different substrings and subsequences. The length of string s is the number of characters in it. If we denote the length of the string s as | s | , we can write the string as s = s 1 s 2 ... s | s | . A substring of s is a non-empty string x = s [ a ... b ] = s a s a + 1 ... s b ( 1 ≤ a ≤ b ≤ | s | ). For example, \" code \" and \" force \" are substrings or \" codeforces \", while \" coders \" is not. Two substrings s [ a ... b ] and s [ c ... d ] are considered to be different if a ≠ c or b ≠ d . For example, if s =\" codeforces \", s [2...2] and s [6...6] are different, though their content is the same. A subsequence of s is a non-empty string y = s [ p 1 p 2 ... p | y | ] = s p 1 s p 2 ... s p | y | ( 1 ≤ p 1 < p 2 < ... < p | y | ≤ | s | ). For example, \" coders \" is a subsequence of \" codeforces \". Two subsequences u = s [ p 1 p 2 ... p | u | ] and v = s [ q 1 q 2 ... q | v | ] are considered different if the sequences p and q are different.",
+  "input_specification": "The input consists of two lines. The first of them contains s ( 1 ≤ | s | ≤ 5000 ), and the second one contains t ( 1 ≤ | t | ≤ 5000 ). Both strings consist of lowercase Latin letters.",
+  "output_specification": "Print a single number — the number of different pairs \" x y \" such that x is a substring of string s , y is a subsequence of string t , and the content of x and y is the same. As the answer can be rather large, print it modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "aa\naa",
+      "output": "5"
+    },
+    {
+      "input": "codeforces\nforceofcode",
+      "output": "60"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "878D",
+  "source": "problemset",
+  "contest_id": 878,
+  "problem_index": "D",
+  "name": "Magic Breeding",
+  "rating": 2900,
+  "tags": [
+    "bitmasks"
+  ],
+  "solved_count": 1006,
+  "problem_url": "https://codeforces.com/problemset/problem/878/D",
+  "editorial_url": "https://codeforces.com/blog/entry/55435",
+  "time_limit": "4 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Nikita and Sasha play a computer game where you have to breed some magical creatures. Initially, they have k creatures numbered from 1 to k . Creatures have n different characteristics. Sasha has a spell that allows to create a new creature from two given creatures. Each of its characteristics will be equal to the maximum of the corresponding characteristics of used creatures. Nikita has a similar spell, but in his spell, each characteristic of the new creature is equal to the minimum of the corresponding characteristics of used creatures. A new creature gets the smallest unused number. They use their spells and are interested in some characteristics of their new creatures. Help them find out these characteristics.",
+  "input_specification": "The first line contains integers n , k and q ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ 12 , 1 ≤ q ≤ 10 5 ) — number of characteristics, creatures and queries. Next k lines describe original creatures. The line i contains n numbers a i 1 , a i 2 , ..., a in ( 1 ≤ a ij ≤ 10 9 ) — characteristics of the i -th creature. Each of the next q lines contains a query. The i -th of these lines contains numbers t i , x i and y i ( 1 ≤ t i ≤ 3 ). They denote a query: t i = 1 means that Sasha used his spell to the creatures x i and y i . t i = 2 means that Nikita used his spell to the creatures x i and y i . t i = 3 means that they want to know the y i -th characteristic of the x i -th creature. In this case 1 ≤ y i ≤ n . It's guaranteed that all creatures' numbers are valid, that means that they are created before any of the queries involving them.",
+  "output_specification": "For each query with t i = 3 output the corresponding characteristic.",
+  "sample_testcases": [
+    {
+      "input": "2 2 4\n1 2\n2 1\n1 1 2\n2 1 2\n3 3 1\n3 4 2",
+      "output": "2\n1"
+    },
+    {
+      "input": "5 3 8\n1 2 3 4 5\n5 1 2 3 4\n4 5 1 2 3\n1 1 2\n1 2 3\n2 4 5\n3 6 1\n3 6 2\n3 6 3\n3 6 4\n3 6 5",
+      "output": "5\n2\n2\n3\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:45",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

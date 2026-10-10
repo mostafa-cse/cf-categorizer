@@ -1,0 +1,47 @@
+{
+  "id": "1312E",
+  "source": "problemset",
+  "contest_id": 1312,
+  "problem_index": "E",
+  "name": "Array Shrinking",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 8182,
+  "problem_url": "https://codeforces.com/problemset/problem/1312/E",
+  "editorial_url": "https://codeforces.com/blog/entry/74640",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a_1, a_2, \\dots, a_n$$$. You can perform the following operation any number of times: Choose a pair of two neighboring equal elements $$$a_i = a_{i + 1}$$$ (if there is at least one such pair). Replace them by one element with value $$$a_i + 1$$$. After each such operation, the length of the array will decrease by one (and elements are renumerated accordingly). What is the minimum possible length of the array $$$a$$$ you can get?",
+  "input_specification": "The first line contains the single integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the initial length of the array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 1000$$$) — the initial array $$$a$$$.",
+  "output_specification": "Print the only integer — the minimum possible length you can get after performing the operation described above any number of times.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 3 2 2 3",
+      "output": "2"
+    },
+    {
+      "input": "7\n3 3 4 4 4 3 3",
+      "output": "2"
+    },
+    {
+      "input": "3\n1 3 5",
+      "output": "3"
+    },
+    {
+      "input": "1\n1000",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

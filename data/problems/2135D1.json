@@ -1,0 +1,36 @@
+{
+  "id": "2135D1",
+  "source": "problemset",
+  "contest_id": 2135,
+  "problem_index": "D1",
+  "name": "From the Unknown (Easy Version)",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 4340,
+  "problem_url": "https://codeforces.com/problemset/problem/2135/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/145796",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the easy version of the problem. The difference between the versions is that in this version, there are no constraints on the sum of the lengths of the articles over all queries. You can hack only if you solved all versions of this problem. This is an interactive problem. The RiOI Team has recently developed a text editor named RiOI Editor . The editor works with exactly one integer parameter $$$W$$$ — the width of each line. It is known that $$$1 \\leq W \\leq 10^5$$$. As you cannot understand the RiOI Language, from your point of view, words differ from each other only by their length. Hence, an article of length $$$n$$$ is defined as a sequence $$$a$$$ consisting of $$$n$$$ positive integers, where $$$a_i$$$ is the length of the $$$i$$$-th word in the article . The RiOI Editor displays the article $$$[a_1, a_2,\\ldots, a_n]$$$ on screen as follows: If $$$\\max(a_1, a_2, \\ldots, a_n) \\gt W$$$, the editor is unable to display the article ; Otherwise, the editor is able to display the article by the following process: Initially, $$$l = 1$$$, and $$$s = 0$$$. During the whole process, $$$l$$$ always denotes the current number of lines in the editor, and $$$s$$$ always denotes the sum of lengths of words in the last line; Then, for each $$$1\\le i\\le n$$$: If $$$s + a_i \\leq W$$$, the word is inserted at the end of the current line. Thus, $$$l$$$ remains unchanged, and $$$s$$$ gets increased by $$$a_i$$$. Otherwise, the word is inserted into a new line. Thus, $$$l$$$ becomes $$$l + 1$$$, and $$$s$$$ becomes $$$a_i$$$. The number of lines needed to display the article is the final value of $$$l$$$. You are very interested in the editor, so you decide to find out the value of $$$W$$$ by inputting some articles into the editor and observing the number of lines needed to display each article . Formally, you can query the jury at most $$$2$$$ times . In each query, you input an article $$$[a_1, a_2, \\ldots, a_n]$$$ ($$$1\\leq n \\leq 10^5$$$) to the editor, and the jury will respond to you with: The number of lines needed to display the article , if the editor is able to display it; $$$0$$$, if the editor is unable to display the article .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). The description of the test cases follows.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n\n2\n\n1\n\n\n0",
+      "output": "? 5 1 9 4 6 1\n\n? 2 10 10\n\n! 20\n? 1 2\n\n! 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

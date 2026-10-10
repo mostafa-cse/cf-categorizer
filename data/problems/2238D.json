@@ -1,0 +1,36 @@
+{
+  "id": "2238D",
+  "source": "problemset",
+  "contest_id": 2238,
+  "problem_index": "D",
+  "name": "Storming Arasaka",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 8212,
+  "problem_url": "https://codeforces.com/problemset/problem/2238/D",
+  "editorial_url": "https://codeforces.com/blog/entry/154829",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hah, you just discovered what it takes to become a legend. — Cyberpunk 2077 You and Johnny Silverhand decided to storm Arasaka together. After making your way through the guards, you reached Mikoshi — but in order to connect to it, you need to hack the main server. The password to the server is formed as follows. There is a secret number $$$n$$$. Consider all of its positive divisors except $$$1$$$, but the divisor equal to $$$\\mathbf{n}$$$ is considered , and partition all of them into several nonempty layers $$$L_1, L_2, \\ldots, L_k$$$. A partition is called good if two conditions are satisfied: for any divisor $$$x$$$ from layer $$$L_i$$$, all of its divisors, except $$$1$$$ and $$$x$$$, lie only in the layers $$$L_1, L_2, \\ldots, L_{i-1}$$$; in each layer, all numbers can be ordered into a chain so that any two neighboring numbers in this chain have GCD$$$^{\\text{∗}}$$$ greater than $$$1$$$. The length of the password is defined as the number of layers $$$k$$$. For the security of the layers, their number must be as small as possible. Fortunately, Arasaka has not changed $$$n$$$ since Johnny's time, and he remembers several possible values of this number. For each of them, help V and Johnny determine the minimum possible number of layers. $$$^{\\text{∗}}$$$$$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^6$$$) — a candidate value of the secret number that Johnny told you.",
+  "output_specification": "For each test case, output a single number — the minimum number of layers.",
+  "sample_testcases": [
+    {
+      "input": "8\n2\n4\n8\n16\n32\n67\n120\n33",
+      "output": "1\n2\n3\n4\n5\n1\n7\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

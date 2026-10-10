@@ -1,0 +1,42 @@
+{
+  "id": "1839E",
+  "source": "problemset",
+  "contest_id": 1839,
+  "problem_index": "E",
+  "name": "Decreasing Game",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "interactive"
+  ],
+  "solved_count": 1622,
+  "problem_url": "https://codeforces.com/problemset/problem/1839/E",
+  "editorial_url": "https://codeforces.com/blog/entry/116963",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Consider the following game for two players: Initially, an array of integers $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$ is written on blackboard. Game consists of rounds . On each round, the following happens: The first player selects any $$$i$$$ such that $$$a_i \\gt 0$$$. If there is no such $$$i$$$, the first player loses the game (the second player wins) and game ends. The second player selects any $$$j \\neq i$$$ such that $$$a_j \\gt 0$$$. If there is no such $$$j$$$, the second player loses the game (the first player wins) and game ends. Let $$$d = \\min(a_i, a_j)$$$. The values of $$$a_i$$$ and $$$a_j$$$ are simultaneously decreased by $$$d$$$ and the next round starts. It can be shown that game always ends after the finite number of rounds. You have to select which player you will play for (first or second) and win the game.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 300$$$) — the length of array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 300$$$) — array $$$a$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4\n10 4 6 3\n\n\n3\n\n1\n\n0",
+      "output": "First\n1\n\n2\n\n4"
+    },
+    {
+      "input": "6\n4 5 5 11 3 2\n\n2\n\n5\n\n4\n\n6\n\n1\n\n0",
+      "output": "Second \n\n4\n\n4\n\n3\n\n1\n\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

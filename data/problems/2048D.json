@@ -1,0 +1,39 @@
+{
+  "id": "2048D",
+  "source": "problemset",
+  "contest_id": 2048,
+  "problem_index": "D",
+  "name": "Kevin and Competition Memories",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 8640,
+  "problem_url": "https://codeforces.com/problemset/problem/2048/D",
+  "editorial_url": "https://codeforces.com//www.luogu.com/article/nw6aryed",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kevin used to get into Rio's Memories, and in Rio's Memories, a series of contests was once held. Kevin remembers all the participants and all the contest problems from that time, but he has forgotten the specific rounds, the distribution of problems, and the exact rankings. There are $$$ m $$$ problems in total, with the $$$ i $$$-th problem having a difficulty of $$$ b_i $$$. Let each contest consist of $$$ k $$$ problems, resulting in a total of $$$ \\lfloor \\frac{m}{k} \\rfloor $$$ contests. This means that you select exactly $$$ \\lfloor \\frac{m}{k} \\rfloor \\cdot k $$$ problems for the contests in any combination you want, with each problem being selected at most once, and the remaining $$$m\\bmod k$$$ problems are left unused. For example, if $$$m = 17$$$ and $$$k = 3$$$, you should create exactly $$$5$$$ contests consisting of $$$3$$$ problems each, and exactly $$$2$$$ problems will be left unused. There are $$$ n $$$ participants in the contests, with Kevin being the $$$1$$$-st participant. The $$$ i $$$-th participant has a rating of $$$ a_i $$$. During the contests, each participant solves all problems with a difficulty not exceeding their rating, meaning the $$$ i $$$-th participant solves the $$$ j $$$-th problem if and only if $$$ a_i \\geq b_j $$$. In each contest, Kevin's rank is one plus the number of participants who solve more problems than he does. For each $$$ k = 1, 2, \\ldots, m $$$, Kevin wants to know the minimum sum of his ranks across all $$$ \\lfloor \\frac{m}{k} \\rfloor $$$ contests. In other words, for some value of $$$k$$$, after selecting the problems for each contest, you calculate the rank of Kevin in each contest and sum up these ranks over all $$$ \\lfloor \\frac{m}{k} \\rfloor $$$ contests. Your goal is to minimize this value. Note that contests for different values of $$$k$$$ are independent. It means that for different values of $$$k$$$, you can select the distribution of problems into the contests independently.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$ t $$$ ($$$ 1 \\le t \\le 5\\cdot 10^4 $$$). The first line of each test case contains two integers $$$ n $$$ and $$$ m $$$ ($$$ 1 \\le n, m \\leq 3\\cdot 10^5 $$$) — the number of participants and the number of problems. The second line of each test case contains $$$ n $$$ integers $$$ a_1, a_2, \\ldots, a_n $$$ ($$$ 0 \\le a_i \\le 10^9 $$$) — the rating of each participant. The third line of each test case contains $$$ m $$$ integers $$$ b_1, b_2, \\ldots, b_m $$$ ($$$ 0 \\le b_i \\le 10^9 $$$) — the difficulty of each problem. It is guaranteed that both the sum of $$$ n $$$ and the sum of $$$ m $$$ over all test cases do not exceed $$$ 3 \\cdot 10^5 $$$.",
+  "output_specification": "For each test case, output $$$m$$$ integers — the minimum sum of Kevin's ranks for each $$$ k = 1, 2, \\ldots, m$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 4\n4 3 7 5\n2 5 4 6\n5 5\n5 0 4 8 6\n1 3 9 2 7\n6 7\n1 1 4 5 1 4\n1 9 1 9 8 1 0\n7 6\n1 9 1 9 8 1 0\n1 1 4 5 1 4",
+      "output": "7 4 2 3\n6 2 1 1 2\n7 3 2 1 1 1 1\n15 9 5 4 4 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:41",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

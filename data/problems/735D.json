@@ -1,0 +1,39 @@
+{
+  "id": "735D",
+  "source": "problemset",
+  "contest_id": 735,
+  "problem_index": "D",
+  "name": "Taxes",
+  "rating": 1600,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 16432,
+  "problem_url": "https://codeforces.com/problemset/problem/735/D",
+  "editorial_url": "https://codeforces.com/blog/entry/48659",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mr. Funt now lives in a country with a very specific tax laws. The total income of mr. Funt during this year is equal to n ( n ≥ 2 ) burles and the amount of tax he has to pay is calculated as the maximum divisor of n (not equal to n , of course). For example, if n = 6 then Funt has to pay 3 burles, while for n = 25 he needs to pay 5 and if n = 2 he pays only 1 burle. As mr. Funt is a very opportunistic person he wants to cheat a bit. In particular, he wants to split the initial n in several parts n 1 + n 2 + ... + n k = n (here k is arbitrary, even k = 1 is allowed) and pay the taxes for each part separately. He can't make some part equal to 1 because it will reveal him. So, the condition n i ≥ 2 should hold for all i from 1 to k . Ostap Bender wonders, how many money Funt has to pay (i.e. minimal) if he chooses and optimal way to split n in parts.",
+  "input_specification": "The first line of the input contains a single integer n ( 2 ≤ n ≤ 2·10 9 ) — the total year income of mr. Funt.",
+  "output_specification": "Print one integer — minimum possible number of burles that mr. Funt has to pay as a tax.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "2"
+    },
+    {
+      "input": "27",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "594B",
+  "source": "problemset",
+  "contest_id": 594,
+  "problem_index": "B",
+  "name": "Max and Bike",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "geometry"
+  ],
+  "solved_count": 606,
+  "problem_url": "https://codeforces.com/problemset/problem/594/B",
+  "editorial_url": "https://codeforces.com/blog/entry/21487",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "For months Maxim has been coming to work on his favorite bicycle. And quite recently he decided that he is ready to take part in a cyclists' competitions. He knows that this year n competitions will take place. During the i -th competition the participant must as quickly as possible complete a ride along a straight line from point s i to point f i ( s i < f i ). Measuring time is a complex process related to usage of a special sensor and a time counter. Think of the front wheel of a bicycle as a circle of radius r . Let's neglect the thickness of a tire, the size of the sensor, and all physical effects. The sensor is placed on the rim of the wheel, that is, on some fixed point on a circle of radius r . After that the counter moves just like the chosen point of the circle, i.e. moves forward and rotates around the center of the circle. At the beginning each participant can choose any point b i , such that his bike is fully behind the starting line, that is, b i < s i - r . After that, he starts the movement, instantly accelerates to his maximum speed and at time ts i , when the coordinate of the sensor is equal to the coordinate of the start, the time counter starts. The cyclist makes a complete ride, moving with his maximum speed and at the moment the sensor's coordinate is equal to the coordinate of the finish (moment of time tf i ), the time counter deactivates and records the final time. Thus, the counter records that the participant made a complete ride in time tf i - ts i . Maxim is good at math and he suspects that the total result doesn't only depend on his maximum speed v , but also on his choice of the initial point b i . Now Maxim is asking you to calculate for each of n competitions the minimum possible time that can be measured by the time counter. The radius of the wheel of his bike is equal to r .",
+  "input_specification": "The first line contains three integers n , r and v ( 1 ≤ n ≤ 100 000, 1 ≤ r , v ≤ 10 9 ) — the number of competitions, the radius of the front wheel of Max's bike and his maximum speed, respectively. Next n lines contain the descriptions of the contests. The i -th line contains two integers s i and f i ( 1 ≤ s i < f i ≤ 10 9 ) — the coordinate of the start and the coordinate of the finish on the i -th competition.",
+  "output_specification": "Print n real numbers, the i -th number should be equal to the minimum possible time measured by the time counter. Your answer will be considered correct if its absolute or relative error will not exceed 10 - 6 . Namely: let's assume that your answer equals a , and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "2 1 2\n1 10\n5 9",
+      "output": "3.849644710502\n1.106060157705"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:55",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

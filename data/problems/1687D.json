@@ -1,0 +1,47 @@
+{
+  "id": "1687D",
+  "source": "problemset",
+  "contest_id": 1687,
+  "problem_index": "D",
+  "name": "Cute number",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dsu",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 795,
+  "problem_url": "https://codeforces.com/problemset/problem/1687/D",
+  "editorial_url": "https://codeforces.com/blog/entry/103493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ran is especially skilled in computation and mathematics. It is said that she can do unimaginable calculation work in an instant. — Perfect Memento in Strict Sense Ran Yakumo is a cute girl who loves creating cute Maths problems. Let $$$f(x)$$$ be the minimal square number strictly greater than $$$x$$$, and $$$g(x)$$$ be the maximal square number less than or equal to $$$x$$$. For example, $$$f(1)=f(2)=g(4)=g(8)=4$$$. A positive integer $$$x$$$ is cute if $$$x-g(x) \\lt f(x)-x$$$. For example, $$$1,5,11$$$ are cute integers, while $$$3,8,15$$$ are not. Ran gives you an array $$$a$$$ of length $$$n$$$. She wants you to find the smallest non-negative integer $$$k$$$ such that $$$a_i + k$$$ is a cute number for any element of $$$a$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\leq n \\leq 10^6$$$) — the length of $$$a$$$. The second line contains $$$n$$$ intergers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\leq a_1 \\leq a_2 \\leq \\ldots \\leq a_n \\leq 2\\cdot 10^6$$$) — the array $$$a$$$.",
+  "output_specification": "Print a single interger $$$k$$$ — the answer.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3 8 10",
+      "output": "1"
+    },
+    {
+      "input": "5\n2 3 8 9 11",
+      "output": "8"
+    },
+    {
+      "input": "8\n1 2 3 4 5 6 7 8",
+      "output": "48"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

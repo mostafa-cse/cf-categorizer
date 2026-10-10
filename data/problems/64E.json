@@ -1,0 +1,41 @@
+{
+  "id": "64E",
+  "source": "problemset",
+  "contest_id": 64,
+  "problem_index": "E",
+  "name": "Prime Segment",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 301,
+  "problem_url": "https://codeforces.com/problemset/problem/64/E",
+  "editorial_url": "https://codeforces.com/blog/entry/1316",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Positive integer number x is called prime , if it has exactly two positive integer divisors. For example, 2, 3, 17, 97 are primes, but 1, 10, 120 are not. You are given an integer number n , find the shortest segment [ a , b ], which contains n (i.e. a ≤ n ≤ b ) and a , b are primes.",
+  "input_specification": "The only given line contains an integer number n ( 2 ≤ n ≤ 10000 ).",
+  "output_specification": "Print the space separated pair of the required numbers a , b .",
+  "sample_testcases": [
+    {
+      "input": "10",
+      "output": "7 11"
+    },
+    {
+      "input": "97",
+      "output": "97 97"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "71C",
+  "source": "problemset",
+  "contest_id": 71,
+  "problem_index": "C",
+  "name": "Round Table Knights",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7515,
+  "problem_url": "https://codeforces.com/problemset/problem/71/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1624",
+  "time_limit": "0.5 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n knights sitting at the Round Table at an equal distance from each other. Each of them is either in a good or in a bad mood. Merlin, the wizard predicted to King Arthur that the next month will turn out to be particularly fortunate if the regular polygon can be found. On all vertices of the polygon knights in a good mood should be located. Otherwise, the next month will bring misfortunes. A convex polygon is regular if all its sides have same length and all his angles are equal. In this problem we consider only regular polygons with at least 3 vertices, i. e. only nondegenerated. On a picture below some examples of such polygons are present. Green points mean knights in a good mood. Red points mean ones in a bad mood. King Arthur knows the knights' moods. Help him find out if the next month will be fortunate or not.",
+  "input_specification": "The first line contains number n , which is the number of knights at the round table ( 3 ≤ n ≤ 10 5 ). The second line contains space-separated moods of all the n knights in the order of passing them around the table. \"1\" means that the knight is in a good mood an \"0\" means that he is in a bad mood.",
+  "output_specification": "Print \" YES \" without the quotes if the following month will turn out to be lucky. Otherwise, print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1 1",
+      "output": "YES"
+    },
+    {
+      "input": "6\n1 0 1 1 1 0",
+      "output": "YES"
+    },
+    {
+      "input": "6\n1 0 0 1 0 1",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

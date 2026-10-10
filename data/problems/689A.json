@@ -1,0 +1,48 @@
+{
+  "id": "689A",
+  "source": "problemset",
+  "contest_id": 689,
+  "problem_index": "A",
+  "name": "Mike and Cellphone",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "implementation"
+  ],
+  "solved_count": 5545,
+  "problem_url": "https://codeforces.com/problemset/problem/689/A",
+  "editorial_url": "https://codeforces.com/blog/entry/45912",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "While swimming at the beach, Mike has accidentally dropped his cellphone into the water. There was no worry as he bought a cheap replacement phone with an old-fashioned keyboard. The keyboard has only ten digital equal-sized keys, located in the following way: Together with his old phone, he lost all his contacts and now he can only remember the way his fingers moved when he put some number in. One can formally consider finger movements as a sequence of vectors connecting centers of keys pressed consecutively to put in a number. For example, the finger movements for number \"586\" are the same as finger movements for number \"253\": Mike has already put in a number by his \"finger memory\" and started calling it, so he is now worrying, can he be sure that he is calling the correct number? In other words, is there any other number, that has the same finger movements?",
+  "input_specification": "The first line of the input contains the only integer n ( 1 ≤ n ≤ 9 ) — the number of digits in the phone number that Mike put in. The second line contains the string consisting of n digits (characters from ' 0 ' to ' 9 ') representing the number that Mike put in.",
+  "output_specification": "If there is no other phone number with the same finger movements and Mike can be sure he is calling the correct number, print \" YES \" (without quotes) in the only line. Otherwise print \" NO \" (without quotes) in the first line.",
+  "sample_testcases": [
+    {
+      "input": "3\n586",
+      "output": "NO"
+    },
+    {
+      "input": "2\n09",
+      "output": "NO"
+    },
+    {
+      "input": "9\n123456789",
+      "output": "YES"
+    },
+    {
+      "input": "3\n911",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "819D",
+  "source": "problemset",
+  "contest_id": 819,
+  "problem_index": "D",
+  "name": "Mister B and Astronomers",
+  "rating": 2900,
+  "tags": [
+    "number theory"
+  ],
+  "solved_count": 436,
+  "problem_url": "https://codeforces.com/problemset/problem/819/D",
+  "editorial_url": "https://codeforces.com/blog/entry/52946",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After studying the beacons Mister B decided to visit alien's planet, because he learned that they live in a system of flickering star Moon. Moreover, Mister B learned that the star shines once in exactly T seconds. The problem is that the star is yet to be discovered by scientists. There are n astronomers numerated from 1 to n trying to detect the star. They try to detect the star by sending requests to record the sky for 1 second. The astronomers send requests in cycle : the i -th astronomer sends a request exactly a i second after the ( i - 1) -th (i.e. if the previous request was sent at moment t , then the next request is sent at moment t + a i ); the 1 -st astronomer sends requests a 1 seconds later than the n -th. The first astronomer sends his first request at moment 0 . Mister B doesn't know the first moment the star is going to shine, but it's obvious that all moments at which the star will shine are determined by the time of its shine moment in the interval [0, T ) . Moreover, this interval can be split into T parts of 1 second length each of form [ t , t + 1) , where t = 0, 1, 2, ..., ( T - 1) . Mister B wants to know how lucky each astronomer can be in discovering the star first. For each astronomer compute how many segments of form [ t , t + 1) ( t = 0, 1, 2, ..., ( T - 1) ) there are in the interval [0, T ) so that this astronomer is the first to discover the star if the first shine of the star happens in this time interval.",
+  "input_specification": "The first line contains two integers T and n ( 1 ≤ T ≤ 10 9 , 2 ≤ n ≤ 2·10 5 ). The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Print n integers: for each astronomer print the number of time segments describer earlier.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n2 3",
+      "output": "3 1"
+    },
+    {
+      "input": "5 4\n1 1 1 1",
+      "output": "2 1 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

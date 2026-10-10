@@ -1,0 +1,47 @@
+{
+  "id": "137D",
+  "source": "problemset",
+  "contest_id": 137,
+  "problem_index": "D",
+  "name": "Palindromes",
+  "rating": 1900,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 1812,
+  "problem_url": "https://codeforces.com/problemset/problem/137/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3318",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Friday is Polycarpus' favourite day of the week. Not because it is followed by the weekend, but because the lessons on Friday are 2 IT lessons, 2 math lessons and 2 literature lessons. Of course, Polycarpus has prepared to all of them, unlike his buddy Innocentius. Innocentius spent all evening playing his favourite game Fur2 and didn't have enough time to do the literature task. As Innocentius didn't want to get an F, he decided to do the task and read the book called \"Storm and Calm\" during the IT and Math lessons (he never used to have problems with these subjects). When the IT teacher Mr. Watkins saw this, he decided to give Innocentius another task so that the boy concentrated more on the lesson and less — on the staff that has nothing to do with IT. Mr. Watkins said that a palindrome is a string that can be read the same way in either direction, from the left to the right and from the right to the left. A concatenation of strings a , b is a string ab that results from consecutive adding of string b to string a . Of course, Innocentius knew it all but the task was much harder than he could have imagined. Mr. Watkins asked change in the \"Storm and Calm\" the minimum number of characters so that the text of the book would also be a concatenation of no more than k palindromes. Innocentius can't complete the task and therefore asks you to help him.",
+  "input_specification": "The first input line contains a non-empty string s which is the text of \"Storm and Calm\" (without spaces). The length of the string s does not exceed 500 characters. String s consists of uppercase and lowercase Latin letters. The second line contains a single number k ( 1 ≤ k ≤ | s | , where | s | represents the length of the string s ).",
+  "output_specification": "Print on the first line the minimum number of changes that Innocentius will have to make. Print on the second line the string consisting of no more than k palindromes. Each palindrome should be non-empty and consist of uppercase and lowercase Latin letters. Use the character \" + \" (ASCII-code 43) to separate consecutive palindromes. If there exist several solutions, print any of them. The letters' case does matter, that is an uppercase letter is not considered equivalent to the corresponding lowercase letter.",
+  "sample_testcases": [
+    {
+      "input": "abacaba\n1",
+      "output": "0\nabacaba"
+    },
+    {
+      "input": "abdcaba\n2",
+      "output": "1\nabdcdba"
+    },
+    {
+      "input": "abdcaba\n5",
+      "output": "0\na+b+d+c+aba"
+    },
+    {
+      "input": "abacababababbcbabcd\n3",
+      "output": "1\nabacaba+babab+bcbabcb"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

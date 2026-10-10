@@ -1,0 +1,37 @@
+{
+  "id": "1792E",
+  "source": "problemset",
+  "contest_id": 1792,
+  "problem_index": "E",
+  "name": "Divisors and Table",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "number theory"
+  ],
+  "solved_count": 1648,
+  "problem_url": "https://codeforces.com/problemset/problem/1792/E",
+  "editorial_url": "https://codeforces.com/blog/entry/111835",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an $$$n \\times n$$$ multiplication table and a positive integer $$$m = m_1 \\cdot m_2$$$. A $$$n \\times n$$$ multiplication table is a table with $$$n$$$ rows and $$$n$$$ columns numbered from $$$1$$$ to $$$n$$$, where $$$a_{i, j} = i \\cdot j$$$. For each divisor $$$d$$$ of $$$m$$$, check: does $$$d$$$ occur in the table at least once, and if it does, what is the minimum row that contains $$$d$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10$$$) — the number of test cases. The first and only line of each test case contains three integers $$$n$$$, $$$m_1$$$ and $$$m_2$$$ ($$$1 \\le n \\le 10^9$$$; $$$1 \\le m_1, m_2 \\le 10^9$$$) — the size of the multiplication table and the integer $$$m$$$ represented as $$$m_1 \\cdot m_2$$$.",
+  "output_specification": "For each test case, let $$$d_1, d_2, \\dots, d_k$$$ be all divisors of $$$m$$$ sorted in the increasing order. And let $$$a_1, a_2, \\dots, a_k$$$ be an array of answers, where $$$a_i$$$ is equal to the minimum row index where divisor $$$d_i$$$ occurs, or $$$0$$$, if there is no such row. Since array $$$a$$$ may be large, first, print an integer $$$s$$$ — the number of divisors of $$$m$$$ that are present in the $$$n \\times n$$$ table. Next, print a single value $$$X = a_1 \\oplus a_2 \\oplus \\dots \\oplus a_k$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation .",
+  "sample_testcases": [
+    {
+      "input": "3\n3 72 1\n10 10 15\n6 1 210",
+      "output": "6 2\n10 0\n8 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

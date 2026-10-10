@@ -1,0 +1,38 @@
+{
+  "id": "1671F",
+  "source": "problemset",
+  "contest_id": 1671,
+  "problem_index": "F",
+  "name": "Permutation Counting",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 521,
+  "problem_url": "https://codeforces.com/problemset/problem/1671/F",
+  "editorial_url": "https://codeforces.com/blog/entry/102181",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Calculate the number of permutations $$$p$$$ of size $$$n$$$ with exactly $$$k$$$ inversions (pairs of indices $$$(i, j)$$$ such that $$$i \\lt j$$$ and $$$p_i \\gt p_j$$$) and exactly $$$x$$$ indices $$$i$$$ such that $$$p_i \\gt p_{i+1}$$$. Yep, that's the whole problem. Good luck!",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 3 \\cdot 10^4$$$) — the number of test cases. Each test case consists of one line which contains three integers $$$n$$$, $$$k$$$ and $$$x$$$ ($$$1 \\le n \\le 998244352$$$; $$$1 \\le k \\le 11$$$; $$$1 \\le x \\le 11$$$).",
+  "output_specification": "For each test case, print one integer — the answer to the problem, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n10 6 4\n7 3 1\n163316 11 7\n136373 11 1\n325902 11 11",
+      "output": "465\n12\n986128624\n7636394\n57118194"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

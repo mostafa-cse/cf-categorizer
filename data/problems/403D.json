@@ -1,0 +1,35 @@
+{
+  "id": "403D",
+  "source": "problemset",
+  "contest_id": 403,
+  "problem_index": "D",
+  "name": "Beautiful Pairs of Numbers",
+  "rating": 2300,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1268,
+  "problem_url": "https://codeforces.com/problemset/problem/403/D",
+  "editorial_url": "https://codeforces.com/blog/entry/10972",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The sequence of integer pairs ( a 1 , b 1 ), ( a 2 , b 2 ), ..., ( a k , b k ) is beautiful , if the following statements are fulfilled: 1 ≤ a 1 ≤ b 1 < a 2 ≤ b 2 < ... < a k ≤ b k ≤ n , where n is a given positive integer; all numbers b 1 - a 1 , b 2 - a 2 , ... , b k - a k are distinct. For the given number n find the number of beautiful sequences of length k . As the answer can be rather large, print the remainder after dividing it by 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains integer t ( 1 ≤ t ≤  2·10 5 ) — the number of the test data. Each of the next t lines contains two integers n and k ( 1 ≤ k ≤ n ≤ 1000 ).",
+  "output_specification": "For each test from the input print the answer to the problem modulo 1000000007 (10 9 + 7) . Print the answers to the tests in the order in which the tests are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n2 1\n2 2\n3 1\n3 2\n3 3",
+      "output": "1\n3\n0\n6\n2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

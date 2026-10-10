@@ -1,0 +1,40 @@
+{
+  "id": "932E",
+  "source": "problemset",
+  "contest_id": 932,
+  "problem_index": "E",
+  "name": "Team Work",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 3696,
+  "problem_url": "https://codeforces.com/problemset/problem/932/E",
+  "editorial_url": "https://codeforces.com/blog/entry/57796",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a team of N people. For a particular task, you can pick any non-empty subset of people. The cost of having x people for the task is x k . Output the sum of costs over all non-empty subsets of people.",
+  "input_specification": "Only line of input contains two integers N (1 ≤ N ≤ 10 9 ) representing total number of people and k (1 ≤ k ≤ 5000) .",
+  "output_specification": "Output the sum of costs for all non empty subsets modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "1"
+    },
+    {
+      "input": "3 2",
+      "output": "24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

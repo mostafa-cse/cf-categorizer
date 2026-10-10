@@ -1,0 +1,36 @@
+{
+  "id": "2267E",
+  "source": "problemset",
+  "contest_id": 2267,
+  "problem_index": "E",
+  "name": "Clean Substrings",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 1853,
+  "problem_url": "https://codeforces.com/problemset/problem/2267/E",
+  "editorial_url": "https://codeforces.com/blog/entry/157126",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A binary string $$$t$$$ of length $$$m$$$ is called clean if $$$t_i = t_{i+1}$$$ for all $$$1\\le i\\lt m$$$. The chief engineer of the country has made another discovery. He invented a smart robot that can perform the following operation on any binary string $$$t$$$ for one coin: Choose any clean substring$$$^{\\text{∗}}$$$ of the string $$$t$$$. Invert all elements of the substring (change $$$0$$$ to $$$1$$$ and vice versa). Define the beauty of a string $$$t$$$ as the minimum number of coins needed to make it clean . Define the power of a string $$$t$$$ as the sum of the beauties of all its substrings. You are given a binary string $$$s$$$ of length $$$n$$$. The engineer's competitors are going to modify the string exactly $$$q$$$ times. Each modification is described by one number $$$i$$$. After the modification, $$$s_i$$$ is inverted. Your task is to compute the power of the string $$$s$$$ before and after each modification. $$$^{\\text{∗}}$$$A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1\\le n, q\\le 2\\cdot 10^5$$$) — the length of the binary string and the number of modifications. The second line of each test case contains the binary string $$$s$$$. The next $$$q$$$ lines of each test case contain one integer $$$i$$$ ($$$1\\le i\\le n$$$) — the description of the modifications. It is guaranteed that the sum of all $$$n$$$ values and the sum of all $$$q$$$ values over all test cases do not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$q + 1$$$ integers separated by spaces — the answer before the modifications and after each modification of the string.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 1\n110\n2\n4 2\n1010\n1\n2\n8 4\n10101110\n3\n5\n2\n3\n10 5\n1100101110\n1\n6\n10\n7\n3",
+      "output": "2 2\n7 5 5\n36 23 22 25 26\n61 66 41 35 59 60"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:57:34",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

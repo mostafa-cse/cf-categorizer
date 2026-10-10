@@ -1,0 +1,35 @@
+{
+  "id": "1168C",
+  "source": "problemset",
+  "contest_id": 1168,
+  "problem_index": "C",
+  "name": "And Reachability",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "dp"
+  ],
+  "solved_count": 2792,
+  "problem_url": "https://codeforces.com/problemset/problem/1168/C",
+  "editorial_url": "https://codeforces.com/blog/entry/67241",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Toad Pimple has an array of integers $$$a_1, a_2, \\ldots, a_n$$$. We say that $$$y$$$ is reachable from $$$x$$$ if $$$x \\lt y$$$ and there exists an integer array $$$p$$$ such that $$$x = p_1 \\lt p_2 \\lt \\ldots \\lt p_k=y$$$, and $$$a_{p_i}\\, \\&\\, a_{p_{i+1}} \\gt 0$$$ for all integers $$$i$$$ such that $$$1 \\leq i \\lt k$$$. Here $$$\\&$$$ denotes the bitwise AND operation . You are given $$$q$$$ pairs of indices, check reachability for each of them.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$2 \\leq n \\leq 300\\,000$$$, $$$1 \\leq q \\leq 300\\,000$$$) — the number of integers in the array and the number of queries you need to answer. The second line contains $$$n$$$ space-separated integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 300\\,000$$$) — the given array. The next $$$q$$$ lines contain two integers each. The $$$i$$$-th of them contains two space-separated integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\leq x_i \\lt y_i \\leq n$$$). You need to check if $$$y_i$$$ is reachable from $$$x_i$$$.",
+  "output_specification": "Output $$$q$$$ lines. In the $$$i$$$-th of them print \" Shi \" if $$$y_i$$$ is reachable from $$$x_i$$$, otherwise, print \" Fou \".",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 3 0 2 1\n1 3\n2 4\n1 4",
+      "output": "Fou\nShi\nShi"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

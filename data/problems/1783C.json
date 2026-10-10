@@ -1,0 +1,36 @@
+{
+  "id": "1783C",
+  "source": "problemset",
+  "contest_id": 1783,
+  "problem_index": "C",
+  "name": "Yet Another Tournament",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 11163,
+  "problem_url": "https://codeforces.com/problemset/problem/1783/C",
+  "editorial_url": "https://codeforces.com/blog/entry/111194",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are participating in Yet Another Tournament. There are $$$n + 1$$$ participants: you and $$$n$$$ other opponents, numbered from $$$1$$$ to $$$n$$$. Each two participants will play against each other exactly once. If the opponent $$$i$$$ plays against the opponent $$$j$$$, he wins if and only if $$$i \\gt j$$$. When the opponent $$$i$$$ plays against you, everything becomes a little bit complicated. In order to get a win against opponent $$$i$$$, you need to prepare for the match for at least $$$a_i$$$ minutes — otherwise, you lose to that opponent. You have $$$m$$$ minutes in total to prepare for matches, but you can prepare for only one match at one moment. In other words, if you want to win against opponents $$$p_1, p_2, \\dots, p_k$$$, you need to spend $$$a_{p_1} + a_{p_2} + \\dots + a_{p_k}$$$ minutes for preparation — and if this number is greater than $$$m$$$, you cannot achieve a win against all of these opponents at the same time. The final place of each contestant is equal to the number of contestants with strictly more wins $$$+$$$ $$$1$$$. For example, if $$$3$$$ contestants have $$$5$$$ wins each, $$$1$$$ contestant has $$$3$$$ wins and $$$2$$$ contestants have $$$1$$$ win each, then the first $$$3$$$ participants will get the $$$1$$$-st place, the fourth one gets the $$$4$$$-th place and two last ones get the $$$5$$$-th place. Calculate the minimum possible place (lower is better) you can achieve if you can't prepare for the matches more than $$$m$$$ minutes in total.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 5 \\cdot 10^5$$$; $$$0 \\le m \\le \\sum\\limits_{i=1}^{n}{a_i}$$$) — the number of your opponents and the total time you have for preparation. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 1000$$$), where $$$a_i$$$ is the time you need to prepare in order to win against the $$$i$$$-th opponent. It's guaranteed that the total sum of $$$n$$$ over all test cases doesn't exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print the minimum possible place you can take if you can prepare for the matches no more than $$$m$$$ minutes in total.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 401\n100 100 200 1\n3 2\n1 2 3\n5 0\n1 1 1 1 1\n4 0\n0 1 1 1\n4 4\n1 2 2 1",
+      "output": "1\n2\n6\n4\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

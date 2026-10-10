@@ -1,0 +1,36 @@
+{
+  "id": "1634D",
+  "source": "problemset",
+  "contest_id": 1634,
+  "problem_index": "D",
+  "name": "Finding Zero",
+  "rating": 2000,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 4878,
+  "problem_url": "https://codeforces.com/problemset/problem/1634/D",
+  "editorial_url": "https://codeforces.com/blog/entry/99563",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. We picked an array of whole numbers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) and concealed exactly one zero in it! Your goal is to find the location of this zero, that is, to find $$$i$$$ such that $$$a_i = 0$$$. You are allowed to make several queries to guess the answer. For each query, you can think up three distinct indices $$$i, j, k$$$, and we will tell you the value of $$$\\max(a_i, a_j, a_k) - \\min(a_i, a_j, a_k)$$$. In other words, we will tell you the difference between the maximum and the minimum number among $$$a_i$$$, $$$a_j$$$ and $$$a_k$$$. You are allowed to make no more than $$$2 \\cdot n - 2$$$ queries, and after that you have two tries to guess where the zero is. That is, you have to tell us two numbers $$$i$$$ and $$$j$$$ and you win if $$$a_i = 0$$$ or $$$a_j = 0$$$. Can you guess where we hid the zero? Note that the array in each test case is fixed beforehand and will not change during the game. In other words, the interactor is not adaptive.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 500$$$). Description of the test cases follows. The first and only line of each test case contains an integer $$$n$$$ ($$$4 \\le n \\le 1000$$$) — the length of the array that we picked. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "1\n\n4\n\n2\n\n3\n\n3\n\n2",
+      "output": "? 1 2 3\n\n? 2 3 4\n\n? 3 4 1\n\n? 4 1 2\n\n! 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

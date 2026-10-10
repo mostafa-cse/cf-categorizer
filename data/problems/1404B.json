@@ -1,0 +1,37 @@
+{
+  "id": "1404B",
+  "source": "problemset",
+  "contest_id": 1404,
+  "problem_index": "B",
+  "name": "Tree Tag",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "games",
+    "trees"
+  ],
+  "solved_count": 8480,
+  "problem_url": "https://codeforces.com/problemset/problem/1404/B",
+  "editorial_url": "https://codeforces.com/blog/entry/82366",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing a fun game of tree tag. The game is played on a tree of $$$n$$$ vertices numbered from $$$1$$$ to $$$n$$$. Recall that a tree on $$$n$$$ vertices is an undirected, connected graph with $$$n-1$$$ edges. Initially, Alice is located at vertex $$$a$$$, and Bob at vertex $$$b$$$. They take turns alternately, and Alice makes the first move. In a move, Alice can jump to a vertex with distance at most $$$da$$$ from the current vertex. And in a move, Bob can jump to a vertex with distance at most $$$db$$$ from the current vertex. The distance between two vertices is defined as the number of edges on the unique simple path between them. In particular, either player is allowed to stay at the same vertex in a move. Note that when performing a move, a player only occupies the starting and ending vertices of their move, not the vertices between them. If after at most $$$10^{100}$$$ moves, Alice and Bob occupy the same vertex, then Alice is declared the winner. Otherwise, Bob wins. Determine the winner if both players play optimally.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Description of the test cases follows. The first line of each test case contains five integers $$$n,a,b,da,db$$$ ($$$2\\le n\\le 10^5$$$, $$$1\\le a,b\\le n$$$, $$$a\\ne b$$$, $$$1\\le da,db\\le n-1$$$)  — the number of vertices, Alice's vertex, Bob's vertex, Alice's maximum jumping distance, and Bob's maximum jumping distance, respectively. The following $$$n-1$$$ lines describe the edges of the tree. The $$$i$$$-th of these lines contains two integers $$$u$$$, $$$v$$$ ($$$1\\le u, v\\le n, u\\ne v$$$), denoting an edge between vertices $$$u$$$ and $$$v$$$. It is guaranteed that these edges form a tree structure. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single line containing the winner of the game: \" Alice \" or \" Bob \".",
+  "sample_testcases": [
+    {
+      "input": "4\n4 3 2 1 2\n1 2\n1 3\n1 4\n6 6 1 2 5\n1 2\n6 5\n2 3\n3 4\n4 5\n9 3 9 2 5\n1 2\n1 6\n1 9\n1 3\n9 5\n7 9\n4 8\n4 3\n11 8 11 3 3\n1 2\n11 9\n4 9\n6 5\n2 10\n3 2\n5 9\n8 3\n7 4\n7 10",
+      "output": "Alice\nBob\nAlice\nAlice"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

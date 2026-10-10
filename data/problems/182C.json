@@ -1,0 +1,43 @@
+{
+  "id": "182C",
+  "source": "problemset",
+  "contest_id": 182,
+  "problem_index": "C",
+  "name": "Optimal Sum",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 906,
+  "problem_url": "https://codeforces.com/problemset/problem/182/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4408",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "And here goes another problem on arrays. You are given positive integer len and array a which consists of n integers a 1 , a 2 , ..., a n . Let's introduce two characteristics for the given array. Let's consider an arbitrary interval of the array with length len , starting in position i . Value , is the modular sum on the chosen interval. In other words, the modular sum is the sum of integers on the chosen interval with length len , taken in its absolute value. Value is the optimal sum of the array. In other words, the optimal sum of an array is the maximum of all modular sums on various intervals of array with length len . Your task is to calculate the optimal sum of the given array a . However, before you do the calculations, you are allowed to produce no more than k consecutive operations of the following form with this array: one operation means taking an arbitrary number from array a i and multiply it by -1. In other words, no more than k times you are allowed to take an arbitrary number a i from the array and replace it with - a i . Each number of the array is allowed to choose an arbitrary number of times. Your task is to calculate the maximum possible optimal sum of the array after at most k operations described above are completed.",
+  "input_specification": "The first line contains two integers n , len ( 1 ≤ len ≤ n ≤ 10 5 ) — the number of elements in the array and the length of the chosen subinterval of the array, correspondingly. The second line contains a sequence consisting of n integers a 1 , a 2 , ..., a n (| a i | ≤ 10 9 ) — the original array. The third line contains a single integer k ( 0 ≤ k ≤ n ) — the maximum allowed number of operations. All numbers in lines are separated by a single space.",
+  "output_specification": "In a single line print the maximum possible optimal sum after no more than k acceptable operations are fulfilled. Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n0 -2 3 -5 1\n2",
+      "output": "10"
+    },
+    {
+      "input": "5 2\n1 -3 -10 4 1\n3",
+      "output": "14"
+    },
+    {
+      "input": "3 3\n-2 -5 4\n1",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

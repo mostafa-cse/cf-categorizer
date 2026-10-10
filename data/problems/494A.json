@@ -1,0 +1,46 @@
+{
+  "id": "494A",
+  "source": "problemset",
+  "contest_id": 494,
+  "problem_index": "A",
+  "name": "Treasure",
+  "rating": 1500,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 6609,
+  "problem_url": "https://codeforces.com/problemset/problem/494/A",
+  "editorial_url": "https://codeforces.com/blog/entry/15148",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Malek has recently found a treasure map. While he was looking for a treasure he found a locked door. There was a string s written on the door consisting of characters ' ( ', ' ) ' and ' # '. Below there was a manual on how to open the door. After spending a long time Malek managed to decode the manual and found out that the goal is to replace each ' # ' with one or more ' ) ' characters so that the final string becomes beautiful . Below there was also written that a string is called beautiful if for each i ( 1 ≤ i ≤ | s | ) there are no more ' ) ' characters than ' ( ' characters among the first i characters of s and also the total number of ' ( ' characters is equal to the total number of ' ) ' characters. Help Malek open the door by telling him for each ' # ' character how many ' ) ' characters he must replace it with.",
+  "input_specification": "The first line of the input contains a string s ( 1 ≤ | s | ≤ 10 5 ). Each character of this string is one of the characters ' ( ', ' ) ' or ' # '. It is guaranteed that s contains at least one ' # ' character.",
+  "output_specification": "If there is no way of replacing ' # ' characters which leads to a beautiful string print - 1 . Otherwise for each character ' # ' print a separate line containing a positive integer, the number of ' ) ' characters this character must be replaced with. If there are several possible answers, you may output any of them.",
+  "sample_testcases": [
+    {
+      "input": "(((#)((#)",
+      "output": "1\n2"
+    },
+    {
+      "input": "()((#((#(#()",
+      "output": "2\n2\n1"
+    },
+    {
+      "input": "#",
+      "output": "-1"
+    },
+    {
+      "input": "(#)",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

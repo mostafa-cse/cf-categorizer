@@ -1,0 +1,38 @@
+{
+  "id": "10C",
+  "source": "problemset",
+  "contest_id": 10,
+  "problem_index": "C",
+  "name": "Digital Root",
+  "rating": 2000,
+  "tags": [
+    "number theory"
+  ],
+  "solved_count": 1821,
+  "problem_url": "https://codeforces.com/problemset/problem/10/C",
+  "editorial_url": "https://codeforces.com/blog/entry/298",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Not long ago Billy came across such a problem, where there were given three natural numbers A , B and C from the range [1, N ] , and it was asked to check whether the equation AB = C is correct. Recently Billy studied the concept of a digital root of a number. We should remind you that a digital root d ( x ) of the number x is the sum s ( x ) of all the digits of this number, if s ( x ) ≤ 9 , otherwise it is d ( s ( x )) . For example, a digital root of the number 6543 is calculated as follows: d (6543) = d (6 + 5 + 4 + 3) = d (18) = 9 . Billy has counted that the digital root of a product of numbers is equal to the digital root of the product of the factors' digital roots, i.e. d ( xy ) = d ( d ( x ) d ( y )) . And the following solution to the problem came to his mind: to calculate the digital roots and check if this condition is met. However, Billy has doubts that this condition is sufficient. That's why he asks you to find out the amount of test examples for the given problem such that the algorithm proposed by Billy makes mistakes.",
+  "input_specification": "The first line contains the only number N ( 1 ≤ N ≤ 10 6 ).",
+  "output_specification": "Output one number — the amount of required A , B and C from the range [1, N ] .",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "2"
+    },
+    {
+      "input": "5",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

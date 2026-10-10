@@ -1,0 +1,44 @@
+{
+  "id": "689C",
+  "source": "problemset",
+  "contest_id": 689,
+  "problem_index": "C",
+  "name": "Mike and Chocolate Thieves",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 6367,
+  "problem_url": "https://codeforces.com/problemset/problem/689/C",
+  "editorial_url": "https://codeforces.com/blog/entry/45912",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bad news came to Mike's village, some thieves stole a bunch of chocolates from the local factory! Horrible! Aside from loving sweet things, thieves from this area are known to be very greedy. So after a thief takes his number of chocolates for himself, the next thief will take exactly k times more than the previous one. The value of k ( k > 1 ) is a secret integer known only to them. It is also known that each thief's bag can carry at most n chocolates (if they intend to take more, the deal is cancelled) and that there were exactly four thieves involved. Sadly, only the thieves know the value of n , but rumours say that the numbers of ways they could have taken the chocolates (for a fixed n , but not fixed k ) is m . Two ways are considered different if one of the thieves (they should be numbered in the order they take chocolates) took different number of chocolates in them. Mike want to track the thieves down, so he wants to know what their bags are and value of n will help him in that. Please find the smallest possible value of n or tell him that the rumors are false and there is no such n .",
+  "input_specification": "The single line of input contains the integer m (1 ≤ m ≤ 10 15 ) — the number of ways the thieves might steal the chocolates, as rumours say.",
+  "output_specification": "Print the only integer n — the maximum amount of chocolates that thieves' bags can carry. If there are more than one n satisfying the rumors, print the smallest one . If there is no such n for a false-rumoured m , print - 1 .",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "8"
+    },
+    {
+      "input": "8",
+      "output": "54"
+    },
+    {
+      "input": "10",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

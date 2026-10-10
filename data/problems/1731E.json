@@ -1,0 +1,37 @@
+{
+  "id": "1731E",
+  "source": "problemset",
+  "contest_id": 1731,
+  "problem_index": "E",
+  "name": "Graph Cost",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3625,
+  "problem_url": "https://codeforces.com/problemset/problem/1731/E",
+  "editorial_url": "https://codeforces.com/blog/entry/110630",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an initially empty undirected graph with $$$n$$$ nodes, numbered from $$$1$$$ to $$$n$$$ (i. e. $$$n$$$ nodes and $$$0$$$ edges). You want to add $$$m$$$ edges to the graph, so the graph won't contain any self-loop or multiple edges. If an edge connecting two nodes $$$u$$$ and $$$v$$$ is added, its weight must be equal to the greatest common divisor of $$$u$$$ and $$$v$$$, i. e. $$$\\gcd(u, v)$$$. In order to add edges to the graph, you can repeat the following process any number of times (possibly zero): choose an integer $$$k \\ge 1$$$; add exactly $$$k$$$ edges to the graph, each having a weight equal to $$$k + 1$$$. Adding these $$$k$$$ edges costs $$$k + 1$$$ in total. Note that you can't create self-loops or multiple edges. Also, if you can't add $$$k$$$ edges of weight $$$k + 1$$$, you can't choose such $$$k$$$. For example, if you can add $$$5$$$ more edges to the graph of weight $$$6$$$, you may add them, and it will cost $$$6$$$ for the whole pack of $$$5$$$ edges. But if you can only add $$$4$$$ edges of weight $$$6$$$ to the graph, you can't perform this operation for $$$k = 5$$$. Given two integers $$$n$$$ and $$$m$$$, find the minimum total cost to form a graph of $$$n$$$ vertices and exactly $$$m$$$ edges using the operation above. If such a graph can't be constructed, output $$$-1$$$. Note that the final graph may consist of several connected components.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$). Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 10^6$$$; $$$1 \\leq m \\leq \\frac{n(n-1)}{2}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print the minimum cost to build the graph, or $$$-1$$$ if you can't build such a graph.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 1\n6 10\n9 4\n10 11",
+      "output": "2\n-1\n7\n21"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

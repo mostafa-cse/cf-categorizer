@@ -1,0 +1,40 @@
+{
+  "id": "727D",
+  "source": "problemset",
+  "contest_id": 727,
+  "problem_index": "D",
+  "name": "T-shirts Distribution",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "flows",
+    "greedy"
+  ],
+  "solved_count": 2123,
+  "problem_url": "https://codeforces.com/problemset/problem/727/D",
+  "editorial_url": "https://codeforces.com/blog/entry/47773",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The organizers of a programming contest have decided to present t-shirts to participants. There are six different t-shirts sizes in this problem: S , M , L , XL , XXL , XXXL (sizes are listed in increasing order). The t-shirts are already prepared. For each size from S to XXXL you are given the number of t-shirts of this size. During the registration, the organizers asked each of the n participants about the t-shirt size he wants. If a participant hesitated between two sizes, he could specify two neighboring sizes — this means that any of these two sizes suits him. Write a program that will determine whether it is possible to present a t-shirt to each participant of the competition, or not. Of course, each participant should get a t-shirt of proper size: the size he wanted, if he specified one size; any of the two neibouring sizes, if he specified two sizes. If it is possible, the program should find any valid distribution of the t-shirts.",
+  "input_specification": "The first line of the input contains six non-negative integers — the number of t-shirts of each size. The numbers are given for the sizes S , M , L , XL , XXL , XXXL , respectively. The total number of t-shirts doesn't exceed 100 000 . The second line contains positive integer n ( 1 ≤ n ≤ 100 000 ) — the number of participants. The following n lines contain the sizes specified by the participants, one line per participant. The i -th line contains information provided by the i -th participant: single size or two sizes separated by comma (without any spaces). If there are two sizes, the sizes are written in increasing order. It is guaranteed that two sizes separated by comma are neighboring.",
+  "output_specification": "If it is not possible to present a t-shirt to each participant, print « NO » (without quotes). Otherwise, print n + 1 lines. In the first line print « YES » (without quotes). In the following n lines print the t-shirt sizes the orginizers should give to participants, one per line. The order of the participants should be the same as in the input. If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "0 1 0 1 1 0\n3\nXL\nS,M\nXL,XXL",
+      "output": "YES\nXL\nM\nXXL"
+    },
+    {
+      "input": "1 1 2 0 1 1\n5\nS\nM\nS,M\nXXL,XXXL\nXL,XXL",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

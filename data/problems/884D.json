@@ -1,0 +1,39 @@
+{
+  "id": "884D",
+  "source": "problemset",
+  "contest_id": 884,
+  "problem_index": "D",
+  "name": "Boxes And Balls",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 2292,
+  "problem_url": "https://codeforces.com/problemset/problem/884/D",
+  "editorial_url": "https://codeforces.com/blog/entry/55470",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ivan has n different boxes. The first of them contains some balls of n different colors. Ivan wants to play a strange game. He wants to distribute the balls into boxes in such a way that for every i ( 1 ≤ i ≤ n ) i -th box will contain all balls with color i . In order to do this, Ivan will make some turns. Each turn he does the following: Ivan chooses any non-empty box and takes all balls from this box; Then Ivan chooses any k empty boxes (the box from the first step becomes empty, and Ivan is allowed to choose it), separates the balls he took on the previous step into k non-empty groups and puts each group into one of the boxes. He should put each group into a separate box. He can choose either k = 2 or k = 3 . The penalty of the turn is the number of balls Ivan takes from the box during the first step of the turn. And penalty of the game is the total penalty of turns made by Ivan until he distributes all balls to corresponding boxes. Help Ivan to determine the minimum possible penalty of the game!",
+  "input_specification": "The first line contains one integer number n ( 1 ≤ n ≤ 200000 ) — the number of boxes and colors. The second line contains n integer numbers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ), where a i is the number of balls with color i .",
+  "output_specification": "Print one number — the minimum possible penalty of the game.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "6"
+    },
+    {
+      "input": "4\n2 3 4 5",
+      "output": "19"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

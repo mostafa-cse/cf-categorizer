@@ -1,0 +1,44 @@
+{
+  "id": "802J1",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "J1",
+  "name": "Send the Fool Further! (easy)",
+  "rating": 1400,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 6767,
+  "problem_url": "https://codeforces.com/problemset/problem/802/J1",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Heidi's friend Jenny is asking Heidi to deliver an important letter to one of their common friends. Since Jenny is Irish, Heidi thinks that this might be a prank. More precisely, she suspects that the message she is asked to deliver states: \"Send the fool further!\", and upon reading it the recipient will ask Heidi to deliver the same message to yet another friend (that the recipient has in common with Heidi), and so on. Heidi believes that her friends want to avoid awkward situations, so she will not be made to visit the same person (including Jenny) twice. She also knows how much it costs to travel between any two of her friends who know each other. She wants to know: what is the maximal amount of money she will waste on travel if it really is a prank? Heidi's n friends are labeled 0 through n - 1 , and their network of connections forms a tree. In other words, every two of her friends a , b know each other, possibly indirectly (there is a sequence of friends starting from a and ending on b and such that each two consecutive friends in the sequence know each other directly), and there are exactly n - 1 pairs of friends who know each other directly. Jenny is given the number 0 .",
+  "input_specification": "The first line of the input contains the number of friends n ( 3 ≤ n ≤ 100 ). The next n - 1 lines each contain three space-separated integers u , v and c ( 0 ≤ u , v ≤ n - 1 , 1 ≤ c ≤ 10 4 ), meaning that u and v are friends (know each other directly) and the cost for travelling between u and v is c . It is guaranteed that the social network of the input forms a tree.",
+  "output_specification": "Output a single integer – the maximum sum of costs.",
+  "sample_testcases": [
+    {
+      "input": "4\n0 1 4\n0 2 2\n2 3 3",
+      "output": "5"
+    },
+    {
+      "input": "6\n1 2 3\n0 2 100\n1 4 2\n0 3 7\n3 5 10",
+      "output": "105"
+    },
+    {
+      "input": "11\n1 0 1664\n2 0 881\n3 2 4670\n4 2 1555\n5 1 1870\n6 2 1265\n7 2 288\n8 7 2266\n9 2 1536\n10 6 3378",
+      "output": "5551"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

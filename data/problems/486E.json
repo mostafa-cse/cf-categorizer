@@ -1,0 +1,46 @@
+{
+  "id": "486E",
+  "source": "problemset",
+  "contest_id": 486,
+  "problem_index": "E",
+  "name": "LIS of Sequence",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "hashing",
+    "math"
+  ],
+  "solved_count": 2821,
+  "problem_url": "https://codeforces.com/problemset/problem/486/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14678",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The next \"Data Structures and Algorithms\" lesson will be about Longest Increasing Subsequence (LIS for short) of a sequence. For better understanding, Nam decided to learn it a few days before the lesson. Nam created a sequence a consisting of n ( 1 ≤ n ≤ 10 5 ) elements a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ). A subsequence a i 1 , a i 2 , ..., a i k where 1 ≤ i 1 < i 2 < ... < i k ≤ n is called increasing if a i 1 < a i 2 < a i 3 < ... < a i k . An increasing subsequence is called longest if it has maximum length among all increasing subsequences. Nam realizes that a sequence may have several longest increasing subsequences. Hence, he divides all indexes i ( 1 ≤ i ≤ n ), into three groups: group of all i such that a i belongs to no longest increasing subsequences. group of all i such that a i belongs to at least one but not every longest increasing subsequence. group of all i such that a i belongs to every longest increasing subsequence. Since the number of longest increasing subsequences of a may be very large, categorizing process is very difficult. Your task is to help him finish this job.",
+  "input_specification": "The first line contains the single integer n ( 1 ≤ n ≤ 10 5 ) denoting the number of elements of sequence a . The second line contains n space-separated integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ).",
+  "output_specification": "Print a string consisting of n characters. i -th character should be ' 1 ', ' 2 ' or ' 3 ' depending on which group among listed above index i belongs to.",
+  "sample_testcases": [
+    {
+      "input": "1\n4",
+      "output": "3"
+    },
+    {
+      "input": "4\n1 3 2 5",
+      "output": "3223"
+    },
+    {
+      "input": "4\n1 5 2 3",
+      "output": "3133"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

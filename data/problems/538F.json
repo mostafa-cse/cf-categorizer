@@ -1,0 +1,41 @@
+{
+  "id": "538F",
+  "source": "problemset",
+  "contest_id": 538,
+  "problem_index": "F",
+  "name": "A Heap of Heaps",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "data structures",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 1894,
+  "problem_url": "https://codeforces.com/problemset/problem/538/F",
+  "editorial_url": "https://codeforces.com/blog/entry/17612",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Andrew skipped lessons on the subject 'Algorithms and Data Structures' for the entire term. When he came to the final test, the teacher decided to give him a difficult task as a punishment. The teacher gave Andrew an array of n numbers a 1 , ... , a n . After that he asked Andrew for each k from 1 to n - 1 to build a k -ary heap on the array and count the number of elements for which the property of the minimum-rooted heap is violated, i.e. the value of an element is less than the value of its parent. Andrew looked up on the Wikipedia that a k -ary heap is a rooted tree with vertices in elements of the array. If the elements of the array are indexed from 1 to n , then the children of element v are elements with indices k ( v - 1) + 2 , ... , kv + 1 (if some of these elements lie outside the borders of the array, the corresponding children are absent). In any k -ary heap every element except for the first one has exactly one parent; for the element 1 the parent is absent (this element is the root of the heap). Denote p ( v ) as the number of the parent of the element with the number v . Let's say that for a non-root element v the property of the heap is violated if a v < a p ( v ) . Help Andrew cope with the task!",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 2·10 5 ). The second line contains n space-separated integers a 1 , ... , a n ( - 10 9 ≤ a i ≤ 10 9 ).",
+  "output_specification": "in a single line print n - 1 integers, separate the consecutive numbers with a single space — the number of elements for which the property of the k -ary heap is violated, for k = 1 , 2 , ... , n - 1 .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 5 4 3 2",
+      "output": "3 2 1 0"
+    },
+    {
+      "input": "6\n2 2 2 2 2 2",
+      "output": "0 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:07",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

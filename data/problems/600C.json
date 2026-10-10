@@ -1,0 +1,40 @@
+{
+  "id": "600C",
+  "source": "problemset",
+  "contest_id": 600,
+  "problem_index": "C",
+  "name": "Make Palindrome",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 7286,
+  "problem_url": "https://codeforces.com/problemset/problem/600/C",
+  "editorial_url": "https://codeforces.com/blog/entry/21827",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A string is called palindrome if it reads the same from left to right and from right to left. For example \" kazak \", \" oo \", \" r \" and \" mikhailrubinchikkihcniburliahkim \" are palindroms, but strings \" abb \" and \" ij \" are not. You are given string s consisting of lowercase Latin letters. At once you can choose any position in the string and change letter in that position to any other lowercase letter. So after each changing the length of the string doesn't change. At first you can change some letters in s . Then you can permute the order of letters as you want. Permutation doesn't count as changes. You should obtain palindrome with the minimal number of changes. If there are several ways to do that you should get the lexicographically (alphabetically) smallest palindrome. So firstly you should minimize the number of changes and then minimize the palindrome lexicographically.",
+  "input_specification": "The only line contains string s ( 1 ≤ | s | ≤ 2·10 5 ) consisting of only lowercase Latin letters.",
+  "output_specification": "Print the lexicographically smallest palindrome that can be obtained with the minimal number of changes.",
+  "sample_testcases": [
+    {
+      "input": "aabc",
+      "output": "abba"
+    },
+    {
+      "input": "aabcd",
+      "output": "abcba"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

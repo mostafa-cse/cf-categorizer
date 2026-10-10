@@ -1,0 +1,37 @@
+{
+  "id": "2254F",
+  "source": "problemset",
+  "contest_id": 2254,
+  "problem_index": "F",
+  "name": "Whiplash",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 3610,
+  "problem_url": "https://codeforces.com/problemset/problem/2254/F",
+  "editorial_url": "https://codeforces.com/blog/entry/155666",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Yousef has given you an even integer $$$n$$$ and two arrays, $$$a$$$ and $$$b$$$, both consisting of $$$n$$$ non-negative integers. You can perform the following operation on array $$$a$$$ any number of times (possibly zero): Choose an index $$$i$$$ ($$$1 \\le i \\le n$$$). For all $$$j$$$ such that $$$1 \\le j \\le n$$$ and $$$j \\neq i$$$, replace $$$a_j$$$ with $$$a_j \\oplus a_i$$$. (Here, $$$\\oplus$$$ denotes the bitwise XOR operation ). The element $$$a_i$$$ remains unchanged. Determine whether it is possible to transform array $$$a$$$ into array $$$b$$$ using a finite number of operations.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains an even integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the length of the array. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\lt 2^{30}$$$) — the elements of the array $$$a$$$. The third line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$0 \\le b_i \\lt 2^{30}$$$) — the elements of the array $$$b$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output \" YES \" if the array $$$a$$$ can be transformed into array $$$b$$$ using a finite number of operations, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "6\n2\n1 2\n1 0\n4\n1 2 4 7\n6 7 5 3\n4\n1 2 4 8\n8 4 2 1\n4\n1 2 3 4\n1 2 4 5\n4\n1 2 0 3\n3 3 0 3\n6\n3 5 6 9 10 12\n6 5 3 12 15 9",
+      "output": "NO\nYES\nYES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "2112E",
+  "source": "problemset",
+  "contest_id": 2112,
+  "problem_index": "E",
+  "name": "Tree Colorings",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 3517,
+  "problem_url": "https://codeforces.com/problemset/problem/2112/E",
+  "editorial_url": "https://codeforces.com/blog/entry/144148",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a rooted undirected tree. Each vertex can be colored blue, green, or yellow. A coloring is called beautiful if it meets these conditions: the root of the tree is green; if you consider all blue and green vertices , they are reachable from each other without passing through any yellow vertices; if you consider all yellow and green vertices , they are reachable from each other without passing through any blue vertices; You are given an integer $$$m$$$. Your task is to calculate the minimum number of vertices in a tree with exactly $$$m$$$ beautiful colorings.",
+  "input_specification": "The first line contains a single integer ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The only line of each test case contains a single integer $$$m$$$ ($$$1 \\le m \\le 5 \\cdot 10^5$$$).",
+  "output_specification": "For each test case, print a single integer — the minimum number of vertices in a tree with exactly $$$m$$$ beautiful colorings. If such a tree does not exist, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n3\n5\n7\n9",
+      "output": "1\n2\n3\n4\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

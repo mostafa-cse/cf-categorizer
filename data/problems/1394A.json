@@ -1,0 +1,41 @@
+{
+  "id": "1394A",
+  "source": "problemset",
+  "contest_id": 1394,
+  "problem_index": "A",
+  "name": "Boboniu Chats with Du",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 7192,
+  "problem_url": "https://codeforces.com/problemset/problem/1394/A",
+  "editorial_url": "https://codeforces.com/blog/entry/81355",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Have you ever used the chat application QQ? Well, in a chat group of QQ, administrators can muzzle a user for days. In Boboniu's chat group, there's a person called Du Yi who likes to make fun of Boboniu every day. Du will chat in the group for $$$n$$$ days. On the $$$i$$$-th day: If Du can speak, he'll make fun of Boboniu with fun factor $$$a_i$$$. But after that, he may be muzzled depending on Boboniu's mood. Otherwise, Du won't do anything. Boboniu's mood is a constant $$$m$$$. On the $$$i$$$-th day: If Du can speak and $$$a_i \\gt m$$$, then Boboniu will be angry and muzzle him for $$$d$$$ days, which means that Du won't be able to speak on the $$$i+1, i+2, \\cdots, \\min(i+d,n)$$$-th days. Otherwise, Boboniu won't do anything. The total fun factor is the sum of the fun factors on the days when Du can speak. Du asked you to find the maximum total fun factor among all possible permutations of $$$a$$$.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$d$$$ and $$$m$$$ ($$$1\\le d\\le n\\le 10^5,0\\le m\\le 10^9$$$). The next line contains $$$n$$$ integers $$$a_1, a_2, \\ldots,a_n$$$ ($$$0\\le a_i\\le 10^9$$$).",
+  "output_specification": "Print one integer: the maximum total fun factor among all permutations of $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 2 11\n8 10 15 23 5",
+      "output": "48"
+    },
+    {
+      "input": "20 2 16\n20 5 8 2 18 16 2 16 16 1 5 16 2 13 6 16 4 17 21 7",
+      "output": "195"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

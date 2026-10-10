@@ -1,0 +1,37 @@
+{
+  "id": "762B",
+  "source": "problemset",
+  "contest_id": 762,
+  "problem_index": "B",
+  "name": "USB vs. PS/2",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "implementation",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 11329,
+  "problem_url": "https://codeforces.com/problemset/problem/762/B",
+  "editorial_url": "https://codeforces.com/blog/entry/50010",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Due to the increase in the number of students of Berland State University it was decided to equip a new computer room. You were given the task of buying mouses, and you have to spend as little as possible. After all, the country is in crisis! The computers bought for the room were different. Some of them had only USB ports, some — only PS/2 ports, and some had both options. You have found a price list of a certain computer shop. In it, for m mouses it is specified the cost and the type of the port that is required to plug the mouse in (USB or PS/2). Each mouse from the list can be bought at most once. You want to buy some set of mouses from the given price list in such a way so that you maximize the number of computers equipped with mouses (it is not guaranteed that you will be able to equip all of the computers), and in case of equality of this value you want to minimize the total cost of mouses you will buy.",
+  "input_specification": "The first line contains three integers a , b and c ( 0 ≤ a , b , c ≤ 10 5 )  — the number of computers that only have USB ports, the number of computers, that only have PS/2 ports, and the number of computers, that have both options, respectively. The next line contains one integer m ( 0 ≤ m ≤ 3·10 5 )  — the number of mouses in the price list. The next m lines each describe another mouse. The i -th line contains first integer val i ( 1 ≤ val i ≤ 10 9 )  — the cost of the i -th mouse, then the type of port (USB or PS/2) that is required to plug the mouse in.",
+  "output_specification": "Output two integers separated by space — the number of equipped computers and the total cost of the mouses you will buy.",
+  "sample_testcases": [
+    {
+      "input": "2 1 1\n4\n5 USB\n6 PS/2\n3 PS/2\n7 PS/2",
+      "output": "3 14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,34 @@
+{
+  "id": "163D",
+  "source": "problemset",
+  "contest_id": 163,
+  "problem_index": "D",
+  "name": "Large Refrigerator",
+  "rating": 2900,
+  "tags": [
+    "brute force"
+  ],
+  "solved_count": 593,
+  "problem_url": "https://codeforces.com/problemset/problem/163/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4187",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya wants to buy a new refrigerator. He believes that a refrigerator should be a rectangular parallelepiped with integer edge lengths. Vasya calculated that for daily use he will need a refrigerator with volume of at least V . Moreover, Vasya is a minimalist by nature, so the volume should be no more than V , either — why take up extra space in the apartment? Having made up his mind about the volume of the refrigerator, Vasya faced a new challenge — for a fixed volume of V the refrigerator must have the minimum surface area so that it is easier to clean. The volume and the surface area of a refrigerator with edges a , b , c are equal to V = abc and S = 2( ab + bc + ca ) , correspondingly. Given the volume V , help Vasya find the integer lengths for the refrigerator's edges a , b , c so that the refrigerator's volume equals V and its surface area S is minimized.",
+  "input_specification": "The first line contains a single integer t ( 1 ≤ t ≤ 500 ) — the number of data sets. The description of t data sets follows. Each set consists of a single integer V ( 2 ≤ V ≤ 10 18 ), given by its factorization as follows. Let V = p 1 a 1 p 2 a 2 ... p k a k , where p i are different prime numbers and a i are positive integer powers. Then the first line describing a data set contains a single positive integer k — the number of different prime divisors of V . Next k lines contain prime numbers p i and their powers a i , separated by spaces. All p i are different, all a i > 0 .",
+  "output_specification": "Print t lines, on the i -th line print the answer to the i -th data set as four space-separated integers: the minimum possible surface area S and the corresponding edge lengths a , b , c . If there are multiple variants of the lengths of edges that give the minimum area, you are allowed to print any of them. You can print the lengths of the fridge's edges in any order.",
+  "sample_testcases": [
+    {
+      "input": "3\n1\n2 3\n1\n17 1\n3\n3 1\n2 3\n5 1",
+      "output": "24 2 2 2\n70 1 1 17\n148 4 6 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

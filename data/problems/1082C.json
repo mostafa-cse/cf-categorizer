@@ -1,0 +1,43 @@
+{
+  "id": "1082C",
+  "source": "problemset",
+  "contest_id": 1082,
+  "problem_index": "C",
+  "name": "Multi-Subject Competition",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 6267,
+  "problem_url": "https://codeforces.com/problemset/problem/1082/C",
+  "editorial_url": "https://codeforces.com/blog/entry/63544",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A multi-subject competition is coming! The competition has $$$m$$$ different subjects participants can choose from. That's why Alex (the coach) should form a competition delegation among his students. He has $$$n$$$ candidates. For the $$$i$$$-th person he knows subject $$$s_i$$$ the candidate specializes in and $$$r_i$$$ — a skill level in his specialization (this level can be negative!). The rules of the competition require each delegation to choose some subset of subjects they will participate in. The only restriction is that the number of students from the team participating in each of the chosen subjects should be the same . Alex decided that each candidate would participate only in the subject he specializes in. Now Alex wonders whom he has to choose to maximize the total sum of skill levels of all delegates, or just skip the competition this year if every valid non-empty delegation has negative sum. (Of course, Alex doesn't have any spare money so each delegate he chooses must participate in the competition).",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^5$$$, $$$1 \\le m \\le 10^5$$$) — the number of candidates and the number of subjects. The next $$$n$$$ lines contains two integers per line: $$$s_i$$$ and $$$r_i$$$ ($$$1 \\le s_i \\le m$$$, $$$-10^4 \\le r_i \\le 10^4$$$) — the subject of specialization and the skill level of the $$$i$$$-th candidate.",
+  "output_specification": "Print the single integer — the maximum total sum of skills of delegates who form a valid delegation (according to rules above) or $$$0$$$ if every valid non-empty delegation has negative sum.",
+  "sample_testcases": [
+    {
+      "input": "6 3\n2 6\n3 6\n2 5\n3 5\n1 9\n3 1",
+      "output": "22"
+    },
+    {
+      "input": "5 3\n2 6\n3 6\n2 5\n3 5\n1 11",
+      "output": "23"
+    },
+    {
+      "input": "5 2\n1 -1\n1 -5\n2 -1\n2 -1\n1 -10",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

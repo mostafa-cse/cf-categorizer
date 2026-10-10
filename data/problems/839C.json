@@ -1,0 +1,42 @@
+{
+  "id": "839C",
+  "source": "problemset",
+  "contest_id": 839,
+  "problem_index": "C",
+  "name": "Journey",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "probabilities",
+    "trees"
+  ],
+  "solved_count": 21436,
+  "problem_url": "https://codeforces.com/problemset/problem/839/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53815",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n cities and n - 1 roads in the Seven Kingdoms, each road connects two cities and we can reach any city from any other by the roads. Theon and Yara Greyjoy are on a horse in the first city, they are starting traveling through the roads. But the weather is foggy, so they can’t see where the horse brings them. When the horse reaches a city (including the first one), it goes to one of the cities connected to the current city. But it is a strange horse, it only goes to cities in which they weren't before. In each such city, the horse goes with equal probabilities and it stops when there are no such cities. Let the length of each road be 1 . The journey starts in the city 1 . What is the expected length (expected value of length) of their journey? You can read about expected (average) value by the link https://en.wikipedia.org/wiki/Expected_value .",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 100000 ) — number of cities. Then n - 1 lines follow. The i -th line of these lines contains two integers u i and v i ( 1 ≤ u i , v i ≤ n , u i ≠ v i ) — the cities connected by the i -th road. It is guaranteed that one can reach any city from any other by the roads.",
+  "output_specification": "Print a number — the expected length of their journey. The journey starts in the city 1 . Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct, if .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n1 3\n2 4",
+      "output": "1.500000000000000"
+    },
+    {
+      "input": "5\n1 2\n1 3\n3 4\n2 5",
+      "output": "2.000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "306D",
+  "source": "problemset",
+  "contest_id": 306,
+  "problem_index": "D",
+  "name": "Polygon",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "geometry"
+  ],
+  "solved_count": 341,
+  "problem_url": "https://codeforces.com/problemset/problem/306/D",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus loves convex polygons, especially if all their angles are the same and all their sides are different. Draw for him any such polygon with the given number of vertexes.",
+  "input_specification": "The input contains a single integer n ( 3 ≤ n ≤ 100 ) — the number of the polygon vertexes.",
+  "output_specification": "Print n lines, containing the coordinates of the vertexes of the n -gon \" x i y i \" in the counter clockwise order. The coordinates of the vertexes shouldn't exceed 10 6 in their absolute value. The side lengths should fit within limits [1, 1000] (not necessarily integer). Mutual comparing sides and angles of your polygon during the test will go with precision of 10 - 3 . If there is no solution, print \"No solution\" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "8",
+      "output": "1.000 0.000\n7.000 0.000\n9.000 2.000\n9.000 3.000\n5.000 7.000\n3.000 7.000\n0.000 4.000\n0.000 1.000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "614A",
+  "source": "problemset",
+  "contest_id": 614,
+  "problem_index": "A",
+  "name": "Link/Cut Tree",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 8024,
+  "problem_url": "https://codeforces.com/problemset/problem/614/A",
+  "editorial_url": "https://codeforces.com/blog/entry/22832",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Programmer Rostislav got seriously interested in the Link/Cut Tree data structure, which is based on Splay trees. Specifically, he is now studying the expose procedure. Unfortunately, Rostislav is unable to understand the definition of this procedure, so he decided to ask programmer Serezha to help him. Serezha agreed to help if Rostislav solves a simple task (and if he doesn't, then why would he need Splay trees anyway?) Given integers l , r and k , you need to print all powers of number k within range from l to r inclusive . However, Rostislav doesn't want to spent time doing this, as he got interested in playing a network game called Agar with Gleb. Help him!",
+  "input_specification": "The first line of the input contains three space-separated integers l , r and k ( 1 ≤ l ≤ r ≤ 10 18 , 2 ≤ k ≤ 10 9 ).",
+  "output_specification": "Print all powers of number k , that lie within range from l to r in the increasing order. If there are no such numbers, print \" -1 \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "1 10 2",
+      "output": "1 2 4 8"
+    },
+    {
+      "input": "2 4 5",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

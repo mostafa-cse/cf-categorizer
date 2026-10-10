@@ -1,0 +1,41 @@
+{
+  "id": "908E",
+  "source": "problemset",
+  "contest_id": 908,
+  "problem_index": "E",
+  "name": "New Year and Entity Enumeration",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 878,
+  "problem_url": "https://codeforces.com/problemset/problem/908/E",
+  "editorial_url": "https://codeforces.com/blog/entry/56713",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer m . Let M = 2 m - 1 . You are also given a set of n integers denoted as the set T . The integers will be provided in base 2 as n binary strings of length m . A set of integers S is called \"good\" if the following hold. If , then . If , then All elements of S are less than or equal to M . Here, and refer to the bitwise XOR and bitwise AND operators, respectively. Count the number of good sets S , modulo 10 9 + 7 .",
+  "input_specification": "The first line will contain two integers m and n ( 1 ≤ m ≤ 1 000 , 1 ≤ n ≤ min (2 m , 50) ). The next n lines will contain the elements of T . Each line will contain exactly m zeros and ones. Elements of T will be distinct.",
+  "output_specification": "Print a single integer, the number of good sets modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "5 3\n11010\n00101\n11000",
+      "output": "4"
+    },
+    {
+      "input": "30 2\n010101010101010010101010101010\n110110110110110011011011011011",
+      "output": "860616440"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

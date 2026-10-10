@@ -1,0 +1,54 @@
+{
+  "id": "2025E",
+  "source": "problemset",
+  "contest_id": 2025,
+  "problem_index": "E",
+  "name": "Card Game",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "fft",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2450,
+  "problem_url": "https://codeforces.com/problemset/problem/2025/E",
+  "editorial_url": "https://codeforces.com/blog/entry/135173",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "In the most popular card game in Berland, a deck of $$$n \\times m$$$ cards is used. Each card has two parameters: suit and rank. Suits in the game are numbered from $$$1$$$ to $$$n$$$, and ranks are numbered from $$$1$$$ to $$$m$$$. There is exactly one card in the deck for each combination of suit and rank. A card with suit $$$a$$$ and rank $$$b$$$ can beat a card with suit $$$c$$$ and rank $$$d$$$ in one of two cases: $$$a = 1$$$, $$$c \\ne 1$$$ (a card of suit $$$1$$$ can beat a card of any other suit); $$$a = c$$$, $$$b \\gt d$$$ (a card can beat any other card of the same suit but of a lower rank). Two players play the game. Before the game starts, they receive exactly half of the deck each. The first player wins if for every card of the second player, he can choose his card that can beat it, and there is no card that is chosen twice (i. e. there exists a matching of the first player's cards with the second player's cards such that in each pair the first player's card beats the second player's card). Otherwise, the second player wins. Your task is to calculate the number of ways to distribute the cards so that the first player wins. Two ways are considered different if there exists a card such that in one way it belongs to the first player and in the other way it belongs to the second player. The number of ways can be very large, so print it modulo $$$998244353$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 500$$$). Additional constraint on the input: $$$m$$$ is even.",
+  "output_specification": "Print a single integer — the number of ways to distribute the cards so that the first player wins, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "1 4",
+      "output": "2"
+    },
+    {
+      "input": "2 2",
+      "output": "2"
+    },
+    {
+      "input": "3 6",
+      "output": "1690"
+    },
+    {
+      "input": "5 4",
+      "output": "568"
+    },
+    {
+      "input": "500 500",
+      "output": "84693741"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

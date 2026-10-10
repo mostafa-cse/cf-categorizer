@@ -1,0 +1,41 @@
+{
+  "id": "460E",
+  "source": "problemset",
+  "contest_id": 460,
+  "problem_index": "E",
+  "name": "Roland and Rose",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "geometry",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 416,
+  "problem_url": "https://codeforces.com/problemset/problem/460/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13465",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Roland loves growing flowers. He has recently grown a beautiful rose at point (0, 0) of the Cartesian coordinate system. The rose is so beautiful that Roland is afraid that the evil forces can try and steal it. To protect the rose, Roland wants to build n watch towers. Let's assume that a tower is a point on the plane at the distance of at most r from the rose. Besides, Roland assumes that the towers should be built at points with integer coordinates and the sum of squares of distances between all pairs of towers must be as large as possible. Note, that Roland may build several towers at the same point, also he may build some of them at point (0, 0) . Help Roland build the towers at the integer points so that the sum of squares of distances between all towers is maximum possible. Note that the distance in this problem is defined as the Euclidian distance between points.",
+  "input_specification": "The first line contains two integers, n and r (2 ≤ n ≤ 8; 1 ≤ r ≤ 30) .",
+  "output_specification": "In the first line print an integer — the maximum possible sum of squared distances. In the i -th of the following n lines print two integers, x i , y i — the coordinates of the i -th tower. Each tower must be inside or on the border of the circle with radius r . Note that there may be several towers located at the same point of the plane, also some towers can be located at point (0, 0) . If there are multiple valid optimal arrangements, choose any of them.",
+  "sample_testcases": [
+    {
+      "input": "4 1",
+      "output": "16\n0 1\n0 1\n0 -1\n0 -1"
+    },
+    {
+      "input": "3 6",
+      "output": "312\n0 6\n5 -3\n-5 -3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

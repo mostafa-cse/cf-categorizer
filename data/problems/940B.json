@@ -1,0 +1,43 @@
+{
+  "id": "940B",
+  "source": "problemset",
+  "contest_id": 940,
+  "problem_index": "B",
+  "name": "Our Tanya is Crying Out Loud",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 9629,
+  "problem_url": "https://codeforces.com/problemset/problem/940/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58033",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Right now she actually isn't. But she will be, if you don't solve this problem. You are given integers n , k , A and B . There is a number x , which is initially equal to n . You are allowed to perform two types of operations: Subtract 1 from x . This operation costs you A coins. Divide x by k . Can be performed only if x is divisible by k . This operation costs you B coins. What is the minimum amount of coins you have to pay to make x equal to 1 ?",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 2·10 9 ). The second line contains a single integer k ( 1 ≤ k ≤ 2·10 9 ). The third line contains a single integer A ( 1 ≤ A ≤ 2·10 9 ). The fourth line contains a single integer B ( 1 ≤ B ≤ 2·10 9 ).",
+  "output_specification": "Output a single integer — the minimum amount of coins you have to pay to make x equal to 1 .",
+  "sample_testcases": [
+    {
+      "input": "9\n2\n3\n1",
+      "output": "6"
+    },
+    {
+      "input": "5\n5\n2\n20",
+      "output": "8"
+    },
+    {
+      "input": "19\n3\n4\n2",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

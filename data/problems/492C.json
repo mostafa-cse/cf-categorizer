@@ -1,0 +1,39 @@
+{
+  "id": "492C",
+  "source": "problemset",
+  "contest_id": 492,
+  "problem_index": "C",
+  "name": "Vanya and Exams",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 15668,
+  "problem_url": "https://codeforces.com/problemset/problem/492/C",
+  "editorial_url": "https://codeforces.com/blog/entry/14945",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vanya wants to pass n exams and get the academic scholarship. He will get the scholarship if the average grade mark for all the exams is at least avg . The exam grade cannot exceed r . Vanya has passed the exams and got grade a i for the i -th exam. To increase the grade for the i -th exam by 1 point, Vanya must write b i essays. He can raise the exam grade multiple times. What is the minimum number of essays that Vanya needs to write to get scholarship?",
+  "input_specification": "The first line contains three integers n , r , avg ( 1 ≤ n ≤ 10 5 , 1 ≤ r ≤ 10 9 , 1 ≤ avg ≤ min ( r , 10 6 ) ) — the number of exams, the maximum grade and the required grade point average, respectively. Each of the following n lines contains space-separated integers a i and b i ( 1 ≤ a i ≤ r , 1 ≤ b i ≤ 10 6 ).",
+  "output_specification": "In the first line print the minimum number of essays.",
+  "sample_testcases": [
+    {
+      "input": "5 5 4\n5 2\n4 7\n3 1\n3 2\n2 5",
+      "output": "4"
+    },
+    {
+      "input": "2 5 4\n5 2\n5 2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

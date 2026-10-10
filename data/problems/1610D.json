@@ -1,0 +1,41 @@
+{
+  "id": "1610D",
+  "source": "problemset",
+  "contest_id": 1610,
+  "problem_index": "D",
+  "name": "Not Quite Lee",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3158,
+  "problem_url": "https://codeforces.com/problemset/problem/1610/D",
+  "editorial_url": "https://codeforces.com/blog/entry/97179",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Lee couldn't sleep lately, because he had nightmares. In one of his nightmares (which was about an unbalanced global round), he decided to fight back and propose a problem below (which you should solve) to balance the round, hopefully setting him free from the nightmares. A non-empty array $$$b_1, b_2, \\ldots, b_m$$$ is called good , if there exist $$$m$$$ integer sequences which satisfy the following properties: The $$$i$$$-th sequence consists of $$$b_i$$$ consecutive integers (for example if $$$b_i = 3$$$ then the $$$i$$$-th sequence can be $$$(-1, 0, 1)$$$ or $$$(-5, -4, -3)$$$ but not $$$(0, -1, 1)$$$ or $$$(1, 2, 3, 4)$$$). Assuming the sum of integers in the $$$i$$$-th sequence is $$$sum_i$$$, we want $$$sum_1 + sum_2 + \\ldots + sum_m$$$ to be equal to $$$0$$$. You are given an array $$$a_1, a_2, \\ldots, a_n$$$. It has $$$2^n - 1$$$ nonempty subsequences. Find how many of them are good . As this number can be very large, output it modulo $$$10^9 + 7$$$. An array $$$c$$$ is a subsequence of an array $$$d$$$ if $$$c$$$ can be obtained from $$$d$$$ by deletion of several (possibly, zero or all) elements.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the size of array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — elements of the array.",
+  "output_specification": "Print a single integer — the number of nonempty good subsequences of $$$a$$$, modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 2 4 7",
+      "output": "10"
+    },
+    {
+      "input": "10\n12391240 103904 1000000000 4142834 12039 142035823 1032840 49932183 230194823 984293123",
+      "output": "996"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

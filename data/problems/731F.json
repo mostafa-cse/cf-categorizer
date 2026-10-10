@@ -1,0 +1,42 @@
+{
+  "id": "731F",
+  "source": "problemset",
+  "contest_id": 731,
+  "problem_index": "F",
+  "name": "Video Cards",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "data structures",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3210,
+  "problem_url": "https://codeforces.com/problemset/problem/731/F",
+  "editorial_url": "https://codeforces.com/blog/entry/47840",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little Vlad is fond of popular computer game Bota-2. Recently, the developers announced the new add-on named Bota-3. Of course, Vlad immediately bought only to find out his computer is too old for the new game and needs to be updated. There are n video cards in the shop, the power of the i -th video card is equal to integer value a i . As Vlad wants to be sure the new game will work he wants to buy not one, but several video cards and unite their powers using the cutting-edge technology. To use this technology one of the cards is chosen as the leading one and other video cards are attached to it as secondary. For this new technology to work it's required that the power of each of the secondary video cards is divisible by the power of the leading video card. In order to achieve that the power of any secondary video card can be reduced to any integer value less or equal than the current power. However, the power of the leading video card should remain unchanged, i.e. it can't be reduced. Vlad has an infinite amount of money so he can buy any set of video cards. Help him determine which video cards he should buy such that after picking the leading video card and may be reducing some powers of others to make them work together he will get the maximum total value of video power.",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 200 000 ) — the number of video cards in the shop. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 200 000 ) — powers of video cards.",
+  "output_specification": "The only line of the output should contain one integer value — the maximum possible total power of video cards working together.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 2 15 9",
+      "output": "27"
+    },
+    {
+      "input": "4\n8 2 2 7",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

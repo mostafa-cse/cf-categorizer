@@ -1,0 +1,40 @@
+{
+  "id": "690C2",
+  "source": "problemset",
+  "contest_id": 690,
+  "problem_index": "C2",
+  "name": "Brain Network (medium)",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 5203,
+  "problem_url": "https://codeforces.com/problemset/problem/690/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/45628",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Further research on zombie thought processes yielded interesting results. As we know from the previous problem, the nervous system of a zombie consists of n brains and m brain connectors joining some pairs of brains together. It was observed that the intellectual abilities of a zombie depend mainly on the topology of its nervous system. More precisely, we define the distance between two brains u and v ( 1 ≤ u , v ≤ n ) as the minimum number of brain connectors used when transmitting a thought between these two brains. The brain latency of a zombie is defined to be the maximum distance between any two of its brains. Researchers conjecture that the brain latency is the crucial parameter which determines how smart a given zombie is. Help them test this conjecture by writing a program to compute brain latencies of nervous systems. In this problem you may assume that any nervous system given in the input is valid, i.e., it satisfies conditions (1) and (2) from the easy version.",
+  "input_specification": "The first line of the input contains two space-separated integers n and m ( 1 ≤ n , m ≤ 100000 ) denoting the number of brains (which are conveniently numbered from 1 to n ) and the number of brain connectors in the nervous system, respectively. In the next m lines, descriptions of brain connectors follow. Every connector is given as a pair of brains a b it connects ( 1 ≤ a , b ≤ n and a ≠ b ).",
+  "output_specification": "Print one number – the brain latency.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n1 2\n1 3\n1 4",
+      "output": "2"
+    },
+    {
+      "input": "5 4\n1 2\n2 3\n3 4\n3 5",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

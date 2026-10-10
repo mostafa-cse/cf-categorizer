@@ -1,0 +1,36 @@
+{
+  "id": "526C",
+  "source": "problemset",
+  "contest_id": 526,
+  "problem_index": "C",
+  "name": "Om Nom and Candies",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2697,
+  "problem_url": "https://codeforces.com/problemset/problem/526/C",
+  "editorial_url": "https://codeforces.com/blog/entry/17281",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A sweet little monster Om Nom loves candies very much. One day he found himself in a rather tricky situation that required him to think a bit in order to enjoy candies the most. Would you succeed with the same task if you were on his place? One day, when he came to his friend Evan, Om Nom didn't find him at home but he found two bags with candies. The first was full of blue candies and the second bag was full of red candies. Om Nom knows that each red candy weighs W r grams and each blue candy weighs W b grams. Eating a single red candy gives Om Nom H r joy units and eating a single blue candy gives Om Nom H b joy units. Candies are the most important thing in the world, but on the other hand overeating is not good. Om Nom knows if he eats more than C grams of candies, he will get sick. Om Nom thinks that it isn't proper to leave candy leftovers, so he can only eat a whole candy. Om Nom is a great mathematician and he quickly determined how many candies of what type he should eat in order to get the maximum number of joy units. Can you repeat his achievement? You can assume that each bag contains more candies that Om Nom can eat.",
+  "input_specification": "The single line contains five integers C , H r , H b , W r , W b ( 1 ≤ C , H r , H b , W r , W b ≤ 10 9 ).",
+  "output_specification": "Print a single integer — the maximum number of joy units that Om Nom can get.",
+  "sample_testcases": [
+    {
+      "input": "10 3 5 2 3",
+      "output": "16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:11",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

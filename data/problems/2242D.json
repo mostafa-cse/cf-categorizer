@@ -1,0 +1,35 @@
+{
+  "id": "2242D",
+  "source": "problemset",
+  "contest_id": 2242,
+  "problem_index": "D",
+  "name": "Two Digit Strings",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 8358,
+  "problem_url": "https://codeforces.com/problemset/problem/2242/D",
+  "editorial_url": "https://codeforces.com/blog/entry/155047",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given two strings $$$a$$$ and $$$b$$$, consisting only of digits. In one operation, you can choose two adjacent characters in either of these two strings and replace them with their sum modulo $$$10$$$. For example, from the string $$$57246$$$ you can obtain the following strings in one operation: $$$\\mathbf{57}246 \\rightarrow 2246$$$; $$$5\\mathbf{72}46 \\rightarrow 5946$$$; $$$57\\mathbf{24}6 \\rightarrow 5766$$$; $$$572\\mathbf{46} \\rightarrow 5720$$$; Note that after such an operation, the length of the string always decreases by exactly $$$1$$$. You can perform any number of such operations (even zero). You have to make these strings equal ($$$|a| = |b|$$$ and $$$a_i = b_i$$$ for all $$$i$$$ from $$$1$$$ to $$$|a|$$$). Calculate the maximum possible length of the resulting equal strings.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^3$$$) — the number of test cases. The first line of each test case contains a string $$$a$$$ ($$$1 \\le |a| \\le 5 \\cdot 10^3$$$), consisting only of digits. The second line of each test case contains a string $$$b$$$ ($$$1 \\le |b| \\le 5 \\cdot 10^3$$$), consisting only of digits. Additional constraint on the input: $$$\\sum (|a| + |b|) $$$ across all test cases does not exceed $$$10^4$$$.",
+  "output_specification": "For each test case, print one integer — the maximum possible length of the resulting equal strings. If you can't make the strings equal, print -1 .",
+  "sample_testcases": [
+    {
+      "input": "3\n5147\n44441\n2194\n5602\n123450\n012345",
+      "output": "2\n-1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

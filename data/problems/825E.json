@@ -1,0 +1,45 @@
+{
+  "id": "825E",
+  "source": "problemset",
+  "contest_id": 825,
+  "problem_index": "E",
+  "name": "Minimal Labels",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 4561,
+  "problem_url": "https://codeforces.com/problemset/problem/825/E",
+  "editorial_url": "https://codeforces.com/blog/entry/53334",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a directed acyclic graph with n vertices and m edges. There are no self-loops or multiple edges between any pair of vertices. Graph can be disconnected. You should assign labels to all vertices in such a way that: Labels form a valid permutation of length n — an integer sequence such that each integer from 1 to n appears exactly once in it. If there exists an edge from vertex v to vertex u then label v should be smaller than label u . Permutation should be lexicographically smallest among all suitable. Find such sequence of labels to satisfy all the conditions.",
+  "input_specification": "The first line contains two integer numbers n , m ( 2 ≤ n ≤ 10 5 , 1 ≤ m ≤ 10 5 ). Next m lines contain two integer numbers v and u ( 1 ≤ v , u ≤ n , v ≠ u ) — edges of the graph. Edges are directed, graph doesn't contain loops or multiple edges.",
+  "output_specification": "Print n numbers — lexicographically smallest correct permutation of labels of vertices.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n1 3\n3 2",
+      "output": "1 3 2"
+    },
+    {
+      "input": "4 5\n3 1\n4 1\n2 3\n3 4\n2 4",
+      "output": "4 1 2 3"
+    },
+    {
+      "input": "5 4\n3 1\n2 1\n2 3\n4 5",
+      "output": "3 1 2 4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

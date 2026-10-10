@@ -1,0 +1,44 @@
+{
+  "id": "448C",
+  "source": "problemset",
+  "contest_id": 448,
+  "problem_index": "C",
+  "name": "Painting Fence",
+  "rating": 1900,
+  "tags": [
+    "divide and conquer",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 11275,
+  "problem_url": "https://codeforces.com/problemset/problem/448/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13042",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Bizon the Champion isn't just attentive, he also is very hardworking. Bizon the Champion decided to paint his old fence his favorite color, orange. The fence is represented as n vertical planks, put in a row. Adjacent planks have no gap between them. The planks are numbered from the left to the right starting from one, the i -th plank has the width of 1 meter and the height of a i meters. Bizon the Champion bought a brush in the shop, the brush's width is 1 meter. He can make vertical and horizontal strokes with the brush. During a stroke the brush's full surface must touch the fence at all the time (see the samples for the better understanding). What minimum number of strokes should Bizon the Champion do to fully paint the fence? Note that you are allowed to paint the same area of the fence multiple times.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 5000) — the number of fence planks. The second line contains n space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) .",
+  "output_specification": "Print a single integer — the minimum number of strokes needed to paint the whole fence.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 2 1 2 1",
+      "output": "3"
+    },
+    {
+      "input": "2\n2 2",
+      "output": "2"
+    },
+    {
+      "input": "1\n5",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

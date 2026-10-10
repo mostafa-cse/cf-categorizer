@@ -1,0 +1,45 @@
+{
+  "id": "551B",
+  "source": "problemset",
+  "contest_id": 551,
+  "problem_index": "B",
+  "name": "ZgukistringZ",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 4092,
+  "problem_url": "https://codeforces.com/problemset/problem/551/B",
+  "editorial_url": "https://codeforces.com/blog/entry/18508",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Professor GukiZ doesn't accept string as they are. He likes to swap some letters in string to obtain a new one. GukiZ has strings a , b , and c . He wants to obtain string k by swapping some letters in a , so that k should contain as many non-overlapping substrings equal either to b or c as possible. Substring of string x is a string formed by consecutive segment of characters from x . Two substrings of string x overlap if there is position i in string x occupied by both of them. GukiZ was disappointed because none of his students managed to solve the problem. Can you help them and find one of possible strings k ?",
+  "input_specification": "The first line contains string a , the second line contains string b , and the third line contains string c ( 1 ≤ | a |, | b |, | c | ≤ 10 5 , where | s | denotes the length of string s ). All three strings consist only of lowercase English letters. It is possible that b and c coincide.",
+  "output_specification": "Find one of possible strings k , as described in the problem statement. If there are multiple possible answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "aaa\na\nb",
+      "output": "aaa"
+    },
+    {
+      "input": "pozdravstaklenidodiri\nniste\ndobri",
+      "output": "nisteaadddiiklooprrvz"
+    },
+    {
+      "input": "abbbaaccca\nab\naca",
+      "output": "ababacabcc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

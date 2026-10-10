@@ -1,0 +1,42 @@
+{
+  "id": "992C",
+  "source": "problemset",
+  "contest_id": 992,
+  "problem_index": "C",
+  "name": "Nastya and a Wardrobe",
+  "rating": 1600,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 4899,
+  "problem_url": "https://codeforces.com/problemset/problem/992/C",
+  "editorial_url": "https://codeforces.com/blog/entry/60083",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Nastya received a gift on New Year — a magic wardrobe. It is magic because in the end of each month the number of dresses in it doubles (i.e. the number of dresses becomes twice as large as it is in the beginning of the month). Unfortunately, right after the doubling the wardrobe eats one of the dresses (if any) with the 50% probability. It happens every month except the last one in the year. Nastya owns x dresses now, so she became interested in the expected number of dresses she will have in one year. Nastya lives in Byteland, so the year lasts for k + 1 months. Nastya is really busy, so she wants you to solve this problem. You are the programmer, after all. Also, you should find the answer modulo 10 9 + 7 , because it is easy to see that it is always integer.",
+  "input_specification": "The only line contains two integers x and k ( 0 ≤ x , k ≤ 10 18 ), where x is the initial number of dresses and k + 1 is the number of months in a year in Byteland.",
+  "output_specification": "In the only line print a single integer — the expected number of dresses Nastya will own one year later modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2 0",
+      "output": "4"
+    },
+    {
+      "input": "2 1",
+      "output": "7"
+    },
+    {
+      "input": "3 2",
+      "output": "21"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:20",
+  "main_topic": "Math",
+  "subtopic": "Probabilities and Expected Values",
+  "subsubtopic": "393. Probabilities and Expected Values",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Probabilities and Expected Values paradigm under the Math framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

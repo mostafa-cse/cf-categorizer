@@ -1,0 +1,40 @@
+{
+  "id": "354A",
+  "source": "problemset",
+  "contest_id": 354,
+  "problem_index": "A",
+  "name": "Vasya and Robot",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 5688,
+  "problem_url": "https://codeforces.com/problemset/problem/354/A",
+  "editorial_url": "https://codeforces.com/blog/entry/8672",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has n items lying in a line. The items are consecutively numbered by numbers from 1 to n in such a way that the leftmost item has number 1 , the rightmost item has number n . Each item has a weight, the i -th item weights w i kilograms. Vasya needs to collect all these items, however he won't do it by himself. He uses his brand new robot. The robot has two different arms — the left one and the right one. The robot can consecutively perform the following actions: Take the leftmost item with the left hand and spend w i · l energy units ( w i is a weight of the leftmost item, l is some parameter). If the previous action was the same (left-hand), then the robot spends extra Q l energy units; Take the rightmost item with the right hand and spend w j · r energy units ( w j is a weight of the rightmost item, r is some parameter). If the previous action was the same (right-hand), then the robot spends extra Q r energy units; Naturally, Vasya wants to program the robot in a way that the robot spends as little energy as possible. He asked you to solve this problem. Your task is to find the minimum number of energy units robot spends to collect all items.",
+  "input_specification": "The first line contains five integers n , l , r , Q l , Q r (1 ≤ n ≤ 10 5 ; 1 ≤ l , r ≤ 100; 1 ≤ Q l , Q r ≤ 10 4 ) . The second line contains n integers w 1 , w 2 , ..., w n (1 ≤ w i ≤ 100) .",
+  "output_specification": "In the single line print a single number — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3 4 4 19 1\n42 3 99",
+      "output": "576"
+    },
+    {
+      "input": "4 7 2 3 9\n1 2 3 4",
+      "output": "34"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

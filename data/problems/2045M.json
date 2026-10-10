@@ -1,0 +1,45 @@
+{
+  "id": "2045M",
+  "source": "problemset",
+  "contest_id": 2045,
+  "problem_index": "M",
+  "name": "Mirror Maze",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 2407,
+  "problem_url": "https://codeforces.com/problemset/problem/2045/M",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2024/raRzKDJLPHcUnqTcwvGznwEdKiDWjEkd.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given a grid of $$$R$$$ rows (numbered from $$$1$$$ to $$$R$$$ from north to south) and $$$C$$$ columns (numbered from $$$1$$$ to $$$C$$$ from west to east). Every cell in this grid is a square of the same size. The cell located at row $$$r$$$ and column $$$c$$$ is denoted as $$$(r, c)$$$. Each cell can either be empty or have a mirror in one of the cell's diagonals. Each mirror is represented by a line segment. The mirror is type $$$1$$$ if it is positioned diagonally from the southwest corner to the northeast corner of the cell, or type $$$2$$$ for the other diagonal. These mirrors follow the law of reflection, that is, the angle of reflection equals the angle of incidence. Formally, for type $$$1$$$ mirror, if a beam of light comes from the north, south, west, or east of the cell, then it will be reflected to the west, east, north, and south of the cell, respectively. Similarly, for type $$$2$$$ mirror, if a beam of light comes from the north, south, west, or east of the cell, then it will be reflected to the east, west, south, and north of the cell, respectively. You want to put a laser from outside the grid such that all mirrors are hit by the laser beam. There are $$$2 \\cdot (R+C)$$$ possible locations to put the laser: from the north side of the grid at column $$$c$$$, for $$$1 \\leq c \\leq C$$$, shooting a laser beam to the south; from the south side of the grid at column $$$c$$$, for $$$1 \\leq c \\leq C$$$, shooting a laser beam to the north; from the east side of the grid at row $$$r$$$, for $$$1 \\leq r \\leq R$$$, shooting a laser beam to the west; and from the west side of the grid at row $$$r$$$, for $$$1 \\leq r \\leq R$$$, shooting a laser beam to the east. Determine all possible locations for the laser such that all mirrors are hit by the laser beam.",
+  "input_specification": "The first line consists of two integers $$$R$$$ $$$C$$$ ($$$1 \\leq R, C \\leq 200$$$). Each of the next $$$R$$$ lines consists of a string $$$S_r$$$ of length $$$C$$$. The $$$c$$$-th character of string $$$S_r$$$ represents cell $$$(r, c)$$$. Each character can either be . if the cell is empty, / if the cell has type $$$1$$$ mirror, or \\ if the cell has type $$$2$$$ mirror. There is at least one mirror in the grid.",
+  "output_specification": "Output a single integer representing the number of possible locations for the laser such that all mirrors are hit by the laser beam. Denote this number as $$$k$$$. If $$$k \\gt 0$$$, then output $$$k$$$ space-separated strings representing the location of the laser. Each string consists of a character followed without any space by an integer. The character represents the side of the grid, which could be N , S , E , or W if you put the laser on the north, south, east, or west side of the grid, respectively. The integer represents the row/column number. You can output the strings in any order.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n.//.\n.\\\\.\n.\\/.\n....",
+      "output": "2\nN3 W2"
+    },
+    {
+      "input": "4 6\n./..\\.\n.\\...\\\n./../\\\n......",
+      "output": "2\nE3 S2"
+    },
+    {
+      "input": "4 4\n....\n./\\.\n.\\/.\n....",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:41",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

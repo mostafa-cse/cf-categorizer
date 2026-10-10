@@ -1,0 +1,38 @@
+{
+  "id": "325A",
+  "source": "problemset",
+  "contest_id": 325,
+  "problem_index": "A",
+  "name": "Square and Rectangles",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2325,
+  "problem_url": "https://codeforces.com/problemset/problem/325/A",
+  "editorial_url": "https://codeforces.com/blog/entry/8353",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given n rectangles. The corners of rectangles have integer coordinates and their edges are parallel to the Ox and Oy axes. The rectangles may touch each other, but they do not overlap (that is, there are no points that belong to the interior of more than one rectangle). Your task is to determine if the rectangles form a square. In other words, determine if the set of points inside or on the border of at least one rectangle is precisely equal to the set of points inside or on the border of some square.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 5 ). Next n lines contain four integers each, describing a single rectangle: x 1 , y 1 , x 2 , y 2 ( 0 ≤ x 1 < x 2 ≤ 31400, 0 ≤ y 1 < y 2 ≤ 31400 ) — x 1 and x 2 are x -coordinates of the left and right edges of the rectangle, and y 1 and y 2 are y -coordinates of the bottom and top edges of the rectangle. No two rectangles overlap (that is, there are no points that belong to the interior of more than one rectangle).",
+  "output_specification": "In a single line print \" YES \", if the given rectangles form a square, or \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 0 2 3\n0 3 3 5\n2 0 5 2\n3 2 5 5\n2 2 3 3",
+      "output": "YES"
+    },
+    {
+      "input": "4\n0 0 2 3\n0 3 3 5\n2 0 5 2\n3 2 5 5",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "933D",
+  "source": "problemset",
+  "contest_id": 933,
+  "problem_index": "D",
+  "name": "A Creative Cutout",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 403,
+  "problem_url": "https://codeforces.com/problemset/problem/933/D",
+  "editorial_url": "https://codeforces.com/blog/entry/57763",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Everything red frightens Nian the monster. So do red paper and... you, red on Codeforces, potential or real. Big Banban has got a piece of paper with endless lattice points, where lattice points form squares with the same area. His most favorite closed shape is the circle because of its beauty and simplicity. Once he had obtained this piece of paper, he prepares it for paper-cutting. He drew n concentric circles on it and numbered these circles from 1 to n such that the center of each circle is the same lattice point and the radius of the k -th circle is times the length of a lattice edge. Define the degree of beauty of a lattice point as the summation of the indices of circles such that this lattice point is inside them, or on their bounds. Banban wanted to ask you the total degree of beauty of all the lattice points, but changed his mind. Defining the total degree of beauty of all the lattice points on a piece of paper with n circles as f ( n ) , you are asked to figure out .",
+  "input_specification": "The first line contains one integer m (1 ≤ m ≤ 10 12 ) .",
+  "output_specification": "In the first line print one integer representing .",
+  "sample_testcases": [
+    {
+      "input": "5",
+      "output": "387"
+    },
+    {
+      "input": "233",
+      "output": "788243189"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

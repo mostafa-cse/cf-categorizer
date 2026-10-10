@@ -1,0 +1,36 @@
+{
+  "id": "1830D",
+  "source": "problemset",
+  "contest_id": 1830,
+  "problem_index": "D",
+  "name": "Mex Tree",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 1023,
+  "problem_url": "https://codeforces.com/problemset/problem/1830/D",
+  "editorial_url": "https://codeforces.com/blog/entry/116527",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree with $$$n$$$ nodes. For each node, you either color it in $$$0$$$ or $$$1$$$. The value of a path $$$(u,v)$$$ is equal to the MEX$$$^\\dagger$$$ of the colors of the nodes from the shortest path between $$$u$$$ and $$$v$$$. The value of a coloring is equal to the sum of values of all paths $$$(u,v)$$$ such that $$$1 \\leq u \\leq v \\leq n$$$. What is the maximum possible value of any coloring of the tree? $$$^{\\dagger}$$$ The MEX (minimum excluded) of an array is the smallest non-negative integer that does not belong to the array. For instance: The MEX of $$$[2,2,1]$$$ is $$$0$$$, because $$$0$$$ does not belong to the array. The MEX of $$$[3,1,0,1]$$$ is $$$2$$$, because $$$0$$$ and $$$1$$$ belong to the array, but $$$2$$$ does not. The MEX of $$$[0,3,1,2]$$$ is $$$4$$$ because $$$0$$$, $$$1$$$, $$$2$$$, and $$$3$$$ belong to the array, but $$$4$$$ does not.",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of nodes in the tree. The following $$$n-1$$$ lines of each test case contains $$$2$$$ integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\leq a_i, b_i \\leq n, a_i \\neq b_i$$$) — indicating an edge between vertices $$$a_i$$$ and $$$b_i$$$. It is guaranteed that the given edges form a tree. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print the maximum possible value of any coloring of the tree.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n1 2\n2 3\n4\n1 2\n1 3\n1 4\n10\n1 2\n1 3\n3 4\n3 5\n1 6\n5 7\n2 8\n6 9\n6 10\n1",
+      "output": "8\n15\n96\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

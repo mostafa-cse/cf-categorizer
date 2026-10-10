@@ -1,0 +1,43 @@
+{
+  "id": "290B",
+  "source": "problemset",
+  "contest_id": 290,
+  "problem_index": "B",
+  "name": "QR code",
+  "rating": 1500,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 2639,
+  "problem_url": "https://codeforces.com/problemset/problem/290/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7216",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "",
+  "input_specification": "The input contains two integers a 1 , a 2 ( 0 ≤ a i ≤ 32 ), separated by a single space.",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "0"
+    },
+    {
+      "input": "3 7",
+      "output": "0"
+    },
+    {
+      "input": "13 10",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

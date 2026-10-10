@@ -1,0 +1,38 @@
+{
+  "id": "2219B1",
+  "source": "problemset",
+  "contest_id": 2219,
+  "problem_index": "B1",
+  "name": "Unique Values (Easy version)",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "divide and conquer",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 4415,
+  "problem_url": "https://codeforces.com/problemset/problem/2219/B1",
+  "editorial_url": "https://codeforces.com/blog/entry/152936",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The difference between the easy version and hard version is the maximum number of queries allowed. In this version, it is 66. There is a secret array $$$a$$$ of length $$$2n+1$$$, whose elements are integers from $$$1$$$ to $$$n$$$. Each value appears exactly twice, except for one value, which appears exactly three times. Your goal is to find the three positions of the value that appears three times. To do this, you may ask the following query at most 66 times: Choose an integer $$$k$$$ and an array $$$s$$$ of $$$k$$$ distinct indices between $$$1$$$ and $$$2n+1$$$. You will receive the number of different values among $$$a_{s_1}, a_{s_2}, \\ldots, a_{s_k}$$$ that appear exactly once, or, in other words, the count of values that are not repeated. For example, if the values $$$a_{s_1}, \\ldots, a_{s_k}$$$ are $$$\\{2, 1, 2, 3, 2, 3, 6, 7\\}$$$, the answer to the query will be 3, as 1, 6, 7 are the only values that appear exactly once. 3 appears 2 times and 2 appears 3 times, which is more than once, so they are not counted.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 500$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 1000$$$). The array $$$a$$$ is fixed for the test case and does not change during the interaction. In other words, the interactor is not adaptive . It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^4$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "1\n2\n\n0\n\n2\n\n2\n\n0\n\n1",
+      "output": "? 2 1 2\n\n? 2 1 4\n\n? 2 1 5\n\n? 5 1 2 3 4 5\n\n? 4 1 2 3 4\n\n! 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:29",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

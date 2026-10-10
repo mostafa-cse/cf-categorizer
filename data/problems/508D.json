@@ -1,0 +1,43 @@
+{
+  "id": "508D",
+  "source": "problemset",
+  "contest_id": 508,
+  "problem_index": "D",
+  "name": "Tanya and Password",
+  "rating": 2500,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 4602,
+  "problem_url": "https://codeforces.com/problemset/problem/508/D",
+  "editorial_url": "https://codeforces.com/blog/entry/16035",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While dad was at work, a little girl Tanya decided to play with dad's password to his secret database. Dad's password is a string consisting of n + 2 characters. She has written all the possible n three-letter continuous substrings of the password on pieces of paper, one for each piece of paper, and threw the password out. Each three-letter substring was written the number of times it occurred in the password. Thus, Tanya ended up with n pieces of paper. Then Tanya realized that dad will be upset to learn about her game and decided to restore the password or at least any string corresponding to the final set of three-letter strings. You have to help her in this difficult task. We know that dad's password consisted of lowercase and uppercase letters of the Latin alphabet and digits. Uppercase and lowercase letters of the Latin alphabet are considered distinct.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 2·10 5 ), the number of three-letter substrings Tanya got. Next n lines contain three letters each, forming the substring of dad's password. Each character in the input is a lowercase or uppercase Latin letter or a digit.",
+  "output_specification": "If Tanya made a mistake somewhere during the game and the strings that correspond to the given set of substrings don't exist, print \" NO \". If it is possible to restore the string that corresponds to given set of substrings, print \" YES \", and then print any suitable password option.",
+  "sample_testcases": [
+    {
+      "input": "5\naca\naba\naba\ncab\nbac",
+      "output": "YES\nabacaba"
+    },
+    {
+      "input": "4\nabc\nbCb\ncb1\nb13",
+      "output": "NO"
+    },
+    {
+      "input": "7\naaa\naaa\naaa\naaa\naaa\naaa\naaa",
+      "output": "YES\naaaaaaaaa"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

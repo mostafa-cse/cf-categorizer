@@ -1,0 +1,39 @@
+{
+  "id": "500F",
+  "source": "problemset",
+  "contest_id": 500,
+  "problem_index": "F",
+  "name": "New Year Shopping",
+  "rating": 2700,
+  "tags": [
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 886,
+  "problem_url": "https://codeforces.com/problemset/problem/500/F",
+  "editorial_url": "https://codeforces.com/blog/entry/15513",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Dohyun is running a grocery store. He sells n items numbered by integers from 1 to n . The i -th ( 1 ≤ i ≤ n ) of them costs c i dollars, and if I buy it, my happiness increases by h i . Each item can be displayed only for p units of time because of freshness. As Dohyun displays the i -th item at time t i , the customers can buy the i -th item only from time t i to time t i + ( p - 1) inclusively. Also, each customer cannot buy the same item more than once. I'd like to visit Dohyun's grocery store and buy some items for the New Year Party, and maximize my happiness. Because I am a really busy person, I can visit the store only once, and for very short period of time. In other words, if I visit the store at time t , I can only buy the items available at time t . But I can buy as many items as possible, if the budget holds. I can't buy same item several times due to store rules. It is not necessary to use the whole budget. I made a list of q pairs of integers ( a j , b j ) , which means I may visit the store at time a j , and spend at most b j dollars at the store. For each pair, I'd like to know the maximum happiness I can obtain. But there are so many pairs that I can't handle them. Can you help me?",
+  "input_specification": "The first line contains two space-separated integers n and p ( 1 ≤ n ≤ 4000 , 1 ≤ p ≤ 10 000 ) — the number of items, and the display time of each item. Next n lines describe the items. The i -th ( 1 ≤ i ≤ n ) of them contains three space-separated integers c i , h i , t i ( 1 ≤ c i , h i ≤ 4000 , 1 ≤ t i ≤ 10 000 ) — the cost of the i -th item, the happiness of the i -th item, and the time when the i -th item starts to be displayed. The next line contains an integer q ( 1 ≤ q ≤ 20 000 )— the number of candidates. Next q lines describe the candidates. The j -th ( 1 ≤ j ≤ q ) of them contains two space-separated integers a j , b j ( 1 ≤ a j ≤ 20 000 , 1 ≤ b j ≤ 4000 ) — the visit time and the budget for j -th visit of store.",
+  "output_specification": "For each candidate, print a single line containing the maximum happiness that I can obtain by buying some items.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n2 3 2\n3 5 1\n4 7 2\n11 15 5\n4\n1 3\n2 5\n2 6\n5 14",
+      "output": "5\n8\n10\n18"
+    },
+    {
+      "input": "5 4\n3 2 1\n7 4 4\n2 1 2\n6 3 5\n3 2 2\n10\n1 5\n2 5\n4 8\n4 9\n4 10\n5 8\n5 9\n5 10\n8 4\n7 9",
+      "output": "2\n3\n5\n5\n6\n4\n5\n6\n0\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

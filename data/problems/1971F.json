@@ -1,0 +1,39 @@
+{
+  "id": "1971F",
+  "source": "problemset",
+  "contest_id": 1971,
+  "problem_index": "F",
+  "name": "Circle Perimeter",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dfs and similar",
+    "geometry",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 12969,
+  "problem_url": "https://codeforces.com/problemset/problem/1971/F",
+  "editorial_url": "https://codeforces.com/blog/entry/129364",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Given an integer $$$r$$$, find the number of lattice points that have a Euclidean distance from $$$(0, 0)$$$ greater than or equal to $$$r$$$ but strictly less than $$$r+1$$$. A lattice point is a point with integer coordinates. The Euclidean distance from $$$(0, 0)$$$ to the point $$$(x,y)$$$ is $$$\\sqrt{x^2 + y^2}$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. The only line of each test case contains a single integer $$$r$$$ ($$$1 \\leq r \\leq 10^5$$$). The sum of $$$r$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the number of lattice points that have an Euclidean distance $$$d$$$ from $$$(0, 0)$$$ such that $$$r \\leq d \\lt r+1$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n1\n2\n3\n4\n5\n1984",
+      "output": "8\n16\n20\n24\n40\n12504"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:10",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

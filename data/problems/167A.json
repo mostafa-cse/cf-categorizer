@@ -1,0 +1,39 @@
+{
+  "id": "167A",
+  "source": "problemset",
+  "contest_id": 167,
+  "problem_index": "A",
+  "name": "Wizards and Trolleybuses",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2216,
+  "problem_url": "https://codeforces.com/problemset/problem/167/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4214",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "In some country live wizards. They love to ride trolleybuses. A city in this country has a trolleybus depot with n trolleybuses. Every day the trolleybuses leave the depot, one by one and go to the final station. The final station is at a distance of d meters from the depot. We know for the i -th trolleybus that it leaves at the moment of time t i seconds, can go at a speed of no greater than v i meters per second, and accelerate with an acceleration no greater than a meters per second squared. A trolleybus can decelerate as quickly as you want (magic!). It can change its acceleration as fast as you want, as well. Note that the maximum acceleration is the same for all trolleys. Despite the magic the trolleys are still powered by an electric circuit and cannot overtake each other (the wires are to blame, of course). If a trolleybus catches up with another one, they go together one right after the other until they arrive at the final station. Also, the drivers are driving so as to arrive at the final station as quickly as possible. You, as head of the trolleybuses' fans' club, are to determine for each trolley the minimum time by which it can reach the final station. At the time of arrival at the destination station the trolleybus does not necessarily have zero speed. When a trolley is leaving the depot, its speed is considered equal to zero. From the point of view of physics, the trolleybuses can be considered as material points, and also we should ignore the impact on the speed of a trolley bus by everything, except for the acceleration and deceleration provided by the engine.",
+  "input_specification": "The first input line contains three space-separated integers n , a , d ( 1 ≤ n ≤ 10 5 , 1 ≤ a , d ≤ 10 6 ) — the number of trolleybuses, their maximum acceleration and the distance from the depot to the final station, correspondingly. Next n lines contain pairs of integers t i v i ( 0 ≤ t 1 < t 2 ... < t n - 1 < t n ≤ 10 6 , 1 ≤ v i ≤ 10 6 ) — the time when the i -th trolleybus leaves the depot and its maximum speed, correspondingly. The numbers in the lines are separated by spaces.",
+  "output_specification": "For each trolleybus print a single line the time it arrives to the final station. Print the times for the trolleybuses in the order in which the trolleybuses are given in the input. The answer will be accepted if the absolute or relative error doesn't exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "3 10 10000\n0 10\n5 11\n1000 1",
+      "output": "1000.5000000000\n1000.5000000000\n11000.0500000000"
+    },
+    {
+      "input": "1 2 26\n28 29",
+      "output": "33.0990195136"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

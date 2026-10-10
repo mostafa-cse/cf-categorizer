@@ -1,0 +1,29 @@
+{
+  "id": "1002E1",
+  "source": "problemset",
+  "contest_id": 1002,
+  "problem_index": "E1",
+  "name": "Bernstein-Vazirani algorithm",
+  "rating": 1500,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 329,
+  "problem_url": "https://codeforces.com/problemset/problem/1002/E1",
+  "editorial_url": "https://assets.codeforces.com/rounds/997-998/main-contest-editorial.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a quantum oracle - an operation on N + 1 qubits which implements a function . You are guaranteed that the function f implemented by the oracle is scalar product function (oracle from problem D1): Here (an array of N integers, each of which can be 0 or 1). Your task is to reconstruct the array . Your code is allowed to call the given oracle only once. You have to implement an operation which takes the following inputs: an integer N - the number of qubits in the oracle input ( 1 ≤ N ≤ 8 ), an oracle Uf , implemented as an operation with signature ((Qubit[], Qubit) => ()) , i.e., an operation which takes as input an array of qubits and an output qubit and has no output. The return of your operation is an array of integers of length N , each of them 0 or 1. Your code should have the following signature: namespace Solution { open Microsoft.Quantum.Primitive; open Microsoft.Quantum.Canon; operation Solve (N : Int, Uf : ((Qubit[], Qubit) => ())) : Int[] { body { // your code here } } }",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

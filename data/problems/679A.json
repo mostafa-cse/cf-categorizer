@@ -1,0 +1,40 @@
+{
+  "id": "679A",
+  "source": "problemset",
+  "contest_id": 679,
+  "problem_index": "A",
+  "name": "Bear and Prime 100",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 16259,
+  "problem_url": "https://codeforces.com/problemset/problem/679/A",
+  "editorial_url": "https://codeforces.com/blog/entry/45310",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. In the output section below you will see the information about flushing the output. Bear Limak thinks of some hidden number — an integer from interval [2, 100] . Your task is to say if the hidden number is prime or composite. Integer x > 1 is called prime if it has exactly two distinct divisors, 1 and x . If integer x > 1 is not prime, it's called composite. You can ask up to 20 queries about divisors of the hidden number. In each query you should print an integer from interval [2, 100] . The system will answer \" yes \" if your integer is a divisor of the hidden number. Otherwise, the answer will be \" no \". For example, if the hidden number is 14 then the system will answer \" yes \" only if you print 2 , 7 or 14 . When you are done asking queries, print \" prime \" or \" composite \" and terminate your program. You will get the Wrong Answer verdict if you ask more than 20 queries, or if you print an integer not from the range [2, 100] . Also, you will get the Wrong Answer verdict if the printed answer isn't correct. You will get the Idleness Limit Exceeded verdict if you don't print anything (but you should) or if you forget about flushing the output (more info below).",
+  "input_specification": "After each query you should read one string from the input. It will be \" yes \" if the printed integer is a divisor of the hidden number, and \" no \" otherwise.",
+  "output_specification": "Up to 20 times you can ask a query — print an integer from interval [2, 100] in one line. You have to both print the end-of-line character and flush the output. After flushing you should read a response from the input. In any moment you can print the answer \" prime \" or \" composite \" (without the quotes). After that, flush the output and terminate your program. To flush you can use (just after printing an integer and end-of-line): fflush(stdout) in C++; System.out.flush() in Java; stdout.flush() in Python; flush(output) in Pascal; See the documentation for other languages. Hacking. To hack someone, as the input you should print the hidden number — one integer from the interval [2, 100] . Of course, his/her solution won't be able to read the hidden number from the input.",
+  "sample_testcases": [
+    {
+      "input": "yes\nno\nyes",
+      "output": "2\n80\n5\ncomposite"
+    },
+    {
+      "input": "no\nyes\nno\nno\nno",
+      "output": "58\n59\n78\n78\n2\nprime"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

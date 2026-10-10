@@ -1,0 +1,51 @@
+{
+  "id": "1753B",
+  "source": "problemset",
+  "contest_id": 1753,
+  "problem_index": "B",
+  "name": "Factorial Divisibility",
+  "rating": 1600,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 15439,
+  "problem_url": "https://codeforces.com/problemset/problem/1753/B",
+  "editorial_url": "https://codeforces.com/blog/entry/108336",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$x$$$ and an array of integers $$$a_1, a_2, \\ldots, a_n$$$. You have to determine if the number $$$a_1! + a_2! + \\ldots + a_n!$$$ is divisible by $$$x!$$$. Here $$$k!$$$ is a factorial of $$$k$$$ — the product of all positive integers less than or equal to $$$k$$$. For example, $$$3! = 1 \\cdot 2 \\cdot 3 = 6$$$, and $$$5! = 1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 120$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$x$$$ ($$$1 \\le n \\le 500\\,000$$$, $$$1 \\le x \\le 500\\,000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le x$$$) — elements of given array.",
+  "output_specification": "In the only line print \" Yes \" (without quotes) if $$$a_1! + a_2! + \\ldots + a_n!$$$ is divisible by $$$x!$$$, and \" No \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "6 4\n3 2 2 2 3 3",
+      "output": "Yes"
+    },
+    {
+      "input": "8 3\n3 2 2 2 2 2 1 1",
+      "output": "Yes"
+    },
+    {
+      "input": "7 8\n7 7 7 7 7 7 7",
+      "output": "No"
+    },
+    {
+      "input": "10 5\n4 3 2 1 4 3 2 4 3 4",
+      "output": "No"
+    },
+    {
+      "input": "2 500000\n499999 499999",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:13",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1291F",
+  "source": "problemset",
+  "contest_id": 1291,
+  "problem_index": "F",
+  "name": "Coffee Varieties (easy version)",
+  "rating": 2800,
+  "tags": [
+    "graphs",
+    "interactive"
+  ],
+  "solved_count": 822,
+  "problem_url": "https://codeforces.com/problemset/problem/1291/F",
+  "editorial_url": "https://codeforces.com/blog/entry/73563",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. You can find the hard version in the Div. 1 contest. Both versions only differ in the number of times you can ask your friend to taste coffee. This is an interactive problem. You're considering moving to another city, where one of your friends already lives. There are $$$n$$$ cafés in this city, where $$$n$$$ is a power of two. The $$$i$$$-th café produces a single variety of coffee $$$a_i$$$. As you're a coffee-lover, before deciding to move or not, you want to know the number $$$d$$$ of distinct varieties of coffees produced in this city. You don't know the values $$$a_1, \\ldots, a_n$$$. Fortunately, your friend has a memory of size $$$k$$$, where $$$k$$$ is a power of two. Once per day, you can ask him to taste a cup of coffee produced by the café $$$c$$$, and he will tell you if he tasted a similar coffee during the last $$$k$$$ days. You can also ask him to take a medication that will reset his memory. He will forget all previous cups of coffee tasted. You can reset his memory at most $$$30\\ 000$$$ times. More formally, the memory of your friend is a queue $$$S$$$. Doing a query on café $$$c$$$ will: Tell you if $$$a_c$$$ is in $$$S$$$; Add $$$a_c$$$ at the back of $$$S$$$; If $$$|S| \\gt k$$$, pop the front element of $$$S$$$. Doing a reset request will pop all elements out of $$$S$$$. Your friend can taste at most $$$\\dfrac{2n^2}{k}$$$ cups of coffee in total. Find the diversity $$$d$$$ (number of distinct values in the array $$$a$$$). Note that asking your friend to reset his memory does not count towards the number of times you ask your friend to taste a cup of coffee. In some test cases the behavior of the interactor is adaptive . It means that the array $$$a$$$ may be not fixed before the start of the interaction and may depend on your queries . It is guaranteed that at any moment of the interaction, there is at least one array $$$a$$$ consistent with all the answers given so far.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 1024$$$, $$$k$$$ and $$$n$$$ are powers of two). It is guaranteed that $$$\\dfrac{2n^2}{k} \\le 20\\ 000$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4 2\nN\nN\nY\nN\nN\nN\nN",
+      "output": "? 1\n? 2\n? 3\n? 4\nR\n? 4\n? 1\n? 2\n! 3"
+    },
+    {
+      "input": "8 8\nN\nN\nN\nN\nY\nY",
+      "output": "? 2\n? 6\n? 4\n? 5\n? 2\n? 5\n! 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:08",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

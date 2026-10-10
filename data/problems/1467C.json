@@ -1,0 +1,39 @@
+{
+  "id": "1467C",
+  "source": "problemset",
+  "contest_id": 1467,
+  "problem_index": "C",
+  "name": "Three Bags",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 6883,
+  "problem_url": "https://codeforces.com/problemset/problem/1467/C",
+  "editorial_url": "https://codeforces.com/blog/entry/86566",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given three bags. Each bag contains a non-empty multiset of numbers. You can perform a number of operations on these bags. In one operation, you can choose any two non-empty bags, and choose one number from each of the bags. Let's say that you choose number $$$a$$$ from the first bag and number $$$b$$$ from the second bag. Then, you remove $$$b$$$ from the second bag and replace $$$a$$$ with $$$a-b$$$ in the first bag. Note that if there are multiple occurrences of these numbers, then you shall only remove/replace exactly one occurrence. You have to perform these operations in such a way that you have exactly one number remaining in exactly one of the bags (the other two bags being empty). It can be shown that you can always apply these operations to receive such a configuration in the end. Among all these configurations, find the one which has the maximum number left in the end.",
+  "input_specification": "The first line of the input contains three space-separated integers $$$n_1$$$, $$$n_2$$$ and $$$n_3$$$ ($$$1 \\le n_1, n_2, n_3 \\le 3\\cdot10^5$$$, $$$1 \\le n_1+n_2+n_3 \\le 3\\cdot10^5$$$) — the number of numbers in the three bags. The $$$i$$$-th of the next three lines contain $$$n_i$$$ space-separated integers $$$a_{{i,1}}$$$, $$$a_{{i,2}}$$$, ..., $$$a_{{i,{{n_i}}}}$$$ ($$$1 \\le a_{{i,j}} \\le 10^9$$$) — the numbers in the $$$i$$$-th bag.",
+  "output_specification": "Print a single integer — the maximum number which you can achieve in the end.",
+  "sample_testcases": [
+    {
+      "input": "2 4 1\n1 2\n6 3 4 5\n5",
+      "output": "20"
+    },
+    {
+      "input": "3 2 2\n7 5 4\n2 9\n7 1",
+      "output": "29"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:23",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1628B",
+  "source": "problemset",
+  "contest_id": 1628,
+  "problem_index": "B",
+  "name": "Peculiar Movie Preferences",
+  "rating": 1700,
+  "tags": [
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 12914,
+  "problem_url": "https://codeforces.com/problemset/problem/1628/B",
+  "editorial_url": "https://codeforces.com/blog/entry/99276",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Mihai plans to watch a movie. He only likes palindromic movies, so he wants to skip some (possibly zero) scenes to make the remaining parts of the movie palindromic. You are given a list $$$s$$$ of $$$n$$$ non-empty strings of length at most $$$3$$$ , representing the scenes of Mihai's movie. A subsequence of $$$s$$$ is called awesome if it is non-empty and the concatenation of the strings in the subsequence, in order, is a palindrome. Can you help Mihai check if there is at least one awesome subsequence of $$$s$$$? A palindrome is a string that reads the same backward as forward, for example strings \" z \", \" aaa \", \" aba \", \" abccba \" are palindromes, but strings \" codeforces \", \" reality \", \" ab \" are not. A sequence $$$a$$$ is a non-empty subsequence of a non-empty sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly zero, but not all) elements.",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of scenes in the movie. Then follows $$$n$$$ lines, the $$$i$$$-th of which containing a single non-empty string $$$s_i$$$ of length at most $$$3$$$, consisting of lowercase Latin letters. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print \" YES \" if there is an awesome subsequence of $$$s$$$, or \" NO \" otherwise (case insensitive).",
+  "sample_testcases": [
+    {
+      "input": "6\n5\nzx\nab\ncc\nzx\nba\n2\nab\nbad\n4\nco\ndef\norc\nes\n3\na\nb\nc\n3\nab\ncd\ncba\n2\nab\nab",
+      "output": "YES\nNO\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,29 @@
+{
+  "id": "1001C",
+  "source": "problemset",
+  "contest_id": 1001,
+  "problem_index": "C",
+  "name": "Generate GHZ state",
+  "rating": 1400,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 667,
+  "problem_url": "https://codeforces.com/problemset/problem/1001/C",
+  "editorial_url": "https://assets.codeforces.com/rounds/997-998/warmup-editorial.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given N qubits ( 1 ≤ N ≤ 8 ) in zero state . Your task is to create Greenberger–Horne–Zeilinger (GHZ) state on them: Note that for N = 1 and N = 2 GHZ state becomes states and from the previous tasks, respectively.",
+  "input_specification": "You have to implement an operation which takes an array of N qubits as an input and has no output. The \"output\" of your solution is the state in which it left the input qubits. Your code should have the following signature: namespace Solution { open Microsoft.Quantum.Primitive; open Microsoft.Quantum.Canon; operation Solve (qs : Qubit[]) : () { body { // your code here } } }",
+  "output_specification": "",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

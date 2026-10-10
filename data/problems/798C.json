@@ -1,0 +1,44 @@
+{
+  "id": "798C",
+  "source": "problemset",
+  "contest_id": 798,
+  "problem_index": "C",
+  "name": "Mike and gcd problem",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 6473,
+  "problem_url": "https://codeforces.com/problemset/problem/798/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51652",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mike has a sequence A = [ a 1 , a 2 , ..., a n ] of length n . He considers the sequence B = [ b 1 , b 2 , ..., b n ] beautiful if the gcd of all its elements is bigger than 1 , i.e. . Mike wants to change his sequence in order to make it beautiful. In one move he can choose an index i ( 1 ≤ i < n ), delete numbers a i , a i + 1 and put numbers a i - a i + 1 , a i + a i + 1 in their place instead, in this order. He wants perform as few operations as possible. Find the minimal number of operations to make sequence A beautiful if it's possible, or tell him that it is impossible to do so. is the biggest non-negative number d such that d divides b i for every i ( 1 ≤ i ≤ n ).",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 100 000 ) — length of sequence A . The second line contains n space-separated integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — elements of sequence A .",
+  "output_specification": "Output on the first line \" YES \" (without quotes) if it is possible to make sequence A beautiful by performing operations described above, and \" NO \" (without quotes) otherwise. If the answer was \" YES \", output the minimal number of moves needed to make sequence A beautiful.",
+  "sample_testcases": [
+    {
+      "input": "2\n1 1",
+      "output": "YES\n1"
+    },
+    {
+      "input": "3\n6 2 4",
+      "output": "YES\n0"
+    },
+    {
+      "input": "2\n1 3",
+      "output": "YES\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

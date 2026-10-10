@@ -1,0 +1,38 @@
+{
+  "id": "1777F",
+  "source": "problemset",
+  "contest_id": 1777,
+  "problem_index": "F",
+  "name": "Comfortably Numb",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "divide and conquer",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 1530,
+  "problem_url": "https://codeforces.com/problemset/problem/1777/F",
+  "editorial_url": "https://codeforces.com/blog/entry/111729",
+  "time_limit": "8 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ non-negative integers. The numbness of a subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ (for arbitrary $$$l \\leq r$$$) is defined as $$$$$$\\max(a_l, a_{l+1}, \\ldots, a_r) \\oplus (a_l \\oplus a_{l+1} \\oplus \\ldots \\oplus a_r),$$$$$$ where $$$\\oplus$$$ denotes the bitwise XOR operation . Find the maximum numbness over all subarrays.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the maximum numbness over all subarrays of the given array.",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n1 2 3 4 5\n3\n10 47 52",
+      "output": "7\n47"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

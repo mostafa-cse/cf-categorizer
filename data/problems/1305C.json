@@ -1,0 +1,45 @@
+{
+  "id": "1305C",
+  "source": "problemset",
+  "contest_id": 1305,
+  "problem_index": "C",
+  "name": "Kuroni and Impossible Calculation",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 20367,
+  "problem_url": "https://codeforces.com/problemset/problem/1305/C",
+  "editorial_url": "https://codeforces.com/blog/entry/74459",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "To become the king of Codeforces, Kuroni has to solve the following problem. He is given $$$n$$$ numbers $$$a_1, a_2, \\dots, a_n$$$. Help Kuroni to calculate $$$\\prod_{1\\le i \\lt j\\le n} |a_i - a_j|$$$. As result can be very big, output it modulo $$$m$$$. If you are not familiar with short notation, $$$\\prod_{1\\le i \\lt j\\le n} |a_i - a_j|$$$ is equal to $$$|a_1 - a_2|\\cdot|a_1 - a_3|\\cdot$$$ $$$\\dots$$$ $$$\\cdot|a_1 - a_n|\\cdot|a_2 - a_3|\\cdot|a_2 - a_4|\\cdot$$$ $$$\\dots$$$ $$$\\cdot|a_2 - a_n| \\cdot$$$ $$$\\dots$$$ $$$\\cdot |a_{n-1} - a_n|$$$. In other words, this is the product of $$$|a_i - a_j|$$$ for all $$$1\\le i \\lt j \\le n$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$m$$$ ($$$2\\le n \\le 2\\cdot 10^5$$$, $$$1\\le m \\le 1000$$$) — number of numbers and modulo. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$).",
+  "output_specification": "Output the single number — $$$\\prod_{1\\le i \\lt j\\le n} |a_i - a_j| \\bmod m$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 10\n8 5",
+      "output": "3"
+    },
+    {
+      "input": "3 12\n1 4 5",
+      "output": "0"
+    },
+    {
+      "input": "3 7\n1 4 9",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:03",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

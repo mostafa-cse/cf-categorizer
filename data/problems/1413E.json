@@ -1,0 +1,36 @@
+{
+  "id": "1413E",
+  "source": "problemset",
+  "contest_id": 1413,
+  "problem_index": "E",
+  "name": "Solo mid Oracle",
+  "rating": 2100,
+  "tags": [
+    "greedy",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 2330,
+  "problem_url": "https://codeforces.com/problemset/problem/1413/E",
+  "editorial_url": "https://codeforces.com/blog/entry/84056",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Meka-Naruto plays a computer game. His character has the following ability: given an enemy hero, deal $$$a$$$ instant damage to him, and then heal that enemy $$$b$$$ health points at the end of every second, for exactly $$$c$$$ seconds, starting one second after the ability is used. That means that if the ability is used at time $$$t$$$, the enemy's health decreases by $$$a$$$ at time $$$t$$$, and then increases by $$$b$$$ at time points $$$t + 1$$$, $$$t + 2$$$, ..., $$$t + c$$$ due to this ability. The ability has a cooldown of $$$d$$$ seconds, i. e. if Meka-Naruto uses it at time moment $$$t$$$, next time he can use it is the time $$$t + d$$$. Please note that he can only use the ability at integer points in time, so all changes to the enemy's health also occur at integer times only. The effects from different uses of the ability may stack with each other; that is, the enemy which is currently under $$$k$$$ spells gets $$$k\\cdot b$$$ amount of heal this time. Also, if several health changes occur at the same moment, they are all counted at once. Now Meka-Naruto wonders if he can kill the enemy by just using the ability each time he can (that is, every $$$d$$$ seconds). The enemy is killed if their health points become $$$0$$$ or less. Assume that the enemy's health is not affected in any way other than by Meka-Naruto's character ability. What is the maximal number of health points the enemy can have so that Meka-Naruto is able to kill them?",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\leq t\\leq 10^5$$$) standing for the number of testcases. Each test case is described with one line containing four numbers $$$a$$$, $$$b$$$, $$$c$$$ and $$$d$$$ ($$$1\\leq a, b, c, d\\leq 10^6$$$) denoting the amount of instant damage, the amount of heal per second, the number of heals and the ability cooldown, respectively.",
+  "output_specification": "For each testcase in a separate line print $$$-1$$$ if the skill can kill an enemy hero with an arbitrary number of health points, otherwise print the maximal number of health points of the enemy that can be killed.",
+  "sample_testcases": [
+    {
+      "input": "7\n1 1 1 1\n2 2 2 2\n1 2 3 4\n4 3 2 1\n228 21 11 3\n239 21 11 3\n1000000 1 1000000 1",
+      "output": "1\n2\n1\n5\n534\n-1\n500000500000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:35",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

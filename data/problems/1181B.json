@@ -1,0 +1,40 @@
+{
+  "id": "1181B",
+  "source": "problemset",
+  "contest_id": 1181,
+  "problem_index": "B",
+  "name": "Split a Number",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 6722,
+  "problem_url": "https://codeforces.com/problemset/problem/1181/B",
+  "editorial_url": "https://codeforces.com/blog/entry/67727",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Dima worked all day and wrote down on a long paper strip his favorite number $$$n$$$ consisting of $$$l$$$ digits. Unfortunately, the strip turned out to be so long that it didn't fit in the Dima's bookshelf. To solve the issue, Dima decided to split the strip into two non-empty parts so that each of them contains a positive integer without leading zeros. After that he will compute the sum of the two integers and write it down on a new strip. Dima wants the resulting integer to be as small as possible, because it increases the chances that the sum will fit it in the bookshelf. Help Dima decide what is the minimum sum he can obtain.",
+  "input_specification": "The first line contains a single integer $$$l$$$ ($$$2 \\le l \\le 100\\,000$$$) — the length of the Dima's favorite number. The second line contains the positive integer $$$n$$$ initially written on the strip: the Dima's favorite number. The integer $$$n$$$ consists of exactly $$$l$$$ digits and it does not contain leading zeros. Dima guarantees, that there is at least one valid way to split the strip.",
+  "output_specification": "Print a single integer — the smallest number Dima can obtain.",
+  "sample_testcases": [
+    {
+      "input": "7\n1234567",
+      "output": "1801"
+    },
+    {
+      "input": "3\n101",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

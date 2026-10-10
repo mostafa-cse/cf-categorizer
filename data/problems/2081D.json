@@ -1,0 +1,41 @@
+{
+  "id": "2081D",
+  "source": "problemset",
+  "contest_id": 2081,
+  "problem_index": "D",
+  "name": "MST in Modulo Graph",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms",
+    "dsu",
+    "graphs",
+    "greedy",
+    "math",
+    "number theory",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 1261,
+  "problem_url": "https://codeforces.com/problemset/problem/2081/D",
+  "editorial_url": "https://codeforces.com/blog/entry/140702",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a complete graph with $$$n$$$ vertices, where the $$$i$$$-th vertex has a weight $$$p_i$$$. The weight of the edge connecting vertex $$$x$$$ and vertex $$$y$$$ is equal to $$$\\operatorname{max}(p_x, p_y) \\bmod \\operatorname{min}(p_x, p_y)$$$. Find the smallest total weight of a set of $$$n - 1$$$ edges that connect all $$$n$$$ vertices in this graph.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test contains an integer $$$n$$$ ($$$1 \\le n \\le 5 \\cdot 10^5$$$). The next line of each test contains $$$n$$$ integers $$$p_1, p_2, \\ldots, p_n$$$ ($$$1 \\le p_i \\le 5 \\cdot 10^5$$$). The sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$. The sum of $$$\\max(p_1,p_2,\\ldots,p_n)$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the weight of the minimum spanning tree.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n4 3 3 4 4\n10\n2 10 3 2 9 9 4 6 4 6\n12\n33 56 48 41 89 73 99 150 55 100 111 130\n7\n11 45 14 19 19 8 10",
+      "output": "1\n0\n44\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

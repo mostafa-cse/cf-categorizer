@@ -1,0 +1,43 @@
+{
+  "id": "432C",
+  "source": "problemset",
+  "contest_id": 432,
+  "problem_index": "C",
+  "name": "Prime Swaps",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 2711,
+  "problem_url": "https://codeforces.com/problemset/problem/432/C",
+  "editorial_url": "https://codeforces.com/blog/entry/12310",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array a [1], a [2], ..., a [ n ] , containing distinct integers from 1 to n . Your task is to sort this array in increasing order with the following operation (you may need to apply it multiple times): choose two indexes, i and j ( 1 ≤ i < j ≤ n ; ( j - i + 1) is a prime number); swap the elements on positions i and j ; in other words, you are allowed to apply the following sequence of assignments: tmp = a [ i ], a [ i ] = a [ j ], a [ j ] = tmp ( tmp is a temporary variable). You do not need to minimize the number of used operations. However, you need to make sure that there are at most 5 n operations.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 10 5 ) . The next line contains n distinct integers a [1], a [2], ..., a [ n ] (1 ≤ a [ i ] ≤ n ) .",
+  "output_specification": "In the first line, print integer k (0 ≤ k ≤ 5 n ) — the number of used operations. Next, print the operations. Each operation must be printed as \" i j \" ( 1 ≤ i < j ≤ n ; ( j - i + 1) is a prime). If there are multiple answers, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2 1",
+      "output": "1\n1 3"
+    },
+    {
+      "input": "2\n1 2",
+      "output": "0"
+    },
+    {
+      "input": "4\n4 2 3 1",
+      "output": "3\n2 4\n1 2\n2 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

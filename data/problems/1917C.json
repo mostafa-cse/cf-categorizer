@@ -1,0 +1,37 @@
+{
+  "id": "1917C",
+  "source": "problemset",
+  "contest_id": 1917,
+  "problem_index": "C",
+  "name": "Watering an Array",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 12732,
+  "problem_url": "https://codeforces.com/problemset/problem/1917/C",
+  "editorial_url": "https://codeforces.com/blog/entry/123721",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array of integers $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$. On the $$$i$$$-th of the next $$$d$$$ days you are going to do exactly one of the following two actions: Add $$$1$$$ to each of the first $$$b_i$$$ elements of the array $$$a$$$ (i.e., set $$$a_j := a_j + 1$$$ for each $$$1 \\le j \\le b_i$$$). Count the elements which are equal to their position (i.e., the $$$a_j = j$$$). Denote the number of such elements as $$$c$$$. Then, you add $$$c$$$ to your score, and reset the entire array $$$a$$$ to a $$$0$$$-array of length $$$n$$$ (i.e., set $$$[a_1, a_2, \\ldots, a_n] := [0, 0, \\ldots, 0]$$$). Your score is equal to $$$0$$$ in the beginning. Note that on each day you should perform exactly one of the actions above: you cannot skip a day or perform both actions on the same day. What is the maximum score you can achieve at the end? Since $$$d$$$ can be quite large, the sequence $$$b$$$ is given to you in the compressed format: You are given a sequence of integers $$$v_1, v_2, \\ldots, v_k$$$. The sequence $$$b$$$ is a concatenation of infinitely many copies of $$$v$$$: $$$b = [v_1, v_2, \\ldots, v_k, v_1, v_2, \\ldots, v_k, \\ldots]$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. The first line of each test case contains three integers $$$n$$$, $$$k$$$ and $$$d$$$ ($$$1 \\le n \\le 2000$$$, $$$1 \\le k \\le 10^5$$$, $$$k \\le d \\le 10^9$$$) — the length of the array $$$a$$$, the length of the sequence $$$v$$$ and the number of days you are going to perform operations on. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le n$$$) — the array $$$a$$$. The third line of each test case contains $$$k$$$ integers $$$v_1, v_2, \\ldots, v_k$$$ ($$$1 \\le v_i \\le n$$$) — the sequence $$$v$$$. It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2000$$$ and the sum of $$$k$$$ over all test cases doesn't exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output one integer: the maximum score you can achieve at the end of the $$$d$$$-th day.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 4 4\n1 2 3\n1 3 2 3\n6 2 3\n6 1 2 4 1 5\n6 6\n5 1 1\n0 5 0 5 0\n5\n1 1 1\n1\n1\n3 4 6\n1 2 3\n1 3 2 3",
+      "output": "4\n3\n0\n1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

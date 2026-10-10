@@ -1,0 +1,39 @@
+{
+  "id": "264B",
+  "source": "problemset",
+  "contest_id": 264,
+  "problem_index": "B",
+  "name": "Good Sequences",
+  "rating": 1500,
+  "tags": [
+    "dp",
+    "number theory"
+  ],
+  "solved_count": 12542,
+  "problem_url": "https://codeforces.com/problemset/problem/264/B",
+  "editorial_url": "https://speakerdeck.com/snuke/codeforces162-div1-e",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Squirrel Liss is interested in sequences. She also has preferences of integers. She thinks n integers a 1 , a 2 , ..., a n are good . Now she is interested in good sequences. A sequence x 1 , x 2 , ..., x k is called good if it satisfies the following three conditions: The sequence is strictly increasing, i.e. x i < x i + 1 for each i (1 ≤ i ≤ k - 1) . No two adjacent elements are coprime, i.e. gcd ( x i , x i + 1 ) > 1 for each i (1 ≤ i ≤ k - 1) (where gcd ( p , q ) denotes the greatest common divisor of the integers p and q ). All elements of the sequence are good integers. Find the length of the longest good sequence.",
+  "input_specification": "The input consists of two lines. The first line contains a single integer n ( 1 ≤ n ≤ 10 5 ) — the number of good integers. The second line contains a single-space separated list of good integers a 1 , a 2 , ..., a n in strictly increasing order ( 1 ≤ a i ≤ 10 5 ; a i < a i + 1 ).",
+  "output_specification": "Print a single integer — the length of the longest good sequence.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 3 4 6 9",
+      "output": "4"
+    },
+    {
+      "input": "9\n1 2 3 5 6 7 8 9 10",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

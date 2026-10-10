@@ -1,0 +1,39 @@
+{
+  "id": "479C",
+  "source": "problemset",
+  "contest_id": 479,
+  "problem_index": "C",
+  "name": "Exams",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 34035,
+  "problem_url": "https://codeforces.com/problemset/problem/479/C",
+  "editorial_url": "https://codeforces.com/blog/entry/14351",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Student Valera is an undergraduate student at the University. His end of term exams are approaching and he is to pass exactly n exams. Valera is a smart guy, so he will be able to pass any exam he takes on his first try. Besides, he can take several exams on one day, and in any order. According to the schedule, a student can take the exam for the i -th subject on the day number a i . However, Valera has made an arrangement with each teacher and the teacher of the i -th subject allowed him to take an exam before the schedule time on day b i ( b i < a i ). Thus, Valera can take an exam for the i -th subject either on day a i , or on day b i . All the teachers put the record of the exam in the student's record book on the day of the actual exam and write down the date of the mark as number a i . Valera believes that it would be rather strange if the entries in the record book did not go in the order of non-decreasing date. Therefore Valera asks you to help him. Find the minimum possible value of the day when Valera can take the final exam if he takes exams so that all the records in his record book go in the order of non-decreasing date.",
+  "input_specification": "The first line contains a single positive integer n ( 1 ≤ n ≤ 5000 ) — the number of exams Valera will take. Each of the next n lines contains two positive space-separated integers a i and b i ( 1 ≤ b i < a i ≤ 10 9 ) — the date of the exam in the schedule and the early date of passing the i -th exam, correspondingly.",
+  "output_specification": "Print a single integer — the minimum possible number of the day when Valera can take the last exam if he takes all the exams so that all the records in his record book go in the order of non-decreasing date.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 2\n3 1\n4 2",
+      "output": "2"
+    },
+    {
+      "input": "3\n6 1\n5 2\n4 3",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

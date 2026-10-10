@@ -1,0 +1,42 @@
+{
+  "id": "868B",
+  "source": "problemset",
+  "contest_id": 868,
+  "problem_index": "B",
+  "name": "Race Against Time",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3990,
+  "problem_url": "https://codeforces.com/problemset/problem/868/B",
+  "editorial_url": "https://codeforces.com/blog/entry/55046",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Have you ever tried to explain to the coordinator, why it is eight hours to the contest and not a single problem has been prepared yet? Misha had. And this time he has a really strong excuse: he faced a space-time paradox! Space and time replaced each other. The entire universe turned into an enormous clock face with three hands — hour, minute, and second. Time froze, and clocks now show the time h hours, m minutes, s seconds. Last time Misha talked with the coordinator at t 1 o'clock, so now he stands on the number t 1 on the clock face. The contest should be ready by t 2 o'clock. In the terms of paradox it means that Misha has to go to number t 2 somehow. Note that he doesn't have to move forward only: in these circumstances time has no direction. Clock hands are very long, and Misha cannot get round them. He also cannot step over as it leads to the collapse of space-time. That is, if hour clock points 12 and Misha stands at 11 then he cannot move to 1 along the top arc. He has to follow all the way round the clock center (of course, if there are no other hands on his way). Given the hands' positions, t 1 , and t 2 , find if Misha can prepare the contest on time (or should we say on space ?). That is, find if he can move from t 1 to t 2 by the clock face.",
+  "input_specification": "Five integers h , m , s , t 1 , t 2 ( 1 ≤ h ≤ 12 , 0 ≤ m , s ≤ 59 , 1 ≤ t 1 , t 2 ≤ 12 , t 1 ≠ t 2 ). Misha's position and the target time do not coincide with the position of any hand.",
+  "output_specification": "Print \" YES \" (quotes for clarity), if Misha can prepare the contest on time, and \" NO \" otherwise. You can print each character either upper- or lowercase (\" YeS \" and \" yes \" are valid when the answer is \" YES \").",
+  "sample_testcases": [
+    {
+      "input": "12 30 45 3 11",
+      "output": "NO"
+    },
+    {
+      "input": "12 0 1 12 1",
+      "output": "YES"
+    },
+    {
+      "input": "3 47 0 4 9",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

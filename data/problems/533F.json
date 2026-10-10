@@ -1,0 +1,40 @@
+{
+  "id": "533F",
+  "source": "problemset",
+  "contest_id": 533,
+  "problem_index": "F",
+  "name": "Encoding",
+  "rating": 2400,
+  "tags": [
+    "hashing",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 1007,
+  "problem_url": "https://codeforces.com/problemset/problem/533/F",
+  "editorial_url": "https://codeforces.com/blog/entry/17446",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp invented a new way to encode strings. Let's assume that we have string T , consisting of lowercase English letters. Let's choose several pairs of letters of the English alphabet in such a way that each letter occurs in at most one pair. Then let's replace each letter in T with its pair letter if there is a pair letter for it. For example, if you chose pairs ( l , r ), ( p , q ) and ( a , o ), then word \" parallelogram \" according to the given encoding principle transforms to word \" qolorreraglom \". Polycarpus already has two strings, S and T . He suspects that string T was obtained after applying the given encoding method from some substring of string S . Find all positions m i in S ( 1 ≤ m i ≤ | S | - | T | + 1 ), such that T can be obtained fro substring S m i S m i + 1 ... S m i + | T | - 1 by applying the described encoding operation by using some set of pairs of English alphabet letters",
+  "input_specification": "The first line of the input contains two integers, | S | and | T | ( 1 ≤ | T | ≤ | S | ≤ 2·10 5 ) — the lengths of string S and string T , respectively. The second and third line of the input contain strings S and T , respectively. Both strings consist only of lowercase English letters.",
+  "output_specification": "Print number k — the number of suitable positions in string S . In the next line print k integers m 1 , m 2 , ..., m k — the numbers of the suitable positions in the increasing order.",
+  "sample_testcases": [
+    {
+      "input": "11 5\nabacabadaba\nacaba",
+      "output": "3\n1 3 7"
+    },
+    {
+      "input": "21 13\nparaparallelogramgram\nqolorreraglom",
+      "output": "1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

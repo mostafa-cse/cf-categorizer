@@ -1,0 +1,41 @@
+{
+  "id": "313E",
+  "source": "problemset",
+  "contest_id": 313,
+  "problem_index": "E",
+  "name": "Ilya and Two Numbers",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "dsu",
+    "greedy"
+  ],
+  "solved_count": 637,
+  "problem_url": "https://codeforces.com/problemset/problem/313/E",
+  "editorial_url": "https://codeforces.com/blog/entry/7826",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ilya has recently taken up archaeology. He's recently found two numbers, written in the m -based notation. Each of the found numbers consisted of exactly n digits. Ilya immediately started looking for information about those numbers. He learned that the numbers are part of a cyphered code and the one who can decypher it can get the greatest treasure. After considerable research Ilya understood that to decypher the code, he should do the following: Rearrange digits in the first number in some manner. Similarly, rearrange digits in the second number in some manner. As a result of this operation, the numbers can get leading zeroes. Add numbers, digit by digit, modulo m . In other words, we need to get the third number of length n , each digit of the number is the sum of the respective numbers of the found numbers. For example, suppose there are two numbers recorded in the ternary notation, 001210 and 012111, then if you add them to each other digit by digit modulo 3, you will get number 010021. The key to the code is the maximum possible number that can be obtained in the previous step. Help Ilya, find the key to the code.",
+  "input_specification": "The first line contains two integers n , m (1 ≤ n , m ≤ 10 5 , m > 1) . The second line contains the first found number, the third line contains the second found number. The numbers are recorded as a sequence of digits in the m -based notation. Each digit is an integer from 0 to m - 1 . The digits in the line are written in the order from the most significant digits to the least significant ones. The given numbers can contain leading zeroes.",
+  "output_specification": "Print n m -base digits. The resulting third number written in the m -based notation. Print the digits in the order from the most significant digits to the least significant ones.",
+  "sample_testcases": [
+    {
+      "input": "4 7\n5 4 3 2\n5 6 5 4",
+      "output": "6 4 2 1"
+    },
+    {
+      "input": "5 5\n2 4 4 1 3\n1 0 1 2 4",
+      "output": "4 4 4 3 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

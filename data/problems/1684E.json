@@ -1,0 +1,39 @@
+{
+  "id": "1684E",
+  "source": "problemset",
+  "contest_id": 1684,
+  "problem_index": "E",
+  "name": "MEX vs DIFF",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 3727,
+  "problem_url": "https://codeforces.com/problemset/problem/1684/E",
+  "editorial_url": "https://codeforces.com/blog/entry/102995",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of $$$n$$$ non-negative integers. In one operation you can change any number in the array to any other non-negative integer. Let's define the cost of the array as $$$\\operatorname{DIFF}(a) - \\operatorname{MEX}(a)$$$, where $$$\\operatorname{MEX}$$$ of a set of non-negative integers is the smallest non-negative integer not present in the set, and $$$\\operatorname{DIFF}$$$ is the number of different numbers in the array. For example, $$$\\operatorname{MEX}(\\{1, 2, 3\\}) = 0$$$, $$$\\operatorname{MEX}(\\{0, 1, 2, 4, 5\\}) = 3$$$. You should find the minimal cost of the array $$$a$$$ if you are allowed to make at most $$$k$$$ operations.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^5$$$, $$$0 \\le k \\le 10^5$$$) — the length of the array $$$a$$$ and the number of operations that you are allowed to make. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case output a single integer — minimal cost that it is possible to get making at most $$$k$$$ operations.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 1\n3 0 1 2\n4 1\n0 2 4 5\n7 2\n4 13 0 0 13 1337 1000000000\n6 2\n1 2 8 0 0 0",
+      "output": "0\n1\n2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

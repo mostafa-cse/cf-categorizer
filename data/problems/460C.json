@@ -1,0 +1,40 @@
+{
+  "id": "460C",
+  "source": "problemset",
+  "contest_id": 460,
+  "problem_index": "C",
+  "name": "Present",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 6993,
+  "problem_url": "https://codeforces.com/problemset/problem/460/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13465",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little beaver is a beginner programmer, so informatics is his favorite subject. Soon his informatics teacher is going to have a birthday and the beaver has decided to prepare a present for her. He planted n flowers in a row on his windowsill and started waiting for them to grow. However, after some time the beaver noticed that the flowers stopped growing. The beaver thinks it is bad manners to present little flowers. So he decided to come up with some solutions. There are m days left to the birthday. The height of the i -th flower (assume that the flowers in the row are numbered from 1 to n from left to right) is equal to a i at the moment. At each of the remaining m days the beaver can take a special watering and water w contiguous flowers (he can do that only once at a day). At that each watered flower grows by one height unit on that day. The beaver wants the height of the smallest flower be as large as possible in the end. What maximum height of the smallest flower can he get?",
+  "input_specification": "The first line contains space-separated integers n , m and w (1 ≤ w ≤ n ≤ 10 5 ; 1 ≤ m ≤ 10 5 ) . The second line contains space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) .",
+  "output_specification": "Print a single integer — the maximum final height of the smallest flower.",
+  "sample_testcases": [
+    {
+      "input": "6 2 3\n2 2 2 2 1 1",
+      "output": "2"
+    },
+    {
+      "input": "2 5 1\n5 8",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

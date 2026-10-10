@@ -1,0 +1,39 @@
+{
+  "id": "319C",
+  "source": "problemset",
+  "contest_id": 319,
+  "problem_index": "C",
+  "name": "Kalila and Dimna in the Logging Industry",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "geometry"
+  ],
+  "solved_count": 7059,
+  "problem_url": "https://codeforces.com/problemset/problem/319/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8166",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kalila and Dimna are two jackals living in a huge jungle. One day they decided to join a logging factory in order to make money. The manager of logging factory wants them to go to the jungle and cut n trees with heights a 1 , a 2 , ..., a n . They bought a chain saw from a shop. Each time they use the chain saw on the tree number i , they can decrease the height of this tree by one unit. Each time that Kalila and Dimna use the chain saw, they need to recharge it. Cost of charging depends on the id of the trees which have been cut completely (a tree is cut completely if its height equal to 0). If the maximum id of a tree which has been cut completely is i (the tree that have height a i in the beginning), then the cost of charging the chain saw would be b i . If no tree is cut completely, Kalila and Dimna cannot charge the chain saw. The chainsaw is charged in the beginning. We know that for each i < j , a i < a j and b i > b j and also b n = 0 and a 1 = 1 . Kalila and Dimna want to cut all the trees completely, with minimum cost. They want you to help them! Will you?",
+  "input_specification": "The first line of input contains an integer n ( 1 ≤ n ≤ 10 5 ). The second line of input contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ). The third line of input contains n integers b 1 , b 2 , ..., b n ( 0 ≤ b i ≤ 10 9 ). It's guaranteed that a 1 = 1 , b n = 0 , a 1 < a 2 < ... < a n and b 1 > b 2 > ... > b n .",
+  "output_specification": "The only line of output must contain the minimum cost of cutting all the trees completely. Please, do not write the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 4 5\n5 4 3 2 0",
+      "output": "25"
+    },
+    {
+      "input": "6\n1 2 3 10 20 30\n6 5 4 3 2 0",
+      "output": "138"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

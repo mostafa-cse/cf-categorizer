@@ -1,0 +1,45 @@
+{
+  "id": "1361A",
+  "source": "problemset",
+  "contest_id": 1361,
+  "problem_index": "A",
+  "name": "Johnny and Contribution",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "graphs",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 8917,
+  "problem_url": "https://codeforces.com/problemset/problem/1361/A",
+  "editorial_url": "https://codeforces.com/blog/entry/78355",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Today Johnny wants to increase his contribution. His plan assumes writing $$$n$$$ blogs. One blog covers one topic, but one topic can be covered by many blogs. Moreover, some blogs have references to each other. Each pair of blogs that are connected by a reference has to cover different topics because otherwise, the readers can notice that they are split just for more contribution. Set of blogs and bidirectional references between some pairs of them is called blogs network. There are $$$n$$$ different topics, numbered from $$$1$$$ to $$$n$$$ sorted by Johnny's knowledge. The structure of the blogs network is already prepared. Now Johnny has to write the blogs in some order. He is lazy, so each time before writing a blog, he looks at it's already written neighbors (the blogs referenced to current one) and chooses the topic with the smallest number which is not covered by neighbors. It's easy to see that this strategy will always allow him to choose a topic because there are at most $$$n - 1$$$ neighbors. For example, if already written neighbors of the current blog have topics number $$$1$$$, $$$3$$$, $$$1$$$, $$$5$$$, and $$$2$$$, Johnny will choose the topic number $$$4$$$ for the current blog, because topics number $$$1$$$, $$$2$$$ and $$$3$$$ are already covered by neighbors and topic number $$$4$$$ isn't covered. As a good friend, you have done some research and predicted the best topic for each blog. Can you tell Johnny, in which order he has to write the blogs, so that his strategy produces the topic assignment chosen by you?",
+  "input_specification": "The first line contains two integers $$$n$$$ $$$(1 \\leq n \\leq 5 \\cdot 10^5)$$$ and $$$m$$$ $$$(0 \\leq m \\leq 5 \\cdot 10^5)$$$ — the number of blogs and references, respectively. Each of the following $$$m$$$ lines contains two integers $$$a$$$ and $$$b$$$ ($$$a \\neq b$$$; $$$1 \\leq a, b \\leq n$$$), which mean that there is a reference between blogs $$$a$$$ and $$$b$$$. It's guaranteed that the graph doesn't contain multiple edges. The last line contains $$$n$$$ integers $$$t_1, t_2, \\ldots, t_n$$$, $$$i$$$-th of them denotes desired topic number of the $$$i$$$-th blog ($$$1 \\le t_i \\le n$$$).",
+  "output_specification": "If the solution does not exist, then write $$$-1$$$. Otherwise, output $$$n$$$ distinct integers $$$p_1, p_2, \\ldots, p_n$$$ $$$(1 \\leq p_i \\leq n)$$$, which describe the numbers of blogs in order which Johnny should write them. If there are multiple answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n2 3\n3 1\n2 1 3",
+      "output": "2 1 3"
+    },
+    {
+      "input": "3 3\n1 2\n2 3\n3 1\n1 1 1",
+      "output": "-1"
+    },
+    {
+      "input": "5 3\n1 2\n2 3\n4 5\n2 1 2 2 1",
+      "output": "2 5 1 3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

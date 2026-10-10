@@ -1,0 +1,36 @@
+{
+  "id": "1461B",
+  "source": "problemset",
+  "contest_id": 1461,
+  "problem_index": "B",
+  "name": "Find the Spruce",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 13444,
+  "problem_url": "https://codeforces.com/problemset/problem/1461/B",
+  "editorial_url": "https://codeforces.com/blog/entry/85491",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Holidays are coming up really soon. Rick realized that it's time to think about buying a traditional spruce tree. But Rick doesn't want real trees to get hurt so he decided to find some in an $$$n \\times m$$$ matrix consisting of \" * \" and \" . \". To find every spruce first let's define what a spruce in the matrix is. A set of matrix cells is called a spruce of height $$$k$$$ with origin at point $$$(x, y)$$$ if: All cells in the set contain an \" * \". For each $$$1 \\le i \\le k$$$ all cells with the row number $$$x+i-1$$$ and columns in range $$$[y - i + 1, y + i - 1]$$$ must be a part of the set. All other cells cannot belong to the set. Examples of correct and incorrect spruce trees: Now Rick wants to know how many spruces his $$$n \\times m$$$ matrix contains. Help Rick solve this problem.",
+  "input_specification": "Each test contains one or more test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 500$$$) — matrix size. Next $$$n$$$ lines of each test case contain $$$m$$$ characters $$$c_{i, j}$$$ — matrix contents. It is guaranteed that $$$c_{i, j}$$$ is either a \" . \" or an \" * \". It is guaranteed that the sum of $$$n \\cdot m$$$ over all test cases does not exceed $$$500^2$$$ ($$$\\sum n \\cdot m \\le 500^2$$$).",
+  "output_specification": "For each test case, print single integer — the total number of spruces in the matrix.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 3\n.*.\n***\n2 3\n.*.\n**.\n4 5\n.***.\n*****\n*****\n*.*.*\n5 7\n..*.*..\n.*****.\n*******\n.*****.\n..*.*..",
+      "output": "5\n3\n23\n34"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:25",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

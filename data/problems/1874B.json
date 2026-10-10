@@ -1,0 +1,39 @@
+{
+  "id": "1874B",
+  "source": "problemset",
+  "contest_id": 1874,
+  "problem_index": "B",
+  "name": "Jellyfish and Math",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 1453,
+  "problem_url": "https://codeforces.com/problemset/problem/1874/B",
+  "editorial_url": "https://codeforces.com/blog/entry/120943",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Jellyfish is given the non-negative integers $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$ and $$$m$$$. Initially $$$(x,y)=(a,b)$$$. Jellyfish wants to do several operations so that $$$(x,y)=(c,d)$$$. For each operation, she can do one of the following: $$$x := x\\,\\&\\,y$$$, $$$x := x\\,|\\,y$$$, $$$y := x \\oplus y$$$, $$$y := y \\oplus m$$$. Here $$$\\&$$$ denotes the bitwise AND operation , $$$|$$$ denotes the bitwise OR operation and $$$\\oplus$$$ denotes the bitwise XOR operation . Now Jellyfish asks you for the minimum number of operations such that $$$(x,y)=(c,d)$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10^5$$$). The description of the test cases follows. The only line of each test case contains five integers, $$$a$$$, $$$b$$$, $$$c$$$, $$$d$$$ and $$$m$$$ ($$$0 \\leq a, b, c, d, m \\lt 2^{30}$$$).",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations. If this cannot be achieved, output $$$-1$$$ instead.",
+  "sample_testcases": [
+    {
+      "input": "10\n1 0 1 1 1\n3 3 1 2 1\n1 6 0 7 1\n2 4 4 9 8\n21 4 0 17 28\n50 50 0 0 39\n95 33 1 33 110\n138 202 174 64 108\n78 340 68 340 461\n457 291 491 566 766",
+      "output": "1\n-1\n2\n-1\n-1\n2\n1\n4\n1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

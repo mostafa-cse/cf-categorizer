@@ -1,0 +1,46 @@
+{
+  "id": "88B",
+  "source": "problemset",
+  "contest_id": 88,
+  "problem_index": "B",
+  "name": "Keyboard",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 5357,
+  "problem_url": "https://codeforces.com/problemset/problem/88/B",
+  "editorial_url": "https://codeforces.com/blog/entry/2121",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya learns to type. He has an unusual keyboard at his disposal: it is rectangular and it has n rows of keys containing m keys in each row. Besides, the keys are of two types. Some of the keys have lowercase Latin letters on them and some of the keys work like the \"Shift\" key on standard keyboards, that is, they make lowercase letters uppercase. Vasya can press one or two keys with one hand. However, he can only press two keys if the Euclidean distance between the centers of the keys does not exceed x . The keys are considered as squares with a side equal to 1. There are no empty spaces between neighbouring keys. Vasya is a very lazy boy, that's why he tries to type with one hand as he eats chips with his other one. However, it is possible that some symbol can't be typed with one hand only, because the distance between it and the closest \"Shift\" key is strictly larger than x . In this case he will have to use his other hand. Having typed the symbol, Vasya returns other hand back to the chips. You are given Vasya's keyboard and the text. Count the minimum number of times Vasya will have to use the other hand.",
+  "input_specification": "The first line contains three integers n , m , x ( 1 ≤ n , m ≤ 30, 1 ≤ x ≤ 50 ). Next n lines contain descriptions of all the keyboard keys. Each line contains the descriptions of exactly m keys, without spaces. The letter keys are marked with the corresponding lowercase letters. The \"Shift\" keys are marked with the \" S \" symbol. Then follow the length of the text q (1 ≤ q ≤ 5·10 5 ) . The last line contains the text T , which consists of q symbols, which are uppercase and lowercase Latin letters.",
+  "output_specification": "If Vasya can type the text, then print the minimum number of times he will have to use his other hand. Otherwise, print \"-1\" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2 2 1\nab\ncd\n1\nA",
+      "output": "-1"
+    },
+    {
+      "input": "2 2 1\nab\ncd\n1\ne",
+      "output": "-1"
+    },
+    {
+      "input": "2 2 1\nab\ncS\n5\nabcBA",
+      "output": "1"
+    },
+    {
+      "input": "3 9 4\nqwertyuio\nasdfghjkl\nSzxcvbnmS\n35\nTheQuIcKbRoWnFOXjummsovertHeLazYDOG",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:06",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

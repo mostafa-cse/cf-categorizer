@@ -1,0 +1,48 @@
+{
+  "id": "2204G",
+  "source": "problemset",
+  "contest_id": 2204,
+  "problem_index": "G",
+  "name": "Grid Path",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "graphs",
+    "matrices"
+  ],
+  "solved_count": 629,
+  "problem_url": "https://codeforces.com/problemset/problem/2204/G",
+  "editorial_url": "https://codeforces.com/blog/entry/152150",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a grid with $$$n$$$ rows (numbered from $$$1$$$ to $$$n$$$ from top to bottom) and $$$m$$$ columns (numbered from $$$1$$$ to $$$m$$$ from left to right). You are controlling a chip that is initially in the cell $$$(1, 1)$$$. In one move, the chip can move left, right, or down (if the current cell is $$$(x, y)$$$, it can go to $$$(x, y - 1)$$$, $$$(x, y + 1)$$$, or $$$(x + 1, y)$$$). The chip cannot leave the grid. You can make any number of moves (possibly zero). Let's define the path of a chip as the set of cells it visits at least once. Note that the order of visited cells doesn't matter. Your task is to calculate the number of possible paths. Since the answer might be large, print it modulo $$$mod$$$.",
+  "input_specification": "The only line contains three integers $$$n$$$, $$$m$$$, and $$$mod$$$ ($$$1 \\le n \\le 10^8$$$; $$$1 \\le m \\le 150$$$; $$$2 \\le mod \\le 10^9$$$).",
+  "output_specification": "Print a single integer — the number of possible paths, taken modulo $$$mod$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 2 100",
+      "output": "7"
+    },
+    {
+      "input": "1 5 777",
+      "output": "5"
+    },
+    {
+      "input": "5 3 998244353",
+      "output": "1695"
+    },
+    {
+      "input": "100000000 150 1000000000",
+      "output": "89058885"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

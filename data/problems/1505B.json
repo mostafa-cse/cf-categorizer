@@ -1,0 +1,40 @@
+{
+  "id": "1505B",
+  "source": "problemset",
+  "contest_id": 1505,
+  "problem_index": "B",
+  "name": "DMCA",
+  "rating": 1600,
+  "tags": [
+    "*special",
+    "implementation",
+    "number theory"
+  ],
+  "solved_count": 6590,
+  "problem_url": "https://codeforces.com/problemset/problem/1505/B",
+  "editorial_url": "https://codeforces.com/blog/entry/89260",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Many people are aware of DMCA – Digital Millennium Copyright Act. But another recently proposed DMCA – Digital Millennium Calculation Act – is much less known. In this problem you need to find a root of a number according to this new DMCA law.",
+  "input_specification": "The input contains a single integer $$$a$$$ ($$$1 \\le a \\le 1000000$$$).",
+  "output_specification": "Output the result – an integer number.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "1"
+    },
+    {
+      "input": "81",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:13",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

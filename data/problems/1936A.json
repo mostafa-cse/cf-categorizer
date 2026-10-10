@@ -1,0 +1,38 @@
+{
+  "id": "1936A",
+  "source": "problemset",
+  "contest_id": 1936,
+  "problem_index": "A",
+  "name": "Bitwise Operation Wizard",
+  "rating": 1700,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "greedy",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 8831,
+  "problem_url": "https://codeforces.com/problemset/problem/1936/A",
+  "editorial_url": "https://codeforces.com/blog/entry/126513",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. There is a secret sequence $$$p_0, p_1, \\ldots, p_{n-1}$$$, which is a permutation of $$$\\{0,1,\\ldots,n-1\\}$$$. You need to find any two indices $$$i$$$ and $$$j$$$ such that $$$p_i \\oplus p_j$$$ is maximized, where $$$\\oplus$$$ denotes the bitwise XOR operation . To do this, you can ask queries. Each query has the following form: you pick arbitrary indices $$$a$$$, $$$b$$$, $$$c$$$, and $$$d$$$ ($$$0 \\le a,b,c,d \\lt n$$$). Next, the jury calculates $$$x = (p_a \\mid p_b)$$$ and $$$y = (p_c \\mid p_d)$$$, where $$$|$$$ denotes the bitwise OR operation . Finally, you receive the result of comparison between $$$x$$$ and $$$y$$$. In other words, you are told if $$$x \\lt y$$$, $$$x \\gt y$$$, or $$$x = y$$$. Please find any two indices $$$i$$$ and $$$j$$$ ($$$0 \\le i,j \\lt n$$$) such that $$$p_i \\oplus p_j$$$ is maximum among all such pairs, using at most $$$3n$$$ queries. If there are multiple pairs of indices satisfying the condition, you may output any one of them.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^3$$$). The description of the test cases follows.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n\n<\n\n=\n\n>\n\n2",
+      "output": "? 0 2 3 1\n\n? 1 1 2 3\n\n? 1 2 0 3\n\n! 3 2\n\n! 0 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:27",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

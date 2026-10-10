@@ -1,0 +1,44 @@
+{
+  "id": "1108D",
+  "source": "problemset",
+  "contest_id": 1108,
+  "problem_index": "D",
+  "name": "Diverse Garland",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 16700,
+  "problem_url": "https://codeforces.com/problemset/problem/1108/D",
+  "editorial_url": "https://codeforces.com/blog/entry/64751",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have a garland consisting of $$$n$$$ lamps. Each lamp is colored red, green or blue. The color of the $$$i$$$-th lamp is $$$s_i$$$ (' R ', ' G ' and ' B ' — colors of lamps in the garland). You have to recolor some lamps in this garland (recoloring a lamp means changing its initial color to another) in such a way that the obtained garland is diverse . A garland is called diverse if any two adjacent (consecutive) lamps (i. e. such lamps that the distance between their positions is $$$1$$$) have distinct colors. In other words, if the obtained garland is $$$t$$$ then for each $$$i$$$ from $$$1$$$ to $$$n-1$$$ the condition $$$t_i \\ne t_{i + 1}$$$ should be satisfied. Among all ways to recolor the initial garland to make it diverse you have to choose one with the minimum number of recolored lamps. If there are multiple optimal solutions, print any of them.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of lamps. The second line of the input contains the string $$$s$$$ consisting of $$$n$$$ characters ' R ', ' G ' and ' B ' — colors of lamps in the garland.",
+  "output_specification": "In the first line of the output print one integer $$$r$$$ — the minimum number of recolors needed to obtain a diverse garland from the given one. In the second line of the output print one string $$$t$$$ of length $$$n$$$ — a diverse garland obtained from the initial one with minimum number of recolors. If there are multiple optimal solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "9\nRBGRRBRGG",
+      "output": "2\nRBGRGBRGR"
+    },
+    {
+      "input": "8\nBBBGBRRR",
+      "output": "2\nBRBGBRGR"
+    },
+    {
+      "input": "13\nBBRRRRGGGGGRR",
+      "output": "6\nBGRBRBGBGBGRG"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1777E",
+  "source": "problemset",
+  "contest_id": 1777,
+  "problem_index": "E",
+  "name": "Edge Reverse",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 2518,
+  "problem_url": "https://codeforces.com/problemset/problem/1777/E",
+  "editorial_url": "https://codeforces.com/blog/entry/111729",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You will be given a weighted directed graph of $$$n$$$ nodes and $$$m$$$ directed edges, where the $$$i$$$-th edge has a weight of $$$w_i$$$ ($$$1 \\le i \\le m$$$). You need to reverse some edges of this graph so that there is at least one node in the graph from which every other node is reachable. The cost of these reversals is equal to the maximum weight of all reversed edges. If no edge reversal is required, assume the cost to be $$$0$$$. It is guaranteed that no self-loop or duplicate edge exists. Find the minimum cost required for completing the task. If there is no solution, print a single integer $$$-1$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. Each test case begins with a line containing two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le m \\le 2 \\cdot 10^5$$$) — the number of nodes in the graph and the number of edges in the graph. The next $$$m$$$ lines of each test case contain $$$3$$$ integers each — $$$u$$$, $$$v$$$, $$$w$$$ ($$$1 \\le u, v \\le n$$$, $$$1 \\le w \\le 10^9$$$), indicating an edge from $$$u$$$ to $$$v$$$ with a weight of $$$w$$$. It is guaranteed that no edge connects a vertex to itself, and no pair of edges share the same origin and destination simultaneously. It is guaranteed that the sum of $$$n$$$ and the sum of $$$m$$$ over all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the minimum cost. If there is no solution, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 1\n1 2 3\n5 4\n1 2 10\n2 3 10\n3 1 10\n4 5 10\n4 5\n1 2 10000\n2 3 20000\n1 3 30000\n4 2 500\n4 3 20\n4 5\n1 2 10000\n2 3 20000\n1 3 30000\n4 2 5\n4 3 20",
+      "output": "0\n-1\n20\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

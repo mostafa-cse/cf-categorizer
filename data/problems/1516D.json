@@ -1,0 +1,39 @@
+{
+  "id": "1516D",
+  "source": "problemset",
+  "contest_id": 1516,
+  "problem_index": "D",
+  "name": "Cut",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "graphs",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 5447,
+  "problem_url": "https://codeforces.com/problemset/problem/1516/D",
+  "editorial_url": "https://codeforces.com/blog/entry/89846",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This time Baby Ehab will only cut and not stick. He starts with a piece of paper with an array $$$a$$$ of length $$$n$$$ written on it, and then he does the following: he picks a range $$$(l, r)$$$ and cuts the subsegment $$$a_l, a_{l + 1}, \\ldots, a_r$$$ out, removing the rest of the array. he then cuts this range into multiple subranges. to add a number theory spice to it, he requires that the elements of every subrange must have their product equal to their least common multiple (LCM) . Formally, he partitions the elements of $$$a_l, a_{l + 1}, \\ldots, a_r$$$ into contiguous subarrays such that the product of every subarray is equal to its LCM. Now, for $$$q$$$ independent ranges $$$(l, r)$$$, tell Baby Ehab the minimum number of subarrays he needs.",
+  "input_specification": "The first line contains $$$2$$$ integers $$$n$$$ and $$$q$$$ ($$$1 \\le n,q \\le 10^5$$$) — the length of the array $$$a$$$ and the number of queries. The next line contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, $$$\\ldots$$$, $$$a_n$$$ ($$$1 \\le a_i \\le 10^5$$$) — the elements of the array $$$a$$$. Each of the next $$$q$$$ lines contains $$$2$$$ integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) — the endpoints of this query's interval.",
+  "output_specification": "For each query, print its answer on a new line.",
+  "sample_testcases": [
+    {
+      "input": "6 3\n2 3 10 7 5 14\n1 6\n2 4\n3 5",
+      "output": "3\n1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "2005D",
+  "source": "problemset",
+  "contest_id": 2005,
+  "problem_index": "D",
+  "name": "Alter the GCD",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "divide and conquer",
+    "implementation",
+    "number theory"
+  ],
+  "solved_count": 1312,
+  "problem_url": "https://codeforces.com/problemset/problem/2005/D",
+  "editorial_url": "https://codeforces.com/blog/entry/133966",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a_1, a_2, \\ldots, a_n$$$ and $$$b_1, b_2, \\ldots, b_n$$$. You must perform the following operation exactly once : choose any indices $$$l$$$ and $$$r$$$ such that $$$1 \\le l \\le r \\le n$$$; swap $$$a_i$$$ and $$$b_i$$$ for all $$$i$$$ such that $$$l \\leq i \\leq r$$$. Find the maximum possible value of $$$\\text{gcd}(a_1, a_2, \\ldots, a_n) + \\text{gcd}(b_1, b_2, \\ldots, b_n)$$$ after performing the operation exactly once. Also find the number of distinct pairs $$$(l, r)$$$ which achieve the maximum value.",
+  "input_specification": "In the first line of the input, you are given a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$), the number of test cases. Then the description of each test case follows. In the first line of each test case, you are given a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$), representing the number of integers in each array. In the next line, you are given $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. In the last line, you are given $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 10^9$$$) — the elements of the array $$$b$$$. The sum of values of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a line with two integers: the maximum value of $$$\\text{gcd}(a_1, a_2, \\ldots, a_n) + \\text{gcd}(b_1, b_2, \\ldots, b_n)$$$ after performing the operation exactly once, and the number of ways.",
+  "sample_testcases": [
+    {
+      "input": "5\n8\n11 4 16 17 3 24 25 8\n8 10 4 21 17 18 25 21\n4\n6 4 24 13\n15 3 1 14\n2\n13 14\n5 8\n8\n20 17 15 11 21 10 3 7\n9 9 4 20 14 9 13 1\n2\n18 13\n15 20",
+      "output": "2 36\n3 2\n2 3\n2 36\n6 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:53",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

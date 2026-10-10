@@ -1,0 +1,44 @@
+{
+  "id": "724D",
+  "source": "problemset",
+  "contest_id": 724,
+  "problem_index": "D",
+  "name": "Dense Subsequence",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 2503,
+  "problem_url": "https://codeforces.com/problemset/problem/724/D",
+  "editorial_url": "https://codeforces.com/blog/entry/47644",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string s , consisting of lowercase English letters, and the integer m . One should choose some symbols from the given string so that any contiguous subsegment of length m has at least one selected symbol. Note that here we choose positions of symbols, not the symbols themselves. Then one uses the chosen symbols to form a new string . All symbols from the chosen position should be used, but we are allowed to rearrange them in any order. Formally, we choose a subsequence of indices 1 ≤ i 1 < i 2 < ... < i t ≤ | s | . The selected sequence must meet the following condition: for every j such that 1 ≤ j ≤ | s | - m + 1 , there must be at least one selected index that belongs to the segment [ j , j + m - 1] , i.e. there should exist a k from 1 to t , such that j ≤ i k ≤ j + m - 1 . Then we take any permutation p of the selected indices and form a new string s i p 1 s i p 2 ... s i p t . Find the lexicographically smallest string, that can be obtained using this procedure.",
+  "input_specification": "The first line of the input contains a single integer m ( 1 ≤ m ≤ 100 000 ). The second line contains the string s consisting of lowercase English letters. It is guaranteed that this string is non-empty and its length doesn't exceed 100 000 . It is also guaranteed that the number m doesn't exceed the length of the string s .",
+  "output_specification": "Print the single line containing the lexicographically smallest string, that can be obtained using the procedure described above.",
+  "sample_testcases": [
+    {
+      "input": "3\ncbabc",
+      "output": "a"
+    },
+    {
+      "input": "2\nabcab",
+      "output": "aab"
+    },
+    {
+      "input": "3\nbcabcbaccba",
+      "output": "aaabb"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:23",
+  "main_topic": "Strings",
+  "subtopic": "Longest Common Subsequence (LCS)",
+  "subsubtopic": "427. Longest Common Subsequence (LCS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Longest Common Subsequence (LCS) paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

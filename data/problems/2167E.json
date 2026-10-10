@@ -1,0 +1,38 @@
+{
+  "id": "2167E",
+  "source": "problemset",
+  "contest_id": 2167,
+  "problem_index": "E",
+  "name": "khba Loves to Sleep!",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "geometry",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 9903,
+  "problem_url": "https://codeforces.com/problemset/problem/2167/E",
+  "editorial_url": "https://codeforces.com//www.youtube.com/watch?v=M-4064cqWJ8",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "khba has $$$n$$$ friends, each standing on a line at position $$$a_i$$$, and each of them is in the range $$$[0, x]$$$. They all want to come to him. One of his friends, Isamatdin, gave him $$$k$$$ teleports. Each friend will walk to the nearest teleport (choosing the shortest distance). Once a friend reaches a teleport, khba and the friend can instantly meet. But khba is so tired that he'll be sleeping while his friends are walking toward him. Now he wants to choose $$$k$$$ teleport positions so that their positions are distinct and lie within the range $$$[0, x]$$$, in order to maximize the time it takes for the first friend who reaches a teleport to reach it. Assume that friends move at the same speed. Since khba isn't good at calculations, you should output the $$$k$$$ chosen teleport positions.",
+  "input_specification": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$k$$$, and $$$x$$$ ($$$1 \\leq n, k \\leq 2 \\cdot 10^5$$$, $$$k - 1 \\leq x \\leq 10^9$$$) — the number of friends, the number of teleports, and the range of possible positions for the teleports. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\leq a_i \\leq x$$$) — the positions of khba's friends. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. It is guaranteed that the sum of $$$k$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing $$$k$$$ integers — the $$$k$$$ chosen teleport positions. The positions must be distinct and lie within the range $$$[0, x]$$$. The positions may be output in any order. If there are multiple optimal choices, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "10\n4 1 4\n1 0 2 4\n5 5 4\n0 1 2 3 4\n2 1 4\n4 0\n3 4 6\n2 4 3\n3 2 12\n6 12 0\n4 3 12\n8 12 0 4\n1 1 1000000000\n0\n1 1 1000000000\n1000000000\n3 4 9\n8 7 9\n3 4 9\n2 0 1",
+      "output": "3 \n0 1 2 3 4 \n2 \n0 1 5 6 \n3 9 \n2 6 10 \n1000000000 \n0 \n0 1 2 3 \n6 7 8 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:45",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

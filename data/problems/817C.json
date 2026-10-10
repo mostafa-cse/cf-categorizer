@@ -1,0 +1,45 @@
+{
+  "id": "817C",
+  "source": "problemset",
+  "contest_id": 817,
+  "problem_index": "C",
+  "name": "Really Big Numbers",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dp",
+    "math"
+  ],
+  "solved_count": 8724,
+  "problem_url": "https://codeforces.com/problemset/problem/817/C",
+  "editorial_url": "https://codeforces.com/blog/entry/52638",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Ivan likes to learn different things about numbers, but he is especially interested in really big numbers. Ivan thinks that a positive integer number x is really big if the difference between x and the sum of its digits (in decimal representation) is not less than s . To prove that these numbers may have different special properties, he wants to know how rare (or not rare) they are — in fact, he needs to calculate the quantity of really big numbers that are not greater than n . Ivan tried to do the calculations himself, but soon realized that it's too difficult for him. So he asked you to help him in calculations.",
+  "input_specification": "The first (and the only) line contains two integers n and s ( 1 ≤ n , s ≤ 10 18 ).",
+  "output_specification": "Print one integer — the quantity of really big numbers that are not greater than n .",
+  "sample_testcases": [
+    {
+      "input": "12 1",
+      "output": "3"
+    },
+    {
+      "input": "25 20",
+      "output": "0"
+    },
+    {
+      "input": "10 9",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

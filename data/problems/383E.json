@@ -1,0 +1,36 @@
+{
+  "id": "383E",
+  "source": "problemset",
+  "contest_id": 383,
+  "problem_index": "E",
+  "name": "Vowels",
+  "rating": 2700,
+  "tags": [
+    "combinatorics",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 4828,
+  "problem_url": "https://codeforces.com/problemset/problem/383/E",
+  "editorial_url": "https://codeforces.com/blog/entry/10476",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Iahubina is tired of so many complicated languages, so she decided to invent a new, simple language. She already made a dictionary consisting of n 3-words. A 3-word is a sequence of exactly 3 lowercase letters of the first 24 letters of the English alphabet ( a to x ). She decided that some of the letters are vowels, and all the others are consonants. The whole language is based on a simple rule: any word that contains at least one vowel is correct . Iahubina forgot which letters are the vowels, and wants to find some possible correct sets of vowels. She asks Iahub questions. In each question, she will give Iahub a set of letters considered vowels (in this question). For each question she wants to know how many words of the dictionary are correct, considering the given set of vowels. Iahubina wants to know the xor of the squared answers to all the possible questions. There are 2 24 different questions, they are all subsets of the set of the first 24 letters of the English alphabet. Help Iahub find that number.",
+  "input_specification": "The first line contains one integer, n (1 ≤ n ≤ 10 4 ) . Each of the next n lines contains a 3-word consisting of 3 lowercase letters. There will be no two identical 3-words.",
+  "output_specification": "Print one number, the xor of the squared answers to the queries.",
+  "sample_testcases": [
+    {
+      "input": "5\nabc\naaa\nada\nbcd\ndef",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "113B",
+  "source": "problemset",
+  "contest_id": 113,
+  "problem_index": "B",
+  "name": "Petr#",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "data structures",
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 3387,
+  "problem_url": "https://codeforces.com/problemset/problem/113/B",
+  "editorial_url": "https://codeforces.com/blog/entry/2627",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Long ago, when Petya was a schoolboy, he was very much interested in the Petr# language grammar. During one lesson Petya got interested in the following question: how many different continuous substrings starting with the s begin and ending with the s end (it is possible s begin = s end ), the given string t has. Substrings are different if and only if their contents aren't equal, their positions of occurence don't matter. Petya wasn't quite good at math, that's why he couldn't count this number. Help him!",
+  "input_specification": "The input file consists of three lines. The first line contains string t . The second and the third lines contain the s begin and s end identificators, correspondingly. All three lines are non-empty strings consisting of lowercase Latin letters. The length of each string doesn't exceed 2000 characters.",
+  "output_specification": "Output the only number — the amount of different substrings of t that start with s begin and end with s end .",
+  "sample_testcases": [
+    {
+      "input": "round\nro\nou",
+      "output": "1"
+    },
+    {
+      "input": "codeforces\ncode\nforca",
+      "output": "0"
+    },
+    {
+      "input": "abababab\na\nb",
+      "output": "4"
+    },
+    {
+      "input": "aba\nab\nba",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

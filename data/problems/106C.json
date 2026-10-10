@@ -1,0 +1,38 @@
+{
+  "id": "106C",
+  "source": "problemset",
+  "contest_id": 106,
+  "problem_index": "C",
+  "name": "Buns",
+  "rating": 1700,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 7353,
+  "problem_url": "https://codeforces.com/problemset/problem/106/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lavrenty, a baker, is going to make several buns with stuffings and sell them. Lavrenty has n grams of dough as well as m different stuffing types. The stuffing types are numerated from 1 to m . Lavrenty knows that he has a i grams left of the i -th stuffing. It takes exactly b i grams of stuffing i and c i grams of dough to cook a bun with the i -th stuffing. Such bun can be sold for d i tugriks. Also he can make buns without stuffings . Each of such buns requires c 0 grams of dough and it can be sold for d 0 tugriks. So Lavrenty can cook any number of buns with different stuffings or without it unless he runs out of dough and the stuffings. Lavrenty throws away all excess material left after baking. Find the maximum number of tugriks Lavrenty can earn.",
+  "input_specification": "The first line contains 4 integers n , m , c 0 and d 0 ( 1 ≤ n ≤ 1000 , 1 ≤ m ≤ 10 , 1 ≤ c 0 , d 0 ≤ 100 ). Each of the following m lines contains 4 integers. The i -th line contains numbers a i , b i , c i and d i ( 1 ≤ a i , b i , c i , d i ≤ 100 ).",
+  "output_specification": "Print the only number — the maximum number of tugriks Lavrenty can earn.",
+  "sample_testcases": [
+    {
+      "input": "10 2 2 1\n7 3 2 100\n12 3 1 10",
+      "output": "241"
+    },
+    {
+      "input": "100 1 25 50\n15 5 20 10",
+      "output": "200"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

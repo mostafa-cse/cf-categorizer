@@ -1,0 +1,38 @@
+{
+  "id": "1453D",
+  "source": "problemset",
+  "contest_id": 1453,
+  "problem_index": "D",
+  "name": "Checkpoints",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 4501,
+  "problem_url": "https://codeforces.com/problemset/problem/1453/D",
+  "editorial_url": "https://codeforces.com/blog/entry/85288",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Gildong is developing a game consisting of $$$n$$$ stages numbered from $$$1$$$ to $$$n$$$. The player starts the game from the $$$1$$$-st stage and should beat the stages in increasing order of the stage number. The player wins the game after beating the $$$n$$$-th stage. There is at most one checkpoint on each stage, and there is always a checkpoint on the $$$1$$$-st stage. At the beginning of the game, only the checkpoint on the $$$1$$$-st stage is activated, and all other checkpoints are deactivated. When the player gets to the $$$i$$$-th stage that has a checkpoint, that checkpoint is activated. For each try of a stage, the player can either beat the stage or fail the stage. If they beat the $$$i$$$-th stage, the player is moved to the $$$i+1$$$-st stage. If they fail the $$$i$$$-th stage, the player is moved to the most recent checkpoint they activated, and they have to beat the stages after that checkpoint again. For example, assume that $$$n = 4$$$ and the checkpoints are on the $$$1$$$-st and $$$3$$$-rd stages. The player starts at the $$$1$$$-st stage. If they fail on the $$$1$$$-st stage, they need to retry the $$$1$$$-st stage because the checkpoint on the $$$1$$$-st stage is the most recent checkpoint they activated. If the player beats the $$$1$$$-st stage, they're moved to the $$$2$$$-nd stage. If they fail it, they're sent back to the $$$1$$$-st stage again. If they beat both the $$$1$$$-st stage and the $$$2$$$-nd stage, they get to the $$$3$$$-rd stage and the checkpoint on the $$$3$$$-rd stage is activated. Now whenever they fail on the $$$3$$$-rd stage, or the $$$4$$$-th stage after beating the $$$3$$$-rd stage, they're sent back to the $$$3$$$-rd stage. If they beat both the $$$3$$$-rd stage and the $$$4$$$-th stage, they win the game. Gildong is going to build the stages to have equal difficulty. He wants you to find any series of stages and checkpoints using at most $$$2000$$$ stages, where the expected number of tries over all stages is exactly $$$k$$$, for a player whose probability of beating each stage is exactly $$$\\cfrac{1}{2}$$$.",
+  "input_specification": "Each test contains one or more test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 50$$$). Each test case contains exactly one line. The line consists of a single integer $$$k$$$ ($$$1 \\le k \\le 10^{18}$$$) — the expected number of tries over all stages Gildong wants to set for a player whose probability of beating each stage is exactly $$$\\cfrac{1}{2}$$$.",
+  "output_specification": "For each test case, print $$$-1$$$ if it's impossible to construct such a series of stages and checkpoints using at most $$$2000$$$ stages. Otherwise, print two lines. The first line should contain a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$) – the number of stages. The second line should contain $$$n$$$ integers, where the $$$i$$$-th integer represents whether the $$$i$$$-th stage has a checkpoint. The $$$i$$$-th integer should be $$$0$$$ if the $$$i$$$-th stage doesn't have a checkpoint, and $$$1$$$ if it has a checkpoint. Note that the first integer must be $$$1$$$ according to the description.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n2\n8\n12",
+      "output": "-1\n1\n1\n4\n1 1 1 1\n5\n1 1 0 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:25",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

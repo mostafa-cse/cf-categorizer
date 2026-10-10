@@ -1,0 +1,36 @@
+{
+  "id": "1725G",
+  "source": "problemset",
+  "contest_id": 1725,
+  "problem_index": "G",
+  "name": "Garage",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "geometry",
+    "math"
+  ],
+  "solved_count": 6837,
+  "problem_url": "https://codeforces.com/problemset/problem/1725/G",
+  "editorial_url": "https://codeforces.com/blog/entry/106567",
+  "time_limit": "1 second",
+  "memory_limit": "128 megabytes",
+  "description": "Pak Chanek plans to build a garage. He wants the garage to consist of a square and a right triangle that are arranged like the following illustration. Define $$$a$$$ and $$$b$$$ as the lengths of two of the sides in the right triangle as shown in the illustration. An integer $$$x$$$ is suitable if and only if we can construct a garage with assigning positive integer values for the lengths $$$a$$$ and $$$b$$$ ($$$a \\lt b$$$) so that the area of the square at the bottom is exactly $$$x$$$. As a good friend of Pak Chanek, you are asked to help him find the $$$N$$$-th smallest suitable number.",
+  "input_specification": "The only line contains a single integer $$$N$$$ ($$$1 \\leq N \\leq 10^9$$$).",
+  "output_specification": "An integer that represents the $$$N$$$-th smallest suitable number.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

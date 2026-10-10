@@ -1,0 +1,38 @@
+{
+  "id": "2206H",
+  "source": "problemset",
+  "contest_id": 2206,
+  "problem_index": "H",
+  "name": "Reflect Sort",
+  "rating": 1800,
+  "tags": [
+    "number theory"
+  ],
+  "solved_count": 1651,
+  "problem_url": "https://codeforces.com/problemset/problem/2206/H",
+  "editorial_url": "https://codeforces.com/contest/2206/attachments/download/36244/analysis.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You have a sequence of $$$n$$$ integers $$$(a_1, a_2, \\ldots, a_n)$$$, the initial values of which are given to you. You may apply the following operation to the sequence any number of times (possibly zero): Choose an index $$$i$$$ ($$$1 \\le i \\le n$$$). Choose a set $$$S$$$ to be either the prefix $$$\\{1,2,\\ldots,i-1\\}$$$ or the suffix $$$\\{i+1,i+2,\\ldots,n\\}$$$. For every $$$j \\in S$$$, replace $$$a_j$$$ with $$$2a_i - a_j$$$. Your goal is to make the sequence non-decreasing and all elements positive , while minimizing $$$a_n$$$, using the operation above any number of times. That is, $$$1 \\le a_1 \\le a_2 \\le \\ldots \\le a_n$$$ must hold in the resulting sequence. What is the minimum possible value of $$$a_n$$$ in the resulting sequence?",
+  "input_specification": "The first line of input contains a single integer $$$n$$$ ($$$2 \\le n \\le 100\\,000$$$). The second line contains $$$n$$$ integers representing the initial values of $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$).",
+  "output_specification": "Output the minimum possible value of $$$a_n$$$ in the resulting sequence.",
+  "sample_testcases": [
+    {
+      "input": "5\n6 3 5 5 2",
+      "output": "10"
+    },
+    {
+      "input": "3\n2 1 100000",
+      "output": "100002"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

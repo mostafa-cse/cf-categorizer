@@ -1,0 +1,43 @@
+{
+  "id": "317D",
+  "source": "problemset",
+  "contest_id": 317,
+  "problem_index": "D",
+  "name": "Game with Powers",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 1326,
+  "problem_url": "https://codeforces.com/problemset/problem/317/D",
+  "editorial_url": "https://codeforces.com/blog/entry/7956",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya and Petya wrote down all integers from 1 to n to play the \"powers\" game ( n can be quite large; however, Vasya and Petya are not confused by this fact). Players choose numbers in turn (Vasya chooses first). If some number x is chosen at the current turn, it is forbidden to choose x or all of its other positive integer powers (that is, x 2 , x 3 , ... ) at the next turns. For instance, if the number 9 is chosen at the first turn, one cannot choose 9 or 81 later, while it is still allowed to choose 3 or 27 . The one who cannot make a move loses. Who wins if both Vasya and Petya play optimally?",
+  "input_specification": "Input contains single integer n ( 1 ≤ n ≤ 10 9 ).",
+  "output_specification": "Print the name of the winner — \" Vasya \" or \" Petya \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "Vasya"
+    },
+    {
+      "input": "2",
+      "output": "Petya"
+    },
+    {
+      "input": "8",
+      "output": "Petya"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

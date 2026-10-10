@@ -1,0 +1,39 @@
+{
+  "id": "22D",
+  "source": "problemset",
+  "contest_id": 22,
+  "problem_index": "D",
+  "name": "Segments",
+  "rating": 1900,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3542,
+  "problem_url": "https://codeforces.com/problemset/problem/22/D",
+  "editorial_url": "https://codeforces.com/blog/entry/507",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given n segments on the Ox-axis. You can drive a nail in any integer point on the Ox-axis line nail so, that all segments containing this point, are considered nailed down. If the nail passes through endpoint of some segment, this segment is considered to be nailed too. What is the smallest number of nails needed to nail all the segments down?",
+  "input_specification": "The first line of the input contains single integer number n ( 1 ≤ n ≤ 1000 ) — amount of segments. Following n lines contain descriptions of the segments. Each description is a pair of integer numbers — endpoints coordinates. All the coordinates don't exceed 10000 by absolute value. Segments can degenarate to points.",
+  "output_specification": "The first line should contain one integer number — the smallest number of nails needed to nail all the segments down. The second line should contain coordinates of driven nails separated by space in any order. If the answer is not unique, output any.",
+  "sample_testcases": [
+    {
+      "input": "2\n0 2\n2 5",
+      "output": "1\n2"
+    },
+    {
+      "input": "5\n0 3\n4 2\n4 8\n8 10\n7 7",
+      "output": "3\n7 10 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "691B",
+  "source": "problemset",
+  "contest_id": 691,
+  "problem_index": "B",
+  "name": "s-palindrome",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 8291,
+  "problem_url": "https://codeforces.com/problemset/problem/691/B",
+  "editorial_url": "https://codeforces.com/blog/entry/46075",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call a string \" s-palindrome \" if it is symmetric about the middle of the string. For example, the string \" oHo \" is \" s-palindrome \", but the string \" aa \" is not. The string \" aa \" is not \" s-palindrome \", because the second half of it is not a mirror reflection of the first half. English alphabet You are given a string s . Check if the string is \" s-palindrome \".",
+  "input_specification": "The only line contains the string s ( 1 ≤ | s | ≤ 1000 ) which consists of only English letters.",
+  "output_specification": "Print \" TAK \" if the string s is \" s-palindrome \" and \" NIE \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "oXoxoXo",
+      "output": "TAK"
+    },
+    {
+      "input": "bod",
+      "output": "TAK"
+    },
+    {
+      "input": "ER",
+      "output": "NIE"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1627E",
+  "source": "problemset",
+  "contest_id": 1627,
+  "problem_index": "E",
+  "name": "Not Escaping",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dp",
+    "implementation",
+    "shortest paths",
+    "two pointers"
+  ],
+  "solved_count": 2936,
+  "problem_url": "https://codeforces.com/problemset/problem/1627/E",
+  "editorial_url": "https://codeforces.com/blog/entry/99067",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Major Ram is being chased by his arch enemy Raghav. Ram must reach the top of the building to escape via helicopter. The building, however, is on fire. Ram must choose the optimal path to reach the top of the building to lose the minimum amount of health. The building consists of $$$n$$$ floors, each with $$$m$$$ rooms each. Let $$$(i, j)$$$ represent the $$$j$$$-th room on the $$$i$$$-th floor. Additionally, there are $$$k$$$ ladders installed. The $$$i$$$-th ladder allows Ram to travel from $$$(a_i, b_i)$$$ to $$$(c_i, d_i)$$$, but not in the other direction . Ram also gains $$$h_i$$$ health points if he uses the ladder $$$i$$$. It is guaranteed $$$a_i \\lt c_i$$$ for all ladders. If Ram is on the $$$i$$$-th floor, he can move either left or right. Travelling across floors, however, is treacherous. If Ram travels from $$$(i, j)$$$ to $$$(i, k)$$$, he loses $$$|j-k| \\cdot x_i$$$ health points. Ram enters the building at $$$(1, 1)$$$ while his helicopter is waiting at $$$(n, m)$$$. What is the minimum amount of health Ram loses if he takes the most optimal path? Note this answer may be negative (in which case he gains health). Output \" NO ESCAPE \" if no matter what path Ram takes, he cannot escape the clutches of Raghav.",
+  "input_specification": "The first line of input contains $$$t$$$ ($$$1 \\leq t \\leq 5 \\cdot 10^4$$$) — the number of test cases. The first line of each test case consists of $$$3$$$ integers $$$n, m, k$$$ ($$$2 \\leq n, m \\leq 10^5$$$; $$$1 \\leq k \\leq 10^5$$$) — the number of floors, the number of rooms on each floor and the number of ladders respectively. The second line of a test case consists of $$$n$$$ integers $$$x_1, x_2, \\dots, x_n$$$ ($$$1 \\leq x_i \\leq 10^6$$$). The next $$$k$$$ lines describe the ladders. Ladder $$$i$$$ is denoted by $$$a_i, b_i, c_i, d_i, h_i$$$ ($$$1 \\leq a_i \\lt c_i \\leq n$$$; $$$1 \\leq b_i, d_i \\leq m$$$; $$$1 \\leq h_i \\leq 10^6$$$)  — the rooms it connects and the health points gained from using it. It is guaranteed $$$a_i \\lt c_i$$$ for all ladders and there is at most one ladder between any 2 rooms in the building. The sum of $$$n$$$, the sum of $$$m$$$, and the sum of $$$k$$$ over all test cases do not exceed $$$10^5$$$.",
+  "output_specification": "Output the minimum health Ram loses on the optimal path from $$$(1, 1)$$$ to $$$(n, m)$$$. If Ram cannot escape the clutches of Raghav regardless of the path he takes, output \" NO ESCAPE \" (all uppercase, without quotes).",
+  "sample_testcases": [
+    {
+      "input": "4\n5 3 3\n5 17 8 1 4\n1 3 3 3 4\n3 1 5 2 5\n3 2 5 1 6\n6 3 3\n5 17 8 1 4 2\n1 3 3 3 4\n3 1 5 2 5\n3 2 5 1 6\n5 3 1\n5 17 8 1 4\n1 3 5 3 100\n5 5 5\n3 2 3 7 5\n3 5 4 2 1\n2 2 5 4 5\n4 4 5 2 3\n1 2 4 2 2\n3 3 5 2 4",
+      "output": "16\nNO ESCAPE\n-90\n27"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "645C",
+  "source": "problemset",
+  "contest_id": 645,
+  "problem_index": "C",
+  "name": "Enduring Exodus",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "two pointers"
+  ],
+  "solved_count": 4517,
+  "problem_url": "https://codeforces.com/problemset/problem/645/C",
+  "editorial_url": "https://codeforces.com/blog/entry/43868",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In an attempt to escape the Mischievous Mess Makers' antics, Farmer John has abandoned his farm and is traveling to the other side of Bovinia. During the journey, he and his k cows have decided to stay at the luxurious Grand Moo-dapest Hotel. The hotel consists of n rooms located in a row, some of which are occupied. Farmer John wants to book a set of k + 1 currently unoccupied rooms for him and his cows. He wants his cows to stay as safe as possible, so he wishes to minimize the maximum distance from his room to the room of his cow. The distance between rooms i and j is defined as | j - i | . Help Farmer John protect his cows by calculating this minimum possible distance.",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ k < n ≤ 100 000 ) — the number of rooms in the hotel and the number of cows travelling with Farmer John. The second line contains a string of length n describing the rooms. The i -th character of the string will be ' 0 ' if the i -th room is free, and ' 1 ' if the i -th room is occupied. It is guaranteed that at least k + 1 characters of this string are ' 0 ', so there exists at least one possible choice of k + 1 rooms for Farmer John and his cows to stay in.",
+  "output_specification": "Print the minimum possible distance between Farmer John's room and his farthest cow.",
+  "sample_testcases": [
+    {
+      "input": "7 2\n0100100",
+      "output": "2"
+    },
+    {
+      "input": "5 1\n01010",
+      "output": "2"
+    },
+    {
+      "input": "3 2\n000",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

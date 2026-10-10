@@ -1,0 +1,38 @@
+{
+  "id": "952C",
+  "source": "problemset",
+  "contest_id": 952,
+  "problem_index": "C",
+  "name": "Ravioli Sort",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3085,
+  "problem_url": "https://codeforces.com/problemset/problem/952/C",
+  "editorial_url": "https://codeforces.com/blog/entry/58681",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Everybody knows of spaghetti sort . You decided to implement an analog sorting algorithm yourself, but as you survey your pantry you realize you're out of spaghetti! The only type of pasta you have is ravioli, but you are not going to let this stop you... You come up with the following algorithm. For each number in the array a i , build a stack of a i ravioli. The image shows the stack for a i = 4 . Arrange the stacks in one row in the order in which the corresponding numbers appear in the input array. Find the tallest one (if there are several stacks of maximal height, use the leftmost one). Remove it and add its height to the end of the output array. Shift the stacks in the row so that there is no gap between them. Repeat the procedure until all stacks have been removed. At first you are very happy with your algorithm, but as you try it on more inputs you realize that it doesn't always produce the right sorted array. Turns out when two stacks of ravioli are next to each other (at any step of the process) and differ in height by two or more, the top ravioli of the taller stack slides down on top of the lower stack. Given an input array, figure out whether the described algorithm will sort it correctly.",
+  "input_specification": "The first line of input contains a single number n ( 1 ≤ n ≤ 10 ) — the size of the array. The second line of input contains n space-separated integers a i ( 1 ≤ a i ≤ 100 ) — the elements of the array.",
+  "output_specification": "Output \"YES\" if the array can be sorted using the described procedure and \"NO\" if it can not.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "YES"
+    },
+    {
+      "input": "3\n3 1 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

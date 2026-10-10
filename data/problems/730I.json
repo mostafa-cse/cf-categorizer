@@ -1,0 +1,45 @@
+{
+  "id": "730I",
+  "source": "problemset",
+  "contest_id": 730,
+  "problem_index": "I",
+  "name": "Olympiad in Programming and Sports",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "flows",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 2974,
+  "problem_url": "https://codeforces.com/problemset/problem/730/I",
+  "editorial_url": "https://codeforces.com//www.luogu.com.cn/article/9vn5s0ia",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are n students at Berland State University. Every student has two skills, each measured as a number: a i — the programming skill and b i — the sports skill. It is announced that an Olympiad in programming and sports will be held soon. That's why Berland State University should choose two teams: one to take part in the programming track and one to take part in the sports track. There should be exactly p students in the programming team and exactly s students in the sports team. A student can't be a member of both teams. The university management considers that the strength of the university on the Olympiad is equal to the sum of two values: the programming team strength and the sports team strength. The strength of a team is the sum of skills of its members in the corresponding area, so the strength of the programming team is the sum of all a i and the strength of the sports team is the sum of all b i over corresponding team members. Help Berland State University to compose two teams to maximize the total strength of the university on the Olympiad.",
+  "input_specification": "The first line contains three positive integer numbers n , p and s ( 2 ≤ n ≤ 3000 , p + s ≤ n ) — the number of students, the size of the programming team and the size of the sports team. The second line contains n positive integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 3000 ), where a i is the programming skill of the i -th student. The third line contains n positive integers b 1 , b 2 , ..., b n ( 1 ≤ b i ≤ 3000 ), where b i is the sports skill of the i -th student.",
+  "output_specification": "In the first line, print the the maximum strength of the university on the Olympiad. In the second line, print p numbers — the members of the programming team. In the third line, print s numbers — the members of the sports team. The students are numbered from 1 to n as they are given in the input. All numbers printed in the second and in the third lines should be distinct and can be printed in arbitrary order. If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 2 2\n1 3 4 5 2\n5 3 2 1 4",
+      "output": "18\n3 4\n1 5"
+    },
+    {
+      "input": "4 2 2\n10 8 8 3\n10 7 9 4",
+      "output": "31\n1 2\n3 4"
+    },
+    {
+      "input": "5 3 1\n5 2 5 1 7\n6 3 1 6 3",
+      "output": "23\n1 3 5\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

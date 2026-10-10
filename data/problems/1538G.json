@@ -1,0 +1,37 @@
+{
+  "id": "1538G",
+  "source": "problemset",
+  "contest_id": 1538,
+  "problem_index": "G",
+  "name": "Gift Set",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 5477,
+  "problem_url": "https://codeforces.com/problemset/problem/1538/G",
+  "editorial_url": "https://codeforces.com/blog/entry/91637",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has $$$x$$$ of red and $$$y$$$ of blue candies. Using them, he wants to make gift sets. Each gift set contains either $$$a$$$ red candies and $$$b$$$ blue candies, or $$$a$$$ blue candies and $$$b$$$ red candies. Any candy can belong to at most one gift set. Help Polycarp to find the largest number of gift sets he can create. For example, if $$$x = 10$$$, $$$y = 12$$$, $$$a = 5$$$, and $$$b = 2$$$, then Polycarp can make three gift sets: In the first set there will be $$$5$$$ red candies and $$$2$$$ blue candies; In the second set there will be $$$5$$$ blue candies and $$$2$$$ red candies; In the third set will be $$$5$$$ blue candies and $$$2$$$ red candies. Note that in this example there is one red candy that Polycarp does not use in any gift set.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Then $$$t$$$ test cases follow. Each test case consists of a single string containing four integers $$$x$$$, $$$y$$$, $$$a$$$, and $$$b$$$ ($$$1 \\le x, y, a, b \\le 10^9$$$).",
+  "output_specification": "For each test case, output one number — the maximum number of gift sets that Polycarp can make.",
+  "sample_testcases": [
+    {
+      "input": "9\n10 12 2 5\n1 1 2 2\n52 311 13 27\n1000000000 1000000000 1 1\n1000000000 1 1 1000000000\n1 1000000000 1000000000 1\n1 2 1 1\n7 8 1 2\n4 1 2 3",
+      "output": "3\n0\n4\n1000000000\n1\n1\n1\n5\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:06",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

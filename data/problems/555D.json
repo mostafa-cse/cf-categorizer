@@ -1,0 +1,40 @@
+{
+  "id": "555D",
+  "source": "problemset",
+  "contest_id": 555,
+  "problem_index": "D",
+  "name": "Case of a Top Secret",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 971,
+  "problem_url": "https://codeforces.com/problemset/problem/555/D",
+  "editorial_url": "https://codeforces.com/blog/entry/18919",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andrewid the Android is a galaxy-famous detective. Now he is busy with a top secret case, the details of which are not subject to disclosure. However, he needs help conducting one of the investigative experiment. There are n pegs put on a plane, they are numbered from 1 to n , the coordinates of the i -th of them are ( x i , 0) . Then, we tie to the bottom of one of the pegs a weight on a tight rope of length l (thus, its coordinates will be equal to ( x i ,  - l ) , where i is the number of the used peg). Then the weight is pushed to the right, so that it starts to rotate counterclockwise. At the same time, if the weight during rotation touches some of the other pegs, it then begins to rotate around that peg. Suppose that each peg itself is very thin and does not affect the rope length while weight is rotating around it. More formally, if at some moment the segment of the rope contains one or more pegs in addition to the peg around which the weight is rotating, the weight will then rotate around the farthermost one of them on a shorter segment of a rope. In particular, if the segment of the rope touches some peg by its endpoint, it is considered that the weight starts to rotate around that peg on a segment of the rope of length 0 . At some moment the weight will begin to rotate around some peg, without affecting the rest of the pegs. Andrewid interested in determining the number of this peg. Andrewid prepared m queries containing initial conditions for pushing the weight, help him to determine for each of them, around what peg the weight will eventually rotate.",
+  "input_specification": "The first line contains integers n and m ( 1 ≤ n , m ≤ 2·10 5 ) — the number of pegs and queries. The next line contains n integers x 1 , x 2 , ..., x n ( - 10 9 ≤ x i ≤ 10 9 ) — the coordinates of the pegs. It is guaranteed that the coordinates of all the pegs are distinct integers. Next m lines contain the descriptions of the queries of pushing the weight, each consists of two integers a i ( 1 ≤ a i ≤ n ) and l i ( 1 ≤ l i ≤ 10 9 ) — the number of the starting peg and the length of the rope.",
+  "output_specification": "Print m lines, the i -th line should contain the number of the peg around which the weight will eventually rotate after the i -th push.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n0 3 5\n2 3\n1 8",
+      "output": "3\n2"
+    },
+    {
+      "input": "4 4\n1 5 7 15\n1 4\n2 15\n3 16\n1 28",
+      "output": "2\n4\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

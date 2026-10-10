@@ -1,0 +1,43 @@
+{
+  "id": "1060D",
+  "source": "problemset",
+  "contest_id": 1060,
+  "problem_index": "D",
+  "name": "Social Circles",
+  "rating": 1900,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 3922,
+  "problem_url": "https://codeforces.com/problemset/problem/1060/D",
+  "editorial_url": "https://codeforces.com/blog/entry/113725",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You invited $$$n$$$ guests to dinner! You plan to arrange one or more circles of chairs. Each chair is going to be either occupied by one guest, or be empty. You can make any number of circles. Your guests happen to be a little bit shy, so the $$$i$$$-th guest wants to have a least $$$l_i$$$ free chairs to the left of his chair, and at least $$$r_i$$$ free chairs to the right. The \"left\" and \"right\" directions are chosen assuming all guests are going to be seated towards the center of the circle. Note that when a guest is the only one in his circle, the $$$l_i$$$ chairs to his left and $$$r_i$$$ chairs to his right may overlap. What is smallest total number of chairs you have to use?",
+  "input_specification": "First line contains one integer $$$n$$$  — number of guests, ($$$1 \\leqslant n \\leqslant 10^5$$$). Next $$$n$$$ lines contain $$$n$$$ pairs of space-separated integers $$$l_i$$$ and $$$r_i$$$ ($$$0 \\leqslant l_i, r_i \\leqslant 10^9$$$).",
+  "output_specification": "Output a single integer — the smallest number of chairs you have to use.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1\n1 1\n1 1",
+      "output": "6"
+    },
+    {
+      "input": "4\n1 2\n2 1\n3 5\n5 3",
+      "output": "15"
+    },
+    {
+      "input": "1\n5 6",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

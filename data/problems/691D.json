@@ -1,0 +1,36 @@
+{
+  "id": "691D",
+  "source": "problemset",
+  "contest_id": 691,
+  "problem_index": "D",
+  "name": "Swaps in Permutation",
+  "rating": 1700,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "math"
+  ],
+  "solved_count": 6853,
+  "problem_url": "https://codeforces.com/problemset/problem/691/D",
+  "editorial_url": "https://codeforces.com/blog/entry/46075",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation of the numbers 1, 2, ..., n and m pairs of positions ( a j , b j ) . At each step you can choose a pair from the given positions and swap the numbers in that positions. What is the lexicographically maximal permutation one can get? Let p and q be two permutations of the numbers 1, 2, ..., n . p is lexicographically smaller than the q if a number 1 ≤ i ≤ n exists, so p k = q k for 1 ≤ k < i and p i < q i .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 10 6 ) — the length of the permutation p and the number of pairs of positions. The second line contains n distinct integers p i ( 1 ≤ p i ≤ n ) — the elements of the permutation p . Each of the last m lines contains two integers ( a j , b j ) ( 1 ≤ a j , b j ≤ n ) — the pairs of positions to swap. Note that you are given a positions , not the values to swap.",
+  "output_specification": "Print the only line with n distinct integers p ' i ( 1 ≤ p ' i ≤ n ) — the lexicographically maximal permutation one can get.",
+  "sample_testcases": [
+    {
+      "input": "9 6\n1 2 3 4 5 6 7 8 9\n1 4\n4 7\n2 5\n5 8\n3 6\n6 9",
+      "output": "7 8 9 4 5 6 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

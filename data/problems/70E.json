@@ -1,0 +1,36 @@
+{
+  "id": "70E",
+  "source": "problemset",
+  "contest_id": 70,
+  "problem_index": "E",
+  "name": "Information Reform",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 630,
+  "problem_url": "https://codeforces.com/problemset/problem/70/E",
+  "editorial_url": "https://codeforces.com/blog/entry/1598",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Thought it is already the XXI century, the Mass Media isn't very popular in Walrusland. The cities get news from messengers who can only travel along roads. The network of roads in Walrusland is built so that it is possible to get to any city from any other one in exactly one way, and the roads' lengths are equal. The North Pole governor decided to carry out an information reform. Several cities were decided to be chosen and made regional centers. Maintaining a region center takes k fishlars (which is a local currency) per year. It is assumed that a regional center always has information on the latest news. For every city which is not a regional center, it was decided to appoint a regional center which will be responsible for keeping this city informed. In that case the maintenance costs will be equal to d len fishlars per year, where len is the distance from a city to the corresponding regional center, measured in the number of roads along which one needs to go. Your task is to minimize the costs to carry out the reform.",
+  "input_specification": "The first line contains two given numbers n and k ( 1 ≤ n ≤ 180, 1 ≤ k ≤ 10 5 ). The second line contains n - 1 integers d i , numbered starting with 1 ( d i ≤ d i + 1 , 0 ≤ d i ≤ 10 5 ). Next n - 1 lines contain the pairs of cities connected by a road.",
+  "output_specification": "On the first line print the minimum number of fishlars needed for a year's maintenance. On the second line print n numbers, where the i -th number will represent the number of the regional center, appointed to the i -th city. If the i -th city is a regional center itself, then you should print number i . If there are several solutions to that problem, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "8 10\n2 5 9 11 15 19 20\n1 4\n1 3\n1 7\n4 6\n2 8\n2 3\n3 5",
+      "output": "38\n3 3 3 4 3 4 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

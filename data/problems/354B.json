@@ -1,0 +1,44 @@
+{
+  "id": "354B",
+  "source": "problemset",
+  "contest_id": 354,
+  "problem_index": "B",
+  "name": "Game with Strings",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "games"
+  ],
+  "solved_count": 532,
+  "problem_url": "https://codeforces.com/problemset/problem/354/B",
+  "editorial_url": "https://codeforces.com/blog/entry/8672",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Given an n × n table T consisting of lowercase English letters. We'll consider some string s good if the table contains a correct path corresponding to the given string. In other words, good strings are all strings we can obtain by moving from the left upper cell of the table only to the right and down. Here's the formal definition of correct paths: Consider rows of the table are numbered from 1 to n from top to bottom, and columns of the table are numbered from 1 to n from left to the right. Cell ( r , c ) is a cell of table T on the r -th row and in the c -th column. This cell corresponds to letter T r , c . A path of length k is a sequence of table cells [( r 1 , c 1 ), ( r 2 , c 2 ), ..., ( r k , c k )] . The following paths are correct: There is only one correct path of length 1 , that is, consisting of a single cell: [(1, 1)] ; Let's assume that [( r 1 , c 1 ), ..., ( r m , c m )] is a correct path of length m , then paths [( r 1 , c 1 ), ..., ( r m , c m ), ( r m + 1, c m )] and [( r 1 , c 1 ), ..., ( r m , c m ), ( r m , c m + 1)] are correct paths of length m + 1 . We should assume that a path [( r 1 , c 1 ), ( r 2 , c 2 ), ..., ( r k , c k )] corresponds to a string of length k : T r 1 , c 1 + T r 2 , c 2 + ... + T r k , c k . Two players play the following game: initially they have an empty string. Then the players take turns to add a letter to the end of the string. After each move (adding a new letter) the resulting string must be good. The game ends after 2 n - 1 turns. A player wins by the following scenario: If the resulting string has strictly more letters \" a \" than letters \" b \", then the first player wins; If the resulting string has strictly more letters \" b \" than letters \" a \", then the second player wins; If the resulting string has the same number of letters \" a \" and \" b \", then the players end the game with a draw. Your task is to determine the result of the game provided that both players played optimally well.",
+  "input_specification": "The first line contains a single number n (1 ≤ n ≤ 20) . Next n lines contain n lowercase English letters each — table T .",
+  "output_specification": "In a single line print string \" FIRST \", if the first player wins, \" SECOND \", if the second player wins and \" DRAW \", if the game ends with a draw.",
+  "sample_testcases": [
+    {
+      "input": "2\nab\ncd",
+      "output": "DRAW"
+    },
+    {
+      "input": "2\nxa\nay",
+      "output": "FIRST"
+    },
+    {
+      "input": "3\naab\nbcb\nbac",
+      "output": "DRAW"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

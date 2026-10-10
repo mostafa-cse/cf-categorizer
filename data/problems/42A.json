@@ -1,0 +1,43 @@
+{
+  "id": "42A",
+  "source": "problemset",
+  "contest_id": 42,
+  "problem_index": "A",
+  "name": "Guilty --- to the kitchen!",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 3245,
+  "problem_url": "https://codeforces.com/problemset/problem/42/A",
+  "editorial_url": "https://codeforces.com/blog/entry/884",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It's a very unfortunate day for Volodya today. He got bad mark in algebra and was therefore forced to do some work in the kitchen, namely to cook borscht (traditional Russian soup). This should also improve his algebra skills. According to the borscht recipe it consists of n ingredients that have to be mixed in proportion litres (thus, there should be a 1 · x , ..., a n · x litres of corresponding ingredients mixed for some non-negative x ). In the kitchen Volodya found out that he has b 1 , ..., b n litres of these ingredients at his disposal correspondingly. In order to correct his algebra mistakes he ought to cook as much soup as possible in a V litres volume pan (which means the amount of soup cooked can be between 0 and V litres). What is the volume of borscht Volodya will cook ultimately?",
+  "input_specification": "The first line of the input contains two space-separated integers n and V ( 1 ≤ n ≤ 20, 1 ≤ V ≤ 10000 ). The next line contains n space-separated integers a i ( 1 ≤ a i ≤ 100 ). Finally, the last line contains n space-separated integers b i ( 0 ≤ b i ≤ 100 ).",
+  "output_specification": "Your program should output just one real number — the volume of soup that Volodya will cook. Your answer must have a relative or absolute error less than 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "1 100\n1\n40",
+      "output": "40.0"
+    },
+    {
+      "input": "2 100\n1 1\n25 30",
+      "output": "50.0"
+    },
+    {
+      "input": "2 100\n1 1\n60 60",
+      "output": "100.0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

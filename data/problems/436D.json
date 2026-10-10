@@ -1,0 +1,42 @@
+{
+  "id": "436D",
+  "source": "problemset",
+  "contest_id": 436,
+  "problem_index": "D",
+  "name": "Pudding Monsters",
+  "rating": 2800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 376,
+  "problem_url": "https://codeforces.com/problemset/problem/436/D",
+  "editorial_url": "https://codeforces.com/blog/entry/12680",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Have you ever played Pudding Monsters? In this task, a simplified one-dimensional model of this game is used. Imagine an infinite checkered stripe, the cells of which are numbered sequentially with integers. Some cells of the strip have monsters, other cells of the strip are empty. All monsters are made of pudding, so if there are two monsters in the neighboring cells, they stick to each other (literally). Similarly, if several monsters are on consecutive cells, they all stick together in one block of monsters. We will call the stuck together monsters a block of monsters. A detached monster, not stuck to anyone else, is also considered a block. In one move, the player can take any block of monsters and with a movement of his hand throw it to the left or to the right. The selected monsters will slide on until they hit some other monster (or a block of monsters). For example, if a strip has three monsters in cells 1 , 4 and 5 , then there are only four possible moves: to send a monster in cell 1 to minus infinity, send the block of monsters in cells 4 and 5 to plus infinity, throw monster 1 to the right (it will stop in cell 3 ), throw a block of monsters in cells 4 and 5 to the left (they will stop in cells 2 and 3 ). Some cells on the strip are marked with stars. These are the special cells. The goal of the game is to make the largest possible number of special cells have monsters on them. You are given the numbers of the special cells on a strip as well as the initial position of all monsters. What is the maximum number of special cells that will contain monsters in the optimal game?",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n ≤ 10 5 ; 1 ≤ m ≤ 2000) — the number of monsters on the strip and the number of special cells. The second line contains n distinct integers — the numbers of the cells with monsters, then the third line contains m distinct integers — the numbers of the special cells. It is guaranteed that all the numbers of the cells are positive integers not exceeding 2·10 5 .",
+  "output_specification": "Print a single integer — the maximum number of special cells that will contain monsters in the optimal game.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3 5\n2 4",
+      "output": "2"
+    },
+    {
+      "input": "4 2\n1 3 4 6\n2 5",
+      "output": "2"
+    },
+    {
+      "input": "4 2\n1 8 4 5\n7 2",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

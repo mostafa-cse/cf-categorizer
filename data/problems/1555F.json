@@ -1,0 +1,37 @@
+{
+  "id": "1555F",
+  "source": "problemset",
+  "contest_id": 1555,
+  "problem_index": "F",
+  "name": "Good Graph",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1156,
+  "problem_url": "https://codeforces.com/problemset/problem/1555/F",
+  "editorial_url": "https://codeforces.com/blog/entry/93389",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an undirected graph consisting of $$$n$$$ vertices with weighted edges. A simple cycle is a cycle of the graph without repeated vertices. Let the weight of the cycle be the XOR of weights of edges it consists of. Let's say the graph is good if all its simple cycles have weight $$$1$$$. A graph is bad if it's not good. Initially, the graph is empty. Then $$$q$$$ queries follow. Each query has the next type: $$$u$$$ $$$v$$$ $$$x$$$ — add edge between vertices $$$u$$$ and $$$v$$$ of weight $$$x$$$ if it doesn't make the graph bad. For each query print, was the edge added or not.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$3 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le q \\le 5 \\cdot 10^5$$$) — the number of vertices and queries. Next $$$q$$$ lines contain queries — one per line. Each query contains three integers $$$u$$$, $$$v$$$ and $$$x$$$ ($$$1 \\le u, v \\le n$$$; $$$u \\neq v$$$; $$$0 \\le x \\le 1$$$) — the vertices of the edge and its weight. It's guaranteed that there are no multiple edges in the input.",
+  "output_specification": "For each query, print YES if the edge was added to the graph, or NO otherwise (both case-insensitive).",
+  "sample_testcases": [
+    {
+      "input": "9 12\n6 1 0\n1 3 1\n3 6 0\n6 2 0\n6 4 1\n3 4 1\n2 4 0\n2 5 0\n4 5 0\n7 8 1\n8 9 1\n9 7 0",
+      "output": "YES\nYES\nYES\nYES\nYES\nNO\nYES\nYES\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:02",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

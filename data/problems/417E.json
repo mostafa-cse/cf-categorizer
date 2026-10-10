@@ -1,0 +1,40 @@
+{
+  "id": "417E",
+  "source": "problemset",
+  "contest_id": 417,
+  "problem_index": "E",
+  "name": "Square Table",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1007,
+  "problem_url": "https://codeforces.com/problemset/problem/417/E",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "While resting on the ship after the \"Russian Code Cup\" a boy named Misha invented an interesting game. He promised to give his quadrocopter to whoever will be the first one to make a rectangular table of size n × m , consisting of positive integers such that the sum of the squares of numbers for each row and each column was also a square. Since checking the correctness of the table manually is difficult, Misha asks you to make each number in the table to not exceed 10 8 .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 100 )  — the size of the table.",
+  "output_specification": "Print the table that meets the condition: n lines containing m integers, separated by spaces. If there are multiple possible answers, you are allowed to print anyone. It is guaranteed that there exists at least one correct answer.",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "1"
+    },
+    {
+      "input": "1 2",
+      "output": "3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:39",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "547A",
+  "source": "problemset",
+  "contest_id": 547,
+  "problem_index": "A",
+  "name": "Mike and Frog",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2818,
+  "problem_url": "https://codeforces.com/problemset/problem/547/A",
+  "editorial_url": "https://codeforces.com/blog/entry/18126",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Mike has a frog and a flower. His frog is named Xaniar and his flower is named Abol. Initially(at time 0 ), height of Xaniar is h 1 and height of Abol is h 2 . Each second, Mike waters Abol and Xaniar. So, if height of Xaniar is h 1 and height of Abol is h 2 , after one second height of Xaniar will become and height of Abol will become where x 1 , y 1 , x 2 and y 2 are some integer numbers and denotes the remainder of a modulo b . Mike is a competitive programmer fan. He wants to know the minimum time it takes until height of Xania is a 1 and height of Abol is a 2 . Mike has asked you for your help. Calculate the minimum time or say it will never happen.",
+  "input_specification": "The first line of input contains integer m ( 2 ≤ m ≤ 10 6 ). The second line of input contains integers h 1 and a 1 ( 0 ≤ h 1 , a 1 < m ). The third line of input contains integers x 1 and y 1 ( 0 ≤ x 1 , y 1 < m ). The fourth line of input contains integers h 2 and a 2 ( 0 ≤ h 2 , a 2 < m ). The fifth line of input contains integers x 2 and y 2 ( 0 ≤ x 2 , y 2 < m ). It is guaranteed that h 1 ≠ a 1 and h 2 ≠ a 2 .",
+  "output_specification": "Print the minimum number of seconds until Xaniar reaches height a 1 and Abol reaches height a 2 or print -1 otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 2\n1 1\n0 1\n2 3",
+      "output": "3"
+    },
+    {
+      "input": "1023\n1 2\n1 0\n1 2\n1 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "525E",
+  "source": "problemset",
+  "contest_id": 525,
+  "problem_index": "E",
+  "name": "Anya and Cubes",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "dp",
+    "math",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 4479,
+  "problem_url": "https://codeforces.com/problemset/problem/525/E",
+  "editorial_url": "https://codeforces.com/blog/entry/17119",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Anya loves to fold and stick. Today she decided to do just that. Anya has n cubes lying in a line and numbered from 1 to n from left to right, with natural numbers written on them. She also has k stickers with exclamation marks. We know that the number of stickers does not exceed the number of cubes. Anya can stick an exclamation mark on the cube and get the factorial of the number written on the cube. For example, if a cube reads 5 , then after the sticking it reads 5! , which equals 120 . You need to help Anya count how many ways there are to choose some of the cubes and stick on some of the chosen cubes at most k exclamation marks so that the sum of the numbers written on the chosen cubes after the sticking becomes equal to S . Anya can stick at most one exclamation mark on each cube. Can you do it? Two ways are considered the same if they have the same set of chosen cubes and the same set of cubes with exclamation marks.",
+  "input_specification": "The first line of the input contains three space-separated integers n , k and S ( 1 ≤ n ≤ 25 , 0 ≤ k ≤ n , 1 ≤ S ≤ 10 16 ) — the number of cubes and the number of stickers that Anya has, and the sum that she needs to get. The second line contains n positive integers a i ( 1 ≤ a i ≤ 10 9 ) — the numbers, written on the cubes. The cubes in the input are described in the order from left to right, starting from the first one. Multiple cubes can contain the same numbers.",
+  "output_specification": "Output the number of ways to choose some number of cubes and stick exclamation marks on some of them so that the sum of the numbers became equal to the given number S .",
+  "sample_testcases": [
+    {
+      "input": "2 2 30\n4 3",
+      "output": "1"
+    },
+    {
+      "input": "2 2 7\n4 3",
+      "output": "1"
+    },
+    {
+      "input": "3 1 1\n1 1 1",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

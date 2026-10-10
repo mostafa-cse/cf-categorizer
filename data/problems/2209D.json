@@ -1,0 +1,35 @@
+{
+  "id": "2209D",
+  "source": "problemset",
+  "contest_id": 2209,
+  "problem_index": "D",
+  "name": "Ghostfires",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 6118,
+  "problem_url": "https://codeforces.com/problemset/problem/2209/D",
+  "editorial_url": "https://codeforces.com/blog/entry/152272",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "OtterZ decided to make a weapon using ghostfires. He collected several ghostfires in colors red, green, and blue. He will put some of the ghostfires in a row to build the weapon. To make the weapon more powerful, OtterZ will use as many ghostfires as possible, but the weapon will be out of control if there are two ghostfires of the same color adjacent or separated by exactly two ghostfires in the row. Formally, OtterZ collected $$$r$$$ red ghostfires, $$$g$$$ green ghostfires, and $$$b$$$ blue ghostfires. He wants to construct a string $$$s$$$ consisting of the characters ' R ', ' G ', and ' B ' that satisfies the following conditions: The number of occurrences of ' R ', ' G ', and ' B ' in $$$s$$$ does not exceed $$$r$$$, $$$g$$$, and $$$b$$$, respectively. For all $$$1 \\le i \\le |s|-1$$$, $$$s_i \\ne s_{i+1}$$$. For all $$$1 \\le i \\le |s|-3$$$, $$$s_i \\ne s_{i+3}$$$. The length of $$$s$$$ is the maximum possible. Help OtterZ to construct the row. Although there may be several possible rows, OtterZ just requires one of them.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains three integers $$$r$$$, $$$g$$$, and $$$b$$$ ($$$0\\le r,g,b \\le 10 ^ 6$$$, $$$r+g+b \\gt 0$$$), representing the number of red, green, and blue ghostfires, respectively. It is guaranteed that the sum of $$$r + g + b$$$ over all test cases does not exceed $$$10 ^ 6$$$.",
+  "output_specification": "For each query, output a string $$$s$$$ consisting of the characters ' R ', ' G ', and ' B ', where $$$s_i$$$ equals ' R ', ' G ' or ' B ' indicates that the $$$i$$$-th ghostfire is colored red, green, or blue, respectively. If there are multiple answers, output any.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 0 1\n1 1 1\n0 3 0\n2 2 2\n2 7 3",
+      "output": "B\nRGB\nG\nGBRBRG\nGRGRGBGBGBG"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:31",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

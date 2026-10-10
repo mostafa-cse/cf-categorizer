@@ -1,0 +1,39 @@
+{
+  "id": "425A",
+  "source": "problemset",
+  "contest_id": 425,
+  "problem_index": "A",
+  "name": "Sereja and Swaps",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "sortings"
+  ],
+  "solved_count": 4210,
+  "problem_url": "https://codeforces.com/problemset/problem/425/A",
+  "editorial_url": "https://codeforces.com/blog/entry/11998",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "As usual, Sereja has array a , its elements are integers: a [1], a [2], ..., a [ n ] . Let's introduce notation: A swap operation is the following sequence of actions: choose two indexes i , j ( i ≠ j ) ; perform assignments tmp = a [ i ], a [ i ] = a [ j ], a [ j ] = tmp . What maximum value of function m ( a ) can Sereja get if he is allowed to perform at most k swap operations?",
+  "input_specification": "The first line contains two integers n and k (1 ≤ n ≤ 200; 1 ≤ k ≤ 10) . The next line contains n integers a [1] , a [2] , ... , a [ n ] ( - 1000 ≤ a [ i ] ≤ 1000) .",
+  "output_specification": "In a single line print the maximum value of m ( a ) that Sereja can get if he is allowed to perform at most k swap operations.",
+  "sample_testcases": [
+    {
+      "input": "10 2\n10 -1 2 2 2 2 2 2 -1 10",
+      "output": "32"
+    },
+    {
+      "input": "5 10\n-1 -1 -1 -1 -1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:39",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

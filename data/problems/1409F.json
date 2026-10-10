@@ -1,0 +1,47 @@
+{
+  "id": "1409F",
+  "source": "problemset",
+  "contest_id": 1409,
+  "problem_index": "F",
+  "name": "Subsequences of Length Two",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 5301,
+  "problem_url": "https://codeforces.com/problemset/problem/1409/F",
+  "editorial_url": "https://codeforces.com/blog/entry/82284",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two strings $$$s$$$ and $$$t$$$ consisting of lowercase Latin letters. The length of $$$t$$$ is $$$2$$$ (i.e. this string consists only of two characters). In one move, you can choose any character of $$$s$$$ and replace it with any lowercase Latin letter. More formally, you choose some $$$i$$$ and replace $$$s_i$$$ (the character at the position $$$i$$$) with some character from ' a ' to ' z '. You want to do no more than $$$k$$$ replacements in such a way that maximizes the number of occurrences of $$$t$$$ in $$$s$$$ as a subsequence . Recall that a subsequence is a sequence that can be derived from the given sequence by deleting zero or more elements without changing the order of the remaining elements.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 200$$$; $$$0 \\le k \\le n$$$) — the length of $$$s$$$ and the maximum number of moves you can make. The second line of the input contains the string $$$s$$$ consisting of $$$n$$$ lowercase Latin letters. The third line of the input contains the string $$$t$$$ consisting of two lowercase Latin letters.",
+  "output_specification": "Print one integer — the maximum possible number of occurrences of $$$t$$$ in $$$s$$$ as a subsequence if you replace no more than $$$k$$$ characters in $$$s$$$ optimally.",
+  "sample_testcases": [
+    {
+      "input": "4 2\nbbaa\nab",
+      "output": "3"
+    },
+    {
+      "input": "7 3\nasddsaf\nsd",
+      "output": "10"
+    },
+    {
+      "input": "15 6\nqwertyhgfdsazxc\nqa",
+      "output": "16"
+    },
+    {
+      "input": "7 2\nabacaba\naa",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

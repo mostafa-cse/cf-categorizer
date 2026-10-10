@@ -1,0 +1,48 @@
+{
+  "id": "135D",
+  "source": "problemset",
+  "contest_id": 135,
+  "problem_index": "D",
+  "name": "Cycle",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "implementation"
+  ],
+  "solved_count": 335,
+  "problem_url": "https://codeforces.com/problemset/problem/135/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3353",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Petya very much likes rectangular tables that consist of characters \"0\" and \"1\". Recently he has received one such table as a gift from his mother. The table contained n rows and m columns. The rows are numbered from top to bottom from 1 to n , the columns are numbered from the left to the right from 1 to m . Petya immediately decided to find the longest cool cycle whatever it takes. A cycle is a sequence of pairwise distinct cells where each two consecutive cells have a common side; besides, the first cell has a common side with the last cell. A cycle is called cool if it fulfills all the following conditions simultaneously: The cycle entirely consists of the cells that contain \"1\". Each cell that belongs to the cycle, has a common side with exactly two other cells that belong to the cycle. Each cell of the table that contains \"1\" either belongs to the cycle or is positioned outside of it (see definition below). To define the notion of \"outside\" formally, let's draw a cycle on a plane. Let each cell of the cycle ( i , j ) ( i is the row number, j is the column number) correspond to the point ( i , j ) on the coordinate plane. Let a straight line segment join each pair of points that correspond to the cells belonging to the cycle and sharing a side. Thus, we will get a closed polyline that has no self-intersections and self-touches. The polyline divides the plane into two connected parts: the part of an infinite area and the part of a finite area. It is considered that cell ( r , c ) lies outside of the cycle if it does not belong to the cycle and the corresponding point on the plane with coordinates ( r , c ) lies in the part with the infinite area. Help Petya to find the length of the longest cool cycle in the table. The cycle length is defined as the number of cells that belong to the cycle.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 1000 ) — the number of rows and columns in the table, respectively. Each of the following n lines contains m characters. Each character can be either \"0\" or \"1\".",
+  "output_specification": "Print a single number — the length of the longest cool cycle in the table. If such cycles do not exist, print 0.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n111\n101\n111",
+      "output": "8"
+    },
+    {
+      "input": "5 5\n01010\n10101\n01010\n10101\n01010",
+      "output": "0"
+    },
+    {
+      "input": "7 7\n1111111\n1000101\n1000101\n1000101\n1000111\n1000001\n1111111",
+      "output": "24"
+    },
+    {
+      "input": "5 5\n11111\n10001\n10101\n10001\n11111",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

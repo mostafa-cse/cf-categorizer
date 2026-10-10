@@ -1,0 +1,39 @@
+{
+  "id": "106D",
+  "source": "problemset",
+  "contest_id": 106,
+  "problem_index": "D",
+  "name": "Treasure Island",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 1490,
+  "problem_url": "https://codeforces.com/problemset/problem/106/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Our brave travelers reached an island where pirates had buried treasure. However as the ship was about to moor, the captain found out that some rat ate a piece of the treasure map. The treasure map can be represented as a rectangle n × m in size. Each cell stands for an islands' square (the square's side length equals to a mile). Some cells stand for the sea and they are impenetrable. All other cells are penetrable (i.e. available) and some of them contain local sights. For example, the large tree on the hills or the cave in the rocks. Besides, the map also has a set of k instructions. Each instruction is in the following form: \"Walk n miles in the y direction\" The possible directions are: north, south, east, and west. If you follow these instructions carefully (you should fulfill all of them, one by one) then you should reach exactly the place where treasures are buried. Unfortunately the captain doesn't know the place where to start fulfilling the instructions — as that very piece of the map was lost. But the captain very well remembers that the place contained some local sight. Besides, the captain knows that the whole way goes through the island's penetrable squares. The captain wants to know which sights are worth checking. He asks you to help him with that.",
+  "input_specification": "The first line contains two integers n and m ( 3 ≤ n , m ≤ 1000 ). Then follow n lines containing m integers each — the island map's description. \" # \" stands for the sea. It is guaranteed that all cells along the rectangle's perimeter are the sea. \" . \" stands for a penetrable square without any sights and the sights are marked with uppercase Latin letters from \" A \" to \" Z \". Not all alphabet letters can be used. However, it is guaranteed that at least one of them is present on the map. All local sights are marked by different letters. The next line contains number k ( 1 ≤ k ≤ 10 5 ), after which k lines follow. Each line describes an instruction. Each instruction possesses the form \" dir len \", where dir stands for the direction and len stands for the length of the way to walk. dir can take values \" N \", \" S \", \" W \" and \" E \" for North, South, West and East correspondingly. At that, north is to the top, South is to the bottom, west is to the left and east is to the right. len is an integer from 1 to 1000 .",
+  "output_specification": "Print all local sights that satisfy to the instructions as a string without any separators in the alphabetical order. If no sight fits, print \" no solution \" without the quotes.",
+  "sample_testcases": [
+    {
+      "input": "6 10\n##########\n#K#..#####\n#.#..##.##\n#..L.#...#\n###D###A.#\n##########\n4\nN 2\nS 1\nE 1\nW 2",
+      "output": "AD"
+    },
+    {
+      "input": "3 4\n####\n#.A#\n####\n2\nW 1\nN 2",
+      "output": "no solution"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

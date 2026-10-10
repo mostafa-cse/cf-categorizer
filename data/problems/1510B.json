@@ -1,0 +1,40 @@
+{
+  "id": "1510B",
+  "source": "problemset",
+  "contest_id": 1510,
+  "problem_index": "B",
+  "name": "Button Lock",
+  "rating": 2600,
+  "tags": [
+    "flows",
+    "graph matchings",
+    "graphs"
+  ],
+  "solved_count": 993,
+  "problem_url": "https://codeforces.com/problemset/problem/1510/B",
+  "editorial_url": "https://codeforces.com//neerc.ifmo.ru/archive/2020/nerc-2020-offline-tutorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are standing in front of the room with great treasures. The only thing stopping you is the door with a push-button combination lock. This lock has $$$d$$$ buttons with digits from $$$0$$$ to $$$d - 1$$$. Whenever you press a button, it stays pushed down. You can not pop back up just one button, but there is a \"RESET\" button — pressing it pops up all other buttons. Initially, no buttons are pushed down. The door instantly opens when some specific set of digits is pushed down. Sadly, you don't know the password for it. Having read the documentation for this specific lock, you found out that there are $$$n$$$ possible passwords for this particular lock. Find the shortest sequence of button presses, such that all possible passwords appear at least once during its execution. Any shortest correct sequence of button presses will be accepted.",
+  "input_specification": "The first line contains two integers $$$d$$$ and $$$n$$$ ($$$1 \\le d \\le 10$$$; $$$1 \\le n \\le 2^d - 1$$$). Next $$$n$$$ lines describe possible passwords. Each line contains a string $$$s_i$$$ of $$$d$$$ zeros and ones: for all $$$j$$$ from $$$1$$$ to $$$d$$$ the $$$j$$$-th character is 1 iff the button with the digit $$$j - 1$$$ must be pushed down. All strings $$$s_i$$$ are different, and each string contains at least one 1 .",
+  "output_specification": "On the first line, print the number $$$k$$$ — the minimum number of button presses. On the second line, print $$$k$$$ tokens, describing the sequence. Whenever you press a button with a digit, print that digit. Whenever you press \"RESET\", print \" R \".",
+  "sample_testcases": [
+    {
+      "input": "2 2\n10\n11",
+      "output": "2\n0 1"
+    },
+    {
+      "input": "3 4\n001\n111\n101\n011",
+      "output": "6\n2 0 R 1 2 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

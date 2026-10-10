@@ -1,0 +1,44 @@
+{
+  "id": "799C",
+  "source": "problemset",
+  "contest_id": 799,
+  "problem_index": "C",
+  "name": "Fountains",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 4087,
+  "problem_url": "https://codeforces.com/problemset/problem/799/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51947",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Arkady plays Gardenscapes a lot. Arkady wants to build two new fountains. There are n available fountains, for each fountain its beauty and cost are known. There are two types of money in the game: coins and diamonds, so each fountain cost can be either in coins or diamonds. No money changes between the types are allowed. Help Arkady to find two fountains with maximum total beauty so that he can buy both at the same time.",
+  "input_specification": "The first line contains three integers n , c and d ( 2 ≤ n ≤ 100 000 , 0 ≤ c , d ≤ 100 000 ) — the number of fountains, the number of coins and diamonds Arkady has. The next n lines describe fountains. Each of these lines contain two integers b i and p i ( 1 ≤ b i , p i ≤ 100 000 ) — the beauty and the cost of the i -th fountain, and then a letter \" C \" or \" D \", describing in which type of money is the cost of fountain i : in coins or in diamonds, respectively.",
+  "output_specification": "Print the maximum total beauty of exactly two fountains Arkady can build. If he can't build two fountains, print 0 .",
+  "sample_testcases": [
+    {
+      "input": "3 7 6\n10 8 C\n4 3 C\n5 6 D",
+      "output": "9"
+    },
+    {
+      "input": "2 4 5\n2 5 C\n2 1 D",
+      "output": "0"
+    },
+    {
+      "input": "3 10 10\n5 5 C\n5 5 C\n10 11 D",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

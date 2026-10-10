@@ -1,0 +1,35 @@
+{
+  "id": "2236E",
+  "source": "problemset",
+  "contest_id": 2236,
+  "problem_index": "E",
+  "name": "Friendly Gifts",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 6877,
+  "problem_url": "https://codeforces.com/problemset/problem/2236/E",
+  "editorial_url": "https://codeforces.com/blog/entry/154496",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Arseniy decided to make his friends Dabir and Egor happy. For this, he decided to give each of them an array of numbers of the same length . An array $$$b$$$ is called good if its elements can be rearranged so that for all $$$i \\gt 1$$$ the condition $$$b_i - b_{i - 1} = 1$$$ holds. Arseniy wants Dabir and Egor to be able to play with these arrays. For this, the following conditions must be satisfied: Each of the given arrays is good . If you write one array after the other (in other words, concatenate them), the resulting array is also good . Arseniy already has an array $$$a$$$ of length $$$n$$$. He plans to cut both arrays from $$$a$$$, that is, to choose two non-overlapping subsegments of the same length . Help Arseniy determine the maximum possible length of the resulting arrays.",
+  "input_specification": "The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 1000)$$$ — the number of test cases. Then $$$t$$$ test cases follow. The first line of each test case contains a single integer $$$n$$$ $$$(1 \\le n \\le 6000)$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ $$$(1 \\le a_i \\le n)$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$6000$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum possible length of the arrays.",
+  "sample_testcases": [
+    {
+      "input": "7\n1\n1\n2\n1 2\n3\n2 1 1\n4\n2 1 4 3\n5\n1 2 4 5 3\n6\n3 2 1 6 5 4\n10\n1 1 2 3 4 1 6 5 7 8",
+      "output": "0\n1\n1\n2\n1\n3\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

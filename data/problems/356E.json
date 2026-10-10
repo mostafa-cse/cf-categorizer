@@ -1,0 +1,50 @@
+{
+  "id": "356E",
+  "source": "problemset",
+  "contest_id": 356,
+  "problem_index": "E",
+  "name": "Xenia and String Problem",
+  "rating": 3000,
+  "tags": [
+    "dp",
+    "hashing",
+    "implementation",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 605,
+  "problem_url": "https://codeforces.com/problemset/problem/356/E",
+  "editorial_url": "https://codeforces.com/blog/entry/9210",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Xenia the coder went to The Olympiad of Informatics and got a string problem. Unfortunately, Xenia isn't fabulous in string algorithms. Help her solve the problem. String s is a sequence of characters s 1 s 2 ... s | s | , where record | s | shows the length of the string. Substring s [ i ... j ] of string s is string s i s i + 1 ... s j . String s is a Gray string, if it meets the conditions: the length of string | s | is odd; character occurs exactly once in the string; either | s | = 1 , or substrings and are the same and are Gray strings. For example, strings \" abacaba \", \" xzx \", \" g \" are Gray strings and strings \" aaa \", \" xz \", \" abaxcbc \" are not. The beauty of string p is the sum of the squares of the lengths of all substrings of string p that are Gray strings. In other words, consider all pairs of values i , j (1 ≤ i ≤ j ≤ | p |) . If substring p [ i ... j ] is a Gray string, you should add ( j - i + 1) 2 to the beauty. Xenia has got string t consisting of lowercase English letters. She is allowed to replace at most one letter of the string by any other English letter. The task is to get a string of maximum beauty.",
+  "input_specification": "The first line contains a non-empty string t (1 ≤ | t | ≤ 10 5 ) . String t only consists of lowercase English letters.",
+  "output_specification": "Print the sought maximum beauty value Xenia can get. Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "zzz",
+      "output": "12"
+    },
+    {
+      "input": "aba",
+      "output": "12"
+    },
+    {
+      "input": "abacaba",
+      "output": "83"
+    },
+    {
+      "input": "aaaaaa",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

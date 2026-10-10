@@ -1,0 +1,36 @@
+{
+  "id": "1748B",
+  "source": "problemset",
+  "contest_id": 1748,
+  "problem_index": "B",
+  "name": "Diverse Substrings",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 17070,
+  "problem_url": "https://codeforces.com/problemset/problem/1748/B",
+  "editorial_url": "https://codeforces.com/blog/entry/108319",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A non-empty digit string is diverse if the number of occurrences of each character in it doesn't exceed the number of distinct characters in it. For example: string \" 7 \" is diverse because 7 appears in it $$$1$$$ time and the number of distinct characters in it is $$$1$$$; string \" 77 \" is not diverse because 7 appears in it $$$2$$$ times and the number of distinct characters in it is $$$1$$$; string \" 1010 \" is diverse because both 0 and 1 appear in it $$$2$$$ times and the number of distinct characters in it is $$$2$$$; string \" 6668 \" is not diverse because 6 appears in it $$$3$$$ times and the number of distinct characters in it is $$$2$$$. You are given a string $$$s$$$ of length $$$n$$$, consisting of only digits $$$0$$$ to $$$9$$$. Find how many of its $$$\\frac{n(n+1)}{2}$$$ substrings are diverse. A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end. Note that if the same diverse string appears in $$$s$$$ multiple times, each occurrence should be counted independently. For example, there are two diverse substrings in \" 77 \" both equal to \" 7 \", so the answer for the string \" 77 \" is $$$2$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the string $$$s$$$. The second line of each test case contains a string $$$s$$$ of length $$$n$$$. It is guaranteed that all characters of $$$s$$$ are digits from $$$0$$$ to $$$9$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case print one integer — the number of diverse substrings of the given string $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n1\n7\n2\n77\n4\n1010\n5\n01100\n6\n399996\n5\n23456\n18\n789987887987998798",
+      "output": "1\n2\n10\n12\n10\n15\n106"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:14",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

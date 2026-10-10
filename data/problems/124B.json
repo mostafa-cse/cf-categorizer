@@ -1,0 +1,44 @@
+{
+  "id": "124B",
+  "source": "problemset",
+  "contest_id": 124,
+  "problem_index": "B",
+  "name": "Permutations",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "implementation"
+  ],
+  "solved_count": 5101,
+  "problem_url": "https://codeforces.com/problemset/problem/124/B",
+  "editorial_url": "https://codeforces.com/blog/entry/3047",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given n k -digit integers. You have to rearrange the digits in the integers so that the difference between the largest and the smallest number was minimum. Digits should be rearranged by the same rule in all integers.",
+  "input_specification": "The first line contains integers n and k — the number and digit capacity of numbers correspondingly ( 1 ≤ n , k ≤ 8 ). Next n lines contain k -digit positive integers. Leading zeroes are allowed both in the initial integers and the integers resulting from the rearranging of digits.",
+  "output_specification": "Print a single number: the minimally possible difference between the largest and the smallest number after the digits are rearranged in all integers by the same rule.",
+  "sample_testcases": [
+    {
+      "input": "6 4\n5237\n2753\n7523\n5723\n5327\n2537",
+      "output": "2700"
+    },
+    {
+      "input": "3 3\n010\n909\n012",
+      "output": "3"
+    },
+    {
+      "input": "7 5\n50808\n36603\n37198\n44911\n29994\n42543\n50156",
+      "output": "20522"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

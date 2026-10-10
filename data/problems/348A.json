@@ -1,0 +1,40 @@
+{
+  "id": "348A",
+  "source": "problemset",
+  "contest_id": 348,
+  "problem_index": "A",
+  "name": "Mafia",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 15125,
+  "problem_url": "https://codeforces.com/problemset/problem/348/A",
+  "editorial_url": "https://codeforces.com/blog/entry/9031",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day n friends gathered together to play \"Mafia\". During each round of the game some player must be the supervisor and other n - 1 people take part in the game. For each person we know in how many rounds he wants to be a player, not the supervisor: the i -th person wants to play a i rounds. What is the minimum number of rounds of the \"Mafia\" game they need to play to let each person play at least as many rounds as they want?",
+  "input_specification": "The first line contains integer n (3 ≤ n ≤ 10 5 ) . The second line contains n space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) — the i -th number in the list is the number of rounds the i -th person wants to play.",
+  "output_specification": "In a single line print a single integer — the minimum number of game rounds the friends need to let the i -th person play at least a i rounds. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2 2",
+      "output": "4"
+    },
+    {
+      "input": "4\n2 2 2 2",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

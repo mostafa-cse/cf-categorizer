@@ -1,0 +1,55 @@
+{
+  "id": "1847E",
+  "source": "problemset",
+  "contest_id": 1847,
+  "problem_index": "E",
+  "name": "Triangle Platinum?",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "implementation",
+    "interactive",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 439,
+  "problem_url": "https://codeforces.com/problemset/problem/1847/E",
+  "editorial_url": "https://codeforces.com/blog/entry/117928",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Made in Heaven is a rather curious Stand. Of course, it is (arguably) the strongest Stand in existence, but it is also an ardent puzzle enjoyer. For example, it gave Qtaro the following problem recently: Made in Heaven has $$$n$$$ hidden integers $$$a_1, a_2, \\dots, a_n$$$ ($$$3 \\le n \\le 5000$$$, $$$1 \\le a_i \\le 4$$$). Qtaro must determine all the $$$a_i$$$ by asking Made in Heaven some queries of the following form: In one query Qtaro is allowed to give Made in Heaven three distinct indexes $$$i$$$, $$$j$$$ and $$$k$$$ ($$$1 \\leq i, j, k \\leq n$$$). If $$$a_i, a_j, a_k$$$ form the sides of a non-degenerate triangle$$$^\\dagger$$$, Made in Heaven will respond with the area of this triangle. Otherwise, Made in Heaven will respond with $$$0$$$. By asking at most $$$5500$$$ such questions, Qtaro must either tell Made in Heaven all the values of the $$$a_i$$$, or report that it is not possible to uniquely determine them. Unfortunately due to the universe reboot, Qtaro is not as smart as Jotaro. Please help Qtaro solve Made In Heaven 's problem. —————————————————————— $$$^\\dagger$$$ Three positive integers $$$a, b, c$$$ are said to form the sides of a non-degenerate triangle if and only if all of the following three inequalities hold: $$$a+b \\gt c$$$, $$$b+c \\gt a$$$, $$$c+a \\gt b$$$.\n\nInteraction The interaction begins with reading $$$n$$$ ($$$3 \\le n \\le 5000$$$), the number of hidden integers. To ask a question corresponding to the triple $$$(i, j, k)$$$ ($$$1 \\leq i \\lt j \\lt k \\leq n$$$), output \" ? $$$i$$$ $$$j$$$ $$$k$$$\" without quotes. Afterward, you should read a single integer $$$s$$$. If $$$s = 0$$$, then $$$a_i$$$, $$$a_j$$$, and $$$a_k$$$ are not the sides of a non-degenerate triangle. Otherwise, $$$s = 16 \\Delta^2$$$, where $$$\\Delta$$$ is the area of the triangle. The area is provided in this format for your convenience so that you need only take integer input. If the numbers $$$a_i$$$ cannot be uniquely determined print \" ! $$$-1$$$\" without quotes. On the other hand, if you have determined all the values of $$$a_i$$$ print \" ! $$$a_1$$$ $$$a_2$$$ $$$\\dots$$$ $$$a_n$$$\" on a single line. The interactor is non-adaptive . The hidden array $$$a_1, a_2, \\dots, a_n$$$ is fixed beforehand and is not changed during the interaction process. After printing a query do not forget to output the end of line and flush the output. Otherwise, you will get Idleness limit exceeded . To do this, use: fflush(stdout) or cout.flush() in C++; System.out.flush() in Java; flush(output) in Pascal; stdout.flush() in Python; see the documentation for other languages. Hacks You can hack a solution with the following input format. The first line contains a single integer $$$n$$$ ($$$3 \\le n \\le 5000$$$) — the number of hidden integers. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 4$$$) — the hidden array.",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n\n63",
+      "output": "? 1 2 3\n\n! -1"
+    },
+    {
+      "input": "6\n\n0\n\n0\n\n0\n\n63\n\n15\n\n135",
+      "output": "? 1 2 3\n\n? 2 3 4\n\n? 4 5 6\n\n? 1 5 6\n\n? 3 5 6\n\n? 1 2 4\n\n! 3 2 1 4 2 2"
+    },
+    {
+      "input": "15\n\n3\n\n3\n\n3\n\n3\n\n3\n\n0",
+      "output": "? 1 2 3\n\n? 4 6 7\n\n? 8 9 10\n\n? 11 12 13\n\n? 13 14 15\n\n? 4 5 6\n\n! -1"
+    },
+    {
+      "input": "15\n\n3\n\n15\n\n0\n\n3\n\n3\n\n3",
+      "output": "? 1 2 3\n\n? 3 4 5\n\n? 4 5 6\n\n? 7 8 9\n\n? 10 11 12\n\n? 13 14 15\n\n! 1 1 1 2 2 4 1 1 1 1 1 1 1 1 1 1"
+    },
+    {
+      "input": "10\n\n3\n\n48\n\n3\n\n48\n\n63\n\n0",
+      "output": "? 1 3 5\n\n? 4 6 8\n\n? 1 5 9\n\n? 6 8 10\n\n? 4 2 6\n\n? 7 10 8\n\n! 1 3 1 2 1 2 4 2 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

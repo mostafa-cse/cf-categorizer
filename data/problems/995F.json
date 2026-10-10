@@ -1,0 +1,45 @@
+{
+  "id": "995F",
+  "source": "problemset",
+  "contest_id": 995,
+  "problem_index": "F",
+  "name": "Cowmpany Cowmpensation",
+  "rating": 2700,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "trees"
+  ],
+  "solved_count": 1876,
+  "problem_url": "https://codeforces.com/problemset/problem/995/F",
+  "editorial_url": "https://codeforces.com/blog/entry/60217",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Allen, having graduated from the MOO Institute of Techcowlogy (MIT), has started a startup! Allen is the president of his startup. He also hires $$$n-1$$$ other employees, each of which is assigned a direct superior. If $$$u$$$ is a superior of $$$v$$$ and $$$v$$$ is a superior of $$$w$$$ then also $$$u$$$ is a superior of $$$w$$$. Additionally, there are no $$$u$$$ and $$$v$$$ such that $$$u$$$ is the superior of $$$v$$$ and $$$v$$$ is the superior of $$$u$$$. Allen himself has no superior. Allen is employee number $$$1$$$, and the others are employee numbers $$$2$$$ through $$$n$$$. Finally, Allen must assign salaries to each employee in the company including himself. Due to budget constraints, each employee's salary is an integer between $$$1$$$ and $$$D$$$. Additionally, no employee can make strictly more than his superior. Help Allen find the number of ways to assign salaries. As this number may be large, output it modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$D$$$ ($$$1 \\le n \\le 3000$$$, $$$1 \\le D \\le 10^9$$$). The remaining $$$n-1$$$ lines each contain a single positive integer, where the $$$i$$$-th line contains the integer $$$p_i$$$ ($$$1 \\le p_i \\le i$$$). $$$p_i$$$ denotes the direct superior of employee $$$i+1$$$.",
+  "output_specification": "Output a single integer: the number of ways to assign salaries modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1\n1",
+      "output": "5"
+    },
+    {
+      "input": "3 3\n1\n2",
+      "output": "10"
+    },
+    {
+      "input": "2 5\n1",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

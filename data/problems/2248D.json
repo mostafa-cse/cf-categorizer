@@ -1,0 +1,36 @@
+{
+  "id": "2248D",
+  "source": "problemset",
+  "contest_id": 2248,
+  "problem_index": "D",
+  "name": "Good Pair Queries",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 7748,
+  "problem_url": "https://codeforces.com/problemset/problem/2248/D",
+  "editorial_url": "https://codeforces.com/blog/entry/155640",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two binary strings $$$s$$$ and $$$t$$$, both of length $$$n$$$. For two binary strings $$$a$$$ and $$$b$$$ of the same length, the pair $$$(a, b)$$$ is called good if both strings can be made empty by performing the following operation zero or more times: Choose a non-empty set of positions $$$1 \\le i_1 \\lt i_2 \\lt \\ldots \\lt i_k \\le |a|$$$ and a character $$$c \\in \\{\\mathtt{0}, \\mathtt{1}\\}$$$. Let $$$x = a_{i_1}a_{i_2}\\ldots a_{i_k}$$$ and $$$y = b_{i_1}b_{i_2}\\ldots b_{i_k}$$$. The character $$$c$$$ must be a mode$$$^{\\text{∗}}$$$ of both $$$x$$$ and $$$y$$$. Delete the characters at the chosen positions from both strings. The remaining characters are concatenated without changing their relative order. A binary string may have both $$$\\mathtt{0}$$$ and $$$\\mathtt{1}$$$ as modes. You need to answer $$$q$$$ queries. In each query, you are given two integers $$$l$$$ and $$$r$$$. Determine whether the pair of substrings $$$(s_l s_{l+1} \\ldots s_r, t_l t_{l+1} \\ldots t_r)$$$ is good. The queries are independent . $$$^{\\text{∗}}$$$For a binary string $$$z$$$, a character $$$c$$$ is a mode if it appears at least $$$\\left\\lceil \\frac{|z|}{2} \\right\\rceil$$$ times in $$$z$$$. Here, $$$\\lceil x \\rceil$$$ denotes the smallest integer greater than or equal to $$$x$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the length of each string and the number of queries. The second line of each test case contains the binary string $$$s$$$ of length $$$n$$$. The third line of each test case contains the binary string $$$t$$$ of length $$$n$$$. Each of the next $$$q$$$ lines contains two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) — a query. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. It is guaranteed that the sum of $$$q$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each query, output \" YES \" if the pair $$$(s_l s_{l+1} \\ldots s_r, t_l t_{l+1} \\ldots t_r)$$$ is good. Otherwise, output \" NO \". You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2\n01\n10\n1 1\n1 2\n5 1\n11111\n11111\n1 3\n5 1\n00011\n01111\n1 5",
+      "output": "NO\nYES\nYES\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

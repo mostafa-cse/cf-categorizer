@@ -1,0 +1,37 @@
+{
+  "id": "1555D",
+  "source": "problemset",
+  "contest_id": 1555,
+  "problem_index": "D",
+  "name": "Say No to Palindromes",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "dp",
+    "strings"
+  ],
+  "solved_count": 16374,
+  "problem_url": "https://codeforces.com/problemset/problem/1555/D",
+  "editorial_url": "https://codeforces.com/blog/entry/93389",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call the string beautiful if it does not contain a substring of length at least $$$2$$$, which is a palindrome. Recall that a palindrome is a string that reads the same way from the first character to the last and from the last character to the first. For example, the strings a , bab , acca , bcabcbacb are palindromes, but the strings ab , abbbaa , cccb are not. Let's define cost of a string as the minimum number of operations so that the string becomes beautiful, if in one operation it is allowed to change any character of the string to one of the first $$$3$$$ letters of the Latin alphabet (in lowercase). You are given a string $$$s$$$ of length $$$n$$$, each character of the string is one of the first $$$3$$$ letters of the Latin alphabet (in lowercase). You have to answer $$$m$$$ queries — calculate the cost of the substring of the string $$$s$$$ from $$$l_i$$$-th to $$$r_i$$$-th position, inclusive.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$) — the length of the string $$$s$$$ and the number of queries. The second line contains the string $$$s$$$, it consists of $$$n$$$ characters, each character one of the first $$$3$$$ Latin letters. The following $$$m$$$ lines contain two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l_i \\le r_i \\le n$$$) — parameters of the $$$i$$$-th query.",
+  "output_specification": "For each query, print a single integer — the cost of the substring of the string $$$s$$$ from $$$l_i$$$-th to $$$r_i$$$-th position, inclusive.",
+  "sample_testcases": [
+    {
+      "input": "5 4\nbaacb\n1 3\n1 5\n4 5\n2 3",
+      "output": "1\n2\n0\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:02",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "364B",
+  "source": "problemset",
+  "contest_id": 364,
+  "problem_index": "B",
+  "name": "Free Market",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1288,
+  "problem_url": "https://codeforces.com/problemset/problem/364/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9657",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "John Doe has recently found a \"Free Market\" in his city — that is the place where you can exchange some of your possessions for other things for free. John knows that his city has n items in total (each item is unique). You can bring any number of items to the market and exchange them for any other one. Note that each item is one of a kind and that means that you cannot exchange set { a , b } for set { v , a } . However, you can always exchange set x for any set y , unless there is item p , such that p occurs in x and p occurs in y . For each item, John knows its value c i . John's sense of justice doesn't let him exchange a set of items x for a set of items y , if s ( x ) + d < s ( y ) ( s ( x ) is the total price of items in the set x ). During one day John can exchange only one set of items for something else. Initially, he has no items. John wants to get a set of items with the maximum total price. Find the cost of such set and the minimum number of days John can get it in.",
+  "input_specification": "The first line contains two space-separated integers n , d ( 1 ≤ n ≤ 50 , 1 ≤ d ≤ 10 4 ) — the number of items on the market and John's sense of justice value, correspondingly. The second line contains n space-separated integers c i ( 1 ≤ c i ≤ 10 4 ).",
+  "output_specification": "Print two space-separated integers: the maximum possible price in the set of items John can get and the minimum number of days needed to get such set.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3 10",
+      "output": "4 3"
+    },
+    {
+      "input": "3 5\n1 2 3",
+      "output": "6 2"
+    },
+    {
+      "input": "10 10000\n10000 9999 1 10000 10000 10000 1 2 3 4",
+      "output": "50010 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

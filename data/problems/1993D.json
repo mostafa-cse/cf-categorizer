@@ -1,0 +1,36 @@
+{
+  "id": "1993D",
+  "source": "problemset",
+  "contest_id": 1993,
+  "problem_index": "D",
+  "name": "Med-imize",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 4628,
+  "problem_url": "https://codeforces.com/problemset/problem/1993/D",
+  "editorial_url": "https://codeforces.com/blog/entry/132185",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given two positive integers $$$n$$$ and $$$k$$$, and another array $$$a$$$ of $$$n$$$ integers. In one operation, you can select any subarray of size $$$k$$$ of $$$a$$$, then remove it from the array without changing the order of other elements. More formally, let $$$(l, r)$$$ be an operation on subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ such that $$$r-l+1=k$$$, then performing this operation means replacing $$$a$$$ with $$$[a_1, \\ldots, a_{l-1}, a_{r+1}, \\ldots, a_n]$$$. For example, if $$$a=[1,2,3,4,5]$$$ and we perform operation $$$(3,5)$$$ on this array, it will become $$$a=[1,2]$$$. Moreover, operation $$$(2, 4)$$$ results in $$$a=[1,5]$$$, and operation $$$(1,3)$$$ results in $$$a=[4,5]$$$. You have to repeat the operation while the length of $$$a$$$ is greater than $$$k$$$ (which means $$$|a| \\gt k$$$). What is the largest possible median$$$^\\dagger$$$ of all remaining elements of the array $$$a$$$ after the process? $$$^\\dagger$$$The median of an array of length $$$n$$$ is the element whose index is $$$\\left \\lfloor (n+1)/2 \\right \\rfloor$$$ after we sort the elements in non-decreasing order. For example: $$$median([2,1,5,4,3]) = 3$$$, $$$median([5]) = 5$$$, and $$$median([6,8,2,4]) = 4$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 5 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the largest median possible after performing the operations.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 3\n3 9 9 2\n5 3\n3 2 5 6 4\n7 1\n5 9 2 6 5 4 6\n8 2\n7 1 2 6 8 3 4 5\n4 5\n3 4 5 6",
+      "output": "3\n4\n9\n6\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:58",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

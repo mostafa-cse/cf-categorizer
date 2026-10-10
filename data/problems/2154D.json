@@ -1,0 +1,38 @@
+{
+  "id": "2154D",
+  "source": "problemset",
+  "contest_id": 2154,
+  "problem_index": "D",
+  "name": "Catshock",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 5243,
+  "problem_url": "https://codeforces.com/problemset/problem/2154/D",
+  "editorial_url": "https://codeforces.com/blog/entry/147471",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A cat lives on a tree with $$$n$$$ nodes. The cat starts on node $$$1$$$, and you live on node $$$n$$$. You are going to leave the cat a note written in the parkour language to help it reach you. The parkour language has two types of instructions: $$$1$$$ — This means that the cat should move to any adjacent node to it, if there are multiple options, it will pick one of them arbitrarily. If there are no adjacent nodes to it, then it will not move. $$$2\\,u$$$ — This means to destroy node $$$u$$$ and all adjacent edges to it. If the cat is currently on node $$$u$$$, it will die, so this should be avoided. If node $$$u$$$ was already destroyed, then nothing will happen. Additionally, there cannot be two consecutive instances of the second instruction. Unfortunately, the parkour language is ambiguous because the cat may have multiple options for each instance of the first instruction. So you should construct a sequence of instructions of length at most $$$3n$$$ so that if the cat follows them, it will end at node $$$n$$$, no matter what choices it makes. It can be proven that such a sequence exists for any tree.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each testcase contains an integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the size of the tree. Then $$$n - 1$$$ lines follow, each of them contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n, u \\ne v$$$) which describe a pair of vertices connected by an edge. It is guaranteed that the given graph is a tree and has no loops or multiple edges. The sum of $$$n$$$ across all testcases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, output a single integer $$$k$$$ ($$$0 \\le k \\le 3n$$$) — the number of operations you will perform. Then output $$$k$$$ lines of either of the following formats: $$$1$$$ — make the cat move to an adjacent node if there are nodes adjacent to it. $$$2\\,u$$$ ($$$1 \\le u \\le n$$$) — delete node $$$u$$$ along with all adjacent edges",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n1 2\n2 3\n1 5\n5 4\n2\n1 2\n4\n1 2\n1 3\n1 4\n6\n1 2\n1 3\n3 4\n4 5\n4 6",
+      "output": "2\n2 2\n1\n\n1\n1\n\n5\n2 2\n1\n1\n2 3\n1\n\n9\n2 2\n1\n2 1\n1\n2 3\n1\n1\n2 5\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "1578H",
+  "source": "problemset",
+  "contest_id": 1578,
+  "problem_index": "H",
+  "name": "Higher Order Functions",
+  "rating": 1700,
+  "tags": [
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 2218,
+  "problem_url": "https://codeforces.com/problemset/problem/1578/H",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/rounds/1578/tutorial.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Helen studies functional programming and she is fascinated with a concept of higher order functions — functions that are taking other functions as parameters. She decides to generalize the concept of the function order and to test it on some examples. For her study, she defines a simple grammar of types. In her grammar, a type non-terminal $$$T$$$ is defined as one of the following grammar productions, together with $$$\\textrm{order}(T)$$$, defining an order of the corresponding type: \" () \" is a unit type, $$$\\textrm{order}(\\textrm{\"}\\texttt{()}\\textrm{\"}) = 0$$$. \"(\" $$$T$$$ \")\" is a parenthesized type, $$$\\textrm{order}(\\textrm{\"}\\texttt{(}\\textrm{\"}\\,T\\,\\textrm{\"}\\texttt{)}\\textrm{\"}) = \\textrm{order}(T)$$$. $$$T_1$$$ \" -> \" $$$T_2$$$ is a functional type, $$$\\textrm{order}(T_1\\,\\textrm{\"}\\texttt{- \\gt }\\textrm{\"}\\,T_2) = max(\\textrm{order}(T_1) + 1, \\textrm{order}(T_2))$$$. The function constructor $$$T_1$$$ \" -> \" $$$T_2$$$ is right-to-left associative, so the type \" ()->()->() \" is the same as the type \" ()->(()->()) \" of a function returning a function, and it has an order of $$$1$$$. While \" (()->())->() \" is a function that has an order-1 type \" (()->()) \" as a parameter, and it has an order of $$$2$$$. Helen asks for your help in writing a program that computes an order of the given type.",
+  "input_specification": "The single line of the input contains a string consisting of characters ' ( ', ' ) ', ' - ', and ' > ' that describes a type that is valid according to the grammar from the problem statement. The length of the line is at most $$$10^4$$$ characters.",
+  "output_specification": "Print a single integer — the order of the given type.",
+  "sample_testcases": [
+    {
+      "input": "()",
+      "output": "0"
+    },
+    {
+      "input": "()->()",
+      "output": "1"
+    },
+    {
+      "input": "()->()->()",
+      "output": "1"
+    },
+    {
+      "input": "(()->())->()",
+      "output": "2"
+    },
+    {
+      "input": "()->(((()->())->()->())->())",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:56",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

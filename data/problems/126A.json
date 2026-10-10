@@ -1,0 +1,44 @@
+{
+  "id": "126A",
+  "source": "problemset",
+  "contest_id": 126,
+  "problem_index": "A",
+  "name": "Hot Bath",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "brute force",
+    "math"
+  ],
+  "solved_count": 1621,
+  "problem_url": "https://codeforces.com/problemset/problem/126/A",
+  "editorial_url": "https://codeforces.com/blog/entry/3140",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bob is about to take a hot bath. There are two taps to fill the bath: a hot water tap and a cold water tap. The cold water's temperature is t 1 , and the hot water's temperature is t 2 . The cold water tap can transmit any integer number of water units per second from 0 to x 1 , inclusive. Similarly, the hot water tap can transmit from 0 to x 2 water units per second. If y 1 water units per second flow through the first tap and y 2 water units per second flow through the second tap, then the resulting bath water temperature will be: Bob wants to open both taps so that the bath water temperature was not less than t 0 . However, the temperature should be as close as possible to this value. If there are several optimal variants, Bob chooses the one that lets fill the bath in the quickest way possible. Determine how much each tap should be opened so that Bob was pleased with the result in the end.",
+  "input_specification": "You are given five integers t 1 , t 2 , x 1 , x 2 and t 0 ( 1 ≤ t 1 ≤ t 0 ≤ t 2 ≤ 10 6 , 1 ≤ x 1 , x 2 ≤ 10 6 ).",
+  "output_specification": "Print two space-separated integers y 1 and y 2 ( 0 ≤ y 1 ≤ x 1 , 0 ≤ y 2 ≤ x 2 ).",
+  "sample_testcases": [
+    {
+      "input": "10 70 100 100 25",
+      "output": "99 33"
+    },
+    {
+      "input": "300 500 1000 1000 300",
+      "output": "1000 0"
+    },
+    {
+      "input": "143 456 110 117 273",
+      "output": "76 54"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

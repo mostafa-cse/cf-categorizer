@@ -1,0 +1,38 @@
+{
+  "id": "2075D",
+  "source": "problemset",
+  "contest_id": 2075,
+  "problem_index": "D",
+  "name": "Equalization",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 6153,
+  "problem_url": "https://codeforces.com/problemset/problem/2075/D",
+  "editorial_url": "https://codeforces.com/blog/entry/140781",
+  "time_limit": "3.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two non-negative integers $$$x$$$ and $$$y$$$. You can perform the following operation any number of times (possibly zero): choose a positive integer $$$k$$$ and divide either $$$x$$$ or $$$y$$$ by $$$2^k$$$ rounding down. The cost of this operation is $$$2^k$$$. However, there is an additional constraint: you cannot select the same value of $$$k$$$ more than once. Your task is to calculate the minimum possible cost in order to make $$$x$$$ equal to $$$y$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The only line of each test case contains two integers $$$x$$$ and $$$y$$$ ($$$0 \\le x, y \\le 10^{17}$$$).",
+  "output_specification": "For each test case, print a single integer — the minimum possible cost in order to make $$$x$$$ equal to $$$y$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 1\n6 2\n3 3\n13 37\n4238659325782394 12983091057341925",
+      "output": "2\n6\n0\n26\n32764"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

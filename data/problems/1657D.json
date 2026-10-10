@@ -1,0 +1,46 @@
+{
+  "id": "1657D",
+  "source": "problemset",
+  "contest_id": 1657,
+  "problem_index": "D",
+  "name": "For Gamers. By Gamers.",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 5405,
+  "problem_url": "https://codeforces.com/problemset/problem/1657/D",
+  "editorial_url": "https://codeforces.com/blog/entry/101161",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp is playing a strategy game. In the game, he recruits a squad to fight monsters. Before each battle, Monocarp has $$$C$$$ coins to spend on his squad. Before each battle starts, his squad is empty. Monocarp chooses one type of units and recruits no more units of that type than he can recruit with $$$C$$$ coins. There are $$$n$$$ types of units. Every unit type has three parameters: $$$c_i$$$ — the cost of recruiting one unit of the $$$i$$$-th type; $$$d_i$$$ — the damage that one unit of the $$$i$$$-th type deals in a second; $$$h_i$$$ — the amount of health of one unit of the $$$i$$$-th type. Monocarp has to face $$$m$$$ monsters. Every monster has two parameters: $$$D_j$$$ — the damage that the $$$j$$$-th monster deals in a second; $$$H_j$$$ — the amount of health the $$$j$$$-th monster has. Monocarp has to fight only the $$$j$$$-th monster during the $$$j$$$-th battle. He wants all his recruited units to stay alive. Both Monocarp's squad and the monster attack continuously (not once per second) and at the same time. Thus, Monocarp wins the battle if and only if his squad kills the monster strictly faster than the monster kills one of his units. The time is compared with no rounding. For each monster, Monocarp wants to know the minimum amount of coins he has to spend to kill that monster. If this amount is greater than $$$C$$$, then report that it's impossible to kill that monster.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$C$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le C \\le 10^6$$$) — the number of types of units and the amount of coins Monocarp has before each battle. The $$$i$$$-th of the next $$$n$$$ lines contains three integers $$$c_i, d_i$$$ and $$$h_i$$$ ($$$1 \\le c_i \\le C$$$; $$$1 \\le d_i, h_i \\le 10^6$$$). The next line contains a single integer $$$m$$$ ($$$1 \\le m \\le 3 \\cdot 10^5$$$) — the number of monsters that Monocarp has to face. The $$$j$$$-th of the next $$$m$$$ lines contains two integers $$$D_j$$$ and $$$H_j$$$ ($$$1 \\le D_j \\le 10^6$$$; $$$1 \\le H_j \\le 10^{12}$$$).",
+  "output_specification": "Print $$$m$$$ integers. For each monster, print the minimum amount of coins Monocarp has to spend to kill that monster. If this amount is greater than $$$C$$$, then print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 10\n3 4 6\n5 5 5\n10 3 4\n3\n8 3\n5 4\n10 15",
+      "output": "5 3 -1"
+    },
+    {
+      "input": "5 15\n14 10 3\n9 2 2\n10 4 3\n7 3 5\n4 3 1\n6\n11 2\n1 1\n4 7\n2 1\n1 14\n3 3",
+      "output": "14 4 14 4 7 7"
+    },
+    {
+      "input": "5 13\n13 1 9\n6 4 5\n12 18 4\n9 13 2\n5 4 5\n2\n16 3\n6 2",
+      "output": "12 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

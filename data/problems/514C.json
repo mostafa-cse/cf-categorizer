@@ -1,0 +1,38 @@
+{
+  "id": "514C",
+  "source": "problemset",
+  "contest_id": 514,
+  "problem_index": "C",
+  "name": "Watto and Mechanism",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "data structures",
+    "hashing",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 8692,
+  "problem_url": "https://codeforces.com/problemset/problem/514/C",
+  "editorial_url": "https://codeforces.com/blog/entry/16398",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Watto, the owner of a spare parts store, has recently got an order for the mechanism that can process strings in a certain way. Initially the memory of the mechanism is filled with n strings. Then the mechanism should be able to process queries of the following type: \"Given string s , determine if the memory of the mechanism contains string t that consists of the same number of characters as s and differs from s in exactly one position\". Watto has already compiled the mechanism, all that's left is to write a program for it and check it on the data consisting of n initial lines and m queries. He decided to entrust this job to you.",
+  "input_specification": "The first line contains two non-negative numbers n and m ( 0 ≤ n ≤ 3·10 5 , 0 ≤ m ≤ 3·10 5 ) — the number of the initial strings and the number of queries, respectively. Next follow n non-empty strings that are uploaded to the memory of the mechanism. Next follow m non-empty strings that are the queries to the mechanism. The total length of lines in the input doesn't exceed 6·10 5 . Each line consists only of letters 'a' , 'b' , 'c' .",
+  "output_specification": "For each query print on a single line \" YES \" (without the quotes), if the memory of the mechanism contains the required string, otherwise print \" NO \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2 3\naaaaa\nacacaca\naabaa\nccacacc\ncaaac",
+      "output": "YES\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "419. Suffix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct the minimal deterministic finite automaton recognizing all substrings of S online in O(N) time and space. Answer substring count, occurrence, and LCS queries."
+}

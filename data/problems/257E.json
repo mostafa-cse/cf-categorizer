@@ -1,0 +1,39 @@
+{
+  "id": "257E",
+  "source": "problemset",
+  "contest_id": 257,
+  "problem_index": "E",
+  "name": "Greedy Elevator",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 376,
+  "problem_url": "https://codeforces.com/problemset/problem/257/E",
+  "editorial_url": "https://codeforces.com/blog/entry/6357",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The m -floor ( m > 1) office of international corporation CodeForces has the advanced elevator control system established. It works as follows. All office floors are sequentially numbered with integers from 1 to m . At time t = 0 , the elevator is on the first floor, the elevator is empty and nobody is waiting for the elevator on other floors. Next, at times t i ( t i > 0) people come to the elevator. For simplicity, we assume that one person uses the elevator only once during the reported interval. For every person we know three parameters: the time at which the person comes to the elevator, the floor on which the person is initially, and the floor to which he wants to go. The movement of the elevator between the floors is as follows. At time t ( t ≥ 0 , t is an integer) the elevator is always at some floor. First the elevator releases all people who are in the elevator and want to get to the current floor. Then it lets in all the people waiting for the elevator on this floor. If a person comes to the elevator exactly at time t , then he has enough time to get into it. We can assume that all of these actions (going in or out from the elevator) are made instantly. After that the elevator decides, which way to move and at time ( t + 1) the elevator gets to the selected floor. The elevator selects the direction of moving by the following algorithm. If the elevator is empty and at the current time no one is waiting for the elevator on any floor, then the elevator remains at the current floor. Otherwise, let's assume that the elevator is on the floor number x (1 ≤ x ≤ m ) . Then elevator calculates the directions' \"priorities\" p up and p down : p up is the sum of the number of people waiting for the elevator on the floors with numbers greater than x , and the number of people in the elevator, who want to get to the floors with the numbers greater than x ; p down is the sum of the number of people waiting for the elevator on the floors with numbers less than x , and the number of people in the elevator, who want to get to the floors with the numbers less than x . If p up ≥ p down , then the elevator goes one floor above the current one (that is, from floor x to floor x + 1 ), otherwise the elevator goes one floor below the current one (that is, from floor x to floor x - 1 ). Your task is to simulate the work of the elevator and for each person to tell the time when the elevator will get to the floor this person needs. Please note that the elevator is large enough to accommodate all the people at once.",
+  "input_specification": "The first line contains two space-separated integers: n , m (1 ≤ n ≤ 10 5 , 2 ≤ m ≤ 10 5 ) — the number of people and floors in the building, correspondingly. Next n lines each contain three space-separated integers: t i , s i , f i (1 ≤ t i ≤ 10 9 , 1 ≤ s i , f i ≤ m , s i ≠ f i ) — the time when the i -th person begins waiting for the elevator, the floor number, where the i -th person was initially located, and the number of the floor, where he wants to go.",
+  "output_specification": "Print n lines. In the i -th line print a single number — the moment of time, when the i -th person gets to the floor he needs. The people are numbered in the order, in which they are given in the input. Please don't use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "3 10\n1 2 7\n3 6 5\n3 4 8",
+      "output": "7\n11\n8"
+    },
+    {
+      "input": "2 10\n1 2 5\n7 4 5",
+      "output": "5\n9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:55",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

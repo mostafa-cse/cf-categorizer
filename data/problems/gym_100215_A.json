@@ -1,0 +1,21 @@
+{
+  "id": "gym_100215_A",
+  "source": "gym",
+  "contest_id": 100215,
+  "problem_index": "A",
+  "name": "Brackets",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100215/problem/A",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:30:19",
+  "updated_at": "2026-10-10 06:30:19"
+}

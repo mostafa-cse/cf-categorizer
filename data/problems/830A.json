@@ -1,0 +1,42 @@
+{
+  "id": "830A",
+  "source": "problemset",
+  "contest_id": 830,
+  "problem_index": "A",
+  "name": "Office Keys",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 8486,
+  "problem_url": "https://codeforces.com/problemset/problem/830/A",
+  "editorial_url": "https://codeforces.com/blog/entry/53302",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n people and k keys on a straight line. Every person wants to get to the office which is located on the line as well. To do that, he needs to reach some point with a key, take the key and then go to the office. Once a key is taken by somebody, it couldn't be taken by anybody else. You are to determine the minimum time needed for all n people to get to the office with keys. Assume that people move a unit distance per 1 second. If two people reach a key at the same time, only one of them can take the key. A person can pass through a point with a key without taking it.",
+  "input_specification": "The first line contains three integers n , k and p ( 1 ≤ n ≤ 1 000 , n ≤ k ≤ 2 000 , 1 ≤ p ≤ 10 9 ) — the number of people, the number of keys and the office location. The second line contains n distinct integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — positions in which people are located initially. The positions are given in arbitrary order. The third line contains k distinct integers b 1 , b 2 , ..., b k ( 1 ≤ b j ≤ 10 9 ) — positions of the keys. The positions are given in arbitrary order. Note that there can't be more than one person or more than one key in the same point. A person and a key can be located in the same point.",
+  "output_specification": "Print the minimum time (in seconds) needed for all n to reach the office with keys.",
+  "sample_testcases": [
+    {
+      "input": "2 4 50\n20 100\n60 10 40 80",
+      "output": "50"
+    },
+    {
+      "input": "1 2 10\n11\n15 7",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

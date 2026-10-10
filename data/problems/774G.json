@@ -1,0 +1,43 @@
+{
+  "id": "774G",
+  "source": "problemset",
+  "contest_id": 774,
+  "problem_index": "G",
+  "name": "Perfectionist Arkadiy",
+  "rating": 2700,
+  "tags": [
+    "*special",
+    "number theory"
+  ],
+  "solved_count": 249,
+  "problem_url": "https://codeforces.com/problemset/problem/774/G",
+  "editorial_url": "https://codeforces.com/blog/entry/51441",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Arkadiy has lots square photos with size a × a . He wants to put some of them on a rectangular wall with size h × w . The photos which Arkadiy will put on the wall must form a rectangular grid and the distances between neighboring vertically and horizontally photos and also the distances between outside rows and columns of photos to the nearest bound of the wall must be equal to x , where x is some non-negative real number. Look on the picture below for better understanding of the statement. Arkadiy haven't chosen yet how many photos he would put on the wall, however, he want to put at least one photo. Your task is to determine the minimum value of x which can be obtained after putting photos, or report that there is no way to put positive number of photos and satisfy all the constraints. Suppose that Arkadiy has enough photos to make any valid arrangement according to the constraints. Note that Arkadiy wants to put at least one photo on the wall. The photos should not overlap, should completely lie inside the wall bounds and should have sides parallel to the wall sides.",
+  "input_specification": "The first line contains three integers a , h and w ( 1 ≤ a , h , w ≤ 10 9 ) — the size of photos and the height and the width of the wall.",
+  "output_specification": "Print one non-negative real number — the minimum value of x which can be obtained after putting the photos on the wall. The absolute or the relative error of the answer must not exceed 10 - 6 . Print -1 if there is no way to put positive number of photos and satisfy the constraints.",
+  "sample_testcases": [
+    {
+      "input": "2 18 13",
+      "output": "0.5"
+    },
+    {
+      "input": "4 4 4",
+      "output": "0"
+    },
+    {
+      "input": "3 4 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

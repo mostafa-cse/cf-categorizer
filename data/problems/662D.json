@@ -1,0 +1,41 @@
+{
+  "id": "662D",
+  "source": "problemset",
+  "contest_id": 662,
+  "problem_index": "D",
+  "name": "International Olympiad",
+  "rating": 2000,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1741,
+  "problem_url": "https://codeforces.com/problemset/problem/662/D",
+  "editorial_url": "https://codeforces.com/blog/entry/44408",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "International Abbreviation Olympiad takes place annually starting from 1989. Each year the competition receives an abbreviation of form IAO'y , where y stands for some number of consequent last digits of the current year. Organizers always pick an abbreviation with non-empty string y that has never been used before. Among all such valid abbreviations they choose the shortest one and announce it to be the abbreviation of this year's competition. For example, the first three Olympiads (years 1989, 1990 and 1991, respectively) received the abbreviations IAO'9 , IAO'0 and IAO'1 , while the competition in 2015 received an abbreviation IAO'15 , as IAO'5 has been already used in 1995. You are given a list of abbreviations. For each of them determine the year it stands for.",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 1000 ) — the number of abbreviations to process. Then n lines follow, each containing a single abbreviation. It's guaranteed that each abbreviation contains at most nine digits.",
+  "output_specification": "For each abbreviation given in the input, find the year of the corresponding Olympiad.",
+  "sample_testcases": [
+    {
+      "input": "5\nIAO'15\nIAO'2015\nIAO'1\nIAO'9\nIAO'0",
+      "output": "2015\n12015\n1991\n1989\n1990"
+    },
+    {
+      "input": "4\nIAO'9\nIAO'99\nIAO'999\nIAO'9999",
+      "output": "1989\n1999\n2999\n9999"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

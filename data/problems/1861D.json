@@ -1,0 +1,35 @@
+{
+  "id": "1861D",
+  "source": "problemset",
+  "contest_id": 1861,
+  "problem_index": "D",
+  "name": "Sorting By Multiplication",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 8202,
+  "problem_url": "https://codeforces.com/problemset/problem/1861/D",
+  "editorial_url": "https://codeforces.com/blog/entry/119964",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of length $$$n$$$, consisting of positive integers . You can perform the following operation on this array any number of times (possibly zero): choose three integers $$$l$$$, $$$r$$$ and $$$x$$$ such that $$$1 \\le l \\le r \\le n$$$, and multiply every $$$a_i$$$ such that $$$l \\le i \\le r$$$ by $$$x$$$. Note that you can choose any integer as $$$x$$$, it doesn't have to be positive. You have to calculate the minimum number of operations to make the array $$$a$$$ sorted in strictly ascending order (i. e. the condition $$$a_1 \\lt a_2 \\lt \\dots \\lt a_n$$$ must be satisfied).",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$)  — the number of test cases. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$)  — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array $$$a$$$. Additional constraint on the input: the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the minimum number of operations required to make $$$a$$$ sorted in strictly ascending order.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 1 2 2 2\n6\n5 4 3 2 5 1\n3\n1 2 3",
+      "output": "3\n2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "952F",
+  "source": "problemset",
+  "contest_id": 952,
+  "problem_index": "F",
+  "name": "2 + 2 != 4",
+  "rating": 2400,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 439,
+  "problem_url": "https://codeforces.com/problemset/problem/952/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58681",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One very experienced problem writer decided to prepare a problem for April Fools Day contest. The task was very simple - given an arithmetic expression, return the result of evaluating this expression. However, looks like there is a bug in the reference solution...",
+  "input_specification": "The only line of input data contains the arithmetic expression. The expression will contain between 2 and 10 operands, separated with arithmetic signs plus and/or minus. Each operand will be an integer between 0 and 255, inclusive.",
+  "output_specification": "Reproduce the output of the reference solution, including the bug.",
+  "sample_testcases": [
+    {
+      "input": "8-7+6-5+4-3+2-1-0",
+      "output": "4"
+    },
+    {
+      "input": "2+2",
+      "output": "-46"
+    },
+    {
+      "input": "112-37",
+      "output": "375"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

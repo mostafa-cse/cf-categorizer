@@ -1,0 +1,38 @@
+{
+  "id": "616C",
+  "source": "problemset",
+  "contest_id": 616,
+  "problem_index": "C",
+  "name": "The Labyrinth",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar"
+  ],
+  "solved_count": 7030,
+  "problem_url": "https://codeforces.com/problemset/problem/616/C",
+  "editorial_url": "https://codeforces.com/blog/entry/22712",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a rectangular field of n × m cells. Each cell is either empty or impassable (contains an obstacle). Empty cells are marked with ' . ', impassable cells are marked with ' * '. Let's call two empty cells adjacent if they share a side. Let's call a connected component any non-extendible set of cells such that any two of them are connected by the path of adjacent cells. It is a typical well-known definition of a connected component. For each impassable cell ( x , y ) imagine that it is an empty cell (all other cells remain unchanged) and find the size (the number of cells) of the connected component which contains ( x , y ) . You should do it for each impassable cell independently. The answer should be printed as a matrix with n rows and m columns. The j -th symbol of the i -th row should be \" . \" if the cell is empty at the start. Otherwise the j -th symbol of the i -th row should contain the only digit —- the answer modulo 10 . The matrix should be printed without any spaces. To make your output faster it is recommended to build the output as an array of n strings having length m and print it as a sequence of lines. It will be much faster than writing character-by-character. As input/output can reach huge size it is recommended to use fast input/output methods: for example, prefer to use scanf/printf instead of cin/cout in C++, prefer to use BufferedReader/PrintWriter instead of Scanner/System.out in Java .",
+  "input_specification": "The first line contains two integers n , m ( 1 ≤ n , m ≤ 1000 ) — the number of rows and columns in the field. Each of the next n lines contains m symbols: \" . \" for empty cells, \" * \" for impassable cells.",
+  "output_specification": "Print the answer as a matrix as described above. See the examples to precise the format of the output.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n*.*\n.*.\n*.*",
+      "output": "3.3\n.5.\n3.3"
+    },
+    {
+      "input": "4 5\n**..*\n..***\n.*.*.\n*.*.*",
+      "output": "46..3\n..732\n.6.4.\n5.4.3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

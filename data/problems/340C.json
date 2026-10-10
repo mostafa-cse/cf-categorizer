@@ -1,0 +1,36 @@
+{
+  "id": "340C",
+  "source": "problemset",
+  "contest_id": 340,
+  "problem_index": "C",
+  "name": "Tourist Problem",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 4761,
+  "problem_url": "https://codeforces.com/problemset/problem/340/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8755",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Iahub is a big fan of tourists. He wants to become a tourist himself, so he planned a trip. There are n destinations on a straight road that Iahub wants to visit. Iahub starts the excursion from kilometer 0. The n destinations are described by a non-negative integers sequence a 1 , a 2 , ..., a n . The number a k represents that the k th destination is at distance a k kilometers from the starting point. No two destinations are located in the same place. Iahub wants to visit each destination only once. Note that, crossing through a destination is not considered visiting, unless Iahub explicitly wants to visit it at that point. Also, after Iahub visits his last destination, he doesn't come back to kilometer 0, as he stops his trip at the last destination. The distance between destination located at kilometer x and next destination, located at kilometer y , is | x - y | kilometers. We call a \"route\" an order of visiting the destinations. Iahub can visit destinations in any order he wants, as long as he visits all n destinations and he doesn't visit a destination more than once. Iahub starts writing out on a paper all possible routes and for each of them, he notes the total distance he would walk. He's interested in the average number of kilometers he would walk by choosing a route. As he got bored of writing out all the routes, he asks you to help him.",
+  "input_specification": "The first line contains integer n ( 2 ≤ n ≤ 10 5 ). Next line contains n distinct integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 7 ).",
+  "output_specification": "Output two integers — the numerator and denominator of a fraction which is equal to the wanted average number. The fraction must be irreducible.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 3 5",
+      "output": "22 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:28:14",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

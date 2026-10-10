@@ -1,0 +1,35 @@
+{
+  "id": "2162F",
+  "source": "problemset",
+  "contest_id": 2162,
+  "problem_index": "F",
+  "name": "Beautiful Intervals",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 3092,
+  "problem_url": "https://codeforces.com/problemset/problem/2162/F",
+  "editorial_url": "https://codeforces.com/blog/entry/147242",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$ and $$$m$$$ intervals. Each interval is of the form $$$[l_i, r_i]$$$ and satisfies $$$1 \\le l_i \\le r_i \\le n$$$. Note that there can be duplicate intervals. Let $$$p$$$ be a permutation of length $$$n$$$ containing all the integers $$$0,1,2,\\dots,n-1$$$ exactly once. There is a multiset $$$M$$$ which is initially empty. For each interval $$$[l_i, r_i]$$$: consider the subarray $$$p[l_i \\dots r_i]$$$, compute $$$v_i = \\operatorname{mex}$$$$$$^{\\text{∗}}$$$$$$(p[l_i \\dots r_i])$$$, insert $$$v_i$$$ into $$$M$$$. After processing all the intervals, $$$M$$$ will be equal to $$$\\{v_1, v_2, \\dots, v_m\\}$$$. Your task is to construct a permutation $$$p$$$ of length $$$n$$$ containing all the integers $$$0,1,2,\\dots,n-1$$$ exactly once such that $$$\\operatorname{mex}(M)$$$ is minimized . $$$^{\\text{∗}}$$$$$$\\operatorname{mex}(a)$$$ denotes the minimum excluded (MEX) of the integers in $$$a$$$. For example, $$$\\operatorname{mex}([2,2,1])=0$$$ because $$$0$$$ does not belong to the array, and $$$\\operatorname{mex}([0,3,1,2])=4$$$ because $$$0$$$, $$$1$$$, $$$2$$$, and $$$3$$$ appear in the array, but $$$4$$$ does not.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Description of each testcase follows. The first line contains two integers $$$n$$$ and $$$m$$$ ($$$3 \\le n \\le 3000$$$, $$$1 \\le m \\le 3000$$$). The next $$$m$$$ lines each contain two space-separated integers $$$l_i, r_i$$$ ($$$1 \\le l_i \\le r_i \\le n$$$) each denoting an interval. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3000$$$, and the sum of $$$m$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "For each testcase, print a permutation $$$p$$$ of length $$$n$$$ containing all the integers $$$0,1,2,\\dots,n-1$$$ exactly once such that $$$\\operatorname{mex}(M)$$$ is minimized. If there are multiple answers, you may print any one of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 1\n1 2\n3 5\n1 1\n1 2\n2 2\n2 2\n2 3\n4 5\n1 2\n2 3\n3 4\n1 1\n4 4\n5 4\n3 5\n1 1\n2 4\n4 4\n4 2\n1 3\n2 4",
+      "output": "2 0 1\n2 1 0\n0 2 1 3\n2 0 1 3 4\n3 1 0 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:45",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "138E",
+  "source": "problemset",
+  "contest_id": 138,
+  "problem_index": "E",
+  "name": "Hellish Constraints",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 232,
+  "problem_url": "https://codeforces.com/problemset/problem/138/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3462",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Katya recently started to invent programming tasks and prepare her own contests. What she does not like is boring and simple constraints. Katya is fed up with all those \" N does not exceed a thousand\" and \"the sum of a i does not exceed a million\" and she decided to come up with something a little more complicated. The last problem written by Katya deals with strings. The input is a string of small Latin letters. To make the statement longer and strike terror into the people who will solve the contest, Katya came up with the following set of k restrictions of the same type (characters in restrictions can be repeated and some restrictions may contradict each other): The number of characters c 1 in a string is not less than l 1 and not more than r 1 . ... The number of characters c i in a string is not less than l i and not more than r i . ... The number of characters c k in a string is not less than l k and not more than r k . However, having decided that it is too simple and obvious, Katya added the following condition: a string meets no less than L and not more than R constraints from the above given list. Katya does not like to compose difficult and mean tests, so she just took a big string s and wants to add to the tests all its substrings that meet the constraints. However, Katya got lost in her conditions and asked you to count the number of substrings of the string s that meet the conditions (each occurrence of the substring is counted separately).",
+  "input_specification": "The first line contains a non-empty string s , consisting of small Latin letters. The length of the string s does not exceed 10 5 . The second line contains three space-separated integers k , L and R ( 0 ≤ L ≤ R ≤ k ≤ 500 ). Next k lines contain Katya's constrictions in the following form \" c i l i r i \". All letters c i are small Latin letters, l i and r i are integers ( 0 ≤ l i ≤ r i ≤ | s | , where | s | is the length of string s ). Letters c i are not necessarily different.",
+  "output_specification": "Print a single number — the number of substrings that meet the constrictions. Please do not use the %lld specificator to read or write 64-bit integers in С++. It is preferred to use the cout stream or the %I64d specificator.",
+  "sample_testcases": [
+    {
+      "input": "codeforces\n2 0 0\no 1 2\ne 1 2",
+      "output": "7"
+    },
+    {
+      "input": "codeforces\n2 1 1\no 1 2\no 1 2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1313D",
+  "source": "problemset",
+  "contest_id": 1313,
+  "problem_index": "D",
+  "name": "Happy New Year",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 1612,
+  "problem_url": "https://codeforces.com/problemset/problem/1313/D",
+  "editorial_url": "https://codeforces.com/blog/entry/74146",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Being Santa Claus is very difficult. Sometimes you have to deal with difficult situations. Today Santa Claus came to the holiday and there were $$$m$$$ children lined up in front of him. Let's number them from $$$1$$$ to $$$m$$$. Grandfather Frost knows $$$n$$$ spells. The $$$i$$$-th spell gives a candy to every child whose place is in the $$$[L_i, R_i]$$$ range. Each spell can be used at most once. It is also known that if all spells are used, each child will receive at most $$$k$$$ candies. It is not good for children to eat a lot of sweets, so each child can eat no more than one candy, while the remaining candies will be equally divided between his (or her) Mom and Dad. So it turns out that if a child would be given an even amount of candies (possibly zero), then he (or she) will be unable to eat any candies and will go sad. However, the rest of the children (who received an odd number of candies) will be happy. Help Santa Claus to know the maximum number of children he can make happy by casting some of his spells.",
+  "input_specification": "The first line contains three integers of $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1 \\leq n \\leq 100\\,000, 1 \\leq m \\leq 10^9, 1 \\leq k \\leq 8$$$) — the number of spells, the number of children and the upper limit on the number of candy a child can get if all spells are used, respectively. This is followed by $$$n$$$ lines, each containing integers $$$L_i$$$ and $$$R_i$$$ ($$$1 \\leq L_i \\leq R_i \\leq m$$$) — the parameters of the $$$i$$$ spell.",
+  "output_specification": "Print a single integer — the maximum number of children that Santa can make happy.",
+  "sample_testcases": [
+    {
+      "input": "3 5 3\n1 3\n2 4\n3 5",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

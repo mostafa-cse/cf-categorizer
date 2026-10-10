@@ -1,0 +1,38 @@
+{
+  "id": "1721D",
+  "source": "problemset",
+  "contest_id": 1721,
+  "problem_index": "D",
+  "name": "Maximum AND",
+  "rating": 1800,
+  "tags": [
+    "bitmasks",
+    "dfs and similar",
+    "divide and conquer",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 7896,
+  "problem_url": "https://codeforces.com/problemset/problem/1721/D",
+  "editorial_url": "https://codeforces.com/blog/entry/106416",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$, consisting of $$$n$$$ integers each. Let's define a function $$$f(a, b)$$$ as follows: let's define an array $$$c$$$ of size $$$n$$$, where $$$c_i = a_i \\oplus b_i$$$ ($$$\\oplus$$$ denotes bitwise XOR); the value of the function is $$$c_1 \\mathbin{\\&} c_2 \\mathbin{\\&} \\cdots \\mathbin{\\&} c_n$$$ (i.e. bitwise AND of the entire array $$$c$$$). Find the maximum value of the function $$$f(a, b)$$$ if you can reorder the array $$$b$$$ in an arbitrary way (leaving the initial order is also an option).",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the size of arrays $$$a$$$ and $$$b$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\lt 2^{30}$$$). The third line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$0 \\le b_i \\lt 2^{30}$$$). The sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case print one integer — the maximum value of the function $$$f(a, b)$$$ if you can reorder the array $$$b$$$ in an arbitrary way.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 0 0 3 3\n2 3 2 1 0\n3\n1 1 1\n0 0 3\n8\n0 1 2 3 4 5 6 7\n7 6 5 4 3 2 1 0",
+      "output": "2\n0\n7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:22",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

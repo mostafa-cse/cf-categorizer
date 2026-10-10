@@ -1,0 +1,39 @@
+{
+  "id": "452D",
+  "source": "problemset",
+  "contest_id": 452,
+  "problem_index": "D",
+  "name": "Washer, Dryer, Folder",
+  "rating": 1900,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 1674,
+  "problem_url": "https://codeforces.com/problemset/problem/452/D",
+  "editorial_url": "https://codeforces.com/blog/entry/13855",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have k pieces of laundry, each of which you want to wash, dry and fold. You are at a laundromat that has n 1 washing machines, n 2 drying machines and n 3 folding machines. Each machine can process only one piece of laundry at a time. You can't dry a piece of laundry before it is washed, and you can't fold it before it is dried. Moreover, after a piece of laundry is washed, it needs to be immediately moved into a drying machine, and after it is dried, it needs to be immediately moved into a folding machine. It takes t 1 minutes to wash one piece of laundry in a washing machine, t 2 minutes to dry it in a drying machine, and t 3 minutes to fold it in a folding machine. Find the smallest number of minutes that is enough to wash, dry and fold all the laundry you have.",
+  "input_specification": "The only line of the input contains seven integers: k , n 1 , n 2 , n 3 , t 1 , t 2 , t 3 (1 ≤ k ≤ 10 4 ; 1 ≤ n 1 , n 2 , n 3 , t 1 , t 2 , t 3 ≤ 1000) .",
+  "output_specification": "Print one integer — smallest number of minutes to do all your laundry.",
+  "sample_testcases": [
+    {
+      "input": "1 1 1 1 5 5 5",
+      "output": "15"
+    },
+    {
+      "input": "8 4 3 2 10 5 2",
+      "output": "32"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

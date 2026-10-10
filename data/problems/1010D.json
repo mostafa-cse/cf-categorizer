@@ -1,0 +1,37 @@
+{
+  "id": "1010D",
+  "source": "problemset",
+  "contest_id": 1010,
+  "problem_index": "D",
+  "name": "Mars rover",
+  "rating": 2000,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 2641,
+  "problem_url": "https://codeforces.com/problemset/problem/1010/D",
+  "editorial_url": "https://codeforces.com/blog/entry/60851",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Natasha travels around Mars in the Mars rover. But suddenly it broke down, namely — the logical scheme inside it. The scheme is an undirected tree (connected acyclic graph) with a root in the vertex $$$1$$$, in which every leaf (excluding root) is an input, and all other vertices are logical elements, including the root, which is output. One bit is fed to each input. One bit is returned at the output. There are four types of logical elements: AND ($$$2$$$ inputs), OR ($$$2$$$ inputs), XOR ($$$2$$$ inputs), NOT ($$$1$$$ input). Logical elements take values from their direct descendants (inputs) and return the result of the function they perform. Natasha knows the logical scheme of the Mars rover, as well as the fact that only one input is broken. In order to fix the Mars rover, she needs to change the value on this input. For each input, determine what the output will be if Natasha changes this input.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^6$$$) — the number of vertices in the graph (both inputs and elements). The $$$i$$$-th of the next $$$n$$$ lines contains a description of $$$i$$$-th vertex: the first word \"AND\", \"OR\", \"XOR\", \"NOT\" or \"IN\" (means the input of the scheme) is the vertex type. If this vertex is \"IN\", then the value of this input follows ($$$0$$$ or $$$1$$$), otherwise follow the indices of input vertices of this element: \"AND\", \"OR\", \"XOR\" have $$$2$$$ inputs, whereas \"NOT\" has $$$1$$$ input. The vertices are numbered from one. It is guaranteed that input data contains a correct logical scheme with an output produced by the vertex $$$1$$$.",
+  "output_specification": "Print a string of characters '0' and '1' (without quotes) — answers to the problem for each input in the ascending order of their vertex indices.",
+  "sample_testcases": [
+    {
+      "input": "10\nAND 9 4\nIN 1\nIN 1\nXOR 6 5\nAND 3 7\nIN 0\nNOT 10\nIN 1\nIN 1\nAND 2 8",
+      "output": "10110"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:16",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1735C",
+  "source": "problemset",
+  "contest_id": 1735,
+  "problem_index": "C",
+  "name": "Phase Shift",
+  "rating": 1400,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 11107,
+  "problem_url": "https://codeforces.com/problemset/problem/1735/C",
+  "editorial_url": "https://codeforces.com/blog/entry/107533",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There was a string $$$s$$$ which was supposed to be encrypted. For this reason, all $$$26$$$ lowercase English letters were arranged in a circle in some order, afterwards, each letter in $$$s$$$ was replaced with the one that follows in clockwise order, in that way the string $$$t$$$ was obtained. You are given a string $$$t$$$. Determine the lexicographically smallest string $$$s$$$ that could be a prototype of the given string $$$t$$$. A string $$$a$$$ is lexicographically smaller than a string $$$b$$$ of the same length if and only if: in the first position where $$$a$$$ and $$$b$$$ differ, the string $$$a$$$ has a letter, that appears earlier in the alphabet than the corresponding letter in $$$b$$$.",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 3 \\cdot 10^4$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the string $$$t$$$. The next line contains the string $$$t$$$ of the length $$$n$$$, containing lowercase English letters. It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing the lexicographically smallest string $$$s$$$ which could be a prototype of $$$t$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\na\n2\nba\n10\ncodeforces\n26\nabcdefghijklmnopqrstuvwxyz\n26\nabcdefghijklmnopqrstuvwxzy",
+      "output": "b\nac\nabcdebfadg\nbcdefghijklmnopqrstuvwxyza\nbcdefghijklmnopqrstuvwxyaz"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

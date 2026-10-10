@@ -1,0 +1,42 @@
+{
+  "id": "1136D",
+  "source": "problemset",
+  "contest_id": 1136,
+  "problem_index": "D",
+  "name": "Nastya Is Buying Lunch",
+  "rating": 1800,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 4033,
+  "problem_url": "https://codeforces.com/problemset/problem/1136/D",
+  "editorial_url": "https://codeforces.com/blog/entry/65905",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "At the big break Nastya came to the school dining room. There are $$$n$$$ pupils in the school, numbered from $$$1$$$ to $$$n$$$. Unfortunately, Nastya came pretty late, so that all pupils had already stood in the queue, i.e. Nastya took the last place in the queue. Of course, it's a little bit sad for Nastya, but she is not going to despond because some pupils in the queue can agree to change places with some other pupils. Formally, there are some pairs $$$u$$$, $$$v$$$ such that if the pupil with number $$$u$$$ stands directly in front of the pupil with number $$$v$$$, Nastya can ask them and they will change places. Nastya asks you to find the maximal number of places in queue she can move forward.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\leq 3 \\cdot 10^{5}$$$, $$$0 \\leq m \\leq 5 \\cdot 10^{5}$$$) — the number of pupils in the queue and number of pairs of pupils such that the first one agrees to change places with the second one if the first is directly in front of the second. The second line contains $$$n$$$ integers $$$p_1$$$, $$$p_2$$$, ..., $$$p_n$$$ — the initial arrangement of pupils in the queue, from the queue start to its end ($$$1 \\leq p_i \\leq n$$$, $$$p$$$ is a permutation of integers from $$$1$$$ to $$$n$$$). In other words, $$$p_i$$$ is the number of the pupil who stands on the $$$i$$$-th position in the queue. The $$$i$$$-th of the following $$$m$$$ lines contains two integers $$$u_i$$$, $$$v_i$$$ ($$$1 \\leq u_i, v_i \\leq n, u_i \\neq v_i$$$), denoting that the pupil with number $$$u_i$$$ agrees to change places with the pupil with number $$$v_i$$$ if $$$u_i$$$ is directly in front of $$$v_i$$$. It is guaranteed that if $$$i \\neq j$$$, than $$$v_i \\neq v_j$$$ or $$$u_i \\neq u_j$$$. Note that it is possible that in some pairs both pupils agree to change places with each other. Nastya is the last person in the queue, i.e. the pupil with number $$$p_n$$$.",
+  "output_specification": "Print a single integer — the number of places in queue she can move forward.",
+  "sample_testcases": [
+    {
+      "input": "2 1\n1 2\n1 2",
+      "output": "1"
+    },
+    {
+      "input": "3 3\n3 1 2\n1 2\n3 1\n3 2",
+      "output": "2"
+    },
+    {
+      "input": "5 2\n3 1 5 4 2\n5 2\n5 4",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:50",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

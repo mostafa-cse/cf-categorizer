@@ -1,0 +1,38 @@
+{
+  "id": "2215E",
+  "source": "problemset",
+  "contest_id": 2215,
+  "problem_index": "E",
+  "name": "Star Map",
+  "rating": 2700,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "geometry",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 244,
+  "problem_url": "https://codeforces.com/problemset/problem/2215/E",
+  "editorial_url": "https://codeforces.com/blog/entry/152930",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Funni-chan loves watching stars. There are $$$n$$$ stars in the sky, which can be regarded as points on a plane with Cartesian coordinates. The coordinates of the $$$i$$$-th star are $$$(x_i, y_i)$$$. It is guaranteed that all $$$x_1, x_2, \\ldots, x_n$$$ are pairwise distinct, and all $$$y_1, y_2, \\ldots, y_n$$$ are pairwise distinct. The stars are numbered from $$$1$$$ to $$$n$$$ in the order they are given in the input. Funni-chan wants to connect some pairs of these stars to form a constellation. She defines the basic unit of a constellation as a triangle formed by three stars connected pairwise. A triangle is called harmonious if there exists an axis-aligned rectangle such that all three vertices of the triangle lie on the boundary of the rectangle. Funni-chan imposes the following constraints on the constellation: Every triangle in the constellation must be harmonious . The interiors of any two triangles in the constellation must be disjoint. Note that the boundary of a triangle is not considered part of its interior. Under these constraints, Funni-chan wants her constellation to contain the maximum possible number of triangles. Your task is to find this maximum number and construct a valid constellation that achieves it.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2\\cdot 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$) — the number of stars. Each of the next $$$n$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$-10^9\\le x_i, y_i \\le 10^9$$$) — the coordinates of the $$$i$$$-th star. It is guaranteed that all $$$x_i$$$-s are pairwise distinct, and all $$$y_i$$$-s are pairwise distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "In the first line of each test case, you should print a single integer $$$m$$$ ($$$0\\le m\\le 2\\cdot n$$$) — the maximum possible number of triangles in the constellation. Then $$$m$$$ lines follow, each line containing three distinct positive integers $$$a_i$$$, $$$b_i$$$, and $$$c_i$$$ ($$$1 \\le a_i, b_i, c_i \\le n$$$), denoting the indices of the three stars forming the $$$i$$$-th triangle.",
+  "sample_testcases": [
+    {
+      "input": "2\n8\n-10 1\n-2 6\n5 10\n8 -9\n-1 -2\n3 0\n0 3\n1 -8\n8\n8 8\n-5 3\n-4 1\n5 7\n10 10\n-3 5\n-8 -10\n-7 -1",
+      "output": "8\n6 5 8\n6 8 4\n1 6 5\n7 1 6\n2 7 1\n3 2 7\n3 7 6\n3 6 4\n2\n2 3 8\n6 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:31",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "530E",
+  "source": "problemset",
+  "contest_id": 530,
+  "problem_index": "E",
+  "name": "Sum and product",
+  "rating": 1700,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 331,
+  "problem_url": "https://codeforces.com/problemset/problem/530/E",
+  "editorial_url": "https://codeforces.com/blog/entry/17177",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given integers N and D . Find N positive integers x 1 ... x N such that the difference of their product and their sum equals D .",
+  "input_specification": "The only line of input contains integers N ( 2 ≤ N ≤ 1000 ) and D ( 0 ≤ D ≤ 1000 ).",
+  "output_specification": "Output N integers that satisfy the given condition in non-decreasing order (in a single line, separated with spaces). Note that some numbers can be equal. Numbers printed by you must not exceed 10 6 .",
+  "sample_testcases": [
+    {
+      "input": "2 1",
+      "output": "2 3"
+    },
+    {
+      "input": "3 5",
+      "output": "1 2 8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

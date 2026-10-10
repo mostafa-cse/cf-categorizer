@@ -1,0 +1,36 @@
+{
+  "id": "1985G",
+  "source": "problemset",
+  "contest_id": 1985,
+  "problem_index": "G",
+  "name": "D-Function",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 12752,
+  "problem_url": "https://codeforces.com/problemset/problem/1985/G",
+  "editorial_url": "https://codeforces.com/blog/entry/129620",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$D(n)$$$ represent the sum of digits of $$$n$$$. For how many integers $$$n$$$ where $$$10^{l} \\leq n \\lt 10^{r}$$$ satisfy $$$D(k \\cdot n) = k \\cdot D(n)$$$? Output the answer modulo $$$10^9+7$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) – the number of test cases. Each test case contains three integers $$$l$$$, $$$r$$$, and $$$k$$$ ($$$0 \\leq l \\lt r \\leq 10^9$$$, $$$1 \\leq k \\leq 10^9$$$).",
+  "output_specification": "For each test case, output an integer, the answer, modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n0 1 4\n0 2 7\n1 2 1\n1 2 3\n582 74663 3\n0 3 1",
+      "output": "2\n3\n90\n12\n974995667\n999"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:01",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

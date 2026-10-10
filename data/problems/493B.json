@@ -1,0 +1,42 @@
+{
+  "id": "493B",
+  "source": "problemset",
+  "contest_id": 493,
+  "problem_index": "B",
+  "name": "Vasya and Wrestling",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 14189,
+  "problem_url": "https://codeforces.com/problemset/problem/493/B",
+  "editorial_url": "https://codeforces.com/blog/entry/14985",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has become interested in wrestling. In wrestling wrestlers use techniques for which they are awarded points by judges. The wrestler who gets the most points wins. When the numbers of points of both wrestlers are equal, the wrestler whose sequence of points is lexicographically greater , wins. If the sequences of the awarded points coincide, the wrestler who performed the last technique wins. Your task is to determine which wrestler won.",
+  "input_specification": "The first line contains number n — the number of techniques that the wrestlers have used ( 1 ≤ n ≤ 2·10 5 ). The following n lines contain integer numbers a i ( | a i | ≤ 10 9 , a i ≠ 0 ). If a i is positive, that means that the first wrestler performed the technique that was awarded with a i points. And if a i is negative, that means that the second wrestler performed the technique that was awarded with ( - a i ) points. The techniques are given in chronological order.",
+  "output_specification": "If the first wrestler wins, print string \" first \", otherwise print \" second \"",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n2\n-3\n-4\n3",
+      "output": "second"
+    },
+    {
+      "input": "3\n-1\n-2\n3",
+      "output": "first"
+    },
+    {
+      "input": "2\n4\n-4",
+      "output": "second"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

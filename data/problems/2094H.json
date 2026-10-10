@@ -1,0 +1,37 @@
+{
+  "id": "2094H",
+  "source": "problemset",
+  "contest_id": 2094,
+  "problem_index": "H",
+  "name": "La Vaca Saturno Saturnita",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3981,
+  "problem_url": "https://codeforces.com/problemset/problem/2094/H",
+  "editorial_url": "https://codeforces.com/blog/entry/141796",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Saturnita's mood depends on an array $$$a$$$ of length $$$n$$$, which only he knows the meaning of, and a function $$$f(k, a, l, r)$$$, which only he knows how to compute. Shown below is the pseudocode for his function $$$f(k, a, l, r)$$$. function f(k, a, l, r): ans := 0 for i from l to r (inclusive): while k is divisible by a[i]: k := k/a[i] ans := ans + k return ans You are given $$$q$$$ queries, each containing integers $$$k$$$, $$$l$$$, and $$$r$$$. For each query, please output $$$f(k,a,l,r)$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\leq n \\leq 10^5, 1 \\leq q \\leq 5\\cdot 10^4$$$). The following line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$2 \\leq a_i \\leq 10^5$$$). The following $$$q$$$ lines each contain three integers $$$k$$$, $$$l$$$, and $$$r$$$ ($$$1 \\leq k \\leq 10^5, 1 \\leq l \\leq r \\leq n$$$). It is guaranteed that the sum of $$$n$$$ does not exceed $$$10^5$$$ over all test cases, and the sum of $$$q$$$ does not exceed $$$5\\cdot 10^4$$$ over all test cases.",
+  "output_specification": "For each query, output the answer on a new line.",
+  "sample_testcases": [
+    {
+      "input": "2\n5 3\n2 3 5 7 11\n2 1 5\n2 2 4\n2310 1 5\n4 3\n18 12 8 9\n216 1 2\n48 2 4\n82944 1 4",
+      "output": "5\n6\n1629\n13\n12\n520"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:25",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

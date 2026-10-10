@@ -1,0 +1,38 @@
+{
+  "id": "1132F",
+  "source": "problemset",
+  "contest_id": 1132,
+  "problem_index": "F",
+  "name": "Clear the String",
+  "rating": 2000,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 12028,
+  "problem_url": "https://codeforces.com/problemset/problem/1132/F",
+  "editorial_url": "https://codeforces.com/blog/entry/65695",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ of length $$$n$$$ consisting of lowercase Latin letters. You may apply some operations to this string: in one operation you can delete some contiguous substring of this string, if all letters in the substring you delete are equal. For example, after deleting substring bbbb from string abbbbaccdd we get the string aaccdd . Calculate the minimum number of operations to delete the whole string $$$s$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the length of string $$$s$$$. The second line contains the string $$$s$$$ ($$$|s| = n$$$) consisting of lowercase Latin letters.",
+  "output_specification": "Output a single integer — the minimal number of operation to delete string $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\nabaca",
+      "output": "3"
+    },
+    {
+      "input": "8\nabcddcba",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

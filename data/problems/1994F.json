@@ -1,0 +1,37 @@
+{
+  "id": "1994F",
+  "source": "problemset",
+  "contest_id": 1994,
+  "problem_index": "F",
+  "name": "Stardew Valley",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1675,
+  "problem_url": "https://codeforces.com/problemset/problem/1994/F",
+  "editorial_url": "https://codeforces.com/blog/entry/131666",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Pelican Town represents $$$n$$$ houses connected by $$$m$$$ bidirectional roads. Some roads have NPCs standing on them. Farmer Buba needs to walk on each road with an NPC and talk to them. Help the farmer find a route satisfying the following properties: The route starts at some house, follows the roads, and ends at the same house. The route does not follow any road more than once (in both directions together). The route follows each road with an NPC exactly once. Note that the route can follow roads without NPCs, and you do not need to minimize the length of the route. It is guaranteed that you can reach any house from any other by walking on the roads with NPCs only.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^{4}$$$) — the number of test cases. Then follows the description of the test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 5 \\cdot 10^5, 1 \\leq m \\leq 5 \\cdot 10^5$$$) — the number of houses and roads in Pelican Town respectively. In each of the next $$$m$$$ lines, three integers $$$u$$$, $$$v$$$, and $$$c$$$ ($$$1 \\leq u, v \\leq n, c = 0/1$$$) are given — the ends of the road and whether an NPC is on this road. If $$$c = 1$$$, then the road has an NPC. If $$$c = 0$$$, then the road has no NPC. The graph may contain multiple edges and loops, and if there are multiple edges with NPCs standing on them, the route must follow each of these roads. It is guaranteed that you can reach any house from any other by walking on the roads with NPCs only. It is guaranteed that the sum of $$$n$$$ and $$$m$$$ for all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if there is no solution, then output \" No \" (without quotes). Otherwise, output \" Yes \" (without quotes), and then output $$$k$$$ — the number of roads in the route. In the next line, output $$$k + 1$$$ numbers — the houses of the route in the order of traversal. Note that the first house should match the last one, as the route is cyclic. If there are multiple answers, you can print any of them. You can output each letter in any case (for example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2\n1 2 1\n2 3 1\n3 3\n1 2 1\n1 3 1\n2 3 0\n5 9\n1 2 0\n5 2 1\n5 4 1\n5 1 1\n2 3 1\n5 2 1\n4 1 0\n4 3 0\n5 2 0",
+      "output": "NO\nYES\n3\n1 2 3 1 \nYES\n7\n1 2 5 4 3 2 5 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:58",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

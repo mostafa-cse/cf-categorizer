@@ -1,0 +1,36 @@
+{
+  "id": "1879F",
+  "source": "problemset",
+  "contest_id": 1879,
+  "problem_index": "F",
+  "name": "Last Man Standing",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "data structures",
+    "number theory"
+  ],
+  "solved_count": 676,
+  "problem_url": "https://codeforces.com/problemset/problem/1879/F",
+  "editorial_url": "https://codeforces.com/blog/entry/120773",
+  "time_limit": "7 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are $$$n$$$ heroes in a videogame. Each hero has some health value $$$h$$$ and initial armor value $$$a$$$. Let the current value of armor be $$$a_{\\mathit{cur}}$$$, initially equal to $$$a$$$. When $$$x$$$ points of damage are inflicted on a hero, the following happens: if $$$x \\lt a_{\\mathit{cur}}$$$, then $$$x$$$ gets subtracted from $$$a_{\\mathit{cur}}$$$; otherwise, $$$1$$$ gets subtracted from $$$h$$$ and $$$a_{\\mathit{cur}}$$$ gets assigned back to $$$a$$$. In the start of the game, you choose the value $$$x$$$ (an integer strictly greater than $$$0$$$, arbitrarily large). Then you keep attacking all heroes in rounds: in one round, you inflict $$$x$$$ points of damage to all alive heroes. A hero dies when his health becomes $$$0$$$. The game ends when all heroes are dead. The last hero to die earns the number of points, equal to the number of rounds he was the only hero alive. The other heroes get $$$0$$$ points. In particular, if the last round ends with multiple heroes dying, then every hero gets $$$0$$$ points. The game is played for every possible $$$x$$$ (from $$$1$$$ to infinity). The points are reset between the games. What's the maximum number of points each hero has had?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of heroes. The second line contains $$$n$$$ integers $$$h_1, h_2, \\dots, h_n$$$ ($$$1 \\le h_i \\le 2 \\cdot 10^5$$$) — the health value of each hero. The third line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^5$$$) — the initial armor value of each hero.",
+  "output_specification": "For each testcase, print $$$n$$$ integers — the maximum number of points each hero has had over the games played for every possible $$$x$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n3 1 2\n3 11 5\n1\n100\n200\n4\n5 9 5 1\n9 2 9 10",
+      "output": "1 1 1 \n20000 \n0 4 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

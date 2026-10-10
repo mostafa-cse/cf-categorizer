@@ -1,0 +1,39 @@
+{
+  "id": "850B",
+  "source": "problemset",
+  "contest_id": 850,
+  "problem_index": "B",
+  "name": "Arpa and a list of numbers",
+  "rating": 2100,
+  "tags": [
+    "implementation",
+    "number theory"
+  ],
+  "solved_count": 2239,
+  "problem_url": "https://codeforces.com/problemset/problem/850/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54317",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Arpa has found a list containing n numbers. He calls a list bad if and only if it is not empty and gcd (see notes section for more information) of numbers in the list is 1 . Arpa can perform two types of operations: Choose a number and delete it with cost x . Choose a number and increase it by 1 with cost y . Arpa can apply these operations to as many numbers as he wishes, and he is allowed to apply the second operation arbitrarily many times on the same number. Help Arpa to find the minimum possible cost to make the list good.",
+  "input_specification": "First line contains three integers n , x and y ( 1 ≤ n ≤ 5·10 5 , 1 ≤ x , y ≤ 10 9 ) — the number of elements in the list and the integers x and y . Second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 6 ) — the elements of the list.",
+  "output_specification": "Print a single integer: the minimum possible cost to make the list good.",
+  "sample_testcases": [
+    {
+      "input": "4 23 17\n1 17 17 16",
+      "output": "40"
+    },
+    {
+      "input": "10 6 2\n100 49 71 73 66 96 8 60 41 63",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

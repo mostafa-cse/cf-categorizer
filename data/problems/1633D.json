@@ -1,0 +1,35 @@
+{
+  "id": "1633D",
+  "source": "problemset",
+  "contest_id": 1633,
+  "problem_index": "D",
+  "name": "Make Them Equal",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 20200,
+  "problem_url": "https://codeforces.com/problemset/problem/1633/D",
+  "editorial_url": "https://codeforces.com/blog/entry/99539",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array of integers $$$a$$$ of size $$$n$$$. Initially, all elements of the array are equal to $$$1$$$. You can perform the following operation: choose two integers $$$i$$$ ($$$1 \\le i \\le n$$$) and $$$x$$$ ($$$x \\gt 0$$$), and then increase the value of $$$a_i$$$ by $$$\\left\\lfloor\\frac{a_i}{x}\\right\\rfloor$$$ (i.e. make $$$a_i = a_i + \\left\\lfloor\\frac{a_i}{x}\\right\\rfloor$$$). After performing all operations, you will receive $$$c_i$$$ coins for all such $$$i$$$ that $$$a_i = b_i$$$. Your task is to determine the maximum number of coins that you can receive by performing no more than $$$k$$$ operations.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^3; 0 \\le k \\le 10^6$$$) — the size of the array and the maximum number of operations, respectively. The second line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_i \\le 10^3$$$). The third line contains $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$1 \\le c_i \\le 10^6$$$). The sum of $$$n$$$ over all test cases does not exceed $$$10^3$$$.",
+  "output_specification": "For each test case, print one integer — the maximum number of coins that you can get by performing no more than $$$k$$$ operations.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 4\n1 7 5 2\n2 6 5 2\n3 0\n3 5 2\n5 4 7\n5 9\n5 2 5 6 3\n5 9 1 9 7\n6 14\n11 4 6 2 8 16\n43 45 9 41 15 38",
+      "output": "9\n0\n30\n167"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

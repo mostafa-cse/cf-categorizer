@@ -1,0 +1,35 @@
+{
+  "id": "622C",
+  "source": "problemset",
+  "contest_id": 622,
+  "problem_index": "C",
+  "name": "Not Equal on a Segment",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 7686,
+  "problem_url": "https://codeforces.com/problemset/problem/622/C",
+  "editorial_url": "https://codeforces.com/blog/entry/23442",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given array a with n integers and m queries. The i -th query is given with three integers l i , r i , x i . For the i -th query find any position p i ( l i ≤ p i ≤ r i ) so that a p i ≠ x i .",
+  "input_specification": "The first line contains two integers n , m ( 1 ≤ n , m ≤ 2·10 5 ) — the number of elements in a and the number of queries. The second line contains n integers a i ( 1 ≤ a i ≤ 10 6 ) — the elements of the array a . Each of the next m lines contains three integers l i , r i , x i ( 1 ≤ l i ≤ r i ≤ n , 1 ≤ x i ≤ 10 6 ) — the parameters of the i -th query.",
+  "output_specification": "Print m lines. On the i -th line print integer p i — the position of any number not equal to x i in segment [ l i , r i ] or the value - 1 if there is no such number.",
+  "sample_testcases": [
+    {
+      "input": "6 4\n1 2 1 1 3 5\n1 4 1\n2 6 2\n3 4 1\n3 4 2",
+      "output": "2\n6\n-1\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

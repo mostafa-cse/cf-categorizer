@@ -1,0 +1,40 @@
+{
+  "id": "244B",
+  "source": "problemset",
+  "contest_id": 244,
+  "problem_index": "B",
+  "name": "Undoubtedly Lucky Numbers",
+  "rating": 1600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dfs and similar"
+  ],
+  "solved_count": 5013,
+  "problem_url": "https://codeforces.com/problemset/problem/244/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5895",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus loves lucky numbers. Everybody knows that lucky numbers are positive integers, whose decimal representation (without leading zeroes) contain only the lucky digits x and y . For example, if x = 4 , and y = 7 , then numbers 47, 744, 4 are lucky. Let's call a positive integer a undoubtedly lucky , if there are such digits x and y (0 ≤ x , y ≤ 9) , that the decimal representation of number a (without leading zeroes) contains only digits x and y . Polycarpus has integer n . He wants to know how many positive integers that do not exceed n , are undoubtedly lucky. Help him, count this number.",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 10 9 ) — Polycarpus's number.",
+  "output_specification": "Print a single integer that says, how many positive integers that do not exceed n are undoubtedly lucky.",
+  "sample_testcases": [
+    {
+      "input": "10",
+      "output": "10"
+    },
+    {
+      "input": "123",
+      "output": "113"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

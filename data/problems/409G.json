@@ -1,0 +1,55 @@
+{
+  "id": "409G",
+  "source": "problemset",
+  "contest_id": 409,
+  "problem_index": "G",
+  "name": "On a plane",
+  "rating": 2200,
+  "tags": [
+    "*special",
+    "geometry"
+  ],
+  "solved_count": 579,
+  "problem_url": "https://codeforces.com/problemset/problem/409/G",
+  "editorial_url": "https://codeforces.com/blog/entry/11391",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 1000 ) — the number of points on a plane. Each of the next n lines contains two real coordinates x i and y i of the point, specified with exactly 2 fractional digits. All coordinates are between - 1000 and 1000 , inclusive.",
+  "output_specification": "Output a single real number θ — the answer to the problem statement. The absolute or relative error of your answer should be at most 10 - 2 .",
+  "sample_testcases": [
+    {
+      "input": "8\n-2.14 2.06\n-1.14 2.04\n-2.16 1.46\n-2.14 0.70\n-1.42 0.40\n-0.94 -0.48\n-1.42 -1.28\n-2.16 -1.62",
+      "output": "5.410"
+    },
+    {
+      "input": "5\n2.26 1.44\n2.28 0.64\n2.30 -0.30\n1.58 0.66\n3.24 0.66",
+      "output": "5.620"
+    },
+    {
+      "input": "8\n6.98 2.06\n6.40 1.12\n5.98 0.24\n5.54 -0.60\n7.16 0.30\n7.82 1.24\n8.34 0.24\n8.74 -0.76",
+      "output": "5.480"
+    },
+    {
+      "input": "5\n10.44 2.06\n10.90 0.80\n11.48 -0.48\n12.06 0.76\n12.54 2.06",
+      "output": "6.040"
+    },
+    {
+      "input": "8\n16.94 2.42\n15.72 2.38\n14.82 1.58\n14.88 0.50\n15.76 -0.16\n16.86 -0.20\n17.00 0.88\n16.40 0.92",
+      "output": "6.040"
+    },
+    {
+      "input": "7\n20.62 3.00\n21.06 2.28\n21.56 1.36\n21.66 0.56\n21.64 -0.52\n22.14 2.32\n22.62 3.04",
+      "output": "6.720"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:43",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": false,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

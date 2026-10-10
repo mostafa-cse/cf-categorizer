@@ -1,0 +1,41 @@
+{
+  "id": "17B",
+  "source": "problemset",
+  "contest_id": 17,
+  "problem_index": "B",
+  "name": "Hierarchy",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "greedy",
+    "shortest paths"
+  ],
+  "solved_count": 6840,
+  "problem_url": "https://codeforces.com/problemset/problem/17/B",
+  "editorial_url": "https://codeforces.com/blog/entry/451",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Nick's company employed n people. Now Nick needs to build a tree hierarchy of «supervisor-surbodinate» relations in the company (this is to say that each employee, except one, has exactly one supervisor). There are m applications written in the following form: «employee a i is ready to become a supervisor of employee b i at extra cost c i » . The qualification q j of each employee is known, and for each application the following is true: q a i > q b i . Would you help Nick calculate the minimum cost of such a hierarchy, or find out that it is impossible to build it.",
+  "input_specification": "The first input line contains integer n ( 1 ≤ n ≤ 1000 ) — amount of employees in the company. The following line contains n space-separated numbers q j ( 0 ≤ q j ≤ 10 6 )— the employees' qualifications. The following line contains number m ( 0 ≤ m ≤ 10000 ) — amount of received applications. The following m lines contain the applications themselves, each of them in the form of three space-separated numbers: a i , b i and c i ( 1 ≤ a i , b i ≤ n , 0 ≤ c i ≤ 10 6 ). Different applications can be similar, i.e. they can come from one and the same employee who offered to become a supervisor of the same person but at a different cost. For each application q a i > q b i .",
+  "output_specification": "Output the only line — the minimum cost of building such a hierarchy, or -1 if it is impossible to build it.",
+  "sample_testcases": [
+    {
+      "input": "4\n7 2 3 1\n4\n1 2 5\n2 4 1\n3 4 1\n1 3 5",
+      "output": "11"
+    },
+    {
+      "input": "3\n1 2 3\n2\n3 1 2\n3 1 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

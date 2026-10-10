@@ -1,0 +1,39 @@
+{
+  "id": "603D",
+  "source": "problemset",
+  "contest_id": 603,
+  "problem_index": "D",
+  "name": "Ruminations on Ruminants",
+  "rating": 2900,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 499,
+  "problem_url": "https://codeforces.com/problemset/problem/603/D",
+  "editorial_url": "https://codeforces.com/blog/entry/21914",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kevin Sun is ruminating on the origin of cows while standing at the origin of the Cartesian plane. He notices n lines on the plane, each representable by an equation of the form ax + by = c . He also observes that no two lines are parallel and that no three lines pass through the same point. For each triple ( i , j , k ) such that 1 ≤ i < j < k ≤ n , Kevin considers the triangle formed by the three lines . He calls a triangle original if the circumcircle of that triangle passes through the origin. Since Kevin believes that the circles of bovine life are tied directly to such triangles, he wants to know the number of original triangles formed by unordered triples of distinct lines. Recall that the circumcircle of a triangle is the circle which passes through all the vertices of that triangle.",
+  "input_specification": "The first line of the input contains a single integer n ( 3 ≤ n ≤ 2000 ), the number of lines. The next n lines describe lines . The i -th of these lines contains three space-separated integers a i , b i , c i ( | a i |, | b i |, | c i | ≤ 10 000, a i 2 + b i 2 > 0 ), representing the equation a i x + b i y = c i of line .",
+  "output_specification": "Print a single integer, the number of triples ( i , j , k ) with i < j < k such that lines form an original triangle.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 0 0\n0 1 0\n1 1 -1\n1 -1 2",
+      "output": "2"
+    },
+    {
+      "input": "3\n0 1 1\n1 1 2\n1 -1 -2",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

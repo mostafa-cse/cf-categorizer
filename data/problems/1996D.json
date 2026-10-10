@@ -1,0 +1,38 @@
+{
+  "id": "1996D",
+  "source": "problemset",
+  "contest_id": 1996,
+  "problem_index": "D",
+  "name": "Fun",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 20257,
+  "problem_url": "https://codeforces.com/problemset/problem/1996/D",
+  "editorial_url": "https://codeforces.com/blog/entry/131948",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Counting is Fun! — satyam343 Given two integers $$$n$$$ and $$$x$$$, find the number of triplets ($$$a,b,c$$$) of positive integers such that $$$ab + ac + bc \\le n$$$ and $$$a + b + c \\le x$$$. Note that order matters (e.g. ($$$1, 1, 2$$$) and ($$$1, 2, 1$$$) are treated as different) and $$$a$$$, $$$b$$$, $$$c$$$ must be strictly greater than $$$0$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$)  — the number of test cases. Each test case contains two integers $$$n$$$ and $$$x$$$ ($$$1 \\leq n,x \\leq 10^6$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$ and that the sum of $$$x$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "Output a single integer — the number of triplets ($$$a,b,c$$$) of positive integers such that $$$ab + ac + bc \\le n$$$ and $$$a + b + c \\le x$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n7 4\n10 5\n7 1000\n900000 400000",
+      "output": "4\n10\n7\n1768016938"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:55",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

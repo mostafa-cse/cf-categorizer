@@ -1,0 +1,47 @@
+{
+  "id": "849B",
+  "source": "problemset",
+  "contest_id": 849,
+  "problem_index": "B",
+  "name": "Tell Your World",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "geometry"
+  ],
+  "solved_count": 4078,
+  "problem_url": "https://codeforces.com/problemset/problem/849/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54233",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Connect the countless points with lines, till we reach the faraway yonder. There are n points on a coordinate plane, the i -th of which being ( i , y i ) . Determine whether it's possible to draw two parallel and non-overlapping lines, such that every point in the set lies on exactly one of them, and each of them passes through at least one point in the set.",
+  "input_specification": "The first line of input contains a positive integer n ( 3 ≤ n ≤ 1 000 ) — the number of points. The second line contains n space-separated integers y 1 , y 2 , ..., y n ( - 10 9 ≤ y i ≤ 10 9 ) — the vertical coordinates of each point.",
+  "output_specification": "Output \" Yes \" (without quotes) if it's possible to fulfill the requirements, and \" No \" otherwise. You can print each letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "5\n7 5 8 6 9",
+      "output": "Yes"
+    },
+    {
+      "input": "5\n-1 -2 0 0 -5",
+      "output": "No"
+    },
+    {
+      "input": "5\n5 4 3 2 1",
+      "output": "No"
+    },
+    {
+      "input": "5\n1000000000 0 0 0 0",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

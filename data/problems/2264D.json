@@ -1,0 +1,38 @@
+{
+  "id": "2264D",
+  "source": "problemset",
+  "contest_id": 2264,
+  "problem_index": "D",
+  "name": "Dr. Agos's Dark Mode",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "chinese remainder theorem",
+    "constructive algorithms",
+    "math",
+    "strings"
+  ],
+  "solved_count": 2355,
+  "problem_url": "https://codeforces.com/problemset/problem/2264/D",
+  "editorial_url": "https://codeforces.com/blog/entry/156680",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Someone has chopped up Dr. Agos's chickens. Furious, he turns to the one thing that still brings him comfort: his OLED screen. Today, he wants almost all of it black. The screen has a single row of $$$n$$$ pixels. Its pattern is represented by a binary string $$$s$$$; $$$s_i = 0$$$ means that the $$$i$$$-th pixel is dark, and $$$s_i = 1$$$ means that it is lit. Dr. Agos finds a contiguous segment of pixels irritating if, when read from left to right as a binary integer, its value is divisible by $$$3$$$. More precisely, the segment from position $$$l$$$ to position $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) has value $$$$$$ \\sum_{i=l}^{r} s_i \\cdot 2^{r-i}. $$$$$$ Leading zeroes are allowed. A segment consisting only of dark pixels has value $$$0$$$, which is also divisible by $$$3$$$. Let $$$f(s)$$$ be the number of irritating segments. Segments with different pairs of endpoints $$$(l,r)$$$ are counted separately, even if their pixel patterns are identical. Dr. Agos wants a pattern with at most three lit pixels that minimizes $$$f(s)$$$ among all binary strings of length $$$n$$$, including strings with more than three ones. Help him construct such a pattern. We can show that an answer always exists.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of pixels in the row. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a binary string $$$s$$$ of length $$$n$$$ describing Dr. Agos's screen. It must contain at most three ones and minimize $$$f(s)$$$ among all binary strings of length $$$n$$$. If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n1\n2\n3\n4\n5\n6",
+      "output": "1\n11\n101\n0101\n10101\n010100"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:24",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "267. Chinese Remainder Theorem (CRT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Chinese Remainder Theorem (CRT) paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

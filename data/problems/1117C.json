@@ -1,0 +1,42 @@
+{
+  "id": "1117C",
+  "source": "problemset",
+  "contest_id": 1117,
+  "problem_index": "C",
+  "name": "Magic Ship",
+  "rating": 1900,
+  "tags": [
+    "binary search"
+  ],
+  "solved_count": 9844,
+  "problem_url": "https://codeforces.com/problemset/problem/1117/C",
+  "editorial_url": "https://codeforces.com/blog/entry/65365",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You a captain of a ship. Initially you are standing in a point $$$(x_1, y_1)$$$ (obviously, all positions in the sea can be described by cartesian plane) and you want to travel to a point $$$(x_2, y_2)$$$. You know the weather forecast — the string $$$s$$$ of length $$$n$$$, consisting only of letters U , D , L and R . The letter corresponds to a direction of wind. Moreover, the forecast is periodic, e.g. the first day wind blows to the side $$$s_1$$$, the second day — $$$s_2$$$, the $$$n$$$-th day — $$$s_n$$$ and $$$(n+1)$$$-th day — $$$s_1$$$ again and so on. Ship coordinates change the following way: if wind blows the direction U , then the ship moves from $$$(x, y)$$$ to $$$(x, y + 1)$$$; if wind blows the direction D , then the ship moves from $$$(x, y)$$$ to $$$(x, y - 1)$$$; if wind blows the direction L , then the ship moves from $$$(x, y)$$$ to $$$(x - 1, y)$$$; if wind blows the direction R , then the ship moves from $$$(x, y)$$$ to $$$(x + 1, y)$$$. The ship can also either go one of the four directions or stay in place each day. If it goes then it's exactly 1 unit of distance. Transpositions of the ship and the wind add up. If the ship stays in place, then only the direction of wind counts. For example, if wind blows the direction U and the ship moves the direction L , then from point $$$(x, y)$$$ it will move to the point $$$(x - 1, y + 1)$$$, and if it goes the direction U , then it will move to the point $$$(x, y + 2)$$$. You task is to determine the minimal number of days required for the ship to reach the point $$$(x_2, y_2)$$$.",
+  "input_specification": "The first line contains two integers $$$x_1, y_1$$$ ($$$0 \\le x_1, y_1 \\le 10^9$$$) — the initial coordinates of the ship. The second line contains two integers $$$x_2, y_2$$$ ($$$0 \\le x_2, y_2 \\le 10^9$$$) — the coordinates of the destination point. It is guaranteed that the initial coordinates and destination point coordinates are different. The third line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the string $$$s$$$. The fourth line contains the string $$$s$$$ itself, consisting only of letters U , D , L and R .",
+  "output_specification": "The only line should contain the minimal number of days required for the ship to reach the point $$$(x_2, y_2)$$$. If it's impossible then print \" -1 \".",
+  "sample_testcases": [
+    {
+      "input": "0 0\n4 6\n3\nUUU",
+      "output": "5"
+    },
+    {
+      "input": "0 3\n0 0\n3\nUDD",
+      "output": "3"
+    },
+    {
+      "input": "0 0\n0 1\n1\nL",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

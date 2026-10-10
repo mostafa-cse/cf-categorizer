@@ -1,0 +1,36 @@
+{
+  "id": "641F",
+  "source": "problemset",
+  "contest_id": 641,
+  "problem_index": "F",
+  "name": "Little Artem and 2-SAT",
+  "rating": 3000,
+  "tags": [],
+  "solved_count": 411,
+  "problem_url": "https://codeforces.com/problemset/problem/641/F",
+  "editorial_url": "https://codeforces.com/blog/entry/44538",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Artem is a very smart programmer. He knows many different difficult algorithms. Recently he has mastered in 2-SAT one. In computer science, 2-satisfiability (abbreviated as 2-SAT ) is the special case of the problem of determining whether a conjunction (logical AND ) of disjunctions (logical OR ) have a solution, in which all disjunctions consist of no more than two arguments (variables). For the purpose of this problem we consider only 2-SAT formulas where each disjunction consists of exactly two arguments. Consider the following 2-SAT problem as an example: . Note that there might be negations in 2-SAT formula (like for x 1 and for x 4 ). Artem now tries to solve as many problems with 2-SAT as possible. He found a very interesting one, which he can not solve yet. Of course, he asks you to help him. The problem is: given two 2-SAT formulas f and g , determine whether their sets of possible solutions are the same. Otherwise, find any variables assignment x such that f ( x ) ≠ g ( x ) .",
+  "input_specification": "The first line of the input contains three integers n , m 1 and m 2 ( 1 ≤ n ≤ 1000 , 1 ≤ m 1 , m 2 ≤ n 2 ) — the number of variables, the number of disjunctions in the first formula and the number of disjunctions in the second formula, respectively. Next m 1 lines contains the description of 2-SAT formula f . The description consists of exactly m 1 pairs of integers x i ( - n ≤ x i ≤ n , x i ≠ 0 ) each on separate line, where x i > 0 corresponds to the variable without negation, while x i < 0 corresponds to the variable with negation. Each pair gives a single disjunction. Next m 2 lines contains formula g in the similar format.",
+  "output_specification": "If both formulas share the same set of solutions, output a single word \" SIMILAR \" (without quotes). Otherwise output exactly n integers x i ( ) — any set of values x such that f ( x ) ≠ g ( x ) .",
+  "sample_testcases": [
+    {
+      "input": "2 1 1\n1 2\n1 2",
+      "output": "SIMILAR"
+    },
+    {
+      "input": "2 1 1\n1 2\n1 -2",
+      "output": "0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

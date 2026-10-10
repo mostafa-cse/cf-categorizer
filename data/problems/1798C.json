@@ -1,0 +1,36 @@
+{
+  "id": "1798C",
+  "source": "problemset",
+  "contest_id": 1798,
+  "problem_index": "C",
+  "name": "Candy Store",
+  "rating": 1700,
+  "tags": [
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 9633,
+  "problem_url": "https://codeforces.com/problemset/problem/1798/C",
+  "editorial_url": "https://codeforces.com/blog/entry/114208",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The store sells $$$n$$$ types of candies with numbers from $$$1$$$ to $$$n$$$. One candy of type $$$i$$$ costs $$$b_i$$$ coins. In total, there are $$$a_i$$$ candies of type $$$i$$$ in the store. You need to pack all available candies in packs, each pack should contain only one type of candies. Formally, for each type of candy $$$i$$$ you need to choose the integer $$$d_i$$$, denoting the number of type $$$i$$$ candies in one pack, so that $$$a_i$$$ is divided without remainder by $$$d_i$$$. Then the cost of one pack of candies of type $$$i$$$ will be equal to $$$b_i \\cdot d_i$$$. Let's denote this cost by $$$c_i$$$, that is, $$$c_i = b_i \\cdot d_i$$$. After packaging, packs will be placed on the shelf. Consider the cost of the packs placed on the shelf, in order $$$c_1, c_2, \\ldots, c_n$$$. Price tags will be used to describe costs of the packs. One price tag can describe the cost of all packs from $$$l$$$ to $$$r$$$ inclusive if $$$c_l = c_{l+1} = \\ldots = c_r$$$. Each of the packs from $$$1$$$ to $$$n$$$ must be described by at least one price tag. For example, if $$$c_1, \\ldots, c_n = [4, 4, 2, 4, 4]$$$, to describe all the packs, a $$$3$$$ price tags will be enough, the first price tag describes the packs $$$1, 2$$$, the second: $$$3$$$, the third: $$$4, 5$$$. You are given the integers $$$a_1, b_1, a_2, b_2, \\ldots, a_n, b_n$$$. Your task is to choose integers $$$d_i$$$ so that $$$a_i$$$ is divisible by $$$d_i$$$ for all $$$i$$$, and the required number of price tags to describe the values of $$$c_1, c_2, \\ldots, c_n$$$ is the minimum possible. For a better understanding of the statement, look at the illustration of the first test case of the first test: Let's repeat the meaning of the notation used in the problem: $$$a_i$$$ — the number of candies of type $$$i$$$ available in the store. $$$b_i$$$ — the cost of one candy of type $$$i$$$. $$$d_i$$$ — the number of candies of type $$$i$$$ in one pack. $$$c_i$$$ — the cost of one pack of candies of type $$$i$$$ is expressed by the formula $$$c_i = b_i \\cdot d_i$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100\\,000$$$). Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 200\\,000$$$) — the number of types of candies. Each of the next $$$n$$$ lines of each test case contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i \\le 10^9$$$, $$$1 \\le b_i \\le 10\\,000$$$) — the number of candies and the cost of one candy of type $$$i$$$, respectively. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$200\\,000$$$.",
+  "output_specification": "For each test case, output the minimum number of price tags required to describe the costs of all packs of candies in the store.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n20 3\n6 2\n14 5\n20 7\n3\n444 5\n2002 10\n2020 2\n5\n7 7\n6 5\n15 2\n10 3\n7 7\n5\n10 1\n11 5\n5 1\n2 2\n8 2\n6\n7 12\n12 3\n5 3\n9 12\n9 3\n1000000000 10000",
+      "output": "2\n1\n3\n2\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:01",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

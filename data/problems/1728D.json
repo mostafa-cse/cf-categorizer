@@ -1,0 +1,37 @@
+{
+  "id": "1728D",
+  "source": "problemset",
+  "contest_id": 1728,
+  "problem_index": "D",
+  "name": "Letter Picking",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "games",
+    "two pointers"
+  ],
+  "solved_count": 8473,
+  "problem_url": "https://codeforces.com/problemset/problem/1728/D",
+  "editorial_url": "https://codeforces.com/blog/entry/106805",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Alice and Bob are playing a game. Initially, they are given a non-empty string $$$s$$$, consisting of lowercase Latin letters. The length of the string is even. Each player also has a string of their own, initially empty. Alice starts, then they alternate moves. In one move, a player takes either the first or the last letter of the string $$$s$$$, removes it from $$$s$$$ and prepends (adds to the beginning) it to their own string. The game ends when the string $$$s$$$ becomes empty. The winner is the player with a lexicographically smaller string. If the players' strings are equal, then it's a draw. A string $$$a$$$ is lexicographically smaller than a string $$$b$$$ if there exists such position $$$i$$$ that $$$a_j = b_j$$$ for all $$$j \\lt i$$$ and $$$a_i \\lt b_i$$$. What is the result of the game if both players play optimally (e. g. both players try to win; if they can't, then try to draw)?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of testcases. Each testcase consists of a single line — a non-empty string $$$s$$$, consisting of lowercase Latin letters. The length of the string $$$s$$$ is even. The total length of the strings over all testcases doesn't exceed $$$2000$$$.",
+  "output_specification": "For each testcase, print the result of the game if both players play optimally. If Alice wins, print \"Alice\". If Bob wins, print \"Bob\". If it's a draw, print \"Draw\".",
+  "sample_testcases": [
+    {
+      "input": "2\nforces\nabba",
+      "output": "Alice\nDraw"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

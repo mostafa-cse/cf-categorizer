@@ -1,0 +1,41 @@
+{
+  "id": "1638D",
+  "source": "problemset",
+  "contest_id": 1638,
+  "problem_index": "D",
+  "name": "Big Brush",
+  "rating": 2000,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 4887,
+  "problem_url": "https://codeforces.com/problemset/problem/1638/D",
+  "editorial_url": "https://codeforces.com/blog/entry/99942",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You found a painting on a canvas of size $$$n \\times m$$$. The canvas can be represented as a grid with $$$n$$$ rows and $$$m$$$ columns. Each cell has some color. Cell $$$(i, j)$$$ has color $$$c_{i,j}$$$. Near the painting you also found a brush in the shape of a $$$2 \\times 2$$$ square, so the canvas was surely painted in the following way: initially, no cell was painted. Then, the following painting operation has been performed some number of times: Choose two integers $$$i$$$ and $$$j$$$ ($$$1 \\le i \\lt n$$$, $$$1 \\le j \\lt m$$$) and some color $$$k$$$ ($$$1 \\le k \\le nm$$$). Paint cells $$$(i, j)$$$, $$$(i + 1, j)$$$, $$$(i, j + 1)$$$, $$$(i + 1, j + 1)$$$ in color $$$k$$$. All cells must be painted at least once. A cell can be painted multiple times. In this case, its final color will be the last one. Find any sequence of at most $$$nm$$$ operations that could have led to the painting you found or state that it's impossible.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n, m \\le 1000$$$) — the dimensions of the canvas. On the $$$i$$$-th of the next $$$n$$$ lines of input, there will be $$$m$$$ integers. The $$$j$$$-th of them is $$$a_{i,j}$$$ ($$$1 \\le a_{i,j} \\le nm$$$) — the color of cell $$$(i, j)$$$.",
+  "output_specification": "If there is no solution, print a single integer $$$-1$$$. Otherwise, on the first line, print one integer $$$q$$$ ($$$1 \\le q \\le nm$$$) — the number of operations. Next, print the operations in order. On the $$$k$$$-th of the next $$$q$$$ lines, print three integers $$$i$$$, $$$j$$$, $$$c$$$ ($$$1 \\le i \\lt n$$$, $$$1 \\le j \\lt m$$$, $$$1 \\le c \\le nm$$$) — the description of the $$$k$$$-th operation. If there are multiple solutions, print any.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n5 5 3 3\n1 1 5 3\n2 2 5 4\n2 2 4 4",
+      "output": "6\n1 3 3\n3 3 4\n2 2 5\n1 1 5\n2 1 1\n3 1 2"
+    },
+    {
+      "input": "3 4\n1 1 1 1\n2 2 3 1\n2 2 1 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

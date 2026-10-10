@@ -1,0 +1,47 @@
+{
+  "id": "512D",
+  "source": "problemset",
+  "contest_id": 512,
+  "problem_index": "D",
+  "name": "Fox And Travelling",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 1233,
+  "problem_url": "https://codeforces.com/problemset/problem/512/D",
+  "editorial_url": "https://codeforces.com/blog/entry/16173",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel is going to travel to New Foxland during this summer. New Foxland has n attractions that are linked by m undirected roads. Two attractions are called adjacent if they are linked by a road. Fox Ciel has k days to visit this city and each day she will visit exactly one attraction. There is one important rule in New Foxland: you can't visit an attraction if it has more than one adjacent attraction that you haven't visited yet. At the beginning Fox Ciel haven't visited any attraction. During her travelling she may move aribtrarly between attraction. After visiting attraction a , she may travel to any attraction b satisfying conditions above that hasn't been visited yet, even if it is not reachable from a by using the roads (Ciel uses boat for travelling between attractions, so it is possible). She wants to know how many different travelling plans she can make. Calculate this number modulo 10 9 + 9 for every k from 0 to n since she hasn't decided for how many days she is visiting New Foxland.",
+  "input_specification": "First line contains two integers: n , m ( 1 ≤ n ≤ 100 , ), the number of attractions and number of undirected roads. Then next m lines each contain two integers a i and b i ( 1 ≤ a i , b i ≤ n and a i ≠ b i ), describing a road. There is no more than one road connecting each pair of attractions.",
+  "output_specification": "Output n + 1 integer: the number of possible travelling plans modulo 10 9 + 9 for all k from 0 to n .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2\n2 3",
+      "output": "1\n2\n4\n4"
+    },
+    {
+      "input": "4 4\n1 2\n2 3\n3 4\n4 1",
+      "output": "1\n0\n0\n0\n0"
+    },
+    {
+      "input": "12 11\n2 3\n4 7\n4 5\n5 6\n4 6\n6 12\n5 12\n5 8\n8 9\n10 8\n11 9",
+      "output": "1\n6\n31\n135\n483\n1380\n3060\n5040\n5040\n0\n0\n0\n0"
+    },
+    {
+      "input": "13 0",
+      "output": "1\n13\n156\n1716\n17160\n154440\n1235520\n8648640\n51891840\n259459200\n37836791\n113510373\n227020746\n227020746"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

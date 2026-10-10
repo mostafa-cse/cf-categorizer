@@ -1,0 +1,39 @@
+{
+  "id": "1054D",
+  "source": "problemset",
+  "contest_id": 1054,
+  "problem_index": "D",
+  "name": "Changing Array",
+  "rating": 1900,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 2471,
+  "problem_url": "https://codeforces.com/problemset/problem/1054/D",
+  "editorial_url": "https://codeforces.com/blog/entry/62563",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "At a break Vanya came to the class and saw an array of $$$n$$$ $$$k$$$-bit integers $$$a_1, a_2, \\ldots, a_n$$$ on the board. An integer $$$x$$$ is called a $$$k$$$-bit integer if $$$0 \\leq x \\leq 2^k - 1$$$. Of course, Vanya was not able to resist and started changing the numbers written on the board. To ensure that no one will note anything, Vanya allowed himself to make only one type of changes: choose an index of the array $$$i$$$ ($$$1 \\leq i \\leq n$$$) and replace the number $$$a_i$$$ with the number $$$\\overline{a_i}$$$. We define $$$\\overline{x}$$$ for a $$$k$$$-bit integer $$$x$$$ as the $$$k$$$-bit integer such that all its $$$k$$$ bits differ from the corresponding bits of $$$x$$$. Vanya does not like the number $$$0$$$. Therefore, he likes such segments $$$[l, r]$$$ ($$$1 \\leq l \\leq r \\leq n$$$) such that $$$a_l \\oplus a_{l+1} \\oplus \\ldots \\oplus a_r \\neq 0$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . Determine the maximum number of segments he likes Vanya can get applying zero or more operations described above.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 200\\,000$$$, $$$1 \\leq k \\leq 30$$$). The next line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 2^k - 1$$$), separated by spaces — the array of $$$k$$$-bit integers.",
+  "output_specification": "Print one integer — the maximum possible number of segments with XOR not equal to $$$0$$$ that can be obtained by making several (possibly $$$0$$$) operations described in the statement.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3 0",
+      "output": "5"
+    },
+    {
+      "input": "6 3\n1 4 4 7 3 4",
+      "output": "19"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

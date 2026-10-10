@@ -1,0 +1,43 @@
+{
+  "id": "30D",
+  "source": "problemset",
+  "contest_id": 30,
+  "problem_index": "D",
+  "name": "King's Problem?",
+  "rating": 2600,
+  "tags": [
+    "geometry",
+    "greedy"
+  ],
+  "solved_count": 536,
+  "problem_url": "https://codeforces.com/problemset/problem/30/D",
+  "editorial_url": "https://codeforces.com/blog/entry/696",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Every true king during his life must conquer the world, hold the Codeforces world finals, win pink panda in the shooting gallery and travel all over his kingdom. King Copa has already done the first three things. Now he just needs to travel all over the kingdom. The kingdom is an infinite plane with Cartesian coordinate system on it. Every city is a point on this plane. There are n cities in the kingdom at points with coordinates ( x 1 , 0), ( x 2 , 0), ..., ( x n , 0) , and there is one city at point ( x n + 1 , y n + 1 ) . King starts his journey in the city number k . Your task is to find such route for the king, which visits all cities (in any order) and has minimum possible length. It is allowed to visit a city twice. The king can end his journey in any city. Between any pair of cities there is a direct road with length equal to the distance between the corresponding points. No two cities may be located at the same point.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ n + 1 ) — amount of cities and index of the starting city. The second line contains n + 1 numbers x i . The third line contains y n + 1 . All coordinates are integers and do not exceed 10 6 by absolute value. No two cities coincide.",
+  "output_specification": "Output the minimum possible length of the journey. Your answer must have relative or absolute error less than 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3 1\n0 1 2 1\n1",
+      "output": "3.41421356237309490000"
+    },
+    {
+      "input": "3 1\n1 0 2 1\n1",
+      "output": "3.82842712474619030000"
+    },
+    {
+      "input": "4 5\n0 5 -1 -5 2\n3",
+      "output": "14.24264068711928400000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

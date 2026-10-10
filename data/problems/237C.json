@@ -1,0 +1,44 @@
+{
+  "id": "237C",
+  "source": "problemset",
+  "contest_id": 237,
+  "problem_index": "C",
+  "name": "Primes on Interval",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 6945,
+  "problem_url": "https://codeforces.com/problemset/problem/237/C",
+  "editorial_url": "https://codeforces.com/blog/entry/5648",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You've decided to carry out a survey in the theory of prime numbers. Let us remind you that a prime number is a positive integer that has exactly two distinct positive integer divisors. Consider positive integers a , a + 1 , ... , b ( a ≤ b ) . You want to find the minimum integer l (1 ≤ l ≤ b - a + 1) such that for any integer x ( a ≤ x ≤ b - l + 1) among l integers x , x + 1 , ... , x + l - 1 there are at least k prime numbers. Find and print the required minimum l . If no value l meets the described limitations, print -1.",
+  "input_specification": "A single line contains three space-separated integers a , b , k ( 1 ≤ a , b , k ≤ 10 6 ; a ≤ b ).",
+  "output_specification": "In a single line print a single integer — the required minimum l . If there's no solution, print -1.",
+  "sample_testcases": [
+    {
+      "input": "2 4 2",
+      "output": "3"
+    },
+    {
+      "input": "6 13 1",
+      "output": "4"
+    },
+    {
+      "input": "1 4 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

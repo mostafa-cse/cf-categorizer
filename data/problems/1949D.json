@@ -1,0 +1,38 @@
+{
+  "id": "1949D",
+  "source": "problemset",
+  "contest_id": 1949,
+  "problem_index": "D",
+  "name": "Funny or Scary?",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 624,
+  "problem_url": "https://codeforces.com/problemset/problem/1949/D",
+  "editorial_url": "https://codeforces.com/blog/entry/127514",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are designing a new video game. It has $$$n$$$ scenarios, which the player may play in any order, but each scenario must be played exactly once. When a player switches from a scenario to another scenario, the game shows a specially crafted transition video to make it all feel part of one big story. This video is specific to a pair of scenarios, but not to their order, in other words, the video playing when switching from scenario $$$a$$$ to scenario $$$b$$$ is the same as the video playing when switching from scenario $$$b$$$ to scenario $$$a$$$. Therefore, you need to create $$$\\frac{n(n-1)}{2}$$$ different transition videos, one for each possible pair of different scenarios. Each transition video can be either funny or scary . It is boring to see too many funny videos or too many scary videos in a row. Therefore, your goal is to create the videos in such a way that no matter in which order does the player approach the scenarios, they will never see more than $$$\\lceil \\frac{3n}{4} \\rceil$$$ transition videos of the same type in a row. You have already come up with ideas for at most $$$\\lfloor \\frac{n}{2} \\rfloor$$$ of the transition videos, and therefore already know if those will be funny or scary. Now you need to choose funny or scary for all other transition videos in such a way that the above requirement is satisfied.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 24$$$) — the number of scenarios in the game. The next $$$n$$$ lines describe the partial transition video plan. Each of those lines contains $$$n$$$ characters. The $$$j$$$-th character of the $$$i$$$-th line corresponds to the transition video between the $$$i$$$-th and the $$$j$$$-th scenarios. It will be F if the corresponding transition video will be funny, S if the corresponding transition video will be scary, ? if the corresponding transition video is still undecided, or . if $$$i=j$$$. It is guaranteed that the $$$i$$$-th character of the $$$j$$$-th line and the $$$j$$$-th character of the $$$i$$$-th line will be the same for all $$$i$$$ and $$$j$$$. It is guaranteed that at most $$$\\lfloor \\frac{n}{2} \\rfloor$$$ ($$$n$$$ divided by 2, rounded down) transition videos will already be decided, in other words, that at most $$$2\\lfloor \\frac{n}{2} \\rfloor$$$ characters in the input will be F or S .",
+  "output_specification": "Print $$$n$$$ lines describing the full transition video plan in the same format as the input. Each of those lines must contain $$$n$$$ characters. The $$$j$$$-th character of the $$$i$$$-th line must be F if the corresponding transition video is funny, S if the corresponding transition video is scary, or . if $$$i=j$$$. Each ? character from the input must be replaced with either F or S , and all other characters from the input must remain unchanged. It must still hold that the $$$i$$$-th character of the $$$j$$$-th line and the $$$j$$$-th character of the $$$i$$$-th line are the same for all $$$i$$$ and $$$j$$$. For each permutation of the $$$n$$$ scenarios, it must hold that the transition videos corresponding to playing the scenarios in this order do not have more than $$$\\lceil \\frac{3n}{4} \\rceil$$$ ($$$3n$$$ divided by 4, rounded up) videos of the same type consecutively. If there are multiple solutions, print any of them. It can be proven that for all inputs satisfying the constraints of this problem a solution always exists.",
+  "sample_testcases": [
+    {
+      "input": "5\n.?F??\n?.???\nF?.S?\n??S.?\n????.",
+      "output": ".FFFF\nF.FFF\nFF.SF\nFFS.F\nFFFF."
+    },
+    {
+      "input": "12\n.???????????\n?.??????????\n??.?????????\n???.????????\n????.???????\n?????.??????\n??????.?????\n???????.????\n????????.???\n?????????.??\n??????????.?\n???????????.",
+      "output": ".SSSFFSSSSFS\nS.SFFSFSFFFS\nSS.SFFFSSSFS\nSFS.FFSSSSFS\nFFFF.FFFFFSF\nFSFFF.SFFSFF\nSFFSFS.SSSFS\nSSSSFFS.SSFS\nSFSSFFSS.SFS\nSFSSFSSSS.FS\nFFFFSFFFFF.F\nSSSSFFSSSSF."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

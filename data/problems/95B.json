@@ -1,0 +1,39 @@
+{
+  "id": "95B",
+  "source": "problemset",
+  "contest_id": 95,
+  "problem_index": "B",
+  "name": "Lucky Numbers",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1435,
+  "problem_url": "https://codeforces.com/problemset/problem/95/B",
+  "editorial_url": "https://codeforces.com/blog/entry/2257",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya loves lucky numbers. Everybody knows that positive integers are lucky if their decimal representation doesn't contain digits other than 4 and 7 . For example, numbers 47 , 744 , 4 are lucky and 5 , 17 , 467 are not. Lucky number is super lucky if it's decimal representation contains equal amount of digits 4 and 7 . For example, numbers 47 , 7744 , 474477 are super lucky and 4 , 744 , 467 are not. One day Petya came across a positive integer n . Help him to find the least super lucky number which is not less than n .",
+  "input_specification": "The only line contains a positive integer n ( 1 ≤ n ≤ 10 100000 ). This number doesn't have leading zeroes.",
+  "output_specification": "Output the least super lucky number that is more than or equal to n .",
+  "sample_testcases": [
+    {
+      "input": "4500",
+      "output": "4747"
+    },
+    {
+      "input": "47",
+      "output": "47"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:06",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

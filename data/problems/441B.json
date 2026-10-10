@@ -1,0 +1,39 @@
+{
+  "id": "441B",
+  "source": "problemset",
+  "contest_id": 441,
+  "problem_index": "B",
+  "name": "Valera and Fruits",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 7597,
+  "problem_url": "https://codeforces.com/problemset/problem/441/B",
+  "editorial_url": "https://codeforces.com/blog/entry/12615",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Valera loves his garden, where n fruit trees grow. This year he will enjoy a great harvest! On the i -th tree b i fruit grow, they will ripen on a day number a i . Unfortunately, the fruit on the tree get withered, so they can only be collected on day a i and day a i + 1 (all fruits that are not collected in these two days, become unfit to eat). Valera is not very fast, but there are some positive points. Valera is ready to work every day. In one day, Valera can collect no more than v fruits. The fruits may be either from the same tree, or from different ones. What is the maximum amount of fruit Valera can collect for all time, if he operates optimally well?",
+  "input_specification": "The first line contains two space-separated integers n and v (1 ≤ n , v ≤ 3000) — the number of fruit trees in the garden and the number of fruits that Valera can collect in a day. Next n lines contain the description of trees in the garden. The i -th line contains two space-separated integers a i and b i (1 ≤ a i , b i ≤ 3000) — the day the fruits ripen on the i -th tree and the number of fruits on the i -th tree.",
+  "output_specification": "Print a single integer — the maximum number of fruit that Valera can collect.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 5\n2 3",
+      "output": "8"
+    },
+    {
+      "input": "5 10\n3 20\n2 20\n1 20\n4 20\n5 20",
+      "output": "60"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

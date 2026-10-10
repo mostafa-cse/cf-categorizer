@@ -1,0 +1,39 @@
+{
+  "id": "125D",
+  "source": "problemset",
+  "contest_id": 125,
+  "problem_index": "D",
+  "name": "Two progressions",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 465,
+  "problem_url": "https://codeforces.com/problemset/problem/125/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2968",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "An arithmetic progression is such a non-empty sequence of numbers where the difference between any two successive numbers is constant. This constant number is called common difference. For example, the sequence 3, 7, 11, 15 is an arithmetic progression. The definition implies that any sequences whose length equals 1 or 2 are arithmetic and all sequences whose length equals 0 are non-arithmetic. You are given a sequence of different integers a 1 , a 2 , ..., a n . You should either split it into two arithmetic progressions or find out that the operation is impossible to perform. Splitting assigns each member of the given sequence to one of two progressions, but the relative order of numbers does not change. Splitting is an inverse operation to merging .",
+  "input_specification": "The first line contains a positive integer n ( 2 ≤ n ≤ 30000 ), n is the length of the given sequence. The second line contains elements of the given sequence a 1 , a 2 , ..., a n ( - 10 8 ≤ a i ≤ 10 8 ). The elements of the progression are different integers.",
+  "output_specification": "Print the required arithmetic progressions, one per line. The progressions can be positioned in any order. Each progression should contain at least one number. If there's no solution, then print \"No solution\" (without the quotes)in the only line of the input file. If there are several solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 1 2 7 3 10",
+      "output": "1 2 3\n4 7 10"
+    },
+    {
+      "input": "5\n1 2 3 -2 -7",
+      "output": "1 2 3\n-2 -7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

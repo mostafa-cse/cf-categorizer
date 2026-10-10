@@ -1,0 +1,37 @@
+{
+  "id": "2187B",
+  "source": "problemset",
+  "contest_id": 2187,
+  "problem_index": "B",
+  "name": "Shortest Statement Ever",
+  "rating": 1800,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 5825,
+  "problem_url": "https://codeforces.com/problemset/problem/2187/B",
+  "editorial_url": "https://codeforces.com/blog/entry/150649",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two non-negative integers $$$x$$$, $$$y$$$. Find two non-negative integers $$$p$$$ and $$$q$$$ such that $$$p\\;\\&\\;q=0$$$, and $$$|x-p|+|y-q|$$$ is minimized. Here, $$$\\&$$$ denotes the bitwise AND operation .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains two non-negative integers $$$x$$$ and $$$y$$$ ($$$0 \\le x,y \\lt 2^{30}$$$).",
+  "output_specification": "For each test case, output two non-negative integers $$$p$$$ and $$$q$$$ you found. If there are multiple pairs of $$$p$$$ and $$$q$$$ satisfying the conditions, you may output any of them. It can be proven that under the constraints of the problem, any valid solution satisfies $$$\\max(p,q) \\lt 2^{31}$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n0 0\n1 1\n3 6\n7 11\n4 4\n123 321\n1073741823 1073741822",
+      "output": "0 0\n2 1\n3 8\n6 9\n4 3\n128 321\n1073741824 1073741822"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

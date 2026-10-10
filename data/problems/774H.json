@@ -1,0 +1,39 @@
+{
+  "id": "774H",
+  "source": "problemset",
+  "contest_id": 774,
+  "problem_index": "H",
+  "name": "Repairing Of String",
+  "rating": 2200,
+  "tags": [
+    "*special",
+    "constructive algorithms"
+  ],
+  "solved_count": 292,
+  "problem_url": "https://codeforces.com/problemset/problem/774/H",
+  "editorial_url": "https://codeforces.com/blog/entry/51441",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Stepan had a favorite string s which consisted of the lowercase letters of the Latin alphabet. After graduation, he decided to remember it, but it was a long time ago, so he can't now remember it. But Stepan remembers some information about the string, namely the sequence of integers c 1 , c 2 , ..., c n , where n equals the length of the string s , and c i equals the number of substrings in the string s with the length i , consisting of the same letters. The substring is a sequence of consecutive characters in the string s . For example, if the Stepan's favorite string is equal to \" tttesst \", the sequence c looks like: c = [7, 3, 1, 0, 0, 0, 0] . Stepan asks you to help to repair his favorite string s according to the given sequence c 1 , c 2 , ..., c n .",
+  "input_specification": "The first line contains the integer n ( 1 ≤ n ≤ 2000 ) — the length of the Stepan's favorite string. The second line contains the sequence of integers c 1 , c 2 , ..., c n ( 0 ≤ c i ≤ 2000 ), where c i equals the number of substrings of the string s with the length i , consisting of the same letters. It is guaranteed that the input data is such that the answer always exists.",
+  "output_specification": "Print the repaired Stepan's favorite string. If there are several answers, it is allowed to print any of them. The string should contain only lowercase letters of the English alphabet.",
+  "sample_testcases": [
+    {
+      "input": "6\n6 3 1 0 0 0",
+      "output": "kkrrrq"
+    },
+    {
+      "input": "4\n4 0 0 0",
+      "output": "abcd"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

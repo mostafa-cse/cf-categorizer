@@ -1,0 +1,45 @@
+{
+  "id": "1488G",
+  "source": "problemset",
+  "contest_id": 1488,
+  "problem_index": "G",
+  "name": "Painting Numbers",
+  "rating": 2500,
+  "tags": [
+    "*special",
+    "data structures",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 137,
+  "problem_url": "https://codeforces.com/problemset/problem/1488/G",
+  "editorial_url": "https://codeforces.com/blog/entry/88522",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ integers, each integer is from $$$1$$$ to $$$n$$$, all of them are pairwise distinct. You have to paint them red and blue (each integer should have exactly one color). The cost of painting is the number of pairs $$$(x, y)$$$ such that $$$y \\bmod x = 0$$$, $$$y$$$ is red and $$$x$$$ is blue. For each $$$k \\in [1, n]$$$, calculate the maximum cost of painting if exactly $$$k$$$ integers should have a red color.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$).",
+  "output_specification": "For each $$$k \\in [1,n]$$$ print one integer — the maximum cost of painting, if exactly $$$k$$$ integers should be red.",
+  "sample_testcases": [
+    {
+      "input": "6",
+      "output": "3 5 6 6 5 0"
+    },
+    {
+      "input": "2",
+      "output": "1 0"
+    },
+    {
+      "input": "11",
+      "output": "3 6 9 11 12 13 14 14 13 10 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:17",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

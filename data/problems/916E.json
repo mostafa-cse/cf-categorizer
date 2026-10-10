@@ -1,0 +1,39 @@
+{
+  "id": "916E",
+  "source": "problemset",
+  "contest_id": 916,
+  "problem_index": "E",
+  "name": "Jamie and Tree",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 2289,
+  "problem_url": "https://codeforces.com/problemset/problem/916/E",
+  "editorial_url": "https://codeforces.com/blog/entry/57223",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "To your surprise, Jamie is the final boss! Ehehehe. Jamie has given you a tree with n vertices, numbered from 1 to n . Initially, the root of the tree is the vertex with number 1 . Also, each vertex has a value on it. Jamie also gives you three types of queries on the tree: 1 v — Change the tree's root to vertex with number v . 2 u v x — For each vertex in the subtree of smallest size that contains u and v , add x to its value. 3 v — Find sum of values of vertices in the subtree of vertex with number v . A subtree of vertex v is a set of vertices such that v lies on shortest path from this vertex to root of the tree. Pay attention that subtree of a vertex can change after changing the tree's root. Show your strength in programming to Jamie by performing the queries accurately!",
+  "input_specification": "The first line of input contains two space-separated integers n and q ( 1 ≤ n ≤ 10 5 , 1 ≤ q ≤ 10 5 ) — the number of vertices in the tree and the number of queries to process respectively. The second line contains n space-separated integers a 1 , a 2 , ..., a n ( - 10 8 ≤ a i ≤ 10 8 ) — initial values of the vertices. Next n - 1 lines contains two space-separated integers u i , v i ( 1 ≤ u i , v i ≤ n ) describing edge between vertices u i and v i in the tree. The following q lines describe the queries. Each query has one of following formats depending on its type: 1 v ( 1 ≤ v ≤ n ) for queries of the first type. 2 u v x ( 1 ≤ u , v ≤ n ,  - 10 8 ≤ x ≤ 10 8 ) for queries of the second type. 3 v ( 1 ≤ v ≤ n ) for queries of the third type. All numbers in queries' descriptions are integers. The queries must be carried out in the given order. It is guaranteed that the tree is valid.",
+  "output_specification": "For each query of the third type, output the required answer. It is guaranteed that at least one query of the third type is given by Jamie.",
+  "sample_testcases": [
+    {
+      "input": "6 7\n1 4 2 8 5 7\n1 2\n3 1\n4 3\n4 5\n3 6\n3 1\n2 4 6 3\n3 4\n1 6\n2 2 4 -5\n1 4\n3 3",
+      "output": "27\n19\n5"
+    },
+    {
+      "input": "4 6\n4 3 5 6\n1 2\n2 3\n3 4\n3 1\n1 3\n2 2 4 3\n1 1\n2 2 4 -3\n3 1",
+      "output": "18\n21"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

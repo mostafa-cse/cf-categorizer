@@ -1,0 +1,35 @@
+{
+  "id": "1205C",
+  "source": "problemset",
+  "contest_id": 1205,
+  "problem_index": "C",
+  "name": "Palindromic Paths",
+  "rating": 2400,
+  "tags": [
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 1304,
+  "problem_url": "https://codeforces.com/problemset/problem/1205/C",
+  "editorial_url": "https://codeforces.com/blog/entry/69158",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem You are given a grid $$$n\\times n$$$, where $$$n$$$ is odd . Rows are enumerated from $$$1$$$ to $$$n$$$ from up to down, columns are enumerated from $$$1$$$ to $$$n$$$ from left to right. Cell, standing on the intersection of row $$$x$$$ and column $$$y$$$, is denoted by $$$(x, y)$$$. Every cell contains $$$0$$$ or $$$1$$$. It is known that the top-left cell contains $$$1$$$, and the bottom-right cell contains $$$0$$$. We want to know numbers in all cells of the grid. To do so we can ask the following questions: \" $$$?$$$ $$$x_1$$$ $$$y_1$$$ $$$x_2$$$ $$$y_2$$$ \", where $$$1 \\le x_1 \\le x_2 \\le n$$$, $$$1 \\le y_1 \\le y_2 \\le n$$$, and $$$x_1 + y_1 + 2 \\le x_2 + y_2$$$. In other words, we output two different cells $$$(x_1, y_1)$$$, $$$(x_2, y_2)$$$ of the grid such that we can get from the first to the second by moving only to the right and down, and they aren't adjacent. As a response to such question you will be told if there exists a path between $$$(x_1, y_1)$$$ and $$$(x_2, y_2)$$$, going only to the right or down, numbers in cells of which form a palindrome. For example, paths, shown in green, are palindromic, so answer for \" $$$?$$$ $$$1$$$ $$$1$$$ $$$2$$$ $$$3$$$ \" and \" $$$?$$$ $$$1$$$ $$$2$$$ $$$3$$$ $$$3$$$ \" would be that there exists such path. However, there is no palindromic path between $$$(1, 1)$$$ and $$$(3, 1)$$$. Determine all cells of the grid by asking not more than $$$n^2$$$ questions. It can be shown that the answer always exists.",
+  "input_specification": "The first line contains odd integer ($$$3 \\le n \\lt 50$$$) — the side of the grid.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n0\n1\n0\n1\n1\n1\n1",
+      "output": "? 1 1 1 3\n? 1 1 2 3\n? 2 1 2 3\n? 3 1 3 3\n? 2 2 3 3\n? 1 2 3 2\n? 1 2 3 3\n!\n100\n001\n000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

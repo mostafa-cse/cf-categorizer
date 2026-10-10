@@ -1,0 +1,43 @@
+{
+  "id": "87A",
+  "source": "problemset",
+  "contest_id": 87,
+  "problem_index": "A",
+  "name": "Trains",
+  "rating": 1500,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 5924,
+  "problem_url": "https://codeforces.com/problemset/problem/87/A",
+  "editorial_url": "https://codeforces.com/blog/entry/2121",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya the programmer lives in the middle of the Programming subway branch. He has two girlfriends: Dasha and Masha, who live at the different ends of the branch, each one is unaware of the other one's existence. When Vasya has some free time, he goes to one of his girlfriends. He descends into the subway at some time, waits the first train to come and rides on it to the end of the branch to the corresponding girl. However, the trains run with different frequencies: a train goes to Dasha's direction every a minutes, but a train goes to Masha's direction every b minutes. If two trains approach at the same time, Vasya goes toward the direction with the lower frequency of going trains, that is, to the girl, to whose directions the trains go less frequently (see the note to the third sample). We know that the trains begin to go simultaneously before Vasya appears. That is the train schedule is such that there exists a moment of time when the two trains arrive simultaneously. Help Vasya count to which girlfriend he will go more often.",
+  "input_specification": "The first line contains two integers a and b ( a ≠ b , 1 ≤ a , b ≤ 10 6 ).",
+  "output_specification": "Print \" Dasha \" if Vasya will go to Dasha more frequently, \" Masha \" if he will go to Masha more frequently, or \" Equal \" if he will go to both girlfriends with the same frequency.",
+  "sample_testcases": [
+    {
+      "input": "3 7",
+      "output": "Dasha"
+    },
+    {
+      "input": "5 3",
+      "output": "Masha"
+    },
+    {
+      "input": "2 3",
+      "output": "Equal"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

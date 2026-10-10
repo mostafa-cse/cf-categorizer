@@ -1,0 +1,38 @@
+{
+  "id": "513F1",
+  "source": "problemset",
+  "contest_id": 513,
+  "problem_index": "F1",
+  "name": "Scaygerboss",
+  "rating": 2700,
+  "tags": [
+    "flows"
+  ],
+  "solved_count": 399,
+  "problem_url": "https://codeforces.com/problemset/problem/513/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/16260",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Cthulhu decided to catch Scaygerboss. Scaygerboss found it out and is trying to hide in a pack of his scaygers. Each scayger except Scaygerboss is either a male or a female. Scaygerboss's gender is \"other\". Scaygers are scattered on a two-dimensional map divided into cells. A scayger looks nerdy and loveable if it is staying in the same cell with exactly one scayger of a gender that is different from its own gender. Cthulhu will not be able to catch Scaygerboss if all the scaygers on the map look nerdy and loveable. The scaygers can move around at different speeds. For each scayger, we are given the time it takes this scayger to move from a cell to an adjacent cell. Cells are adjacent if they share a common side. At any point of time, each cell that does not contain an obstacle can be occupied by an arbitrary number of scaygers. Scaygers cannot move to cells with obstacles. Calculate minimal time in order to make all scaygers look nerdy and loveable if they move optimally toward this goal.",
+  "input_specification": "The first line contains 4 integers: n , m , males , females ( 0 ≤ males , females ≤ n · m ). n and m are dimensions of the map; males and females are numbers of male scaygers and female scaygers. Next n lines describe the map. Each of these lines contains m characters. Character '.' stands for a free cell; character '#' stands for a cell with an obstacle. The next line contains 3 integers r , c , and t ( 1 ≤ r ≤ n , 1 ≤ c ≤ m , 1 ≤ t ≤ 10 9 ): the current coordinates of Scaygerboss and the time it takes Scaygerboss to move to an adjacent cell. The next males lines contain coordinates and times of male scaygers in the same format as for Scaygerboss. The next females lines contain coordinates and times of female scaygers in the same format as for Scaygerboss. (The coordinates and times adhere to the same limits as for Scaygerboss.) All scaygers reside in cells without obstacles. The problem consists of two subproblems. The subproblems have different constraints on the input. You will get some score for the correct submission of the subproblem. The description of the subproblems follows. In subproblem F1 ( 14 points), the constraints 1 ≤ n , m ≤ 11 will hold. In subproblem F2 ( 6 points), the constraints 1 ≤ n , m ≤ 22 will hold.",
+  "output_specification": "Output the minimum possible time it takes to make all scaygers look nerdy and loveable or -1 if it is impossible.",
+  "sample_testcases": [
+    {
+      "input": "4 4 2 3\n....\n.###\n####\n####\n2 1 1\n2 1 2\n2 1 2\n2 1 2\n2 1 2\n1 1 2",
+      "output": "2"
+    },
+    {
+      "input": "2 4 2 2\n....\n.###\n2 1 1\n2 1 2\n2 1 2\n2 1 2\n2 1 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

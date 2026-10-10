@@ -1,0 +1,36 @@
+{
+  "id": "1406E",
+  "source": "problemset",
+  "contest_id": 1406,
+  "problem_index": "E",
+  "name": "Deleting Numbers",
+  "rating": 2600,
+  "tags": [
+    "interactive",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2018,
+  "problem_url": "https://codeforces.com/problemset/problem/1406/E",
+  "editorial_url": "https://codeforces.com/blog/entry/82560",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "This is an interactive problem. There is an unknown integer $$$x$$$ ($$$1\\le x\\le n$$$). You want to find $$$x$$$. At first, you have a set of integers $$$\\{1, 2, \\ldots, n\\}$$$. You can perform the following operations no more than $$$10000$$$ times: A $$$a$$$: find how many numbers are multiples of $$$a$$$ in the current set. B $$$a$$$: find how many numbers are multiples of $$$a$$$ in this set, and then delete all multiples of $$$a$$$, but $$$x$$$ will never be deleted (even if it is a multiple of $$$a$$$). In this operation, $$$a$$$ must be greater than $$$1$$$. C $$$a$$$: it means that you know that $$$x=a$$$. This operation can be only performed once. Remember that in the operation of type B $$$a \\gt 1$$$ must hold. Write a program, that will find the value of $$$x$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1\\le n\\le 10^5$$$). The remaining parts of the input will be given throughout the interaction process.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "10\n\n2\n\n4\n\n0",
+      "output": "B 4\n\nA 2\n\nA 8\n\nC 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

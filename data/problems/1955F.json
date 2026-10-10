@@ -1,0 +1,38 @@
+{
+  "id": "1955F",
+  "source": "problemset",
+  "contest_id": 1955,
+  "problem_index": "F",
+  "name": "Unfair Game",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "games",
+    "greedy",
+    "math",
+    "schedules"
+  ],
+  "solved_count": 8951,
+  "problem_url": "https://codeforces.com/problemset/problem/1955/F",
+  "editorial_url": "https://codeforces.com/blog/entry/128243",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob gathered in the evening to play an exciting game on a sequence of $$$n$$$ integers, each integer of the sequence doesn't exceed $$$4$$$ . The rules of the game are too complex to describe, so let's just describe the winning condition — Alice wins if the bitwise XOR of all the numbers in the sequence is non-zero; otherwise, Bob wins. The guys invited Eve to act as a judge. Initially, Alice and Bob play with $$$n$$$ numbers. After one game, Eve removes one of the numbers from the sequence, then Alice and Bob play with $$$n-1$$$ numbers. Eve removes one number again, after which Alice and Bob play with $$$n - 2$$$ numbers. This continues until the sequence of numbers is empty. Eve seems to think that in such a game, Alice almost always wins, so she wants Bob to win as many times as possible. Determine the maximum number of times Bob can win against Alice if Eve removes the numbers optimally.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first and only line of each test case contains four integers $$$p_i$$$ ($$$0 \\le p_i \\le 200$$$) — the number of ones, twos, threes, and fours in the sequence at the beginning of the game.",
+  "output_specification": "For each test case, print the maximum number of times Bob will win in a separate line, if Eve removes the numbers optimally.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 1 1 0\n1 0 1 2\n2 2 2 0\n3 3 2 0\n0 9 9 9",
+      "output": "1\n1\n3\n3\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

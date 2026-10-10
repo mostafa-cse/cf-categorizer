@@ -1,0 +1,39 @@
+{
+  "id": "549H",
+  "source": "problemset",
+  "contest_id": 549,
+  "problem_index": "H",
+  "name": "Degenerate Matrix",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "math"
+  ],
+  "solved_count": 2138,
+  "problem_url": "https://codeforces.com/problemset/problem/549/H",
+  "editorial_url": "https://codeforces.com/blog/entry/18363",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The determinant of a matrix 2 × 2 is defined as follows: A matrix is called degenerate if its determinant is equal to zero. The norm || A || of a matrix A is defined as a maximum of absolute values of its elements. You are given a matrix . Consider any degenerate matrix B such that norm || A - B || is minimum possible. Determine || A - B || .",
+  "input_specification": "The first line contains two integers a and b ( | a |, | b | ≤ 10 9 ), the elements of the first row of matrix A . The second line contains two integers c and d ( | c |, | d | ≤ 10 9 ) the elements of the second row of matrix A .",
+  "output_specification": "Output a single real number, the minimum possible value of || A - B || . Your answer is considered to be correct if its absolute or relative error does not exceed 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "1 2\n3 4",
+      "output": "0.2000000000"
+    },
+    {
+      "input": "1 0\n0 1",
+      "output": "0.5000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

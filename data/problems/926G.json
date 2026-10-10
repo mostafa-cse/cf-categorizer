@@ -1,0 +1,40 @@
+{
+  "id": "926G",
+  "source": "problemset",
+  "contest_id": 926,
+  "problem_index": "G",
+  "name": "Large Bouquets",
+  "rating": 1500,
+  "tags": [],
+  "solved_count": 1763,
+  "problem_url": "https://codeforces.com/problemset/problem/926/G",
+  "editorial_url": "https://codeforces.com/blog/entry/58424",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A flower shop has got n bouquets, and the i -th bouquet consists of a i flowers. Vasya, the manager of the shop, decided to make large bouquets from these bouquets. Vasya thinks that a bouquet is large if it is made of two or more initial bouquets, and there is a constraint: the total number of flowers in a large bouquet should be odd . Each of the initial bouquets can be a part of at most one large bouquet. If an initial bouquet becomes a part of a large bouquet, all its flowers are included in the large bouquet. Determine the maximum possible number of large bouquets Vasya can make.",
+  "input_specification": "The first line contains a single positive integer n ( 1 ≤ n ≤ 10 5 ) — the number of initial bouquets. The second line contains a sequence of integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 6 ) — the number of flowers in each of the initial bouquets.",
+  "output_specification": "Print the maximum number of large bouquets Vasya can make.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 3 4 2 7",
+      "output": "2"
+    },
+    {
+      "input": "6\n2 2 6 8 6 12",
+      "output": "0"
+    },
+    {
+      "input": "3\n11 4 10",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "771B",
+  "source": "problemset",
+  "contest_id": 771,
+  "problem_index": "B",
+  "name": "Bear and Different Names",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 7274,
+  "problem_url": "https://codeforces.com/problemset/problem/771/B",
+  "editorial_url": "https://codeforces.com/blog/entry/51068",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "In the army, it isn't easy to form a group of soldiers that will be effective on the battlefield. The communication is crucial and thus no two soldiers should share a name (what would happen if they got an order that Bob is a scouter, if there are two Bobs?). A group of soldiers is effective if and only if their names are different. For example, a group (John, Bob, Limak) would be effective, while groups (Gary, Bob, Gary) and (Alice, Alice) wouldn't. You are a spy in the enemy's camp. You noticed n soldiers standing in a row, numbered 1 through n . The general wants to choose a group of k consecutive soldiers. For every k consecutive soldiers, the general wrote down whether they would be an effective group or not. You managed to steal the general's notes, with n - k + 1 strings s 1 , s 2 , ..., s n - k + 1 , each either \" YES \" or \" NO \". The string s 1 describes a group of soldiers 1 through k (\" YES \" if the group is effective, and \" NO \" otherwise). The string s 2 describes a group of soldiers 2 through k + 1 . And so on, till the string s n - k + 1 that describes a group of soldiers n - k + 1 through n . Your task is to find possible names of n soldiers. Names should match the stolen notes. Each name should be a string that consists of between 1 and 10 English letters, inclusive. The first letter should be uppercase, and all other letters should be lowercase. Names don't have to be existing names — it's allowed to print \" Xyzzzdj \" or \" T \" for example. Find and print any solution. It can be proved that there always exists at least one solution.",
+  "input_specification": "The first line of the input contains two integers n and k ( 2 ≤ k ≤ n ≤ 50 ) — the number of soldiers and the size of a group respectively. The second line contains n - k + 1 strings s 1 , s 2 , ..., s n - k + 1 . The string s i is \" YES \" if the group of soldiers i through i + k - 1 is effective, and \" NO \" otherwise.",
+  "output_specification": "Find any solution satisfying all given conditions. In one line print n space-separated strings, denoting possible names of soldiers in the order. The first letter of each name should be uppercase, while the other letters should be lowercase. Each name should contain English letters only and has length from 1 to 10 . If there are multiple valid solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "8 3\nNO NO YES YES YES NO",
+      "output": "Adam Bob Bob Cpqepqwer Limak Adam Bob Adam"
+    },
+    {
+      "input": "9 8\nYES NO",
+      "output": "R Q Ccccccccc Ccocc Ccc So Strong Samples Ccc"
+    },
+    {
+      "input": "3 2\nNO NO",
+      "output": "Na Na Na"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "617E",
+  "source": "problemset",
+  "contest_id": 617,
+  "problem_index": "E",
+  "name": "XOR and Favorite Number",
+  "rating": 2200,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 11342,
+  "problem_url": "https://codeforces.com/problemset/problem/617/E",
+  "editorial_url": "https://codeforces.com/blog/entry/22971",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bob has a favorite number k and a i of length n . Now he asks you to answer m queries. Each query is given by a pair l i and r i and asks you to count the number of pairs of integers i and j , such that l ≤ i ≤ j ≤ r and the xor of the numbers a i , a i + 1 , ..., a j is equal to k .",
+  "input_specification": "The first line of the input contains integers n , m and k ( 1 ≤ n , m ≤ 100 000 , 0 ≤ k ≤ 1 000 000 ) — the length of the array, the number of queries and Bob's favorite number respectively. The second line contains n integers a i ( 0 ≤ a i ≤ 1 000 000 ) — Bob's array. Then m lines follow. The i -th line contains integers l i and r i ( 1 ≤ l i ≤ r i ≤ n ) — the parameters of the i -th query.",
+  "output_specification": "Print m lines, answer the queries in the order they appear in the input.",
+  "sample_testcases": [
+    {
+      "input": "6 2 3\n1 2 1 1 0 3\n1 6\n3 5",
+      "output": "7\n0"
+    },
+    {
+      "input": "5 3 1\n1 1 1 1 1\n1 5\n2 4\n1 3",
+      "output": "9\n4\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

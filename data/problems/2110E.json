@@ -1,0 +1,36 @@
+{
+  "id": "2110E",
+  "source": "problemset",
+  "contest_id": 2110,
+  "problem_index": "E",
+  "name": "Melody",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 2883,
+  "problem_url": "https://codeforces.com/problemset/problem/2110/E",
+  "editorial_url": "https://codeforces.com/blog/entry/143186",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In 2077, the robots that took over the world realized that human music wasn't that great, so they started composing their own. To write music, the robots have a special musical instrument capable of producing $$$n$$$ different sounds. Each sound is characterized by its volume and pitch. A sequence of sounds is called music. Music is considered beautiful if any two consecutive sounds differ either only in volume or only in pitch. Music is considered boring if the volume or pitch of any three consecutive sounds is the same. You want to compose beautiful , non - boring music that contains each sound produced by your musical instrument exactly once.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. In the first line of each test case, there is a number $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of sounds that the musical instrument can produce. Next, there are $$$n$$$ lines, where the $$$i$$$-th line contains a pair of numbers $$$v_i, p_i$$$ ($$$1 \\le v_i,\\space p_i \\le 10^9$$$) — the volume and pitch of the $$$i$$$-th sound, respectively. It is guaranteed that among all $$$n$$$ sounds, there are no duplicates, meaning for any $$$i \\neq j$$$, at least one of the conditions $$$v_i \\neq v_j$$$ or $$$p_i \\neq p_j$$$ holds. The sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if it is possible to compose such music, output \" YES \", and on the next line, output $$$n$$$ numbers — the indices of the sounds in the order that forms beautiful non-boring music. Otherwise, output \" NO \". You may output each letter in any case (lowercase or uppercase). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be accepted as a positive answer.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n179 239\n179 179\n239 179\n239 239\n3\n1 1\n2 1\n3 1\n1\n5 7\n5\n1 1\n1 2\n2 1\n2 2\n99 99\n7\n1 1\n1 3\n2 1\n2 2\n3 1\n3 2\n3 3",
+      "output": "YES\n4 3 2 1 \nNO\nYES\n1 \nNO\nYES\n3 4 6 7 2 1 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:23",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

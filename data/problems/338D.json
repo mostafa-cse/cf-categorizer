@@ -1,0 +1,44 @@
+{
+  "id": "338D",
+  "source": "problemset",
+  "contest_id": 338,
+  "problem_index": "D",
+  "name": "GCD Table",
+  "rating": 2900,
+  "tags": [
+    "chinese remainder theorem",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1532,
+  "problem_url": "https://codeforces.com/problemset/problem/338/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8629",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a table G of size n × m such that G ( i , j ) = GCD ( i , j ) for all 1 ≤ i ≤ n , 1 ≤ j ≤ m . GCD ( a , b ) is the greatest common divisor of numbers a and b . You have a sequence of positive integer numbers a 1 , a 2 , ..., a k . We say that this sequence occurs in table G if it coincides with consecutive elements in some row, starting from some position. More formally, such numbers 1 ≤ i ≤ n and 1 ≤ j ≤ m - k + 1 should exist that G ( i , j + l - 1) = a l for all 1 ≤ l ≤ k . Determine if the sequence a occurs in table G .",
+  "input_specification": "The first line contains three space-separated integers n , m and k ( 1 ≤ n , m ≤ 10 12 ; 1 ≤ k ≤ 10000 ). The second line contains k space-separated integers a 1 , a 2 , ..., a k ( 1 ≤ a i ≤ 10 12 ).",
+  "output_specification": "Print a single word \" YES \", if the given sequence occurs in table G , otherwise print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "100 100 5\n5 2 1 2 1",
+      "output": "YES"
+    },
+    {
+      "input": "100 8 5\n5 2 1 2 1",
+      "output": "NO"
+    },
+    {
+      "input": "100 100 7\n1 2 3 4 5 6 7",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "267. Chinese Remainder Theorem (CRT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Chinese Remainder Theorem (CRT) paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

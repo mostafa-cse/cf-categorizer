@@ -1,0 +1,39 @@
+{
+  "id": "776E",
+  "source": "problemset",
+  "contest_id": 776,
+  "problem_index": "E",
+  "name": "The Holmes Children",
+  "rating": 2100,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2563,
+  "problem_url": "https://codeforces.com/problemset/problem/776/E",
+  "editorial_url": "https://codeforces.com/blog/entry/50622",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Holmes children are fighting over who amongst them is the cleverest. Mycroft asked Sherlock and Eurus to find value of f ( n ) , where f (1) = 1 and for n ≥ 2 , f ( n ) is the number of distinct ordered positive integer pairs ( x , y ) that satisfy x + y = n and gcd ( x , y ) = 1 . The integer gcd ( a , b ) is the greatest common divisor of a and b . Sherlock said that solving this was child's play and asked Mycroft to instead get the value of . Summation is done over all positive integers d that divide n . Eurus was quietly observing all this and finally came up with her problem to astonish both Sherlock and Mycroft. She defined a k -composite function F k ( n ) recursively as follows: She wants them to tell the value of F k ( n ) modulo 1000000007 .",
+  "input_specification": "A single line of input contains two space separated integers n ( 1 ≤ n ≤ 10 12 ) and k ( 1 ≤ k ≤ 10 12 ) indicating that Eurus asks Sherlock and Mycroft to find the value of F k ( n ) modulo 1000000007 .",
+  "output_specification": "Output a single integer — the value of F k ( n ) modulo 1000000007 .",
+  "sample_testcases": [
+    {
+      "input": "7 1",
+      "output": "6"
+    },
+    {
+      "input": "10 2",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

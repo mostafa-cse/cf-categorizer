@@ -1,0 +1,42 @@
+{
+  "id": "765E",
+  "source": "problemset",
+  "contest_id": 765,
+  "problem_index": "E",
+  "name": "Tree Folding",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 1369,
+  "problem_url": "https://codeforces.com/problemset/problem/765/E",
+  "editorial_url": "https://codeforces.com/blog/entry/50456",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Vanya wants to minimize a tree. He can perform the following operation multiple times: choose a vertex v , and two disjoint (except for v ) paths of equal length a 0 = v , a 1 , ..., a k , and b 0 = v , b 1 , ..., b k . Additionally, vertices a 1 , ..., a k , b 1 , ..., b k must not have any neighbours in the tree other than adjacent vertices of corresponding paths. After that, one of the paths may be merged into the other, that is, the vertices b 1 , ..., b k can be effectively erased: Help Vanya determine if it possible to make the tree into a path via a sequence of described operations, and if the answer is positive, also determine the shortest length of such path.",
+  "input_specification": "The first line of input contains the number of vertices n ( 2 ≤ n ≤ 2·10 5 ). Next n - 1 lines describe edges of the tree. Each of these lines contains two space-separated integers u and v ( 1 ≤ u , v ≤ n , u ≠ v ) — indices of endpoints of the corresponding edge. It is guaranteed that the given graph is a tree.",
+  "output_specification": "If it is impossible to obtain a path, print -1 . Otherwise, print the minimum number of edges in a possible path.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 2\n2 3\n2 4\n4 5\n1 6",
+      "output": "3"
+    },
+    {
+      "input": "7\n1 2\n1 3\n3 4\n1 5\n5 6\n6 7",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

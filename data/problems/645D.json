@@ -1,0 +1,40 @@
+{
+  "id": "645D",
+  "source": "problemset",
+  "contest_id": 645,
+  "problem_index": "D",
+  "name": "Robot Rapping Results Report",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 3514,
+  "problem_url": "https://codeforces.com/problemset/problem/645/D",
+  "editorial_url": "https://codeforces.com/blog/entry/43868",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While Farmer John rebuilds his farm in an unfamiliar portion of Bovinia, Bessie is out trying some alternative jobs. In her new gig as a reporter, Bessie needs to know about programming competition results as quickly as possible. When she covers the 2016 Robot Rap Battle Tournament, she notices that all of the robots operate under deterministic algorithms. In particular, robot i will beat robot j if and only if robot i has a higher skill level than robot j . And if robot i beats robot j and robot j beats robot k , then robot i will beat robot k . Since rapping is such a subtle art, two robots can never have the same skill level. Given the results of the rap battles in the order in which they were played, determine the minimum number of first rap battles that needed to take place before Bessie could order all of the robots by skill level.",
+  "input_specification": "The first line of the input consists of two integers, the number of robots n ( 2 ≤ n ≤ 100 000 ) and the number of rap battles m ( ). The next m lines describe the results of the rap battles in the order they took place. Each consists of two integers u i and v i ( 1 ≤ u i , v i ≤ n , u i ≠ v i ), indicating that robot u i beat robot v i in the i -th rap battle. No two rap battles involve the same pair of robots. It is guaranteed that at least one ordering of the robots satisfies all m relations.",
+  "output_specification": "Print the minimum k such that the ordering of the robots by skill level is uniquely defined by the first k rap battles. If there exists more than one ordering that satisfies all m relations, output -1 .",
+  "sample_testcases": [
+    {
+      "input": "4 5\n2 1\n1 3\n2 3\n4 2\n4 3",
+      "output": "4"
+    },
+    {
+      "input": "3 2\n1 2\n3 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

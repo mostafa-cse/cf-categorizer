@@ -1,0 +1,41 @@
+{
+  "id": "494D",
+  "source": "problemset",
+  "contest_id": 494,
+  "problem_index": "D",
+  "name": "Birthday",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 719,
+  "problem_url": "https://codeforces.com/problemset/problem/494/D",
+  "editorial_url": "https://codeforces.com/blog/entry/15148",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ali is Hamed's little brother and tomorrow is his birthday. Hamed wants his brother to earn his gift so he gave him a hard programming problem and told him if he can successfully solve it, he'll get him a brand new laptop. Ali is not yet a very talented programmer like Hamed and although he usually doesn't cheat but this time is an exception. It's about a brand new laptop. So he decided to secretly seek help from you. Please solve this problem for Ali. An n -vertex weighted rooted tree is given. Vertex number 1 is a root of the tree. We define d ( u , v ) as the sum of edges weights on the shortest path between vertices u and v . Specifically we define d ( u , u ) = 0 . Also let's define S ( v ) for each vertex v as a set containing all vertices u such that d (1, u ) = d (1, v ) + d ( v , u ) . Function f ( u , v ) is then defined using the following formula: The goal is to calculate f ( u , v ) for each of the q given pair of vertices. As the answer can be rather large it's enough to print it modulo 10 9 + 7 .",
+  "input_specification": "In the first line of input an integer n ( 1 ≤ n ≤ 10 5 ), number of vertices of the tree is given. In each of the next n - 1 lines three space-separated integers a i , b i , c i ( 1 ≤ a i , b i ≤ n , 1 ≤ c i ≤ 10 9 ) are given indicating an edge between a i and b i with weight equal to c i . In the next line an integer q ( 1 ≤ q ≤ 10 5 ), number of vertex pairs, is given. In each of the next q lines two space-separated integers u i , v i ( 1 ≤ u i , v i ≤ n ) are given meaning that you must calculate f ( u i , v i ) . It is guaranteed that the given edges form a tree.",
+  "output_specification": "Output q lines. In the i -th line print the value of f ( u i , v i ) modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 1\n4 3 1\n3 5 1\n1 3 1\n5\n1 1\n1 5\n2 4\n2 1\n3 5",
+      "output": "10\n1000000005\n1000000002\n23\n1000000002"
+    },
+    {
+      "input": "8\n1 2 100\n1 3 20\n2 4 2\n2 5 1\n3 6 1\n3 7 2\n6 8 5\n6\n1 8\n2 3\n5 8\n2 6\n4 7\n6 1",
+      "output": "999968753\n49796\n999961271\n999991235\n999958569\n45130"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

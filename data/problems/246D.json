@@ -1,0 +1,40 @@
+{
+  "id": "246D",
+  "source": "problemset",
+  "contest_id": 246,
+  "problem_index": "D",
+  "name": "Colorful Graph",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 10468,
+  "problem_url": "https://codeforces.com/problemset/problem/246/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5934",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You've got an undirected graph, consisting of n vertices and m edges. We will consider the graph's vertices numbered with integers from 1 to n . Each vertex of the graph has a color. The color of the i -th vertex is an integer c i . Let's consider all vertices of the graph, that are painted some color k . Let's denote a set of such as V ( k ) . Let's denote the value of the neighbouring color diversity for color k as the cardinality of the set Q ( k ) = { c u : c u ≠ k and there is vertex v belonging to set V ( k ) such that nodes v and u are connected by an edge of the graph } . Your task is to find such color k , which makes the cardinality of set Q ( k ) maximum. In other words, you want to find the color that has the most diverse neighbours. Please note, that you want to find such color k , that the graph has at least one vertex with such color.",
+  "input_specification": "The first line contains two space-separated integers n , m (1 ≤ n , m ≤ 10 5 ) — the number of vertices end edges of the graph, correspondingly. The second line contains a sequence of integers c 1 , c 2 , ..., c n (1 ≤ c i ≤ 10 5 ) — the colors of the graph vertices. The numbers on the line are separated by spaces. Next m lines contain the description of the edges: the i -th line contains two space-separated integers a i , b i (1 ≤ a i , b i ≤ n ; a i ≠ b i ) — the numbers of the vertices, connected by the i -th edge. It is guaranteed that the given graph has no self-loops or multiple edges.",
+  "output_specification": "Print the number of the color which has the set of neighbours with the maximum cardinality. It there are multiple optimal colors, print the color with the minimum number. Please note, that you want to find such color, that the graph has at least one vertex with such color.",
+  "sample_testcases": [
+    {
+      "input": "6 6\n1 1 2 3 5 8\n1 2\n3 2\n1 4\n4 3\n4 5\n4 6",
+      "output": "3"
+    },
+    {
+      "input": "5 6\n4 2 5 2 4\n1 2\n2 3\n3 1\n5 3\n5 4\n3 4",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

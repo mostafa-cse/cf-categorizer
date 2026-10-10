@@ -1,0 +1,45 @@
+{
+  "id": "1365C",
+  "source": "problemset",
+  "contest_id": 1365,
+  "problem_index": "C",
+  "name": "Rotation Matching",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 25429,
+  "problem_url": "https://codeforces.com/problemset/problem/1365/C",
+  "editorial_url": "https://codeforces.com/blog/entry/78504",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "After the mysterious disappearance of Ashish, his two favourite disciples Ishika and Hriday, were each left with one half of a secret message. These messages can each be represented by a permutation of size $$$n$$$. Let's call them $$$a$$$ and $$$b$$$. Note that a permutation of $$$n$$$ elements is a sequence of numbers $$$a_1, a_2, \\ldots, a_n$$$, in which every number from $$$1$$$ to $$$n$$$ appears exactly once. The message can be decoded by an arrangement of sequence $$$a$$$ and $$$b$$$, such that the number of matching pairs of elements between them is maximum. A pair of elements $$$a_i$$$ and $$$b_j$$$ is said to match if: $$$i = j$$$, that is, they are at the same index. $$$a_i = b_j$$$ His two disciples are allowed to perform the following operation any number of times: choose a number $$$k$$$ and cyclically shift one of the permutations to the left or right $$$k$$$ times. A single cyclic shift to the left on any permutation $$$c$$$ is an operation that sets $$$c_1:=c_2, c_2:=c_3, \\ldots, c_n:=c_1$$$ simultaneously. Likewise, a single cyclic shift to the right on any permutation $$$c$$$ is an operation that sets $$$c_1:=c_n, c_2:=c_1, \\ldots, c_n:=c_{n-1}$$$ simultaneously. Help Ishika and Hriday find the maximum number of pairs of elements that match after performing the operation any (possibly zero) number of times.",
+  "input_specification": "The first line of the input contains a single integer $$$n$$$ $$$(1 \\le n \\le 2 \\cdot 10^5)$$$ — the size of the arrays. The second line contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, ..., $$$a_n$$$ $$$(1 \\le a_i \\le n)$$$ — the elements of the first permutation. The third line contains $$$n$$$ integers $$$b_1$$$, $$$b_2$$$, ..., $$$b_n$$$ $$$(1 \\le b_i \\le n)$$$ — the elements of the second permutation.",
+  "output_specification": "Print the maximum number of matching pairs of elements after performing the above operations some (possibly zero) times.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 4 5\n2 3 4 5 1",
+      "output": "5"
+    },
+    {
+      "input": "5\n5 4 3 2 1\n1 2 3 4 5",
+      "output": "1"
+    },
+    {
+      "input": "4\n1 3 2 4\n4 2 3 1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

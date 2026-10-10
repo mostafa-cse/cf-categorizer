@@ -1,0 +1,38 @@
+{
+  "id": "1566E",
+  "source": "problemset",
+  "contest_id": 1566,
+  "problem_index": "E",
+  "name": "Buds Re-hanging",
+  "rating": 2000,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 4541,
+  "problem_url": "https://codeforces.com/problemset/problem/1566/E",
+  "editorial_url": "https://codeforces.com/blog/entry/94803",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A tree is a connected graph without cycles. A rooted tree has a special vertex called the root. The parent of a vertex $$$v$$$ (different from root) is the previous to $$$v$$$ vertex on the shortest path from the root to the vertex $$$v$$$. Children of the vertex $$$v$$$ are all vertices for which $$$v$$$ is the parent. A vertex is a leaf if it has no children. We call a vertex a bud , if the following three conditions are satisfied: it is not a root, it has at least one child, and all its children are leaves. You are given a rooted tree with $$$n$$$ vertices. The vertex $$$1$$$ is the root. In one operation you can choose any bud with all its children (they are leaves) and re-hang them to any other vertex of the tree. By doing that you delete the edge connecting the bud and its parent and add an edge between the bud and the chosen vertex of the tree. The chosen vertex cannot be the bud itself or any of its children. All children of the bud stay connected to the bud. What is the minimum number of leaves it is possible to get if you can make any number of the above-mentioned operations (possibly zero)?",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of the vertices in the given tree. Each of the next $$$n-1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\neq v$$$) meaning that there is an edge between vertices $$$u$$$ and $$$v$$$ in the tree. It is guaranteed that the given graph is a tree. It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print a single integer — the minimal number of leaves that is possible to get after some operations.",
+  "sample_testcases": [
+    {
+      "input": "5\n7\n1 2\n1 3\n1 4\n2 5\n2 6\n4 7\n6\n1 2\n1 3\n2 4\n2 5\n3 6\n2\n1 2\n7\n7 3\n1 5\n1 3\n4 6\n4 7\n2 1\n6\n2 1\n2 3\n4 5\n3 4\n3 6",
+      "output": "2\n2\n1\n2\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

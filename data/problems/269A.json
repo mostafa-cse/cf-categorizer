@@ -1,0 +1,43 @@
+{
+  "id": "269A",
+  "source": "problemset",
+  "contest_id": 269,
+  "problem_index": "A",
+  "name": "Magical Boxes",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 3724,
+  "problem_url": "https://codeforces.com/problemset/problem/269/A",
+  "editorial_url": "https://codeforces.com/blog/entry/6596",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Emuskald is a well-known illusionist. One of his trademark tricks involves a set of magical boxes. The essence of the trick is in packing the boxes inside other boxes. From the top view each magical box looks like a square with side length equal to 2 k ( k is an integer, k ≥ 0 ) units. A magical box v can be put inside a magical box u , if side length of v is strictly less than the side length of u . In particular, Emuskald can put 4 boxes of side length 2 k - 1 into one box of side length 2 k , or as in the following figure: Emuskald is about to go on tour performing around the world, and needs to pack his magical boxes for the trip. He has decided that the best way to pack them would be inside another magical box, but magical boxes are quite expensive to make. Help him find the smallest magical box that can fit all his boxes.",
+  "input_specification": "The first line of input contains an integer n ( 1 ≤ n ≤ 10 5 ), the number of different sizes of boxes Emuskald has. Each of following n lines contains two integers k i and a i ( 0 ≤ k i ≤ 10 9 , 1 ≤ a i ≤ 10 9 ), which means that Emuskald has a i boxes with side length 2 k i . It is guaranteed that all of k i are distinct.",
+  "output_specification": "Output a single integer p , such that the smallest magical box that can contain all of Emuskald’s boxes has side length 2 p .",
+  "sample_testcases": [
+    {
+      "input": "2\n0 3\n1 5",
+      "output": "3"
+    },
+    {
+      "input": "1\n0 4",
+      "output": "1"
+    },
+    {
+      "input": "2\n1 10\n2 2",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

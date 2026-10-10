@@ -1,0 +1,43 @@
+{
+  "id": "992B",
+  "source": "problemset",
+  "contest_id": 992,
+  "problem_index": "B",
+  "name": "Nastya Studies Informatics",
+  "rating": 1600,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 6844,
+  "problem_url": "https://codeforces.com/problemset/problem/992/B",
+  "editorial_url": "https://codeforces.com/blog/entry/60083",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Today on Informatics class Nastya learned about GCD and LCM (see links below). Nastya is very intelligent, so she solved all the tasks momentarily and now suggests you to solve one of them as well. We define a pair of integers ( a , b ) good , if GCD ( a , b ) = x and LCM ( a , b ) = y , where GCD ( a , b ) denotes the greatest common divisor of a and b , and LCM ( a , b ) denotes the least common multiple of a and b . You are given two integers x and y . You are to find the number of good pairs of integers ( a , b ) such that l ≤ a , b ≤ r . Note that pairs ( a , b ) and ( b , a ) are considered different if a ≠ b .",
+  "input_specification": "The only line contains four integers l , r , x , y ( 1 ≤ l ≤ r ≤ 10 9 , 1 ≤ x ≤ y ≤ 10 9 ).",
+  "output_specification": "In the only line print the only integer — the answer for the problem.",
+  "sample_testcases": [
+    {
+      "input": "1 2 1 2",
+      "output": "2"
+    },
+    {
+      "input": "1 12 1 12",
+      "output": "4"
+    },
+    {
+      "input": "50 100 3 30",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:20",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

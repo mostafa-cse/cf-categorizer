@@ -1,0 +1,39 @@
+{
+  "id": "100E",
+  "source": "problemset",
+  "contest_id": 100,
+  "problem_index": "E",
+  "name": "Lamps in a Line",
+  "rating": 1600,
+  "tags": [
+    "*special",
+    "math"
+  ],
+  "solved_count": 307,
+  "problem_url": "https://codeforces.com/problemset/problem/100/E",
+  "editorial_url": "https://codeforces.com/blog/entry/2359",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n lamps in a line. The lamps are numbered 1 to n from left to right. There are also n keys. When key number i is pressed, all lamps number x such that i | x change their state. For two integer numbers a and b , we say a | b if and only if there exists an integer c such that a × c = b . Amirali likes to play with the keys. He randomly pressed k keys and wants to know the final state of the lamps. Help him by writing a Pike piece of code to solve this task.",
+  "input_specification": "The first line of input contains a single integer n , the number of lamps ( 1 ≤ n ≤ 10 5 ). The following line contains n words. The i -th word describes the initial state of lamp number i (see samples for details). The following line contains a single integer k ( 1 ≤ k ≤ 10 4 ), the number of times a key is pressed. Then in the next line come k integers in range [1, n ] which are the numbers of the pressed keys.",
+  "output_specification": "Write n words to output. Describe the final state of the lamps. See samples for more details.",
+  "sample_testcases": [
+    {
+      "input": "2\noff off\n2\n1 2",
+      "output": "on off"
+    },
+    {
+      "input": "3\noff off on\n6\n1 1 1 1 2 2",
+      "output": "off off on"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

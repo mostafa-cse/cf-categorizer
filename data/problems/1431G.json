@@ -1,0 +1,41 @@
+{
+  "id": "1431G",
+  "source": "problemset",
+  "contest_id": 1431,
+  "problem_index": "G",
+  "name": "Number Deletion Game",
+  "rating": 2100,
+  "tags": [
+    "*special",
+    "dp",
+    "games",
+    "greedy"
+  ],
+  "solved_count": 217,
+  "problem_url": "https://codeforces.com/problemset/problem/1431/G",
+  "editorial_url": "https://codeforces.com/blog/entry/84563",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Alice and Bob play a game. They have a set that initially consists of $$$n$$$ integers. The game is played in $$$k$$$ turns. During each turn, the following events happen: firstly, Alice chooses an integer from the set. She can choose any integer except for the maximum one . Let the integer chosen by Alice be $$$a$$$; secondly, Bob chooses an integer from the set. He can choose any integer that is greater than $$$a$$$ . Let the integer chosen by Bob be $$$b$$$; finally, both $$$a$$$ and $$$b$$$ are erased from the set, and the value of $$$b - a$$$ is added to the score of the game. Initially, the score is $$$0$$$. Alice wants to maximize the resulting score, Bob wants to minimize it. Assuming that both Alice and Bob play optimally, calculate the resulting score of the game.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 400$$$, $$$1 \\le k \\le \\lfloor\\frac{n}{2}\\rfloor$$$) — the initial size of the set and the number of turns in the game. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$) — the initial contents of the set. These integers are pairwise distinct.",
+  "output_specification": "Print one integer — the resulting score of the game (assuming that both Alice and Bob play optimally).",
+  "sample_testcases": [
+    {
+      "input": "5 2\n3 4 1 5 2",
+      "output": "4"
+    },
+    {
+      "input": "7 3\n101 108 200 1 201 109 100",
+      "output": "283"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

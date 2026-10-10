@@ -1,0 +1,41 @@
+{
+  "id": "1098B",
+  "source": "problemset",
+  "contest_id": 1098,
+  "problem_index": "B",
+  "name": "Nice table",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1826,
+  "problem_url": "https://codeforces.com/problemset/problem/1098/B",
+  "editorial_url": "https://codeforces.com/blog/entry/64331",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an $$$n \\times m$$$ table, consisting of characters « A », « G », « C », « T ». Let's call a table nice , if every $$$2 \\times 2$$$ square contains all four distinct characters. Your task is to find a nice table (also consisting of « A », « G », « C », « T »), that differs from the given table in the minimum number of characters.",
+  "input_specification": "First line contains two positive integers $$$n$$$ and $$$m$$$ — number of rows and columns in the table you are given ($$$2 \\leq n, m, n \\times m \\leq 300\\,000$$$). Then, $$$n$$$ lines describing the table follow. Each line contains exactly $$$m$$$ characters « A », « G », « C », « T ».",
+  "output_specification": "Output $$$n$$$ lines, $$$m$$$ characters each. This table must be nice and differ from the input table in the minimum number of characters.",
+  "sample_testcases": [
+    {
+      "input": "2 2\nAG\nCT",
+      "output": "AG\nCT"
+    },
+    {
+      "input": "3 5\nAGCAG\nAGCAG\nAGCAG",
+      "output": "TGCAT\nCATGC\nTGCAT"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:55",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

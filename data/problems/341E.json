@@ -1,0 +1,43 @@
+{
+  "id": "341E",
+  "source": "problemset",
+  "contest_id": 341,
+  "problem_index": "E",
+  "name": "Candies Game",
+  "rating": 3000,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 629,
+  "problem_url": "https://codeforces.com/problemset/problem/341/E",
+  "editorial_url": "https://codeforces.com/blog/entry/8755",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Iahub is playing an uncommon game. Initially, he has n boxes, numbered 1, 2, 3, ... , n . Each box has some number of candies in it, described by a sequence a 1 , a 2 , ... , a n . The number a k represents the number of candies in box k . The goal of the game is to move all candies into exactly two boxes. The rest of n - 2 boxes must contain zero candies. Iahub is allowed to do several (possible zero) moves. At each move he chooses two different boxes i and j , such that a i ≤ a j . Then, Iahub moves from box j to box i exactly a i candies. Obviously, when two boxes have equal number of candies, box number j becomes empty. Your task is to give him a set of moves such as Iahub to archive the goal of the game. If Iahub can't win the game for the given configuration of boxes, output -1. Please note that in case there exist a solution, you don't need to print the solution using minimal number of moves.",
+  "input_specification": "The first line of the input contains integer n ( 3 ≤ n ≤ 1000 ). The next line contains n non-negative integers: a 1 , a 2 , ..., a n — sequence elements. It is guaranteed that sum of all numbers in sequence a is up to 10 6 .",
+  "output_specification": "In case there exists no solution, output -1. Otherwise, in the first line output integer c (0 ≤ c ≤ 10 6 ) , representing number of moves in your solution. Each of the next c lines should contain two integers i and j (1 ≤ i , j ≤ n , i ≠ j ) : integers i , j in the k th line mean that at the k -th move you will move candies from the j -th box to the i -th one.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 6 9",
+      "output": "2\n2 3\n1 3"
+    },
+    {
+      "input": "3\n0 1 0",
+      "output": "-1"
+    },
+    {
+      "input": "4\n0 1 1 0",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

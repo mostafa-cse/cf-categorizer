@@ -1,0 +1,41 @@
+{
+  "id": "965D",
+  "source": "problemset",
+  "contest_id": 965,
+  "problem_index": "D",
+  "name": "Single-use Stones",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "flows",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 3397,
+  "problem_url": "https://codeforces.com/problemset/problem/965/D",
+  "editorial_url": "https://codeforces.com/blog/entry/59105",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A lot of frogs want to cross a river. A river is $$$w$$$ units width, but frogs can only jump $$$l$$$ units long, where $$$l \\lt w$$$. Frogs can also jump on lengths shorter than $$$l$$$. but can't jump longer. Hopefully, there are some stones in the river to help them. The stones are located at integer distances from the banks. There are $$$a_i$$$ stones at the distance of $$$i$$$ units from the bank the frogs are currently at. Each stone can only be used once by one frog, after that it drowns in the water. What is the maximum number of frogs that can cross the river, given that then can only jump on the stones?",
+  "input_specification": "The first line contains two integers $$$w$$$ and $$$l$$$ ($$$1 \\le l \\lt w \\le 10^5$$$) — the width of the river and the maximum length of a frog's jump. The second line contains $$$w - 1$$$ integers $$$a_1, a_2, \\ldots, a_{w-1}$$$ ($$$0 \\le a_i \\le 10^4$$$), where $$$a_i$$$ is the number of stones at the distance $$$i$$$ from the bank the frogs are currently at.",
+  "output_specification": "Print a single integer — the maximum number of frogs that can cross the river.",
+  "sample_testcases": [
+    {
+      "input": "10 5\n0 0 1 0 2 0 0 1 0",
+      "output": "3"
+    },
+    {
+      "input": "10 3\n1 1 1 1 2 1 1 1 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:24",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

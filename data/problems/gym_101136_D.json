@@ -1,0 +1,21 @@
+{
+  "id": "gym_101136_D",
+  "source": "gym",
+  "contest_id": 101136,
+  "problem_index": "D",
+  "name": "Эскалатор",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/101136/problem/D",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:31:49",
+  "updated_at": "2026-10-10 06:31:49"
+}

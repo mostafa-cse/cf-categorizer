@@ -1,0 +1,43 @@
+{
+  "id": "1213D1",
+  "source": "problemset",
+  "contest_id": 1213,
+  "problem_index": "D1",
+  "name": "Equalizing by Division (easy version)",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 12264,
+  "problem_url": "https://codeforces.com/problemset/problem/1213/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/69464",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between easy and hard versions is the number of elements in the array . You are given an array $$$a$$$ consisting of $$$n$$$ integers. In one move you can choose any $$$a_i$$$ and divide it by $$$2$$$ rounding down (in other words, in one move you can set $$$a_i := \\lfloor\\frac{a_i}{2}\\rfloor$$$). You can perform such an operation any (possibly, zero) number of times with any $$$a_i$$$. Your task is to calculate the minimum possible number of operations required to obtain at least $$$k$$$ equal numbers in the array. Don't forget that it is possible to have $$$a_i = 0$$$ after some operations, thus the answer always exists .",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 50$$$) — the number of elements in the array and the number of equal numbers required. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^5$$$), where $$$a_i$$$ is the $$$i$$$-th element of $$$a$$$.",
+  "output_specification": "Print one integer — the minimum possible number of operations required to obtain at least $$$k$$$ equal numbers in the array.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 2 2 4 5",
+      "output": "1"
+    },
+    {
+      "input": "5 3\n1 2 3 4 5",
+      "output": "2"
+    },
+    {
+      "input": "5 3\n1 2 3 3 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:26",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

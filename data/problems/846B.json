@@ -1,0 +1,39 @@
+{
+  "id": "846B",
+  "source": "problemset",
+  "contest_id": 846,
+  "problem_index": "B",
+  "name": "Math Show",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "greedy"
+  ],
+  "solved_count": 2865,
+  "problem_url": "https://codeforces.com/problemset/problem/846/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54357",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp takes part in a math show. He is given n tasks, each consists of k subtasks, numbered 1 through k . It takes him t j minutes to solve the j -th subtask of any task. Thus, time required to solve a subtask depends only on its index, but not on the task itself. Polycarp can solve subtasks in any order. By solving subtask of arbitrary problem he earns one point. Thus, the number of points for task is equal to the number of solved subtasks in it. Moreover, if Polycarp completely solves the task (solves all k of its subtasks), he recieves one extra point. Thus, total number of points he recieves for the complete solution of the task is k + 1 . Polycarp has M minutes of time. What is the maximum number of points he can earn?",
+  "input_specification": "The first line contains three integer numbers n , k and M ( 1 ≤ n ≤ 45 , 1 ≤ k ≤ 45 , 0 ≤ M ≤ 2·10 9 ). The second line contains k integer numbers, values t j ( 1 ≤ t j ≤ 1000000 ), where t j is the time in minutes required to solve j -th subtask of any task.",
+  "output_specification": "Print the maximum amount of points Polycarp can earn in M minutes.",
+  "sample_testcases": [
+    {
+      "input": "3 4 11\n1 2 3 4",
+      "output": "6"
+    },
+    {
+      "input": "5 5 10\n1 2 4 8 16",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

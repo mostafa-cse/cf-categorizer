@@ -1,0 +1,38 @@
+{
+  "id": "130C",
+  "source": "problemset",
+  "contest_id": 130,
+  "problem_index": "C",
+  "name": "Decimal sum",
+  "rating": 1500,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 544,
+  "problem_url": "https://codeforces.com/problemset/problem/130/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3226",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given an array of integer numbers. Calculate the sum of its elements.",
+  "input_specification": "The first line of the input contains an integer n ( 1 ≤ n ≤ 100 ) — the size of the array. Next n lines contain the elements of the array, one per line. Each element is an integer between 1 and 100 , inclusive.",
+  "output_specification": "Output the sum of the elements of the array.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n2\n3\n4\n5",
+      "output": "15"
+    },
+    {
+      "input": "7\n100\n5\n45\n86\n14\n20\n30",
+      "output": "300"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

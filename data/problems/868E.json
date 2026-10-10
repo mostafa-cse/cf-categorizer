@@ -1,0 +1,40 @@
+{
+  "id": "868E",
+  "source": "problemset",
+  "contest_id": 868,
+  "problem_index": "E",
+  "name": "Policeman and a Tree",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 571,
+  "problem_url": "https://codeforces.com/problemset/problem/868/E",
+  "editorial_url": "https://codeforces.com/blog/entry/55046",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree (a connected non-oriented graph without cycles) with vertices numbered from 1 to n , and the length of the i -th edge is w i . In the vertex s there is a policeman, in the vertices x 1 , x 2 , ..., x m ( x j ≠ s ) m criminals are located. The policeman can walk along the edges with speed 1 , the criminals can move with arbitrary large speed. If a criminal at some moment is at the same point as the policeman, he instantly gets caught by the policeman. Determine the time needed for the policeman to catch all criminals, assuming everybody behaves optimally (i.e. the criminals maximize that time, the policeman minimizes that time). Everybody knows positions of everybody else at any moment of time.",
+  "input_specification": "The first line contains single integer n ( 1 ≤ n ≤ 50 ) — the number of vertices in the tree. The next n - 1 lines contain three integers each: u i , v i , w i ( 1 ≤ u i , v i ≤ n , 1 ≤ w i ≤ 50 ) denoting edges and their lengths. It is guaranteed that the given graph is a tree. The next line contains single integer s ( 1 ≤ s ≤ n ) — the number of vertex where the policeman starts. The next line contains single integer m ( 1 ≤ m ≤ 50 ) — the number of criminals. The next line contains m integers x 1 , x 2 , ..., x m ( 1 ≤ x j ≤ n , x j ≠ s ) — the number of vertices where the criminals are located. x j are not necessarily distinct.",
+  "output_specification": "If the policeman can't catch criminals, print single line \" Terrorists win \" (without quotes). Otherwise, print single integer — the time needed to catch all criminals.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 2\n1 3 1\n1 4 1\n2\n4\n3 1 4 1",
+      "output": "8"
+    },
+    {
+      "input": "6\n1 2 3\n2 3 5\n3 4 1\n3 5 4\n2 6 3\n2\n3\n1 3 5",
+      "output": "21"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

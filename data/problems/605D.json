@@ -1,0 +1,39 @@
+{
+  "id": "605D",
+  "source": "problemset",
+  "contest_id": 605,
+  "problem_index": "D",
+  "name": "Board Game",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "dfs and similar"
+  ],
+  "solved_count": 983,
+  "problem_url": "https://codeforces.com/problemset/problem/605/D",
+  "editorial_url": "https://codeforces.com/blog/entry/22019",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing a board card game. In this game the player has two characteristics, x and y — the white magic skill and the black magic skill, respectively. There are n spell cards lying on the table, each of them has four characteristics, a i , b i , c i and d i . In one move a player can pick one of the cards and cast the spell written on it, but only if first two of it's characteristics meet the requirement a i ≤ x and b i ≤ y , i.e. if the player has enough magic skill to cast this spell. However, after casting the spell the characteristics of a player change and become equal to x = c i and y = d i . At the beginning of the game both characteristics of a player are equal to zero. The goal of the game is to cast the n -th spell. Your task is to make it in as few moves as possible. You are allowed to use spell in any order and any number of times (for example, you may not use some spells at all).",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 100 000 ) — the number of cards on the table. Each of the next n lines contains four integers a i , b i , c i , d i ( 0 ≤ a i , b i , c i , d i ≤ 10 9 ) — the characteristics of the corresponding card.",
+  "output_specification": "In the first line print a single integer k — the minimum number of moves needed to cast the n -th spell and in the second line print k numbers — the indices of the cards in the order in which you should cast them. In case there are multiple possible solutions, print any of them. If it is impossible to cast the n -th spell, print - 1 .",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0 3 4\n2 2 5 3\n4 1 1 7\n5 3 8 8",
+      "output": "3\n1 2 4"
+    },
+    {
+      "input": "2\n0 0 4 6\n5 1 1000000000 1000000000",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "575A",
+  "source": "problemset",
+  "contest_id": 575,
+  "problem_index": "A",
+  "name": "Fibonotci",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 896,
+  "problem_url": "https://codeforces.com/problemset/problem/575/A",
+  "editorial_url": "https://codeforces.com/blog/entry/20176",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fibonotci sequence is an integer recursive sequence defined by the recurrence relation F n = s n - 1 · F n - 1 + s n - 2 · F n - 2 with F 0 = 0, F 1 = 1 Sequence s is an infinite and almost cyclic sequence with a cycle of length N . A sequence s is called almost cyclic with a cycle of length N if , for i ≥ N , except for a finite number of values s i , for which ( i ≥ N ). Following is an example of an almost cyclic sequence with a cycle of length 4: s = (5,3,8,11,5,3,7,11,5,3,8,11,…) Notice that the only value of s for which the equality does not hold is s 6 ( s 6 = 7 and s 2 = 8 ). You are given s 0 , s 1 , ... s N - 1 and all the values of sequence s for which ( i ≥ N ). Find .",
+  "input_specification": "The first line contains two numbers K and P . The second line contains a single number N . The third line contains N numbers separated by spaces, that represent the first N numbers of the sequence s . The fourth line contains a single number M , the number of values of sequence s for which . Each of the following M lines contains two numbers j and v , indicating that and s j = v . All j-s are distinct. 1 ≤ N , M ≤ 50000 0 ≤ K ≤ 10 18 1 ≤ P ≤ 10 9 1 ≤ s i ≤ 10 9 , for all i = 0, 1, ... N - 1 N ≤ j ≤ 10 18 1 ≤ v ≤ 10 9 All values are integers",
+  "output_specification": "Output should contain a single integer equal to .",
+  "sample_testcases": [
+    {
+      "input": "10 8\n3\n1 2 1\n2\n7 3\n5 4",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

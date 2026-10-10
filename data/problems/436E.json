@@ -1,0 +1,39 @@
+{
+  "id": "436E",
+  "source": "problemset",
+  "contest_id": 436,
+  "problem_index": "E",
+  "name": "Cardboard Box",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 2145,
+  "problem_url": "https://codeforces.com/problemset/problem/436/E",
+  "editorial_url": "https://codeforces.com/blog/entry/12680",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Everyone who has played Cut the Rope knows full well how the gameplay is organized. All levels in the game are divided into boxes. Initially only one box with some levels is available. Player should complete levels to earn stars, collecting stars opens new box with levels. Imagine that you are playing Cut the Rope for the first time. Currently you have only the levels of the first box (by the way, it is called \"Cardboard Box\"). Each level is characterized by two integers: a i — how long it takes to complete the level for one star, b i — how long it takes to complete the level for two stars ( a i < b i ) . You want to open the next box as quickly as possible. So, you need to earn at least w stars. How do make it happen? Note that the level can be passed only once: either for one star or for two. You do not necessarily need to pass all the levels.",
+  "input_specification": "The first line contains two integers n and w (1 ≤ n ≤ 3·10 5 ; 1 ≤ w ≤ 2 n ) — the number of levels in the first box and the number of stars you need to open another box. Each of the following n lines contains two integers a i and b i (1 ≤ a i < b i ≤ 10 9 ) — the attributes of the i -th level.",
+  "output_specification": "In the first line print integer t — the minimum time you need to open the next box. In the next line, print n digits without spaces — the description of the optimal scenario: if you need to pass the i -th level for one star, the i -th digit should equal 1; if you need to pass the i -th level for two stars, the i -th digit should equal 2; if you do not need to pass the i -th level at all, the i -th digit should equal 0.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 2\n1 2",
+      "output": "3\n12"
+    },
+    {
+      "input": "5 3\n10 20\n5 10\n10 20\n6 9\n25 30",
+      "output": "14\n01020"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

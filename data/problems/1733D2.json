@@ -1,0 +1,35 @@
+{
+  "id": "1733D2",
+  "source": "problemset",
+  "contest_id": 1733,
+  "problem_index": "D2",
+  "name": "Zero-One (Hard Version)",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 4890,
+  "problem_url": "https://codeforces.com/problemset/problem/1733/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/83109",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the hard version of this problem. In this version, $$$n \\le 5000$$$ holds, and this version has no restriction between $$$x$$$ and $$$y$$$. You can make hacks only if both versions of the problem are solved. You are given two binary strings $$$a$$$ and $$$b$$$, both of length $$$n$$$. You can do the following operation any number of times (possibly zero). Select two indices $$$l$$$ and $$$r$$$ ($$$l \\lt r$$$). Change $$$a_l$$$ to $$$(1 - a_l)$$$, and $$$a_r$$$ to $$$(1 - a_r)$$$. If $$$l + 1 = r$$$, the cost of the operation is $$$x$$$. Otherwise, the cost is $$$y$$$. You have to find the minimum cost needed to make $$$a$$$ equal to $$$b$$$ or say there is no way to do so.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Each test case consists of three lines. The first line of each test case contains three integers $$$n$$$, $$$x$$$, and $$$y$$$ ($$$5 \\le n \\le 5000$$$, $$$1 \\le x, y \\le 10^9$$$) — the length of the strings, and the costs per operation. The second line of each test case contains the string $$$a$$$ of length $$$n$$$. The string only consists of digits $$$0$$$ and $$$1$$$. The third line of each test case contains the string $$$b$$$ of length $$$n$$$. The string only consists of digits $$$0$$$ and $$$1$$$. It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$5000$$$.",
+  "output_specification": "For each test case, if there is no way to make $$$a$$$ equal to $$$b$$$, print $$$-1$$$. Otherwise, print the minimum cost needed to make $$$a$$$ equal to $$$b$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 8 9\n01001\n00101\n6 2 11\n000001\n100000\n5 7 2\n01000\n11011\n7 8 3\n0111001\n0100001\n6 3 4\n010001\n101000\n5 10 1\n01100\n01100",
+      "output": "8\n10\n-1\n6\n7\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

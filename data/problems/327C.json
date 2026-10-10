@@ -1,0 +1,43 @@
+{
+  "id": "327C",
+  "source": "problemset",
+  "contest_id": 327,
+  "problem_index": "C",
+  "name": "Magic Five",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 3733,
+  "problem_url": "https://codeforces.com/problemset/problem/327/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8274",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There is a long plate s containing n digits. Iahub wants to delete some digits (possibly none, but he is not allowed to delete all the digits) to form his \"magic number\" on the plate, a number that is divisible by 5 . Note that, the resulting number may contain leading zeros. Now Iahub wants to count the number of ways he can obtain magic number, modulo 1000000007 ( 10 9 + 7 ). Two ways are different, if the set of deleted positions in s differs. Look at the input part of the statement, s is given in a special form.",
+  "input_specification": "In the first line you're given a string a ( 1 ≤ | a | ≤ 10 5 ), containing digits only. In the second line you're given an integer k ( 1 ≤ k ≤ 10 9 ). The plate s is formed by concatenating k copies of a together. That is n = | a |· k .",
+  "output_specification": "Print a single integer — the required number of ways modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "1256\n1",
+      "output": "4"
+    },
+    {
+      "input": "13990\n2",
+      "output": "528"
+    },
+    {
+      "input": "555\n2",
+      "output": "63"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

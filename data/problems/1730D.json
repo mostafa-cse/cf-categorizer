@@ -1,0 +1,36 @@
+{
+  "id": "1730D",
+  "source": "problemset",
+  "contest_id": 1730,
+  "problem_index": "D",
+  "name": "Prefixes and Suffixes",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 3111,
+  "problem_url": "https://codeforces.com/problemset/problem/1730/D",
+  "editorial_url": "https://codeforces.com/blog/entry/107293",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have two strings $$$s_1$$$ and $$$s_2$$$ of length $$$n$$$, consisting of lowercase English letters. You can perform the following operation any (possibly zero) number of times: Choose a positive integer $$$1 \\leq k \\leq n$$$. Swap the prefix of the string $$$s_1$$$ and the suffix of the string $$$s_2$$$ of length $$$k$$$. Is it possible to make these two strings equal by doing described operations?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then the test cases follow. Each test case consists of three lines. The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the strings $$$s_1$$$ and $$$s_2$$$. The second line contains the string $$$s_1$$$ of length $$$n$$$, consisting of lowercase English letters. The third line contains the string $$$s_2$$$ of length $$$n$$$, consisting of lowercase English letters. It is guaranteed that the sum of $$$n$$$ for all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print \" YES \" if it is possible to make the strings equal, and \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "7\n3\ncbc\naba\n5\nabcaa\ncbabb\n5\nabcaa\ncbabz\n1\na\na\n1\na\nb\n6\nabadaa\nadaaba\n8\nabcabdaa\nadabcaba",
+      "output": "YES\nYES\nNO\nYES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

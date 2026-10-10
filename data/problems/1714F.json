@@ -1,0 +1,36 @@
+{
+  "id": "1714F",
+  "source": "problemset",
+  "contest_id": 1714,
+  "problem_index": "F",
+  "name": "Build a Tree and That Is It",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 3790,
+  "problem_url": "https://codeforces.com/problemset/problem/1714/F",
+  "editorial_url": "https://codeforces.com/blog/entry/105549",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A tree is a connected undirected graph without cycles. Note that in this problem, we are talking about not rooted trees. You are given four positive integers $$$n, d_{12}, d_{23}$$$ and $$$d_{31}$$$. Construct a tree such that: it contains $$$n$$$ vertices numbered from $$$1$$$ to $$$n$$$, the distance (length of the shortest path) from vertex $$$1$$$ to vertex $$$2$$$ is $$$d_{12}$$$, distance from vertex $$$2$$$ to vertex $$$3$$$ is $$$d_{23}$$$, the distance from vertex $$$3$$$ to vertex $$$1$$$ is $$$d_{31}$$$. Output any tree that satisfies all the requirements above, or determine that no such tree exists.",
+  "input_specification": "The first line of the input contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) —the number of test cases in the test. This is followed by $$$t$$$ test cases, each written on a separate line. Each test case consists of four positive integers $$$n, d_{12}, d_{23}$$$ and $$$d_{31}$$$ ($$$3 \\le n \\le 2\\cdot10^5; 1 \\le d_{12}, d_{23}, d_{31} \\le n-1$$$). It is guaranteed that the sum of $$$n$$$ values for all test cases does not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each test case, print YES if the suitable tree exists, and NO otherwise. If the answer is positive, print another $$$n-1$$$ line each containing a description of an edge of the tree — a pair of positive integers $$$x_i, y_i$$$, which means that the $$$i$$$th edge connects vertices $$$x_i$$$ and $$$y_i$$$. The edges and vertices of the edges can be printed in any order. If there are several suitable trees, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "9\n5 1 2 1\n5 2 2 2\n5 2 2 3\n5 2 2 4\n5 3 2 3\n4 2 1 1\n4 3 1 1\n4 1 2 3\n7 1 4 1",
+      "output": "YES\n1 2\n4 1\n3 1\n2 5\nYES\n4 3\n2 5\n1 5\n5 3\nNO\nYES\n2 4\n4 1\n2 5\n5 3\nYES\n5 4\n4 1\n2 5\n3 5\nYES\n2 3\n3 4\n1 3\nNO\nYES\n4 3\n1 2\n2 4\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:22",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "268E",
+  "source": "problemset",
+  "contest_id": 268,
+  "problem_index": "E",
+  "name": "Playlist",
+  "rating": 2100,
+  "tags": [
+    "math",
+    "probabilities",
+    "sortings"
+  ],
+  "solved_count": 1183,
+  "problem_url": "https://codeforces.com/problemset/problem/268/E",
+  "editorial_url": "http://www.codeforces.com/blog/entry/6545?locale=en",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Manao's friends often send him new songs. He never listens to them right away. Instead, he compiles them into a playlist. When he feels that his mind is open to new music, he opens the playlist and starts to listen to the songs. Of course, there are some songs that Manao doesn't particuarly enjoy. To get more pleasure from the received songs, he invented the following procedure of listening to the playlist: If after listening to some song Manao realizes that he liked it, then he remembers it and starts to listen to the next unlistened song. If after listening to some song Manao realizes that he did not like it, he listens to all the songs he liked up to this point and then begins to listen to the next unlistened song. For example, if Manao has four songs in the playlist, A, B, C, D (in the corresponding order) and he is going to like songs A and C in the end, then the order of listening is the following: Manao listens to A, he likes it, he remembers it. Manao listens to B, he does not like it, so he listens to A, again. Manao listens to C, he likes the song and he remembers it, too. Manao listens to D, but does not enjoy it and re-listens to songs A and C. That is, in the end Manao listens to song A three times, to song C twice and songs B and D once. Note that if Manao once liked a song, he will never dislike it on a subsequent listening. Manao has received n songs: the i -th of them is l i seconds long and Manao may like it with a probability of p i percents. The songs could get on Manao's playlist in any order, so Manao wants to know the maximum expected value of the number of seconds after which the listening process will be over, for all possible permutations of the songs in the playlist.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 50000 ). The i -th of the following n lines contains two integers, separated by a single space — l i and p i ( 15 ≤ l i ≤ 1000 , 0 ≤ p i ≤ 100 ) — the length of the i -th song in seconds and the probability that Manao will like the song, in percents.",
+  "output_specification": "In a single line print a single real number — the maximum expected listening time over all permutations of songs. The answer will be considered valid if the absolute or relative error does not exceed 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "3\n150 20\n150 50\n100 50",
+      "output": "537.500000000"
+    },
+    {
+      "input": "4\n300 0\n300 50\n240 50\n360 80",
+      "output": "2121.000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

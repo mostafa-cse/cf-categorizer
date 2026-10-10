@@ -1,0 +1,39 @@
+{
+  "id": "576A",
+  "source": "problemset",
+  "contest_id": 576,
+  "problem_index": "A",
+  "name": "Vasya and Petya's Game",
+  "rating": 1500,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 16252,
+  "problem_url": "https://codeforces.com/problemset/problem/576/A",
+  "editorial_url": "https://codeforces.com/blog/entry/20226",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya and Petya are playing a simple game. Vasya thought of number x between 1 and n , and Petya tries to guess the number. Petya can ask questions like: \"Is the unknown number divisible by number y ?\". The game is played by the following rules: first Petya asks all the questions that interest him (also, he can ask no questions), and then Vasya responds to each question with a 'yes' or a 'no'. After receiving all the answers Petya should determine the number that Vasya thought of. Unfortunately, Petya is not familiar with the number theory. Help him find the minimum number of questions he should ask to make a guaranteed guess of Vasya's number, and the numbers y i , he should ask the questions about.",
+  "input_specification": "A single line contains number n ( 1 ≤ n ≤ 10 3 ).",
+  "output_specification": "Print the length of the sequence of questions k ( 0 ≤ k ≤ n ), followed by k numbers — the questions y i ( 1 ≤ y i ≤ n ). If there are several correct sequences of questions of the minimum length, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "3\n2 4 3"
+    },
+    {
+      "input": "6",
+      "output": "4\n2 4 3 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

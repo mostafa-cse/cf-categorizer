@@ -1,0 +1,43 @@
+{
+  "id": "111D",
+  "source": "problemset",
+  "contest_id": 111,
+  "problem_index": "D",
+  "name": "Petya and Coloring",
+  "rating": 2300,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 947,
+  "problem_url": "https://codeforces.com/problemset/problem/111/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2616",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Petya loves counting. He wants to count the number of ways to paint a rectangular checkered board of size n × m ( n rows, m columns) in k colors. Besides, the coloring should have the following property: for any vertical line that passes along the grid lines and divides the board in two non-empty parts the number of distinct colors in both these parts should be the same. Help Petya to count these colorings.",
+  "input_specification": "The first line contains space-separated integers n , m and k ( 1 ≤ n , m ≤ 1000, 1 ≤ k ≤ 10 6 ) — the board's vertical and horizontal sizes and the number of colors respectively.",
+  "output_specification": "Print the answer to the problem. As the answer can be quite a large number, you should print it modulo 10 9 + 7 ( 1000000007 ).",
+  "sample_testcases": [
+    {
+      "input": "2 2 1",
+      "output": "1"
+    },
+    {
+      "input": "2 2 2",
+      "output": "8"
+    },
+    {
+      "input": "3 2 2",
+      "output": "40"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

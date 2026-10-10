@@ -1,0 +1,39 @@
+{
+  "id": "1923E",
+  "source": "problemset",
+  "contest_id": 1923,
+  "problem_index": "E",
+  "name": "Count Paths",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 5507,
+  "problem_url": "https://codeforces.com/problemset/problem/1923/E",
+  "editorial_url": "https://codeforces.com/blog/entry/126339",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a tree, consisting of $$$n$$$ vertices, numbered from $$$1$$$ to $$$n$$$. Every vertex is colored in some color, denoted by an integer from $$$1$$$ to $$$n$$$. A simple path of the tree is called beautiful if: it consists of at least $$$2$$$ vertices; the first and the last vertices of the path have the same color; no other vertex on the path has the same color as the first vertex. Count the number of the beautiful simple paths of the tree. Note that paths are considered undirected (i. e. the path from $$$x$$$ to $$$y$$$ is the same as the path from $$$y$$$ to $$$x$$$).",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. The second line contains $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$1 \\le c_i \\le n$$$) — the color of each vertex. The $$$i$$$-th of the next $$$n - 1$$$ lines contains two integers $$$v_i$$$ and $$$u_i$$$ ($$$1 \\le v_i, u_i \\le n$$$; $$$v_i \\neq u_i$$$) — the $$$i$$$-th edge of the tree. The given edges form a valid tree. The sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print a single integer — the number of the beautiful simple paths of the tree.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n1 2 1\n1 2\n2 3\n5\n2 1 2 1 2\n1 2\n1 3\n3 4\n4 5\n5\n1 2 3 4 5\n1 2\n1 3\n3 4\n4 5\n4\n2 2 2 2\n3 1\n3 2\n3 4",
+      "output": "1\n3\n0\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

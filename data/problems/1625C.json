@@ -1,0 +1,38 @@
+{
+  "id": "1625C",
+  "source": "problemset",
+  "contest_id": 1625,
+  "problem_index": "C",
+  "name": "Road Optimization",
+  "rating": 1700,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 14049,
+  "problem_url": "https://codeforces.com/problemset/problem/1625/C",
+  "editorial_url": "https://codeforces.com/blog/entry/99031",
+  "time_limit": "3 seconds",
+  "memory_limit": "128 megabytes",
+  "description": "The Government of Mars is not only interested in optimizing space flights, but also wants to improve the road system of the planet. One of the most important highways of Mars connects Olymp City and Kstolop, the capital of Cydonia. In this problem, we only consider the way from Kstolop to Olymp City, but not the reverse path (i. e. the path from Olymp City to Kstolop). The road from Kstolop to Olymp City is $$$\\ell$$$ kilometers long. Each point of the road has a coordinate $$$x$$$ ($$$0 \\le x \\le \\ell$$$), which is equal to the distance from Kstolop in kilometers. So, Kstolop is located in the point with coordinate $$$0$$$, and Olymp City is located in the point with coordinate $$$\\ell$$$. There are $$$n$$$ signs along the road, $$$i$$$-th of which sets a speed limit $$$a_i$$$. This limit means that the next kilometer must be passed in $$$a_i$$$ minutes and is active until you encounter the next along the road. There is a road sign at the start of the road (i. e. in the point with coordinate $$$0$$$), which sets the initial speed limit. If you know the location of all the signs, it's not hard to calculate how much time it takes to drive from Kstolop to Olymp City. Consider an example: Here, you need to drive the first three kilometers in five minutes each, then one kilometer in eight minutes, then four kilometers in three minutes each, and finally the last two kilometers must be passed in six minutes each. Total time is $$$3\\cdot 5 + 1\\cdot 8 + 4\\cdot 3 + 2\\cdot 6 = 47$$$ minutes. To optimize the road traffic, the Government of Mars decided to remove no more than $$$k$$$ road signs. It cannot remove the sign at the start of the road, otherwise, there will be no limit at the start. By removing these signs, the Government also wants to make the time needed to drive from Kstolop to Olymp City as small as possible. The largest industrial enterprises are located in Cydonia, so it's the priority task to optimize the road traffic from Olymp City. So, the Government of Mars wants you to remove the signs in the way described above.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$\\ell$$$, $$$k$$$ ($$$1 \\le n \\le 500$$$, $$$1 \\le \\ell \\le 10^5$$$, $$$0 \\le k \\le n-1$$$), the amount of signs on the road, the distance between the cities and the maximal number of signs you may remove. The second line contains $$$n$$$ integers $$$d_i$$$ ($$$d_1 = 0$$$, $$$d_i \\lt d_{i+1}$$$, $$$0 \\le d_i \\le \\ell - 1$$$) — coordinates of all signs. The third line contains $$$n$$$ integers $$$a_i$$$ ($$$1 \\le a_i \\le 10^4$$$) — speed limits.",
+  "output_specification": "Print a single integer — minimal possible time to drive from Kstolop to Olymp City in minutes, if you remove no more than $$$k$$$ road signs.",
+  "sample_testcases": [
+    {
+      "input": "4 10 0\n0 3 4 8\n5 8 3 6",
+      "output": "47"
+    },
+    {
+      "input": "4 10 2\n0 3 4 8\n5 8 3 6",
+      "output": "38"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

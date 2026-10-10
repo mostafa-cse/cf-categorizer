@@ -1,0 +1,43 @@
+{
+  "id": "1288C",
+  "source": "problemset",
+  "contest_id": 1288,
+  "problem_index": "C",
+  "name": "Two Arrays",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 16110,
+  "problem_url": "https://codeforces.com/problemset/problem/1288/C",
+  "editorial_url": "https://codeforces.com/blog/entry/73105",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$n$$$ and $$$m$$$. Calculate the number of pairs of arrays $$$(a, b)$$$ such that: the length of both arrays is equal to $$$m$$$; each element of each array is an integer between $$$1$$$ and $$$n$$$ (inclusive); $$$a_i \\le b_i$$$ for any index $$$i$$$ from $$$1$$$ to $$$m$$$; array $$$a$$$ is sorted in non-descending order; array $$$b$$$ is sorted in non-ascending order. As the result can be very large, you should print it modulo $$$10^9+7$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 1000$$$, $$$1 \\le m \\le 10$$$).",
+  "output_specification": "Print one integer – the number of arrays $$$a$$$ and $$$b$$$ satisfying the conditions described above modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "5"
+    },
+    {
+      "input": "10 1",
+      "output": "55"
+    },
+    {
+      "input": "723 9",
+      "output": "157557417"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

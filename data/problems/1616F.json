@@ -1,0 +1,37 @@
+{
+  "id": "1616F",
+  "source": "problemset",
+  "contest_id": 1616,
+  "problem_index": "F",
+  "name": "Tricolor Triangles",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "graphs",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 790,
+  "problem_url": "https://codeforces.com/problemset/problem/1616/F",
+  "editorial_url": "https://codeforces.com/blog/entry/98501",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a simple undirected graph with $$$n$$$ vertices and $$$m$$$ edges. Edge $$$i$$$ is colored in the color $$$c_i$$$, which is either $$$1$$$, $$$2$$$, or $$$3$$$, or left uncolored (in this case, $$$c_i = -1$$$). You need to color all of the uncolored edges in such a way that for any three pairwise adjacent vertices $$$1 \\leq a \\lt b \\lt c \\leq n$$$, the colors of the edges $$$a \\leftrightarrow b$$$, $$$b \\leftrightarrow c$$$, and $$$a \\leftrightarrow c$$$ are either pairwise different, or all equal. In case no such coloring exists, you need to determine that.",
+  "input_specification": "The first line of input contains one integer $$$t$$$ ($$$1 \\leq t \\leq 10$$$): the number of test cases. The following lines contain the description of the test cases. In the first line you are given two integers $$$n$$$ and $$$m$$$ ($$$3 \\leq n \\leq 64$$$, $$$0 \\leq m \\leq \\min(256, \\frac{n(n-1)}{2})$$$): the number of vertices and edges in the graph. Each of the next $$$m$$$ lines contains three integers $$$a_i$$$, $$$b_i$$$, and $$$c_i$$$ ($$$1 \\leq a_i, b_i \\leq n$$$, $$$a_i \\ne b_i$$$, $$$c_i$$$ is either $$$-1$$$, $$$1$$$, $$$2$$$, or $$$3$$$), denoting an edge between $$$a_i$$$ and $$$b_i$$$ with color $$$c_i$$$. It is guaranteed that no two edges share the same endpoints.",
+  "output_specification": "For each test case, print $$$m$$$ integers $$$d_1, d_2, \\ldots, d_m$$$, where $$$d_i$$$ is the color of the $$$i$$$-th edge in your final coloring. If there is no valid way to finish the coloring, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n1 2 1\n2 3 2\n3 1 -1\n3 3\n1 2 1\n2 3 1\n3 1 -1\n4 4\n1 2 -1\n2 3 -1\n3 4 -1\n4 1 -1\n3 3\n1 2 1\n2 3 1\n3 1 2",
+      "output": "1 2 3 \n1 1 1 \n1 2 2 3 \n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

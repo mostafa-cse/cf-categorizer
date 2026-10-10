@@ -1,0 +1,42 @@
+{
+  "id": "519E",
+  "source": "problemset",
+  "contest_id": 519,
+  "problem_index": "E",
+  "name": "A and B and Lecture Rooms",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 9200,
+  "problem_url": "https://codeforces.com/problemset/problem/519/E",
+  "editorial_url": "https://codeforces.com/blog/entry/16687",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A and B are preparing themselves for programming contests. The University where A and B study is a set of rooms connected by corridors. Overall, the University has n rooms connected by n - 1 corridors so that you can get from any room to any other one by moving along the corridors. The rooms are numbered from 1 to n . Every day А and B write contests in some rooms of their university, and after each contest they gather together in the same room and discuss problems. A and B want the distance from the rooms where problems are discussed to the rooms where contests are written to be equal. The distance between two rooms is the number of edges on the shortest path between them. As they write contests in new rooms every day, they asked you to help them find the number of possible rooms to discuss problems for each of the following m days.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — the number of rooms in the University. The next n - 1 lines describe the corridors. The i -th of these lines ( 1 ≤ i ≤ n - 1 ) contains two integers a i and b i ( 1 ≤ a i , b i ≤ n ), showing that the i -th corridor connects rooms a i and b i . The next line contains integer m ( 1 ≤ m ≤ 10 5 ) — the number of queries. Next m lines describe the queries. The j -th of these lines ( 1 ≤ j ≤ m ) contains two integers x j and y j ( 1 ≤ x j , y j ≤ n ) that means that on the j -th day A will write the contest in the room x j , B will write in the room y j .",
+  "output_specification": "In the i -th ( 1 ≤ i ≤ m ) line print the number of rooms that are equidistant from the rooms where A and B write contest on the i -th day.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n1 3\n2 4\n1\n2 3",
+      "output": "1"
+    },
+    {
+      "input": "4\n1 2\n2 3\n2 4\n2\n1 2\n1 3",
+      "output": "0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

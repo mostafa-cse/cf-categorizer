@@ -1,0 +1,39 @@
+{
+  "id": "864E",
+  "source": "problemset",
+  "contest_id": 864,
+  "problem_index": "E",
+  "name": "Fire",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "sortings"
+  ],
+  "solved_count": 4894,
+  "problem_url": "https://codeforces.com/problemset/problem/864/E",
+  "editorial_url": "https://codeforces.com/blog/entry/54765",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp is in really serious trouble — his house is on fire! It's time to save the most valuable items. Polycarp estimated that it would take t i seconds to save i -th item. In addition, for each item, he estimated the value of d i — the moment after which the item i will be completely burned and will no longer be valuable for him at all. In particular, if t i ≥ d i , then i -th item cannot be saved. Given the values p i for each of the items, find a set of items that Polycarp can save such that the total value of this items is maximum possible. Polycarp saves the items one after another. For example, if he takes item a first, and then item b , then the item a will be saved in t a seconds, and the item b — in t a + t b seconds after fire started.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 100 ) — the number of items in Polycarp's house. Each of the following n lines contains three integers t i , d i , p i ( 1 ≤ t i ≤ 20 , 1 ≤ d i ≤ 2 000 , 1 ≤ p i ≤ 20 ) — the time needed to save the item i , the time after which the item i will burn completely and the value of item i .",
+  "output_specification": "In the first line print the maximum possible total value of the set of saved items. In the second line print one integer m — the number of items in the desired set. In the third line print m distinct integers — numbers of the saved items in the order Polycarp saves them . Items are 1-indexed in the same order in which they appear in the input. If there are several answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 7 4\n2 6 5\n3 7 6",
+      "output": "11\n2\n2 3"
+    },
+    {
+      "input": "2\n5 6 1\n3 3 5",
+      "output": "1\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

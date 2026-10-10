@@ -1,0 +1,38 @@
+{
+  "id": "455C",
+  "source": "problemset",
+  "contest_id": 455,
+  "problem_index": "C",
+  "name": "Civilization",
+  "rating": 2100,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "ternary search",
+    "trees"
+  ],
+  "solved_count": 6718,
+  "problem_url": "https://codeforces.com/problemset/problem/455/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13336",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Andrew plays a game called \"Civilization\". Dima helps him. The game has n cities and m bidirectional roads. The cities are numbered from 1 to n . Between any pair of cities there either is a single (unique) path, or there is no path at all. A path is such a sequence of distinct cities v 1 , v 2 , ..., v k , that there is a road between any contiguous cities v i and v i + 1 ( 1 ≤ i < k ). The length of the described path equals to ( k - 1) . We assume that two cities lie in the same region if and only if, there is a path connecting these two cities. During the game events of two types take place: Andrew asks Dima about the length of the longest path in the region where city x lies. Andrew asks Dima to merge the region where city x lies with the region where city y lies. If the cities lie in the same region, then no merging is needed. Otherwise, you need to merge the regions as follows: choose a city from the first region, a city from the second region and connect them by a road so as to minimize the length of the longest path in the resulting region. If there are multiple ways to do so, you are allowed to choose any of them. Dima finds it hard to execute Andrew's queries, so he asks you to help him. Help Dima.",
+  "input_specification": "The first line contains three integers n , m , q ( 1 ≤ n ≤ 3·10 5 ; 0 ≤ m < n ; 1 ≤ q ≤ 3·10 5 ) — the number of cities, the number of the roads we already have and the number of queries, correspondingly. Each of the following m lines contains two integers, a i and b i ( a i ≠ b i ; 1 ≤ a i , b i ≤ n ). These numbers represent the road between cities a i and b i . There can be at most one road between two cities. Each of the following q lines contains one of the two events in the following format: 1 x i . It is the request Andrew gives to Dima to find the length of the maximum path in the region that contains city x i ( 1 ≤ x i ≤ n ). 2 x i y i . It is the request Andrew gives to Dima to merge the region that contains city x i and the region that contains city y i ( 1 ≤ x i , y i ≤ n ). Note, that x i can be equal to y i .",
+  "output_specification": "For each event of the first type print the answer on a separate line.",
+  "sample_testcases": [
+    {
+      "input": "6 0 6\n2 1 2\n2 3 4\n2 5 6\n2 3 2\n2 5 3\n1 1",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

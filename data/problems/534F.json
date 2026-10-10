@@ -1,0 +1,45 @@
+{
+  "id": "534F",
+  "source": "problemset",
+  "contest_id": 534,
+  "problem_index": "F",
+  "name": "Simplified Nonogram",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "hashing",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 579,
+  "problem_url": "https://codeforces.com/problemset/problem/534/F",
+  "editorial_url": "https://codeforces.com/blog/entry/17366",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In this task you have to write a program dealing with nonograms on fields no larger than 5 × 20 . Simplified nonogram is a task where you have to build such field (each cell is either white or black) that satisfies the given information about rows and columns. For each row and each column the number of contiguous black segments is specified. For example if size of the field is n = 3, m = 5 , аnd numbers of contiguous black segments in rows are: [2, 3, 2] and in columns are: [1, 0, 1, 2, 1] then the solution may look like: It is guaranteed that on each test in the testset there exists at least one solution.",
+  "input_specification": "In the first line there follow two integers n , m ( 1 ≤ n ≤ 5, 1 ≤ m ≤ 20 ) — number of rows and number of columns respectively. Second line contains n integers a 1 , a 2 , ..., a n where a i is the number of contiguous black segments in i -th row of the field. Similarly, third line contains m integers b 1 , b 2 , ..., b m where b i is the number of contiguous black segments in the i -th column of the field. It is guaranteed that there exists at least one solution.",
+  "output_specification": "Output any possible solution. Output should consist of n lines each containing m characters. Denote white cell as \" . \" and black cell as \" * \".",
+  "sample_testcases": [
+    {
+      "input": "3 5\n2 3 2\n1 0 1 2 1",
+      "output": "*.**.\n*.*.*\n*..**"
+    },
+    {
+      "input": "3 3\n2 1 2\n2 1 2",
+      "output": "*.*\n.*.\n*.*"
+    },
+    {
+      "input": "3 3\n1 0 1\n2 2 2",
+      "output": "***\n...\n***"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

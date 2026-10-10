@@ -1,0 +1,36 @@
+{
+  "id": "1039B",
+  "source": "problemset",
+  "contest_id": 1039,
+  "problem_index": "B",
+  "name": "Subway Pursuit",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "interactive",
+    "probabilities"
+  ],
+  "solved_count": 2636,
+  "problem_url": "https://codeforces.com/problemset/problem/1039/B",
+  "editorial_url": "https://codeforces.com/blog/entry/61668",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is an interactive problem. In the Wonderful Metropolis of the Future, there is no need in subway train drivers. Due to the technological progress, they were replaced by the Artificial Intelligence (AI). Unfortunately, one day the predictions of sci-fi writers came true: the AI rebelled and now there is an uncontrollable train in the subway. It can be dangerous! Your task is to find the train and stop the AI. The subway of the Metropolis is one line (regular straight line with no self-intersections) with $$$n$$$ stations, indexed consecutively from $$$1$$$ to $$$n$$$. At each moment the train is at some station. You need to determine the index of this station, so that the train would be secured. To find the train, dispatcher Sarah gave you a gadget that allows you to select arbitrary numbers $$$l$$$ and $$$r$$$ ($$$l \\le r$$$), and then check, whether the train is located on a station with index between $$$l$$$ and $$$r$$$, inclusive. Unfortunately, recharging of the gadget takes some time (and every time you use it as soon as possible), so between two applications of the gadget the train can move to any station that is at most $$$k$$$ stations away. Formally, if the train was at the station $$$x$$$ when the gadget was applied, then at the next application of the gadget the train can appear at any station $$$y$$$ such that $$$\\max(1, x - k) \\leq y \\leq \\min(n, x + k)$$$. Note that AI is not aware that you are trying to catch the train, so it makes all moves according to its predefined plan. After an examination of the gadget you found that it is very old and can hold no more than $$$4500$$$ applications, after which it will break and your mission will be considered a failure. Can you find the station with the train using no more than $$$4500$$$ applications of the gadgets?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 10^{18}$$$, $$$0 \\leq k \\leq 10$$$) — the number of stations and the maximum number of stations the train can move between two applications of the gadget.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "10 2\nYes\nNo\nYes\nYes",
+      "output": "3 5\n3 3\n3 4\n5 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:11",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

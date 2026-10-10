@@ -1,0 +1,38 @@
+{
+  "id": "1691C",
+  "source": "problemset",
+  "contest_id": 1691,
+  "problem_index": "C",
+  "name": "Sum of Substrings",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "strings"
+  ],
+  "solved_count": 17540,
+  "problem_url": "https://codeforces.com/problemset/problem/1691/C",
+  "editorial_url": "https://codeforces.com/blog/entry/103212",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a binary string $$$s$$$ of length $$$n$$$. Let's define $$$d_i$$$ as the number whose decimal representation is $$$s_i s_{i+1}$$$ (possibly, with a leading zero). We define $$$f(s)$$$ to be the sum of all the valid $$$d_i$$$. In other words, $$$f(s) = \\sum\\limits_{i=1}^{n-1} d_i$$$. For example, for the string $$$s = 1011$$$: $$$d_1 = 10$$$ (ten); $$$d_2 = 01$$$ (one) $$$d_3 = 11$$$ (eleven); $$$f(s) = 10 + 01 + 11 = 22$$$. In one operation you can swap any two adjacent elements of the string. Find the minimum value of $$$f(s)$$$ that can be achieved if at most $$$k$$$ operations are allowed.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). Description of the test cases follows. First line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^5$$$, $$$0 \\le k \\le 10^9$$$) — the length of the string and the maximum number of operations allowed. The second line of each test case contains the binary string $$$s$$$ of length $$$n$$$, consisting of only zeros and ones. It is also given that sum of $$$n$$$ over all the test cases doesn't exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the minimum value of $$$f(s)$$$ you can obtain with at most $$$k$$$ operations.",
+  "sample_testcases": [
+    {
+      "input": "3\n4 0\n1010\n7 1\n0010100\n5 2\n00110",
+      "output": "21\n22\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:28",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

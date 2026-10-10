@@ -1,0 +1,39 @@
+{
+  "id": "934A",
+  "source": "problemset",
+  "contest_id": 934,
+  "problem_index": "A",
+  "name": "A Compatible Pair",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "games"
+  ],
+  "solved_count": 7698,
+  "problem_url": "https://codeforces.com/problemset/problem/934/A",
+  "editorial_url": "https://codeforces.com/blog/entry/57763",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Nian is a monster which lives deep in the oceans. Once a year, it shows up on the land, devouring livestock and even people. In order to keep the monster away, people fill their villages with red colour, light, and cracking noise, all of which frighten the monster out of coming. Little Tommy has n lanterns and Big Banban has m lanterns. Tommy's lanterns have brightness a 1 , a 2 , ..., a n , and Banban's have brightness b 1 , b 2 , ..., b m respectively. Tommy intends to hide one of his lanterns, then Banban picks one of Tommy's non-hidden lanterns and one of his own lanterns to form a pair. The pair's brightness will be the product of the brightness of two lanterns. Tommy wants to make the product as small as possible, while Banban tries to make it as large as possible. You are asked to find the brightness of the chosen pair if both of them choose optimally.",
+  "input_specification": "The first line contains two space-separated integers n and m ( 2 ≤ n , m ≤ 50 ). The second line contains n space-separated integers a 1 , a 2 , ..., a n . The third line contains m space-separated integers b 1 , b 2 , ..., b m . All the integers range from - 10 9 to 10 9 .",
+  "output_specification": "Print a single integer — the brightness of the chosen pair.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n20 18\n2 14",
+      "output": "252"
+    },
+    {
+      "input": "5 3\n-1 0 1 2 3\n-1 0 1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

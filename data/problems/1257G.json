@@ -1,0 +1,42 @@
+{
+  "id": "1257G",
+  "source": "problemset",
+  "contest_id": 1257,
+  "problem_index": "G",
+  "name": "Divisor Set",
+  "rating": 2600,
+  "tags": [
+    "divide and conquer",
+    "fft",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 813,
+  "problem_url": "https://codeforces.com/problemset/problem/1257/G",
+  "editorial_url": "https://codeforces.com/blog/entry/71434",
+  "time_limit": "5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given an integer $$$x$$$ represented as a product of $$$n$$$ its prime divisors $$$p_1 \\cdot p_2, \\cdot \\ldots \\cdot p_n$$$. Let $$$S$$$ be the set of all positive integer divisors of $$$x$$$ (including $$$1$$$ and $$$x$$$ itself). We call a set of integers $$$D$$$ good if (and only if) there is no pair $$$a \\in D$$$, $$$b \\in D$$$ such that $$$a \\ne b$$$ and $$$a$$$ divides $$$b$$$. Find a good subset of $$$S$$$ with maximum possible size. Since the answer can be large, print the size of the subset modulo $$$998244353$$$.",
+  "input_specification": "The first line contains the single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of prime divisors in representation of $$$x$$$. The second line contains $$$n$$$ integers $$$p_1, p_2, \\dots, p_n$$$ ($$$2 \\le p_i \\le 3 \\cdot 10^6$$$) — the prime factorization of $$$x$$$.",
+  "output_specification": "Print the maximum possible size of a good subset modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2999999 43 2999957",
+      "output": "3"
+    },
+    {
+      "input": "6\n2 3 2 3 2 2",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:16",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "739A",
+  "source": "problemset",
+  "contest_id": 739,
+  "problem_index": "A",
+  "name": "Alyona and mex",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 8562,
+  "problem_url": "https://codeforces.com/problemset/problem/739/A",
+  "editorial_url": "https://codeforces.com/blog/entry/48582",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alyona's mother wants to present an array of n non-negative integers to Alyona. The array should be special. Alyona is a capricious girl so after she gets the array, she inspects m of its subarrays. Subarray is a set of some subsequent elements of the array. The i -th subarray is described with two integers l i and r i , and its elements are a [ l i ], a [ l i + 1], ..., a [ r i ] . Alyona is going to find mex for each of the chosen subarrays. Among these m mexes the girl is going to find the smallest. She wants this minimum mex to be as large as possible. You are to find an array a of n elements so that the minimum mex among those chosen by Alyona subarrays is as large as possible. The mex of a set S is a minimum possible non-negative integer that is not in S .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 10 5 ). The next m lines contain information about the subarrays chosen by Alyona. The i -th of these lines contains two integers l i and r i ( 1 ≤ l i ≤ r i ≤ n ), that describe the subarray a [ l i ], a [ l i + 1], ..., a [ r i ] .",
+  "output_specification": "In the first line print single integer — the maximum possible minimum mex . In the second line print n integers — the array a . All the elements in a should be between 0 and 10 9 . It is guaranteed that there is an optimal answer in which all the elements in a are between 0 and 10 9 . If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 3\n2 5\n4 5",
+      "output": "2\n1 0 2 1 0"
+    },
+    {
+      "input": "4 2\n1 4\n2 4",
+      "output": "3\n5 2 0 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "961F",
+  "source": "problemset",
+  "contest_id": 961,
+  "problem_index": "F",
+  "name": "k-substrings",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "hashing",
+    "string suffix structures"
+  ],
+  "solved_count": 1023,
+  "problem_url": "https://codeforces.com/problemset/problem/961/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58743",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string s consisting of n lowercase Latin letters. Let's denote k -substring of s as a string subs k = s k s k + 1 .. s n + 1 - k . Obviously, subs 1 = s , and there are exactly such substrings. Let's call some string t an odd proper suprefix of a string T iff the following conditions are met: | T | > | t | ; | t | is an odd number; t is simultaneously a prefix and a suffix of T . For evey k -substring ( ) of s you have to calculate the maximum length of its odd proper suprefix.",
+  "input_specification": "The first line contains one integer n (2 ≤ n ≤ 10 6 ) — the length s . The second line contains the string s consisting of n lowercase Latin letters.",
+  "output_specification": "Print integers. i -th of them should be equal to maximum length of an odd proper suprefix of i -substring of s (or - 1 , if there is no such string that is an odd proper suprefix of i -substring).",
+  "sample_testcases": [
+    {
+      "input": "15\nbcabcabcabcabca",
+      "output": "9 7 5 3 1 -1 -1 -1"
+    },
+    {
+      "input": "24\nabaaabaaaabaaabaaaabaaab",
+      "output": "15 13 11 9 7 5 3 1 1 -1 -1 1"
+    },
+    {
+      "input": "19\ncabcabbcabcabbcabca",
+      "output": "5 3 1 -1 -1 1 1 -1 -1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

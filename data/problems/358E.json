@@ -1,0 +1,53 @@
+{
+  "id": "358E",
+  "source": "problemset",
+  "contest_id": 358,
+  "problem_index": "E",
+  "name": "Dima and Kicks",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "dsu",
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 449,
+  "problem_url": "https://codeforces.com/problemset/problem/358/E",
+  "editorial_url": "https://codeforces.com/blog/entry/9334",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Dima is a good person. In fact, he's great. But all good things come to an end... Seryozha is going to kick Dima just few times.. For this reason he divides the room into unit squares. Now the room is a rectangle n × m consisting of unit squares. For the beginning, Seryozha put Dima in a center of some square. Then he started to kick Dima (it is known, that he kicks Dima at least once). Each time when Dima is kicked he flyes up and moves into one of four directions (up, left, right, down). On each move Dima passes k ( k > 1) unit of the length in the corresponding direction. Seryozha is really kind, so he kicks Dima in such way that Dima never meets the walls (in other words, Dima never leave the room's space). Seryozha is also dynamic character so Dima never flies above the same segment, connecting a pair of adjacent squares, twice. Seryozha kicks Dima for a long time, but Dima is not vindictive — Dima writes. Dima marked all squares in which he was staying or above which he was flying. Thanks to kicks, Dima does not remember the k value, so he asks you to find all possible values which matches to the Dima's records.",
+  "input_specification": "The first line contains n and m (1 ≤ n , m ≤ 10 3 ) — size of the room. Next n lines goes, each contains m numbers a ij — Dima's notes: a ij = 1 , if Dima was staying in the square ( i , j ) or was flying above it. Otherwise a ij = 0 . At least one a ij equals 1 .",
+  "output_specification": "In a single line in accending order print all k ( k > 1) , which matches the Dima's notes. If there are no such k and Dima invented this story with kicks, print - 1 .",
+  "sample_testcases": [
+    {
+      "input": "5 5\n1 1 1 1 1\n1 0 0 0 1\n1 0 0 0 1\n1 0 0 0 1\n1 1 1 1 1",
+      "output": "2 4"
+    },
+    {
+      "input": "7 7\n0 0 1 1 1 0 0\n0 0 1 0 1 0 0\n1 1 1 1 1 1 1\n1 0 1 0 1 0 1\n1 1 1 1 1 1 1\n0 0 1 0 1 0 0\n0 0 1 1 1 0 0",
+      "output": "2"
+    },
+    {
+      "input": "3 3\n1 1 1\n1 1 1\n1 1 1",
+      "output": "-1"
+    },
+    {
+      "input": "4 4\n1 1 1 1\n0 0 0 0\n0 0 0 0\n0 0 0 0",
+      "output": "3"
+    },
+    {
+      "input": "5 5\n0 0 1 0 0\n0 0 1 0 0\n1 1 1 1 1\n0 0 1 0 0\n0 0 1 0 0",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

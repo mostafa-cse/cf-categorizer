@@ -1,0 +1,37 @@
+{
+  "id": "2239D",
+  "source": "problemset",
+  "contest_id": 2239,
+  "problem_index": "D",
+  "name": "Hunting the Beast",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 717,
+  "problem_url": "https://codeforces.com/problemset/problem/2239/D",
+  "editorial_url": "https://codeforces.com/blog/entry/154788",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In Zhuji, a city in central Zhejiang Province, local folklore tells of a wild beast known as the Modeiyon . Dwelling deep in the mountains, it is said to sneak into villages at night to devour livestock and prey on lone travelers. Though many elders claim to have seen it, no photograph of the creature has ever been taken. A brave group of $$$m$$$ people decides to head up the mountain to hunt the beast. The mountain's locations and trails can be modeled as a functional graph $$$G$$$ with $$$n$$$ vertices (numbered $$$1$$$ to $$$n$$$). A functional graph is a directed graph with $$$n$$$ vertices and $$$n$$$ edges, where every vertex has an out-degree of exactly $$$1$$$. Additionally, it is known that the mountain's trails do not ever form self-loops . The group will choose exactly $$$m$$$ distinct vertices to form their initial starting set $$$S$$$. A starting set $$$S$$$ is defined as successful if every vertex $$$u$$$ in the graph is reachable from at least one vertex $$$v \\in S$$$ (a vertex is always reachable from itself). There are $$$\\binom{n}{m}$$$ possible ways to choose the starting set of size $$$m$$$. They define the value of a graph $$$G$$$ as the number of successful starting sets it has. However, the exact layout of the mountain's trails is unknown. If the destination of the single outgoing edge from each vertex is chosen arbitrarily from the remaining $$$n-1$$$ vertices (excluding the vertex itself), there are exactly $$$(n-1)^n$$$ possible functional graphs. Given $$$n$$$ and $$$m$$$, your task is to calculate the sum of the values of all $$$(n-1)^n$$$ possible functional graphs. Since the answer can be very large, print it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains two integers $$$n,m$$$ ($$$1\\le m \\le n\\le 10^6$$$) — the number of vertices in the graph and the number of starting vertices. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer — the sum of the values of all $$$(n-1)^n$$$ possible functional graphs, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 1\n3 1\n3 2\n4 2\n8 3",
+      "output": "2\n12\n18\n216\n20415360"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

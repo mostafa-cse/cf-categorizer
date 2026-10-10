@@ -1,0 +1,38 @@
+{
+  "id": "2228F",
+  "source": "problemset",
+  "contest_id": 2228,
+  "problem_index": "F",
+  "name": "Momoyo and the Network",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "dfs and similar",
+    "divide and conquer",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 384,
+  "problem_url": "https://codeforces.com/problemset/problem/2228/F",
+  "editorial_url": "https://codeforces.com/blog/entry/153619",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Where Is That Bustling Marketplace Now — Unconnected Marketeers The Underground Great Line Network is a grand transit system connecting all corners of Gensokyo. Momoyo noticed that the network's layout resembled a tree$$$^{\\text{∗}}$$$ structure. She couldn't help but imagine the most effective way to dismantle that tree. Given a tree with $$$n$$$ nodes where node $$$i$$$ has weight $$$a_i$$$, select a simple path of exactly $$$k$$$ edges and remove all edges on it. This splits the tree into $$$k+1$$$ connected components, each with weight equal to the sum of its nodes' weights. You need to maximize the minimum component weight, or output $$$-1$$$ if no simple path of exactly $$$k$$$ edges exists. $$$^{\\text{∗}}$$$A tree is a connected graph without cycles.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n-1$$$, $$$2 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers, where the $$$i$$$-th integer represents $$$a_i$$$ ($$$1 \\le a_i \\le 10^9$$$). The next $$$n-1$$$ lines each contain two integers $$$u$$$ and $$$v$$$, representing an edge of the tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the maximum possible minimum component weight, or $$$-1$$$ if no such path exists.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 1\n1 2 3 4\n1 2\n2 3\n3 4\n4 2\n1 2 3 4\n1 2\n2 3\n3 4\n4 3\n1 2 3 4\n1 2\n2 3\n3 4\n7 2\n7 1 3 2 2 4 3\n1 2\n2 3\n2 4\n2 5\n5 6\n5 7\n4 3\n1 2 3 4\n1 2\n1 3\n1 4",
+      "output": "4\n3\n1\n6\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

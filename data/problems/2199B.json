@@ -1,0 +1,36 @@
+{
+  "id": "2199B",
+  "source": "problemset",
+  "contest_id": 2199,
+  "problem_index": "B",
+  "name": "Two Towers",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1290,
+  "problem_url": "https://codeforces.com/problemset/problem/2199/B",
+  "editorial_url": "https://codeforces.com/blog/entry/151783",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You have two towers made of blocks, standing next to each other. Initially, the height of the first tower is $$$a$$$, and the height of the second tower is $$$b$$$. In one action, you can: take one block and place it on one of the towers, increasing its height by $$$1$$$; or take two blocks and place one on each tower, increasing both heights by $$$1$$$. However, this can only be done if their heights are equal. Your goal is to make the height of the first tower equal to $$$c$$$, and the height of the second tower equal to $$$d$$$. What is the minimum number of actions you need to perform?",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of one line containing $$$4$$$ integers $$$a, b, c, d$$$ ($$$1 \\le a \\le c \\le 10^8$$$; $$$1 \\le b \\le d \\le 10^8$$$).",
+  "output_specification": "For each test case, output one integer — the minimum number of actions that you have to perform.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 5\n1 1 1 1\n2 6 3 8\n3 3 6 4\n2 4 7 7",
+      "output": "4\n0\n3\n3\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

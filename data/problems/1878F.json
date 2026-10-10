@@ -1,0 +1,36 @@
+{
+  "id": "1878F",
+  "source": "problemset",
+  "contest_id": 1878,
+  "problem_index": "F",
+  "name": "Vasilije Loves Number Theory",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5065,
+  "problem_url": "https://codeforces.com/problemset/problem/1878/F",
+  "editorial_url": "https://codeforces.com/blog/entry/120813",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasilije is a smart student and his discrete mathematics teacher Sonja taught him number theory very well. He gave Ognjen a positive integer $$$n$$$. Denote $$$d(n)$$$ as the number of positive integer divisors of $$$n$$$, and denote $$$gcd(a, b)$$$ as the largest integer $$$g$$$ such that $$$a$$$ is divisible by $$$g$$$ and $$$b$$$ is divisible by $$$g$$$. After that, he gave Ognjen $$$q$$$ queries, and there are $$$2$$$ types of queries. $$$1$$$, $$$x$$$ — set $$$n$$$ to $$$n \\cdot x$$$, and then answer the following question: does there exist a positive integer $$$a$$$ such that $$$gcd(a, n) = 1$$$, and $$$d(n \\cdot a) = n$$$? $$$2$$$ — reset $$$n$$$ to its initial value (before any queries). Note that $$$n$$$ does not get back to its initial value after the type 1 query. Since Ognjen is afraid of number theory, Vasilije promised him that after each query , $$$d(n) \\le 10^9$$$, however, even with that constraint, he still needs your help with this problem.",
+  "input_specification": "The first line contains a positive integer $$$t$$$, ($$$1 \\le t \\le 100$$$) — the number of test cases. The first line of each test case contains $$$2$$$ integers, $$$n$$$ and $$$q$$$ ($$$1 \\le n \\le 10^{6}$$$, $$$1\\le q \\le 1000$$$) — the number $$$n$$$ and the number of queries. The following $$$q$$$ lines contain an integer $$$k$$$ ($$$1 \\le k \\le 2$$$), if $$$k=1$$$ then there is another integer in this line $$$x$$$ ($$$1 \\le x \\le 10^6$$$) — the description of the queries. It is guaranteed that, for the given input, $$$d(n)$$$ does not exceed $$$10^9$$$ at any point. It is guaranteed that the sum of $$$q$$$ over all test cases doesn't exceed $$$10^3$$$.",
+  "output_specification": "For each type 1 query, you should output \" YES \" if there exist such positive integer $$$a$$$ that $$$gcd(a, n) = 1$$$ and $$$d(n \\cdot a)=n$$$, and \" NO \" if he can't. You can output the answer in any case (for example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "7\n1 5\n1 1\n1 2\n2\n1 8\n1 9\n20 4\n1 3\n2\n1 7\n1 12\n16 10\n1 6\n1 6\n1 10\n1 9\n1 1\n1 9\n1 7\n1 3\n1 2\n1 10\n9 1\n1 3\n8 1\n1 2\n8 3\n1 5\n1 8\n1 10\n11 5\n1 8\n1 2\n1 1\n1 3\n1 1",
+      "output": "YES\nYES\nYES\nYES\n\nYES\nNO\nYES\n\nYES\nNO\nYES\nYES\nYES\nNO\nYES\nNO\nYES\nYES\n\nNO\n\nNO\n\nYES\nNO\nNO\n\nYES\nNO\nNO\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

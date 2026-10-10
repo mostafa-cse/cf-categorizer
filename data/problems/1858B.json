@@ -1,0 +1,38 @@
+{
+  "id": "1858B",
+  "source": "problemset",
+  "contest_id": 1858,
+  "problem_index": "B",
+  "name": "The Walkway",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 13285,
+  "problem_url": "https://codeforces.com/problemset/problem/1858/B",
+  "editorial_url": "https://codeforces.com/blog/entry/119398",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ benches near the Main Walkway in Summer Infomatics School. These benches are numbered by integers from $$$1$$$ to $$$n$$$ in order they follow. Also there are $$$m$$$ cookie sellers near the Walkway. The $$$i$$$-th ($$$1 \\le i \\le m$$$) cookie sellers is located near the $$$s_i$$$-th bench. Petya is standing in the beginning of the Walkway. He will pass near all benches starting from the $$$1$$$-st bench and ending with the $$$n$$$-th bench. Petya passes the distance between two consecutive benches in $$$1$$$ minute. He has a knapsack with an infinite amount of cookies. Petya is going to eat cookies from his knapsack and buy them from cookie sellers during the walk. Petya eats cookies only near the benches according to the following rule: he will eat the cookie near the $$$i$$$-th ($$$1 \\le i \\le n$$$) bench if and only if at least one of the following conditions holds: There is a cookie seller near the $$$i$$$-th bench. Then Petya will buy a cookie from cookie seller and eat it immediately. Petya has not yet eaten a cookie. Then Petya will take a cookie from his knapsack and eat it immediately. At least $$$d$$$ minutes passed since Petya ate the previous cookie. In other words, Petya has not eaten a cookie near the benches $$$i-1, i-2, \\ldots, \\max(i-d+1, 1)$$$. Then Petya will take a cookie from his knapsack and eat it immediately. You may assume that Petya eats cookies instantly. Petya will not eat two or more cookies near the same bench. You want to minimize the number of cookies Petya will eat during his walk. In order to do this, you will ask the administration of the Summer Informatics School to remove exactly one cookie seller from the Walkway before Petya starts his walk. Please determine the minimum possible number of cookies Petya can eat after removing exactly one cookie seller. Also determine the number of cookie sellers, such that if you remove one of them, Petya will eat the minimum possible number of cookies.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. The first line of each test case contains three integers $$$n$$$, $$$m$$$ and $$$d$$$ ($$$2 \\le d \\le n \\le 10^9$$$, $$$2 \\le m \\le \\min(10^{5}, n)$$$) — the number of benches, the number of cookie sellers and the value of parameter $$$d$$$ from the statement, respectively. The second line of each test case contains $$$m$$$ integers $$$s_1, s_2, \\ldots, s_m$$$ ($$$1 \\le s_i \\le n$$$) — the locations of the cookie sellers. It is guaranteed that $$$s_{i} \\lt s_{i+1}$$$ for all $$$1 \\leq i \\leq m - 1$$$. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case print two integers — the minimum number of cookies that Petya can eat if exactly one cookie seller is removed, and the number of cookie sellers such that if one of them is removed, Petya will eat the minimum possible number of cookies.",
+  "sample_testcases": [
+    {
+      "input": "8\n6 2 2\n2 5\n8 3 2\n3 5 8\n10 4 9\n2 8 9 10\n30 5 8\n6 8 15 24 29\n30 5 8\n6 8 12 20 27\n8 8 3\n1 2 3 4 5 6 7 8\n2 2 2\n1 2\n1000000000 3 20000000\n57008429 66778899 837653445",
+      "output": "3 1\n4 1\n4 4\n6 4\n5 2\n7 7\n1 1\n51 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

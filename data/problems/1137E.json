@@ -1,0 +1,35 @@
+{
+  "id": "1137E",
+  "source": "problemset",
+  "contest_id": 1137,
+  "problem_index": "E",
+  "name": "Train Car Selection",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 664,
+  "problem_url": "https://codeforces.com/problemset/problem/1137/E",
+  "editorial_url": "https://codeforces.com/blog/entry/65825",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Vasya likes to travel by train, but doesn't like when the car he travels in is located in the tail of the train. Vasya gets on the train at the station. The train consists of $$$n$$$ cars indexed from $$$1$$$ to $$$n$$$ counting from the locomotive (head of the train). Three types of events occur while the train is moving: Some number of cars are added to the head of the train; Some number of cars are added to the tail of the train; Vasya recalculates the values of the convenience of the cars (read more about it below). At each moment of time we will index the cars from the head of the train, starting from $$$1$$$. Note that when adding new cars to the head of the train, the indexing of the old ones may shift. To choose which car to go in, Vasya will use the value $$$A_i$$$ for each car (where $$$i$$$ is a car index), which is calculated as follows: At the beginning of the trip $$$A_i=0$$$, as well as for the new cars at the time of their addition. During the next recalculation Vasya chooses some positive integers $$$b$$$ and $$$s$$$ and adds to all $$$A_i$$$ value $$$b + (i - 1) \\cdot s$$$. Vasya hasn't decided yet where he will get on the train and where will get off the train, so after each event of one of the three types he wants to know the least index of the car, such that its value $$$A_i$$$ is minimal. Since there is a lot of cars, Vasya asked you to write a program that answers his question.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\leq 10^9$$$, $$$1 \\leq m \\leq 300\\,000$$$), the number of cars in the train at the time of departure from the station and the number of stations, respectively. Next $$$m$$$ lines contain the descriptions of events. Each event is one of the following three types: \"$$$1$$$ $$$k$$$\" ($$$1 \\le k \\le 10^9$$$), add $$$k$$$ cars to the head of the train \"$$$2$$$ $$$k$$$\" ($$$1 \\le k \\le 10^9$$$), add $$$k$$$ cars to the tail of the train \"$$$3$$$ $$$b$$$ $$$s$$$\" ($$$1 \\le b, s \\le 10^9$$$), recalculate the convenience of all train cars. It is guaranteed that at any time the train length does not exceed $$$10^9$$$. Also it's guaranteed that the integers $$$A_i$$$ will not grow too high. Formally, it's guaranteed that if we sum the largest addition over all events of the $$$3$$$-rd type (that is, $$$b + (n - 1) \\cdot s$$$, where $$$n$$$ is the number of cars at that moment) then the acquired sum would be at most $$$10^{18}$$$.",
+  "output_specification": "After each of the $$$m$$$ queries print two integers: $$$j$$$ and $$$A_j$$$ — the number of the car closest to the head of the train, such that its value $$$A_j$$$ is minimal, and the value $$$A_j$$$ itself.",
+  "sample_testcases": [
+    {
+      "input": "1 8\n1 1\n3 1 1\n3 1 1\n2 1\n2 1\n3 1 1\n2 1\n3 1 5",
+      "output": "1 0\n1 1\n1 2\n3 0\n3 0\n1 3\n5 0\n1 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:47",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

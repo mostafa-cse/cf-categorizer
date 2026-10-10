@@ -1,0 +1,35 @@
+{
+  "id": "339D",
+  "source": "problemset",
+  "contest_id": 339,
+  "problem_index": "D",
+  "name": "Xenia and Bit Operations",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 34989,
+  "problem_url": "https://codeforces.com/problemset/problem/339/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8725",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Xenia the beginner programmer has a sequence a , consisting of 2 n non-negative integers: a 1 , a 2 , ..., a 2 n . Xenia is currently studying bit operations. To better understand how they work, Xenia decided to calculate some value v for a . Namely, it takes several iterations to calculate value v . At the first iteration, Xenia writes a new sequence a 1 or a 2 , a 3 or a 4 , ..., a 2 n - 1 or a 2 n , consisting of 2 n - 1 elements. In other words, she writes down the bit-wise OR of adjacent elements of sequence a . At the second iteration, Xenia writes the bitwise exclusive OR of adjacent elements of the sequence obtained after the first iteration. At the third iteration Xenia writes the bitwise OR of the adjacent elements of the sequence obtained after the second iteration. And so on; the operations of bitwise exclusive OR and bitwise OR alternate. In the end, she obtains a sequence consisting of one element, and that element is v . Let's consider an example. Suppose that sequence a = (1, 2, 3, 4) . Then let's write down all the transformations (1, 2, 3, 4) → (1 or 2 = 3, 3 or 4 = 7) → (3 xor 7 = 4) . The result is v = 4 . You are given Xenia's initial sequence. But to calculate value v for a given sequence would be too easy, so you are given additional m queries. Each query is a pair of integers p , b . Query p , b means that you need to perform the assignment a p = b . After each query, you need to print the new value v for the new sequence a .",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n ≤ 17, 1 ≤ m ≤ 10 5 ) . The next line contains 2 n integers a 1 , a 2 , ..., a 2 n (0 ≤ a i < 2 30 ) . Each of the next m lines contains queries. The i -th line contains integers p i , b i (1 ≤ p i ≤ 2 n , 0 ≤ b i < 2 30 ) — the i -th query.",
+  "output_specification": "Print m integers — the i -th integer denotes value v for sequence a after the i -th query.",
+  "sample_testcases": [
+    {
+      "input": "2 4\n1 6 3 5\n1 4\n3 4\n1 2\n1 2",
+      "output": "1\n3\n3\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

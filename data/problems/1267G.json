@@ -1,0 +1,39 @@
+{
+  "id": "1267G",
+  "source": "problemset",
+  "contest_id": 1267,
+  "problem_index": "G",
+  "name": "Game Relics",
+  "rating": 3000,
+  "tags": [
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 877,
+  "problem_url": "https://codeforces.com/problemset/problem/1267/G",
+  "editorial_url": "http://nerc.itmo.ru/archive/2019/nerc-2019-tutorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Esports is a form of competitive sports using video games. Dota 2 is one of the most popular competitive video games in Esports. Recently, a new video game Dota 3 was released. In Dota 3 a player can buy some relics for their hero. Relics are counters that track hero's actions and statistics in a game. Gloria likes to play Dota 3, so she wants to buy all $$$n$$$ available relics for her favorite hero. Relics can be bought using an in-game currency called shards. Each relic has its own price — $$$c_i$$$ shards for the $$$i$$$-th relic. A player can buy a relic using one of the following options: Pay $$$c_i$$$ shards to buy the $$$i$$$-th relic; Pay $$$x$$$ shards and randomly get one of all $$$n$$$ relics. The probability of getting a relic is the same for all $$$n$$$ relics. If a duplicate relic is received, then the relic is recycled and $$$\\frac{x}{2}$$$ shards are given back to the player. Gloria wants to buy all $$$n$$$ relics. Help her minimize the expected number of shards she spends to buy all the relics.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$x$$$ ($$$1 \\le n \\le 100$$$; $$$1 \\le x \\le 10\\,000$$$) — the number of relics and the cost to receive a random relic. The second line consists of $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$x \\le c_i \\le 10\\,000$$$; $$$\\sum{c_i} \\le 10\\,000$$$) — the prices of $$$n$$$ relics.",
+  "output_specification": "Print a single real number — the minimum expected number of shards that Gloria must spend to buy all the relics. The absolute or relative error should not exceed $$$10^{-9}$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 20\n25 100",
+      "output": "47.50000000000000000"
+    },
+    {
+      "input": "4 30\n60 50 60 80",
+      "output": "171.25000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:14",
+  "main_topic": "Math",
+  "subtopic": "Probabilities and Expected Values",
+  "subsubtopic": "393. Probabilities and Expected Values",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Probabilities and Expected Values paradigm under the Math framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

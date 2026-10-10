@@ -1,0 +1,38 @@
+{
+  "id": "661C",
+  "source": "problemset",
+  "contest_id": 661,
+  "problem_index": "C",
+  "name": "Array Sum",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 140,
+  "problem_url": "https://codeforces.com/problemset/problem/661/C",
+  "editorial_url": "https://codeforces.com/blog/entry/44292",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given an array of integers. Calculate the sum of its elements.",
+  "input_specification": "The i -th line of the input contains an integer a i ( 0 ≤ a ≤ 1000 ) — the i -th element of the array. The size of the array is between 1 and 10, inclusive. Note that the size of the array is not given explicitly!",
+  "output_specification": "Output a single integer — the sum of the elements of the array.",
+  "sample_testcases": [
+    {
+      "input": "2\n15\n110\n3",
+      "output": "130"
+    },
+    {
+      "input": "90\n0\n21\n331\n45",
+      "output": "487"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

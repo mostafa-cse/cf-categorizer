@@ -1,0 +1,36 @@
+{
+  "id": "2247D2",
+  "source": "problemset",
+  "contest_id": 2247,
+  "problem_index": "D2",
+  "name": "XOR Sorting (Hard Version)",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 2598,
+  "problem_url": "https://codeforces.com/problemset/problem/2247/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/155337",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The only difference between the versions is that in this version, $$$0 \\le q \\le 10^6$$$. Note that zero-based indexing is used in this problem. For an array $$$b$$$ consisting of $$$m$$$ positive integers, define $$$f(b)$$$ as follows. For a non-negative integer $$$k$$$, we say that $$$b$$$ can be $$$k$$$-sorted if it can be sorted in non-decreasing order by performing the following operation any number of times: Choose two indices $$$i$$$ and $$$j$$$ ($$$0 \\le i \\lt j \\le m - 1$$$) such that $$$i \\oplus j \\le k$$$$$$^{\\text{∗}}$$$. Note that the condition applies to the indices $$$i$$$ and $$$j$$$, not to the elements $$$b_i$$$ and $$$b_j$$$. Swap the elements $$$b_i$$$ and $$$b_j$$$. The value $$$f(b)$$$ is defined as the smallest non-negative integer $$$k$$$ such that the array $$$b$$$ can be $$$k$$$-sorted. You are given an array $$$a$$$ of length $$$n$$$, consisting of positive integers. You will perform $$$q$$$ updates on $$$a$$$. Each update has the following form: $$$i \\; x$$$: assign $$$a_i = x$$$. Note that the updates are persistent . In other words, each update affects all subsequent states of the array. For each of the $$$q + 1$$$ states of $$$a$$$ — the initial state and the state after each of the $$$q$$$ updates — find the value of $$$f(a)$$$. $$$^{\\text{∗}}$$$$$$\\oplus$$$ denotes the bitwise XOR operation",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n \\le 10^6$$$, $$$0 \\le q \\le 10^6$$$) — the length of the array $$$a$$$ and the number of updates. The second line of each test case contains $$$n$$$ integers $$$a_0, a_1, \\ldots, a_{n - 1}$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array $$$a$$$. The $$$j$$$-th of the following $$$q$$$ lines contains two integers $$$i_j$$$ and $$$x_j$$$ ($$$0 \\le i_j \\lt n$$$, $$$1 \\le x_j \\le 10^9$$$) — the description of the $$$j$$$-th update. This update means that the assignment $$$a_{i_j} = x_j$$$ is performed. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$. It is guaranteed that the sum of $$$q$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output $$$q + 1$$$ integers — the values of $$$f(a)$$$ for the initial state of the array and after each of the $$$q$$$ updates, in order.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 0\n1 2\n2 1\n1000000000 999999999\n1 1000000000\n6 2\n2 5 3 4 1 6\n1 2\n4 5",
+      "output": "0\n1\n0\n4\n4\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

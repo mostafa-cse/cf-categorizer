@@ -1,0 +1,36 @@
+{
+  "id": "1656D",
+  "source": "problemset",
+  "contest_id": 1656,
+  "problem_index": "D",
+  "name": "K-good",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7678,
+  "problem_url": "https://codeforces.com/problemset/problem/1656/D",
+  "editorial_url": "https://codeforces.com/blog/entry/101211",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "We say that a positive integer $$$n$$$ is $$$k$$$-good for some positive integer $$$k$$$ if $$$n$$$ can be expressed as a sum of $$$k$$$ positive integers which give $$$k$$$ distinct remainders when divided by $$$k$$$. Given a positive integer $$$n$$$, find some $$$k \\geq 2$$$ so that $$$n$$$ is $$$k$$$-good or tell that such a $$$k$$$ does not exist.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^5$$$) — the number of test cases. Each test case consists of one line with an integer $$$n$$$ ($$$2 \\leq n \\leq 10^{18}$$$).",
+  "output_specification": "For each test case, print a line with a value of $$$k$$$ such that $$$n$$$ is $$$k$$$-good ($$$k \\geq 2$$$), or $$$-1$$$ if $$$n$$$ is not $$$k$$$-good for any $$$k$$$. If there are multiple valid values of $$$k$$$, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n4\n6\n15\n20",
+      "output": "-1\n-1\n3\n3\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "6E",
+  "source": "problemset",
+  "contest_id": 6,
+  "problem_index": "E",
+  "name": "Exposition",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dsu",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 4123,
+  "problem_url": "https://codeforces.com/problemset/problem/6/E",
+  "editorial_url": "https://codeforces.com/blog/entry/249",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "There are several days left before the fiftieth birthday of a famous Berland's writer Berlbury. In this connection the local library decided to make an exposition of the works of this famous science-fiction writer. It was decided as well that it is necessary to include into the exposition only those books that were published during a particular time period. It is obvious that if the books differ much in size, the visitors will not like it. That was why the organizers came to the opinion, that the difference between the highest and the lowest books in the exposition should be not more than k millimeters. The library has n volumes of books by Berlbury, arranged in chronological order of their appearance. The height of each book in millimeters is know, it is h i . As Berlbury is highly respected in the city, the organizers want to include into the exposition as many books as possible, and to find out what periods of his creative work they will manage to cover. You are asked to help the organizers cope with this hard task.",
+  "input_specification": "The first line of the input data contains two integer numbers separated by a space n ( 1 ≤ n ≤ 10 5 ) and k ( 0 ≤ k ≤ 10 6 ) — the amount of books by Berlbury in the library, and the maximum allowed height difference between the lowest and the highest books. The second line contains n integer numbers separated by a space. Each number h i ( 1 ≤ h i ≤ 10 6 ) is the height of the i -th book in millimeters.",
+  "output_specification": "In the first line of the output data print two numbers a and b (separate them by a space), where a is the maximum amount of books the organizers can include into the exposition, and b — the amount of the time periods, during which Berlbury published a books, and the height difference between the lowest and the highest among these books is not more than k milllimeters. In each of the following b lines print two integer numbers separated by a space — indexes of the first and the last volumes from each of the required time periods of Berlbury's creative work.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n14 12 10",
+      "output": "2 2\n1 2\n2 3"
+    },
+    {
+      "input": "2 0\n10 10",
+      "output": "2 1\n1 2"
+    },
+    {
+      "input": "4 5\n8 19 10 13",
+      "output": "2 1\n3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:54",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

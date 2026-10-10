@@ -1,0 +1,40 @@
+{
+  "id": "1082F",
+  "source": "problemset",
+  "contest_id": 1082,
+  "problem_index": "F",
+  "name": "Speed Dial",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 643,
+  "problem_url": "https://codeforces.com/problemset/problem/1082/F",
+  "editorial_url": "https://codeforces.com/blog/entry/63544",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp's phone book contains $$$n$$$ phone numbers, each of them is described by $$$s_i$$$ — the number itself and $$$m_i$$$ — the number of times Polycarp dials it in daily. Polycarp has just bought a brand new phone with an amazing speed dial feature! More precisely, $$$k$$$ buttons on it can have a number assigned to it (not necessary from the phone book). To enter some number Polycarp can press one of these $$$k$$$ buttons and then finish the number using usual digit buttons (entering a number with only digit buttons is also possible). Speed dial button can only be used when no digits are entered. No button can have its number reassigned. What is the minimal total number of digit number presses Polycarp can achieve after he assigns numbers to speed dial buttons and enters each of the numbers from his phone book the given number of times in an optimal way?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 500$$$, $$$1 \\le k \\le 10$$$) — the amount of numbers in Polycarp's phone book and the number of speed dial buttons his new phone has. The $$$i$$$-th of the next $$$n$$$ lines contain a string $$$s_i$$$ and an integer $$$m_i$$$ $$$(1 \\le m_i \\le 500)$$$, where $$$s_i$$$ is a non-empty string of digits from $$$0$$$ to $$$9$$$ inclusive (the $$$i$$$-th number), and $$$m_i$$$ is the amount of times it will be dialed, respectively. It is guaranteed that the total length of all phone numbers will not exceed $$$500$$$.",
+  "output_specification": "Print a single integer — the minimal total number of digit number presses Polycarp can achieve after he assigns numbers to speed dial buttons and enters each of the numbers from his phone book the given number of times in an optimal way.",
+  "sample_testcases": [
+    {
+      "input": "3 1\n0001 5\n001 4\n01 1",
+      "output": "14"
+    },
+    {
+      "input": "3 1\n0001 5\n001 6\n01 1",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

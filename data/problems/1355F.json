@@ -1,0 +1,36 @@
+{
+  "id": "1355F",
+  "source": "problemset",
+  "contest_id": 1355,
+  "problem_index": "F",
+  "name": "Guess Divisors Count",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "number theory"
+  ],
+  "solved_count": 993,
+  "problem_url": "https://codeforces.com/problemset/problem/1355/F",
+  "editorial_url": "https://codeforces.com/blog/entry/77491",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. We have hidden an integer $$$1 \\le X \\le 10^{9}$$$. You don't have to guess this number. You have to find the number of divisors of this number, and you don't even have to find the exact number : your answer will be considered correct if its absolute error is not greater than 7 or its relative error is not greater than $$$0.5$$$. More formally, let your answer be $$$ans$$$ and the number of divisors of $$$X$$$ be $$$d$$$, then your answer will be considered correct if at least one of the two following conditions is true: $$$| ans - d | \\le 7$$$; $$$\\frac{1}{2} \\le \\frac{ans}{d} \\le 2$$$. You can make at most $$$22$$$ queries. One query consists of one integer $$$1 \\le Q \\le 10^{18}$$$. In response, you will get $$$gcd(X, Q)$$$ — the greatest common divisor of $$$X$$$ and $$$Q$$$. The number $$$X$$$ is fixed before all queries. In other words, interactor is not adaptive . Let's call the process of guessing the number of divisors of number $$$X$$$ a game . In one test you will have to play $$$T$$$ independent games, that is, guess the number of divisors $$$T$$$ times for $$$T$$$ independent values of $$$X$$$.",
+  "input_specification": "The first line of input contains one integer $$$T$$$ ($$$1 \\le T \\le 100$$$) — the number of games.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n\n1\n\n1\n\n1\n\n\n1024\n\n1048576\n\n4194304",
+      "output": "? 982306799268821872\n\n? 230856864650023977\n\n? 134690134760714371\n\n! 5\n? 1024\n\n? 1048576\n\n? 1073741824\n\n! 42"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

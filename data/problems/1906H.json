@@ -1,0 +1,47 @@
+{
+  "id": "1906H",
+  "source": "problemset",
+  "contest_id": 1906,
+  "problem_index": "H",
+  "name": "Twin Friends",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1166,
+  "problem_url": "https://codeforces.com/problemset/problem/1906/H",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2023/problem_analysis.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "You meet two new friends who are twins. The name of the elder twin is $$$A$$$, which consists of $$$N$$$ characters. While the name of the younger twin is $$$B$$$, which consists of $$$M$$$ characters. It is known that $$$N \\leq M$$$. You want to call each of them with a nickname. For the elder twin, you want to pick any permutation of $$$A$$$ as the nickname. For the younger twin, you want to remove exactly $$$M - N$$$ characters from any permutation of $$$B$$$. Denote the nicknames of the elder twin and the younger twin as $$$A'$$$ and $$$B'$$$, respectively. You want the nicknames to satisfy the following requirement. For each $$$i$$$ that satisfies $$$1 \\leq i \\leq N$$$, $$$B'_i$$$ must be equal to either $$$A'_i$$$ or the next letter that follows alphabetically after $$$A'_i$$$ (if such a next letter exists). Determine the number of different pairs of nicknames $$$(A', B')$$$ that satisfy the requirement. Two pairs of nicknames are considered different if at least one of the nicknames are different. As the result might be large, find the answer modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line consists of two integers $$$N$$$ $$$M$$$ ($$$1 \\leq N \\leq M \\leq 200\\,000$$$). The second line consists of a string $$$A$$$ of length $$$N$$$. The third line consists of a string $$$B$$$ of length $$$M$$$. All strings consist of only upper-case letters.",
+  "output_specification": "Output a single integer representing number of different pairs $$$(A', B')$$$ that satisfy the requirement, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 4\nAMA\nANAB",
+      "output": "9"
+    },
+    {
+      "input": "5 8\nBINUS\nBINANUSA",
+      "output": "120"
+    },
+    {
+      "input": "15 30\nBINUSUNIVERSITY\nBINANUSANTARAUNIVERSITYJAKARTA",
+      "output": "151362308"
+    },
+    {
+      "input": "4 4\nUDIN\nASEP",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

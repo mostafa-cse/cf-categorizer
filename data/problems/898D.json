@@ -1,0 +1,46 @@
+{
+  "id": "898D",
+  "source": "problemset",
+  "contest_id": 898,
+  "problem_index": "D",
+  "name": "Alarm Clock",
+  "rating": 1600,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 4661,
+  "problem_url": "https://codeforces.com/problemset/problem/898/D",
+  "editorial_url": "https://codeforces.com/blog/entry/56381",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Every evening Vitalya sets n alarm clocks to wake up tomorrow. Every alarm clock rings during exactly one minute and is characterized by one integer a i — number of minute after midnight in which it rings. Every alarm clock begins ringing at the beginning of the minute and rings during whole minute. Vitalya will definitely wake up if during some m consecutive minutes at least k alarm clocks will begin ringing. Pay attention that Vitalya considers only alarm clocks which begin ringing during given period of time. He doesn't consider alarm clocks which started ringing before given period of time and continues ringing during given period of time. Vitalya is so tired that he wants to sleep all day long and not to wake up. Find out minimal number of alarm clocks Vitalya should turn off to sleep all next day. Now all alarm clocks are turned on.",
+  "input_specification": "First line contains three integers n , m and k ( 1 ≤ k ≤ n ≤ 2·10 5 , 1 ≤ m ≤ 10 6 ) — number of alarm clocks, and conditions of Vitalya's waking up. Second line contains sequence of distinct integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 6 ) in which a i equals minute on which i -th alarm clock will ring. Numbers are given in arbitrary order. Vitalya lives in a Berland in which day lasts for 10 6 minutes.",
+  "output_specification": "Output minimal number of alarm clocks that Vitalya should turn off to sleep all next day long.",
+  "sample_testcases": [
+    {
+      "input": "3 3 2\n3 5 1",
+      "output": "1"
+    },
+    {
+      "input": "5 10 3\n12 8 18 25 1",
+      "output": "0"
+    },
+    {
+      "input": "7 7 2\n7 3 4 1 6 5 2",
+      "output": "6"
+    },
+    {
+      "input": "2 2 2\n1 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

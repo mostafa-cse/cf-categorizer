@@ -1,0 +1,49 @@
+{
+  "id": "1559D2",
+  "source": "problemset",
+  "contest_id": 1559,
+  "problem_index": "D2",
+  "name": "Mocha and Diana (Hard Version)",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 3295,
+  "problem_url": "https://codeforces.com/problemset/problem/1559/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/93898",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The only difference between the two versions is the constraint on $$$n$$$. You can make hacks only if all versions of the problem are solved. A forest is an undirected graph without cycles (not necessarily connected). Mocha and Diana are friends in Zhijiang, both of them have a forest with nodes numbered from $$$1$$$ to $$$n$$$, and they would like to add edges to their forests such that: After adding edges, both of their graphs are still forests. They add the same edges. That is, if an edge $$$(u, v)$$$ is added to Mocha's forest, then an edge $$$(u, v)$$$ is added to Diana's forest, and vice versa. Mocha and Diana want to know the maximum number of edges they can add, and which edges to add.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m_1$$$ and $$$m_2$$$ ($$$1 \\le n \\le 10^5$$$, $$$0 \\le m_1, m_2 \\lt n$$$) — the number of nodes and the number of initial edges in Mocha's forest and Diana's forest. Each of the next $$$m_1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\neq v$$$) — the edges in Mocha's forest. Each of the next $$$m_2$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\neq v$$$) — the edges in Diana's forest.",
+  "output_specification": "The first line contains only one integer $$$h$$$, the maximum number of edges Mocha and Diana can add. Each of the next $$$h$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\neq v$$$) — the edge you add each time. If there are multiple correct answers, you can print any one of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2 2\n1 2\n2 3\n1 2\n1 3",
+      "output": "0"
+    },
+    {
+      "input": "5 3 2\n5 4\n2 1\n4 3\n4 3\n1 4",
+      "output": "1\n2 4"
+    },
+    {
+      "input": "8 1 2\n1 7\n2 6\n1 5",
+      "output": "5\n5 2\n2 3\n3 4\n4 7\n6 8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

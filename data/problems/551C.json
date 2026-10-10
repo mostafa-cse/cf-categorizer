@@ -1,0 +1,43 @@
+{
+  "id": "551C",
+  "source": "problemset",
+  "contest_id": 551,
+  "problem_index": "C",
+  "name": "GukiZ hates Boxes",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "greedy"
+  ],
+  "solved_count": 4120,
+  "problem_url": "https://codeforces.com/problemset/problem/551/C",
+  "editorial_url": "https://codeforces.com/blog/entry/18508",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Professor GukiZ is concerned about making his way to school, because massive piles of boxes are blocking his way. In total there are n piles of boxes, arranged in a line, from left to right, i -th pile ( 1 ≤ i ≤ n ) containing a i boxes. Luckily, m students are willing to help GukiZ by removing all the boxes from his way. Students are working simultaneously. At time 0 , all students are located left of the first pile. It takes one second for every student to move from this position to the first pile, and after that, every student must start performing sequence of two possible operations, each taking one second to complete. Possible operations are: If i ≠ n , move from pile i to pile i + 1 ; If pile located at the position of student is not empty, remove one box from it. GukiZ's students aren't smart at all, so they need you to tell them how to remove boxes before professor comes (he is very impatient man, and doesn't want to wait). They ask you to calculate minumum time t in seconds for which they can remove all the boxes from GukiZ's way. Note that students can be positioned in any manner after t seconds, but all the boxes must be removed.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 10 5 ), the number of piles of boxes and the number of GukiZ's students. The second line contains n integers a 1 , a 2 , ... a n ( 0 ≤ a i ≤ 10 9 ) where a i represents the number of boxes on i -th pile. It's guaranteed that at least one pile of is non-empty.",
+  "output_specification": "In a single line, print one number, minimum time needed to remove all the boxes in seconds.",
+  "sample_testcases": [
+    {
+      "input": "2 1\n1 1",
+      "output": "4"
+    },
+    {
+      "input": "3 2\n1 0 2",
+      "output": "5"
+    },
+    {
+      "input": "4 100\n3 4 5 4",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

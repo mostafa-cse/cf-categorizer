@@ -1,0 +1,41 @@
+{
+  "id": "407C",
+  "source": "problemset",
+  "contest_id": 407,
+  "problem_index": "C",
+  "name": "Curious Array",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1267,
+  "problem_url": "https://codeforces.com/problemset/problem/407/C",
+  "editorial_url": "https://codeforces.com/blog/entry/11333",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You've got an array consisting of n integers: a [1], a [2], ..., a [ n ] . Moreover, there are m queries, each query can be described by three integers l i , r i , k i . Query l i , r i , k i means that we should add to each element a [ j ] , where l i ≤ j ≤ r i . Record means the binomial coefficient, or the number of combinations from y elements into groups of x elements. You need to fulfil consecutively all queries and then print the final array.",
+  "input_specification": "The first line contains integers n , m ( 1 ≤ n , m ≤ 10 5 ). The second line contains n integers a [1], a [2], ..., a [ n ] ( 0 ≤ a i ≤ 10 9 ) — the initial array. Next m lines contain queries in the format l i , r i , k i — to all elements of the segment l i ... r i add number ( 1 ≤ l i ≤ r i ≤ n ; 0 ≤ k ≤ 100 ).",
+  "output_specification": "Print n integers: the i -th number is the value of element a [ i ] after all the queries. As the values can be rather large, print them modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "5 1\n0 0 0 0 0\n1 5 0",
+      "output": "1 1 1 1 1"
+    },
+    {
+      "input": "10 2\n1 2 3 4 5 0 0 0 0 0\n1 6 1\n6 10 2",
+      "output": "2 4 6 8 10 7 3 6 10 15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

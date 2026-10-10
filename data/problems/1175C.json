@@ -1,0 +1,36 @@
+{
+  "id": "1175C",
+  "source": "problemset",
+  "contest_id": 1175,
+  "problem_index": "C",
+  "name": "Electrification",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy"
+  ],
+  "solved_count": 7442,
+  "problem_url": "https://codeforces.com/problemset/problem/1175/C",
+  "editorial_url": "https://codeforces.com/blog/entry/67484",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "At first, there was a legend related to the name of the problem, but now it's just a formal statement. You are given $$$n$$$ points $$$a_1, a_2, \\dots, a_n$$$ on the $$$OX$$$ axis. Now you are asked to find such an integer point $$$x$$$ on $$$OX$$$ axis that $$$f_k(x)$$$ is minimal possible. The function $$$f_k(x)$$$ can be described in the following way: form a list of distances $$$d_1, d_2, \\dots, d_n$$$ where $$$d_i = |a_i - x|$$$ (distance between $$$a_i$$$ and $$$x$$$); sort list $$$d$$$ in non-descending order; take $$$d_{k + 1}$$$ as a result. If there are multiple optimal answers you can print any of them.",
+  "input_specification": "The first line contains single integer $$$T$$$ ($$$ 1 \\le T \\le 2 \\cdot 10^5$$$) — number of queries. Next $$$2 \\cdot T$$$ lines contain descriptions of queries. All queries are independent. The first line of each query contains two integers $$$n$$$, $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le k \\lt n$$$) — the number of points and constant $$$k$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_1 \\lt a_2 \\lt \\dots \\lt a_n \\le 10^9$$$) — points in ascending order. It's guaranteed that $$$\\sum{n}$$$ doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "Print $$$T$$$ integers — corresponding points $$$x$$$ which have minimal possible value of $$$f_k(x)$$$. If there are multiple answers you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2\n1 2 5\n2 1\n1 1000000000\n1 0\n4",
+      "output": "3\n500000000\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

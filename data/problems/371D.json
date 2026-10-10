@@ -1,0 +1,41 @@
+{
+  "id": "371D",
+  "source": "problemset",
+  "contest_id": 371,
+  "problem_index": "D",
+  "name": "Vessels",
+  "rating": 1800,
+  "tags": [
+    "data structures",
+    "dsu",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 6924,
+  "problem_url": "https://codeforces.com/problemset/problem/371/D",
+  "editorial_url": "https://codeforces.com/blog/entry/9876",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a system of n vessels arranged one above the other as shown in the figure below. Assume that the vessels are numbered from 1 to n , in the order from the highest to the lowest, the volume of the i -th vessel is a i liters. Initially, all the vessels are empty. In some vessels water is poured. All the water that overflows from the i -th vessel goes to the ( i + 1) -th one. The liquid that overflows from the n -th vessel spills on the floor. Your task is to simulate pouring water into the vessels. To do this, you will need to handle two types of queries: Add x i liters of water to the p i -th vessel; Print the number of liters of water in the k i -th vessel. When you reply to the second request you can assume that all the water poured up to this point, has already overflown between the vessels.",
+  "input_specification": "The first line contains integer n — the number of vessels ( 1 ≤ n ≤ 2·10 5 ). The second line contains n integers a 1 , a 2 , ..., a n — the vessels' capacities ( 1 ≤ a i ≤ 10 9 ). The vessels' capacities do not necessarily increase from the top vessels to the bottom ones (see the second sample). The third line contains integer m — the number of queries ( 1 ≤ m ≤ 2·10 5 ). Each of the next m lines contains the description of one query. The query of the first type is represented as \" 1 p i x i \", the query of the second type is represented as \" 2 k i \" ( 1 ≤ p i ≤ n , 1 ≤ x i ≤ 10 9 , 1 ≤ k i ≤ n ).",
+  "output_specification": "For each query, print on a single line the number of liters of water in the corresponding vessel.",
+  "sample_testcases": [
+    {
+      "input": "2\n5 10\n6\n1 1 4\n2 1\n1 2 5\n1 1 4\n2 1\n2 2",
+      "output": "4\n5\n8"
+    },
+    {
+      "input": "3\n5 10 8\n6\n1 1 12\n2 2\n1 1 6\n1 3 2\n2 2\n2 3",
+      "output": "7\n10\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

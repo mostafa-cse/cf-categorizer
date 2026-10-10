@@ -1,0 +1,38 @@
+{
+  "id": "301D",
+  "source": "problemset",
+  "contest_id": 301,
+  "problem_index": "D",
+  "name": "Yaroslav and Divisors",
+  "rating": 2200,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 3233,
+  "problem_url": "https://codeforces.com/problemset/problem/301/D",
+  "editorial_url": "https://codeforces.com/blog/entry/7560",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Yaroslav has an array p = p 1 , p 2 , ..., p n (1 ≤ p i ≤ n ) , consisting of n distinct integers. Also, he has m queries: Query number i is represented as a pair of integers l i , r i (1 ≤ l i ≤ r i ≤ n ) . The answer to the query l i , r i is the number of pairs of integers q , w ( l i ≤ q , w ≤ r i ) such that p q is the divisor of p w . Help Yaroslav, answer all his queries.",
+  "input_specification": "The first line contains the integers n and m (1 ≤ n , m ≤ 2·10 5 ) . The second line contains n distinct integers p 1 , p 2 , ..., p n (1 ≤ p i ≤ n ) . The following m lines contain Yaroslav's queries. The i -th line contains integers l i , r i (1 ≤ l i ≤ r i ≤ n ) .",
+  "output_specification": "Print m integers — the answers to Yaroslav's queries in the order they appear in the input. Please, do not use the %lld specifier to read or write 64-bit integers in C++ . It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "1 1\n1\n1 1",
+      "output": "1"
+    },
+    {
+      "input": "10 9\n1 2 3 4 5 6 7 8 9 10\n1 10\n2 9\n3 8\n4 7\n5 6\n2 2\n9 10\n5 10\n4 10",
+      "output": "27\n14\n8\n4\n2\n1\n2\n7\n9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:38",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

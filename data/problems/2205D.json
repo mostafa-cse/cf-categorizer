@@ -1,0 +1,39 @@
+{
+  "id": "2205D",
+  "source": "problemset",
+  "contest_id": 2205,
+  "problem_index": "D",
+  "name": "Simons and Beating Peaks",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 5902,
+  "problem_url": "https://codeforces.com/problemset/problem/2205/D",
+  "editorial_url": "https://codeforces.com/blog/entry/151310",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "My loveliest wishes dissolved into the air; At eighteen, I poured my dreams into the mic to share. — SHUN, 720 We call an array $$$b$$$ of length $$$m$$$ cool if and only if: There exists no index $$$i$$$ ($$$1 \\lt i \\lt m$$$) such that $$$b_i=\\max(\\{b_{i-1}, b_i, b_{i+1}\\})$$$. Simons has an array $$$a$$$ of size $$$n$$$. Initially, the array is a permutation$$$^{\\text{∗}}$$$. He must perform the following operation until the array is cool : Choose an index $$$i$$$ ($$$1 \\lt i \\lt n$$$) such that $$$a_i=\\max(\\{a_{i-1}, a_i, a_{i+1}\\})$$$. Then, he can remove either $$$a_{i-1}$$$ or $$$a_{i+1}$$$ from the array. After removal, a gap appears in the array, and the left and right sides of the gap will be rejoined. Find the minimum number of operations for Simons to perform. $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 5\\cdot 10^4$$$). The description of the test cases follows. The first line contains an integer $$$n$$$ ($$$3\\le n\\le 5\\cdot 10^5$$$) — the size of $$$a$$$. The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1\\le a_i\\le n$$$, all $$$a_i$$$-s are distinct) — the array Simons has initially. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum number of operations for Simons to perform.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n1 2 3\n5\n4 1 3 2 5\n6\n4 5 3 6 2 1\n7\n6 5 1 7 4 2 3\n15\n7 4 10 12 9 14 5 3 8 11 1 15 2 13 6",
+      "output": "0\n1\n3\n3\n9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

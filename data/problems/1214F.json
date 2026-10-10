@@ -1,0 +1,39 @@
+{
+  "id": "1214F",
+  "source": "problemset",
+  "contest_id": 1214,
+  "problem_index": "F",
+  "name": "Employment",
+  "rating": 2700,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 549,
+  "problem_url": "https://codeforces.com/problemset/problem/1214/F",
+  "editorial_url": "https://codeforces.com/blog/entry/69563",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Two large companies \"Cecsi\" and \"Poca Pola\" are fighting against each other for a long time. In order to overcome their competitor, \"Poca Pola\" started a super secret project, for which it has total $$$n$$$ vacancies in all of their offices. After many tests and interviews $$$n$$$ candidates were selected and the only thing left was their employment. Because all candidates have the same skills, it doesn't matter where each of them will work. That is why the company decided to distribute candidates between workplaces so that the total distance between home and workplace over all candidates is minimal. It is well known that Earth is round, so it can be described as a circle, and all $$$m$$$ cities on Earth can be described as points on this circle. All cities are enumerated from $$$1$$$ to $$$m$$$ so that for each $$$i$$$ ($$$1 \\le i \\le m - 1$$$) cities with indexes $$$i$$$ and $$$i + 1$$$ are neighbors and cities with indexes $$$1$$$ and $$$m$$$ are neighbors as well. People can move only along the circle. The distance between any two cities equals to minimal number of transitions between neighboring cities you have to perform to get from one city to another. In particular, the distance between the city and itself equals $$$0$$$. The \"Poca Pola\" vacancies are located at offices in cities $$$a_1, a_2, \\ldots, a_n$$$. The candidates live in cities $$$b_1, b_2, \\ldots, b_n$$$. It is possible that some vacancies are located in the same cities and some candidates live in the same cities. The \"Poca Pola\" managers are too busy with super secret project, so you were asked to help \"Poca Pola\" to distribute candidates between workplaces, so that the sum of the distance between home and workplace over all candidates is minimum possible.",
+  "input_specification": "The first line contains two integers $$$m$$$ and $$$n$$$ ($$$1 \\le m \\le 10^9$$$, $$$1 \\le n \\le 200\\,000$$$) — the number of cities on Earth and the number of vacancies. The second line contains $$$n$$$ integers $$$a_1, a_2, a_3, \\ldots, a_n$$$ ($$$1 \\le a_i \\le m$$$) — the cities where vacancies are located. The third line contains $$$n$$$ integers $$$b_1, b_2, b_3, \\ldots, b_n$$$ ($$$1 \\le b_i \\le m$$$) — the cities where the candidates live.",
+  "output_specification": "The first line should contain the minimum total distance between home and workplace over all candidates. The second line should contain $$$n$$$ different integers from $$$1$$$ to $$$n$$$. The $$$i$$$-th of them should be the index of candidate that should work at $$$i$$$-th workplace.",
+  "sample_testcases": [
+    {
+      "input": "10 3\n1 5 5\n10 4 6",
+      "output": "3\n1 2 3"
+    },
+    {
+      "input": "10 3\n1 4 8\n8 3 6",
+      "output": "4\n2 3 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:26",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,50 @@
+{
+  "id": "690D2",
+  "source": "problemset",
+  "contest_id": 690,
+  "problem_index": "D2",
+  "name": "The Wall (medium)",
+  "rating": 1800,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 1500,
+  "problem_url": "https://codeforces.com/problemset/problem/690/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/45628",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Heidi the Cow is aghast: cracks in the northern Wall? Zombies gathering outside, forming groups, preparing their assault? This must not happen! Quickly, she fetches her HC 2 (Handbook of Crazy Constructions) and looks for the right chapter: How to build a wall: Take a set of bricks. Select one of the possible wall designs. Computing the number of possible designs is left as an exercise to the reader. Place bricks on top of each other, according to the chosen design. This seems easy enough. But Heidi is a Coding Cow, not a Constructing Cow. Her mind keeps coming back to point 2b. Despite the imminent danger of a zombie onslaught, she wonders just how many possible walls she could build with up to n bricks. A wall is a set of wall segments as defined in the easy version. How many different walls can be constructed such that the wall consists of at least 1 and at most n bricks? Two walls are different if there exist a column c and a row r such that one wall has a brick in this spot, and the other does not. Along with n , you will be given C , the width of the wall (as defined in the easy version). Return the number of different walls modulo 10 6 + 3 .",
+  "input_specification": "The first line contains two space-separated integers n and C , 1 ≤ n ≤ 500000 , 1 ≤ C ≤ 200000 .",
+  "output_specification": "Print the number of different walls that Heidi could build, modulo 10 6 + 3 .",
+  "sample_testcases": [
+    {
+      "input": "5 1",
+      "output": "5"
+    },
+    {
+      "input": "2 2",
+      "output": "5"
+    },
+    {
+      "input": "3 2",
+      "output": "9"
+    },
+    {
+      "input": "11 5",
+      "output": "4367"
+    },
+    {
+      "input": "37 63",
+      "output": "230574"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

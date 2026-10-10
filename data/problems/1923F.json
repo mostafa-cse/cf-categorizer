@@ -1,0 +1,52 @@
+{
+  "id": "1923F",
+  "source": "problemset",
+  "contest_id": 1923,
+  "problem_index": "F",
+  "name": "Shrink-Reverse",
+  "rating": 2800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy",
+    "hashing",
+    "implementation",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 550,
+  "problem_url": "https://codeforces.com/problemset/problem/1923/F",
+  "editorial_url": "https://codeforces.com/blog/entry/126339",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a binary string $$$s$$$ of length $$$n$$$ (a string consisting of $$$n$$$ characters, and each character is either 0 or 1 ). Let's look at $$$s$$$ as at a binary representation of some integer, and name that integer as the value of string $$$s$$$. For example, the value of 000 is $$$0$$$, the value of 01101 is $$$13$$$, \" 100000 \" is $$$32$$$ and so on. You can perform at most $$$k$$$ operations on $$$s$$$. Each operation should have one of the two following types: SWAP : choose two indices $$$i \\lt j$$$ in $$$s$$$ and swap $$$s_i$$$ with $$$s_j$$$; SHRINK-REVERSE : delete all leading zeroes from $$$s$$$ and reverse $$$s$$$. For example, after you perform SHRINK-REVERSE on 000101100 , you'll get 001101 . What is the minimum value of $$$s$$$ you can achieve by performing at most $$$k$$$ operations on $$$s$$$?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 5 \\cdot 10^5$$$; $$$1 \\le k \\le n$$$) — the length of the string $$$s$$$ and the maximum number of operations. The second line contains the string $$$s$$$ of length $$$n$$$ consisting of characters 0 and/or 1 . Additional constraint on the input: $$$s$$$ contains at least one 1 .",
+  "output_specification": "Print a single integer — the minimum value of $$$s$$$ you can achieve using no more than $$$k$$$ operations. Since the answer may be too large, print it modulo $$$10^{9} + 7$$$. Note that you need to minimize the original value, not the remainder.",
+  "sample_testcases": [
+    {
+      "input": "8 2\n10010010",
+      "output": "7"
+    },
+    {
+      "input": "8 2\n01101000",
+      "output": "7"
+    },
+    {
+      "input": "30 30\n111111111111111111111111111111",
+      "output": "73741816"
+    },
+    {
+      "input": "14 1\n10110001111100",
+      "output": "3197"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:31",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1705D",
+  "source": "problemset",
+  "contest_id": 1705,
+  "problem_index": "D",
+  "name": "Mark and Lightbulbs",
+  "rating": 1800,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 7282,
+  "problem_url": "https://codeforces.com/problemset/problem/1705/D",
+  "editorial_url": "https://codeforces.com/blog/entry/104881",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mark has just purchased a rack of $$$n$$$ lightbulbs. The state of the lightbulbs can be described with binary string $$$s = s_1s_2\\dots s_n$$$, where $$$s_i=\\texttt{1}$$$ means that the $$$i$$$-th lightbulb is turned on, while $$$s_i=\\texttt{0}$$$ means that the $$$i$$$-th lightbulb is turned off. Unfortunately, the lightbulbs are broken, and the only operation he can perform to change the state of the lightbulbs is the following: Select an index $$$i$$$ from $$$2,3,\\dots,n-1$$$ such that $$$s_{i-1}\\ne s_{i+1}$$$. Toggle $$$s_i$$$. Namely, if $$$s_i$$$ is $$$\\texttt{0}$$$, set $$$s_i$$$ to $$$\\texttt{1}$$$ or vice versa. Mark wants the state of the lightbulbs to be another binary string $$$t$$$. Help Mark determine the minimum number of operations to do so.",
+  "input_specification": "The first line of the input contains a single integer $$$q$$$ ($$$1\\leq q\\leq 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$3\\leq n\\leq 2\\cdot 10^5$$$) — the number of lightbulbs. The second line of each test case contains a binary string $$$s$$$ of length $$$n$$$ — the initial state of the lightbulbs. The third line of each test case contains a binary string $$$t$$$ of length $$$n$$$ — the final state of the lightbulbs. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a line containing the minimum number of operations Mark needs to perform to transform $$$s$$$ to $$$t$$$. If there is no such sequence of operations, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n4\n0100\n0010\n4\n1010\n0100\n5\n01001\n00011\n6\n000101\n010011",
+      "output": "2\n-1\n-1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

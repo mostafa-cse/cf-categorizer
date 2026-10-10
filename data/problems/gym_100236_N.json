@@ -1,0 +1,21 @@
+{
+  "id": "gym_100236_N",
+  "source": "gym",
+  "contest_id": 100236,
+  "problem_index": "N",
+  "name": "Lights",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100236/problem/N",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:30:21",
+  "updated_at": "2026-10-10 06:30:21"
+}

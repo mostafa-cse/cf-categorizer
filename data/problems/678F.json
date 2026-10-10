@@ -1,0 +1,36 @@
+{
+  "id": "678F",
+  "source": "problemset",
+  "contest_id": 678,
+  "problem_index": "F",
+  "name": "Lena and Queries",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "geometry"
+  ],
+  "solved_count": 1129,
+  "problem_url": "https://codeforces.com/problemset/problem/678/F",
+  "editorial_url": "https://codeforces.com/blog/entry/45405",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lena is a programmer. She got a task to solve at work. There is an empty set of pairs of integers and n queries to process. Each query is one of three types: Add a pair ( a , b ) to the set. Remove a pair added in the query number i . All queries are numbered with integers from 1 to n . For a given integer q find the maximal value x · q + y over all pairs ( x , y ) from the set. Help Lena to process the queries.",
+  "input_specification": "The first line of input contains integer n ( 1 ≤ n ≤ 3·10 5 ) — the number of queries. Each of the next n lines starts with integer t ( 1 ≤ t ≤ 3 ) — the type of the query. A pair of integers a and b ( - 10 9 ≤ a , b ≤ 10 9 ) follows in the query of the first type. An integer i ( 1 ≤ i ≤ n ) follows in the query of the second type. It is guaranteed that i is less than the number of the query, the query number i has the first type and the pair from the i -th query is not already removed. An integer q ( - 10 9 ≤ q ≤ 10 9 ) follows in the query of the third type.",
+  "output_specification": "For the queries of the third type print on a separate line the desired maximal value of x · q + y . If there are no pairs in the set print \" EMPTY SET \".",
+  "sample_testcases": [
+    {
+      "input": "7\n3 1\n1 2 3\n3 1\n1 -1 100\n3 1\n2 4\n3 1",
+      "output": "EMPTY SET\n5\n99\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

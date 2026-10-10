@@ -1,0 +1,39 @@
+{
+  "id": "117B",
+  "source": "problemset",
+  "contest_id": 117,
+  "problem_index": "B",
+  "name": "Very Interesting Game",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "number theory"
+  ],
+  "solved_count": 1763,
+  "problem_url": "https://codeforces.com/problemset/problem/117/B",
+  "editorial_url": "https://codeforces.com/blog/entry/2752",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In a very ancient country the following game was popular. Two people play the game. Initially first player writes a string s 1 , consisting of exactly nine digits and representing a number that does not exceed a . After that second player looks at s 1 and writes a string s 2 , consisting of exactly nine digits and representing a number that does not exceed b . Here a and b are some given constants, s 1 and s 2 are chosen by the players. The strings are allowed to contain leading zeroes. If a number obtained by the concatenation (joining together) of strings s 1 and s 2 is divisible by mod , then the second player wins. Otherwise the first player wins. You are given numbers a , b , mod . Your task is to determine who wins if both players play in the optimal manner. If the first player wins, you are also required to find the lexicographically minimum winning move.",
+  "input_specification": "The first line contains three integers a , b , mod ( 0 ≤ a , b ≤ 10 9 , 1 ≤ mod ≤ 10 7 ).",
+  "output_specification": "If the first player wins, print \" 1 \" and the lexicographically minimum string s 1 he has to write to win. If the second player wins, print the single number \" 2 \".",
+  "sample_testcases": [
+    {
+      "input": "1 10 7",
+      "output": "2"
+    },
+    {
+      "input": "4 0 9",
+      "output": "1 000000001"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "1204E",
+  "source": "problemset",
+  "contest_id": 1204,
+  "problem_index": "E",
+  "name": "Natasha, Sasha and the Prefix Sums",
+  "rating": 2300,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2407,
+  "problem_url": "https://codeforces.com/problemset/problem/1204/E",
+  "editorial_url": "https://codeforces.com/blog/entry/69244",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Natasha's favourite numbers are $$$n$$$ and $$$1$$$, and Sasha's favourite numbers are $$$m$$$ and $$$-1$$$. One day Natasha and Sasha met and wrote down every possible array of length $$$n+m$$$ such that some $$$n$$$ of its elements are equal to $$$1$$$ and another $$$m$$$ elements are equal to $$$-1$$$. For each such array they counted its maximal prefix sum, probably an empty one which is equal to $$$0$$$ (in another words, if every nonempty prefix sum is less to zero, then it is considered equal to zero). Formally, denote as $$$f(a)$$$ the maximal prefix sum of an array $$$a_{1, \\ldots ,l}$$$ of length $$$l \\geq 0$$$. Then: $$$$$$f(a) = \\max (0, \\smash{\\displaystyle\\max_{1 \\leq i \\leq l}} \\sum_{j=1}^{i} a_j )$$$$$$ Now they want to count the sum of maximal prefix sums for each such an array and they are asking you to help. As this sum can be very large, output it modulo $$$998\\: 244\\: 853$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$0 \\le n,m \\le 2\\,000$$$).",
+  "output_specification": "Output the answer to the problem modulo $$$998\\: 244\\: 853$$$.",
+  "sample_testcases": [
+    {
+      "input": "0 2",
+      "output": "0"
+    },
+    {
+      "input": "2 0",
+      "output": "2"
+    },
+    {
+      "input": "2 2",
+      "output": "5"
+    },
+    {
+      "input": "2000 2000",
+      "output": "674532367"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "633E",
+  "source": "problemset",
+  "contest_id": 633,
+  "problem_index": "E",
+  "name": "Startup Funding",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "data structures",
+    "probabilities",
+    "two pointers"
+  ],
+  "solved_count": 660,
+  "problem_url": "https://codeforces.com/problemset/problem/633/E",
+  "editorial_url": "https://codeforces.com/blog/entry/43392",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "An e-commerce startup pitches to the investors to get funding. They have been functional for n weeks now and also have a website! For each week they know the number of unique visitors during this week v i and the revenue c i . To evaluate the potential of the startup at some range of weeks from l to r inclusive investors use the minimum among the maximum number of visitors multiplied by 100 and the minimum revenue during this period, that is: The truth is that investors have no idea how to efficiently evaluate the startup, so they are going to pick some k random distinct weeks l i and give them to managers of the startup. For each l i they should pick some r i ≥ l i and report maximum number of visitors and minimum revenue during this period. Then, investors will calculate the potential of the startup for each of these ranges and take minimum value of p ( l i , r i ) as the total evaluation grade of the startup. Assuming that managers of the startup always report the optimal values of r i for some particular l i , i.e., the value such that the resulting grade of the startup is maximized, what is the expected resulting grade of the startup?",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ k ≤ n ≤ 1 000 000 ). The second line contains n integers v i ( 1 ≤ v i ≤ 10 7 ) — the number of unique visitors during each week. The third line contains n integers c i ( 1 ≤ c i ≤ 10 7 ) —the revenue for each week.",
+  "output_specification": "Print a single real value — the expected grade of the startup. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct, if .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n3 2 1\n300 200 300",
+      "output": "133.3333333"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

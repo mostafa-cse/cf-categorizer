@@ -1,0 +1,36 @@
+{
+  "id": "232D",
+  "source": "problemset",
+  "contest_id": 232,
+  "problem_index": "D",
+  "name": "Fence",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "string suffix structures"
+  ],
+  "solved_count": 585,
+  "problem_url": "https://codeforces.com/problemset/problem/232/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5514",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "John Doe has a crooked fence, consisting of n rectangular planks, lined up from the left to the right: the plank that goes i -th (1 ≤ i ≤ n ) (from left to right) has width 1 and height h i . We will assume that the plank that goes i -th (1 ≤ i ≤ n ) (from left to right) has index i . A piece of the fence from l to r (1 ≤ l ≤ r ≤ n ) is a sequence of planks of wood with indices from l to r inclusive, that is, planks with indices l , l + 1, ..., r . The width of the piece of the fence from l to r is value r - l + 1 . Two pieces of the fence from l 1 to r 1 and from l 2 to r 2 are called matching, if the following conditions hold: the pieces do not intersect, that is, there isn't a single plank, such that it occurs in both pieces of the fence; the pieces are of the same width; for all i (0 ≤ i ≤ r 1 - l 1 ) the following condition holds: h l 1 + i + h l 2 + i = h l 1 + h l 2 . John chose a few pieces of the fence and now wants to know how many distinct matching pieces are for each of them. Two pieces of the fence are distinct if there is a plank, which belongs to one of them and does not belong to the other one.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — the number of wood planks in the fence. The second line contains n space-separated integers h 1 , h 2 , ..., h n ( 1 ≤ h i ≤ 10 9 ) — the heights of fence planks. The third line contains integer q ( 1 ≤ q ≤ 10 5 ) — the number of queries. Next q lines contain two space-separated integers l i and r i ( 1 ≤ l i ≤ r i ≤ n ) — the boundaries of the i -th piece of the fence.",
+  "output_specification": "For each query on a single line print a single integer — the number of pieces of the fence that match the given one. Print the answers to the queries in the order, in which the queries are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "10\n1 2 2 1 100 99 99 100 100 100\n6\n1 4\n1 2\n3 4\n1 5\n9 10\n10 10",
+      "output": "1\n2\n2\n0\n2\n9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "419. Suffix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct the minimal deterministic finite automaton recognizing all substrings of S online in O(N) time and space. Answer substring count, occurrence, and LCS queries."
+}

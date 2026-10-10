@@ -1,0 +1,36 @@
+{
+  "id": "1778C",
+  "source": "problemset",
+  "contest_id": 1778,
+  "problem_index": "C",
+  "name": "Flexible String",
+  "rating": 1600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "strings"
+  ],
+  "solved_count": 11961,
+  "problem_url": "https://codeforces.com/problemset/problem/1778/C",
+  "editorial_url": "https://codeforces.com/blog/entry/112149",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a string $$$a$$$ and a string $$$b$$$. Both of the strings have length $$$n$$$. There are at most $$$10$$$ different characters in the string $$$a$$$. You also have a set $$$Q$$$. Initially, the set $$$Q$$$ is empty. You can apply the following operation on the string $$$a$$$ any number of times: Choose an index $$$i$$$ ($$$1\\leq i \\leq n$$$) and a lowercase English letter $$$c$$$. Add $$$a_i$$$ to the set $$$Q$$$ and then replace $$$a_i$$$ with $$$c$$$. For example, Let the string $$$a$$$ be \"$$$\\tt{abecca}$$$\". We can do the following operations: In the first operation, if you choose $$$i = 3$$$ and $$$c = \\tt{x}$$$, the character $$$a_3 = \\tt{e}$$$ will be added to the set $$$Q$$$. So, the set $$$Q$$$ will be $$$\\{\\tt{e}\\}$$$, and the string $$$a$$$ will be \"$$$\\tt{ab\\underline{x}cca}$$$\". In the second operation, if you choose $$$i = 6$$$ and $$$c = \\tt{s}$$$, the character $$$a_6 = \\tt{a}$$$ will be added to the set $$$Q$$$. So, the set $$$Q$$$ will be $$$\\{\\tt{e}, \\tt{a}\\}$$$, and the string $$$a$$$ will be \"$$$\\tt{abxcc\\underline{s}}$$$\". You can apply any number of operations on $$$a$$$, but in the end, the set $$$Q$$$ should contain at most $$$k$$$ different characters . Under this constraint, you have to maximize the number of integer pairs $$$(l, r)$$$ ($$$1\\leq l\\leq r \\leq n$$$) such that $$$a[l,r] = b[l,r]$$$. Here, $$$s[l,r]$$$ means the substring of string $$$s$$$ starting at index $$$l$$$ (inclusively) and ending at index $$$r$$$ (inclusively).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1\\leq n \\leq 10^5$$$, $$$0\\leq k\\leq 10$$$) — the length of the two strings and the limit on different characters in the set $$$Q$$$. The second line contains the string $$$a$$$ of length $$$n$$$. There is at most $$$10$$$ different characters in the string $$$a$$$. The last line contains the string $$$b$$$ of length $$$n$$$. Both of the strings $$$a$$$ and $$$b$$$ contain only lowercase English letters. The sum of $$$n$$$ over all test cases doesn't exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print a single integer in a line, the maximum number of pairs $$$(l, r)$$$ satisfying the constraints.",
+  "sample_testcases": [
+    {
+      "input": "6\n3 1\nabc\nabd\n3 0\nabc\nabd\n3 1\nxbb\nxcd\n4 1\nabcd\naxcb\n3 10\nabc\nabd\n10 3\nlkwhbahuqa\nqoiujoncjb",
+      "output": "6\n3\n6\n6\n6\n11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

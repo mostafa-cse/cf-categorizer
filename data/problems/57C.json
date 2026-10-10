@@ -1,0 +1,39 @@
+{
+  "id": "57C",
+  "source": "problemset",
+  "contest_id": 57,
+  "problem_index": "C",
+  "name": "Array",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 4493,
+  "problem_url": "https://codeforces.com/problemset/problem/57/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1171",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Chris the Rabbit has been interested in arrays ever since he was a child. At the moment he is researching arrays with the length of n , containing only integers from 1 to n . He is not good at math, that's why some simple things drive him crazy. For example, yesterday he grew keen on counting how many different beautiful arrays there are. Chris thinks that an array is beautiful if it meets one of the two conditions: each elements, starting from the second one, is no more than the preceding one each element, starting from the second one, is no less than the preceding one Having got absolutely mad at himself and at math, Chris came to Stewie and Brian to ask them for help. However, they only laughed at him and said that the answer is too simple and not interesting. Help Chris the Rabbit to find the answer at last.",
+  "input_specification": "The single line contains an integer n which is the size of the array ( 1 ≤ n ≤ 10 5 ).",
+  "output_specification": "You must print the answer on a single line. As it can be rather long, you should print it modulo 1000000007 .",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "4"
+    },
+    {
+      "input": "3",
+      "output": "17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:22",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

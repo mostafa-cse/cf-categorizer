@@ -1,0 +1,35 @@
+{
+  "id": "1351C",
+  "source": "problemset",
+  "contest_id": 1351,
+  "problem_index": "C",
+  "name": "Skier",
+  "rating": 1400,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 9421,
+  "problem_url": "https://codeforces.com/problemset/problem/1351/C",
+  "editorial_url": "https://codeforces.com/blog/entry/76989",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Skier rides on a snowy field. Its movements can be described by a string of characters ' S ', ' N ', ' W ', ' E ' (which correspond to $$$1$$$ meter movement in the south, north, west or east direction respectively). It is known that if he moves along a previously unvisited segment of a path (i.e. this segment of the path is visited the first time), then the time of such movement is $$$5$$$ seconds. If he rolls along previously visited segment of a path (i.e., this segment of the path has been covered by his path before), then it takes $$$1$$$ second. Find the skier's time to roll all the path.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases in the input. Then $$$t$$$ test cases follow. Each set is given by one nonempty string of the characters ' S ', ' N ', ' W ', ' E '. The length of the string does not exceed $$$10^5$$$ characters. The sum of the lengths of $$$t$$$ given lines over all test cases in the input does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the desired path time in seconds.",
+  "sample_testcases": [
+    {
+      "input": "5\nNNN\nNS\nWWEN\nWWEE\nNWNWS",
+      "output": "15\n6\n16\n12\n25"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

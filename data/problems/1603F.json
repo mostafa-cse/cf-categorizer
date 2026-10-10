@@ -1,0 +1,37 @@
+{
+  "id": "1603F",
+  "source": "problemset",
+  "contest_id": 1603,
+  "problem_index": "F",
+  "name": "October 18, 2017",
+  "rating": 2700,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 408,
+  "problem_url": "https://codeforces.com/problemset/problem/1603/F",
+  "editorial_url": "https://codeforces.com/blog/entry/96460",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "It was October 18, 2017. Shohag, a melancholic soul, made a strong determination that he will pursue Competitive Programming seriously, by heart, because he found it fascinating. Fast forward to 4 years, he is happy that he took this road. He is now creating a contest on Codeforces. He found an astounding problem but has no idea how to solve this. Help him to solve the final problem of the round. You are given three integers $$$n$$$, $$$k$$$ and $$$x$$$. Find the number, modulo $$$998\\,244\\,353$$$, of integer sequences $$$a_1, a_2, \\ldots, a_n$$$ such that the following conditions are satisfied: $$$0 \\le a_i \\lt 2^k$$$ for each integer $$$i$$$ from $$$1$$$ to $$$n$$$. There is no non-empty subsequence in $$$a$$$ such that the bitwise XOR of the elements of the subsequence is $$$x$$$. A sequence $$$b$$$ is a subsequence of a sequence $$$c$$$ if $$$b$$$ can be obtained from $$$c$$$ by deletion of several (possibly, zero or all) elements.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$)  — the number of test cases. The first and only line of each test case contains three space-separated integers $$$n$$$, $$$k$$$, and $$$x$$$ ($$$1 \\le n \\le 10^9$$$, $$$0 \\le k \\le 10^7$$$, $$$0 \\le x \\lt 2^{\\operatorname{min}(20, k)}$$$). It is guaranteed that the sum of $$$k$$$ over all test cases does not exceed $$$5 \\cdot 10^7$$$.",
+  "output_specification": "For each test case, print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "6\n2 2 0\n2 1 1\n3 2 3\n69 69 69\n2017 10 18\n5 7 0",
+      "output": "6\n1\n15\n699496932\n892852568\n713939942"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

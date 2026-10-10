@@ -1,0 +1,40 @@
+{
+  "id": "1365D",
+  "source": "problemset",
+  "contest_id": 1365,
+  "problem_index": "D",
+  "name": "Solve The Maze",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "implementation",
+    "shortest paths"
+  ],
+  "solved_count": 21814,
+  "problem_url": "https://codeforces.com/problemset/problem/1365/D",
+  "editorial_url": "https://codeforces.com/blog/entry/78504",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vivek has encountered a problem. He has a maze that can be represented as an $$$n \\times m$$$ grid. Each of the grid cells may represent the following: Empty — ' . ' Wall — ' # ' Good person  — ' G ' Bad person — ' B ' The only escape from the maze is at cell $$$(n, m)$$$. A person can move to a cell only if it shares a side with their current cell and does not contain a wall. Vivek wants to block some of the empty cells by replacing them with walls in such a way, that all the good people are able to escape, while none of the bad people are able to. A cell that initially contains ' G ' or ' B ' cannot be blocked and can be travelled through . Help him determine if there exists a way to replace some (zero or more) empty cells with walls to satisfy the above conditions. It is guaranteed that the cell $$$(n,m)$$$ is empty. Vivek can also block this cell.",
+  "input_specification": "The first line contains one integer $$$t$$$ $$$(1 \\le t \\le 100)$$$ — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n$$$, $$$m$$$ $$$(1 \\le n, m \\le 50)$$$ — the number of rows and columns in the maze. Each of the next $$$n$$$ lines contain $$$m$$$ characters. They describe the layout of the maze. If a character on a line equals ' . ', the corresponding cell is empty. If it equals ' # ', the cell has a wall. ' G ' corresponds to a good person and ' B ' corresponds to a bad person.",
+  "output_specification": "For each test case, print \" Yes \" if there exists a way to replace some empty cells with walls to satisfy the given conditions. Otherwise print \" No \" You may print every letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n.\n1 2\nG.\n2 2\n#B\nG.\n2 3\nG.#\nB#.\n3 3\n#B.\n#..\nGG.\n2 2\n#B\nB.",
+      "output": "Yes\nYes\nNo\nNo\nYes\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

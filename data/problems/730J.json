@@ -1,0 +1,42 @@
+{
+  "id": "730J",
+  "source": "problemset",
+  "contest_id": 730,
+  "problem_index": "J",
+  "name": "Bottles",
+  "rating": 1900,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 4208,
+  "problem_url": "https://codeforces.com/problemset/problem/730/J",
+  "editorial_url": "https://codeforces.com//www.luogu.com.cn/article/9vn5s0ia",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Nick has n bottles of soda left after his birthday. Each bottle is described by two values: remaining amount of soda a i and bottle volume b i ( a i ≤ b i ). Nick has decided to pour all remaining soda into minimal number of bottles, moreover he has to do it as soon as possible. Nick spends x seconds to pour x units of soda from one bottle to another. Nick asks you to help him to determine k — the minimal number of bottles to store all remaining soda and t — the minimal time to pour soda into k bottles. A bottle can't store more soda than its volume. All remaining soda should be saved.",
+  "input_specification": "The first line contains positive integer n ( 1 ≤ n ≤ 100 ) — the number of bottles. The second line contains n positive integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 100 ), where a i is the amount of soda remaining in the i -th bottle. The third line contains n positive integers b 1 , b 2 , ..., b n ( 1 ≤ b i ≤ 100 ), where b i is the volume of the i -th bottle. It is guaranteed that a i ≤ b i for any i .",
+  "output_specification": "The only line should contain two integers k and t , where k is the minimal number of bottles that can store all the soda and t is the minimal time to pour the soda into k bottles.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3 4 3\n4 7 6 5",
+      "output": "2 6"
+    },
+    {
+      "input": "2\n1 1\n100 100",
+      "output": "1 1"
+    },
+    {
+      "input": "5\n10 30 5 6 24\n10 41 7 8 24",
+      "output": "3 11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "1225C",
+  "source": "problemset",
+  "contest_id": 1225,
+  "problem_index": "C",
+  "name": "p-binary",
+  "rating": 1600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "math"
+  ],
+  "solved_count": 9974,
+  "problem_url": "https://codeforces.com/problemset/problem/1225/C",
+  "editorial_url": "https://codeforces.com/blog/entry/70898",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Vasya will fancy any number as long as it is an integer power of two. Petya, on the other hand, is very conservative and only likes a single integer $$$p$$$ (which may be positive, negative, or zero). To combine their tastes, they invented $$$p$$$-binary numbers of the form $$$2^x + p$$$, where $$$x$$$ is a non-negative integer. For example, some $$$-9$$$-binary (\"minus nine\" binary) numbers are: $$$-8$$$ (minus eight), $$$7$$$ and $$$1015$$$ ($$$-8=2^0-9$$$, $$$7=2^4-9$$$, $$$1015=2^{10}-9$$$). The boys now use $$$p$$$-binary numbers to represent everything. They now face a problem: given a positive integer $$$n$$$, what's the smallest number of $$$p$$$-binary numbers (not necessarily distinct) they need to represent $$$n$$$ as their sum? It may be possible that representation is impossible altogether. Help them solve this problem. For example, if $$$p=0$$$ we can represent $$$7$$$ as $$$2^0 + 2^1 + 2^2$$$. And if $$$p=-9$$$ we can represent $$$7$$$ as one number $$$(2^4-9)$$$. Note that negative $$$p$$$-binary numbers are allowed to be in the sum (see the Notes section for an example).",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$p$$$ ($$$1 \\leq n \\leq 10^9$$$, $$$-1000 \\leq p \\leq 1000$$$).",
+  "output_specification": "If it is impossible to represent $$$n$$$ as the sum of any number of $$$p$$$-binary numbers, print a single integer $$$-1$$$. Otherwise, print the smallest possible number of summands.",
+  "sample_testcases": [
+    {
+      "input": "24 0",
+      "output": "2"
+    },
+    {
+      "input": "24 1",
+      "output": "3"
+    },
+    {
+      "input": "24 -1",
+      "output": "4"
+    },
+    {
+      "input": "4 -7",
+      "output": "2"
+    },
+    {
+      "input": "1 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:24",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "1567F",
+  "source": "problemset",
+  "contest_id": 1567,
+  "problem_index": "F",
+  "name": "One-Four Overload",
+  "rating": 2700,
+  "tags": [
+    "2-sat",
+    "constructive algorithms",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 904,
+  "problem_url": "https://codeforces.com/problemset/problem/1567/F",
+  "editorial_url": "https://codeforces.com/blog/entry/94581",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice has an empty grid with $$$n$$$ rows and $$$m$$$ columns. Some of the cells are marked, and no marked cells are adjacent to the edge of the grid . (Two squares are adjacent if they share a side.) Alice wants to fill each cell with a number such that the following statements are true: every unmarked cell contains either the number $$$1$$$ or $$$4$$$; every marked cell contains the sum of the numbers in all unmarked cells adjacent to it (if a marked cell is not adjacent to any unmarked cell, this sum is $$$0$$$); every marked cell contains a multiple of $$$5$$$. Alice couldn't figure it out, so she asks Bob to help her. Help Bob find any such grid, or state that no such grid exists.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 500$$$) — the number of rows and the number of columns in the grid, respectively. Then $$$n$$$ lines follow, each containing $$$m$$$ characters. Each of these characters is either ' . ' or ' X ' — an unmarked and a marked cell, respectively. No marked cells are adjacent to the edge of the grid.",
+  "output_specification": "Output \"' NO \" if no suitable grid exists. Otherwise, output \"' YES \"'. Then output $$$n$$$ lines of $$$m$$$ space-separated integers — the integers in the grid.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n.....\n.XXX.\n.X.X.\n.XXX.\n.....",
+      "output": "YES\n4 1 4 4 1\n4 5 5 5 1\n4 5 1 5 4\n1 5 5 5 4\n1 4 4 1 4"
+    },
+    {
+      "input": "5 5\n.....\n.XXX.\n.XXX.\n.XXX.\n.....",
+      "output": "NO"
+    },
+    {
+      "input": "3 2\n..\n..\n..",
+      "output": "YES\n4 1\n4 1\n1 4"
+    },
+    {
+      "input": "9 9\n.........\n.XXXXX.X.\n.X...X...\n.X.XXXXX.\n.X.X.X.X.\n.X.XXX.X.\n.X.....X.\n.XXXXXXX.\n.........",
+      "output": "YES\n4 4 4 1 4 1 4 1 4\n1 5 5 5 5 5 4 10 1\n4 5 1 4 1 5 4 4 4\n4 5 1 5 5 0 5 5 1\n4 5 1 5 4 5 1 5 4\n4 5 1 5 5 5 4 5 1\n1 5 4 4 1 1 4 5 1\n4 5 5 5 5 5 5 5 4\n1 1 1 1 4 4 1 1 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:58",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

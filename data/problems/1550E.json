@@ -1,0 +1,55 @@
+{
+  "id": "1550E",
+  "source": "problemset",
+  "contest_id": 1550,
+  "problem_index": "E",
+  "name": "Stringforces",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "dp",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 1975,
+  "problem_url": "https://codeforces.com/problemset/problem/1550/E",
+  "editorial_url": "https://codeforces.com/blog/entry/92864",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ of length $$$n$$$. Each character is either one of the first $$$k$$$ lowercase Latin letters or a question mark. You are asked to replace every question mark with one of the first $$$k$$$ lowercase Latin letters in such a way that the following value is maximized. Let $$$f_i$$$ be the maximum length substring of string $$$s$$$, which consists entirely of the $$$i$$$-th Latin letter. A substring of a string is a contiguous subsequence of that string. If the $$$i$$$-th letter doesn't appear in a string, then $$$f_i$$$ is equal to $$$0$$$. The value of a string $$$s$$$ is the minimum value among $$$f_i$$$ for all $$$i$$$ from $$$1$$$ to $$$k$$$. What is the maximum value the string can have?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$1 \\le k \\le 17$$$) — the length of the string and the number of first Latin letters used. The second line contains a string $$$s$$$, consisting of $$$n$$$ characters. Each character is either one of the first $$$k$$$ lowercase Latin letters or a question mark.",
+  "output_specification": "Print a single integer — the maximum value of the string after every question mark is replaced with one of the first $$$k$$$ lowercase Latin letters.",
+  "sample_testcases": [
+    {
+      "input": "10 2\na??ab????b",
+      "output": "4"
+    },
+    {
+      "input": "9 4\n?????????",
+      "output": "2"
+    },
+    {
+      "input": "2 3\n??",
+      "output": "0"
+    },
+    {
+      "input": "15 3\n??b?babbc??b?aa",
+      "output": "3"
+    },
+    {
+      "input": "4 4\ncabd",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

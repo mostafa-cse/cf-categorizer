@@ -1,0 +1,40 @@
+{
+  "id": "1418E",
+  "source": "problemset",
+  "contest_id": 1418,
+  "problem_index": "E",
+  "name": "Expected Damage",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "probabilities"
+  ],
+  "solved_count": 2421,
+  "problem_url": "https://codeforces.com/problemset/problem/1418/E",
+  "editorial_url": "https://codeforces.com/blog/entry/82673",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing a computer game. In this game, you have to fight $$$n$$$ monsters. To defend from monsters, you need a shield. Each shield has two parameters: its current durability $$$a$$$ and its defence rating $$$b$$$. Each monster has only one parameter: its strength $$$d$$$. When you fight a monster with strength $$$d$$$ while having a shield with current durability $$$a$$$ and defence $$$b$$$, there are three possible outcomes: if $$$a = 0$$$, then you receive $$$d$$$ damage; if $$$a \\gt 0$$$ and $$$d \\ge b$$$, you receive no damage, but the current durability of the shield decreases by $$$1$$$; if $$$a \\gt 0$$$ and $$$d \\lt b$$$, nothing happens. The $$$i$$$-th monster has strength $$$d_i$$$, and you will fight each of the monsters exactly once, in some random order (all $$$n!$$$ orders are equiprobable). You have to consider $$$m$$$ different shields, the $$$i$$$-th shield has initial durability $$$a_i$$$ and defence rating $$$b_i$$$. For each shield, calculate the expected amount of damage you will receive if you take this shield and fight the given $$$n$$$ monsters in random order.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$) — the number of monsters and the number of shields, respectively. The second line contains $$$n$$$ integers $$$d_1$$$, $$$d_2$$$, ..., $$$d_n$$$ ($$$1 \\le d_i \\le 10^9$$$), where $$$d_i$$$ is the strength of the $$$i$$$-th monster. Then $$$m$$$ lines follow, the $$$i$$$-th of them contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i \\le n$$$; $$$1 \\le b_i \\le 10^9$$$) — the description of the $$$i$$$-th shield.",
+  "output_specification": "Print $$$m$$$ integers, where the $$$i$$$-th integer represents the expected damage you receive with the $$$i$$$-th shield as follows: it can be proven that, for each shield, the expected damage is an irreducible fraction $$$\\dfrac{x}{y}$$$, where $$$y$$$ is coprime with $$$998244353$$$. You have to print the value of $$$x \\cdot y^{-1} \\bmod 998244353$$$, where $$$y^{-1}$$$ is the inverse element for $$$y$$$ ($$$y \\cdot y^{-1} \\bmod 998244353 = 1$$$).",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3 1\n2 1\n1 2",
+      "output": "665496237\n1"
+    },
+    {
+      "input": "3 3\n4 2 6\n3 1\n1 2\n2 3",
+      "output": "0\n8\n665496236"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:35",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

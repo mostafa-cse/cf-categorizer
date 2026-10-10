@@ -1,0 +1,47 @@
+{
+  "id": "1095C",
+  "source": "problemset",
+  "contest_id": 1095,
+  "problem_index": "C",
+  "name": "Powers Of Two",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "greedy"
+  ],
+  "solved_count": 20406,
+  "problem_url": "https://codeforces.com/problemset/problem/1095/C",
+  "editorial_url": "https://codeforces.com/blog/entry/64130",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A positive integer $$$x$$$ is called a power of two if it can be represented as $$$x = 2^y$$$, where $$$y$$$ is a non-negative integer. So, the powers of two are $$$1, 2, 4, 8, 16, \\dots$$$. You are given two positive integers $$$n$$$ and $$$k$$$. Your task is to represent $$$n$$$ as the sum of exactly $$$k$$$ powers of two .",
+  "input_specification": "The only line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^9$$$, $$$1 \\le k \\le 2 \\cdot 10^5$$$).",
+  "output_specification": "If it is impossible to represent $$$n$$$ as the sum of $$$k$$$ powers of two, print NO . Otherwise, print YES , and then print $$$k$$$ positive integers $$$b_1, b_2, \\dots, b_k$$$ such that each of $$$b_i$$$ is a power of two, and $$$\\sum \\limits_{i = 1}^{k} b_i = n$$$. If there are multiple answers, you may print any of them.",
+  "sample_testcases": [
+    {
+      "input": "9 4",
+      "output": "YES\n1 2 2 4"
+    },
+    {
+      "input": "8 1",
+      "output": "YES\n8"
+    },
+    {
+      "input": "5 1",
+      "output": "NO"
+    },
+    {
+      "input": "3 7",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:57",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

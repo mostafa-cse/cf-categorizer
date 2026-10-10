@@ -1,0 +1,40 @@
+{
+  "id": "2004D",
+  "source": "problemset",
+  "contest_id": 2004,
+  "problem_index": "D",
+  "name": "Colored Portals",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "graphs",
+    "greedy",
+    "implementation",
+    "shortest paths"
+  ],
+  "solved_count": 13689,
+  "problem_url": "https://codeforces.com/problemset/problem/2004/D",
+  "editorial_url": "https://codeforces.com/blog/entry/132790",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ cities located on a straight line. The cities are numbered from $$$1$$$ to $$$n$$$. Portals are used to move between cities. There are $$$4$$$ colors of portals: blue, green, red, and yellow. Each city has portals of two different colors. You can move from city $$$i$$$ to city $$$j$$$ if they have portals of the same color (for example, you can move between a \"blue-red\" city and a \"blue-green\" city). This movement costs $$$|i-j|$$$ coins. Your task is to answer $$$q$$$ independent queries: calculate the minimum cost to move from city $$$x$$$ to city $$$y$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the number of cities and the number of queries, respectively. The second line contains $$$n$$$ strings of the following types: BG , BR , BY , GR , GY , or RY ; the $$$i$$$-th of them describes the portals located in the $$$i$$$-th city; the symbol B indicates that there is a blue portal in the city, G — green, R — red, and Y — yellow. The $$$j$$$-th of the next $$$q$$$ lines contains two integers $$$x_j$$$ and $$$y_j$$$ ($$$1 \\le x_j, y_j \\le n$$$) — the description of the $$$j$$$-th query. Additional constraints on the input: the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$; the sum of $$$q$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each query, print a single integer — the minimum cost to move from city $$$x$$$ to city $$$y$$$ (or $$$-1$$$ if it is impossible).",
+  "sample_testcases": [
+    {
+      "input": "2\n4 5\nBR BR GY GR\n1 2\n3 1\n4 4\n1 4\n4 2\n2 1\nBG RY\n1 2",
+      "output": "1\n4\n0\n3\n2\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:53",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

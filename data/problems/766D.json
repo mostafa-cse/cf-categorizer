@@ -1,0 +1,42 @@
+{
+  "id": "766D",
+  "source": "problemset",
+  "contest_id": 766,
+  "problem_index": "D",
+  "name": "Mahmoud and a Dictionary",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "graphs"
+  ],
+  "solved_count": 4090,
+  "problem_url": "https://codeforces.com/problemset/problem/766/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50294",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mahmoud wants to write a new dictionary that contains n words and relations between them. There are two types of relations: synonymy (i. e. the two words mean the same) and antonymy (i. e. the two words mean the opposite). From time to time he discovers a new relation between two words. He know that if two words have a relation between them, then each of them has relations with the words that has relations with the other. For example, if like means love and love is the opposite of hate , then like is also the opposite of hate . One more example: if love is the opposite of hate and hate is the opposite of like , then love means like , and so on. Sometimes Mahmoud discovers a wrong relation. A wrong relation is a relation that makes two words equal and opposite at the same time. For example if he knows that love means like and like is the opposite of hate , and then he figures out that hate means like , the last relation is absolutely wrong because it makes hate and like opposite and have the same meaning at the same time. After Mahmoud figured out many relations, he was worried that some of them were wrong so that they will make other relations also wrong, so he decided to tell every relation he figured out to his coder friend Ehab and for every relation he wanted to know is it correct or wrong, basing on the previously discovered relations. If it is wrong he ignores it, and doesn't check with following relations. After adding all relations, Mahmoud asked Ehab about relations between some words based on the information he had given to him. Ehab is busy making a Codeforces round so he asked you for help.",
+  "input_specification": "The first line of input contains three integers n , m and q ( 2 ≤ n ≤ 10 5 , 1 ≤ m , q ≤ 10 5 ) where n is the number of words in the dictionary, m is the number of relations Mahmoud figured out and q is the number of questions Mahmoud asked after telling all relations. The second line contains n distinct words a 1 , a 2 , ..., a n consisting of small English letters with length not exceeding 20 , which are the words in the dictionary. Then m lines follow, each of them contains an integer t ( 1 ≤ t ≤ 2 ) followed by two different words x i and y i which has appeared in the dictionary words. If t = 1 , that means x i has a synonymy relation with y i , otherwise x i has an antonymy relation with y i . Then q lines follow, each of them contains two different words which has appeared in the dictionary. That are the pairs of words Mahmoud wants to know the relation between basing on the relations he had discovered. All words in input contain only lowercase English letters and their lengths don't exceed 20 characters. In all relations and in all questions the two words are different.",
+  "output_specification": "First, print m lines, one per each relation. If some relation is wrong (makes two words opposite and have the same meaning at the same time) you should print \" NO \" (without quotes) and ignore it, otherwise print \" YES \" (without quotes). After that print q lines, one per each question. If the two words have the same meaning, output 1 . If they are opposites, output 2 . If there is no relation between them, output 3 . See the samples for better understanding.",
+  "sample_testcases": [
+    {
+      "input": "3 3 4\nhate love like\n1 love like\n2 love hate\n1 hate like\nlove like\nlove hate\nlike hate\nhate like",
+      "output": "YES\nYES\nNO\n1\n2\n2\n2"
+    },
+    {
+      "input": "8 6 5\nhi welcome hello ihateyou goaway dog cat rat\n1 hi welcome\n1 ihateyou goaway\n2 hello ihateyou\n2 hi goaway\n2 hi hello\n1 hi hello\ndog cat\ndog hi\nhi hello\nihateyou goaway\nwelcome ihateyou",
+      "output": "YES\nYES\nYES\nYES\nNO\nYES\n3\n3\n1\n1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

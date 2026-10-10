@@ -1,0 +1,47 @@
+{
+  "id": "508E",
+  "source": "problemset",
+  "contest_id": 508,
+  "problem_index": "E",
+  "name": "Arthur and Brackets",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 2000,
+  "problem_url": "https://codeforces.com/problemset/problem/508/E",
+  "editorial_url": "https://codeforces.com/blog/entry/16035",
+  "time_limit": "2 seconds",
+  "memory_limit": "128 megabytes",
+  "description": "Notice that the memory limit is non-standard. Recently Arthur and Sasha have studied correct bracket sequences. Arthur understood this topic perfectly and become so amazed about correct bracket sequences, so he even got himself a favorite correct bracket sequence of length 2 n . Unlike Arthur, Sasha understood the topic very badly, and broke Arthur's favorite correct bracket sequence just to spite him. All Arthur remembers about his favorite sequence is for each opening parenthesis (' ( ') the approximate distance to the corresponding closing one (' ) '). For the i -th opening bracket he remembers the segment [ l i , r i ] , containing the distance to the corresponding closing bracket. Formally speaking, for the i -th opening bracket (in order from left to right) we know that the difference of its position and the position of the corresponding closing bracket belongs to the segment [ l i , r i ] . Help Arthur restore his favorite correct bracket sequence!",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 600 ), the number of opening brackets in Arthur's favorite correct bracket sequence. Next n lines contain numbers l i and r i ( 1 ≤ l i ≤ r i < 2 n ), representing the segment where lies the distance from the i -th opening bracket and the corresponding closing one. The descriptions of the segments are given in the order in which the opening brackets occur in Arthur's favorite sequence if we list them from left to right.",
+  "output_specification": "If it is possible to restore the correct bracket sequence by the given data, print any possible choice. If Arthur got something wrong, and there are no sequences corresponding to the given information, print a single line \" IMPOSSIBLE \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1\n1 1\n1 1\n1 1",
+      "output": "()()()()"
+    },
+    {
+      "input": "3\n5 5\n3 3\n1 1",
+      "output": "((()))"
+    },
+    {
+      "input": "3\n5 5\n3 3\n2 2",
+      "output": "IMPOSSIBLE"
+    },
+    {
+      "input": "3\n2 3\n1 4\n1 4",
+      "output": "(())()"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

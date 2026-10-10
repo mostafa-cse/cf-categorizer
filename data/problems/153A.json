@@ -1,0 +1,38 @@
+{
+  "id": "153A",
+  "source": "problemset",
+  "contest_id": 153,
+  "problem_index": "A",
+  "name": "A + B",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 960,
+  "problem_url": "https://codeforces.com/problemset/problem/153/A",
+  "editorial_url": "https://codeforces.com/blog/entry/3948",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers A and B . Calculate their sum and output it without leading zeros.",
+  "input_specification": "Two lines of input data contain integers A and B ( 1 ≤ A , B ≤ 10 5 ).",
+  "output_specification": "Output A + B without leading zeros.",
+  "sample_testcases": [
+    {
+      "input": "12\n3",
+      "output": "15"
+    },
+    {
+      "input": "100\n5",
+      "output": "105"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

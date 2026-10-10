@@ -1,0 +1,43 @@
+{
+  "id": "273E",
+  "source": "problemset",
+  "contest_id": 273,
+  "problem_index": "E",
+  "name": "Dima and Game",
+  "rating": 2600,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 411,
+  "problem_url": "https://codeforces.com/problemset/problem/273/E",
+  "editorial_url": "https://codeforces.com/blog/entry/6625",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Dima and Anya love playing different games. Now Dima has imagined a new game that he wants to play with Anya. Dima writes n pairs of integers on a piece of paper ( l i , r i ) (1 ≤ l i < r i ≤ p ) . Then players take turns. On his turn the player can do the following actions: choose the number of the pair i (1 ≤ i ≤ n ) , such that r i - l i > 2 ; replace pair number i by pair or by pair . Notation ⌊ x ⌋ means rounding down to the closest integer. The player who can't make a move loses. Of course, Dima wants Anya, who will move first, to win. That's why Dima should write out such n pairs of integers ( l i , r i ) (1 ≤ l i < r i ≤ p ) , that if both players play optimally well, the first one wins. Count the number of ways in which Dima can do it. Print the remainder after dividing the answer by number 1000000007 (10 9 + 7) . Two ways are considered distinct, if the ordered sequences of the written pairs are distinct.",
+  "input_specification": "The first line contains two integers n , p (1 ≤ n ≤ 1000, 1 ≤ p ≤ 10 9 ) . The numbers are separated by a single space.",
+  "output_specification": "In a single line print the remainder after dividing the answer to the problem by number 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "0"
+    },
+    {
+      "input": "4 4",
+      "output": "520"
+    },
+    {
+      "input": "100 1000",
+      "output": "269568947"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "600D",
+  "source": "problemset",
+  "contest_id": 600,
+  "problem_index": "D",
+  "name": "Area of Two Circles' Intersection",
+  "rating": 2000,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 2822,
+  "problem_url": "https://codeforces.com/problemset/problem/600/D",
+  "editorial_url": "https://codeforces.com/blog/entry/21827",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two circles. Find the area of their intersection.",
+  "input_specification": "The first line contains three integers x 1 , y 1 , r 1 ( - 10 9 ≤ x 1 , y 1 ≤ 10 9 , 1 ≤ r 1 ≤ 10 9 ) — the position of the center and the radius of the first circle. The second line contains three integers x 2 , y 2 , r 2 ( - 10 9 ≤ x 2 , y 2 ≤ 10 9 , 1 ≤ r 2 ≤ 10 9 ) — the position of the center and the radius of the second circle.",
+  "output_specification": "Print the area of the intersection of the circles. The answer will be considered correct if the absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "0 0 4\n6 0 4",
+      "output": "7.25298806364175601379"
+    },
+    {
+      "input": "0 0 5\n11 0 5",
+      "output": "0.00000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

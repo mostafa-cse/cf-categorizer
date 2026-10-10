@@ -1,0 +1,36 @@
+{
+  "id": "379F",
+  "source": "problemset",
+  "contest_id": 379,
+  "problem_index": "F",
+  "name": "New Year Tree",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "trees"
+  ],
+  "solved_count": 2865,
+  "problem_url": "https://codeforces.com/problemset/problem/379/F",
+  "editorial_url": "https://codeforces.com/blog/entry/10171",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are a programmer and you have a New Year Tree (not the traditional fur tree, though) — a tree of four vertices: one vertex of degree three (has number 1), connected with three leaves (their numbers are from 2 to 4). On the New Year, programmers usually have fun. You decided to have fun as well by adding vertices to the tree. One adding operation looks as follows: First we choose some leaf of the tree with number v . Let's mark the number of vertices on the tree at this moment by variable n , then two vertexes are added to the tree, their numbers are n + 1 and n + 2 , also you get new edges, one between vertices v and n + 1 and one between vertices v and n + 2 . Your task is not just to model the process of adding vertices to the tree, but after each adding operation print the diameter of the current tree. Come on, let's solve the New Year problem!",
+  "input_specification": "The first line contains integer q (1 ≤ q ≤ 5·10 5 ) — the number of operations. Each of the next q lines contains integer v i (1 ≤ v i ≤ n ) — the operation of adding leaves to vertex v i . Variable n represents the number of vertices in the current tree. It is guaranteed that all given operations are correct.",
+  "output_specification": "Print q integers — the diameter of the current tree after each operation.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n3\n4\n8\n5",
+      "output": "3\n4\n4\n5\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:55",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "143. Tree Diameter",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Tree Diameter paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

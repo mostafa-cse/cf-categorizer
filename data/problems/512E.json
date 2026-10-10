@@ -1,0 +1,43 @@
+{
+  "id": "512E",
+  "source": "problemset",
+  "contest_id": 512,
+  "problem_index": "E",
+  "name": "Fox And Polygon",
+  "rating": 2900,
+  "tags": [
+    "constructive algorithms",
+    "divide and conquer"
+  ],
+  "solved_count": 678,
+  "problem_url": "https://codeforces.com/problemset/problem/512/E",
+  "editorial_url": "https://codeforces.com/blog/entry/16173",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel just designed a puzzle game called \"Polygon\"! It is played using triangulations of a regular n -edge polygon. The goal is to transform one triangulation to another by some tricky rules. Triangulation of an n -edge poylgon is a set of n - 3 diagonals satisfying the condition that no two diagonals share a common internal point. For example, the initial state of the game may look like (a) in above figure. And your goal may look like (c). In each step you can choose a diagonal inside the polygon (but not the one of edges of the polygon) and flip this diagonal. Suppose you are going to flip a diagonal a – b . There always exist two triangles sharing a – b as a side, let's denote them as a – b – c and a – b – d . As a result of this operation, the diagonal a – b is replaced by a diagonal c – d . It can be easily proven that after flip operation resulting set of diagonals is still a triangulation of the polygon. So in order to solve above case, you may first flip diagonal 6 – 3 , it will be replaced by diagonal 2 – 4 . Then you flip diagonal 6 – 4 and get figure (c) as result. Ciel just proved that for any starting and destination triangulations this game has a solution. She wants you to solve it in no more than 20 000 steps for any puzzle satisfying n ≤ 1000 .",
+  "input_specification": "The first line contain an integer n ( 4 ≤ n ≤ 1000 ), number of edges of the regular polygon. Then follows two groups of ( n - 3) lines describing the original triangulation and goal triangulation. Description of each triangulation consists of ( n - 3) lines. Each line contains 2 integers a i and b i ( 1 ≤ a i , b i ≤ n ), describing a diagonal a i – b i . It is guaranteed that both original and goal triangulations are correct (i. e. no two diagonals share a common internal point in both of these triangulations).",
+  "output_specification": "First, output an integer k ( 0 ≤ k ≤ 20, 000 ): number of steps. Then output k lines, each containing 2 integers a i and b i : the endpoints of a diagonal you are going to flip at step i . You may output a i and b i in any order. If there are several possible solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3\n2 4",
+      "output": "1\n1 3"
+    },
+    {
+      "input": "6\n2 6\n3 6\n4 6\n6 2\n5 2\n4 2",
+      "output": "2\n6 3\n6 4"
+    },
+    {
+      "input": "8\n7 1\n2 7\n7 3\n6 3\n4 6\n6 1\n6 2\n6 3\n6 4\n6 8",
+      "output": "3\n7 3\n7 2\n7 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

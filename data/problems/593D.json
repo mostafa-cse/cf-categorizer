@@ -1,0 +1,42 @@
+{
+  "id": "593D",
+  "source": "problemset",
+  "contest_id": 593,
+  "problem_index": "D",
+  "name": "Happy Tree Party",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "math",
+    "trees"
+  ],
+  "solved_count": 1487,
+  "problem_url": "https://codeforces.com/problemset/problem/593/D",
+  "editorial_url": "https://codeforces.com/blog/entry/21371",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bogdan has a birthday today and mom gave him a tree consisting of n vertecies. For every edge of the tree i , some number x i was written on it. In case you forget, a tree is a connected non-directed graph without cycles. After the present was granted, m guests consecutively come to Bogdan's party. When the i -th guest comes, he performs exactly one of the two possible operations: Chooses some number y i , and two vertecies a i and b i . After that, he moves along the edges of the tree from vertex a i to vertex b i using the shortest path (of course, such a path is unique in the tree). Every time he moves along some edge j , he replaces his current number y i by , that is, by the result of integer division y i div x j . Chooses some edge p i and replaces the value written in it x p i by some positive integer c i < x p i . As Bogdan cares about his guests, he decided to ease the process. Write a program that performs all the operations requested by guests and outputs the resulting value y i for each i of the first type.",
+  "input_specification": "The first line of the input contains integers, n and m ( 2 ≤ n ≤ 200 000 , 1 ≤ m ≤ 200 000 ) — the number of vertecies in the tree granted to Bogdan by his mom and the number of guests that came to the party respectively. Next n - 1 lines contain the description of the edges. The i -th of these lines contains three integers u i , v i and x i ( 1 ≤ u i , v i ≤ n , u i ≠ v i , 1 ≤ x i ≤ 10 18 ), denoting an edge that connects vertecies u i and v i , with the number x i initially written on it. The following m lines describe operations, requested by Bogdan's guests. Each description contains three or four integers and has one of the two possible forms: 1 a i b i y i corresponds to a guest, who chooses the operation of the first type. 2 p i c i corresponds to a guests, who chooses the operation of the second type. It is guaranteed that all the queries are correct, namely 1 ≤ a i , b i ≤ n , 1 ≤ p i ≤ n - 1 , 1 ≤ y i ≤ 10 18 and 1 ≤ c i < x p i , where x p i represents a number written on edge p i at this particular moment of time that is not necessarily equal to the initial value x p i , as some decreases may have already been applied to it. The edges are numbered from 1 to n - 1 in the order they appear in the input.",
+  "output_specification": "For each guest who chooses the operation of the first type, print the result of processing the value y i through the path from a i to b i .",
+  "sample_testcases": [
+    {
+      "input": "6 6\n1 2 1\n1 3 7\n1 4 4\n2 5 5\n2 6 2\n1 4 6 17\n2 3 2\n1 4 6 17\n1 5 5 20\n2 4 1\n1 5 1 3",
+      "output": "2\n4\n20\n3"
+    },
+    {
+      "input": "5 4\n1 2 7\n1 3 3\n3 4 2\n3 5 5\n1 4 2 100\n1 5 4 1\n2 2 2\n1 1 3 4",
+      "output": "2\n0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:55",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

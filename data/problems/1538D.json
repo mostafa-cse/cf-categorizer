@@ -1,0 +1,36 @@
+{
+  "id": "1538D",
+  "source": "problemset",
+  "contest_id": 1538,
+  "problem_index": "D",
+  "name": "Another Problem About Dividing Numbers",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 15730,
+  "problem_url": "https://codeforces.com/problemset/problem/1538/D",
+  "editorial_url": "https://codeforces.com/blog/entry/91637",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$a$$$ and $$$b$$$. In one turn, you can do one of the following operations: Take an integer $$$c$$$ ($$$c \\gt 1$$$ and $$$a$$$ should be divisible by $$$c$$$ ) and replace $$$a$$$ with $$$\\frac{a}{c}$$$; Take an integer $$$c$$$ ($$$c \\gt 1$$$ and $$$b$$$ should be divisible by $$$c$$$ ) and replace $$$b$$$ with $$$\\frac{b}{c}$$$. Your goal is to make $$$a$$$ equal to $$$b$$$ using exactly $$$k$$$ turns. For example, the numbers $$$a=36$$$ and $$$b=48$$$ can be made equal in $$$4$$$ moves: $$$c=6$$$, divide $$$b$$$ by $$$c$$$ $$$\\Rightarrow$$$ $$$a=36$$$, $$$b=8$$$; $$$c=2$$$, divide $$$a$$$ by $$$c$$$ $$$\\Rightarrow$$$ $$$a=18$$$, $$$b=8$$$; $$$c=9$$$, divide $$$a$$$ by $$$c$$$ $$$\\Rightarrow$$$ $$$a=2$$$, $$$b=8$$$; $$$c=4$$$, divide $$$b$$$ by $$$c$$$ $$$\\Rightarrow$$$ $$$a=2$$$, $$$b=2$$$. For the given numbers $$$a$$$ and $$$b$$$, determine whether it is possible to make them equal using exactly $$$k$$$ turns.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Then $$$t$$$ test cases follow. Each test case is contains three integers $$$a$$$, $$$b$$$ and $$$k$$$ ($$$1 \\le a, b, k \\le 10^9$$$).",
+  "output_specification": "For each test case output: \" Yes \", if it is possible to make the numbers $$$a$$$ and $$$b$$$ equal in exactly $$$k$$$ turns; \" No \" otherwise. The strings \" Yes \" and \" No \" can be output in any case.",
+  "sample_testcases": [
+    {
+      "input": "8\n36 48 2\n36 48 3\n36 48 4\n2 8 1\n2 8 2\n1000000000 1000000000 1000000000\n1 2 1\n2 2 1",
+      "output": "YES\nYES\nYES\nYES\nYES\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:06",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

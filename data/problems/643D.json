@@ -1,0 +1,32 @@
+{
+  "id": "643D",
+  "source": "problemset",
+  "contest_id": 643,
+  "problem_index": "D",
+  "name": "Bearish Fanpages",
+  "rating": 2900,
+  "tags": [],
+  "solved_count": 418,
+  "problem_url": "https://codeforces.com/problemset/problem/643/D",
+  "editorial_url": "https://codeforces.com/blog/entry/44754",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a social website with n fanpages, numbered 1 through n . There are also n companies, and the i -th company owns the i -th fanpage. Recently, the website created a feature called following. Each fanpage must choose exactly one other fanpage to follow. The website doesn’t allow a situation where i follows j and at the same time j follows i . Also, a fanpage can't follow itself. Let’s say that fanpage i follows some other fanpage j 0 . Also, let’s say that i is followed by k other fanpages j 1 , j 2 , ..., j k . Then, when people visit fanpage i they see ads from k + 2 distinct companies: i , j 0 , j 1 , ..., j k . Exactly t i people subscribe (like) the i -th fanpage, and each of them will click exactly one add. For each of k + 1 companies j 0 , j 1 , ..., j k , exactly people will click their ad. Remaining people will click an ad from company i (the owner of the fanpage). The total income of the company is equal to the number of people who click ads from this copmany. Limak and Radewoosh ask you for help. Initially, fanpage i follows fanpage f i . Your task is to handle q queries of three types: 1 i j — fanpage i follows fanpage j from now. It's guaranteed that i didn't follow j just before the query. Note an extra constraint for the number of queries of this type (below, in the Input section). 2 i — print the total income of the i -th company. 3 — print two integers: the smallest income of one company and the biggest income of one company.",
+  "input_specification": "The first line of the input contains two integers n and q ( 3 ≤ n ≤ 100 000 , 1 ≤ q ≤ 100 000 ) — the number of fanpages and the number of queries, respectively. The second line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 10 12 ) where t i denotes the number of people subscribing the i -th fanpage. The third line contains n integers f 1 , f 2 , ..., f n ( 1 ≤ f i ≤ n ). Initially, fanpage i follows fanpage f i . Then, q lines follow. The i -th of them describes the i -th query. The first number in the line is an integer type i ( 1 ≤ type i ≤ 3 ) — the type of the query. There will be at most 50 000 queries of the first type. There will be at least one query of the second or the third type (so, the output won't be empty). It's guaranteed that at each moment a fanpage doesn't follow itself, and that no two fanpages follow each other.",
+  "output_specification": "For each query of the second type print one integer in a separate line - the total income of the given company. For each query of the third type print two integers in a separate line - the minimum and the maximum total income, respectively.",
+  "sample_testcases": [
+    {
+      "input": "5 12\n10 20 30 40 50\n2 3 4 5 2\n2 1\n2 2\n2 3\n2 4\n2 5\n1 4 2\n2 1\n2 2\n2 3\n2 4\n2 5\n3",
+      "output": "10\n36\n28\n40\n36\n9\n57\n27\n28\n29\n9 57"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

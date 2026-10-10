@@ -1,0 +1,40 @@
+{
+  "id": "2086E",
+  "source": "problemset",
+  "contest_id": 2086,
+  "problem_index": "E",
+  "name": "Zebra-like Numbers",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1733,
+  "problem_url": "https://codeforces.com/problemset/problem/2086/E",
+  "editorial_url": "https://codeforces.com/blog/entry/141425",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "We call a positive integer zebra-like if its binary representation has alternating bits up to the most significant bit, and the least significant bit is equal to $$$1$$$. For example, the numbers $$$1$$$, $$$5$$$, and $$$21$$$ are zebra-like , as their binary representations $$$1$$$, $$$101$$$, and $$$10101$$$ meet the requirements, while the number $$$10$$$ is not zebra-like , as the least significant bit of its binary representation $$$1010$$$ is $$$0$$$. We define the zebra value of a positive integer $$$e$$$ as the minimum integer $$$p$$$ such that $$$e$$$ can be expressed as the sum of $$$p$$$ zebra-like numbers (possibly the same, possibly different) Given three integers $$$l$$$, $$$r$$$, and $$$k$$$, calculate the number of integers $$$x$$$ such that $$$l \\le x \\le r$$$ and the zebra value of $$$x$$$ equals $$$k$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of test cases follows. The only line of each test case contains three integers $$$l$$$, $$$r$$$ ($$$1 \\le l \\le r \\le 10^{18}$$$) and $$$k$$$ ($$$1 \\le k \\le 10^{18}$$$).",
+  "output_specification": "For each test case, output a single integer — the number of integers in $$$[l, r]$$$ with zebra value $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 100 3\n1 1 1\n15 77 2\n2 10 100\n1234567 123456789101112131 12",
+      "output": "13\n1\n3\n0\n4246658701"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:27",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "1042C",
+  "source": "problemset",
+  "contest_id": 1042,
+  "problem_index": "C",
+  "name": "Array Product",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 5018,
+  "problem_url": "https://codeforces.com/problemset/problem/1042/C",
+  "editorial_url": "https://codeforces.com/blog/entry/61891",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ integers. You can perform the following operations with it: Choose some positions $$$i$$$ and $$$j$$$ ($$$1 \\le i, j \\le n, i \\ne j$$$), write the value of $$$a_i \\cdot a_j$$$ into the $$$j$$$-th cell and remove the number from the $$$i$$$-th cell; Choose some position $$$i$$$ and remove the number from the $$$i$$$-th cell (this operation can be performed no more than once and at any point of time, not necessarily in the beginning ). The number of elements decreases by one after each operation. However, the indexing of positions stays the same. Deleted numbers can't be used in the later operations. Your task is to perform exactly $$$n - 1$$$ operations with the array in such a way that the only number that remains in the array is maximum possible. This number can be rather large, so instead of printing it you need to print any sequence of operations which leads to this maximum number. Read the output format to understand what exactly you need to print.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in the array. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$) — the elements of the array.",
+  "output_specification": "Print $$$n - 1$$$ lines. The $$$k$$$-th line should contain one of the two possible operations. The operation of the first type should look like this: $$$1~ i_k~ j_k$$$, where $$$1$$$ is the type of operation, $$$i_k$$$ and $$$j_k$$$ are the positions of the chosen elements. The operation of the second type should look like this: $$$2~ i_k$$$, where $$$2$$$ is the type of operation, $$$i_k$$$ is the position of the chosen element. Note that there should be no more than one such operation. If there are multiple possible sequences of operations leading to the maximum number — print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 -2 0 1 -3",
+      "output": "2 3\n1 1 2\n1 2 4\n1 4 5"
+    },
+    {
+      "input": "5\n5 2 0 4 0",
+      "output": "1 3 5\n2 5\n1 1 2\n1 2 4"
+    },
+    {
+      "input": "2\n2 -1",
+      "output": "2 2"
+    },
+    {
+      "input": "4\n0 -10 0 0",
+      "output": "1 1 2\n1 2 3\n1 3 4"
+    },
+    {
+      "input": "4\n0 0 0 0",
+      "output": "1 1 2\n1 2 3\n1 3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1866I",
+  "source": "problemset",
+  "contest_id": 1866,
+  "problem_index": "I",
+  "name": "Imagination Castle",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "games",
+    "two pointers"
+  ],
+  "solved_count": 986,
+  "problem_url": "https://codeforces.com/problemset/problem/1866/I",
+  "editorial_url": "https://codeforces.com/blog/entry/120025",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Given a chessboard of size $$$N \\times M$$$ ($$$N$$$ rows and $$$M$$$ columns). Each row is numbered from $$$1$$$ to $$$N$$$ from top to bottom and each column is numbered from $$$1$$$ to $$$M$$$ from left to right. The tile in row $$$r$$$ and column $$$c$$$ is denoted as $$$(r,c)$$$. There exists $$$K$$$ distinct special tiles on the chessboard with the $$$i$$$-th special tile being tile $$$(X_i,Y_i)$$$. It is guaranteed that tile $$$(1,1)$$$ is not a special tile. A new chess piece has been invented, which is the castle. The castle moves similarly to a rook in regular chess, but slightly differently. In one move, a castle that is on some tile can only move to another tile in the same row or in the same column, but only in the right direction or the down direction. Formally, in one move, the castle on tile $$$(r,c)$$$ can only move to tile $$$(r',c')$$$ if and only if one of the following two conditions is satisfied: $$$r'=r$$$ and $$$c' \\gt c$$$. $$$c'=c$$$ and $$$r' \\gt r$$$. Chaneka and Bhinneka will play a game. In the beginning of the game, there is a castle in tile $$$(1,1)$$$. The two players will play alternatingly with Chaneka going first. In one turn, the player on that turn must move the castle following the movement rules of the castle. If a player moves the castle to a special tile on her turn, then that player wins the game and the game ends. If on a turn, the castle cannot be moved, the player on that turn loses and the game ends. Given the size of the board and the locations of each special tile. Determine the winner of this game if Chaneka and Bhinneka plays optimally.",
+  "input_specification": "The first line contains three integers $$$N$$$, $$$M$$$, and $$$K$$$ ($$$1 \\leq N,M \\leq 2 \\cdot 10^5$$$; $$$0 \\leq K \\leq \\min(N \\times M - 1, 2\\cdot10^5)$$$) — the size of the chessboard and the number of special tiles. The $$$i$$$-th of the next $$$K$$$ lines contains two integers $$$X_i$$$ and $$$Y_i$$$ ($$$1\\leq X_i\\leq N$$$; $$$1\\leq Y_i\\leq M$$$; $$$(X_i, Y_i) \\neq (1,1)$$$) — the location of each special tile. The special tiles are pairwise distinct.",
+  "output_specification": "Output Chaneka if Chaneka is the winner, output Bhinneka if Bhinneka is the winner.",
+  "sample_testcases": [
+    {
+      "input": "4 5 3\n1 3\n4 4\n1 5",
+      "output": "Chaneka"
+    },
+    {
+      "input": "2 2 0",
+      "output": "Bhinneka"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

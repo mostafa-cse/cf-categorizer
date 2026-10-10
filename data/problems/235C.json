@@ -1,0 +1,40 @@
+{
+  "id": "235C",
+  "source": "problemset",
+  "contest_id": 235,
+  "problem_index": "C",
+  "name": "Cyclical Quest",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 2624,
+  "problem_url": "https://codeforces.com/problemset/problem/235/C",
+  "editorial_url": "https://codeforces.com/blog/entry/5592",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Some days ago, WJMZBMR learned how to answer the query \"how many times does a string x occur in a string s \" quickly by preprocessing the string s . But now he wants to make it harder. So he wants to ask \"how many consecutive substrings of s are cyclical isomorphic to a given string x \". You are given string s and n strings x i , for each string x i find, how many consecutive substrings of s are cyclical isomorphic to x i . Two strings are called cyclical isomorphic if one can rotate one string to get the other one. 'Rotate' here means 'to take some consecutive chars (maybe none) from the beginning of a string and put them back at the end of the string in the same order'. For example, string \" abcde \" can be rotated to string \" deabc \". We can take characters \" abc \" from the beginning and put them at the end of \" de \".",
+  "input_specification": "The first line contains a non-empty string s . The length of string s is not greater than 10 6 characters. The second line contains an integer n ( 1 ≤ n ≤ 10 5 ) — the number of queries. Then n lines follow: the i -th line contains the string x i — the string for the i -th query. The total length of x i is less than or equal to 10 6 characters. In this problem, strings only consist of lowercase English letters.",
+  "output_specification": "For each query x i print a single integer that shows how many consecutive substrings of s are cyclical isomorphic to x i . Print the answers to the queries in the order they are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "baabaabaaa\n5\na\nba\nbaa\naabaa\naaba",
+      "output": "7\n5\n7\n3\n5"
+    },
+    {
+      "input": "aabbaa\n3\naa\naabb\nabba",
+      "output": "2\n3\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "419. Suffix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct the minimal deterministic finite automaton recognizing all substrings of S online in O(N) time and space. Answer substring count, occurrence, and LCS queries."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1463D",
+  "source": "problemset",
+  "contest_id": 1463,
+  "problem_index": "D",
+  "name": "Pairs",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 4970,
+  "problem_url": "https://codeforces.com/problemset/problem/1463/D",
+  "editorial_url": "https://codeforces.com/blog/entry/85707",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have $$$2n$$$ integers $$$1, 2, \\dots, 2n$$$. You have to redistribute these $$$2n$$$ elements into $$$n$$$ pairs. After that, you choose $$$x$$$ pairs and take minimum elements from them, and from the other $$$n - x$$$ pairs, you take maximum elements. Your goal is to obtain the set of numbers $$$\\{b_1, b_2, \\dots, b_n\\}$$$ as the result of taking elements from the pairs. What is the number of different $$$x$$$-s ($$$0 \\le x \\le n$$$) such that it's possible to obtain the set $$$b$$$ if for each $$$x$$$ you can choose how to distribute numbers into pairs and from which $$$x$$$ pairs choose minimum elements?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains the integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_1 \\lt b_2 \\lt \\dots \\lt b_n \\le 2n$$$) — the set you'd like to get. It's guaranteed that the sum of $$$n$$$ over test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one number — the number of different $$$x$$$-s such that it's possible to obtain the set $$$b$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1\n1\n5\n1 4 5 9 10\n2\n3 4",
+      "output": "1\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:25",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

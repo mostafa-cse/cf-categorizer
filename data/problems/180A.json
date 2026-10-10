@@ -1,0 +1,38 @@
+{
+  "id": "180A",
+  "source": "problemset",
+  "contest_id": 180,
+  "problem_index": "A",
+  "name": "Defragmentation",
+  "rating": 1800,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 650,
+  "problem_url": "https://codeforces.com/problemset/problem/180/A",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "In this problem you have to implement an algorithm to defragment your hard disk. The hard disk consists of a sequence of clusters, numbered by integers from 1 to n . The disk has m recorded files, the i -th file occupies clusters with numbers a i , 1 , a i , 2 , ..., a i , n i . These clusters are not necessarily located consecutively on the disk, but the order in which they are given corresponds to their sequence in the file (cluster a i , 1 contains the first fragment of the i -th file, cluster a i , 2 has the second fragment, etc.). Also the disc must have one or several clusters which are free from files. You are permitted to perform operations of copying the contents of cluster number i to cluster number j ( i and j must be different). Moreover, if the cluster number j used to keep some information, it is lost forever. Clusters are not cleaned, but after the defragmentation is complete, some of them are simply declared unusable (although they may possibly still contain some fragments of files). Your task is to use a sequence of copy operations to ensure that each file occupies a contiguous area of memory. Each file should occupy a consecutive cluster section, the files must follow one after another from the beginning of the hard disk. After defragmentation all free (unused) clusters should be at the end of the hard disk. After defragmenting files can be placed in an arbitrary order. Clusters of each file should go consecutively from first to last. See explanatory examples in the notes. Print the sequence of operations leading to the disk defragmentation. Note that you do not have to minimize the number of operations, but it should not exceed 2 n .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 200 ) — the number of clusters and the number of files, correspondingly. Next m lines contain descriptions of the files. The first number in the line is n i ( n i ≥ 1 ), the number of clusters occupied by the i -th file. Then follow n i numbers a i , 1 , a i , 2 , ..., a i , n i ( 1 ≤ a i , j ≤ n ). It is guaranteed that each cluster number occurs not more than once and , that is, there exists at least one unused cluster. Numbers on each line are separated by spaces.",
+  "output_specification": "In the first line print a single integer k ( 0 ≤ k ≤ 2 n ) — the number of operations needed to defragment the disk. Next k lines should contain the operations' descriptions as \" i j \" (copy the contents of the cluster number i to the cluster number j ).",
+  "sample_testcases": [
+    {
+      "input": "7 2\n2 1 2\n3 3 4 5",
+      "output": "0"
+    },
+    {
+      "input": "7 2\n2 1 3\n3 2 4 5",
+      "output": "3\n2 6\n3 2\n6 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

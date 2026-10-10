@@ -1,0 +1,39 @@
+{
+  "id": "818G",
+  "source": "problemset",
+  "contest_id": 818,
+  "problem_index": "G",
+  "name": "Four Melodies",
+  "rating": 2600,
+  "tags": [
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 1108,
+  "problem_url": "https://codeforces.com/problemset/problem/818/G",
+  "editorial_url": "https://codeforces.com/blog/entry/52991",
+  "time_limit": "5 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Author note: I think some of you might remember the problem \"Two Melodies\" from Eductational Codeforces Round 22. Now it's time to make it a bit more difficult! Alice is a composer, and recently she had recorded two tracks that became very popular. Now she has got a lot of fans who are waiting for new tracks. This time Alice wants to form four melodies for her tracks. Alice has a sheet with n notes written on it. She wants to take four such non-empty non-intersecting subsequences that all of them form a melody and sum of their lengths is maximal. Subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements. Subsequence forms a melody when each two adjacent notes either differ by 1 or are congruent modulo 7 . You should write a program which will calculate maximum sum of lengths of such four non-empty non-intersecting subsequences that all of them form a melody.",
+  "input_specification": "The first line contains one integer number n ( 4 ≤ n ≤ 3000 ). The second line contains n integer numbers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ) — notes written on a sheet.",
+  "output_specification": "Print maximum sum of lengths of such four non-empty non-intersecting subsequences that all of them form a melody.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 3 5 7 9",
+      "output": "4"
+    },
+    {
+      "input": "5\n1 3 5 7 2",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

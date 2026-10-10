@@ -1,0 +1,41 @@
+{
+  "id": "351A",
+  "source": "problemset",
+  "contest_id": 351,
+  "problem_index": "A",
+  "name": "Jeff and Rounding",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 3114,
+  "problem_url": "https://codeforces.com/problemset/problem/351/A",
+  "editorial_url": "https://codeforces.com/blog/entry/9070",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Jeff got 2 n real numbers a 1 , a 2 , ..., a 2 n as a birthday present. The boy hates non-integer numbers, so he decided to slightly \"adjust\" the numbers he's got. Namely, Jeff consecutively executes n operations, each of them goes as follows: choose indexes i and j ( i ≠ j ) that haven't been chosen yet; round element a i to the nearest integer that isn't more than a i (assign to a i : ⌊ a i ⌋ ); round element a j to the nearest integer that isn't less than a j (assign to a j : ⌈ a j ⌉ ). Nevertheless, Jeff doesn't want to hurt the feelings of the person who gave him the sequence. That's why the boy wants to perform the operations so as to make the absolute value of the difference between the sum of elements before performing the operations and the sum of elements after performing the operations as small as possible. Help Jeff find the minimum absolute value of the difference.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 2000) . The next line contains 2 n real numbers a 1 , a 2 , ... , a 2 n (0 ≤ a i ≤ 10000) , given with exactly three digits after the decimal point. The numbers are separated by spaces.",
+  "output_specification": "In a single line print a single real number — the required difference with exactly three digits after the decimal point.",
+  "sample_testcases": [
+    {
+      "input": "3\n0.000 0.500 0.750 1.000 2.000 3.000",
+      "output": "0.250"
+    },
+    {
+      "input": "3\n4469.000 6526.000 4864.000 9356.383 7490.000 995.896",
+      "output": "0.279"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

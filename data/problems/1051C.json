@@ -1,0 +1,42 @@
+{
+  "id": "1051C",
+  "source": "problemset",
+  "contest_id": 1051,
+  "problem_index": "C",
+  "name": "Vasya and Multisets",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 10040,
+  "problem_url": "https://codeforces.com/problemset/problem/1051/C",
+  "editorial_url": "https://codeforces.com/blog/entry/61969",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has a multiset $$$s$$$ consisting of $$$n$$$ integer numbers. Vasya calls some number $$$x$$$ nice if it appears in the multiset exactly once. For example, multiset $$$\\{1, 1, 2, 3, 3, 3, 4\\}$$$ contains nice numbers $$$2$$$ and $$$4$$$. Vasya wants to split multiset $$$s$$$ into two multisets $$$a$$$ and $$$b$$$ (one of which may be empty) in such a way that the quantity of nice numbers in multiset $$$a$$$ would be the same as the quantity of nice numbers in multiset $$$b$$$ (the quantity of numbers to appear exactly once in multiset $$$a$$$ and the quantity of numbers to appear exactly once in multiset $$$b$$$).",
+  "input_specification": "The first line contains a single integer $$$n~(2 \\le n \\le 100)$$$. The second line contains $$$n$$$ integers $$$s_1, s_2, \\dots s_n~(1 \\le s_i \\le 100)$$$ — the multiset $$$s$$$.",
+  "output_specification": "If there exists no split of $$$s$$$ to satisfy the given requirements, then print \" NO \" in the first line. Otherwise print \" YES \" in the first line. The second line should contain a string, consisting of $$$n$$$ characters. $$$i$$$-th character should be equal to ' A ' if the $$$i$$$-th element of multiset $$$s$$$ goes to multiset $$$a$$$ and ' B ' if if the $$$i$$$-th element of multiset $$$s$$$ goes to multiset $$$b$$$. Elements are numbered from $$$1$$$ to $$$n$$$ in the order they are given in the input. If there exist multiple solutions, then print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 5 7 1",
+      "output": "YES\nBABA"
+    },
+    {
+      "input": "3\n3 5 1",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

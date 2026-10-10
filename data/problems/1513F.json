@@ -1,0 +1,41 @@
+{
+  "id": "1513F",
+  "source": "problemset",
+  "contest_id": 1513,
+  "problem_index": "F",
+  "name": "Swapping Problem",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "data structures",
+    "sortings"
+  ],
+  "solved_count": 1499,
+  "problem_url": "https://codeforces.com/problemset/problem/1513/F",
+  "editorial_url": "https://codeforces.com/blog/entry/89550",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given 2 arrays $$$a$$$ and $$$b$$$, both of size $$$n$$$. You can swap two elements in $$$b$$$ at most once (or leave it as it is), and you are required to minimize the value $$$$$$\\sum_{i}|a_{i}-b_{i}|.$$$$$$ Find the minimum possible value of this sum.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le {10^9}$$$). The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le {10^9}$$$).",
+  "output_specification": "Output the minimum value of $$$\\sum_{i}|a_{i}-b_{i}|$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 4 3 2 1\n1 2 3 4 5",
+      "output": "4"
+    },
+    {
+      "input": "2\n1 3\n4 2",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

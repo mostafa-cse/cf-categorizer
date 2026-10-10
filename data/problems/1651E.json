@@ -1,0 +1,40 @@
+{
+  "id": "1651E",
+  "source": "problemset",
+  "contest_id": 1651,
+  "problem_index": "E",
+  "name": "Sum of Matchings",
+  "rating": 2600,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "constructive algorithms",
+    "dfs and similar",
+    "graph matchings",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 683,
+  "problem_url": "https://codeforces.com/problemset/problem/1651/E",
+  "editorial_url": "https://codeforces.com/blog/entry/100796",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's denote the size of the maximum matching in a graph $$$G$$$ as $$$\\mathit{MM}(G)$$$. You are given a bipartite graph. The vertices of the first part are numbered from $$$1$$$ to $$$n$$$, the vertices of the second part are numbered from $$$n+1$$$ to $$$2n$$$. Each vertex's degree is $$$2$$$ . For a tuple of four integers $$$(l, r, L, R)$$$, where $$$1 \\le l \\le r \\le n$$$ and $$$n+1 \\le L \\le R \\le 2n$$$, let's define $$$G'(l, r, L, R)$$$ as the graph which consists of all vertices of the given graph that are included in the segment $$$[l, r]$$$ or in the segment $$$[L, R]$$$, and all edges of the given graph such that each of their endpoints belongs to one of these segments. In other words, to obtain $$$G'(l, r, L, R)$$$ from the original graph, you have to remove all vertices $$$i$$$ such that $$$i \\notin [l, r]$$$ and $$$i \\notin [L, R]$$$, and all edges incident to these vertices. Calculate the sum of $$$\\mathit{MM}(G(l, r, L, R))$$$ over all tuples of integers $$$(l, r, L, R)$$$ having $$$1 \\le l \\le r \\le n$$$ and $$$n+1 \\le L \\le R \\le 2n$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 1500$$$) — the number of vertices in each part. Then $$$2n$$$ lines follow, each denoting an edge of the graph. The $$$i$$$-th line contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i \\le n$$$; $$$n + 1 \\le y_i \\le 2n$$$) — the endpoints of the $$$i$$$-th edge. There are no multiple edges in the given graph, and each vertex has exactly two incident edges.",
+  "output_specification": "Print one integer — the sum of $$$\\mathit{MM}(G(l, r, L, R))$$$ over all tuples of integers $$$(l, r, L, R)$$$ having $$$1 \\le l \\le r \\le n$$$ and $$$n+1 \\le L \\le R \\le 2n$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 6\n4 9\n2 6\n3 9\n1 8\n5 10\n2 7\n3 7\n1 10\n5 8",
+      "output": "314"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:40",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

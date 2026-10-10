@@ -1,0 +1,38 @@
+{
+  "id": "2133E",
+  "source": "problemset",
+  "contest_id": 2133,
+  "problem_index": "E",
+  "name": "I Yearned For The Mines",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 1822,
+  "problem_url": "https://codeforces.com/problemset/problem/2133/E",
+  "editorial_url": "https://codeforces.com/blog/entry/145785",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "As a child, Steve yearned for the mines! His mine can be represented as a tree$$$^{\\text{∗}}$$$ of $$$n$$$ nodes. Unfortunately, Steve's mine has been infiltrated by his greatest nemesis, Herobrine! At any time, Herobrine is hiding in exactly one node; initially, he may be in any of them. Steve can perform the following operations: $$$1\\,\\,x$$$ — Check if Herobrine is currently in node $$$x$$$. If he is, Steve catches him. Otherwise, Herobrine may or may not move to any adjacent node ( except the one you just checked). $$$2\\,\\,x$$$ — Destroy all edges connected to node $$$x$$$; Herobrine will no longer be able to use them. Afterwards, Herobrine may or may not move to any adjacent node. Find a sequence of at most $$$\\left\\lfloor \\frac{5}{4} \\cdot n \\right\\rfloor$$$ operations that will guarantee Steve catches Herobrine, regardless of Herobrine's initial location and moves. We have a proof that, under the given constraints, this is always possible. $$$^{\\text{∗}}$$$A tree is a connected graph without cycles.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of nodes. Each of the next $$$n − 1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$), describing an edge between nodes $$$u$$$ and $$$v$$$. It is guaranteed that the given edges form a tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, first output a single integer $$$k$$$ ($$$1 \\le k \\le \\left\\lfloor \\frac{5}{4} \\cdot n \\right\\rfloor$$$) — the number of operations you wish to perform. Then output $$$k$$$ lines. Line $$$i$$$ ($$$1 \\le i \\le k$$$) should contain two integers $$$t_i$$$ and $$$x_i$$$ ($$$1 \\le t_i \\le 2$$$, $$$1 \\le x_i \\le n$$$), indicating that the $$$i$$$-th operation you wish to perform is operation $$$t_i$$$ on node $$$x_i$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n2\n1 2\n4\n1 2\n2 3\n4 2",
+      "output": "2\n1 1\n1 2\n5\n1 2\n2 2\n1 1\n1 3\n1 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

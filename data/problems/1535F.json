@@ -1,0 +1,43 @@
+{
+  "id": "1535F",
+  "source": "problemset",
+  "contest_id": 1535,
+  "problem_index": "F",
+  "name": "String Distance",
+  "rating": 3000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "hashing",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 740,
+  "problem_url": "https://codeforces.com/problemset/problem/1535/F",
+  "editorial_url": "https://codeforces.com/blog/entry/91481",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Suppose you are given two strings $$$a$$$ and $$$b$$$. You can apply the following operation any number of times: choose any contiguous substring of $$$a$$$ or $$$b$$$, and sort the characters in it in non-descending order. Let $$$f(a, b)$$$ the minimum number of operations you have to apply in order to make them equal (or $$$f(a, b) = 1337$$$ if it is impossible to make $$$a$$$ and $$$b$$$ equal using these operations). For example: $$$f(\\text{ab}, \\text{ab}) = 0$$$; $$$f(\\text{ba}, \\text{ab}) = 1$$$ (in one operation, we can sort the whole first string); $$$f(\\text{ebcda}, \\text{ecdba}) = 1$$$ (in one operation, we can sort the substring of the second string starting from the $$$2$$$-nd character and ending with the $$$4$$$-th character); $$$f(\\text{a}, \\text{b}) = 1337$$$. You are given $$$n$$$ strings $$$s_1, s_2, \\dots, s_k$$$ having equal length. Calculate $$$\\sum \\limits_{i = 1}^{n} \\sum\\limits_{j = i + 1}^{n} f(s_i, s_j)$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of strings. Then $$$n$$$ lines follow, each line contains one of the strings $$$s_i$$$, consisting of lowercase Latin letters. $$$|s_1| = |s_2| = \\ldots = |s_n|$$$, and $$$n \\cdot |s_1| \\le 2 \\cdot 10^5$$$. All these strings are pairwise distinct.",
+  "output_specification": "Print one integer: $$$\\sum \\limits_{i = 1}^{n} \\sum\\limits_{j = i + 1}^{n} f(s_i, s_j)$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\nzzz\nbac\nabc\nacb",
+      "output": "4015"
+    },
+    {
+      "input": "2\na\nb",
+      "output": "1337"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:06",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

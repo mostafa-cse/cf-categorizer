@@ -1,0 +1,38 @@
+{
+  "id": "314A",
+  "source": "problemset",
+  "contest_id": 314,
+  "problem_index": "A",
+  "name": "Sereja and Contest",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2198,
+  "problem_url": "https://codeforces.com/problemset/problem/314/A",
+  "editorial_url": "https://codeforces.com/blog/entry/7905",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "During the last Sereja's Codesecrof round the server crashed many times, so the round was decided to be made unrated for some participants. Let's assume that n people took part in the contest. Let's assume that the participant who got the first place has rating a 1 , the second place participant has rating a 2 , ... , the n -th place participant has rating a n . Then changing the rating on the Codesecrof site is calculated by the formula . After the round was over, the Codesecrof management published the participants' results table. They decided that if for a participant d i < k , then the round can be considered unrated for him. But imagine the management's surprise when they found out that the participants' rating table is dynamic. In other words, when some participant is removed from the rating, he is removed from the results' table and the rating is recalculated according to the new table. And of course, all applications for exclusion from the rating are considered in view of the current table. We know that among all the applications for exclusion from the rating the first application to consider is from the participant with the best rank (the rank with the minimum number), for who d i < k . We also know that the applications for exclusion from rating were submitted by all participants. Now Sereja wonders, what is the number of participants to be excluded from the contest rating, and the numbers of the participants in the original table in the order of their exclusion from the rating. Pay attention to the analysis of the first test case for a better understanding of the statement.",
+  "input_specification": "The first line contains two integers n , k (1 ≤ n ≤ 2·10 5 ,  - 10 9 ≤ k ≤ 0) . The second line contains n space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) — ratings of the participants in the initial table.",
+  "output_specification": "Print the numbers of participants in the order in which they were removed from the table. Print the initial numbers of the participants, that is, the numbers that the participants had in the initial table.",
+  "sample_testcases": [
+    {
+      "input": "5 0\n5 3 4 1 2",
+      "output": "2\n3\n4"
+    },
+    {
+      "input": "10 -10\n5 5 1 7 5 1 2 4 9 2",
+      "output": "2\n4\n5\n7\n8\n9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:29",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

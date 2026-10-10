@@ -1,0 +1,40 @@
+{
+  "id": "871E",
+  "source": "problemset",
+  "contest_id": 871,
+  "problem_index": "E",
+  "name": "Restore the Tree",
+  "rating": 2900,
+  "tags": [
+    "graphs",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 246,
+  "problem_url": "https://codeforces.com/problemset/problem/871/E",
+  "editorial_url": "https://codeforces.com/blog/entry/55200",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya had a tree consisting of n vertices numbered with integers from 1 to n . Accidentally he lost his tree. Petya remembers information about k vertices: distances from each of them to each of the n tree vertices. Your task is to restore any tree that satisfies the information that Petya remembers or report that such tree doesn't exist.",
+  "input_specification": "The first line contains two integers n and k ( 2 ≤ n ≤ 30 000 , 1 ≤ k ≤ min (200, n ) ) — the number of vertices in the tree and the number of vertices about which Petya remembers distance information. The following k lines contain remembered information. The i -th line contains n integers d i , 1 , d i , 2 , ..., d i , n ( 0 ≤ d i , j ≤ n - 1 ), where d i , j — the distance to j -th vertex from the i -th vertex that Petya remembers.",
+  "output_specification": "If there are no suitable trees, print -1 . In the other case, print n - 1 lines: each line should contain two vertices connected by edge in the required tree. You can print edges and vertices in an edge in any order. The tree vertices are enumerated from 1 to n . If there are many solutions print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 2\n0 1 2 3 2\n2 1 0 1 2",
+      "output": "2 1\n3 2\n4 3\n5 2"
+    },
+    {
+      "input": "3 1\n1 2 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:45",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

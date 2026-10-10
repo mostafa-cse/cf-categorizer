@@ -1,0 +1,35 @@
+{
+  "id": "364C",
+  "source": "problemset",
+  "contest_id": 364,
+  "problem_index": "C",
+  "name": "Beautiful Set",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "number theory"
+  ],
+  "solved_count": 657,
+  "problem_url": "https://codeforces.com/problemset/problem/364/C",
+  "editorial_url": "https://codeforces.com/blog/entry/9657",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "We'll call a set of positive integers a beautiful if the following condition fulfills: for any prime p , if , then . In other words, if one number from the set is divisible by prime p , then at least half of numbers from the set is divisible by p . Your task is to find any beautiful set, where the number of elements is equal to k and each element doesn't exceed 2 k 2 .",
+  "input_specification": "The first line contains integer k ( 10 ≤ k ≤ 5000 ) that shows how many numbers the required beautiful set should have.",
+  "output_specification": "In the first line print k space-separated integers that are a beautiful set. If there are multiple such sets, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "10",
+      "output": "16 18 24 27 36 48 54 72 108 144"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

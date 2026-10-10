@@ -1,0 +1,37 @@
+{
+  "id": "2132D",
+  "source": "problemset",
+  "contest_id": 2132,
+  "problem_index": "D",
+  "name": "From 1 to Infinity",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "dp",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 9358,
+  "problem_url": "https://codeforces.com/problemset/problem/2132/D",
+  "editorial_url": "https://codeforces.com/blog/entry/145692",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vadim wanted to understand the infinite sequence of digits that consists of the positive integers written consecutively from $$$1$$$ to infinity. That is, this sequence looks like $$$123456789101112131415 \\ldots$$$ To avoid looking into infinity, Vadim cut this sequence at the $$$k$$$-th digit and discarded everything after it. Thus, exactly $$$k$$$ digits remained in the sequence. Help him find the sum of the digits in the remaining sequence.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 2 \\cdot 10^4)$$$ — the number of test cases. The following lines describe the test cases. In a single line of each test case, there is an integer $$$k$$$ — the number of digits in the remaining sequence $$$(1 \\le k \\le 10^{15})$$$.",
+  "output_specification": "For each given $$$k$$$, output the sum of the digits in the sequence of length $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5\n10\n13\n29\n1000000000\n1000000000000000",
+      "output": "15\n46\n48\n100\n4366712386\n4441049382716054"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

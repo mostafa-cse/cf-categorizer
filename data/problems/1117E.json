@@ -1,0 +1,38 @@
+{
+  "id": "1117E",
+  "source": "problemset",
+  "contest_id": 1117,
+  "problem_index": "E",
+  "name": "Decypher the String",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "chinese remainder theorem",
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 1675,
+  "problem_url": "https://codeforces.com/problemset/problem/1117/E",
+  "editorial_url": "https://codeforces.com/blog/entry/65365",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Remember to flush your output while communicating with the testing program. You may use fflush(stdout) in C++, system.out.flush() in Java, stdout.flush() in Python or flush(output) in Pascal to flush the output. If you use some other programming language, consult its documentation. You may also refer to the guide on interactive problems: https://codeforces.com/blog/entry/45307 . You are given a string $$$t$$$ consisting of $$$n$$$ lowercase Latin letters. This string was cyphered as follows: initially, the jury had a string $$$s$$$ consisting of $$$n$$$ lowercase Latin letters. Then they applied a sequence of no more than $$$n$$$ (possibly zero) operations. $$$i$$$-th operation is denoted by two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le n$$$), and means swapping two elements of the string with indices $$$a_i$$$ and $$$b_i$$$. All operations were done in the order they were placed in the sequence. For example, if $$$s$$$ is xyz and $$$2$$$ following operations are performed: $$$a_1 = 1, b_1 = 2$$$; $$$a_2 = 2, b_2 = 3$$$, then after the first operation the current string is yxz , and after the second operation the current string is yzx , so $$$t$$$ is yzx . You are asked to restore the original string $$$s$$$. Unfortunately, you have no information about the operations used in the algorithm (you don't even know if there were any operations in the sequence). But you may run the same sequence of operations on any string you want, provided that it contains only lowercase Latin letters and its length is $$$n$$$, and get the resulting string after those operations. Can you guess the original string $$$s$$$ asking the testing system to run the sequence of swaps no more than $$$3$$$ times? The string $$$s$$$ and the sequence of swaps are fixed in each test; the interactor doesn't try to adapt the test to your solution .",
+  "input_specification": "Initially the testing system sends one string $$$t$$$, consisting of lowercase Latin letters ($$$1 \\le |t| = n \\le 10^4$$$).",
+  "output_specification": "To give the answer, your program should print one line $$$!$$$ $$$s$$$ with a line break in the end . After that, it should flush the output and terminate gracefully.",
+  "sample_testcases": [
+    {
+      "input": "yzx\naab\nbaa\naba",
+      "output": "? baa\n? aba\n? aab\n! xyz"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:51",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "267. Chinese Remainder Theorem (CRT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Chinese Remainder Theorem (CRT) paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

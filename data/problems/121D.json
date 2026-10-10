@@ -1,0 +1,40 @@
+{
+  "id": "121D",
+  "source": "problemset",
+  "contest_id": 121,
+  "problem_index": "D",
+  "name": "Lucky Segments",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 367,
+  "problem_url": "https://codeforces.com/problemset/problem/121/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2956",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya loves lucky numbers. Everybody knows that lucky numbers are positive integers whose decimal representation contains only the lucky digits 4 and 7 . For example, numbers 47 , 744 , 4 are lucky and 5 , 17 , 467 are not. Petya has n number segments [ l 1 ; r 1 ] , [ l 2 ; r 2 ] , ..., [ l n ; r n ] . During one move Petya can take any segment (let it be segment number i ) and replace it with segment [ l i + 1; r i + 1] or [ l i - 1; r i - 1] . In other words, during one move Petya can shift any segment to the left or to the right by a unit distance. Petya calls a number full if it belongs to each segment. That is, number x is full if for any i (1 ≤ i ≤ n ) the condition l i ≤ x ≤ r i is fulfilled. Petya makes no more than k moves. After that he counts the quantity of full lucky numbers. Find the maximal quantity that he can get.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ 10 18 ) — the number of segments and the maximum number of moves. Next n lines contain pairs of integers l i and r i (1 ≤ l i ≤ r i ≤ 10 18 ) . Please do not use the %lld specificator to read or write 64-bit integers in С++. It is preferred to use the %I64d specificator.",
+  "output_specification": "Print on the single line the single number — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "4 7\n1 4\n6 9\n4 7\n3 5",
+      "output": "1"
+    },
+    {
+      "input": "2 7\n40 45\n47 74",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:54",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1781E",
+  "source": "problemset",
+  "contest_id": 1781,
+  "problem_index": "E",
+  "name": "Rectangle Shrinking",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "greedy",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 1475,
+  "problem_url": "https://codeforces.com/problemset/problem/1781/E",
+  "editorial_url": "https://codeforces.com/blog/entry/111783",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You have a rectangular grid of height $$$2$$$ and width $$$10^9$$$ consisting of unit cells. There are $$$n$$$ rectangles placed on this grid, and the borders of these rectangles pass along cell borders. The $$$i$$$-th rectangle covers all cells in rows from $$$u_i$$$ to $$$d_i$$$ inclusive and columns from $$$l_i$$$ to $$$r_i$$$ inclusive ($$$1 \\le u_i \\le d_i \\le 2$$$; $$$1 \\le l_i \\le r_i \\le 10^9$$$). The initial rectangles can intersect, be nested, and coincide arbitrarily. You should either remove each rectangle, or replace it with any of its non-empty subrectangles. In the latter case, the new subrectangle must lie inside the initial rectangle, and its borders must still pass along cell borders. In particular, it is allowed for the subrectangle to be equal to the initial rectangle. After that replacement, no two (non-removed) rectangles are allowed to have common cells, and the total area covered with the new rectangles must be as large as possible. Illustration for the first test case. The initial rectangles are given at the top, the new rectangles are given at the bottom. Rectangle number $$$4$$$ is removed.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of rectangles. Each of the next $$$n$$$ lines contains four integers $$$u_i, l_i, d_i, r_i$$$ ($$$1 \\le u_i \\le d_i \\le 2$$$; $$$1 \\le l_i \\le r_i \\le 10^9$$$) — the coordinates of cells located in the top-left and the bottom-right corners of the rectangle, respectively. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, first print an integer $$$s$$$ — the largest possible covered by new rectangles area. Then print $$$n$$$ lines with your solution to cover this area. In the $$$i$$$-th of these lines print four integers $$$u'_i, l'_i, d'_i, r'_i$$$. If you remove the $$$i$$$-th rectangle, print $$$u'_i = l'_i = d'_i = r'_i = 0$$$. Otherwise, these numbers denote the new coordinates of the top-left and the bottom-right corners of the $$$i$$$-th rectangle, satisfying $$$u_i \\le u'_i \\le d'_i \\le d_i$$$; $$$l_i \\le l'_i \\le r'_i \\le r_i$$$. If there are multiple solutions, print any.",
+  "sample_testcases": [
+    {
+      "input": "8\n5\n1 2 2 4\n2 4 2 8\n1 4 2 7\n1 2 1 2\n1 9 1 10\n2\n1 1 1 10\n1 5 1 15\n2\n1 1 1 10\n1 1 1 10\n5\n1 3 1 7\n1 3 1 8\n1 1 1 4\n1 2 1 7\n1 10 1 11\n2\n1 1 2 10\n1 5 1 8\n2\n1 5 2 10\n1 2 1 7\n2\n1 5 2 10\n2 2 2 15\n5\n2 6 2 7\n1 4 2 5\n1 5 1 9\n1 7 2 10\n1 2 1 6",
+      "output": "15\n1 2 2 4\n2 5 2 8\n1 5 1 7\n0 0 0 0\n1 9 1 10\n15\n1 1 1 10\n1 11 1 15\n10\n1 1 1 10\n0 0 0 0\n10\n0 0 0 0\n1 8 1 8\n1 1 1 4\n1 5 1 7\n1 10 1 11\n20\n1 1 2 10\n0 0 0 0\n15\n1 5 2 10\n1 2 1 4\n20\n1 5 1 10\n2 2 2 15\n16\n2 6 2 6\n2 4 2 5\n0 0 0 0\n1 7 2 10\n1 2 1 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

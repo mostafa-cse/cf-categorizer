@@ -1,0 +1,44 @@
+{
+  "id": "962C",
+  "source": "problemset",
+  "contest_id": 962,
+  "problem_index": "C",
+  "name": "Make a Square",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 8534,
+  "problem_url": "https://codeforces.com/problemset/problem/962/C",
+  "editorial_url": "https://codeforces.com/blog/entry/58845",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a positive integer $$$n$$$, written without leading zeroes (for example, the number 04 is incorrect). In one operation you can delete any digit of the given integer so that the result remains a positive integer without leading zeros. Determine the minimum number of operations that you need to consistently apply to the given integer $$$n$$$ to make from it the square of some positive integer or report that it is impossible. An integer $$$x$$$ is the square of some positive integer if and only if $$$x=y^2$$$ for some positive integer $$$y$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^{9}$$$). The number is given without leading zeroes.",
+  "output_specification": "If it is impossible to make the square of some positive integer from $$$n$$$, print -1 . In the other case, print the minimal number of operations required to do it.",
+  "sample_testcases": [
+    {
+      "input": "8314",
+      "output": "2"
+    },
+    {
+      "input": "625",
+      "output": "0"
+    },
+    {
+      "input": "333",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

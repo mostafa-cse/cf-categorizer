@@ -1,0 +1,38 @@
+{
+  "id": "2257D",
+  "source": "problemset",
+  "contest_id": 2257,
+  "problem_index": "D",
+  "name": "Bermuda Rectangle",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 6667,
+  "problem_url": "https://codeforces.com/problemset/problem/2257/D",
+  "editorial_url": "https://codeforces.com/blog/entry/156058",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Beaver is swimming across the ocean (yes, he can do that). Here, it aims to explore the Bermuda Rectangle. Of course, it poses no danger to The Beaver, but it is interesting from a scientific perspective. Unlike the Bermuda Triangle, not much is known about the Bermuda Rectangle. Specifically, The Beaver knows for sure that the area of the rectangle is $$$S$$$, its sides are integers, and the bottom left corner is located at the point $$$(0, 0)$$$. The Beaver is interested in how many cells from a rectangle with sides $$$x$$$ and $$$y$$$, whose bottom left corner is at the point $$$(0, 0)$$$, can be located within the Bermuda Rectangle. A cell is considered to be within the Bermuda Rectangle if there exists a rectangle that satisfies the given constraints of the Bermuda Rectangle and contains that cell. Help The Beaver quickly respond to queries! You need to answer $$$q$$$ such queries.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10\\,000$$$). The description of the test cases follows. The first line of each test case contains two integers $$$S$$$ and $$$q$$$ — the area of the Bermuda Rectangle and the number of queries ($$$1 \\le S \\le 10^{14}$$$; $$$1 \\le q \\le 3 \\cdot 10^5$$$). This is followed by $$$q$$$ lines, each containing two integers $$$x, y$$$ — the next query ($$$1 \\le x, y \\le S$$$). It's guaranteed that the sum of $$$q$$$ over all test cases doesn't exceed $$$3 \\cdot 10^5$$$. It's guaranteed that the sum of $$$\\sqrt{S}$$$ over all test cases doesn't exceed $$$10^7$$$.",
+  "output_specification": "For each query, output a single integer on a separate line — the answer to the query.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 4\n2 3\n4 5\n6 6\n1 1\n5 2\n2 2\n3 4\n8 2\n3 1\n5 6",
+      "output": "6\n11\n14\n1\n3\n6\n3\n15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

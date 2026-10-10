@@ -1,0 +1,42 @@
+{
+  "id": "1835B",
+  "source": "problemset",
+  "contest_id": 1835,
+  "problem_index": "B",
+  "name": "Lottery",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 1148,
+  "problem_url": "https://codeforces.com/problemset/problem/1835/B",
+  "editorial_url": "https://codeforces.com/blog/entry/117394",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "$$$n$$$ people indexed with integers from $$$1$$$ to $$$n$$$ came to take part in a lottery. Each received a ticket with an integer from $$$0$$$ to $$$m$$$. In a lottery, one integer called target is drawn uniformly from $$$0$$$ to $$$m$$$. $$$k$$$ tickets (or less, if there are not enough participants) with the closest numbers to the target are declared the winners. In case of a draw, a ticket belonging to the person with a smaller index is declared a winner. Bytek decided to take part in the lottery. He knows the values on the tickets of all previous participants. He can pick whatever value he wants on his ticket, but unfortunately, as he is the last one to receive it, he is indexed with an integer $$$n + 1$$$. Bytek wants to win the lottery. Thus, he wants to know what he should pick to maximize the chance of winning. He wants to know the smallest integer in case there are many such integers. Your task is to find it and calculate his chance of winning.",
+  "input_specification": "In the first line of the input, there are the integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1 \\leq n \\leq 10^6$$$, $$$0 \\leq m \\leq 10^{18}$$$, $$$1 \\leq k \\leq 10^6$$$). In the following line, there are $$$n$$$ integers separated by a single space, denoting the numbers on tickets received by people participating in a lottery. These numbers are integers in the range from $$$0$$$ to $$$m$$$.",
+  "output_specification": "You should output two integers separated by a single space on the standard output. The first should be equal to the number of target values (from $$$0$$$ to $$$m$$$), upon drawing which Baytek wins, given that he chooses his ticket optimally. The second should be equal to the integer Bytek should pick to maximize his chance of winning the lottery.",
+  "sample_testcases": [
+    {
+      "input": "3 6 2\n1 4 5",
+      "output": "4 2"
+    },
+    {
+      "input": "7 7 1\n2 4 7 3 0 1 6",
+      "output": "1 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:53",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

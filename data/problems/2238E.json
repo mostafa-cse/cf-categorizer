@@ -1,0 +1,35 @@
+{
+  "id": "2238E",
+  "source": "problemset",
+  "contest_id": 2238,
+  "problem_index": "E",
+  "name": "Cake Trial",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 2310,
+  "problem_url": "https://codeforces.com/problemset/problem/2238/E",
+  "editorial_url": "https://codeforces.com/blog/entry/154829",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "The cake is a lie. — Portal GLaDOS, the artificial intelligence of the Aperture Science Enrichment Center, decided to conduct another test for Chell. This time, the test is about cakes. GLaDOS arranged $$$n$$$ cakes in a row. Each cake can be either real ( T ) or fake ( F ). Chell must guess which cakes are real and which are fake. Chell has a unique ability: she can determine exactly whether a cake is real just by looking at it. However, in her answer, she must satisfy GLaDOS's strange condition: all fake cakes in Chell's answer must form one contiguous subsegment (possibly empty). Initially, GLaDOS prepared some arrangement of cakes, but some cakes have not been placed yet. You are given a string $$$s$$$ of length $$$n$$$ describing the current situation: $$$s_i =$$$ T , if the $$$i$$$-th cake is real; $$$s_i =$$$ F , if the $$$i$$$-th cake is fake; $$$s_i =$$$ N , if there is no cake at the $$$i$$$-th position yet, and GLaDOS may still place either a real or a fake cake there at her discretion. After GLaDOS finishes the arrangement (replaces all N with T or F ), Chell will see the final arrangement and will know exactly for each cake whether it is real or fake. Chell will choose a contiguous segment $$$[l, r]$$$ ($$$1 \\le l \\le r \\le n$$$) that she will declare to be the set of fake cakes (or she may declare all cakes to be real). All cakes outside this segment are considered real. Chell wants her answer to be as close to the truth as possible, so she will choose the segment to minimize the number of mistakes. GLaDOS, being cunning, wants to make Chell's life harder. She wants to place the remaining cakes (replace all N with T or F ) so that the number of mistakes Chell is forced to make, under her optimal choice of segment, is as large as possible. Help GLaDOS determine the maximum number of mistakes she can guarantee.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the number of cakes. The second line of each test case contains a string $$$s$$$ of length $$$n$$$ consisting of the characters T , F , or N — the current arrangement of cakes. It is guaranteed that the sum of $$$n^3$$$ over all test cases does not exceed $$$500^3$$$.",
+  "output_specification": "For each test case, output one integer — the maximum number of mistakes that GLaDOS can guarantee.",
+  "sample_testcases": [
+    {
+      "input": "10\n4\nFTFF\n5\nTNFTT\n6\nTFTTTN\n6\nTNNFTF\n7\nTNFNTNF\n6\nNNFFNN\n7\nTNTFNTN\n1\nN\n5\nNNNNN\n10\nNNNTTNNNFN",
+      "output": "1\n0\n1\n2\n2\n2\n2\n0\n2\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "22B",
+  "source": "problemset",
+  "contest_id": 22,
+  "problem_index": "B",
+  "name": "Bargaining Table",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 4947,
+  "problem_url": "https://codeforces.com/problemset/problem/22/B",
+  "editorial_url": "https://codeforces.com/blog/entry/507",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bob wants to put a new bargaining table in his office. To do so he measured the office room thoroughly and drew its plan: Bob's office room is a rectangular room n × m meters. Each square meter of the room is either occupied by some furniture, or free. A bargaining table is rectangular, and should be placed so, that its sides are parallel to the office walls. Bob doesn't want to change or rearrange anything, that's why all the squares that will be occupied by the table should be initially free. Bob wants the new table to sit as many people as possible, thus its perimeter should be maximal. Help Bob find out the maximum possible perimeter of a bargaining table for his office.",
+  "input_specification": "The first line contains 2 space-separated numbers n and m ( 1 ≤ n , m ≤ 25 ) — the office room dimensions. Then there follow n lines with m characters 0 or 1 each. 0 stands for a free square meter of the office room. 1 stands for an occupied square meter. It's guaranteed that at least one square meter in the room is free.",
+  "output_specification": "Output one number — the maximum possible perimeter of a bargaining table for Bob's office room.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n000\n010\n000",
+      "output": "8"
+    },
+    {
+      "input": "5 4\n1100\n0000\n0000\n0000\n0000",
+      "output": "16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

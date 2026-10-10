@@ -1,0 +1,32 @@
+{
+  "id": "2079B",
+  "source": "problemset",
+  "contest_id": 2079,
+  "problem_index": "B",
+  "name": "Arithmetic Exercise",
+  "rating": 2600,
+  "tags": [
+    "*special",
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 187,
+  "problem_url": "https://codeforces.com/problemset/problem/2079/B",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/2079/B]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

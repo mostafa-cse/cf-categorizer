@@ -1,0 +1,40 @@
+{
+  "id": "580C",
+  "source": "problemset",
+  "contest_id": 580,
+  "problem_index": "C",
+  "name": "Kefa and Park",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 60158,
+  "problem_url": "https://codeforces.com/problemset/problem/580/C",
+  "editorial_url": "https://codeforces.com/blog/entry/20468",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kefa decided to celebrate his first big salary by going to the restaurant. He lives by an unusual park. The park is a rooted tree consisting of n vertices with the root at vertex 1 . Vertex 1 also contains Kefa's house. Unfortunaely for our hero, the park also contains cats. Kefa has already found out what are the vertices with cats in them. The leaf vertices of the park contain restaurants. Kefa wants to choose a restaurant where he will go, but unfortunately he is very afraid of cats, so there is no way he will go to the restaurant if the path from the restaurant to his house contains more than m consecutive vertices with cats. Your task is to help Kefa count the number of restaurants where he can go.",
+  "input_specification": "The first line contains two integers, n and m ( 2 ≤ n ≤ 10 5 , 1 ≤ m ≤ n ) — the number of vertices of the tree and the maximum number of consecutive vertices with cats that is still ok for Kefa. The second line contains n integers a 1 , a 2 , ..., a n , where each a i either equals to 0 (then vertex i has no cat), or equals to 1 (then vertex i has a cat). Next n - 1 lines contains the edges of the tree in the format \" x i y i \" (without the quotes) ( 1 ≤ x i , y i ≤ n , x i ≠ y i ), where x i and y i are the vertices of the tree, connected by an edge. It is guaranteed that the given set of edges specifies a tree.",
+  "output_specification": "A single integer — the number of distinct leaves of a tree the path to which from Kefa's home contains at most m consecutive vertices with cats.",
+  "sample_testcases": [
+    {
+      "input": "4 1\n1 1 0 0\n1 2\n1 3\n1 4",
+      "output": "2"
+    },
+    {
+      "input": "7 1\n1 0 1 1 0 0 0\n1 2\n1 3\n2 4\n2 5\n3 6\n3 7",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

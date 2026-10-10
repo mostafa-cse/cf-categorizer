@@ -1,0 +1,43 @@
+{
+  "id": "915C",
+  "source": "problemset",
+  "contest_id": 915,
+  "problem_index": "C",
+  "name": "Permute Digits",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 7652,
+  "problem_url": "https://codeforces.com/problemset/problem/915/C",
+  "editorial_url": "https://codeforces.com/blog/entry/57123",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two positive integer numbers a and b . Permute (change order) of the digits of a to construct maximal number not exceeding b . No number in input and/or output can start with the digit 0 . It is allowed to leave a as it is.",
+  "input_specification": "The first line contains integer a ( 1 ≤ a ≤ 10 18 ). The second line contains integer b ( 1 ≤ b ≤ 10 18 ). Numbers don't have leading zeroes. It is guaranteed that answer exists.",
+  "output_specification": "Print the maximum possible number that is a permutation of digits of a and is not greater than b . The answer can't have any leading zeroes. It is guaranteed that the answer exists. The number in the output should have exactly the same length as number a . It should be a permutation of digits of a .",
+  "sample_testcases": [
+    {
+      "input": "123\n222",
+      "output": "213"
+    },
+    {
+      "input": "3921\n10000",
+      "output": "9321"
+    },
+    {
+      "input": "4940\n5000",
+      "output": "4940"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

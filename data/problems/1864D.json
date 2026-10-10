@@ -1,0 +1,39 @@
+{
+  "id": "1864D",
+  "source": "problemset",
+  "contest_id": 1864,
+  "problem_index": "D",
+  "name": "Matrix Cascade",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "data structures",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 7795,
+  "problem_url": "https://codeforces.com/problemset/problem/1864/D",
+  "editorial_url": "https://codeforces.com/blog/entry/119772",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a matrix of size $$$n \\times n$$$ which consists of 0 s and 1 s. The rows are numbered from $$$1$$$ to $$$n$$$ from top to bottom, the columns are numbered from $$$1$$$ to $$$n$$$ from left to right. The cell at the intersection of the $$$x$$$-th row and the $$$y$$$-th column is denoted as $$$(x, y)$$$. AquaMoon wants to turn all elements of the matrix to 0 s. In one step she can perform the following operation: Select an arbitrary cell, let it be $$$(i, j)$$$, then invert the element in $$$(i, j)$$$ and also invert all elements in cells $$$(x, y)$$$ for $$$x \\gt i$$$ and $$$x - i \\ge \\left|y - j\\right|$$$. To invert a value means to change it to the opposite: 0 changes to 1 , 1 changes to 0 . Help AquaMoon determine the minimum number of steps she need to perform to turn all elements of the matrix to 0 s. We can show that an answer always exists.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$2 \\le n \\le 3000$$$). The $$$i$$$-th of the following $$$n$$$ lines contains a binary string only of characters 0 and 1 , of length $$$n$$$. It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$9\\,000\\,000$$$.",
+  "output_specification": "For each test case, print the minimum number of steps.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n00100\n01110\n11111\n11111\n11111\n3\n100\n110\n110\n6\n010101\n111101\n011110\n000000\n111010\n001110",
+      "output": "1\n2\n15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

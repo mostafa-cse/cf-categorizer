@@ -1,0 +1,44 @@
+{
+  "id": "794C",
+  "source": "problemset",
+  "contest_id": 794,
+  "problem_index": "C",
+  "name": "Naming Company",
+  "rating": 1800,
+  "tags": [
+    "games",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3365,
+  "problem_url": "https://codeforces.com/problemset/problem/794/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51962",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Oleg the client and Igor the analyst are good friends. However, sometimes they argue over little things. Recently, they started a new company, but they are having trouble finding a name for the company. To settle this problem, they've decided to play a game. The company name will consist of n letters. Oleg and Igor each have a set of n letters (which might contain multiple copies of the same letter, the sets can be different). Initially, the company name is denoted by n question marks. Oleg and Igor takes turns to play the game, Oleg moves first. In each turn, a player can choose one of the letters c in his set and replace any of the question marks with c . Then, a copy of the letter c is removed from his set. The game ends when all the question marks has been replaced by some letter. For example, suppose Oleg has the set of letters { i , o , i } and Igor has the set of letters { i , m , o } . One possible game is as follows : Initially, the company name is ??? . Oleg replaces the second question mark with 'i' . The company name becomes ?i? . The set of letters Oleg have now is { i , o } . Igor replaces the third question mark with 'o' . The company name becomes ?io . The set of letters Igor have now is { i , m } . Finally, Oleg replaces the first question mark with 'o' . The company name becomes oio . The set of letters Oleg have now is { i } . In the end, the company name is oio . Oleg wants the company name to be as lexicographically small as possible while Igor wants the company name to be as lexicographically large as possible. What will be the company name if Oleg and Igor always play optimally? A string s = s 1 s 2 ... s m is called lexicographically smaller than a string t = t 1 t 2 ... t m (where s ≠ t ) if s i < t i where i is the smallest index such that s i ≠ t i . (so s j = t j for all j < i )",
+  "input_specification": "The first line of input contains a string s of length n ( 1 ≤ n ≤ 3·10 5 ). All characters of the string are lowercase English letters. This string denotes the set of letters Oleg has initially. The second line of input contains a string t of length n . All characters of the string are lowercase English letters. This string denotes the set of letters Igor has initially.",
+  "output_specification": "The output should contain a string of n lowercase English letters, denoting the company name if Oleg and Igor plays optimally.",
+  "sample_testcases": [
+    {
+      "input": "tinkoff\nzscoder",
+      "output": "fzfsirk"
+    },
+    {
+      "input": "xxxxxx\nxxxxxx",
+      "output": "xxxxxx"
+    },
+    {
+      "input": "ioi\nimo",
+      "output": "ioi"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

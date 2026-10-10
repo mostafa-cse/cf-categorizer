@@ -1,0 +1,40 @@
+{
+  "id": "1557D",
+  "source": "problemset",
+  "contest_id": 1557,
+  "problem_index": "D",
+  "name": "Ezzat and Grid",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3196,
+  "problem_url": "https://codeforces.com/problemset/problem/1557/D",
+  "editorial_url": "https://codeforces.com/blog/entry/93703",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Moamen was drawing a grid of $$$n$$$ rows and $$$10^9$$$ columns containing only digits $$$0$$$ and $$$1$$$. Ezzat noticed what Moamen was drawing and became interested in the minimum number of rows one needs to remove to make the grid beautiful. A grid is beautiful if and only if for every two consecutive rows there is at least one column containing $$$1$$$ in these two rows. Ezzat will give you the number of rows $$$n$$$, and $$$m$$$ segments of the grid that contain digits $$$1$$$. Every segment is represented with three integers $$$i$$$, $$$l$$$, and $$$r$$$, where $$$i$$$ represents the row number, and $$$l$$$ and $$$r$$$ represent the first and the last column of the segment in that row. For example, if $$$n = 3$$$, $$$m = 6$$$, and the segments are $$$(1,1,1)$$$, $$$(1,7,8)$$$, $$$(2,7,7)$$$, $$$(2,15,15)$$$, $$$(3,1,1)$$$, $$$(3,15,15)$$$, then the grid is: Your task is to tell Ezzat the minimum number of rows that should be removed to make the grid beautiful.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 3\\cdot10^5$$$). Each of the next $$$m$$$ lines contains three integers $$$i$$$, $$$l$$$, and $$$r$$$ ($$$1 \\le i \\le n$$$, $$$1 \\le l \\le r \\le 10^9$$$). Each of these $$$m$$$ lines means that row number $$$i$$$ contains digits $$$1$$$ in columns from $$$l$$$ to $$$r$$$, inclusive. Note that the segments may overlap .",
+  "output_specification": "In the first line, print a single integer $$$k$$$ — the minimum number of rows that should be removed. In the second line print $$$k$$$ distinct integers $$$r_1, r_2, \\ldots, r_k$$$, representing the rows that should be removed ($$$1 \\le r_i \\le n$$$), in any order. If there are multiple answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "3 6\n1 1 1\n1 7 8\n2 7 7\n2 15 15\n3 1 1\n3 15 15",
+      "output": "0"
+    },
+    {
+      "input": "5 4\n1 2 3\n2 4 6\n3 3 5\n5 1 1",
+      "output": "3\n2 4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

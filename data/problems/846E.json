@@ -1,0 +1,40 @@
+{
+  "id": "846E",
+  "source": "problemset",
+  "contest_id": 846,
+  "problem_index": "E",
+  "name": "Chemistry in Berland",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 1070,
+  "problem_url": "https://codeforces.com/problemset/problem/846/E",
+  "editorial_url": "https://codeforces.com/blog/entry/54357",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Igor is a post-graduate student of chemistry faculty in Berland State University (BerSU). He needs to conduct a complicated experiment to write his thesis, but laboratory of BerSU doesn't contain all the materials required for this experiment. Fortunately, chemical laws allow material transformations (yes, chemistry in Berland differs from ours). But the rules of transformation are a bit strange. Berland chemists are aware of n materials, numbered in the order they were discovered. Each material can be transformed into some other material (or vice versa). Formally, for each i (2 ≤ i ≤ n ) there exist two numbers x i and k i that denote a possible transformation: k i kilograms of material x i can be transformed into 1 kilogram of material i , and 1 kilogram of material i can be transformed into 1 kilogram of material x i . Chemical processing equipment in BerSU allows only such transformation that the amount of resulting material is always an integer number of kilograms . For each i ( 1 ≤ i ≤ n ) Igor knows that the experiment requires a i kilograms of material i , and the laboratory contains b i kilograms of this material. Is it possible to conduct an experiment after transforming some materials (or none)?",
+  "input_specification": "The first line contains one integer number n ( 1 ≤ n ≤ 10 5 ) — the number of materials discovered by Berland chemists. The second line contains n integer numbers b 1 , b 2 ... b n ( 1 ≤ b i ≤ 10 12 ) — supplies of BerSU laboratory. The third line contains n integer numbers a 1 , a 2 ... a n ( 1 ≤ a i ≤ 10 12 ) — the amounts required for the experiment. Then n - 1 lines follow. j -th of them contains two numbers x j + 1 and k j + 1 that denote transformation of ( j + 1) -th material ( 1 ≤ x j + 1 ≤ j , 1 ≤ k j + 1 ≤ 10 9 ).",
+  "output_specification": "Print YES if it is possible to conduct an experiment. Otherwise print NO .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3\n3 2 1\n1 1\n1 1",
+      "output": "YES"
+    },
+    {
+      "input": "3\n3 2 1\n1 2 3\n1 1\n1 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

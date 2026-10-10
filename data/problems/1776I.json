@@ -1,0 +1,45 @@
+{
+  "id": "1776I",
+  "source": "problemset",
+  "contest_id": 1776,
+  "problem_index": "I",
+  "name": "Spinach Pizza",
+  "rating": 2500,
+  "tags": [
+    "games",
+    "geometry",
+    "greedy",
+    "interactive"
+  ],
+  "solved_count": 948,
+  "problem_url": "https://codeforces.com/problemset/problem/1776/I",
+  "editorial_url": "https://codeforces.com/contest/1776/attachments/download/19130/solutions.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The two siblings Alberto and Beatrice have to eat a spinach pizza together. However, none of them likes spinach, so they both want to eat as little as possible. The pizza has the shape of a strictly convex polygon with $$$n$$$ vertices located at integer coordinates $$$(x_1, y_1), \\, (x_2, y_2), \\, \\dots, \\, (x_n, y_n)$$$ of the plane. The siblings have decided to eat the pizza in the following way: taking turns, starting with Alberto, each sibling chooses a vertex of the remaining part of the pizza and eats out the triangle determined by its two neighboring edges. In this way, after each of the first $$$n - 3$$$ turns the pizza will have one less vertex. The game ends after the $$$(n - 2)$$$-th turn, when all the pizza has been eaten. Assuming that Alberto and Beatrice choose the slices to eat optimally, which of the siblings manages to eat at most half of the pizza? You should identify a sibling that has a strategy to do so and help them choose the slices appropriately. Note that it is possible that both Alberto and Beatrice end up eating exactly half of the area if they choose their slices optimally.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$4 \\le n \\le 100$$$) — the number of vertices. The next $$$n$$$ lines contain two integers $$$x_i$$$ and $$$y_i$$$ each ($$$-10^6 \\le x_i, y_i \\le 10^6$$$) — the coordinates of the $$$i$$$-th vertex of the polygon representing the initial shape of the pizza. It is guaranteed that the polygon is strictly convex and that its vertices are given in counterclockwise order.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0\n6 1\n5 3\n1 4",
+      "output": "-"
+    },
+    {
+      "input": "6\n0 0\n2 0\n3 2\n2 4\n0 4\n-1 2",
+      "output": "-"
+    },
+    {
+      "input": "7\n0 0\n2 0\n5 2\n4 5\n1 5\n-1 4\n-1 2",
+      "output": "-"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

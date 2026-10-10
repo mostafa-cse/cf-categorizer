@@ -1,0 +1,43 @@
+{
+  "id": "1056B",
+  "source": "problemset",
+  "contest_id": 1056,
+  "problem_index": "B",
+  "name": "Divide Candies",
+  "rating": 1600,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 4591,
+  "problem_url": "https://codeforces.com/problemset/problem/1056/B",
+  "editorial_url": "https://codeforces.com/blog/entry/63461",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Arkady and his friends love playing checkers on an $$$n \\times n$$$ field. The rows and the columns of the field are enumerated from $$$1$$$ to $$$n$$$. The friends have recently won a championship, so Arkady wants to please them with some candies. Remembering an old parable (but not its moral), Arkady wants to give to his friends one set of candies per each cell of the field: the set of candies for cell $$$(i, j)$$$ will have exactly $$$(i^2 + j^2)$$$ candies of unique type. There are $$$m$$$ friends who deserve the present. How many of these $$$n \\times n$$$ sets of candies can be split equally into $$$m$$$ parts without cutting a candy into pieces? Note that each set has to be split independently since the types of candies in different sets are different.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^9$$$, $$$1 \\le m \\le 1000$$$) — the size of the field and the number of parts to split the sets into.",
+  "output_specification": "Print a single integer — the number of sets that can be split equally.",
+  "sample_testcases": [
+    {
+      "input": "3 3",
+      "output": "1"
+    },
+    {
+      "input": "6 5",
+      "output": "13"
+    },
+    {
+      "input": "1000000000 1",
+      "output": "1000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

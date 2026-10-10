@@ -1,0 +1,29 @@
+{
+  "id": "1001D",
+  "source": "problemset",
+  "contest_id": 1001,
+  "problem_index": "D",
+  "name": "Distinguish plus state and minus state",
+  "rating": 1400,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 701,
+  "problem_url": "https://codeforces.com/problemset/problem/1001/D",
+  "editorial_url": "https://assets.codeforces.com/rounds/997-998/warmup-editorial.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a qubit which is guaranteed to be either in or in state. Your task is to perform necessary operations and measurements to figure out which state it was and to return 1 if it was a state or -1 if it was state. The state of the qubit after the operations does not matter.",
+  "input_specification": "You have to implement an operation which takes a qubit as an input and returns an integer. Your code should have the following signature: namespace Solution { open Microsoft.Quantum.Primitive; open Microsoft.Quantum.Canon; operation Solve (q : Qubit) : Int { body { // your code here } } }",
+  "output_specification": "",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

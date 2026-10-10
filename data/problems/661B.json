@@ -1,0 +1,38 @@
+{
+  "id": "661B",
+  "source": "problemset",
+  "contest_id": 661,
+  "problem_index": "B",
+  "name": "Seasons",
+  "rating": 1900,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 249,
+  "problem_url": "https://codeforces.com/problemset/problem/661/B",
+  "editorial_url": "https://codeforces.com/blog/entry/44292",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given a name of a month. Output the season of the year to which it belongs (based on Northern hemisphere).",
+  "input_specification": "The input consists of a single string containing the name of one of the twelve months (January, February, March, April, May, June, July, August, September, October, November or December). The string is capitalized as given here.",
+  "output_specification": "Output a single string — the season of the year to which the given month belongs (winter, spring, summer or autumn). The name of the season should be in lowercase.",
+  "sample_testcases": [
+    {
+      "input": "April",
+      "output": "spring"
+    },
+    {
+      "input": "November",
+      "output": "autumn"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

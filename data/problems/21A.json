@@ -1,0 +1,39 @@
+{
+  "id": "21A",
+  "source": "problemset",
+  "contest_id": 21,
+  "problem_index": "A",
+  "name": "Jabber ID",
+  "rating": 1900,
+  "tags": [
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 2343,
+  "problem_url": "https://codeforces.com/problemset/problem/21/A",
+  "editorial_url": "https://codeforces.com/blog/entry/496",
+  "time_limit": "0.5 second",
+  "memory_limit": "256 megabytes",
+  "description": "Jabber ID on the national Berland service «Babber» has a form <username>@<hostname>[/resource] , where <username> — is a sequence of Latin letters (lowercase or uppercase), digits or underscores characters « _ », the length of <username> is between 1 and 16, inclusive. <hostname> — is a sequence of word separated by periods (characters « . »), where each word should contain only characters allowed for <username> , the length of each word is between 1 and 16, inclusive. The length of <hostname> is between 1 and 32, inclusive. <resource> — is a sequence of Latin letters (lowercase or uppercase), digits or underscores characters « _ », the length of <resource> is between 1 and 16, inclusive. The content of square brackets is optional — it can be present or can be absent. There are the samples of correct Jabber IDs: [email protected] , [email protected] /contest . Your task is to write program which checks if given string is a correct Jabber ID.",
+  "input_specification": "The input contains of a single line. The line has the length between 1 and 100 characters, inclusive. Each characters has ASCII-code between 33 and 127, inclusive.",
+  "output_specification": "Print YES or NO .",
+  "sample_testcases": [
+    {
+      "input": "[email protected]",
+      "output": "YES"
+    },
+    {
+      "input": "[email protected]\n/contest.icpc/12",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

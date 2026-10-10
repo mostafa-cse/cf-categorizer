@@ -1,0 +1,38 @@
+{
+  "id": "1107E",
+  "source": "problemset",
+  "contest_id": 1107,
+  "problem_index": "E",
+  "name": "Vasya and Binary String",
+  "rating": 2400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 3008,
+  "problem_url": "https://codeforces.com/problemset/problem/1107/E",
+  "editorial_url": "https://codeforces.com/blog/entry/64833",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has a string $$$s$$$ of length $$$n$$$ consisting only of digits 0 and 1 . Also he has an array $$$a$$$ of length $$$n$$$. Vasya performs the following operation until the string becomes empty: choose some consecutive substring of equal characters , erase it from the string and glue together the remaining parts (any of them can be empty). For example, if he erases substring 111 from string 1 111 10 he will get the string 110 . Vasya gets $$$a_x$$$ points for erasing substring of length $$$x$$$. Vasya wants to maximize his total points, so help him with this!",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the length of string $$$s$$$. The second line contains string $$$s$$$, consisting only of digits 0 and 1 . The third line contains $$$n$$$ integers $$$a_1, a_2, \\dots a_n$$$ ($$$1 \\le a_i \\le 10^9$$$), where $$$a_i$$$ is the number of points for erasing the substring of length $$$i$$$.",
+  "output_specification": "Print one integer — the maximum total points Vasya can get.",
+  "sample_testcases": [
+    {
+      "input": "7\n1101001\n3 4 9 100 1 2 3",
+      "output": "109"
+    },
+    {
+      "input": "5\n10101\n3 10 15 15 15",
+      "output": "23"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "1037E",
+  "source": "problemset",
+  "contest_id": 1037,
+  "problem_index": "E",
+  "name": "Trips",
+  "rating": 2200,
+  "tags": [
+    "graphs"
+  ],
+  "solved_count": 3228,
+  "problem_url": "https://codeforces.com/problemset/problem/1037/E",
+  "editorial_url": "https://codeforces.com/blog/entry/61606",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ persons who initially don't know each other. On each morning, two of them, who were not friends before, become friends. We want to plan a trip for every evening of $$$m$$$ days. On each trip, you have to select a group of people that will go on the trip. For every person, one of the following should hold: Either this person does not go on the trip, Or at least $$$k$$$ of his friends also go on the trip. Note that the friendship is not transitive. That is, if $$$a$$$ and $$$b$$$ are friends and $$$b$$$ and $$$c$$$ are friends, it does not necessarily imply that $$$a$$$ and $$$c$$$ are friends. For each day, find the maximum number of people that can go on the trip on that day.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5, 1 \\leq m \\leq 2 \\cdot 10^5$$$, $$$1 \\le k \\lt n$$$) — the number of people, the number of days and the number of friends each person on the trip should have in the group. The $$$i$$$-th ($$$1 \\leq i \\leq m$$$) of the next $$$m$$$ lines contains two integers $$$x$$$ and $$$y$$$ ($$$1\\leq x, y\\leq n$$$, $$$x\\ne y$$$), meaning that persons $$$x$$$ and $$$y$$$ become friends on the morning of day $$$i$$$. It is guaranteed that $$$x$$$ and $$$y$$$ were not friends before.",
+  "output_specification": "Print exactly $$$m$$$ lines, where the $$$i$$$-th of them ($$$1\\leq i\\leq m$$$) contains the maximum number of people that can go on the trip on the evening of the day $$$i$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 4 2\n2 3\n1 2\n1 3\n1 4",
+      "output": "0\n0\n3\n3"
+    },
+    {
+      "input": "5 8 2\n2 1\n4 2\n5 4\n5 2\n4 3\n5 1\n4 1\n3 2",
+      "output": "0\n0\n0\n3\n3\n4\n4\n5"
+    },
+    {
+      "input": "5 7 2\n1 5\n3 2\n2 5\n3 4\n1 2\n5 3\n1 3",
+      "output": "0\n0\n0\n0\n3\n4\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:11",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

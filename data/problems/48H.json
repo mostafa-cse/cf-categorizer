@@ -1,0 +1,38 @@
+{
+  "id": "48H",
+  "source": "problemset",
+  "contest_id": 48,
+  "problem_index": "H",
+  "name": "Black and White",
+  "rating": 2800,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 205,
+  "problem_url": "https://codeforces.com/problemset/problem/48/H",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "According to the legends the king of Berland Berl I was noted for his love of beauty and order. One day he ordered to tile the palace hall's floor where balls and receptions used to take place with black and white tiles according to a regular geometrical pattern invented by him. However, as is after the case, due to low financing there were only a black and b white tiles delivered to the palace. The other c tiles were black and white (see the picture). The initial plan failed! Having learned of that, the king gave a new command: tile the floor with the available tiles so that no black side of a tile touched a white one. The tiles are squares of one size 1 × 1 , every black and white tile can be rotated in one of the four ways. The court programmer was given the task to work out the plan of tiling and he coped with the task and didn't suffer the consequences of disobedience. And can you cope with it?",
+  "input_specification": "The first line contains given integers n and m ( 1 ≤ n , m ≤ 100 ) which represent the sizes of the rectangle that needs to be tiled. The next line contains non-negative numbers a , b and c , a + b + c = nm , c ≥ m .",
+  "output_specification": "Print 2 n lines containing 2 m characters each — the tiling scheme. Every tile is represented by a square 2 × 2 in the following manner (the order corresponds to the order of the picture above): If multiple solutions exist, output any.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n0 0 4",
+      "output": "\\\n../\n#\n\\\n/#\n\\\n##/\n.\n\\\n/."
+    },
+    {
+      "input": "2 3\n1 2 3",
+      "output": "###/\n\\\n#\n##/..\n\\\n#/....\n/....."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

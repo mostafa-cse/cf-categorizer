@@ -1,0 +1,44 @@
+{
+  "id": "724E",
+  "source": "problemset",
+  "contest_id": 724,
+  "problem_index": "E",
+  "name": "Goods transportation",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "flows",
+    "greedy"
+  ],
+  "solved_count": 2082,
+  "problem_url": "https://codeforces.com/problemset/problem/724/E",
+  "editorial_url": "https://codeforces.com/blog/entry/47644",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n cities located along the one-way road. Cities are numbered from 1 to n in the direction of the road. The i -th city had produced p i units of goods. No more than s i units of goods can be sold in the i -th city. For each pair of cities i and j such that 1 ≤ i < j ≤ n you can no more than once transport no more than c units of goods from the city i to the city j . Note that goods can only be transported from a city with a lesser index to the city with a larger index. You can transport goods between cities in any order. Determine the maximum number of produced goods that can be sold in total in all the cities after a sequence of transportations.",
+  "input_specification": "The first line of the input contains two integers n and c ( 1 ≤ n ≤ 10 000 , 0 ≤ c ≤ 10 9 ) — the number of cities and the maximum amount of goods for a single transportation. The second line contains n integers p i ( 0 ≤ p i ≤ 10 9 ) — the number of units of goods that were produced in each city. The third line of input contains n integers s i ( 0 ≤ s i ≤ 10 9 ) — the number of units of goods that can be sold in each city.",
+  "output_specification": "Print the maximum total number of produced goods that can be sold in all cities after a sequence of transportations.",
+  "sample_testcases": [
+    {
+      "input": "3 0\n1 2 3\n3 2 1",
+      "output": "4"
+    },
+    {
+      "input": "5 1\n7 4 2 1 0\n1 2 3 4 5",
+      "output": "12"
+    },
+    {
+      "input": "4 3\n13 10 7 4\n4 7 10 13",
+      "output": "34"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:23",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "574B",
+  "source": "problemset",
+  "contest_id": 574,
+  "problem_index": "B",
+  "name": "Bear and Three Musketeers",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "graphs",
+    "hashing"
+  ],
+  "solved_count": 8474,
+  "problem_url": "https://codeforces.com/problemset/problem/574/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20040",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Do you know a story about the three musketeers? Anyway, you will learn about its origins now. Richelimakieu is a cardinal in the city of Bearis. He is tired of dealing with crime by himself. He needs three brave warriors to help him to fight against bad guys. There are n warriors. Richelimakieu wants to choose three of them to become musketeers but it's not that easy. The most important condition is that musketeers must know each other to cooperate efficiently. And they shouldn't be too well known because they could be betrayed by old friends. For each musketeer his recognition is the number of warriors he knows, excluding other two musketeers. Help Richelimakieu! Find if it is possible to choose three musketeers knowing each other, and what is minimum possible sum of their recognitions.",
+  "input_specification": "The first line contains two space-separated integers, n and m ( 3 ≤ n ≤ 4000 , 0 ≤ m ≤ 4000 ) — respectively number of warriors and number of pairs of warriors knowing each other. i -th of the following m lines contains two space-separated integers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ). Warriors a i and b i know each other. Each pair of warriors will be listed at most once.",
+  "output_specification": "If Richelimakieu can choose three musketeers, print the minimum possible sum of their recognitions. Otherwise, print \" -1 \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "5 6\n1 2\n1 3\n2 3\n2 4\n3 4\n4 5",
+      "output": "2"
+    },
+    {
+      "input": "7 4\n2 1\n3 6\n5 1\n1 7",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

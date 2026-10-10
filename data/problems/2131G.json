@@ -1,0 +1,39 @@
+{
+  "id": "2131G",
+  "source": "problemset",
+  "contest_id": 2131,
+  "problem_index": "G",
+  "name": "Wafu!",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "math"
+  ],
+  "solved_count": 3951,
+  "problem_url": "https://codeforces.com/problemset/problem/2131/G",
+  "editorial_url": "https://codeforces.com/blog/entry/145439",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "To help improve her math, Kudryavka is given a set $$$S$$$ that consists of $$$n$$$ distinct positive integers. Initially, her score is $$$1$$$. She can perform an arbitrary number of the following operations on the set if it is not empty: Let the minimum value of $$$S$$$ be $$$m$$$. Multiply her score by $$$m$$$. Remove $$$m$$$ from $$$S$$$. For every integer $$$i$$$ such that $$$1 \\le i \\lt m$$$, add $$$i$$$ to the set $$$S$$$. It can be shown that no duplicates are added during this step. She is addicted to performing operations, but after $$$k$$$ operations, she realizes she forgot her score . Please help her determine her score , modulo $$$10^9+7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le 10^9$$$). The second line of each test case contains $$$n$$$ integers $$$s_1, s_2, \\dots, s_n$$$ ($$$1 \\le s_i \\le 10^9$$$, $$$s_i \\neq s_j$$$) — the elements of the initial set $$$S$$$. It is guaranteed that the set $$$S$$$ is not empty before each of the $$$k$$$ operations is performed. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output an integer indicating the answer modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 3\n1 3\n3 6\n5 1 4\n2 100\n2 100\n5 15\n1 2 3 4 5",
+      "output": "3\n24\n118143737\n576"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "1787G",
+  "source": "problemset",
+  "contest_id": 1787,
+  "problem_index": "G",
+  "name": "Colorful Tree Again",
+  "rating": 3000,
+  "tags": [
+    "brute force",
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 646,
+  "problem_url": "https://codeforces.com/problemset/problem/1787/G",
+  "editorial_url": "https://codeforces.com/blog/entry/112009",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "An edge-weighted tree of $$$n$$$ nodes is given with each edge colored in some color. Each node of this tree can be blocked or unblocked, all nodes are unblocked initially. A simple path is a path in a graph that does not have repeating nodes. The length of a path is defined as the sum of weights of all edges on the path. A path is good when it is a simple path consisting of edges of the same color $$$c$$$, all edges of color $$$c$$$ are on this path, and every node on the path is unblocked. You need to operate $$$2$$$ kinds of queries: block a node, unblock a node. After each query, print the maximum length among all good paths. If there are no good paths, print $$$0$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$q$$$ ($$$1 \\leq n,q \\leq 2\\cdot 10^5$$$) — the number of nodes and the number of queries. Then $$$n-1$$$ lines follow, each containing four integers $$$u$$$, $$$v$$$, $$$w$$$ and $$$c$$$ ($$$1 \\leq u,v,w,c \\leq n$$$; $$$u \\not = v$$$), denoting a weighted edge connecting node $$$u$$$ and node $$$v$$$ with weight $$$w$$$ and color $$$c$$$. It is guaranteed that these edges form a tree. Then $$$q$$$ lines follow, each containing two integers $$$p$$$ and $$$x$$$ ($$$p = 0$$$ or $$$p = 1$$$, $$$1\\leq x\\leq n$$$), denoting a query: if $$$p = 0$$$, block the node $$$x$$$. It's guaranteed that it's not blocked at this time; if $$$p = 1$$$, unblock the node $$$x$$$. It's guaranteed that it's blocked at this time.",
+  "output_specification": "For each query, print the maximum length of a good path. If there are no good paths, print $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 4\n4 1 3 4\n5 2 4 4\n3 1 3 2\n1 2 5 1\n0 4\n0 3\n0 2\n1 3",
+      "output": "5\n5\n0\n3"
+    },
+    {
+      "input": "5 5\n4 1 4 4\n4 5 2 2\n3 1 2 4\n3 2 3 1\n0 3\n0 4\n1 3\n1 4\n0 1",
+      "output": "2\n0\n3\n6\n3"
+    },
+    {
+      "input": "6 9\n3 2 2 3\n2 4 4 2\n3 1 5 5\n6 4 3 2\n5 3 1 3\n0 2\n0 4\n0 5\n0 6\n1 2\n1 4\n1 5\n0 3\n1 6",
+      "output": "5\n5\n5\n5\n5\n5\n5\n0\n7"
+    },
+    {
+      "input": "1 2\n0 1\n1 1",
+      "output": "0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "952E",
+  "source": "problemset",
+  "contest_id": 952,
+  "problem_index": "E",
+  "name": "Cheese Board",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 710,
+  "problem_url": "https://codeforces.com/problemset/problem/952/E",
+  "editorial_url": "https://codeforces.com/blog/entry/58681",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Not to be confused with chessboard .",
+  "input_specification": "The first line of input contains a single integer N ( 1 ≤ N ≤ 100 ) — the number of cheeses you have. The next N lines describe the cheeses you have. Each line contains two space-separated strings: the name of the cheese and its type. The name is a string of lowercase English letters between 1 and 10 characters long. The type is either \" soft \" or \" hard . All cheese names are distinct.",
+  "output_specification": "Output a single number.",
+  "sample_testcases": [
+    {
+      "input": "9\nbrie soft\ncamembert soft\nfeta soft\ngoat soft\nmuenster soft\nasiago hard\ncheddar hard\ngouda hard\nswiss hard",
+      "output": "3"
+    },
+    {
+      "input": "6\nparmesan hard\nemmental hard\nedam hard\ncolby hard\ngruyere hard\nasiago hard",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

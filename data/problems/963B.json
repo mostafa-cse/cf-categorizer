@@ -1,0 +1,42 @@
+{
+  "id": "963B",
+  "source": "problemset",
+  "contest_id": 963,
+  "problem_index": "B",
+  "name": "Destruction of a Tree",
+  "rating": 2000,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 3082,
+  "problem_url": "https://codeforces.com/problemset/problem/963/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58991",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree (a graph with n vertices and n - 1 edges in which it's possible to reach any vertex from any other vertex using only its edges). A vertex can be destroyed if this vertex has even degree. If you destroy a vertex, all edges connected to it are also deleted. Destroy all vertices in the given tree or determine that it is impossible.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 2·10 5 ) — number of vertices in a tree. The second line contains n integers p 1 , p 2 , ..., p n ( 0 ≤ p i ≤ n ). If p i ≠ 0 there is an edge between vertices i and p i . It is guaranteed that the given graph is a tree.",
+  "output_specification": "If it's possible to destroy all vertices, print \" YES \" (without quotes), otherwise print \" NO \" (without quotes). If it's possible to destroy all vertices, in the next n lines print the indices of the vertices in order you destroy them. If there are multiple correct answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 1 2 1 2",
+      "output": "YES\n1\n2\n3\n5\n4"
+    },
+    {
+      "input": "4\n0 1 2 3",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

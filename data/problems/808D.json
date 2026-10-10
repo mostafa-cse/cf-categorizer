@@ -1,0 +1,44 @@
+{
+  "id": "808D",
+  "source": "problemset",
+  "contest_id": 808,
+  "problem_index": "D",
+  "name": "Array Division",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 8510,
+  "problem_url": "https://codeforces.com/problemset/problem/808/D",
+  "editorial_url": "https://codeforces.com/blog/entry/52010",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has an array a consisting of positive integer numbers. Vasya wants to divide this array into two non-empty consecutive parts (the prefix and the suffix) so that the sum of all elements in the first part equals to the sum of elements in the second part. It is not always possible, so Vasya will move some element before dividing the array (Vasya will erase some element and insert it into an arbitrary position). Inserting an element in the same position he was erased from is also considered moving. Can Vasya divide the array after choosing the right element to move and its new position?",
+  "input_specification": "The first line contains single integer n ( 1 ≤ n ≤ 100000 ) — the size of the array. The second line contains n integers a 1 , a 2 ... a n ( 1 ≤ a i ≤ 10 9 ) — the elements of the array.",
+  "output_specification": "Print YES if Vasya can divide the array after moving one element. Otherwise print NO .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 3 2",
+      "output": "YES"
+    },
+    {
+      "input": "5\n1 2 3 4 5",
+      "output": "NO"
+    },
+    {
+      "input": "5\n2 2 3 4 5",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "497D",
+  "source": "problemset",
+  "contest_id": 497,
+  "problem_index": "D",
+  "name": "Gears",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "geometry",
+    "math"
+  ],
+  "solved_count": 254,
+  "problem_url": "https://codeforces.com/problemset/problem/497/D",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/497/D]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

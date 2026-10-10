@@ -1,0 +1,35 @@
+{
+  "id": "671C",
+  "source": "problemset",
+  "contest_id": 671,
+  "problem_index": "C",
+  "name": "Ultimate Weirdness of an Array",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "number theory"
+  ],
+  "solved_count": 870,
+  "problem_url": "https://codeforces.com/problemset/problem/671/C",
+  "editorial_url": "https://codeforces.com/blog/entry/44821",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Yasin has an array a containing n integers. Yasin is a 5 year old, so he loves ultimate weird things. Yasin denotes weirdness of an array as maximum gcd ( a i , a j ) value among all 1 ≤ i < j ≤ n . For n ≤ 1 weirdness is equal to 0 , gcd ( x , y ) is the greatest common divisor of integers x and y . He also defines the ultimate weirdness of an array. Ultimate weirdness is where f ( i , j ) is weirdness of the new array a obtained by removing all elements between i and j inclusive, so new array is [ a 1 ... a i - 1 , a j + 1 ... a n ] . Since 5 year old boys can't code, Yasin asks for your help to find the value of ultimate weirdness of the given array a !",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 200 000 ) — the number of elements in a . The next line contains n integers a i ( 1 ≤ a i ≤ 200 000 ), where the i -th number is equal to the i -th element of the array a . It is guaranteed that all a i are distinct.",
+  "output_specification": "Print a single line containing the value of ultimate weirdness of the array a .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 6 3",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

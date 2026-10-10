@@ -1,0 +1,48 @@
+{
+  "id": "1606E",
+  "source": "problemset",
+  "contest_id": 1606,
+  "problem_index": "E",
+  "name": "Arena",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 4382,
+  "problem_url": "https://codeforces.com/problemset/problem/1606/E",
+  "editorial_url": "https://codeforces.com/blog/entry/96454",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ heroes fighting in the arena. Initially, the $$$i$$$-th hero has $$$a_i$$$ health points. The fight in the arena takes place in several rounds. At the beginning of each round, each alive hero deals $$$1$$$ damage to all other heroes. Hits of all heroes occur simultaneously. Heroes whose health is less than $$$1$$$ at the end of the round are considered killed. If exactly $$$1$$$ hero remains alive after a certain round, then he is declared the winner. Otherwise, there is no winner. Your task is to calculate the number of ways to choose the initial health points for each hero $$$a_i$$$, where $$$1 \\le a_i \\le x$$$, so that there is no winner of the fight. The number of ways can be very large, so print it modulo $$$998244353$$$. Two ways are considered different if at least one hero has a different amount of health. For example, $$$[1, 2, 1]$$$ and $$$[2, 1, 1]$$$ are different.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$x$$$ ($$$2 \\le n \\le 500; 1 \\le x \\le 500$$$).",
+  "output_specification": "Print one integer — the number of ways to choose the initial health points for each hero $$$a_i$$$, where $$$1 \\le a_i \\le x$$$, so that there is no winner of the fight, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 5",
+      "output": "5"
+    },
+    {
+      "input": "3 3",
+      "output": "15"
+    },
+    {
+      "input": "5 4",
+      "output": "1024"
+    },
+    {
+      "input": "13 37",
+      "output": "976890680"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

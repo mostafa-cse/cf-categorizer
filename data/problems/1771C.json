@@ -1,0 +1,36 @@
+{
+  "id": "1771C",
+  "source": "problemset",
+  "contest_id": 1771,
+  "problem_index": "C",
+  "name": "Hossam and Trainees",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 12100,
+  "problem_url": "https://codeforces.com/problemset/problem/1771/C",
+  "editorial_url": "https://codeforces.com/blog/entry/110092",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hossam has $$$n$$$ trainees. He assigned a number $$$a_i$$$ for the $$$i$$$-th trainee. A pair of the $$$i$$$-th and $$$j$$$-th ($$$i \\neq j$$$) trainees is called successful if there is an integer $$$x$$$ ($$$x \\geq 2$$$), such that $$$x$$$ divides $$$a_i$$$, and $$$x$$$ divides $$$a_j$$$. Hossam wants to know if there is a successful pair of trainees. Hossam is very tired now, so he asks you for your help!",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$), the number of test cases. A description of the test cases follows. The first line of each test case contains an integer number $$$n$$$ ($$$2 \\le n \\le 10^5$$$). The second line of each test case contains $$$n$$$ integers, the number of each trainee $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "Print the answer — \" YES \" (without quotes) if there is a successful pair of trainees and \" NO \" otherwise. You can print each letter in any case.",
+  "sample_testcases": [
+    {
+      "input": "2\n3\n32 48 7\n3\n14 5 9",
+      "output": "YES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

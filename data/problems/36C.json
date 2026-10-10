@@ -1,0 +1,39 @@
+{
+  "id": "36C",
+  "source": "problemset",
+  "contest_id": 36,
+  "problem_index": "C",
+  "name": "Bowls",
+  "rating": 2200,
+  "tags": [
+    "geometry",
+    "implementation"
+  ],
+  "solved_count": 396,
+  "problem_url": "https://codeforces.com/problemset/problem/36/C",
+  "editorial_url": "https://codeforces.com/blog/entry/773",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Once Petya was in such a good mood that he decided to help his mum with the washing-up. There were n dirty bowls in the sink. From the geometrical point of view each bowl looks like a blunted cone. We can disregard the width of the walls and bottom. Petya puts the clean bowls one on another naturally, i. e. so that their vertical axes coincide (see the picture). You will be given the order in which Petya washes the bowls. Determine the height of the construction, i.e. the distance from the bottom of the lowest bowl to the top of the highest one.",
+  "input_specification": "The first input line contains integer n ( 1 ≤ n ≤ 3000 ). Each of the following n lines contains 3 integers h , r and R ( 1 ≤ h ≤ 10000, 1 ≤ r < R ≤ 10000 ). They are the height of a bowl, the radius of its bottom and the radius of its top. The plates are given in the order Petya puts them on the table.",
+  "output_specification": "Output the height of the plate pile accurate to at least 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2\n40 10 50\n60 20 30",
+      "output": "70.00000000"
+    },
+    {
+      "input": "3\n50 30 80\n35 25 70\n40 10 90",
+      "output": "55.00000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

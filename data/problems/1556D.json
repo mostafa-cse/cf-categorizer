@@ -1,0 +1,37 @@
+{
+  "id": "1556D",
+  "source": "problemset",
+  "contest_id": 1556,
+  "problem_index": "D",
+  "name": "Take a Guess",
+  "rating": 1800,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 9135,
+  "problem_url": "https://codeforces.com/problemset/problem/1556/D",
+  "editorial_url": "https://codeforces.com/blog/entry/94384",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive task William has a certain sequence of integers $$$a_1, a_2, \\dots, a_n$$$ in his mind, but due to security concerns, he does not want to reveal it to you completely. William is ready to respond to no more than $$$2 \\cdot n$$$ of the following questions: What is the result of a bitwise AND of two items with indices $$$i$$$ and $$$j$$$ ($$$i \\neq j$$$) What is the result of a bitwise OR of two items with indices $$$i$$$ and $$$j$$$ ($$$i \\neq j$$$) You can ask William these questions and you need to find the $$$k$$$-th smallest number of the sequence. Formally the $$$k$$$-th smallest number is equal to the number at the $$$k$$$-th place in a 1-indexed array sorted in non-decreasing order. For example in array $$$[5, 3, 3, 10, 1]$$$ $$$4$$$th smallest number is equal to $$$5$$$, and $$$2$$$nd and $$$3$$$rd are $$$3$$$.",
+  "input_specification": "It is guaranteed that for each element in a sequence the condition $$$0 \\le a_i \\le 10^9$$$ is satisfied.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "7 6\n\n2\n\n7",
+      "output": "and 2 5\n\nor 5 6\n\nfinish 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:02",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

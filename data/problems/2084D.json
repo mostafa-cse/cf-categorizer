@@ -1,0 +1,38 @@
+{
+  "id": "2084D",
+  "source": "problemset",
+  "contest_id": 2084,
+  "problem_index": "D",
+  "name": "Arcology On Permafrost",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 9264,
+  "problem_url": "https://codeforces.com/problemset/problem/2084/D",
+  "editorial_url": "https://codeforces.com/blog/entry/141155",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given three integers $$$n$$$, $$$m$$$, and $$$k$$$, where $$$m \\cdot k \\lt n$$$. For a sequence $$$b$$$ consisting of non-negative integers, define $$$f(b)$$$ as follows: You may perform the following operation on $$$b$$$: Let $$$l$$$ denote the current length of $$$b$$$. Choose a positive integer $$$1 \\leq i \\leq l - k + 1$$$, remove the subarray from index $$$i$$$ to $$$i + k - 1$$$ and concatenate the remaining parts. In other words, replace $$$b$$$ with $$$$$$[b_1, b_2, \\ldots, b_{i - 1}, b_{i + k}, b_{i + k + 1}, \\ldots, b_l].$$$$$$ $$$f(b)$$$ is defined as the minimum possible value of $$$\\operatorname{mex}(b)$$$$$$^{\\text{∗}}$$$ after performing the above operation at most $$$m$$$ times (possibly zero). You need to construct a sequence $$$a$$$ of length $$$n$$$ consisting of non-negative integers, such that: For all $$$1 \\le i \\le n$$$, $$$0 \\le a_i \\le 10^9$$$. Over all such sequences $$$a$$$, $$$f(a)$$$ is maximized . $$$^{\\text{∗}}$$$The minimum excluded (MEX) of a collection of integers $$$c_1, c_2, \\ldots, c_k$$$ is defined as the smallest non-negative integer $$$x$$$ which does not occur in the collection $$$c$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le m \\lt n$$$, $$$1 \\le k \\lt n$$$, $$$1 \\le m \\cdot k \\lt n$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$). If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "8\n2 1 1\n5 2 2\n6 1 4\n8 2 2\n8 1 5\n11 3 3\n22 6 3\n17 2 2",
+      "output": "0 0\n0 1 0 0 0\n0 1 2 2 0 1\n0 2 1 0 1 0 8 1\n0 1 2 1000000000 1 0 1 2\n1 0 0 1 0 2 1 0 2 1 0\n0 2 1 0 2 1 0 3 2 1 0 2 1 0 2 1 0 2 1 0 2 1\n4 0 2 1 3 4 0 2 1 0 3 4 0 1 2 1 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

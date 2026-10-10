@@ -1,0 +1,29 @@
+{
+  "id": "1773K",
+  "source": "problemset",
+  "contest_id": 1773,
+  "problem_index": "K",
+  "name": "King's Puzzle",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 1719,
+  "problem_url": "https://codeforces.com/problemset/problem/1773/K",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/1773/K]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

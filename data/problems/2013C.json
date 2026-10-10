@@ -1,0 +1,36 @@
+{
+  "id": "2013C",
+  "source": "problemset",
+  "contest_id": 2013,
+  "problem_index": "C",
+  "name": "Password Cracking",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "strings"
+  ],
+  "solved_count": 15011,
+  "problem_url": "https://codeforces.com/problemset/problem/2013/C",
+  "editorial_url": "https://codeforces.com/blog/entry/134298",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Dimash learned that Mansur wrote something very unpleasant about him to a friend, so he decided to find out his password at all costs and discover what exactly he wrote. Believing in the strength of his password, Mansur stated that his password — is a binary string of length $$$n$$$. He is also ready to answer Dimash's questions of the following type: Dimash says a binary string $$$t$$$, and Mansur replies whether it is true that $$$t$$$ is a substring of his password. Help Dimash find out the password in no more than $$$2n$$$ operations; otherwise, Mansur will understand the trick and stop communicating with him.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n\n0\n\n0\n\n1\n\n4\n\n4\n\n2",
+      "output": "? 00\n\n? 000\n\n? 010\n\n! 010\n\n! 1100\n\n! 0110\n\n! 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

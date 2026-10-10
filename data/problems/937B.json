@@ -1,0 +1,40 @@
+{
+  "id": "937B",
+  "source": "problemset",
+  "contest_id": 937,
+  "problem_index": "B",
+  "name": "Vile Grasshoppers",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7333,
+  "problem_url": "https://codeforces.com/problemset/problem/937/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58056",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The weather is fine today and hence it's high time to climb the nearby pine and enjoy the landscape. The pine's trunk includes several branches, located one above another and numbered from 2 to y . Some of them (more precise, from 2 to p ) are occupied by tiny vile grasshoppers which you're at war with. These grasshoppers are known for their awesome jumping skills: the grasshopper at branch x can jump to branches . Keeping this in mind, you wisely decided to choose such a branch that none of the grasshoppers could interrupt you. At the same time you wanna settle as high as possible since the view from up there is simply breathtaking. In other words, your goal is to find the highest branch that cannot be reached by any of the grasshoppers or report that it's impossible.",
+  "input_specification": "The only line contains two integers p and y (2 ≤ p ≤ y ≤ 10 9 ) .",
+  "output_specification": "Output the number of the highest suitable branch. If there are none, print -1 instead.",
+  "sample_testcases": [
+    {
+      "input": "3 6",
+      "output": "5"
+    },
+    {
+      "input": "3 4",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

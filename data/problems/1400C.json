@@ -1,0 +1,37 @@
+{
+  "id": "1400C",
+  "source": "problemset",
+  "contest_id": 1400,
+  "problem_index": "C",
+  "name": "Binary String Reconstruction",
+  "rating": 1500,
+  "tags": [
+    "2-sat",
+    "brute force",
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 18739,
+  "problem_url": "https://codeforces.com/problemset/problem/1400/C",
+  "editorial_url": "https://codeforces.com/blog/entry/81916",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider the following process. You have a binary string (a string where each character is either 0 or 1 ) $$$w$$$ of length $$$n$$$ and an integer $$$x$$$. You build a new binary string $$$s$$$ consisting of $$$n$$$ characters. The $$$i$$$-th character of $$$s$$$ is chosen as follows: if the character $$$w_{i-x}$$$ exists and is equal to 1 , then $$$s_i$$$ is 1 (formally, if $$$i \\gt x$$$ and $$$w_{i-x} = $$$ 1 , then $$$s_i = $$$ 1 ); if the character $$$w_{i+x}$$$ exists and is equal to 1 , then $$$s_i$$$ is 1 (formally, if $$$i + x \\le n$$$ and $$$w_{i+x} = $$$ 1 , then $$$s_i = $$$ 1 ); if both of the aforementioned conditions are false, then $$$s_i$$$ is 0 . You are given the integer $$$x$$$ and the resulting string $$$s$$$. Reconstruct the original string $$$w$$$.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Each test case consists of two lines. The first line contains the resulting string $$$s$$$ ($$$2 \\le |s| \\le 10^5$$$, each character of $$$s$$$ is either 0 or 1 ). The second line contains one integer $$$x$$$ ($$$1 \\le x \\le |s| - 1$$$). The total length of all strings $$$s$$$ in the input does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the answer on a separate line as follows: if no string $$$w$$$ can produce the string $$$s$$$ at the end of the process, print $$$-1$$$; otherwise, print the binary string $$$w$$$ consisting of $$$|s|$$$ characters. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n101110\n2\n01\n1\n110\n1",
+      "output": "111011\n10\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:39",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

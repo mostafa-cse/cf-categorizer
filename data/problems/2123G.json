@@ -1,0 +1,39 @@
+{
+  "id": "2123G",
+  "source": "problemset",
+  "contest_id": 2123,
+  "problem_index": "G",
+  "name": "Modular Sorting",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "math",
+    "number theory",
+    "sortings"
+  ],
+  "solved_count": 3489,
+  "problem_url": "https://codeforces.com/problemset/problem/2123/G",
+  "editorial_url": "https://codeforces.com/blog/entry/144363",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$m$$$ ($$$2\\leq m\\leq 5\\cdot 10^5$$$) and an array $$$a$$$ consisting of nonnegative integers smaller than $$$m$$$. Answer queries of the following form: $$$1$$$ $$$i$$$ $$$x$$$: assign $$$a_i := x$$$ $$$2$$$ $$$k$$$: in one operation, you may choose an element $$$a_i$$$ and assign $$$a_i := (a_i + k) \\pmod m$$$$$$^{\\text{∗}}$$$ — determine if there exists some sequence of (possibly zero) operations to make $$$a$$$ nondecreasing$$$^{\\text{†}}$$$. Note that instances of query $$$2$$$ are independent; that is, no actual operations are taking place. Instances of query $$$1$$$ are persistent. $$$^{\\text{∗}}$$$$$$a\\pmod m$$$ is defined as the unique integer $$$b$$$ such that $$$0\\leq b \\lt m$$$ and $$$a-b$$$ is an integer multiple of $$$m$$$. $$$^{\\text{†}}$$$An array $$$a$$$ of size $$$n$$$ is called nondecreasing if and only if $$$a_i\\leq a_{i+1}$$$ for all $$$1\\leq i \\lt n$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\leq t\\leq 10^4$$$)  — the number of test cases. The first line of each test case contains three integers, $$$n$$$, $$$m$$$, and $$$q$$$ ($$$2\\leq n \\leq 10^5$$$, $$$2\\leq m\\leq 5\\cdot10^5$$$, $$$1\\leq q\\leq 10^5$$$) — the size of the array $$$a$$$, the integer $$$m$$$, and the number of queries. The second line of each test case contains $$$n$$$ integers, $$$a_1,a_2,\\dots,a_n$$$ ($$$0\\leq a_i \\lt m$$$). Then follows $$$q$$$ lines. Each line is of one of the following forms: $$$1$$$ $$$i$$$ $$$x$$$ ($$$1\\leq i\\leq n$$$, $$$0\\leq x \\lt m$$$) $$$2$$$ $$$k$$$ ($$$1\\leq k \\lt m$$$) It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ over all test cases each do not exceed $$$10^5$$$.",
+  "output_specification": "For each instance of query $$$2$$$, output on a single line \" YES \" if there exists some sequence of (possibly zero) operations to make $$$a$$$ nondecreasing, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "2\n7 6 6\n4 5 2 2 4 1 0\n2 4\n1 4 5\n2 4\n2 3\n1 7 2\n2 3\n8 8 3\n0 1 2 3 4 5 6 7\n2 4\n1 3 4\n2 4",
+      "output": "YES\nNO\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

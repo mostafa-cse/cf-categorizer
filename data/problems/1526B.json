@@ -1,0 +1,36 @@
+{
+  "id": "1526B",
+  "source": "problemset",
+  "contest_id": 1526,
+  "problem_index": "B",
+  "name": "I Hate 1111",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 38338,
+  "problem_url": "https://codeforces.com/problemset/problem/1526/B",
+  "editorial_url": "https://codeforces.com/blog/entry/91195",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$x$$$. Can you make $$$x$$$ by summing up some number of $$$11, 111, 1111, 11111, \\ldots$$$? (You can use any number among them any number of times). For instance, $$$33=11+11+11$$$ $$$144=111+11+11+11$$$",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ $$$(1 \\leq t \\leq 10000)$$$ — the number of testcases. The first and only line of each testcase contains a single integer $$$x$$$ $$$(1 \\leq x \\leq 10^9)$$$ — the number you have to make.",
+  "output_specification": "For each testcase, you should output a single string. If you can make $$$x$$$, output \"YES\" (without quotes). Otherwise, output \"NO\". You can print each letter of \"YES\" and \"NO\" in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "3\n33\n144\n69",
+      "output": "YES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

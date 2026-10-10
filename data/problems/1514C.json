@@ -1,0 +1,39 @@
+{
+  "id": "1514C",
+  "source": "problemset",
+  "contest_id": 1514,
+  "problem_index": "C",
+  "name": "Product 1 Modulo N",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 19232,
+  "problem_url": "https://codeforces.com/problemset/problem/1514/C",
+  "editorial_url": "https://codeforces.com/blog/entry/89810",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Now you get Baby Ehab's first words: \"Given an integer $$$n$$$, find the longest subsequence of $$$[1,2, \\ldots, n-1]$$$ whose product is $$$1$$$ modulo $$$n$$$.\" Please solve the problem. A sequence $$$b$$$ is a subsequence of an array $$$a$$$ if $$$b$$$ can be obtained from $$$a$$$ by deleting some (possibly all) elements. The product of an empty subsequence is equal to $$$1$$$.",
+  "input_specification": "The only line contains the integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$).",
+  "output_specification": "The first line should contain a single integer, the length of the longest subsequence. The second line should contain the elements of the subsequence, in increasing order . If there are multiple solutions, you can print any.",
+  "sample_testcases": [
+    {
+      "input": "5",
+      "output": "3\n1 2 3"
+    },
+    {
+      "input": "8",
+      "output": "4\n1 3 5 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "266. Linear Congruence Equation",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply modular properties, binary exponentiation (a^b mod P in O(log b)), and modular multiplicative inverse using Extended Euclidean Algorithm."
+}

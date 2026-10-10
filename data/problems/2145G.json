@@ -1,0 +1,74 @@
+{
+  "id": "2145G",
+  "source": "problemset",
+  "contest_id": 2145,
+  "problem_index": "G",
+  "name": "Cost of Coloring",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "divide and conquer",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 656,
+  "problem_url": "https://codeforces.com/problemset/problem/2145/G",
+  "editorial_url": "https://codeforces.com/blog/entry/147164",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a sheet of paper divided into $$$n$$$ rows and $$$m$$$ columns. Initially, no cell of this sheet is colored. In one operation, you can choose any column or row and color it (if some cells were previously colored, their color changes to the new one). During the first operation, cells are colored with color $$$1$$$; during operation $$$i \\gt 1$$$, you can choose either color $$$c_{i-1}$$$ or $$$c_{i-1} + 1$$$, where $$$c_{i-1}$$$ is the color chosen during operation $$$(i-1)$$$. We call the final coloring beautiful if the following conditions are met: each cell is colored; for each color from $$$1$$$ to $$$k$$$, there is at least one cell colored in that color, and no other colors are used in the coloring. For a beautiful final coloring, we define its value as the minimum number of operations required to achieve it. For each $$$i$$$ from $$$\\min(n, m)$$$ to $$$n + m - 1$$$, calculate the number of beautiful colorings with value $$$i$$$. Two colorings are considered different if the color of at least one cell differs in these colorings.",
+  "input_specification": "The input consists of a single line containing three integers $$$n, m, k$$$ ($$$2 \\le n, m \\le 2000$$$; $$$1 \\le k \\le n + m - 1$$$).",
+  "output_specification": "For each $$$i$$$ from $$$\\min(n, m)$$$ to $$$n + m - 1$$$, output a single integer — the number of beautiful colorings with value $$$i$$$, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 3 2",
+      "output": "2 12 6"
+    },
+    {
+      "input": "2 3 3",
+      "output": "0 18 36"
+    },
+    {
+      "input": "3 2 4",
+      "output": "0 0 36"
+    },
+    {
+      "input": "2 2 3",
+      "output": "0 8"
+    },
+    {
+      "input": "2 2 2",
+      "output": "4 4"
+    },
+    {
+      "input": "2 2 1",
+      "output": "1 0"
+    },
+    {
+      "input": "5 3 4",
+      "output": "0 90 1500 7830 8100"
+    },
+    {
+      "input": "3 5 3",
+      "output": "6 120 750 1770 930"
+    },
+    {
+      "input": "5 2 2",
+      "output": "2 15 30 35 10"
+    },
+    {
+      "input": "2 5 2",
+      "output": "2 15 30 35 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

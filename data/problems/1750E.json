@@ -1,0 +1,39 @@
+{
+  "id": "1750E",
+  "source": "problemset",
+  "contest_id": 1750,
+  "problem_index": "E",
+  "name": "Bracket Cost",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 1735,
+  "problem_url": "https://codeforces.com/problemset/problem/1750/E",
+  "editorial_url": "https://codeforces.com/blog/entry/108504",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Daemon Targaryen decided to stop looking like a Metin2 character. He turned himself into the most beautiful thing, a bracket sequence. For a bracket sequence, we can do two kind of operations: Select one of its substrings$$$^\\dagger$$$ and cyclic shift it to the right. For example, after a cyclic shift to the right, \" (()) \" will become \" )(() \"; Insert any bracket, opening ' ( ' or closing ' ) ', wherever you want in the sequence. We define the cost of a bracket sequence as the minimum number of such operations to make it balanced$$$^\\ddagger$$$. Given a bracket sequence $$$s$$$ of length $$$n$$$, find the sum of costs across all its $$$\\frac{n(n+1)}{2}$$$ non-empty substrings. Note that for each substring we calculate the cost independently . $$$^\\dagger$$$ A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end. $$$^\\ddagger$$$ A sequence of brackets is called balanced if one can turn it into a valid math expression by adding characters $$$+$$$ and $$$1$$$. For example, sequences \" (())() \", \" () \", and \" (()(())) \" are balanced, while \" )( \", \" (() \", and \" (()))( \" are not.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^5$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the length of the bracket sequence. The second line of each test case contains a string $$$s$$$, consisting only of characters ' ( ' and ' ) ', of length $$$n$$$ — the bracket sequence. It is guaranteed that sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the sum of costs of all substrings of $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n)\n4\n)()(\n3\n())\n5\n(((((\n10\n)(())))())",
+      "output": "1\n9\n6\n35\n112"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:14",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

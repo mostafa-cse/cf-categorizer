@@ -1,0 +1,35 @@
+{
+  "id": "2123F",
+  "source": "problemset",
+  "contest_id": 2123,
+  "problem_index": "F",
+  "name": "Minimize Fixed Points",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "number theory"
+  ],
+  "solved_count": 10334,
+  "problem_url": "https://codeforces.com/problemset/problem/2123/F",
+  "editorial_url": "https://codeforces.com/blog/entry/144363",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Call a permutation$$$^{\\text{∗}}$$$ $$$p$$$ of length $$$n$$$ good if $$$\\gcd(p_i, i)$$$$$$^{\\text{†}}$$$ $$$ \\gt 1$$$ for all $$$2 \\leq i \\leq n$$$. Find a good permutation with the minimum number of fixed points $$$^{\\text{‡}}$$$ across all good permutations of length $$$n$$$. If there are multiple such permutations, print any of them. $$$^{\\text{∗}}$$$ A permutation of length $$$n$$$ is an array that contains every integer from $$$1$$$ to $$$n$$$ exactly once, in any order. $$$^{\\text{†}}$$$$$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of $$$x$$$ and $$$y$$$. $$$^{\\text{‡}}$$$A fixed point of a permutation $$$p$$$ is an index $$$j$$$ ($$$1\\leq j\\leq n$$$) such that $$$p_j = j$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$)  — the number of test cases. The only line of each test case contains an integer $$$n$$$ ($$$2 \\leq n \\leq 10^5$$$) — the length of the permutation. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output on a single line an example of a good permutation of length $$$n$$$ with the minimum number of fixed points.",
+  "sample_testcases": [
+    {
+      "input": "4\n2\n3\n6\n13",
+      "output": "1 2\n1 2 3\n1 4 6 2 5 3\n1 12 9 6 10 8 7 4 3 5 11 2 13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

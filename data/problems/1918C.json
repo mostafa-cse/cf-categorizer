@@ -1,0 +1,37 @@
+{
+  "id": "1918C",
+  "source": "problemset",
+  "contest_id": 1918,
+  "problem_index": "C",
+  "name": "XOR-distance",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 17362,
+  "problem_url": "https://codeforces.com/problemset/problem/1918/C",
+  "editorial_url": "https://codeforces.com/blog/entry/125300",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given integers $$$a$$$, $$$b$$$, $$$r$$$. Find the smallest value of $$$|({a \\oplus x}) - ({b \\oplus x})|$$$ among all $$$0 \\leq x \\leq r$$$. $$$\\oplus$$$ is the operation of bitwise XOR , and $$$|y|$$$ is absolute value of $$$y$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case contains integers $$$a$$$, $$$b$$$, $$$r$$$ ($$$0 \\le a, b, r \\le 10^{18}$$$).",
+  "output_specification": "For each test case, output a single number — the smallest possible value.",
+  "sample_testcases": [
+    {
+      "input": "10\n4 6 0\n0 3 2\n9 6 10\n92 256 23\n165 839 201\n1 14 5\n2 7 2\n96549 34359 13851\n853686404475946 283666553522252166 127929199446003072\n735268590557942972 916721749674600979 895150420120690183",
+      "output": "2\n1\n1\n164\n542\n5\n3\n37102\n27934920819538516\n104449824168870225"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

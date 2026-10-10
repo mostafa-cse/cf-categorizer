@@ -1,0 +1,47 @@
+{
+  "id": "1776B",
+  "source": "problemset",
+  "contest_id": 1776,
+  "problem_index": "B",
+  "name": "Vittorio Plays with LEGO Bricks",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "geometry"
+  ],
+  "solved_count": 1611,
+  "problem_url": "https://codeforces.com/problemset/problem/1776/B",
+  "editorial_url": "https://codeforces.com/contest/1776/attachments/download/19130/solutions.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vittorio is playing with his new LEGO Duplo bricks. All the bricks have the shape of a square cuboid with a $$$2 \\times 2$$$ square base and a height of $$$1$$$. They can be arranged in the 3D space to build structures, provided that the following rules are met: No two bricks can intersect, but they can touch on their faces. The corners of every brick must have integer coordinates (so bricks are axis-aligned) and the $$$z$$$ coordinates of all corners must be non-negative. The square bases of every brick must be parallel to the ground (i.e. the plane $$$z=0$$$). The lower base of any brick that is not touching the ground must touch the upper base of some other brick in a region of positive area (when this happens, the two bricks stay attached to each other thanks to small studs). For example, this is a valid structure: Vittorio wants to build a structure that includes purple bricks in the following $$$n$$$ positions: $$$(x_1, 0, h)$$$, $$$(x_2, 0, h)$$$, $$$\\dots$$$, $$$(x_n, 0, h)$$$ — these are the coordinates of the centers of their lower bases; note that all of these bricks have $$$y$$$ coordinate equal to $$$0$$$ and $$$z$$$ coordinate equal to $$$h$$$. Vittorio will use additional bricks of other colors to support the purple bricks. He is willing to place bricks only in positions where the center of the lower base has $$$y$$$ coordinate equal to $$$0$$$. What is the minimum number of additional bricks needed? It can be shown that a valid construction always exists.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$h$$$ ($$$1 \\le n \\le 300$$$, $$$0 \\le h \\le 10^9$$$) — the number of purple bricks and their common $$$z$$$ coordinate. The second line contains $$$n$$$ integers $$$x_1, \\, x_2, \\, \\dots, \\, x_n$$$ ($$$1 \\le x_i \\le 10^9$$$, $$$x_i + 1 \\lt x_{i+1}$$$) — the $$$x$$$ coordinates of the purple bricks (centers of the bases), given in increasing order.",
+  "output_specification": "Print the minimum number of additional bricks needed.",
+  "sample_testcases": [
+    {
+      "input": "4 0\n2 7 11 13",
+      "output": "0"
+    },
+    {
+      "input": "4 1\n2 7 11 13",
+      "output": "3"
+    },
+    {
+      "input": "4 100\n2 7 11 13",
+      "output": "107"
+    },
+    {
+      "input": "4 3\n2 5 8 11",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

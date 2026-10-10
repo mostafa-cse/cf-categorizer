@@ -1,0 +1,45 @@
+{
+  "id": "1845F",
+  "source": "problemset",
+  "contest_id": 1845,
+  "problem_index": "F",
+  "name": "Swimmers in the Pool",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "fft",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 505,
+  "problem_url": "https://codeforces.com/problemset/problem/1845/F",
+  "editorial_url": "https://codeforces.com/blog/entry/117791",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a pool of length $$$l$$$ where $$$n$$$ swimmers plan to swim. People start swimming at the same time (at the time moment $$$0$$$), but you can assume that they take different lanes, so they don't interfere with each other. Each person swims along the following route: they start at point $$$0$$$ and swim to point $$$l$$$ with constant speed (which is equal to $$$v_i$$$ units per second for the $$$i$$$-th swimmer). After reaching the point $$$l$$$, the swimmer instantly (in negligible time) turns back and starts swimming to the point $$$0$$$ with the same constant speed. After returning to the point $$$0$$$, the swimmer starts swimming to the point $$$l$$$, and so on. Let's say that some real moment of time is a meeting moment if there are at least two swimmers that are in the same point of the pool at that moment of time (that point may be $$$0$$$ or $$$l$$$ as well as any other real point inside the pool). The pool will be open for $$$t$$$ seconds. You have to calculate the number of meeting moments while the pool is open. Since the answer may be very large, print it modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line contains two integers $$$l$$$ and $$$t$$$ ($$$1 \\le l, t \\le 10^9$$$) — the length of the pool and the duration of the process (in seconds). The second line contains the single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of swimmers. The third line contains $$$n$$$ integers $$$v_1, v_2, \\dots, v_n$$$ ($$$1 \\le v_i \\le 2 \\cdot 10^5$$$), where $$$v_i$$$ is the speed of the $$$i$$$-th swimmer. All $$$v_i$$$ are pairwise distinct .",
+  "output_specification": "Print one integer — the number of meeting moments (including moment $$$t$$$ if needed and excluding moment $$$0$$$ ), taken modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "9 18\n2\n1 2",
+      "output": "3"
+    },
+    {
+      "input": "12 13\n3\n4 2 6",
+      "output": "10"
+    },
+    {
+      "input": "1 1000000000\n3\n100000 150000 200000",
+      "output": "997200007"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

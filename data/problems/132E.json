@@ -1,0 +1,39 @@
+{
+  "id": "132E",
+  "source": "problemset",
+  "contest_id": 132,
+  "problem_index": "E",
+  "name": "Bits of merry old England",
+  "rating": 2700,
+  "tags": [
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 607,
+  "problem_url": "https://codeforces.com/problemset/problem/132/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3302",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Another feature of Shakespeare language is that the variables are named after characters of plays by Shakespeare, and all operations on them (value assignment, output etc.) look like a dialog with other characters. New values of variables are defined in a rather lengthy way, so a programmer should try to minimize their usage. You have to print the given sequence of n integers. To do this, you have m variables and two types of operations on them: variable=integer print(variable) Any of the m variables can be used as variable . Variables are denoted by lowercase letters between \" a \" and \" z \", inclusive. Any integer number can be used as integer . Let's say that the penalty for using first type of operations equals to the number of set bits in the number integer . There is no penalty on using second type of operations. Find and output the program which minimizes the penalty for printing the given sequence of numbers.",
+  "input_specification": "The first line of input contains integers n and m ( 1 ≤ n ≤ 250 , 1 ≤ m ≤ 26 ). The second line contains the sequence to be printed. Each element of the sequence is an integer between 1 and 10 9 , inclusive. The sequence has to be printed in the given order (from left to right).",
+  "output_specification": "Output the number of lines in the optimal program and the optimal penalty. Next, output the program itself, one command per line. If there are several programs with minimal penalty, output any of them (you have only to minimize the penalty).",
+  "sample_testcases": [
+    {
+      "input": "7 2\n1 2 2 4 2 1 2",
+      "output": "11 4\nb=1\nprint(b)\na=2\nprint(a)\nprint(a)\nb=4\nprint(b)\nprint(a)\nb=1\nprint(b)\nprint(a)"
+    },
+    {
+      "input": "6 3\n1 2 3 1 2 3",
+      "output": "9 4\nc=1\nprint(c)\nb=2\nprint(b)\na=3\nprint(a)\nprint(c)\nprint(b)\nprint(a)"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

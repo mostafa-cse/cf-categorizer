@@ -1,0 +1,38 @@
+{
+  "id": "1706D1",
+  "source": "problemset",
+  "contest_id": 1706,
+  "problem_index": "D1",
+  "name": "Chopping Carrots (Easy Version)",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 7837,
+  "problem_url": "https://codeforces.com/problemset/problem/1706/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/105008",
+  "time_limit": "4 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "This is the easy version of the problem. The only difference between the versions is the constraints on $$$n$$$, $$$k$$$, $$$a_i$$$, and the sum of $$$n$$$ over all test cases. You can make hacks only if both versions of the problem are solved. Note the unusual memory limit. You are given an array of integers $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$, and an integer $$$k$$$. The cost of an array of integers $$$p_1, p_2, \\ldots, p_n$$$ of length $$$n$$$ is $$$$$$\\max\\limits_{1 \\le i \\le n}\\left(\\left \\lfloor \\frac{a_i}{p_i} \\right \\rfloor \\right) - \\min\\limits_{1 \\le i \\le n}\\left(\\left \\lfloor \\frac{a_i}{p_i} \\right \\rfloor \\right).$$$$$$ Here, $$$\\lfloor \\frac{x}{y} \\rfloor$$$ denotes the integer part of the division of $$$x$$$ by $$$y$$$. Find the minimum cost of an array $$$p$$$ such that $$$1 \\le p_i \\le k$$$ for all $$$1 \\le i \\le n$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 3000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_1 \\le a_2 \\le \\ldots \\le a_n \\le 3000$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum possible cost of an array $$$p$$$ satisfying the condition above.",
+  "sample_testcases": [
+    {
+      "input": "7\n5 2\n4 5 6 8 11\n5 12\n4 5 6 8 11\n3 1\n2 9 15\n7 3\n2 3 5 5 6 9 10\n6 56\n54 286 527 1436 2450 2681\n3 95\n16 340 2241\n2 2\n1 3",
+      "output": "2\n0\n13\n1\n4\n7\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:24",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

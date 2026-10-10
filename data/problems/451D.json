@@ -1,0 +1,46 @@
+{
+  "id": "451D",
+  "source": "problemset",
+  "contest_id": 451,
+  "problem_index": "D",
+  "name": "Count Good Substrings",
+  "rating": 2000,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 5152,
+  "problem_url": "https://codeforces.com/problemset/problem/451/D",
+  "editorial_url": "https://codeforces.com/blog/entry/13181",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "We call a string good , if after merging all the consecutive equal characters, the resulting string is palindrome. For example, \" aabba \" is good, because after the merging step it will become \" aba \". Given a string, you have to find two values: the number of good substrings of even length; the number of good substrings of odd length.",
+  "input_specification": "The first line of the input contains a single string of length n ( 1 ≤ n ≤ 10 5 ). Each character of the string will be either ' a ' or ' b '.",
+  "output_specification": "Print two space-separated integers: the number of good substrings of even length and the number of good substrings of odd length.",
+  "sample_testcases": [
+    {
+      "input": "bb",
+      "output": "1 2"
+    },
+    {
+      "input": "baab",
+      "output": "2 4"
+    },
+    {
+      "input": "babb",
+      "output": "2 5"
+    },
+    {
+      "input": "babaa",
+      "output": "2 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

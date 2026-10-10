@@ -1,0 +1,43 @@
+{
+  "id": "702E",
+  "source": "problemset",
+  "contest_id": 702,
+  "problem_index": "E",
+  "name": "Analysis of Pathes in Functional Graph",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "graphs"
+  ],
+  "solved_count": 3347,
+  "problem_url": "https://codeforces.com/problemset/problem/702/E",
+  "editorial_url": "https://codeforces.com/blog/entry/46319",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a functional graph . It is a directed graph, in which from each vertex goes exactly one arc. The vertices are numerated from 0 to n - 1 . Graph is given as the array f 0 , f 1 , ..., f n - 1 , where f i — the number of vertex to which goes the only arc from the vertex i . Besides you are given array with weights of the arcs w 0 , w 1 , ..., w n - 1 , where w i — the arc weight from i to f i . The graph from the first sample test. Also you are given the integer k (the length of the path) and you need to find for each vertex two numbers s i and m i , where: s i — the sum of the weights of all arcs of the path with length equals to k which starts from the vertex i ; m i — the minimal weight from all arcs on the path with length k which starts from the vertex i . The length of the path is the number of arcs on this path.",
+  "input_specification": "The first line contains two integers n , k ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ 10 10 ). The second line contains the sequence f 0 , f 1 , ..., f n - 1 ( 0 ≤ f i < n ) and the third — the sequence w 0 , w 1 , ..., w n - 1 ( 0 ≤ w i ≤ 10 8 ).",
+  "output_specification": "Print n lines, the pair of integers s i , m i in each line.",
+  "sample_testcases": [
+    {
+      "input": "7 3\n1 2 3 4 3 2 6\n6 3 1 4 2 2 3",
+      "output": "10 1\n8 1\n7 1\n10 2\n8 2\n7 1\n9 3"
+    },
+    {
+      "input": "4 4\n0 1 2 3\n0 1 2 3",
+      "output": "0 0\n4 1\n8 2\n12 3"
+    },
+    {
+      "input": "5 3\n1 2 3 4 0\n4 1 2 14 3",
+      "output": "7 1\n17 1\n19 2\n21 3\n8 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:27",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

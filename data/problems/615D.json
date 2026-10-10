@@ -1,0 +1,39 @@
+{
+  "id": "615D",
+  "source": "problemset",
+  "contest_id": 615,
+  "problem_index": "D",
+  "name": "Multipliers",
+  "rating": 2000,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 4381,
+  "problem_url": "https://codeforces.com/problemset/problem/615/D",
+  "editorial_url": "https://codeforces.com/blog/entry/22658",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ayrat has number n , represented as it's prime factorization p i of size m , i.e. n = p 1 · p 2 ·...· p m . Ayrat got secret information that that the product of all divisors of n taken modulo 10 9 + 7 is the password to the secret data base. Now he wants to calculate this value.",
+  "input_specification": "The first line of the input contains a single integer m ( 1 ≤ m ≤ 200 000 ) — the number of primes in factorization of n . The second line contains m primes numbers p i ( 2 ≤ p i ≤ 200 000 ).",
+  "output_specification": "Print one integer — the product of all divisors of n modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2\n2 3",
+      "output": "36"
+    },
+    {
+      "input": "3\n2 3 2",
+      "output": "1728"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "266. Linear Congruence Equation",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply modular properties, binary exponentiation (a^b mod P in O(log b)), and modular multiplicative inverse using Extended Euclidean Algorithm."
+}

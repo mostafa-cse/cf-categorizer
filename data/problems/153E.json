@@ -1,0 +1,38 @@
+{
+  "id": "153E",
+  "source": "problemset",
+  "contest_id": 153,
+  "problem_index": "E",
+  "name": "Euclidean Distance",
+  "rating": 2100,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 87,
+  "problem_url": "https://codeforces.com/problemset/problem/153/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3948",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a multiset of points on the plane with integer coordinates. Find the maximum distance between two points from this multiset.",
+  "input_specification": "The first line of input contains the number of points n ( 2 ≤ n ≤ 50 ). Next, n pairs of lines follow, each describing a single point: the first line contains x -coordinate, the second one — the y -coordinate ( - 50 ≤ x , y ≤ 50 ). Some of the points can have identical coordinates.",
+  "output_specification": "Output the maximum distance between two points from this multiset. The answer is considered to be correct if its absolute or relative error does not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "3\n0\n1\n2\n3\n4\n5",
+      "output": "5.656854249"
+    },
+    {
+      "input": "3\n10\n12\n-5\n8\n10\n12",
+      "output": "15.5241747"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

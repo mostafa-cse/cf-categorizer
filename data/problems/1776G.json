@@ -1,0 +1,41 @@
+{
+  "id": "1776G",
+  "source": "problemset",
+  "contest_id": 1776,
+  "problem_index": "G",
+  "name": "Another Wine Tasting Event",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "math",
+    "strings"
+  ],
+  "solved_count": 2494,
+  "problem_url": "https://codeforces.com/problemset/problem/1776/G",
+  "editorial_url": "https://codeforces.com/contest/1776/attachments/download/19130/solutions.pdf",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After the first successful edition, Gabriella has been asked to organize a second wine tasting event. There will be $$$2n - 1$$$ bottles of wine arranged in a row, each of which is either red wine or white wine. This time, Gabriella has already chosen the type and order of all the bottles. The types of the wines are represented by a string $$$s$$$ of length $$$2n - 1$$$. For each $$$1 \\le i \\le 2n - 1$$$, it holds that $$$s_i = \\texttt{R}$$$ if the $$$i$$$-th bottle is red wine, and $$$s_i = \\texttt{W}$$$ if the $$$i$$$-th bottle is white wine. Exactly $$$n$$$ critics have been invited to attend. The critics are numbered from $$$1$$$ to $$$n$$$. Just like last year, each critic $$$j$$$ wants to taste an interval of wines, that is, the bottles at positions $$$a_j, \\, a_j + 1, \\, \\dots, \\, b_j$$$ for some $$$1 \\le a_j \\le b_j \\le 2n - 1$$$. Moreover, they have the following additional requirements: each of them wants to taste at least $$$n$$$ wines, that is, it must hold that $$$b_j - a_j + 1 \\ge n$$$; no two critics must taste exactly the same wines, that is, if $$$j \\ne k$$$ it must hold that $$$a_j \\ne a_k$$$ or $$$b_j \\ne b_k$$$. Gabriella knows that, since the event is held in a coastal region of Italy, critics are especially interested in the white wines, and don't care much about the red ones. (Indeed, white wine is perfect to accompany seafood.) Thus, to ensure fairness, she would like that all critics taste the same number of white wines. Help Gabriella find an integer $$$x$$$ (with $$$0 \\le x \\le 2n - 1$$$) such that there exists a valid assignment of intervals to critics where each critic tastes exactly $$$x$$$ white wines. It can be proved that at least one such $$$x$$$ always exists.",
+  "input_specification": "The first line contains the integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — where $$$2n - 1$$$ is the number of bottles, and $$$n$$$ is the number of critics. The second line contains a string $$$s$$$ of length $$$2n - 1$$$ that represents the arrangement of the wines — the $$$i$$$-th character of $$$s$$$ ($$$1 \\le i \\le 2n - 1$$$) is $$$\\texttt{R}$$$ for a red wine and $$$\\texttt{W}$$$ for a white wine.",
+  "output_specification": "Print an integer $$$x$$$ — the number of white wines that each critic will taste. It can be proved that at least one solution exists. If multiple solutions exist, any of them will be accepted.",
+  "sample_testcases": [
+    {
+      "input": "5\nRWWRRRWWW",
+      "output": "2"
+    },
+    {
+      "input": "1\nR",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

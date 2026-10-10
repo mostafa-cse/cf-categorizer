@@ -1,0 +1,35 @@
+{
+  "id": "1594F",
+  "source": "problemset",
+  "contest_id": 1594,
+  "problem_index": "F",
+  "name": "Ideal Farm",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 1590,
+  "problem_url": "https://codeforces.com/problemset/problem/1594/F",
+  "editorial_url": "https://codeforces.com/blog/entry/95525",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Theofanis decided to visit his uncle's farm. There are $$$s$$$ animals and $$$n$$$ animal pens on the farm. For utility purpose, animal pens are constructed in one row. Uncle told Theofanis that a farm is lucky if you can distribute all animals in all pens in such a way that there are no empty pens and there is at least one continuous segment of pens that has exactly $$$k$$$ animals in total. Moreover, a farm is ideal if it's lucky for any distribution without empty pens. Neither Theofanis nor his uncle knows if their farm is ideal or not. Can you help them to figure it out?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The first and only line of each test case contains three integers $$$s$$$, $$$n$$$, and $$$k$$$ ($$$1 \\le s, n, k \\le 10^{18}$$$; $$$n \\le s$$$).",
+  "output_specification": "For each test case, print YES (case-insensitive), if the farm is ideal, or NO (case-insensitive) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 1\n1 1 2\n100 50 200\n56220 47258 14497",
+      "output": "YES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:54",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

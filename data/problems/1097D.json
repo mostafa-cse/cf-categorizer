@@ -1,0 +1,45 @@
+{
+  "id": "1097D",
+  "source": "problemset",
+  "contest_id": 1097,
+  "problem_index": "D",
+  "name": "Makoto and a Blackboard",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "math",
+    "number theory",
+    "probabilities"
+  ],
+  "solved_count": 3376,
+  "problem_url": "https://codeforces.com/problemset/problem/1097/D",
+  "editorial_url": "https://codeforces.com/blog/entry/64310",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Makoto has a big blackboard with a positive integer $$$n$$$ written on it. He will perform the following action exactly $$$k$$$ times: Suppose the number currently written on the blackboard is $$$v$$$. He will randomly pick one of the divisors of $$$v$$$ (possibly $$$1$$$ and $$$v$$$) and replace $$$v$$$ with this divisor. As Makoto uses his famous random number generator (RNG) and as he always uses $$$58$$$ as his generator seed, each divisor is guaranteed to be chosen with equal probability. He now wonders what is the expected value of the number written on the blackboard after $$$k$$$ steps. It can be shown that this value can be represented as $$$\\frac{P}{Q}$$$ where $$$P$$$ and $$$Q$$$ are coprime integers and $$$Q \\not\\equiv 0 \\pmod{10^9+7}$$$. Print the value of $$$P \\cdot Q^{-1}$$$ modulo $$$10^9+7$$$.",
+  "input_specification": "The only line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 10^{15}$$$, $$$1 \\leq k \\leq 10^4$$$).",
+  "output_specification": "Print a single integer — the expected value of the number on the blackboard after $$$k$$$ steps as $$$P \\cdot Q^{-1} \\pmod{10^9+7}$$$ for $$$P$$$, $$$Q$$$ defined above.",
+  "sample_testcases": [
+    {
+      "input": "6 1",
+      "output": "3"
+    },
+    {
+      "input": "6 2",
+      "output": "875000008"
+    },
+    {
+      "input": "60 5",
+      "output": "237178099"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

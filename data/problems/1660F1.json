@@ -1,0 +1,37 @@
+{
+  "id": "1660F1",
+  "source": "problemset",
+  "contest_id": 1660,
+  "problem_index": "F1",
+  "name": "Promising String (easy version)",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "implementation",
+    "math",
+    "strings"
+  ],
+  "solved_count": 8069,
+  "problem_url": "https://codeforces.com/problemset/problem/1660/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/101526",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of Problem F. The only difference between the easy version and the hard version is the constraints. We will call a non-empty string balanced if it contains the same number of plus and minus signs. For example: strings \" +- -+ \" and \" ++-+- - \" are balanced, and strings \" +- - \", \" - - \" and \"\" are not balanced. We will call a string promising if the string can be made balanced by several (possibly zero) uses of the following operation: replace two adjacent minus signs with one plus sign. In particular, every balanced string is promising. However, the converse is not true: not every promising string is balanced. For example, the string \" -+- - - \" is promising, because you can replace two adjacent minuses with plus and get a balanced string \" -++- \", or get another balanced string \" -+-+ \". How many non-empty substrings of the given string $$$s$$$ are promising? Each non-empty promising substring must be counted in the answer as many times as it occurs in string $$$s$$$. Recall that a substring is a sequence of consecutive characters of the string. For example, for string \" +-+ \" its substring are: \" +- \", \" -+ \", \" + \", \" +-+ \" (the string is a substring of itself) and some others. But the following strings are not its substring: \" - - \", \" + + \", \" - ++ \".",
+  "input_specification": "The first line of the input contains an integer $$$t$$$ ($$$1 \\le t \\le 500$$$) —the number of test cases in the test. Then the descriptions of test cases follow. Each test case of input data consists of two lines. The first line consists of the number $$$n$$$ ($$$1 \\le n \\le 3000$$$): the length of $$$s$$$. The second line of the test case contains the string $$$s$$$ of length $$$n$$$, consisting only of characters \" + \" and \" - \". It is guaranteed that the sum of values $$$n$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "For each test case, print a single number: the number of the promising non-empty substrings of string $$$s$$$. Each non-empty promising substring must be counted in the answer as many times as it occurs in string $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n+-+\n5\n-+---\n4\n----\n7\n--+---+\n6\n+++---",
+      "output": "2\n4\n2\n7\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "1511E",
+  "source": "problemset",
+  "contest_id": 1511,
+  "problem_index": "E",
+  "name": "Colorings and Dominoes",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2974,
+  "problem_url": "https://codeforces.com/problemset/problem/1511/E",
+  "editorial_url": "https://codeforces.com/blog/entry/89634",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You have a large rectangular board which is divided into $$$n \\times m$$$ cells (the board has $$$n$$$ rows and $$$m$$$ columns). Each cell is either white or black. You paint each white cell either red or blue. Obviously, the number of different ways to paint them is $$$2^w$$$, where $$$w$$$ is the number of white cells. After painting the white cells of the board, you want to place the maximum number of dominoes on it, according to the following rules: each domino covers two adjacent cells; each cell is covered by at most one domino; if a domino is placed horizontally (it covers two adjacent cells in one of the rows), it should cover only red cells; if a domino is placed vertically (it covers two adjacent cells in one of the columns), it should cover only blue cells. Let the value of the board be the maximum number of dominoes you can place. Calculate the sum of values of the board over all $$$2^w$$$ possible ways to paint it. Since it can be huge, print it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 3 \\cdot 10^5$$$; $$$nm \\le 3 \\cdot 10^5$$$) — the number of rows and columns, respectively. Then $$$n$$$ lines follow, each line contains a string of $$$m$$$ characters. The $$$j$$$-th character in the $$$i$$$-th string is * if the $$$j$$$-th cell in the $$$i$$$-th row is black; otherwise, that character is o .",
+  "output_specification": "Print one integer — the sum of values of the board over all $$$2^w$$$ possible ways to paint it, taken modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n**oo\noo*o\n**oo",
+      "output": "144"
+    },
+    {
+      "input": "3 4\n**oo\noo**\n**oo",
+      "output": "48"
+    },
+    {
+      "input": "2 2\noo\no*",
+      "output": "4"
+    },
+    {
+      "input": "1 4\noooo",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

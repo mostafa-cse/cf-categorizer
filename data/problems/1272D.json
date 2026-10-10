@@ -1,0 +1,43 @@
+{
+  "id": "1272D",
+  "source": "problemset",
+  "contest_id": 1272,
+  "problem_index": "D",
+  "name": "Remove One Element",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 19782,
+  "problem_url": "https://codeforces.com/problemset/problem/1272/D",
+  "editorial_url": "https://codeforces.com/blog/entry/72132",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ integers. You can remove at most one element from this array. Thus, the final length of the array is $$$n-1$$$ or $$$n$$$. Your task is to calculate the maximum possible length of the strictly increasing contiguous subarray of the remaining array. Recall that the contiguous subarray $$$a$$$ with indices from $$$l$$$ to $$$r$$$ is $$$a[l \\dots r] = a_l, a_{l + 1}, \\dots, a_r$$$. The subarray $$$a[l \\dots r]$$$ is called strictly increasing if $$$a_l \\lt a_{l+1} \\lt \\dots \\lt a_r$$$.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in $$$a$$$. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$), where $$$a_i$$$ is the $$$i$$$-th element of $$$a$$$.",
+  "output_specification": "Print one integer — the maximum possible length of the strictly increasing contiguous subarray of the array $$$a$$$ after removing at most one element.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 5 3 4",
+      "output": "4"
+    },
+    {
+      "input": "2\n1 2",
+      "output": "2"
+    },
+    {
+      "input": "7\n6 5 4 3 2 4 3",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

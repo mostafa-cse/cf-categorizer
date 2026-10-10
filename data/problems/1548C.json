@@ -1,0 +1,41 @@
+{
+  "id": "1548C",
+  "source": "problemset",
+  "contest_id": 1548,
+  "problem_index": "C",
+  "name": "The Three Little Pigs",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 2309,
+  "problem_url": "https://codeforces.com/problemset/problem/1548/C",
+  "editorial_url": "https://codeforces.com/blog/entry/93586",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Three little pigs from all over the world are meeting for a convention! Every minute, a triple of 3 new pigs arrives on the convention floor. After the $$$n$$$-th minute, the convention ends. The big bad wolf has learned about this convention, and he has an attack plan. At some minute in the convention, he will arrive and eat exactly $$$x$$$ pigs. Then he will get away. The wolf wants Gregor to help him figure out the number of possible attack plans that involve eating exactly $$$x$$$ pigs for various values of $$$x$$$ ($$$1 \\le x \\le 3n$$$). Two attack plans are considered different, if they occur at different times or if the sets of little pigs to eat are different. Note that all queries are independent, that is, the wolf does not eat the little pigs, he only makes plans!",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n \\le 10^6$$$, $$$1 \\le q \\le 2\\cdot 10^5$$$), the number of minutes the convention lasts and the number of queries the wolf asks. Each of the next $$$q$$$ lines contains a single integer $$$x_i$$$ ($$$1 \\le x_i \\le 3n$$$), the number of pigs the wolf will eat in the $$$i$$$-th query.",
+  "output_specification": "You should print $$$q$$$ lines, with line $$$i$$$ representing the number of attack plans if the wolf wants to eat $$$x_i$$$ pigs. Since each query answer can be large, output each answer modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1\n5\n6",
+      "output": "9\n6\n1"
+    },
+    {
+      "input": "5 4\n2\n4\n6\n8",
+      "output": "225\n2001\n6014\n6939"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

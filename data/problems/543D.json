@@ -1,0 +1,39 @@
+{
+  "id": "543D",
+  "source": "problemset",
+  "contest_id": 543,
+  "problem_index": "D",
+  "name": "Road Improvement",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 3526,
+  "problem_url": "https://codeforces.com/problemset/problem/543/D",
+  "editorial_url": "https://codeforces.com/blog/entry/17773",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The country has n cities and n - 1 bidirectional roads, it is possible to get from every city to any other one if you move only along the roads. The cities are numbered with integers from 1 to n inclusive. All the roads are initially bad, but the government wants to improve the state of some roads. We will assume that the citizens are happy about road improvement if the path from the capital located in city x to any other city contains at most one bad road. Your task is — for every possible x determine the number of ways of improving the quality of some roads in order to meet the citizens' condition. As those values can be rather large, you need to print each value modulo 1 000 000 007 ( 10 9 + 7 ).",
+  "input_specification": "The first line of the input contains a single integer n ( 2 ≤ n ≤ 2·10 5 ) — the number of cities in the country. Next line contains n - 1 positive integers p 2 , p 3 , p 4 , ..., p n ( 1 ≤ p i ≤ i - 1 ) — the description of the roads in the country. Number p i means that the country has a road connecting city p i and city i .",
+  "output_specification": "Print n integers a 1 , a 2 , ..., a n , where a i is the sought number of ways to improve the quality of the roads modulo 1 000 000 007 ( 10 9 + 7 ), if the capital of the country is at city number i .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1",
+      "output": "4 3 3"
+    },
+    {
+      "input": "5\n1 2 3 4",
+      "output": "5 8 9 8 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

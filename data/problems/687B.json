@@ -1,0 +1,40 @@
+{
+  "id": "687B",
+  "source": "problemset",
+  "contest_id": 687,
+  "problem_index": "B",
+  "name": "Remainders Game",
+  "rating": 1800,
+  "tags": [
+    "chinese remainder theorem",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7195,
+  "problem_url": "https://codeforces.com/problemset/problem/687/B",
+  "editorial_url": "https://codeforces.com/blog/entry/45770",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Today Pari and Arya are playing a game called Remainders. Pari chooses two positive integer x and k , and tells Arya k but not x . Arya have to find the value . There are n ancient numbers c 1 , c 2 , ..., c n and Pari has to tell Arya if Arya wants. Given k and the ancient values, tell us if Arya has a winning strategy independent of value of x or not. Formally, is it true that Arya can understand the value for any positive integer x ? Note, that means the remainder of x after dividing it by y .",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n , k ≤ 1 000 000 ) — the number of ancient integers and value k that is chosen by Pari. The second line contains n integers c 1 , c 2 , ..., c n ( 1 ≤ c i ≤ 1 000 000 ).",
+  "output_specification": "Print \" Yes \" (without quotes) if Arya has a winning strategy independent of value of x , or \" No \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "4 5\n2 3 5 12",
+      "output": "Yes"
+    },
+    {
+      "input": "2 7\n2 3",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "267. Chinese Remainder Theorem (CRT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Chinese Remainder Theorem (CRT) paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

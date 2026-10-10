@@ -1,0 +1,45 @@
+{
+  "id": "460B",
+  "source": "problemset",
+  "contest_id": 460,
+  "problem_index": "B",
+  "name": "Little Dima and Equation",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 13621,
+  "problem_url": "https://codeforces.com/problemset/problem/460/B",
+  "editorial_url": "https://codeforces.com/blog/entry/13465",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little Dima misbehaved during a math lesson a lot and the nasty teacher Mr. Pickles gave him the following problem as a punishment. Find all integer solutions x (0 < x < 10 9 ) of the equation: x = b · s ( x ) a + c , where a , b , c are some predetermined constant values and function s ( x ) determines the sum of all digits in the decimal representation of number x . The teacher gives this problem to Dima for each lesson. He changes only the parameters of the equation: a , b , c . Dima got sick of getting bad marks and he asks you to help him solve this challenging problem.",
+  "input_specification": "The first line contains three space-separated integers: a , b , c (1 ≤ a ≤ 5; 1 ≤ b ≤ 10000;  - 10000 ≤ c ≤ 10000) .",
+  "output_specification": "Print integer n — the number of the solutions that you've found. Next print n integers in the increasing order — the solutions of the given equation. Print only integer solutions that are larger than zero and strictly less than 10 9 .",
+  "sample_testcases": [
+    {
+      "input": "3 2 8",
+      "output": "3\n10 2008 13726"
+    },
+    {
+      "input": "1 2 -18",
+      "output": "0"
+    },
+    {
+      "input": "2 2 -1",
+      "output": "4\n1 31 337 967"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

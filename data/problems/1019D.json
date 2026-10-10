@@ -1,0 +1,40 @@
+{
+  "id": "1019D",
+  "source": "problemset",
+  "contest_id": 1019,
+  "problem_index": "D",
+  "name": "Large Triangle",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "geometry",
+    "sortings"
+  ],
+  "solved_count": 778,
+  "problem_url": "https://codeforces.com/problemset/problem/1019/D",
+  "editorial_url": "https://codeforces.com/blog/entry/61161",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a strange peculiarity: if you connect the cities of Rostov, Taganrog and Shakhty, peculiarly, you get a triangle «Unbelievable But True» Students from many different parts of Russia and abroad come to Summer Informatics School. You marked the hometowns of the SIS participants on a map. Now you decided to prepare an interesting infographic based on this map. The first thing you chose to do is to find three cities on this map, such that they form a triangle with area $$$S$$$.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$S$$$ ($$$3 \\le n \\le 2000$$$, $$$1 \\le S \\le 2 \\cdot 10^{18}$$$) — the number of cities on the map and the area of the triangle to be found. The next $$$n$$$ lines contain descriptions of the cities, one per line. Each city is described by its integer coordinates $$$x_i$$$, $$$y_i$$$ ($$$-10^9 \\le x_i, y_i \\le 10^9$$$). It is guaranteed that all cities are located at distinct points. It is also guaranteed that no three cities lie on the same line.",
+  "output_specification": "If the solution doesn't exist — print « No ». Otherwise, print « Yes », followed by three pairs of coordinates $$$(x, y)$$$ — the locations of the three cities, which form the triangle of area $$$S$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 7\n0 0\n3 0\n0 4",
+      "output": "No"
+    },
+    {
+      "input": "4 3\n0 0\n2 0\n1 2\n1 3",
+      "output": "Yes\n0 0\n1 3\n2 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:14",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

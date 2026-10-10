@@ -1,0 +1,41 @@
+{
+  "id": "487B",
+  "source": "problemset",
+  "contest_id": 487,
+  "problem_index": "B",
+  "name": "Strip",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 4495,
+  "problem_url": "https://codeforces.com/problemset/problem/487/B",
+  "editorial_url": "https://codeforces.com/blog/entry/14832",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alexandra has a paper strip with n numbers on it. Let's call them a i from left to right. Now Alexandra wants to split it into some pieces (possibly 1 ). For each piece of strip, it must satisfy: Each piece should contain at least l numbers. The difference between the maximal and the minimal number on the piece should be at most s . Please help Alexandra to find the minimal number of pieces meeting the condition above.",
+  "input_specification": "The first line contains three space-separated integers n , s , l ( 1 ≤ n ≤ 10 5 , 0 ≤ s ≤ 10 9 , 1 ≤ l ≤ 10 5 ). The second line contains n integers a i separated by spaces ( - 10 9 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Output the minimal number of strip pieces. If there are no ways to split the strip, output -1.",
+  "sample_testcases": [
+    {
+      "input": "7 2 2\n1 3 1 2 4 1 2",
+      "output": "3"
+    },
+    {
+      "input": "7 2 2\n1 100 1 100 1 100 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

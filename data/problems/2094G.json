@@ -1,0 +1,36 @@
+{
+  "id": "2094G",
+  "source": "problemset",
+  "contest_id": 2094,
+  "problem_index": "G",
+  "name": "Chimpanzini Bananini",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 8315,
+  "problem_url": "https://codeforces.com/problemset/problem/2094/G",
+  "editorial_url": "https://codeforces.com/blog/entry/141796",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Chimpanzini Bananini stands on the brink of a momentous battle—one destined to bring finality. For an arbitrary array $$$b$$$ of length $$$m$$$, let's denote the rizziness of the array to be $$$\\sum_{i=1}^mb_i\\cdot i=b_1\\cdot 1+b_2\\cdot 2+b_3\\cdot 3+\\ldots + b_m\\cdot m$$$. Chimpanzini Bananini gifts you an empty array. There are three types of operations you can perform on it. Perform a cyclic shift on the array. That is, the array $$$[a_1, a_2, \\ldots, a_n]$$$ becomes $$$[a_n, a_1, a_2, \\ldots, a_{n-1}].$$$ Reverse the entire array. That is, the array $$$[a_1, a_2, \\ldots, a_n]$$$ becomes $$$[a_n, a_{n-1}, \\ldots, a_1].$$$ Append an element to the end of the array. The array $$$[a_1, a_2, \\ldots, a_n]$$$ becomes $$$[a_1, a_2, \\ldots, a_n, k]$$$ after appending $$$k$$$ to the end of the array. After each operation, you are interested in calculating the rizziness of your array. Note that all operations are persistent . This means that each operation modifies the array, and subsequent operations should be applied to the current state of the array after the previous operations.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains an integer $$$q$$$ ($$$1 \\leq q \\leq 2\\cdot 10^5$$$) — the number of operations you perform on your array. The following $$$q$$$ lines first contain a single integer $$$s$$$ ($$$1 \\leq s \\leq 3$$$) — the operation type. If $$$s=1$$$, then the cyclic shift operation should be performed. If $$$s=2$$$, then the reversal operation should be performed. If $$$s=3$$$, then the line will contain an additional integer $$$k$$$ ($$$1 \\leq k \\leq 10^6$$$), denoting the element appended to the back of the array. It is guaranteed that the sum of $$$q$$$ will not exceed $$$2\\cdot 10^5$$$ over all test cases. Additionally, it is guaranteed that the first operation on each test case will be one with $$$s=3$$$.",
+  "output_specification": "For each test case, output $$$q$$$ lines, outputting the rizziness of your array after each operation.",
+  "sample_testcases": [
+    {
+      "input": "1\n13\n3 1\n3 2\n3 3\n1\n3 4\n2\n3 5\n1\n3 6\n2\n3 7\n2\n1",
+      "output": "1\n5\n14\n11\n27\n23\n48\n38\n74\n73\n122\n102\n88"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:25",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

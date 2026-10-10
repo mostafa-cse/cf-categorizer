@@ -1,0 +1,36 @@
+{
+  "id": "348E",
+  "source": "problemset",
+  "contest_id": 348,
+  "problem_index": "E",
+  "name": "Pilgrims",
+  "rating": 2800,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 656,
+  "problem_url": "https://codeforces.com/problemset/problem/348/E",
+  "editorial_url": "https://codeforces.com/blog/entry/9031",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A long time ago there was a land called Dudeland. Dudeland consisted of n towns connected with n - 1 bidirectonal roads. The towns are indexed from 1 to n and one can reach any city from any other city if he moves along the roads of the country. There are m monasteries in Dudeland located in m different towns. In each monastery lives a pilgrim. At the beginning of the year, each pilgrim writes down which monastery is the farthest from the monastery he is living in. If there is more than one farthest monastery, he lists all of them. On the Big Lebowski day each pilgrim picks one town from his paper at random and starts walking to that town. Walter hates pilgrims and wants to make as many of them unhappy as possible by preventing them from finishing their journey. He plans to destroy exactly one town that does not contain a monastery. A pilgrim becomes unhappy if all monasteries in his list become unreachable from the monastery he is living in. You need to find the maximum number of pilgrims Walter can make unhappy. Also find the number of ways he can make this maximal number of pilgrims unhappy: the number of possible towns he can destroy.",
+  "input_specification": "The first line contains two integers n ( 3 ≤ n ≤ 10 5 ) and m ( 2 ≤ m < n ). The next line contains m distinct integers representing indices of towns that contain monasteries. Next n - 1 lines contain three integers each, a i , b i , c i , indicating that there is an edge between towns a i and b i of length c i ( 1 ≤ a i , b i ≤ n , 1 ≤ c i ≤ 1000, a i ≠ b i ).",
+  "output_specification": "Output two integers: the maximum number of pilgrims Walter can make unhappy and the number of ways in which he can make his plan come true.",
+  "sample_testcases": [
+    {
+      "input": "8 5\n7 2 5 4 8\n1 2 1\n2 3 2\n1 4 1\n4 5 2\n1 6 1\n6 7 8\n6 8 10",
+      "output": "5 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "33C",
+  "source": "problemset",
+  "contest_id": 33,
+  "problem_index": "C",
+  "name": "Wonderful Randomized Sum",
+  "rating": 1800,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 3673,
+  "problem_url": "https://codeforces.com/problemset/problem/33/C",
+  "editorial_url": "https://codeforces.com/blog/entry/731",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Learn, learn and learn again — Valera has to do this every day. He is studying at mathematical school, where math is the main discipline. The mathematics teacher loves her discipline very much and tries to cultivate this love in children. That's why she always gives her students large and difficult homework. Despite that Valera is one of the best students, he failed to manage with the new homework. That's why he asks for your help. He has the following task. A sequence of n numbers is given. A prefix of a sequence is the part of the sequence (possibly empty), taken from the start of the sequence. A suffix of a sequence is the part of the sequence (possibly empty), taken from the end of the sequence. It is allowed to sequentially make two operations with the sequence. The first operation is to take some prefix of the sequence and multiply all numbers in this prefix by - 1 . The second operation is to take some suffix and multiply all numbers in it by - 1 . The chosen prefix and suffix may intersect. What is the maximum total sum of the sequence that can be obtained by applying the described operations?",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — amount of elements in the sequence. The second line contains n integers a i ( - 10 4 ≤ a i ≤ 10 4 ) — the sequence itself.",
+  "output_specification": "The first and the only line of the output should contain the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3\n-1 -2 -3",
+      "output": "6"
+    },
+    {
+      "input": "5\n-4 2 0 5 0",
+      "output": "11"
+    },
+    {
+      "input": "5\n-1 10 -5 10 -2",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

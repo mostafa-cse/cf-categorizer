@@ -1,0 +1,39 @@
+{
+  "id": "585A",
+  "source": "problemset",
+  "contest_id": 585,
+  "problem_index": "A",
+  "name": "Gennady the Dentist",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 4491,
+  "problem_url": "https://codeforces.com/problemset/problem/585/A",
+  "editorial_url": "https://codeforces.com/blog/entry/20898",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Gennady is one of the best child dentists in Berland. Today n children got an appointment with him, they lined up in front of his office. All children love to cry loudly at the reception at the dentist. We enumerate the children with integers from 1 to n in the order they go in the line. Every child is associated with the value of his cofidence p i . The children take turns one after another to come into the office; each time the child that is the first in the line goes to the doctor. While Gennady treats the teeth of the i -th child, the child is crying with the volume of v i . At that the confidence of the first child in the line is reduced by the amount of v i , the second one — by value v i - 1 , and so on. The children in the queue after the v i -th child almost do not hear the crying, so their confidence remains unchanged. If at any point in time the confidence of the j -th child is less than zero, he begins to cry with the volume of d j and leaves the line, running towards the exit, without going to the doctor's office. At this the confidence of all the children after the j -th one in the line is reduced by the amount of d j . All these events occur immediately one after the other in some order. Some cries may lead to other cries, causing a chain reaction. Once in the hallway it is quiet, the child, who is first in the line, goes into the doctor's office. Help Gennady the Dentist to determine the numbers of kids, whose teeth he will cure. Print their numbers in the chronological order.",
+  "input_specification": "The first line of the input contains a positive integer n ( 1 ≤ n ≤ 4000 ) — the number of kids in the line. Next n lines contain three integers each v i , d i , p i ( 1 ≤ v i , d i , p i ≤ 10 6 ) — the volume of the cry in the doctor's office, the volume of the cry in the hall and the confidence of the i -th child.",
+  "output_specification": "In the first line print number k — the number of children whose teeth Gennady will cure. In the second line print k integers — the numbers of the children who will make it to the end of the line in the increasing order.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 2 2\n4 1 2\n5 2 4\n3 3 5\n5 1 2",
+      "output": "2\n1 3"
+    },
+    {
+      "input": "5\n4 5 1\n5 3 9\n4 1 2\n2 1 8\n4 1 9",
+      "output": "4\n1 2 4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

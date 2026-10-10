@@ -1,0 +1,45 @@
+{
+  "id": "241B",
+  "source": "problemset",
+  "contest_id": 241,
+  "problem_index": "B",
+  "name": "Friends",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 1062,
+  "problem_url": "https://codeforces.com/problemset/problem/241/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5722",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have n friends and you want to take m pictures of them. Exactly two of your friends should appear in each picture and no two pictures should contain the same pair of your friends. So if you have n = 3 friends you can take 3 different pictures, each containing a pair of your friends. Each of your friends has an attractiveness level which is specified by the integer number a i for the i -th friend. You know that the attractiveness of a picture containing the i -th and the j -th friends is equal to the exclusive-or ( xor operation) of integers a i and a j . You want to take pictures in a way that the total sum of attractiveness of your pictures is maximized. You have to calculate this value. Since the result may not fit in a 32-bit integer number, print it modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line of input contains two integers n and m — the number of friends and the number of pictures that you want to take. Next line contains n space-separated integers a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 10 9 ) — the values of attractiveness of the friends.",
+  "output_specification": "The only line of output should contain an integer — the optimal total sum of attractiveness of your pictures.",
+  "sample_testcases": [
+    {
+      "input": "3 1\n1 2 3",
+      "output": "3"
+    },
+    {
+      "input": "3 2\n1 2 3",
+      "output": "5"
+    },
+    {
+      "input": "3 3\n1 2 3",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

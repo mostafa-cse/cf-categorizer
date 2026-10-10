@@ -1,0 +1,37 @@
+{
+  "id": "2097A",
+  "source": "problemset",
+  "contest_id": 2097,
+  "problem_index": "A",
+  "name": "Sports Betting",
+  "rating": 1400,
+  "tags": [
+    "2-sat",
+    "brute force",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 9093,
+  "problem_url": "https://codeforces.com/problemset/problem/2097/A",
+  "editorial_url": "https://codeforces.com/blog/entry/142316",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The boarding process for various flights can occur in different ways: either by bus or through a telescopic jet bridge . Every day, exactly one flight is made from St. Petersburg to Minsk, and Vadim decided to demonstrate to the students that he always knows in advance how the boarding will take place. Vadim made a bet with $$$n$$$ students, and with the $$$i$$$-th student, he made a bet on day $$$a_i$$$. Vadim wins the bet if he correctly predicts the boarding process on both day $$$a_i+1$$$ and day $$$a_i+2$$$. Although Vadim does not know in advance how the boarding will occur, he really wants to win the bet at least with one student and convince him of his predictive abilities. Check if there exists a strategy for Vadim that allows him to guarantee success.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of students Vadim made bets with. The second line of each test case contains $$$n$$$ integers $$$a_1, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the days on which Vadim made bets with the students. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output \" Yes \" (without quotes) if Vadim can guarantee convincing at least one student, and \" No \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n1 1 1 1\n3\n2 2 2\n5\n2 4 3 2 4\n8\n6 3 1 1 5 1 2 6\n1\n1000000000",
+      "output": "Yes\nNo\nYes\nNo\nNo"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:25",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

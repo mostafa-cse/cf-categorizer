@@ -1,0 +1,41 @@
+{
+  "id": "232A",
+  "source": "problemset",
+  "contest_id": 232,
+  "problem_index": "A",
+  "name": "Cycles",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 2887,
+  "problem_url": "https://codeforces.com/problemset/problem/232/A",
+  "editorial_url": "https://codeforces.com/blog/entry/5514",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "John Doe started thinking about graphs. After some thought he decided that he wants to paint an undirected graph, containing exactly k cycles of length 3 . A cycle of length 3 is an unordered group of three distinct graph vertices a , b and c , such that each pair of them is connected by a graph edge. John has been painting for long, but he has not been a success. Help him find such graph. Note that the number of vertices there shouldn't exceed 100 , or else John will have problems painting it.",
+  "input_specification": "A single line contains an integer k ( 1 ≤ k ≤ 10 5 ) — the number of cycles of length 3 in the required graph.",
+  "output_specification": "In the first line print integer n ( 3 ≤ n ≤ 100 ) — the number of vertices in the found graph. In each of next n lines print n characters \" 0 \" and \" 1 \": the i -th character of the j -th line should equal \" 0 \", if vertices i and j do not have an edge between them, otherwise it should equal \" 1 \". Note that as the required graph is undirected, the i -th character of the j -th line must equal the j -th character of the i -th line. The graph shouldn't contain self-loops, so the i -th character of the i -th line must equal \" 0 \" for all i .",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "3\n011\n101\n110"
+    },
+    {
+      "input": "10",
+      "output": "5\n01111\n10111\n11011\n11101\n11110"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "496B",
+  "source": "problemset",
+  "contest_id": 496,
+  "problem_index": "B",
+  "name": "Secret Combination",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "implementation"
+  ],
+  "solved_count": 6259,
+  "problem_url": "https://codeforces.com/problemset/problem/496/B",
+  "editorial_url": "https://codeforces.com/blog/entry/15208",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You got a box with a combination lock. The lock has a display showing n digits. There are two buttons on the box, each button changes digits on the display. You have quickly discovered that the first button adds 1 to all the digits (all digits 9 become digits 0), and the second button shifts all the digits on the display one position to the right (the last digit becomes the first one). For example, if the display is currently showing number 579 , then if we push the first button, the display will show 680 , and if after that we push the second button, the display will show 068 . You know that the lock will open if the display is showing the smallest possible number that can be obtained by pushing the buttons in some order. The leading zeros are ignored while comparing numbers. Now your task is to find the desired number.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 1000 ) — the number of digits on the display. The second line contains n digits — the initial state of the display.",
+  "output_specification": "Print a single line containing n digits — the desired state of the display containing the smallest possible number.",
+  "sample_testcases": [
+    {
+      "input": "3\n579",
+      "output": "024"
+    },
+    {
+      "input": "4\n2014",
+      "output": "0142"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

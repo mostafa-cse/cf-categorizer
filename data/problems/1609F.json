@@ -1,0 +1,41 @@
+{
+  "id": "1609F",
+  "source": "problemset",
+  "contest_id": 1609,
+  "problem_index": "F",
+  "name": "Interesting Sections",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "meet-in-the-middle",
+    "two pointers"
+  ],
+  "solved_count": 1089,
+  "problem_url": "https://codeforces.com/problemset/problem/1609/F",
+  "editorial_url": "https://codeforces.com/blog/entry/97350",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "William has an array of non-negative numbers $$$a_1, a_2, \\dots, a_n$$$. He wants you to find out how many segments $$$l \\le r$$$ pass the check. The check is performed in the following manner: The minimum and maximum numbers are found on the segment of the array starting at $$$l$$$ and ending at $$$r$$$. The check is considered to be passed if the binary representation of the minimum and maximum numbers have the same number of bits equal to 1.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$), the size of array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^{18}$$$), the contents of array $$$a$$$.",
+  "output_specification": "Output a single number  — the total number of segments that passed the check.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 4 5",
+      "output": "9"
+    },
+    {
+      "input": "10\n0 5 7 3 9 10 1 6 13 7",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:50",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

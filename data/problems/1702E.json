@@ -1,0 +1,36 @@
+{
+  "id": "1702E",
+  "source": "problemset",
+  "contest_id": 1702,
+  "problem_index": "E",
+  "name": "Split Into Two Sets",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs"
+  ],
+  "solved_count": 19399,
+  "problem_url": "https://codeforces.com/problemset/problem/1702/E",
+  "editorial_url": "https://codeforces.com/blog/entry/104763",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp was recently given a set of $$$n$$$ (number $$$n$$$ — even) dominoes. Each domino contains two integers from $$$1$$$ to $$$n$$$. Can he divide all the dominoes into two sets so that all the numbers on the dominoes of each set are different? Each domino must go into exactly one of the two sets. For example, if he has $$$4$$$ dominoes: $$$\\{1, 4\\}$$$, $$$\\{1, 3\\}$$$, $$$\\{3, 2\\}$$$ and $$$\\{4, 2\\}$$$, then Polycarp will be able to divide them into two sets in the required way. The first set can include the first and third dominoes ($$$\\{1, 4\\}$$$ and $$$\\{3, 2\\}$$$), and the second set — the second and fourth ones ($$$\\{1, 3\\}$$$ and $$$\\{4, 2\\}$$$).",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The descriptions of the test cases follow. The first line of each test case contains a single even integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of dominoes. The next $$$n$$$ lines contain pairs of numbers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le n$$$) describing the numbers on the $$$i$$$-th domino. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print: YES , if it is possible to divide $$$n$$$ dominoes into two sets so that the numbers on the dominoes of each set are different; NO if this is not possible. You can print YES and NO in any case (for example, the strings yEs , yes , Yes and YES will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "6\n4\n1 2\n4 3\n2 1\n3 4\n6\n1 2\n4 5\n1 3\n4 6\n2 3\n5 6\n2\n1 1\n2 2\n2\n1 2\n2 1\n8\n2 1\n1 2\n4 3\n4 3\n5 6\n5 7\n8 6\n7 8\n8\n1 2\n2 1\n4 3\n5 3\n5 4\n6 7\n8 6\n7 8",
+      "output": "YES\nNO\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

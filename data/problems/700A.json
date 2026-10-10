@@ -1,0 +1,39 @@
+{
+  "id": "700A",
+  "source": "problemset",
+  "contest_id": 700,
+  "problem_index": "A",
+  "name": "As Fast As Possible",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "math"
+  ],
+  "solved_count": 3383,
+  "problem_url": "https://codeforces.com/problemset/problem/700/A",
+  "editorial_url": "https://codeforces.com/blog/entry/46283",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "On vacations n pupils decided to go on excursion and gather all together. They need to overcome the path with the length l meters. Each of the pupils will go with the speed equal to v 1 . To get to the excursion quickly, it was decided to rent a bus, which has seats for k people (it means that it can't fit more than k people at the same time) and the speed equal to v 2 . In order to avoid seasick, each of the pupils want to get into the bus no more than once . Determine the minimum time required for all n pupils to reach the place of excursion. Consider that the embarkation and disembarkation of passengers, as well as the reversal of the bus, take place immediately and this time can be neglected.",
+  "input_specification": "The first line of the input contains five positive integers n , l , v 1 , v 2 and k ( 1 ≤ n ≤ 10 000 , 1 ≤ l ≤ 10 9 , 1 ≤ v 1 < v 2 ≤ 10 9 , 1 ≤ k ≤ n ) — the number of pupils, the distance from meeting to the place of excursion, the speed of each pupil, the speed of bus and the number of seats in the bus.",
+  "output_specification": "Print the real number — the minimum time in which all pupils can reach the place of excursion. Your answer will be considered correct if its absolute or relative error won't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "5 10 1 2 5",
+      "output": "5.0000000000"
+    },
+    {
+      "input": "3 6 1 2 1",
+      "output": "4.7142857143"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

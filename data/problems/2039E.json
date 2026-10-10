@@ -1,0 +1,37 @@
+{
+  "id": "2039E",
+  "source": "problemset",
+  "contest_id": 2039,
+  "problem_index": "E",
+  "name": "Shohag Loves Inversions",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2448,
+  "problem_url": "https://codeforces.com/problemset/problem/2039/E",
+  "editorial_url": "https://codeforces.com/blog/entry/136523",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Shohag has an array $$$a$$$ of integers. Initially $$$a = [0, 1]$$$. He can repeatedly perform the following operation any number of times: Let $$$k$$$ be the number of inversions$$$^{\\text{∗}}$$$ in the current array $$$a$$$. Insert $$$k$$$ at any position in $$$a$$$, including the beginning or the end. For example, if $$$a = [4, 6, 2, 4]$$$, then the number of inversions is $$$k = 3$$$. So Shohag can obtain the following arrays after the operation: $$$[\\textbf{3}, 4, 6, 2, 4]$$$, $$$[4, \\textbf{3}, 6, 2, 4]$$$, $$$[4, 6, \\textbf{3}, 2, 4]$$$, $$$[4, 6, 2, \\textbf{3}, 4]$$$, and $$$[4, 6, 2, 4, \\textbf{3}]$$$. Given an integer $$$n$$$, help Shohag count, modulo $$$998\\,244\\,353$$$, the number of distinct arrays of length $$$n$$$ that can be obtained after performing the operations. $$$^{\\text{∗}}$$$The number of inversions in an array $$$a$$$ is the number of pairs of indices ($$$i$$$, $$$j$$$) such that $$$i \\lt j$$$ and $$$a_i \\gt a_j$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first and only line of each test case contains an integer $$$n$$$ ($$$2 \\le n \\le 10^6$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output an integer — the number of possible arrays modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n4\n2\n7\n69",
+      "output": "5\n1\n682\n325188814"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

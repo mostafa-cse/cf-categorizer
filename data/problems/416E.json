@@ -1,0 +1,36 @@
+{
+  "id": "416E",
+  "source": "problemset",
+  "contest_id": 416,
+  "problem_index": "E",
+  "name": "President's Path",
+  "rating": 2500,
+  "tags": [
+    "dp",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 1935,
+  "problem_url": "https://codeforces.com/problemset/problem/416/E",
+  "editorial_url": "https://codeforces.com/blog/entry/12277",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Good old Berland has n cities and m roads. Each road connects a pair of distinct cities and is bidirectional. Between any pair of cities, there is at most one road. For each road, we know its length. We also know that the President will soon ride along the Berland roads from city s to city t . Naturally, he will choose one of the shortest paths from s to t , but nobody can say for sure which path he will choose. The Minister for Transport is really afraid that the President might get upset by the state of the roads in the country. That is the reason he is planning to repair the roads in the possible President's path. Making the budget for such an event is not an easy task. For all possible distinct pairs s , t ( s < t ) find the number of roads that lie on at least one shortest path from s to t .",
+  "input_specification": "The first line of the input contains integers n , m ( 2 ≤ n ≤ 500 , 0 ≤ m ≤ n ·( n - 1) / 2 ) — the number of cities and roads, correspondingly. Then m lines follow, containing the road descriptions, one description per line. Each description contains three integers x i , y i , l i ( 1 ≤ x i , y i ≤ n , x i ≠ y i , 1 ≤ l i ≤ 10 6 ), where x i , y i are the numbers of the cities connected by the i -th road and l i is its length.",
+  "output_specification": "Print the sequence of integers c 12 , c 13 , ..., c 1 n , c 23 , c 24 , ..., c 2 n , ..., c n - 1, n , where c st is the number of roads that can lie on the shortest path from s to t . Print the elements of sequence c in the described order. If the pair of cities s and t don't have a path between them, then c st = 0 .",
+  "sample_testcases": [
+    {
+      "input": "5 6\n1 2 1\n2 3 1\n3 4 1\n4 1 1\n2 4 2\n4 5 4",
+      "output": "1 4 1 2 1 5 6 1 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:28:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

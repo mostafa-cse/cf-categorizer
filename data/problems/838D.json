@@ -1,0 +1,35 @@
+{
+  "id": "838D",
+  "source": "problemset",
+  "contest_id": 838,
+  "problem_index": "D",
+  "name": "Airplane Arrangements",
+  "rating": 2700,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1212,
+  "problem_url": "https://codeforces.com/problemset/problem/838/D",
+  "editorial_url": "https://codeforces.com/blog/entry/53736",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is an airplane which has n rows from front to back. There will be m people boarding this airplane. This airplane has an entrance at the very front and very back of the plane. Each person has some assigned seat. It is possible for multiple people to have the same assigned seat. The people will then board the plane one by one starting with person 1 . Each person can independently choose either the front entrance or back entrance to enter the plane. When a person walks into the plane, they walk directly to their assigned seat and will try to sit in it. If it is occupied, they will continue walking in the direction they walked in until they are at empty seat - they will take the earliest empty seat that they can find. If they get to the end of the row without finding a seat, they will be angry. Find the number of ways to assign tickets to the passengers and board the plane without anyone getting angry. Two ways are different if there exists a passenger who chose a different entrance in both ways, or the assigned seat is different. Print this count modulo 10 9 + 7 .",
+  "input_specification": "The first line of input will contain two integers n , m ( 1 ≤ m ≤ n ≤ 1 000 000 ), the number of seats, and the number of passengers, respectively.",
+  "output_specification": "Print a single number, the number of ways, modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 3",
+      "output": "128"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "266. Linear Congruence Equation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply modular properties, binary exponentiation (a^b mod P in O(log b)), and modular multiplicative inverse using Extended Euclidean Algorithm."
+}

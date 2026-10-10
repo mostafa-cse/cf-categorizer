@@ -1,0 +1,37 @@
+{
+  "id": "1846E2",
+  "source": "problemset",
+  "contest_id": 1846,
+  "problem_index": "E2",
+  "name": "Rudolf and Snowflakes (hard version)",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 8975,
+  "problem_url": "https://codeforces.com/problemset/problem/1846/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/118044",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The only difference is that in this version $$$n \\le 10^{18}$$$. One winter morning, Rudolf was looking thoughtfully out the window, watching the falling snowflakes. He quickly noticed a certain symmetry in the configuration of the snowflakes. And like a true mathematician, Rudolf came up with a mathematical model of a snowflake. He defined a snowflake as an undirected graph constructed according to the following rules: Initially, the graph has only one vertex. Then, more vertices are added to the graph. The initial vertex is connected by edges to $$$k$$$ new vertices ($$$k \\gt 1$$$). Each vertex that is connected to only one other vertex is connected by edges to $$$k$$$ more new vertices. This step should be done at least once . The smallest possible snowflake for $$$k = 4$$$ is shown in the figure. After some mathematical research, Rudolf realized that such snowflakes may not have any number of vertices. Help Rudolf check whether a snowflake with $$$n$$$ vertices can exist.",
+  "input_specification": "The first line of the input contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then follow the descriptions of the test cases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 10^{18}$$$) — the number of vertices for which it is necessary to check the existence of a snowflake.",
+  "output_specification": "Output $$$t$$$ lines, each of which is the answer to the corresponding test case — \"YES\" if there exists such $$$k \\gt 1$$$ that a snowflake with the given number of vertices can be constructed; \"NO\" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "9\n1\n2\n3\n6\n13\n15\n255\n10101\n1000000000000000000",
+      "output": "NO\nNO\nNO\nNO\nYES\nYES\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

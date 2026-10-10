@@ -1,0 +1,39 @@
+{
+  "id": "1055C",
+  "source": "problemset",
+  "contest_id": 1055,
+  "problem_index": "C",
+  "name": "Lucky Days",
+  "rating": 1900,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2115,
+  "problem_url": "https://codeforces.com/problemset/problem/1055/C",
+  "editorial_url": "https://codeforces.com/blog/entry/63099",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Bob and Alice are often participating in various programming competitions. Like many competitive programmers, Alice and Bob have good and bad days. They noticed, that their lucky and unlucky days are repeating with some period. For example, for Alice days $$$[l_a; r_a]$$$ are lucky, then there are some unlucky days: $$$[r_a + 1; l_a + t_a - 1]$$$, and then there are lucky days again: $$$[l_a + t_a; r_a + t_a]$$$ and so on. In other words, the day is lucky for Alice if it lies in the segment $$$[l_a + k t_a; r_a + k t_a]$$$ for some non-negative integer $$$k$$$. The Bob's lucky day have similar structure, however the parameters of his sequence are different: $$$l_b$$$, $$$r_b$$$, $$$t_b$$$. So a day is a lucky for Bob if it lies in a segment $$$[l_b + k t_b; r_b + k t_b]$$$, for some non-negative integer $$$k$$$. Alice and Bob want to participate in team competitions together and so they want to find out what is the largest possible number of consecutive days, which are lucky for both Alice and Bob.",
+  "input_specification": "The first line contains three integers $$$l_a$$$, $$$r_a$$$, $$$t_a$$$ ($$$0 \\le l_a \\le r_a \\le t_a - 1, 2 \\le t_a \\le 10^9$$$) and describes Alice's lucky days. The second line contains three integers $$$l_b$$$, $$$r_b$$$, $$$t_b$$$ ($$$0 \\le l_b \\le r_b \\le t_b - 1, 2 \\le t_b \\le 10^9$$$) and describes Bob's lucky days. It is guaranteed that both Alice and Bob have some unlucky days.",
+  "output_specification": "Print one integer: the maximum number of days in the row that are lucky for both Alice and Bob.",
+  "sample_testcases": [
+    {
+      "input": "0 2 5\n1 3 5",
+      "output": "2"
+    },
+    {
+      "input": "0 1 3\n2 3 6",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

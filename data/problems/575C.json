@@ -1,0 +1,36 @@
+{
+  "id": "575C",
+  "source": "problemset",
+  "contest_id": 575,
+  "problem_index": "C",
+  "name": "Party",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "graph matchings"
+  ],
+  "solved_count": 245,
+  "problem_url": "https://codeforces.com/problemset/problem/575/C",
+  "editorial_url": "https://codeforces.com/blog/entry/20176",
+  "time_limit": "2 seconds",
+  "memory_limit": "4 megabytes",
+  "description": "Note the unusual memory limit for the problem . People working in MDCS (Microsoft Development Center Serbia) like partying. They usually go to night clubs on Friday and Saturday. There are N people working in MDCS and there are N clubs in the city. Unfortunately, if there is more than one Microsoft employee in night club, level of coolness goes infinitely high and party is over, so club owners will never let more than one Microsoft employee enter their club in the same week (just to be sure). You are organizing night life for Microsoft employees and you have statistics about how much every employee likes Friday and Saturday parties for all clubs. You need to match people with clubs maximizing overall sum of their happiness (they are happy as much as they like the club), while half of people should go clubbing on Friday and the other half on Saturday.",
+  "input_specification": "The first line contains integer N — number of employees in MDCS. Then an N × N matrix follows, where element in i -th row and j -th column is an integer number that represents how much i -th person likes j -th club’s Friday party. Then another N × N matrix follows, where element in i -th row and j -th column is an integer number that represents how much i -th person likes j -th club’s Saturday party. 2 ≤ N ≤ 20 N is even 0 ≤ level of likeness ≤ 10 6 All values are integers",
+  "output_specification": "Output should contain a single integer — maximum sum of happiness possible.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 3 4\n2 3 4 1\n3 4 1 2\n4 1 2 3\n5 8 7 1\n6 9 81 3\n55 78 1 6\n1 1 1 1",
+      "output": "167"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,45 @@
+{
+  "id": "196D",
+  "source": "problemset",
+  "contest_id": 196,
+  "problem_index": "D",
+  "name": "The Next Good String",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "greedy",
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 672,
+  "problem_url": "https://codeforces.com/problemset/problem/196/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4717",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In problems on strings one often has to find a string with some particular properties. The problem authors were reluctant to waste time on thinking of a name for some string so they called it good . A string is good if it doesn't have palindrome substrings longer than or equal to d . You are given string s , consisting only of lowercase English letters. Find a good string t with length | s | , consisting of lowercase English letters, which is lexicographically larger than s . Of all such strings string t must be lexicographically minimum. We will call a non-empty string s [ a ... b ] = s a s a + 1 ... s b (1 ≤ a ≤ b ≤ | s |) a substring of string s = s 1 s 2 ... s | s | . A non-empty string s = s 1 s 2 ... s n is called a palindrome if for all i from 1 to n the following fulfills: s i = s n - i + 1 . In other words, palindrome read the same in both directions. String x = x 1 x 2 ... x | x | is lexicographically larger than string y = y 1 y 2 ... y | y | , if either | x | > | y | and x 1 = y 1 , x 2 = y 2 , ... , x | y | = y | y | , or there exists such number r ( r < | x |, r < | y |) , that x 1 = y 1 , x 2 = y 2 , ... , x r = y r and x r + 1 > y r + 1 . Characters in such strings are compared like their ASCII codes.",
+  "input_specification": "The first line contains integer d ( 1 ≤ d ≤ | s | ). The second line contains a non-empty string s , its length is no more than 4·10 5 characters. The string consists of lowercase English letters.",
+  "output_specification": "Print the good string that lexicographically follows s , has the same length and consists of only lowercase English letters. If such string does not exist, print \" Impossible \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "3\naaaaaaa",
+      "output": "aabbcaa"
+    },
+    {
+      "input": "3\nzzyzzzz",
+      "output": "Impossible"
+    },
+    {
+      "input": "4\nabbabbbabbb",
+      "output": "abbbcaaabab"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

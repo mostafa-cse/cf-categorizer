@@ -1,0 +1,37 @@
+{
+  "id": "2036E",
+  "source": "problemset",
+  "contest_id": 2036,
+  "problem_index": "E",
+  "name": "Reverse the Rivers",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 9960,
+  "problem_url": "https://codeforces.com/problemset/problem/2036/E",
+  "editorial_url": "https://codeforces.com/blog/entry/135849",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A conspiracy of ancient sages, who decided to redirect rivers for their own convenience, has put the world on the brink. But before implementing their grand plan, they decided to carefully think through their strategy — that's what sages do. There are $$$n$$$ countries, each with exactly $$$k$$$ regions. For the $$$j$$$-th region of the $$$i$$$-th country, they calculated the value $$$a_{i,j}$$$, which reflects the amount of water in it. The sages intend to create channels between the $$$j$$$-th region of the $$$i$$$-th country and the $$$j$$$-th region of the $$$(i + 1)$$$-th country for all $$$1 \\leq i \\leq (n - 1)$$$ and for all $$$1 \\leq j \\leq k$$$. Since all $$$n$$$ countries are on a large slope, water flows towards the country with the highest number. According to the sages' predictions, after the channel system is created, the new value of the $$$j$$$-th region of the $$$i$$$-th country will be $$$b_{i,j} = a_{1,j} | a_{2,j} | ... | a_{i,j}$$$, where $$$|$$$ denotes the bitwise \"OR\" operation. After the redistribution of water, the sages aim to choose the most suitable country for living, so they will send you $$$q$$$ queries for consideration. Each query will contain $$$m$$$ requirements. Each requirement contains three parameters: the region number $$$r$$$, the sign $$$o$$$ (either \"$$$ \\lt $$$\" or \"$$$ \\gt $$$\"), and the value $$$c$$$. If $$$o$$$ = \"$$$ \\lt $$$\", then in the $$$r$$$-th region of the country you choose, the new value must be strictly less than the limit $$$c$$$, and if $$$o$$$ = \"$$$ \\gt $$$\", it must be strictly greater. In other words, the chosen country $$$i$$$ must satisfy all $$$m$$$ requirements. If in the current requirement $$$o$$$ = \"$$$ \\lt $$$\", then it must hold that $$$b_{i,r} \\lt c$$$, and if $$$o$$$ = \"$$$ \\gt $$$\", then $$$b_{i,r} \\gt c$$$. In response to each query, you should output a single integer — the number of the suitable country. If there are multiple such countries, output the smallest one. If no such country exists, output $$$-1$$$.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$k$$$, and $$$q$$$ ($$$1 \\leq n, k, q \\leq 10^5$$$) — the number of countries, regions, and queries, respectively. Next, there are $$$n$$$ lines, where the $$$i$$$-th line contains $$$k$$$ integers $$$a_{i,1}, a_{i,2}, \\dots, a_{i,k}$$$ ($$$1 \\leq a_{i,j} \\leq 10^9$$$), where $$$a_{i,j}$$$ is the value of the $$$j$$$-th region of the $$$i$$$-th country. Then, $$$q$$$ queries are described. The first line of each query contains a single integer $$$m$$$ ($$$1 \\leq m \\leq 10^5$$$) — the number of requirements. Then follow $$$m$$$ lines, each containing an integer $$$r$$$, a character $$$o$$$, and an integer $$$c$$$ ($$$1 \\leq r \\leq k$$$, $$$0 \\leq c \\leq 2 \\cdot 10^9$$$), where $$$r$$$ and $$$c$$$ are the region number and the value, and $$$o$$$ is either \"$$$ \\lt $$$\" or \"$$$ \\gt $$$\" — the sign. It is guaranteed that $$$n \\cdot k$$$ does not exceed $$$10^5$$$ and that the sum of $$$m$$$ across all queries also does not exceed $$$10^5$$$.",
+  "output_specification": "For each query, output a single integer on a new line — the smallest number of the suitable country, or $$$-1$$$ if no such country exists.",
+  "sample_testcases": [
+    {
+      "input": "3 4 4\n1 3 5 9\n4 6 5 3\n2 1 2 7\n3\n1 > 4\n2 < 8\n1 < 6\n2\n1 < 8\n2 > 8\n1\n3 > 5\n2\n4 > 8\n1 < 8",
+      "output": "2\n-1\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:46",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

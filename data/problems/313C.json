@@ -1,0 +1,41 @@
+{
+  "id": "313C",
+  "source": "problemset",
+  "contest_id": 313,
+  "problem_index": "C",
+  "name": "Ilya and Matrix",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 6022,
+  "problem_url": "https://codeforces.com/problemset/problem/313/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7826",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Ilya is a very good-natured lion. He likes maths. Of all mathematical objects, his favourite one is matrices. Now he's faced a complicated matrix problem he needs to solve. He's got a square 2 n × 2 n -sized matrix and 4 n integers. You need to arrange all these numbers in the matrix (put each number in a single individual cell) so that the beauty of the resulting matrix with numbers is maximum. The beauty of a 2 n × 2 n -sized matrix is an integer, obtained by the following algorithm: Find the maximum element in the matrix. Let's denote it as m . If n = 0 , then the beauty of the matrix equals m . Otherwise, a matrix can be split into 4 non-intersecting 2 n - 1 × 2 n - 1 -sized submatrices, then the beauty of the matrix equals the sum of number m and other four beauties of the described submatrices. As you can see, the algorithm is recursive. Help Ilya, solve the problem and print the resulting maximum beauty of the matrix.",
+  "input_specification": "The first line contains integer 4 n (1 ≤ 4 n ≤ 2·10 6 ) . The next line contains 4 n integers a i (1 ≤ a i ≤ 10 9 ) — the numbers you need to arrange in the 2 n × 2 n -sized matrix.",
+  "output_specification": "On a single line print the maximum value of the beauty of the described matrix. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "1\n13",
+      "output": "13"
+    },
+    {
+      "input": "4\n1 2 3 4",
+      "output": "14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

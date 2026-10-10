@@ -1,0 +1,44 @@
+{
+  "id": "1887D",
+  "source": "problemset",
+  "contest_id": 1887,
+  "problem_index": "D",
+  "name": "Split",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "dsu",
+    "math",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 1418,
+  "problem_url": "https://codeforces.com/problemset/problem/1887/D",
+  "editorial_url": "https://codeforces.com/blog/entry/121621",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call an array $$$b_1, b_2, \\ldots, b_m$$$ ($$$m \\ge 2$$$) good if it can be split into two parts such that all elements in the left part are strictly smaller than all elements in the right part. In other words, there must exist an index $$$1 \\le i \\lt m$$$ such that every element from $$$b_1, \\ldots, b_i$$$ is strictly smaller than every element from $$$b_{i+1}, \\ldots, b_m$$$. Given an array $$$a_1, a_2, \\ldots a_n$$$ consisting of distinct integers from $$$1$$$ to $$$n$$$. There are $$$q$$$ queries. Each query consists of two numbers $$$l$$$ and $$$r$$$. For each query, determine whether the array $$$a_l, a_{l+1}, \\ldots, a_r$$$ is good.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$) — the size of the array. The second line contains $$$n$$$ distinct integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_n \\le n$$$) — the elements of the array $$$a$$$. The third line contains a single integer $$$q$$$ ($$$1 \\le q \\le 3 \\cdot 10^5$$$) — the number of queries. Each of the next $$$q$$$ lines contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l_i \\lt r_i \\le n$$$) — the description of the $$$i$$$-th query.",
+  "output_specification": "For each query, output \" Yes \" (without quotes) if the array $$$a_l, a_{l+1}, \\ldots, a_r$$$ is good, and \" No \" (without quotes) otherwise. You can output \" Yes \" and \" No \" in any case (for example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "5\n3 2 1 4 5\n5\n1 5\n1 3\n1 4\n1 2\n2 5",
+      "output": "Yes\nNo\nYes\nNo\nYes"
+    },
+    {
+      "input": "6\n1 6 2 4 3 5\n3\n3 5\n2 6\n4 6",
+      "output": "Yes\nNo\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

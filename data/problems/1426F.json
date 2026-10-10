@@ -1,0 +1,48 @@
+{
+  "id": "1426F",
+  "source": "problemset",
+  "contest_id": 1426,
+  "problem_index": "F",
+  "name": "Number of Subsequences",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "strings"
+  ],
+  "solved_count": 6488,
+  "problem_url": "https://codeforces.com/problemset/problem/1426/F",
+  "editorial_url": "https://codeforces.com/blog/entry/83120",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ consisting of lowercase Latin letters \" a \", \" b \" and \" c \" and question marks \" ? \". Let the number of question marks in the string $$$s$$$ be $$$k$$$. Let's replace each question mark with one of the letters \" a \", \" b \" and \" c \". Here we can obtain all $$$3^{k}$$$ possible strings consisting only of letters \" a \", \" b \" and \" c \". For example, if $$$s = $$$\" ac?b?c \" then we can obtain the following strings: $$$[$$$\" acabac \", \" acabbc \", \" acabcc \", \" acbbac \", \" acbbbc \", \" acbbcc \", \" accbac \", \" accbbc \", \" accbcc \"$$$]$$$. Your task is to count the total number of subsequences \" abc \" in all resulting strings. Since the answer can be very large, print it modulo $$$10^{9} + 7$$$. A subsequence of the string $$$t$$$ is such a sequence that can be derived from the string $$$t$$$ after removing some (possibly, zero) number of letters without changing the order of remaining letters. For example, the string \" baacbc \" contains two subsequences \" abc \" — a subsequence consisting of letters at positions $$$(2, 5, 6)$$$ and a subsequence consisting of letters at positions $$$(3, 5, 6)$$$.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ $$$(3 \\le n \\le 200\\,000)$$$ — the length of $$$s$$$. The second line of the input contains the string $$$s$$$ of length $$$n$$$ consisting of lowercase Latin letters \" a \", \" b \" and \" c \" and question marks\" ? \".",
+  "output_specification": "Print the total number of subsequences \" abc \" in all strings you can obtain if you replace all question marks with letters \" a \", \" b \" and \" c \", modulo $$$10^{9} + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\nac?b?c",
+      "output": "24"
+    },
+    {
+      "input": "7\n???????",
+      "output": "2835"
+    },
+    {
+      "input": "9\ncccbbbaaa",
+      "output": "0"
+    },
+    {
+      "input": "5\na???c",
+      "output": "46"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

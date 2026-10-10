@@ -1,0 +1,39 @@
+{
+  "id": "1934C",
+  "source": "problemset",
+  "contest_id": 1934,
+  "problem_index": "C",
+  "name": "Find a Mine",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "geometry",
+    "greedy",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 8327,
+  "problem_url": "https://codeforces.com/problemset/problem/1934/C",
+  "editorial_url": "https://codeforces.com/blog/entry/126423",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. You are given a grid with $$$n$$$ rows and $$$m$$$ columns. The coordinates $$$(x, y)$$$ represent the cell on the grid, where $$$x$$$ ($$$1 \\leq x \\leq n$$$) is the row number counting from the top and $$$y$$$ ($$$1 \\leq y \\leq m$$$) is the column number counting from the left. It is guaranteed that there are exactly $$$2$$$ mines in the grid at distinct cells, denoted as $$$(x_1, y_1)$$$ and $$$(x_2, y_2)$$$. You are allowed to make no more than $$$4$$$ queries to the interactor, and after these queries, you need to provide the location of one of the mines . In each query, you can choose any grid cell $$$(x, y)$$$, and in return, you will receive the minimum Manhattan distance from both the mines to the chosen cell, i.e., you will receive the value $$$\\min(|x-x_1|+|y-y_1|, |x-x_2|+|y-y_2|)$$$. Your task is to determine the location of one of the mines after making the queries.",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 3 \\cdot 10^{3}$$$) — the number of test cases. The only line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 10^{8}$$$, $$$2 \\leq m \\leq 10^{8}$$$) — the number of rows and columns.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n4 4\n\n3\n\n2\n\n2\n\n0\n\n5 5\n\n1\n\n2\n\n3",
+      "output": "? 1 1\n\n? 1 4\n\n? 4 1\n\n? 2 3\n\n! 2 3\n\n? 5 5\n\n? 2 2\n\n? 3 3\n\n! 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:27",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

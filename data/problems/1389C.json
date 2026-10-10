@@ -1,0 +1,37 @@
+{
+  "id": "1389C",
+  "source": "problemset",
+  "contest_id": 1389,
+  "problem_index": "C",
+  "name": "Good String",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 20920,
+  "problem_url": "https://codeforces.com/problemset/problem/1389/C",
+  "editorial_url": "https://codeforces.com/blog/entry/80809",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call left cyclic shift of some string $$$t_1 t_2 t_3 \\dots t_{n - 1} t_n$$$ as string $$$t_2 t_3 \\dots t_{n - 1} t_n t_1$$$. Analogically, let's call right cyclic shift of string $$$t$$$ as string $$$t_n t_1 t_2 t_3 \\dots t_{n - 1}$$$. Let's say string $$$t$$$ is good if its left cyclic shift is equal to its right cyclic shift. You are given string $$$s$$$ which consists of digits 0 – 9 . What is the minimum number of characters you need to erase from $$$s$$$ to make it good?",
+  "input_specification": "The first line contains single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Next $$$t$$$ lines contains test cases — one per line. The first and only line of each test case contains string $$$s$$$ ($$$2 \\le |s| \\le 2 \\cdot 10^5$$$). Each character $$$s_i$$$ is digit 0 – 9 . It's guaranteed that the total length of strings doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print the minimum number of characters you need to erase from $$$s$$$ to make it good.",
+  "sample_testcases": [
+    {
+      "input": "3\n95831\n100120013\n252525252525",
+      "output": "3\n5\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

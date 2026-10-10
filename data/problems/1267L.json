@@ -1,0 +1,39 @@
+{
+  "id": "1267L",
+  "source": "problemset",
+  "contest_id": 1267,
+  "problem_index": "L",
+  "name": "Lexicography",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "strings"
+  ],
+  "solved_count": 3399,
+  "problem_url": "https://codeforces.com/problemset/problem/1267/L",
+  "editorial_url": "http://nerc.itmo.ru/archive/2019/nerc-2019-tutorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Lucy likes letters. She studied the definition of the lexicographical order at school and plays with it. At first, she tried to construct the lexicographically smallest word out of given letters. It was so easy! Then she tried to build multiple words and minimize one of them. This was much harder! Formally, Lucy wants to make $$$n$$$ words of length $$$l$$$ each out of the given $$$n \\cdot l$$$ letters, so that the $$$k$$$-th of them in the lexicographic order is lexicographically as small as possible.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$l$$$, and $$$k$$$ ($$$1\\le k \\le n \\le 1\\,000$$$; $$$1 \\le l \\le 1\\,000$$$) — the total number of words, the length of each word, and the index of the word Lucy wants to minimize. The next line contains a string of $$$n \\cdot l$$$ lowercase letters of the English alphabet.",
+  "output_specification": "Output $$$n$$$ words of $$$l$$$ letters each, one per line, using the letters from the input. Words must be sorted in the lexicographic order, and the $$$k$$$-th of them must be lexicographically as small as possible. If there are multiple answers with the smallest $$$k$$$-th word, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2 2\nabcdef",
+      "output": "af\nbc\ned"
+    },
+    {
+      "input": "2 3 1\nabcabc",
+      "output": "aab\nbcc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:14",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

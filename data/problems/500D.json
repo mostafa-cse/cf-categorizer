@@ -1,0 +1,41 @@
+{
+  "id": "500D",
+  "source": "problemset",
+  "contest_id": 500,
+  "problem_index": "D",
+  "name": "New Year Santa Network",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 3350,
+  "problem_url": "https://codeforces.com/problemset/problem/500/D",
+  "editorial_url": "https://codeforces.com/blog/entry/15513",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "New Year is coming in Tree World! In this world, as the name implies, there are n cities connected by n - 1 roads, and for any two distinct cities there always exists a path between them. The cities are numbered by integers from 1 to n , and the roads are numbered by integers from 1 to n - 1 . Let's define d ( u , v ) as total length of roads on the path between city u and city v . As an annual event, people in Tree World repairs exactly one road per year. As a result, the length of one road decreases. It is already known that in the i -th year, the length of the r i -th road is going to become w i , which is shorter than its length before. Assume that the current year is year 1 . Three Santas are planning to give presents annually to all the children in Tree World. In order to do that, they need some preparation, so they are going to choose three distinct cities c 1 , c 2 , c 3 and make exactly one warehouse in each city. The k -th ( 1 ≤ k ≤ 3 ) Santa will take charge of the warehouse in city c k . It is really boring for the three Santas to keep a warehouse alone. So, they decided to build an only-for-Santa network! The cost needed to build this network equals to d ( c 1 , c 2 ) + d ( c 2 , c 3 ) + d ( c 3 , c 1 ) dollars. Santas are too busy to find the best place, so they decided to choose c 1 , c 2 , c 3 randomly uniformly over all triples of distinct numbers from 1 to n . Santas would like to know the expected value of the cost needed to build the network. However, as mentioned, each year, the length of exactly one road decreases. So, the Santas want to calculate the expected after each length change. Help them to calculate the value.",
+  "input_specification": "The first line contains an integer n ( 3 ≤ n ≤ 10 5 ) — the number of cities in Tree World. Next n - 1 lines describe the roads. The i -th line of them ( 1 ≤ i ≤ n - 1 ) contains three space-separated integers a i , b i , l i ( 1 ≤ a i , b i ≤ n , a i ≠ b i , 1 ≤ l i ≤ 10 3 ), denoting that the i -th road connects cities a i and b i , and the length of i -th road is l i . The next line contains an integer q ( 1 ≤ q ≤ 10 5 ) — the number of road length changes. Next q lines describe the length changes. The j -th line of them ( 1 ≤ j ≤ q ) contains two space-separated integers r j , w j ( 1 ≤ r j ≤ n - 1 , 1 ≤ w j ≤ 10 3 ). It means that in the j -th repair, the length of the r j -th road becomes w j . It is guaranteed that w j is smaller than the current length of the r j -th road. The same road can be repaired several times.",
+  "output_specification": "Output q numbers. For each given change, print a line containing the expected cost needed to build the network in Tree World. The answer will be considered correct if its absolute and relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 3 5\n1 3 3\n5\n1 4\n2 2\n1 2\n2 1\n1 1",
+      "output": "14.0000000000\n12.0000000000\n8.0000000000\n6.0000000000\n4.0000000000"
+    },
+    {
+      "input": "6\n1 5 3\n5 3 2\n6 1 7\n1 4 4\n5 2 3\n5\n1 2\n2 1\n3 5\n4 1\n5 2",
+      "output": "19.6000000000\n18.6000000000\n16.6000000000\n13.6000000000\n12.6000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

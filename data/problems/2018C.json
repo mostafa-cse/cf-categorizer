@@ -1,0 +1,38 @@
+{
+  "id": "2018C",
+  "source": "problemset",
+  "contest_id": 2018,
+  "problem_index": "C",
+  "name": "Tree Pruning",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "greedy",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 10555,
+  "problem_url": "https://codeforces.com/problemset/problem/2018/C",
+  "editorial_url": "https://codeforces.com/blog/entry/134420",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "t+pazolite, ginkiha, Hommarju - Paved Garden ⠀ You are given a tree with $$$n$$$ nodes, rooted at node $$$1$$$. In this problem, a leaf is a non-root node with degree $$$1$$$. In one operation, you can remove a leaf and the edge adjacent to it (possibly, new leaves appear). What is the minimum number of operations that you have to perform to get a tree, also rooted at node $$$1$$$, where all the leaves are at the same distance from the root?",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\leq n \\leq 5 \\cdot 10^5$$$) — the number of nodes. Each of the next $$$n-1$$$ lines contains two integers $$$u$$$, $$$v$$$ ($$$1 \\leq u, v \\leq n$$$, $$$u \\neq v$$$), describing an edge that connects $$$u$$$ and $$$v$$$. It is guaranteed that the given edges form a tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer: the minimum number of operations needed to achieve your goal.",
+  "sample_testcases": [
+    {
+      "input": "3\n7\n1 2\n1 3\n2 4\n2 5\n4 6\n4 7\n7\n1 2\n1 3\n1 4\n2 5\n3 6\n5 7\n15\n12 9\n1 6\n6 14\n9 11\n8 7\n3 5\n13 5\n6 10\n13 15\n13 6\n14 12\n7 2\n8 1\n1 4",
+      "output": "2\n2\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

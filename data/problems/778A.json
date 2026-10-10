@@ -1,0 +1,40 @@
+{
+  "id": "778A",
+  "source": "problemset",
+  "contest_id": 778,
+  "problem_index": "A",
+  "name": "String Game",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 13224,
+  "problem_url": "https://codeforces.com/problemset/problem/778/A",
+  "editorial_url": "https://codeforces.com/blog/entry/50724",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Little Nastya has a hobby, she likes to remove some letters from word, to obtain another word. But it turns out to be pretty hard for her, because she is too young. Therefore, her brother Sergey always helps her. Sergey gives Nastya the word t and wants to get the word p out of it. Nastya removes letters in a certain order (one after another, in this order strictly), which is specified by permutation of letters' indices of the word t : a 1 ... a | t | . We denote the length of word x as | x | . Note that after removing one letter, the indices of other letters don't change. For example, if t = \" nastya \" and a = [4, 1, 5, 3, 2, 6] then removals make the following sequence of words \" nastya \" \" nas t ya \" \" n as t ya \" \" n as t y a \" \" n a s t y a \" \" n a s t y a \" \" n a s t y a \". Sergey knows this permutation. His goal is to stop his sister at some point and continue removing by himself to get the word p . Since Nastya likes this activity, Sergey wants to stop her as late as possible. Your task is to determine, how many letters Nastya can remove before she will be stopped by Sergey. It is guaranteed that the word p can be obtained by removing the letters from word t .",
+  "input_specification": "The first and second lines of the input contain the words t and p , respectively. Words are composed of lowercase letters of the Latin alphabet ( 1 ≤ | p | < | t | ≤ 200 000 ). It is guaranteed that the word p can be obtained by removing the letters from word t . Next line contains a permutation a 1 , a 2 , ..., a | t | of letter indices that specifies the order in which Nastya removes letters of t ( 1 ≤ a i ≤ | t | , all a i are distinct).",
+  "output_specification": "Print a single integer number, the maximum number of letters that Nastya can remove.",
+  "sample_testcases": [
+    {
+      "input": "ababcba\nabb\n5 3 4 1 7 6 2",
+      "output": "3"
+    },
+    {
+      "input": "bbbabb\nbb\n1 6 3 4 2 5",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

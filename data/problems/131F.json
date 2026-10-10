@@ -1,0 +1,39 @@
+{
+  "id": "131F",
+  "source": "problemset",
+  "contest_id": 131,
+  "problem_index": "F",
+  "name": "Present to Mom",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "two pointers"
+  ],
+  "solved_count": 835,
+  "problem_url": "https://codeforces.com/problemset/problem/131/F",
+  "editorial_url": "https://codeforces.com/blog/entry/3256",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "How many stars are there in the sky? A young programmer Polycarpus can't get this question out of his head! He took a photo of the starry sky using his digital camera and now he analyzes the resulting monochrome digital picture. The picture is represented by a rectangular matrix consisting of n lines each containing m characters. A character equals ' 1 ', if the corresponding photo pixel is white and ' 0 ', if it is black. Polycarpus thinks that he has found a star on the photo if he finds a white pixel surrounded by four side-neighboring pixels that are also white: 1 111 1 a star on the photo Polycarpus whats to cut out a rectangular area from the photo and give his mom as a present. This area should contain no less than k stars. The stars can intersect, have shared white pixels on the photo. The boy will cut out the rectangular area so that its borders will be parallel to the sides of the photo and the cuts will go straight between the pixel borders. Now Polycarpus keeps wondering how many ways there are to cut an area out of the photo so that it met the conditions given above. Help Polycarpus find this number.",
+  "input_specification": "The first line of the input data contains three integers n , m and k ( 1 ≤ n , m ≤ 500;1 ≤ k ≤ nm ). Then follow n lines, containing the description of the given photo as a sequence of lines. Each line contains m characters ' 0 ' or ' 1 '.",
+  "output_specification": "Print the required number of areas on the given photo.",
+  "sample_testcases": [
+    {
+      "input": "4 6 2\n111000\n111100\n011011\n000111",
+      "output": "6"
+    },
+    {
+      "input": "5 5 4\n11111\n11111\n11111\n11111\n11111",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

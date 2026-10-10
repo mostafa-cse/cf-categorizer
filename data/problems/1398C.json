@@ -1,0 +1,36 @@
+{
+  "id": "1398C",
+  "source": "problemset",
+  "contest_id": 1398,
+  "problem_index": "C",
+  "name": "Good Subarrays",
+  "rating": 1600,
+  "tags": [
+    "data structures",
+    "dp",
+    "math"
+  ],
+  "solved_count": 40422,
+  "problem_url": "https://codeforces.com/problemset/problem/1398/C",
+  "editorial_url": "https://codeforces.com/blog/entry/81506",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a_1, a_2, \\dots , a_n$$$ consisting of integers from $$$0$$$ to $$$9$$$. A subarray $$$a_l, a_{l+1}, a_{l+2}, \\dots , a_{r-1}, a_r$$$ is good if the sum of elements of this subarray is equal to the length of this subarray ($$$\\sum\\limits_{i=l}^{r} a_i = r - l + 1$$$). For example, if $$$a = [1, 2, 0]$$$, then there are $$$3$$$ good subarrays: $$$a_{1 \\dots 1} = [1], a_{2 \\dots 3} = [2, 0]$$$ and $$$a_{1 \\dots 3} = [1, 2, 0]$$$. Calculate the number of good subarrays of the array $$$a$$$.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the array $$$a$$$. The second line of each test case contains a string consisting of $$$n$$$ decimal digits, where the $$$i$$$-th digit is equal to the value of $$$a_i$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case print one integer — the number of good subarrays of the array $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n120\n5\n11011\n6\n600005",
+      "output": "3\n6\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

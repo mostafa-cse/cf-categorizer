@@ -1,0 +1,40 @@
+{
+  "id": "742B",
+  "source": "problemset",
+  "contest_id": 742,
+  "problem_index": "B",
+  "name": "Arpa’s obvious problem and Mehrdad’s terrible solution",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 10189,
+  "problem_url": "https://codeforces.com/problemset/problem/742/B",
+  "editorial_url": "https://codeforces.com/blog/entry/48871",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are some beautiful girls in Arpa’s land as mentioned before. Once Arpa came up with an obvious problem: Given an array and a number x , count the number of pairs of indices i , j ( 1 ≤ i < j ≤ n ) such that , where is bitwise xor operation (see notes for explanation). Immediately, Mehrdad discovered a terrible solution that nobody trusted. Now Arpa needs your help to implement the solution to that problem.",
+  "input_specification": "First line contains two integers n and x ( 1 ≤ n ≤ 10 5 , 0 ≤ x ≤ 10 5 ) — the number of elements in the array and the integer x . Second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ) — the elements of the array.",
+  "output_specification": "Print a single integer: the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 2",
+      "output": "1"
+    },
+    {
+      "input": "6 1\n5 1 2 3 4 1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

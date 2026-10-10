@@ -1,0 +1,36 @@
+{
+  "id": "1680E",
+  "source": "problemset",
+  "contest_id": 1680,
+  "problem_index": "E",
+  "name": "Moving Chips",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 4466,
+  "problem_url": "https://codeforces.com/problemset/problem/1680/E",
+  "editorial_url": "https://codeforces.com/blog/entry/102852",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a board of size $$$2 \\times n$$$ ($$$2$$$ rows, $$$n$$$ columns). Some cells of the board contain chips. The chip is represented as ' * ', and an empty space is represented as ' . '. It is guaranteed that there is at least one chip on the board. In one move, you can choose any chip and move it to any adjacent (by side) cell of the board (if this cell is inside the board). It means that if the chip is in the first row, you can move it left, right or down (but it shouldn't leave the board). Same, if the chip is in the second row, you can move it left, right or up. If the chip moves to the cell with another chip, the chip in the destination cell disappears (i. e. our chip captures it). Your task is to calculate the minimum number of moves required to leave exactly one chip on the board. You have to answer $$$t$$$ independent test cases.",
+  "input_specification": "The first line of the input contains one integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$) — the number of test cases. Then $$$t$$$ test cases follow. The first line of the test case contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the length of the board. The second line of the test case contains the string $$$s_1$$$ consisting of $$$n$$$ characters ' * ' (chip) and/or ' . ' (empty cell). The third line of the test case contains the string $$$s_2$$$ consisting of $$$n$$$ characters ' * ' (chip) and/or ' . ' (empty cell). Additional constraints on the input: in each test case, there is at least one chip on a board; the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$ ($$$\\sum n \\le 2 \\cdot 10^5$$$).",
+  "output_specification": "For each test case, print one integer — the minimum number of moves required to leave exactly one chip on the board.",
+  "sample_testcases": [
+    {
+      "input": "5\n1\n*\n.\n2\n.*\n**\n3\n*.*\n.*.\n4\n**.*\n**..\n5\n**...\n...**",
+      "output": "0\n2\n3\n5\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

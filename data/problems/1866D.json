@@ -1,0 +1,43 @@
+{
+  "id": "1866D",
+  "source": "problemset",
+  "contest_id": 1866,
+  "problem_index": "D",
+  "name": "Digital Wallet",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1621,
+  "problem_url": "https://codeforces.com/problemset/problem/1866/D",
+  "editorial_url": "https://codeforces.com/blog/entry/120025",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are $$$N$$$ arrays, each array has $$$M$$$ positive integer elements The $$$j$$$-th element of the $$$i$$$-th array is $$$A_{i,j}$$$. Initially, Chaneka's digital wallet contains $$$0$$$ money. Given an integer $$$K$$$. Chaneka will do $$$M-K+1$$$ operations. In the $$$p$$$-th operation, Chaneka does the following procedure: Choose any array. Let's say Chaneka chooses the $$$x$$$-th array. Choose an index $$$y$$$ in that array such that $$$p \\leq y \\leq p+K-1$$$. Add the value of $$$A_{x, y}$$$ to the total money in the wallet. Change the value of $$$A_{x, y}$$$ into $$$0$$$. Determine the maximum total money that can be earned!",
+  "input_specification": "The first line contains three integers $$$N$$$, $$$M$$$, and $$$K$$$ ($$$1 \\leq N \\leq 10$$$; $$$1 \\leq M \\leq 10^5$$$; $$$1 \\leq K \\leq \\min(10, M)$$$) — the number of arrays, the size of each array, and the constant that describes the operation constraints. The $$$i$$$-th of the next $$$N$$$ lines contains $$$M$$$ integers $$$A_{i,1}, A_{i,2}, \\ldots, A_{i,M}$$$ ($$$1 \\leq A_{i,j} \\leq 10^6$$$) — the elements of the $$$i$$$-th array.",
+  "output_specification": "Output an integer representing the maximum total money that can be earned.",
+  "sample_testcases": [
+    {
+      "input": "3 3 1\n10 4 2\n8 1 9\n4 8 2",
+      "output": "27"
+    },
+    {
+      "input": "3 3 2\n5 9 4\n1 3 1\n2 8 7",
+      "output": "17"
+    },
+    {
+      "input": "3 4 3\n5 9 10 1\n1 3 1 5\n2 5 7 2",
+      "output": "19"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

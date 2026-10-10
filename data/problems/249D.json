@@ -1,0 +1,38 @@
+{
+  "id": "249D",
+  "source": "problemset",
+  "contest_id": 249,
+  "problem_index": "D",
+  "name": "Donkey and Stars",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "dp",
+    "geometry",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 608,
+  "problem_url": "https://codeforces.com/problemset/problem/249/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5979",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the evenings Donkey would join Shrek to look at the stars. They would sit on a log, sipping tea and they would watch the starry sky. The sky hung above the roof, right behind the chimney. Shrek's stars were to the right of the chimney and the Donkey's stars were to the left. Most days the Donkey would just count the stars, so he knew that they are exactly n . This time he wanted a challenge. He imagined a coordinate system: he put the origin of the coordinates at the intersection of the roof and the chimney, directed the OX axis to the left along the roof and the OY axis — up along the chimney (see figure). The Donkey imagined two rays emanating from he origin of axes at angles α 1 and α 2 to the OX axis. Now he chooses any star that lies strictly between these rays. After that he imagines more rays that emanate from this star at the same angles α 1 and α 2 to the OX axis and chooses another star that lies strictly between the new rays. He repeats the operation as long as there still are stars he can choose between the rays that emanate from a star. As a result, the Donkey gets a chain of stars. He can consecutively get to each star if he acts by the given rules. Your task is to find the maximum number of stars m that the Donkey's chain can contain. Note that the chain must necessarily start in the point of the origin of the axes, that isn't taken into consideration while counting the number m of stars in the chain.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 5 ) — the number of stars. The second line contains simple fractions representing relationships \" a / b c / d \", such that and ( 0 ≤ a , b , c , d ≤ 10 5 ; ; ; ). The given numbers a , b , c , d are integers. Next n lines contain pairs of integers x i , y i ( 1 ≤ x i , y i ≤ 10 5 )— the stars' coordinates. It is guaranteed that all stars have distinct coordinates.",
+  "output_specification": "In a single line print number m — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "15\n1/3 2/1\n3 1\n6 2\n4 2\n2 5\n4 5\n6 6\n3 4\n1 6\n2 1\n7 4\n9 3\n5 3\n1 3\n15 5\n12 4",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

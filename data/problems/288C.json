@@ -1,0 +1,35 @@
+{
+  "id": "288C",
+  "source": "problemset",
+  "contest_id": 288,
+  "problem_index": "C",
+  "name": "Polo the Penguin and XOR operation",
+  "rating": 1700,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2477,
+  "problem_url": "https://codeforces.com/problemset/problem/288/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7241",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little penguin Polo likes permutations. But most of all he likes permutations of integers from 0 to n , inclusive. For permutation p = p 0 , p 1 , ..., p n , Polo has defined its beauty — number . Expression means applying the operation of bitwise excluding \"OR\" to numbers x and y . This operation exists in all modern programming languages, for example, in language C++ and Java it is represented as \" ^ \" and in Pascal — as \" xor \". Help him find among all permutations of integers from 0 to n the permutation with the maximum beauty.",
+  "input_specification": "The single line contains a positive integer n ( 1 ≤ n ≤ 10 6 ).",
+  "output_specification": "In the first line print integer m the maximum possible beauty. In the second line print any permutation of integers from 0 to n with the beauty equal to m . If there are several suitable permutations, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "20\n0 2 1 4 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

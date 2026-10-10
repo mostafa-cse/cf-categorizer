@@ -1,0 +1,39 @@
+{
+  "id": "2059C",
+  "source": "problemset",
+  "contest_id": 2059,
+  "problem_index": "C",
+  "name": "Customer Service",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "graph matchings",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 13008,
+  "problem_url": "https://codeforces.com/problemset/problem/2059/C",
+  "editorial_url": "https://codeforces.com/blog/entry/139094",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nikyr has started working as a queue manager at the company \"Black Contour.\" He needs to choose the order of servicing customers. There are a total of $$$n$$$ queues, each initially containing $$$0$$$ people. In each of the next $$$n$$$ moments of time, there are two sequential events: New customers arrive in all queues. More formally, at the $$$j$$$-th moment of time, the number of people in the $$$i$$$-th queue increases by a positive integer $$$a_{i,j}$$$. Nikyr chooses exactly one of the $$$n$$$ queues to be served at that moment in time. The number of customers in this queue becomes $$$0$$$. Let the number of people in the $$$i$$$-th queue after all events be $$$x_i$$$. Nikyr wants MEX$$$^{\\dagger}$$$ of the collection $$$x_1, x_2, \\ldots, x_n$$$ to be as large as possible. Help him determine the maximum value he can achieve with an optimal order of servicing the queues. $$$^{\\dagger}$$$The minimum excluded (MEX) of a collection of integers $$$c_1, c_2, \\ldots, c_k$$$ is defined as the smallest non-negative integer $$$y$$$ which does not occur in the collection $$$c$$$. For example: $$$\\operatorname{MEX}([2,2,1])= 0$$$, since $$$0$$$ does not belong to the array. $$$\\operatorname{MEX}([3,1,0,1]) = 2$$$, since $$$0$$$ and $$$1$$$ belong to the array, but $$$2$$$ does not. $$$\\operatorname{MEX}([0,3,1,2]) = 4$$$, since $$$0$$$, $$$1$$$, $$$2$$$, and $$$3$$$ belong to the array, but $$$4$$$ does not.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 300$$$) — the number of queues and moments of time. The $$$i$$$-th of the next $$$n$$$ lines contains $$$n$$$ integers $$$a_{i,1}, a_{i,2}, \\ldots, a_{i,n}$$$ ($$$1 \\le a_{i,j} \\le 10^9$$$) — the number of new customers in the $$$i$$$-th queue at each moment of time. It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum value of $$$\\operatorname{MEX}([x_1, x_2, \\ldots, x_n])$$$ that can be achieved.",
+  "sample_testcases": [
+    {
+      "input": "4\n2\n1 2\n2 1\n2\n10 10\n10 10\n3\n2 3 3\n4 4 1\n2 1 1\n4\n4 2 2 17\n1 9 3 1\n5 5 5 11\n1 2 1 1",
+      "output": "2\n1\n3\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:36",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

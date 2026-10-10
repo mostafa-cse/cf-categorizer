@@ -1,0 +1,39 @@
+{
+  "id": "319B",
+  "source": "problemset",
+  "contest_id": 319,
+  "problem_index": "B",
+  "name": "Psychos in a Line",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 4946,
+  "problem_url": "https://codeforces.com/problemset/problem/319/B",
+  "editorial_url": "https://codeforces.com/blog/entry/8166",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n psychos standing in a line. Each psycho is assigned a unique integer from 1 to n . At each step every psycho who has an id greater than the psycho to his right (if exists) kills his right neighbor in the line. Note that a psycho might kill and get killed at the same step. You're given the initial arrangement of the psychos in the line. Calculate how many steps are needed to the moment of time such, that nobody kills his neighbor after that moment. Look notes to understand the statement more precise.",
+  "input_specification": "The first line of input contains integer n denoting the number of psychos, (1 ≤ n ≤ 10 5 ) . In the second line there will be a list of n space separated distinct integers each in range 1 to n , inclusive — ids of the psychos in the line from left to right.",
+  "output_specification": "Print the number of steps, so that the line remains the same afterward.",
+  "sample_testcases": [
+    {
+      "input": "10\n10 9 7 8 6 5 3 4 2 1",
+      "output": "2"
+    },
+    {
+      "input": "6\n1 2 3 4 5 6",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

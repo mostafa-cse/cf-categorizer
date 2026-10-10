@@ -1,0 +1,21 @@
+{
+  "id": "gym_100875_B",
+  "source": "gym",
+  "contest_id": 100875,
+  "problem_index": "B",
+  "name": "Laundro, Matt",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100875/problem/B",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:31:35",
+  "updated_at": "2026-10-10 06:31:35"
+}

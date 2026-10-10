@@ -1,0 +1,39 @@
+{
+  "id": "908G",
+  "source": "problemset",
+  "contest_id": 908,
+  "problem_index": "G",
+  "name": "New Year and Original Order",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "math"
+  ],
+  "solved_count": 1792,
+  "problem_url": "https://codeforces.com/problemset/problem/908/G",
+  "editorial_url": "https://codeforces.com/blog/entry/56713",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let S ( n ) denote the number that represents the digits of n in sorted order. For example, S (1) = 1, S (5) = 5, S (50394) = 3459, S (353535) = 333555 . Given a number X , compute modulo 10 9 + 7 .",
+  "input_specification": "The first line of input will contain the integer X ( 1 ≤ X ≤ 10 700 ).",
+  "output_specification": "Print a single integer, the answer to the question.",
+  "sample_testcases": [
+    {
+      "input": "21",
+      "output": "195"
+    },
+    {
+      "input": "345342",
+      "output": "390548434"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

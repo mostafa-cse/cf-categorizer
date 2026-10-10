@@ -1,0 +1,40 @@
+{
+  "id": "435E",
+  "source": "problemset",
+  "contest_id": 435,
+  "problem_index": "E",
+  "name": "Special Graph",
+  "rating": 2500,
+  "tags": [],
+  "solved_count": 289,
+  "problem_url": "https://codeforces.com/problemset/problem/435/E",
+  "editorial_url": "https://codeforces.com/blog/entry/12479",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In this problem you will need to deal with an n × m grid graph. The graph's vertices are the nodes of the n × m grid. The graph's edges are all the sides and diagonals of the grid's unit squares. The figure below shows a 3 × 5 graph. The black lines are the graph's edges, the colored circles are the graph's vertices. The vertices of the graph are painted on the picture for a reason: the coloring is a correct vertex coloring of the 3 × 5 graph into four colors. A graph coloring is correct if and only if each vertex is painted and no two vertices connected by an edge are painted the same color. You are given the size of the grid graph n × m and the colors of some of its vertices. Find any way how to paint the unpainted vertices of the graph in 4 colors to make the final coloring a correct vertex graph coloring. If there is no such correct vertex coloring, say that the answer doesn't exist.",
+  "input_specification": "The first line contains two integers n and m (2 ≤ n , m ≤ 1000) . Each of the next n lines consists of m characters — the given graph. Each character is either « 0 », « 1 », « 2 », « 3 », « 4 ». Character « 0 » means that the corresponding vertex is unpainted, otherwise the character means the color of the vertex. Assume that all the available colors are numbered from 1 to 4 .",
+  "output_specification": "If there is no way to get correct vertex coloring of the graph, print 0 in a single line. Otherwise print the colored n × m graph. Print the graph in the same format as in the input. If multiple answers exist, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 5\n10101\n00020\n01000",
+      "output": "13131\n42424\n31313"
+    },
+    {
+      "input": "2 2\n00\n00",
+      "output": "12\n34"
+    },
+    {
+      "input": "2 2\n11\n00",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "111C",
+  "source": "problemset",
+  "contest_id": 111,
+  "problem_index": "C",
+  "name": "Petya and Spiders",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "dsu"
+  ],
+  "solved_count": 1642,
+  "problem_url": "https://codeforces.com/problemset/problem/111/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2616",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Petya loves training spiders. Petya has a board n × m in size. Each cell of the board initially has a spider sitting on it. After one second Petya chooses a certain action for each spider, and all of them humbly perform its commands. There are 5 possible commands: to stay idle or to move from current cell to some of the four side-neighboring cells (that is, one command for each of the four possible directions). Petya gives the commands so that no spider leaves the field. It is allowed for spiders to pass through each other when they crawl towards each other in opposite directions. All spiders crawl simultaneously and several spiders may end up in one cell. Petya wants to know the maximum possible number of spider-free cells after one second.",
+  "input_specification": "The first line contains two space-separated integers n and m ( 1 ≤ n , m ≤ 40, n · m ≤ 40 ) — the board sizes.",
+  "output_specification": "In the first line print the maximum number of cells without spiders.",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "0"
+    },
+    {
+      "input": "2 3",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

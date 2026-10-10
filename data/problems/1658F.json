@@ -1,0 +1,37 @@
+{
+  "id": "1658F",
+  "source": "problemset",
+  "contest_id": 1658,
+  "problem_index": "F",
+  "name": "Juju and Binary String",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1023,
+  "problem_url": "https://codeforces.com/problemset/problem/1658/F",
+  "editorial_url": "https://codeforces.com/blog/entry/101302",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The cuteness of a binary string is the number of $$$\\texttt{1}$$$s divided by the length of the string. For example, the cuteness of $$$\\texttt{01101}$$$ is $$$\\frac{3}{5}$$$. Juju has a binary string $$$s$$$ of length $$$n$$$. She wants to choose some non-intersecting subsegments of $$$s$$$ such that their concatenation has length $$$m$$$ and it has the same cuteness as the string $$$s$$$. More specifically, she wants to find two arrays $$$l$$$ and $$$r$$$ of equal length $$$k$$$ such that $$$1 \\leq l_1 \\leq r_1 \\lt l_2 \\leq r_2 \\lt \\ldots \\lt l_k \\leq r_k \\leq n$$$, and also: $$$\\sum\\limits_{i=1}^k (r_i - l_i + 1) = m$$$; The cuteness of $$$s[l_1,r_1]+s[l_2,r_2]+\\ldots+s[l_k,r_k]$$$ is equal to the cuteness of $$$s$$$, where $$$s[x, y]$$$ denotes the subsegment $$$s_x s_{x+1} \\ldots s_y$$$, and $$$+$$$ denotes string concatenation. Juju does not like splitting the string into many parts, so she also wants to minimize the value of $$$k$$$. Find the minimum value of $$$k$$$ such that there exist $$$l$$$ and $$$r$$$ that satisfy the constraints above or determine that it is impossible to find such $$$l$$$ and $$$r$$$ for any $$$k$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq m \\leq n \\leq 2 \\cdot 10^5$$$). The second line of each test case contains a binary string $$$s$$$ of length $$$n$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if there is no valid pair of $$$l$$$ and $$$r$$$, print $$$-1$$$. Otherwise, print $$$k + 1$$$ lines. In the first line, print a number $$$k$$$ ($$$1 \\leq k \\leq m$$$) — the minimum number of subsegments required. Then print $$$k$$$ lines, the $$$i$$$-th should contain $$$l_i$$$ and $$$r_i$$$ ($$$1 \\leq l_i \\leq r_i \\leq n$$$) — the range of the $$$i$$$-th subsegment. Note that you should output the subsegments such that the inequality $$$l_1 \\leq r_1 \\lt l_2 \\leq r_2 \\lt \\ldots \\lt l_k \\leq r_k$$$ is true.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 2\n0011\n8 6\n11000011\n4 3\n0101\n5 5\n11111",
+      "output": "1\n2 3\n2\n2 3\n5 8\n-1\n1\n1 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

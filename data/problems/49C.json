@@ -1,0 +1,39 @@
+{
+  "id": "49C",
+  "source": "problemset",
+  "contest_id": 49,
+  "problem_index": "C",
+  "name": "Disposition",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 1919,
+  "problem_url": "https://codeforces.com/problemset/problem/49/C",
+  "editorial_url": "https://codeforces.com/blog/entry/969",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya bought the collected works of a well-known Berland poet Petya in n volumes. The volumes are numbered from 1 to n . He thinks that it does not do to arrange the book simply according to their order. Vasya wants to minimize the number of the disposition’s divisors — the positive integers i such that for at least one j ( 1 ≤ j ≤ n ) is true both: j mod i = 0 and at the same time p ( j ) mod i = 0 , where p ( j ) is the number of the tome that stands on the j -th place and mod is the operation of taking the division remainder. Naturally, one volume can occupy exactly one place and in one place can stand exactly one volume. Help Vasya — find the volume disposition with the minimum number of divisors.",
+  "input_specification": "The first line contains number n ( 1 ≤ n ≤ 100000 ) which represents the number of volumes and free places.",
+  "output_specification": "Print n numbers — the sought disposition with the minimum divisor number. The j -th number ( 1 ≤ j ≤ n ) should be equal to p ( j ) — the number of tome that stands on the j -th place. If there are several solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "2 1"
+    },
+    {
+      "input": "3",
+      "output": "1 3 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

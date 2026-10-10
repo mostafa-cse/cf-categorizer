@@ -1,0 +1,44 @@
+{
+  "id": "183D",
+  "source": "problemset",
+  "contest_id": 183,
+  "problem_index": "D",
+  "name": "T-shirt",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "greedy",
+    "probabilities"
+  ],
+  "solved_count": 532,
+  "problem_url": "https://codeforces.com/problemset/problem/183/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4419",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are going to work in Codeforces as an intern in a team of n engineers, numbered 1 through n . You want to give each engineer a souvenir: a T-shirt from your country (T-shirts are highly desirable in Codeforces). Unfortunately you don't know the size of the T-shirt each engineer fits in. There are m different sizes, numbered 1 through m , and each engineer will fit in a T-shirt of exactly one size. You don't know the engineers' exact sizes, so you asked your friend, Gerald. Unfortunately, he wasn't able to obtain the exact sizes either, but he managed to obtain for each engineer i and for all sizes j , the probability that the size of the T-shirt that fits engineer i is j . Since you're planning to give each engineer one T-shirt, you are going to bring with you exactly n T-shirts. For those n T-shirts, you can bring any combination of sizes (you can bring multiple T-shirts with the same size too!). You don't know the sizes of T-shirts for each engineer when deciding what sizes to bring, so you have to pick this combination based only on the probabilities given by your friend, Gerald. Your task is to maximize the expected number of engineers that receive a T-shirt of his size. This is defined more formally as follows. When you finally arrive at the office, you will ask each engineer his T-shirt size. Then, if you still have a T-shirt of that size, you will give him one of them. Otherwise, you don't give him a T-shirt. You will ask the engineers in order starting from engineer 1 , then engineer 2 , and so on until engineer n .",
+  "input_specification": "The first line contains two space-separated integers n and m (1 ≤ n ≤ 3000, 1 ≤ m ≤ 300) , denoting the number of engineers and the number of T-shirt sizes, respectively. Then n lines follow, each line contains m space-separated integers. The j -th integer in the i -th line represents the probability that the i -th engineer fits in a T-shirt of size j . Each probability will be given as an integer between 0 and 1000 , inclusive. The actual probability should be calculated as the given number divided by 1000 . It is guaranteed that for any engineer, the sum of the probabilities for all m T-shirts is equal to one.",
+  "output_specification": "Print a single real number denoting the maximum possible expected number of engineers that will receive a T-shirt. For the answer the absolute or relative error of 10 - 9 is acceptable.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n500 500\n500 500",
+      "output": "1.500000000000"
+    },
+    {
+      "input": "3 3\n1000 0 0\n1000 0 0\n0 1000 0",
+      "output": "3.000000000000"
+    },
+    {
+      "input": "1 4\n100 200 300 400",
+      "output": "0.400000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

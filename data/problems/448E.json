@@ -1,0 +1,45 @@
+{
+  "id": "448E",
+  "source": "problemset",
+  "contest_id": 448,
+  "problem_index": "E",
+  "name": "Divisors",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "implementation",
+    "number theory"
+  ],
+  "solved_count": 1984,
+  "problem_url": "https://codeforces.com/problemset/problem/448/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13042",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bizon the Champion isn't just friendly, he also is a rigorous coder. Let's define function f ( a ) , where a is a sequence of integers. Function f ( a ) returns the following sequence: first all divisors of a 1 go in the increasing order, then all divisors of a 2 go in the increasing order, and so on till the last element of sequence a . For example, f ([2, 9, 1]) = [1, 2, 1, 3, 9, 1] . Let's determine the sequence X i , for integer i ( i ≥ 0) : X 0 = [ X ] ( [ X ] is a sequence consisting of a single number X ), X i = f ( X i - 1 ) ( i > 0) . For example, at X = 6 we get X 0 = [6] , X 1 = [1, 2, 3, 6] , X 2 = [1, 1, 2, 1, 3, 1, 2, 3, 6] . Given the numbers X and k , find the sequence X k . As the answer can be rather large, find only the first 10 5 elements of this sequence.",
+  "input_specification": "A single line contains two space-separated integers — X (1 ≤ X ≤ 10 12 ) and k (0 ≤ k ≤ 10 18 ) .",
+  "output_specification": "Print the elements of the sequence X k in a single line, separated by a space. If the number of elements exceeds 10 5 , then print only the first 10 5 elements.",
+  "sample_testcases": [
+    {
+      "input": "6 1",
+      "output": "1 2 3 6"
+    },
+    {
+      "input": "4 2",
+      "output": "1 1 2 1 2 4"
+    },
+    {
+      "input": "10 3",
+      "output": "1 1 1 2 1 1 5 1 1 2 1 5 1 2 5 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

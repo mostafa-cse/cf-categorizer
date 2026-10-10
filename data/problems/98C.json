@@ -1,0 +1,47 @@
+{
+  "id": "98C",
+  "source": "problemset",
+  "contest_id": 98,
+  "problem_index": "C",
+  "name": "Help Greg the Dwarf",
+  "rating": 2500,
+  "tags": [
+    "geometry",
+    "ternary search"
+  ],
+  "solved_count": 377,
+  "problem_url": "https://codeforces.com/problemset/problem/98/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2323",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A very unusual citizen lives in a far away kingdom — Dwarf Gracula. However, his unusual name is not the weirdest thing (besides, everyone long ago got used to calling him simply Dwarf Greg). What is special about Dwarf Greg — he's been living for over 200 years; besides, he lives in a crypt on an abandoned cemetery and nobody has ever seen him out in daytime. Moreover, nobody has ever seen Greg buy himself any food. That's why nobody got particularly surprised when after the infernal dragon's tragic death cattle continued to disappear from fields. The people in the neighborhood were long sure that the harmless dragon was never responsible for disappearing cattle (considering that the dragon used to be sincere about his vegetarian views). But even that's not the worst part of the whole story. The worst part is that merely several minutes ago Dwarf Greg in some unintelligible way got inside your house and asked you to help him solve a problem. The point is that a short time ago Greg decided to order a new coffin (knowing his peculiar character, you are not surprised at all). But the problem is: a very long in both directions L-shaped corridor leads to Greg's crypt, and you can't drag just any coffin through that corridor. That's why he asked you to help. You've formalized the task on a plane like this: let the corridor's width before and after the turn be equal to a and b correspondingly (see the picture). The corridor turns directly at a right angle, the coffin is a rectangle whose length and width are equal to l and w ( l ≥ w ) correspondingly. Dwarf Greg has already determined the coffin's length ( l ), which is based on his height; your task is to determine the coffin's maximally possible width ( w ), at which it can be brought to the crypt. Besides, due to its large mass (pure marble!) the coffin is equipped with rotating wheels; therefore it is impossible to lift it off the ground, however, arbitrary moves and rotations of the coffin in the plane become possible. The coffin may be rotated arbitrarily just before you drag it into crypt and move through the corridor. Greg promised that if you help him, he will grant you immortality (I wonder how?). And if you don't, well... trust me, you don't want to know what happens if you don't help him...",
+  "input_specification": "The first line contains three space-separated integers a , b and l from the problem's statement ( 1 ≤ a , b , l ≤ 10 4 ).",
+  "output_specification": "Print the maximally possible width of a coffin with absolute or relative error no more than 10 - 7 . If a coffin with the given length and positive width (the coffin that would meet the conditions from the problem's statement) does not exist, print \" My poor head =( \" (without quotes). It is guaranteed that if the answer is positive, it will be not less than 10 - 7 . All the hacks will also be checked to meet that condition.",
+  "sample_testcases": [
+    {
+      "input": "2 2 1",
+      "output": "1.0000000"
+    },
+    {
+      "input": "2 2 2",
+      "output": "2.0000000"
+    },
+    {
+      "input": "2 2 3",
+      "output": "1.3284271"
+    },
+    {
+      "input": "2 2 6",
+      "output": "My poor head =("
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "260A",
+  "source": "problemset",
+  "contest_id": 260,
+  "problem_index": "A",
+  "name": "Adding Digits",
+  "rating": 1400,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 16925,
+  "problem_url": "https://codeforces.com/problemset/problem/260/A",
+  "editorial_url": "https://codeforces.com/blog/entry/6263",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has got two number: a and b . However, Vasya finds number a too short. So he decided to repeat the operation of lengthening number a n times. One operation of lengthening a number means adding exactly one digit to the number (in the decimal notation) to the right provided that the resulting number is divisible by Vasya's number b . If it is impossible to obtain the number which is divisible by b , then the lengthening operation cannot be performed. Your task is to help Vasya and print the number he can get after applying the lengthening operation to number a n times.",
+  "input_specification": "The first line contains three integers: a , b , n (1 ≤ a , b , n ≤ 10 5 ) .",
+  "output_specification": "In a single line print the integer without leading zeros, which Vasya can get when he applies the lengthening operations to number a n times. If no such number exists, then print number -1. If there are multiple possible answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 4 5",
+      "output": "524848"
+    },
+    {
+      "input": "12 11 1",
+      "output": "121"
+    },
+    {
+      "input": "260 150 10",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:55",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

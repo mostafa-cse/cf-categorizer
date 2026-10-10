@@ -1,0 +1,39 @@
+{
+  "id": "1560F2",
+  "source": "problemset",
+  "contest_id": 1560,
+  "problem_index": "F2",
+  "name": "Nearest Beautiful Number (hard version)",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 5147,
+  "problem_url": "https://codeforces.com/problemset/problem/1560/F2",
+  "editorial_url": "https://codeforces.com/blog/entry/94009",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "It is a complicated version of problem F1. The difference between them is the constraints (F1: $$$k \\le 2$$$, F2: $$$k \\le 10$$$). You are given an integer $$$n$$$. Find the minimum integer $$$x$$$ such that $$$x \\ge n$$$ and the number $$$x$$$ is $$$k$$$- beautiful . A number is called $$$k$$$- beautiful if its decimal representation having no leading zeroes contains no more than $$$k$$$ different digits. E.g. if $$$k = 2$$$, the numbers $$$3434443$$$, $$$55550$$$, $$$777$$$ and $$$21$$$ are $$$k$$$- beautiful whereas the numbers $$$120$$$, $$$445435$$$ and $$$998244353$$$ are not.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then $$$t$$$ test cases follow. Each test case consists of one line containing two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^9$$$, $$$1 \\le k \\le 10$$$).",
+  "output_specification": "For each test case output on a separate line $$$x$$$ — the minimum $$$k$$$- beautiful integer such that $$$x \\ge n$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n2021 3\n177890 2\n34512 3\n724533 4\n998244353 1\n12345678 10",
+      "output": "2021\n181111\n34533\n724542\n999999999\n12345678"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

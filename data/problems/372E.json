@@ -1,0 +1,43 @@
+{
+  "id": "372E",
+  "source": "problemset",
+  "contest_id": 372,
+  "problem_index": "E",
+  "name": "Drawing Circles is Fun",
+  "rating": 3000,
+  "tags": [
+    "combinatorics",
+    "geometry"
+  ],
+  "solved_count": 297,
+  "problem_url": "https://codeforces.com/problemset/problem/372/E",
+  "editorial_url": "https://codeforces.com/blog/entry/9944",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are a set of points S on the plane. This set doesn't contain the origin O (0, 0) , and for each two distinct points in the set A and B , the triangle OAB has strictly positive area. Consider a set of pairs of points ( P 1 , P 2 ), ( P 3 , P 4 ), ..., ( P 2 k - 1 , P 2 k ) . We'll call the set good if and only if: k ≥ 2 . All P i are distinct, and each P i is an element of S . For any two pairs ( P 2 i - 1 , P 2 i ) and ( P 2 j - 1 , P 2 j ) , the circumcircles of triangles OP 2 i - 1 P 2 j - 1 and OP 2 i P 2 j have a single common point, and the circumcircle of triangles OP 2 i - 1 P 2 j and OP 2 i P 2 j - 1 have a single common point. Calculate the number of good sets of pairs modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 1000) — the number of points in S . Each of the next n lines contains four integers a i , b i , c i , d i (0 ≤ | a i |, | c i | ≤ 50; 1 ≤ b i , d i ≤ 50; ( a i , c i ) ≠ (0, 0)) . These integers represent a point . No two points coincide.",
+  "output_specification": "Print a single integer — the answer to the problem modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "10\n-46 46 0 36\n0 20 -24 48\n-50 50 -49 49\n-20 50 8 40\n-15 30 14 28\n4 10 -4 5\n6 15 8 10\n-20 50 -3 15\n4 34 -16 34\n16 34 2 17",
+      "output": "2"
+    },
+    {
+      "input": "10\n30 30 -26 26\n0 15 -36 36\n-28 28 -34 34\n10 10 0 4\n-8 20 40 50\n9 45 12 30\n6 15 7 35\n36 45 -8 20\n-16 34 -4 34\n4 34 8 17",
+      "output": "4"
+    },
+    {
+      "input": "10\n0 20 38 38\n-30 30 -13 13\n-11 11 16 16\n30 30 0 37\n6 30 -4 10\n6 15 12 15\n-4 5 -10 25\n-16 20 4 10\n8 17 -2 17\n16 34 2 17",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

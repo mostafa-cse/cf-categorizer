@@ -1,0 +1,48 @@
+{
+  "id": "1482E",
+  "source": "problemset",
+  "contest_id": 1482,
+  "problem_index": "E",
+  "name": "Skyline Photo",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 4043,
+  "problem_url": "https://codeforces.com/problemset/problem/1482/E",
+  "editorial_url": "https://codeforces.com/blog/entry/88963",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice is visiting New York City. To make the trip fun, Alice will take photos of the city skyline and give the set of photos as a present to Bob. However, she wants to find the set of photos with maximum beauty and she needs your help. There are $$$n$$$ buildings in the city, the $$$i$$$-th of them has positive height $$$h_i$$$. All $$$n$$$ building heights in the city are different. In addition, each building has a beauty value $$$b_i$$$. Note that beauty can be positive or negative, as there are ugly buildings in the city too. A set of photos consists of one or more photos of the buildings in the skyline. Each photo includes one or more buildings in the skyline that form a contiguous segment of indices. Each building needs to be in exactly one photo. This means that if a building does not appear in any photo, or if a building appears in more than one photo, the set of pictures is not valid. The beauty of a photo is equivalent to the beauty $$$b_i$$$ of the shortest building in it. The total beauty of a set of photos is the sum of the beauty of all photos in it. Help Alice to find the maximum beauty a valid set of photos can have.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$), the number of buildings on the skyline. The second line contains $$$n$$$ distinct integers $$$h_1, h_2, \\ldots, h_n$$$ ($$$1 \\le h_i \\le n$$$). The $$$i$$$-th number represents the height of building $$$i$$$. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$-10^9 \\le b_i \\le 10^9$$$). The $$$i$$$-th number represents the beauty of building $$$i$$$.",
+  "output_specification": "Print one number representing the maximum beauty Alice can achieve for a valid set of photos of the skyline.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 5 4\n1 5 3 2 4",
+      "output": "15"
+    },
+    {
+      "input": "5\n1 4 3 2 5\n-3 4 -10 2 7",
+      "output": "10"
+    },
+    {
+      "input": "2\n2 1\n-2 -3",
+      "output": "-3"
+    },
+    {
+      "input": "10\n4 7 3 2 5 1 9 10 6 8\n-4 40 -46 -8 -16 4 -10 41 12 3",
+      "output": "96"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

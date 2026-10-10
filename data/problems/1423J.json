@@ -1,0 +1,37 @@
+{
+  "id": "1423J",
+  "source": "problemset",
+  "contest_id": 1423,
+  "problem_index": "J",
+  "name": "Bubble Cup hypothesis",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "dp",
+    "math"
+  ],
+  "solved_count": 923,
+  "problem_url": "https://codeforces.com/problemset/problem/1423/J",
+  "editorial_url": "https://codeforces.com//www.bubblecup.org/Content/Media/Booklet2020.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The Bubble Cup hypothesis stood unsolved for $$$130$$$ years. Who ever proves the hypothesis will be regarded as one of the greatest mathematicians of our time! A famous mathematician Jerry Mao managed to reduce the hypothesis to this problem: Given a number $$$m$$$, how many polynomials $$$P$$$ with coefficients in set $$${\\{0,1,2,3,4,5,6,7\\}}$$$ have: $$$P(2)=m$$$? Help Jerry Mao solve the long standing problem!",
+  "input_specification": "The first line contains a single integer $$$t$$$ $$$(1 \\leq t \\leq 5\\cdot 10^5)$$$ - number of test cases. On next line there are $$$t$$$ numbers, $$$m_i$$$ $$$(1 \\leq m_i \\leq 10^{18})$$$ - meaning that in case $$$i$$$ you should solve for number $$$m_i$$$.",
+  "output_specification": "For each test case $$$i$$$, print the answer on separate lines: number of polynomials $$$P$$$ as described in statement such that $$$P(2)=m_i$$$, modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 4",
+      "output": "2\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

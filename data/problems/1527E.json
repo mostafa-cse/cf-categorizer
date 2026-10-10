@@ -1,0 +1,41 @@
+{
+  "id": "1527E",
+  "source": "problemset",
+  "contest_id": 1527,
+  "problem_index": "E",
+  "name": "Partition Game",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 3198,
+  "problem_url": "https://codeforces.com/problemset/problem/1527/E",
+  "editorial_url": "https://codeforces.com/blog/entry/90939",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of $$$n$$$ integers. Define the cost of some array $$$t$$$ as follows: $$$$$$cost(t) = \\sum_{x \\in set(t) } last(x) - first(x),$$$$$$ where $$$set(t)$$$ is the set of all values in $$$t$$$ without repetitions, $$$first(x)$$$, and $$$last(x)$$$ are the indices of the first and last occurrence of $$$x$$$ in $$$t$$$, respectively. In other words, we compute the distance between the first and last occurrences for each distinct element and sum them up. You need to split the array $$$a$$$ into $$$k$$$ consecutive segments such that each element of $$$a$$$ belongs to exactly one segment and the sum of the cost of individual segments is minimum.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$k$$$ ($$$1 \\le n \\le 35\\,000$$$, $$$1 \\le k \\le \\min(n,100)$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$).",
+  "output_specification": "Output the minimum sum of the cost of individual segments.",
+  "sample_testcases": [
+    {
+      "input": "7 2\n1 6 6 4 6 6 6",
+      "output": "3"
+    },
+    {
+      "input": "7 4\n5 5 5 5 2 3 3",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

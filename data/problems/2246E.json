@@ -1,0 +1,37 @@
+{
+  "id": "2246E",
+  "source": "problemset",
+  "contest_id": 2246,
+  "problem_index": "E",
+  "name": "lce4113 and Security Game",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "interactive",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 745,
+  "problem_url": "https://codeforces.com/problemset/problem/2246/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155143",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Additionally, hacks are disabled for this problem. There are two hidden integers $$$b$$$ and $$$v$$$ such that $$$b \\in \\{0,1\\}$$$ and $$$0 \\le v \\lt 2^{30}.$$$ There is also a hidden operation $$$\\mathrm{ty},$$$ which is either $$$\\&$$$ or $$$|.$$$ Here, $$$\\&$$$ denotes the bitwise AND operation . Additionally, $$$|$$$ denotes the bitwise OR operation . Your goal is to guess $$$b.$$$ The interaction proceeds as follows: First, you send a value $$$x$$$ to the interactor, such that $$$0 \\le x \\lt 2^{30}$$$. The interactor sends back $$$v\\,\\mathrm{ty}\\,x$$$. Formally, it will send back $$$o(v,x)$$$, where $$$$$$o(v,x) = \\begin{cases}v\\,\\&\\,x & \\mathrm{ty} = \\& \\\\ v\\,|\\,x & \\mathrm{ty} = |.\\end{cases}$$$$$$ You then send two numbers $$$m_0$$$ and $$$m_1$$$, where $$$0 \\le m_0, m_1 \\lt 2^{30}.$$$ Finally, the interactor will send back $$$m_b \\oplus v,$$$ where $$$\\oplus$$$ denotes the bitwise XOR operation . After the interaction, you have to output $$$b$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. Note that this is the only initial input given.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n\n0\n\n315\n\n3\n\n35\n\n5\n\n5",
+      "output": "2\n\n314 159\n\n0\n\n3\n\n12 34\n\n1\n\n0\n\n0 0\n\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

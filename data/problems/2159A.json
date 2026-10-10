@@ -1,0 +1,36 @@
+{
+  "id": "2159A",
+  "source": "problemset",
+  "contest_id": 2159,
+  "problem_index": "A",
+  "name": "MAD Interactive Problem",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 9720,
+  "problem_url": "https://codeforces.com/problemset/problem/2159/A",
+  "editorial_url": "https://codeforces.com/blog/entry/147322",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. There is a secret sequence $$$a_1, a_2, \\ldots, a_{2n-1},a_{2n}$$$, which contains each integer from $$$1$$$ to $$$n$$$ exactly twice . Your task is to guess the sequence by using queries of the following type: \"? $$$k\\;j_1\\;j_2\\;\\ldots\\;j_k$$$\" — select the integer $$$k$$$ ($$$1 \\le k \\le 2n$$$) and $$$k$$$ distinct indices $$$j_1, j_2, \\ldots, j_k$$$ ($$$1 \\le j_1 , j_2 , \\ldots , j_k \\le 2n$$$). In response to the query, the jury will return $$$\\text{MAD}([a_{j_1}, a_{j_2}, \\ldots, a_{j_k}])$$$. We define the $$$\\operatorname{MAD}$$$ (Maximum Appearing Duplicate) of an integer sequence as the largest integer that appears at least twice. Specifically, if there is no number that appears at least twice, the $$$\\operatorname{MAD}$$$ value is $$$0$$$. Some examples are as follows: $$$\\operatorname{MAD}([1, 2, 1]) = 1$$$; $$$\\operatorname{MAD}([2, 2, 3, 3]) = 3$$$; $$$\\operatorname{MAD}([1, 2, 3, 4]) = 0$$$. Please identify the secret sequence using at most $$$3n$$$ queries .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 3000$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$2 \\le n \\le 300$$$). It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$10^5$$$. After you read this line of input, the interaction begins with your first query.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n2\n\n2\n\n0\n\n1\n\n2\n\n0\n\n1\n\n1",
+      "output": "? 2 2 1\n\n? 2 1 3\n\n? 3 1 3 4\n\n! 2 2 1 1\n\n? 2 1 2\n\n? 2 1 3\n\n? 3 1 3 4\n\n! 1 2 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "632B",
+  "source": "problemset",
+  "contest_id": 632,
+  "problem_index": "B",
+  "name": "Alice, Bob, Two Teams",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms"
+  ],
+  "solved_count": 4470,
+  "problem_url": "https://codeforces.com/problemset/problem/632/B",
+  "editorial_url": "https://codeforces.com/blog/entry/43493",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing a game. The game involves splitting up game pieces into two teams. There are n pieces, and the i -th piece has a strength p i . The way to split up game pieces is split into several steps: First, Alice will split the pieces into two different groups A and B . This can be seen as writing the assignment of teams of a piece in an n character string, where each character is A or B . Bob will then choose an arbitrary prefix or suffix of the string, and flip each character in that suffix (i.e. change A to B and B to A ). He can do this step at most once. Alice will get all the pieces marked A and Bob will get all the pieces marked B . The strength of a player is then the sum of strengths of the pieces in the group. Given Alice's initial split into two teams, help Bob determine an optimal strategy. Return the maximum strength he can achieve.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 5·10 5 ) — the number of game pieces. The second line contains n integers p i ( 1 ≤ p i ≤ 10 9 ) — the strength of the i -th piece. The third line contains n characters A or B — the assignment of teams after the first step (after Alice's step).",
+  "output_specification": "Print the only integer a — the maximum strength Bob can achieve.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 4 5\nABABA",
+      "output": "11"
+    },
+    {
+      "input": "5\n1 2 3 4 5\nAAAAA",
+      "output": "15"
+    },
+    {
+      "input": "1\n1\nB",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

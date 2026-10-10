@@ -1,0 +1,45 @@
+{
+  "id": "1154G",
+  "source": "problemset",
+  "contest_id": 1154,
+  "problem_index": "G",
+  "name": "Minimum Possible LCM",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3458,
+  "problem_url": "https://codeforces.com/problemset/problem/1154/G",
+  "editorial_url": "https://codeforces.com/blog/entry/66586",
+  "time_limit": "4 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$. Your problem is to find such pair of indices $$$i, j$$$ ($$$1 \\le i \\lt j \\le n$$$) that $$$lcm(a_i, a_j)$$$ is minimum possible. $$$lcm(x, y)$$$ is the least common multiple of $$$x$$$ and $$$y$$$ (minimum positive number such that both $$$x$$$ and $$$y$$$ are divisors of this number).",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$2 \\le n \\le 10^6$$$) — the number of elements in $$$a$$$. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^7$$$), where $$$a_i$$$ is the $$$i$$$-th element of $$$a$$$.",
+  "output_specification": "Print two integers $$$i$$$ and $$$j$$$ ($$$1 \\le i \\lt j \\le n$$$) such that the value of $$$lcm(a_i, a_j)$$$ is minimum among all valid pairs $$$i, j$$$. If there are multiple answers, you can print any.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 4 8 3 6",
+      "output": "1 2"
+    },
+    {
+      "input": "5\n5 2 11 3 7",
+      "output": "2 4"
+    },
+    {
+      "input": "6\n2 5 10 1 10 2",
+      "output": "1 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

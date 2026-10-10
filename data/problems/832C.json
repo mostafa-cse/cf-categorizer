@@ -1,0 +1,40 @@
+{
+  "id": "832C",
+  "source": "problemset",
+  "contest_id": 832,
+  "problem_index": "C",
+  "name": "Strange Radiation",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 513,
+  "problem_url": "https://codeforces.com/problemset/problem/832/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53461",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "n people are standing on a coordinate axis in points with positive integer coordinates strictly less than 10 6 . For each person we know in which direction (left or right) he is facing, and his maximum speed. You can put a bomb in some point with non-negative integer coordinate, and blow it up. At this moment all people will start running with their maximum speed in the direction they are facing. Also, two strange rays will start propagating from the bomb with speed s : one to the right, and one to the left. Of course, the speed s is strictly greater than people's maximum speed. The rays are strange because if at any moment the position and the direction of movement of some ray and some person coincide, then the speed of the person immediately increases by the speed of the ray. You need to place the bomb is such a point that the minimum time moment in which there is a person that has run through point 0 , and there is a person that has run through point 10 6 , is as small as possible. In other words, find the minimum time moment t such that there is a point you can place the bomb to so that at time moment t some person has run through 0 , and some person has run through point 10 6 .",
+  "input_specification": "The first line contains two integers n and s ( 2 ≤ n ≤ 10 5 , 2 ≤ s ≤ 10 6 ) — the number of people and the rays' speed. The next n lines contain the description of people. The i -th of these lines contains three integers x i , v i and t i ( 0 < x i < 10 6 , 1 ≤ v i < s , 1 ≤ t i ≤ 2 ) — the coordinate of the i -th person on the line, his maximum speed and the direction he will run to ( 1 is to the left, i.e. in the direction of coordinate decrease, 2 is to the right, i.e. in the direction of coordinate increase), respectively. It is guaranteed that the points 0 and 10 6 will be reached independently of the bomb's position.",
+  "output_specification": "Print the minimum time needed for both points 0 and 10 6 to be reached. Your answer is considered correct if its absolute or relative error doesn't exceed 10 - 6 . Namely, if your answer is a , and the jury's answer is b , then your answer is accepted, if .",
+  "sample_testcases": [
+    {
+      "input": "2 999\n400000 1 2\n500000 1 1",
+      "output": "500000.000000000000000000000000000000"
+    },
+    {
+      "input": "2 1000\n400000 500 1\n600000 500 2",
+      "output": "400.000000000000000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

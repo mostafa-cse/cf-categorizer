@@ -1,0 +1,36 @@
+{
+  "id": "2174C1",
+  "source": "problemset",
+  "contest_id": 2174,
+  "problem_index": "C1",
+  "name": "Beautiful Patterns (Easy Version)",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1294,
+  "problem_url": "https://codeforces.com/problemset/problem/2174/C1",
+  "editorial_url": "https://codeforces.com/blog/entry/149003",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the easy version of the problem. The difference between the versions is that in this version, $$$n \\le 2 \\cdot 10^3$$$. You can hack only if you solved all versions of this problem. Upon entering the ancient palace \"Palindrome-Palace\", you noticed that there are peculiar patterns on its walls. The pattern is a mosaic of size $$$1 \\times n$$$ made of pebbles, each painted in one of $$$m$$$ different colors. The correctness of an arbitrary mosaic $$$s$$$ is defined as the number of non-empty subsegments of $$$s$$$ that are palindromes. The beauty of the mosaic is defined as the square of its correctness . For example, for the mosaic rgrb , there are five palindromic subsegments: r , g , r , b , and rgr . Therefore, its correctness is $$$5$$$, and its beauty is $$$25$$$. While wandering through this palace, you wondered: what is the expected value of the beauty of the mosaic if the color of each of the $$$n$$$ pebbles is chosen uniformly and independently of the colors of the other pebbles? Print the answer modulo prime $$$p$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The only line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$p$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^3$$$; $$$1 \\leq m \\leq 10^7$$$; $$$m \\lt p \\lt 10^9$$$) representing the length of the mosaic, the number of different colors of pebbles, and the modulus for which the answer needs to be computed. It is guaranteed that $$$p$$$ is a prime number. It is also guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^3$$$.",
+  "output_specification": "For each test case, output the expected beauty of the mosaic modulo $$$p$$$. Formally, let $$$x = p$$$. It can be shown that the exact answer can be expressed as an irreducible fraction $$$\\frac{y}{z}$$$, where $$$y$$$ and $$$z$$$ are integers and $$$z \\not \\equiv 0 \\pmod{x}$$$. Output the integer equal to $$$y \\cdot z^{-1} \\bmod x$$$. In other words, output such an integer $$$t$$$ that $$$0 \\le t \\lt x$$$ and $$$t \\cdot z \\equiv y \\pmod{x}$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 101\n5 1 999999937\n100 23190 3214373",
+      "output": "57\n225\n2347147"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:43",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

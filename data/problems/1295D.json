@@ -1,0 +1,35 @@
+{
+  "id": "1295D",
+  "source": "problemset",
+  "contest_id": 1295,
+  "problem_index": "D",
+  "name": "Same GCDs",
+  "rating": 1800,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 10774,
+  "problem_url": "https://codeforces.com/problemset/problem/1295/D",
+  "editorial_url": "https://codeforces.com/blog/entry/73467",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$a$$$ and $$$m$$$. Calculate the number of integers $$$x$$$ such that $$$0 \\le x \\lt m$$$ and $$$\\gcd(a, m) = \\gcd(a + x, m)$$$. Note: $$$\\gcd(a, b)$$$ is the greatest common divisor of $$$a$$$ and $$$b$$$.",
+  "input_specification": "The first line contains the single integer $$$T$$$ ($$$1 \\le T \\le 50$$$) — the number of test cases. Next $$$T$$$ lines contain test cases — one per line. Each line contains two integers $$$a$$$ and $$$m$$$ ($$$1 \\le a \\lt m \\le 10^{10}$$$).",
+  "output_specification": "Print $$$T$$$ integers — one per test case. For each test case print the number of appropriate $$$x$$$-s.",
+  "sample_testcases": [
+    {
+      "input": "3\n4 9\n5 10\n42 9999999967",
+      "output": "6\n1\n9999999966"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:06",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

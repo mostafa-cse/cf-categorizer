@@ -1,0 +1,44 @@
+{
+  "id": "1571G",
+  "source": "problemset",
+  "contest_id": 1571,
+  "problem_index": "G",
+  "name": "A Battle Against a Dragon",
+  "rating": 2500,
+  "tags": [
+    "*special",
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 89,
+  "problem_url": "https://codeforces.com/problemset/problem/1571/G",
+  "editorial_url": "https://codeforces.com/blog/entry/95785",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A squad of $$$n$$$ warriors is defending a castle from a dragon attack. There are $$$m$$$ barricades between the castle and the dragon. The warriors are numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th warrior knows $$$k_i$$$ attacks: the $$$j$$$-th of them deals $$$a_{i,j}$$$ damage to the dragon and can only be applied if there are exactly $$$b_{i,j}$$$ barricades between the castle and the dragon. The warriors make turns one after another, starting from warrior $$$1$$$. After warrior $$$n$$$ makes his turn, the total damage to the dragon is calculated. The $$$i$$$-th warrior performs exactly one of three possible moves in his turn: destroys one barricade (if there are any left); deploys one of his $$$k_i$$$ attacks; skips a turn. The total damage is the sum of damages dealt by the warriors who chose to deploy their attacks in their turn. What is the maximum total damage the warriors can deal to the dragon?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 3 \\cdot 10^5$$$) — the number of warriors and the initial number of barricades. Then the descriptions of attacks for each warrior follow. The $$$i$$$-th description consists of three lines. The first line contains a single integer $$$k_i$$$ ($$$1 \\le k_i \\le m + 1$$$) — the number of attacks the $$$i$$$-th warrior knows. The second line contains $$$k_i$$$ integers $$$a_{i,1}, a_{i,2}, \\dots, a_{i,k_i}$$$ ($$$1 \\le a_{i,j} \\le 10^9$$$) — the damage of each attack. The third line contains $$$k_i$$$ integers $$$b_{i,1}, b_{i,2}, \\dots, b_{i,k_i}$$$ ($$$0 \\le b_{i,j} \\le m$$$) — the required number of barricades for each attack. $$$b_{i,j}$$$ for the $$$i$$$-th warrior are pairwise distinct. The attacks are listed in the increasing order of the barricades requirement, so $$$b_{i,1} \\lt b_{i,2} \\lt \\dots \\lt b_{i,k_i}$$$. The sum of $$$k_i$$$ over all warriors doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "Print a single integer — the maximum total damage the warriors can deal to the dragon.",
+  "sample_testcases": [
+    {
+      "input": "2 4\n1\n2\n4\n2\n10 5\n3 4",
+      "output": "10"
+    },
+    {
+      "input": "3 3\n1\n1\n0\n1\n20\n2\n1\n100\n3",
+      "output": "100"
+    },
+    {
+      "input": "2 1\n2\n10 10\n0 1\n2\n30 20\n0 1",
+      "output": "30"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:58",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

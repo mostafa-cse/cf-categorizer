@@ -1,0 +1,39 @@
+{
+  "id": "1495B",
+  "source": "problemset",
+  "contest_id": 1495,
+  "problem_index": "B",
+  "name": "Let's Go Hiking",
+  "rating": 1900,
+  "tags": [
+    "games",
+    "greedy"
+  ],
+  "solved_count": 6408,
+  "problem_url": "https://codeforces.com/problemset/problem/1495/B",
+  "editorial_url": "https://codeforces.com/blog/entry/88533",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "On a weekend, Qingshan suggests that she and her friend Daniel go hiking. Unfortunately, they are busy high school students, so they can only go hiking on scratch paper. A permutation $$$p$$$ is written from left to right on the paper. First Qingshan chooses an integer index $$$x$$$ ($$$1\\le x\\le n$$$) and tells it to Daniel. After that, Daniel chooses another integer index $$$y$$$ ($$$1\\le y\\le n$$$, $$$y \\ne x$$$). The game progresses turn by turn and as usual, Qingshan moves first. The rules follow: If it is Qingshan's turn, Qingshan must change $$$x$$$ to such an index $$$x'$$$ that $$$1\\le x'\\le n$$$, $$$|x'-x|=1$$$, $$$x'\\ne y$$$, and $$$p_{x'} \\lt p_x$$$ at the same time. If it is Daniel's turn, Daniel must change $$$y$$$ to such an index $$$y'$$$ that $$$1\\le y'\\le n$$$, $$$|y'-y|=1$$$, $$$y'\\ne x$$$, and $$$p_{y'} \\gt p_y$$$ at the same time. The person who can't make her or his move loses, and the other wins. You, as Qingshan's fan, are asked to calculate the number of possible $$$x$$$ to make Qingshan win in the case both players play optimally.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2\\le n\\le 10^5$$$) — the length of the permutation. The second line contains $$$n$$$ distinct integers $$$p_1,p_2,\\dots,p_n$$$ ($$$1\\le p_i\\le n$$$) — the permutation.",
+  "output_specification": "Print the number of possible values of $$$x$$$ that Qingshan can choose to make her win.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 5 4 3",
+      "output": "1"
+    },
+    {
+      "input": "7\n1 2 4 6 5 3 7",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

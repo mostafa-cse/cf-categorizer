@@ -1,0 +1,42 @@
+{
+  "id": "1051E",
+  "source": "problemset",
+  "contest_id": 1051,
+  "problem_index": "E",
+  "name": "Vasya and Big Integers",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 1350,
+  "problem_url": "https://codeforces.com/problemset/problem/1051/E",
+  "editorial_url": "https://codeforces.com/blog/entry/61969",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya owns three big integers — $$$a, l, r$$$. Let's define a partition of $$$x$$$ such a sequence of strings $$$s_1, s_2, \\dots, s_k$$$ that $$$s_1 + s_2 + \\dots + s_k = x$$$, where $$$+$$$ is a concatanation of strings. $$$s_i$$$ is the $$$i$$$-th element of the partition. For example, number $$$12345$$$ has the following partitions: [\" 1 \", \" 2 \", \" 3 \", \" 4 \", \" 5 \"], [\" 123 \", \" 4 \", \" 5 \"], [\" 1 \", \" 2345 \"], [\" 12345 \"] and lots of others. Let's call some partition of $$$a$$$ beautiful if each of its elements contains no leading zeros . Vasya want to know the number of beautiful partitions of number $$$a$$$, which has each of $$$s_i$$$ satisfy the condition $$$l \\le s_i \\le r$$$. Note that the comparison is the integer comparison, not the string one. Help Vasya to count the amount of partitions of number $$$a$$$ such that they match all the given requirements. The result can be rather big, so print it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains a single integer $$$a~(1 \\le a \\le 10^{1000000})$$$. The second line contains a single integer $$$l~(0 \\le l \\le 10^{1000000})$$$. The third line contains a single integer $$$r~(0 \\le r \\le 10^{1000000})$$$. It is guaranteed that $$$l \\le r$$$ . It is also guaranteed that numbers $$$a, l, r$$$ contain no leading zeros .",
+  "output_specification": "Print a single integer — the amount of partitions of number $$$a$$$ such that they match all the given requirements modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "135\n1\n15",
+      "output": "2"
+    },
+    {
+      "input": "10000\n0\n9",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

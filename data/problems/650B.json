@@ -1,0 +1,49 @@
+{
+  "id": "650B",
+  "source": "problemset",
+  "contest_id": 650,
+  "problem_index": "B",
+  "name": "Image Preview",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 3527,
+  "problem_url": "https://codeforces.com/problemset/problem/650/B",
+  "editorial_url": "https://codeforces.com/blog/entry/43677",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya's telephone contains n photos. Photo number 1 is currently opened on the phone. It is allowed to move left and right to the adjacent photo by swiping finger over the screen. If you swipe left from the first photo, you reach photo n . Similarly, by swiping right from the last photo you reach photo 1 . It takes a seconds to swipe from photo to adjacent. For each photo it is known which orientation is intended for it — horizontal or vertical. Phone is in the vertical orientation and can't be rotated. It takes b second to change orientation of the photo. Vasya has T seconds to watch photos. He want to watch as many photos as possible. If Vasya opens the photo for the first time, he spends 1 second to notice all details in it. If photo is in the wrong orientation, he spends b seconds on rotating it before watching it. If Vasya has already opened the photo, he just skips it (so he doesn't spend any time for watching it or for changing its orientation). It is not allowed to skip unseen photos. Help Vasya find the maximum number of photos he is able to watch during T seconds.",
+  "input_specification": "The first line of the input contains 4 integers n , a , b , T ( 1 ≤ n ≤ 5·10 5 , 1 ≤ a , b ≤ 1000 , 1 ≤ T ≤ 10 9 ) — the number of photos, time to move from a photo to adjacent, time to change orientation of a photo and time Vasya can spend for watching photo. Second line of the input contains a string of length n containing symbols ' w ' and ' h '. If the i -th position of a string contains ' w ', then the photo i should be seen in the horizontal orientation. If the i -th position of a string contains ' h ', then the photo i should be seen in vertical orientation.",
+  "output_specification": "Output the only integer, the maximum number of photos Vasya is able to watch during those T seconds.",
+  "sample_testcases": [
+    {
+      "input": "4 2 3 10\nwwhw",
+      "output": "2"
+    },
+    {
+      "input": "5 2 4 13\nhhwhh",
+      "output": "4"
+    },
+    {
+      "input": "5 2 4 1000\nhhwhh",
+      "output": "5"
+    },
+    {
+      "input": "3 1 100 10\nwhw",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

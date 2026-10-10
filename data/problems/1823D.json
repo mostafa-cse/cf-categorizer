@@ -1,0 +1,36 @@
+{
+  "id": "1823D",
+  "source": "problemset",
+  "contest_id": 1823,
+  "problem_index": "D",
+  "name": "Unique Palindromes",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "strings"
+  ],
+  "solved_count": 4388,
+  "problem_url": "https://codeforces.com/problemset/problem/1823/D",
+  "editorial_url": "https://codeforces.com/blog/entry/115465",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A palindrome is a string that reads the same backwards as forwards. For example, the string abcba is palindrome, while the string abca is not. Let $$$p(t)$$$ be the number of unique palindromic substrings of string $$$t$$$, i. e. the number of substrings $$$t[l \\dots r]$$$ that are palindromes themselves. Even if some substring occurs in $$$t$$$ several times, it's counted exactly once. (The whole string $$$t$$$ is also counted as a substring of $$$t$$$). For example, string $$$t$$$ $$$=$$$ abcbbcabcb has $$$p(t) = 6$$$ unique palindromic substrings: a , b , c , bb , bcb and cbbc . Now, let's define $$$p(s, m) = p(t)$$$ where $$$t = s[1 \\dots m]$$$. In other words, $$$p(s, m)$$$ is the number of palindromic substrings in the prefix of $$$s$$$ of length $$$m$$$. For example, $$$p($$$ abcbbcabcb $$$, 5)$$$ $$$=$$$ $$$p($$$ abcbb $$$) = 5$$$. You are given an integer $$$n$$$ and $$$k$$$ \"conditions\" ($$$k \\le 20$$$). Let's say that string $$$s$$$, consisting of $$$n$$$ lowercase Latin letters, is good if all $$$k$$$ conditions are satisfied at the same time . A condition is a pair $$$(x_i, c_i)$$$ and have the following meaning: $$$p(s, x_i) = c_i$$$, i. e. a prefix of $$$s$$$ of length $$$x_i$$$ contains exactly $$$c_i$$$ unique palindromic substrings. Find a good string $$$s$$$ or report that such $$$s$$$ doesn't exist. Look in Notes if you need further clarifications.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$; $$$1 \\le k \\le 20$$$) — length of good string $$$s$$$ and number of conditions. The second line of each test case contains $$$k$$$ integers $$$x_1, x_2, \\dots, x_k$$$ ($$$3 \\le x_1 \\lt x_2 \\lt \\dots \\lt x_k = n$$$) where $$$x_i$$$ is the length of the prefix in the $$$i$$$-th condition. The third line of each test case contains $$$k$$$ integers $$$c_1, c_2, \\dots, c_k$$$ ($$$3 \\le c_1 \\le c_2 \\le \\dots \\le c_k \\le \\min{\\left(10^9, \\frac{(n + 1) n}{2} \\right)}$$$) where $$$c_i$$$ is the number of palindromic substrings in the $$$i$$$-th condition. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10 ^ 5$$$.",
+  "output_specification": "For each test case, if there is no good string $$$s$$$ of length $$$n$$$ that satisfies all conditions, print NO . Otherwise, print YES and a string $$$s$$$ of length $$$n$$$, consisting of lowercase Latin letters, that satisfies all conditions. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "7\n10 2\n5 10\n5 6\n3 1\n3\n3\n4 2\n3 4\n3 3\n4 2\n3 4\n3 4\n4 1\n4\n5\n10 3\n4 6 10\n4 5 8\n10 4\n4 6 7 10\n4 5 7 8",
+      "output": "YES\nabcbbcabcb\nYES\nfoo\nYES\nayda\nYES\nwada\nNO\nYES\nabcbcacbab\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:55",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

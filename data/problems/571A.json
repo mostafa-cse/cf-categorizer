@@ -1,0 +1,44 @@
+{
+  "id": "571A",
+  "source": "problemset",
+  "contest_id": 571,
+  "problem_index": "A",
+  "name": "Lengthening Sticks",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2749,
+  "problem_url": "https://codeforces.com/problemset/problem/571/A",
+  "editorial_url": "https://codeforces.com/blog/entry/19923",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given three sticks with positive integer lengths of a , b , and c centimeters. You can increase length of some of them by some positive integer number of centimeters (different sticks can be increased by a different length), but in total by at most l centimeters. In particular, it is allowed not to increase the length of any stick. Determine the number of ways to increase the lengths of some sticks so that you can form from them a non-degenerate (that is, having a positive area) triangle. Two ways are considered different, if the length of some stick is increased by different number of centimeters in them.",
+  "input_specification": "The single line contains 4 integers a , b , c , l ( 1 ≤ a , b , c ≤ 3·10 5 , 0 ≤ l ≤ 3·10 5 ).",
+  "output_specification": "Print a single integer — the number of ways to increase the sizes of the sticks by the total of at most l centimeters, so that you can make a non-degenerate triangle from it.",
+  "sample_testcases": [
+    {
+      "input": "1 1 1 2",
+      "output": "4"
+    },
+    {
+      "input": "1 2 3 1",
+      "output": "2"
+    },
+    {
+      "input": "10 2 1 7",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

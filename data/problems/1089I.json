@@ -1,0 +1,38 @@
+{
+  "id": "1089I",
+  "source": "problemset",
+  "contest_id": 1089,
+  "problem_index": "I",
+  "name": "Interval-Free Permutations",
+  "rating": 2600,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 486,
+  "problem_url": "https://codeforces.com/problemset/problem/1089/I",
+  "editorial_url": "https://codeforces.com/blog/entry/63515",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Consider a permutation $$$p_1, p_2, \\dots p_n$$$ of integers from 1 to $$$n$$$. We call a sub-segment $$$p_l, p_{l+1}, \\dots, p_{r-1}, p_{r}$$$ of the permutation an interval if it is a reordering of some set of consecutive integers. For example, the permutation $$$(6,7,1,8,5,3,2,4)$$$ has the intervals $$$(6,7)$$$, $$$(5,3,2,4)$$$, $$$(3,2)$$$, and others. Each permutation has some trivial intervals — the full permutation itself and every single element. We call a permutation interval-free if it does not have non-trivial intervals. In other words, interval-free permutation does not have intervals of length between 2 and $$$n - 1$$$ inclusive. Your task is to count the number of interval-free permutations of length $$$n$$$ modulo prime number $$$p$$$.",
+  "input_specification": "In the first line of the input there are two integers $$$t$$$ ($$$1 \\le t \\le 400$$$) and $$$p$$$ ($$$10^8 \\le p \\le 10^9$$$) — the number of test cases to solve and the prime modulo. In each of the next $$$t$$$ lines there is one integer $$$n$$$ ($$$1 \\le n \\le 400$$$) — the length of the permutation.",
+  "output_specification": "For each of $$$t$$$ test cases print a single integer — the number of interval-free permutations modulo $$$p$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 998244353\n1\n4\n5\n9",
+      "output": "1\n2\n6\n28146"
+    },
+    {
+      "input": "1 437122297\n20",
+      "output": "67777575"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:59",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "1107F",
+  "source": "problemset",
+  "contest_id": 1107,
+  "problem_index": "F",
+  "name": "Vasya and Endless Credits",
+  "rating": 2600,
+  "tags": [
+    "dp",
+    "flows",
+    "graph matchings",
+    "graphs",
+    "sortings"
+  ],
+  "solved_count": 1026,
+  "problem_url": "https://codeforces.com/problemset/problem/1107/F",
+  "editorial_url": "https://codeforces.com/blog/entry/64833",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya wants to buy himself a nice new car. Unfortunately, he lacks some money. Currently he has exactly 0 burles. However, the local bank has $$$n$$$ credit offers. Each offer can be described with three numbers $$$a_i$$$, $$$b_i$$$ and $$$k_i$$$. Offers are numbered from $$$1$$$ to $$$n$$$. If Vasya takes the $$$i$$$-th offer, then the bank gives him $$$a_i$$$ burles at the beginning of the month and then Vasya pays bank $$$b_i$$$ burles at the end of each month for the next $$$k_i$$$ months (including the month he activated the offer). Vasya can take the offers any order he wants . Each month Vasya can take no more than one credit offer . Also each credit offer can not be used more than once . Several credits can be active at the same time. It implies that Vasya pays bank the sum of $$$b_i$$$ over all the $$$i$$$ of active credits at the end of each month. Vasya wants to buy a car in the middle of some month. He just takes all the money he currently has and buys the car of that exact price. Vasya don't really care what he'll have to pay the bank back after he buys a car. He just goes out of the country on his car so that the bank can't find him anymore. What is the maximum price that car can have?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the number of credit offers. Each of the next $$$n$$$ lines contains three integers $$$a_i$$$, $$$b_i$$$ and $$$k_i$$$ ($$$1 \\le a_i, b_i, k_i \\le 10^9$$$).",
+  "output_specification": "Print one integer — the maximum price of the car.",
+  "sample_testcases": [
+    {
+      "input": "4\n10 9 2\n20 33 1\n30 115 1\n5 3 2",
+      "output": "32"
+    },
+    {
+      "input": "3\n40 1 2\n1000 1100 5\n300 2 1",
+      "output": "1337"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

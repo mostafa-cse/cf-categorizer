@@ -1,0 +1,42 @@
+{
+  "id": "1779E",
+  "source": "problemset",
+  "contest_id": 1779,
+  "problem_index": "E",
+  "name": "Anya's Simultaneous Exhibition",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "graphs",
+    "greedy",
+    "interactive",
+    "sortings"
+  ],
+  "solved_count": 2128,
+  "problem_url": "https://codeforces.com/problemset/problem/1779/E",
+  "editorial_url": "https://codeforces.com/blog/entry/110629",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem . Anya has gathered $$$n$$$ chess experts numbered from $$$1$$$ to $$$n$$$ for which the following properties hold: For any pair of players one of the players wins every game against the other (and no draws ever occur); Transitivity does not necessarily hold — it might happen that $$$A$$$ always beats $$$B$$$, $$$B$$$ always beats $$$C$$$ and $$$C$$$ always beats $$$A$$$. Anya does not know, for each pair, who is the player who beats the other. To organize a tournament, Anya hosts $$$n-1$$$ games. In each game, she chooses two players. One of them wins and stays, while the other one is disqualified. After all the games are hosted only one player will remain. A player is said to be a candidate master if they can win a tournament (notice that the winner of a tournament may depend on the players selected by Anya in the $$$n-1$$$ games). Since Anya is a curious girl, she is interested in finding the candidate masters . Unfortunately, she does not have much time. To speed up the process, she will organize up to $$$2n$$$ simuls (short for \"simultaneous exhibition\", in which one player plays against many). In one simul, Anya chooses exactly one player who will play against some (at least one) of the other players. The chosen player wins all games they would win in a regular game, and the same holds for losses. After the simul finishes, Anya is only told the total number of games won by the chosen player (but not which ones). Nobody is disqualified during a simul. Can you help Anya host simuls and determine the candidate masters ? The winning players in each pair could be changed between the simuls, but only in a way that preserves the results of all previous simuls. These changes may depend on your queries.\n\nInteraction Firstly, the jury sends one integer $$$n$$$ ($$$3 \\leq n \\leq 250$$$) which should be read — the number of players. After that, your program may ask queries or report an answer. To ask a query, print \" ? $$$i \\; s_1 s_2 \\ldots s_n$$$\" (without quotes), where $$$i$$$ is the index of the player who will play against some of the other players in the simul. $$$s$$$ is a binary string that denotes the players they play against. $$$i$$$ plays against every player $$$j$$$ for which $$$s_j = 1$$$ holds (and $$$s_j = 1$$$ should hold for at least one $$$1 \\leq j \\leq n$$$). Please note that $$$s_i = 0$$$ must hold since a player cannot play against themselves, otherwise, the query is considered to be incorrect. After this, you should read an integer — the number of games player $$$i$$$ has won. When you have identified the answer, you must print \" ! $$$c_1 c_2 \\ldots c_n$$$\" (without quotes) and terminate your program. $$$c$$$ is a binary string which represents the candidate masters . Player $$$i$$$ is a candidate master if $$$c_i=1$$$ holds, otherwise, they are not. If you ask more than $$$2n$$$ queries or if one of the queries is malformed, the interaction terminates immediately and your program receives verdict Wrong Answer . After printing a query do not forget to output the end of line and flush the output. Otherwise, you will get Idleness limit exceeded . To do this, use: fflush(stdout) or cout.flush() in C++; System.out.flush() in Java; flush(output) in Pascal; stdout.flush() in Python; see the documentation for other languages. Hacks are disabled in this problem.",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n\n1\n\n1\n\n1",
+      "output": "? 1 010\n\n? 2 001\n\n? 3 100\n\n! 111"
+    },
+    {
+      "input": "5\n\n0\n\n3\n\n4",
+      "output": "? 5 10110\n\n? 2 10111\n\n? 1 01111\n\n! 10000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

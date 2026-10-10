@@ -1,0 +1,43 @@
+{
+  "id": "449C",
+  "source": "problemset",
+  "contest_id": 449,
+  "problem_index": "C",
+  "name": "Jzzhu and Apples",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "number theory"
+  ],
+  "solved_count": 2651,
+  "problem_url": "https://codeforces.com/problemset/problem/449/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13112",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Jzzhu has picked n apples from his big apple tree. All the apples are numbered from 1 to n . Now he wants to sell them to an apple store. Jzzhu will pack his apples into groups and then sell them. Each group must contain two apples, and the greatest common divisor of numbers of the apples in each group must be greater than 1. Of course, each apple can be part of at most one group. Jzzhu wonders how to get the maximum possible number of groups. Can you help him?",
+  "input_specification": "A single integer n (1 ≤ n ≤ 10 5 ) , the number of the apples.",
+  "output_specification": "The first line must contain a single integer m , representing the maximum number of groups he can get. Each of the next m lines must contain two integers — the numbers of apples in the current group. If there are several optimal answers you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6",
+      "output": "2\n6 3\n2 4"
+    },
+    {
+      "input": "9",
+      "output": "3\n9 3\n2 4\n6 8"
+    },
+    {
+      "input": "2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

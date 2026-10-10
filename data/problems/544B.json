@@ -1,0 +1,39 @@
+{
+  "id": "544B",
+  "source": "problemset",
+  "contest_id": 544,
+  "problem_index": "B",
+  "name": "Sea and Islands",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "implementation"
+  ],
+  "solved_count": 9041,
+  "problem_url": "https://codeforces.com/problemset/problem/544/B",
+  "editorial_url": "https://codeforces.com/blog/entry/17773",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A map of some object is a rectangular field consisting of n rows and n columns. Each cell is initially occupied by the sea but you can cover some some cells of the map with sand so that exactly k islands appear on the map. We will call a set of sand cells to be island if it is possible to get from each of them to each of them by moving only through sand cells and by moving from a cell only to a side-adjacent cell. The cells are called to be side-adjacent if they share a vertical or horizontal side. It is easy to see that islands do not share cells (otherwise they together form a bigger island). Find a way to cover some cells with sand so that exactly k islands appear on the n × n map, or determine that no such way exists.",
+  "input_specification": "The single line contains two positive integers n , k ( 1 ≤ n ≤ 100 , 0 ≤ k ≤ n 2 ) — the size of the map and the number of islands you should form.",
+  "output_specification": "If the answer doesn't exist, print \"NO\" (without the quotes) in a single line. Otherwise, print \"YES\" in the first line. In the next n lines print the description of the map. Each of the lines of the description must consist only of characters 'S' and 'L' , where 'S' is a cell that is occupied by the sea and 'L' is the cell covered with sand. The length of each line of the description must equal n . If there are multiple answers, you may print any of them. You should not maximize the sizes of islands.",
+  "sample_testcases": [
+    {
+      "input": "5 2",
+      "output": "YES\nSSSSS\nLLLLL\nSSSSS\nLLLLL\nSSSSS"
+    },
+    {
+      "input": "5 25",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "288B",
+  "source": "problemset",
+  "contest_id": 288,
+  "problem_index": "B",
+  "name": "Polo the Penguin and Houses ",
+  "rating": 1500,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 3262,
+  "problem_url": "https://codeforces.com/problemset/problem/288/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7241",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little penguin Polo loves his home village. The village has n houses, indexed by integers from 1 to n . Each house has a plaque containing an integer, the i -th house has a plaque containing integer p i ( 1 ≤ p i ≤ n ). Little penguin Polo loves walking around this village. The walk looks like that. First he stands by a house number x . Then he goes to the house whose number is written on the plaque of house x (that is, to house p x ), then he goes to the house whose number is written on the plaque of house p x (that is, to house p p x ), and so on. We know that: When the penguin starts walking from any house indexed from 1 to k , inclusive, he can walk to house number 1. When the penguin starts walking from any house indexed from k + 1 to n , inclusive, he definitely cannot walk to house number 1. When the penguin starts walking from house number 1, he can get back to house number 1 after some non-zero number of walks from a house to a house. You need to find the number of ways you may write the numbers on the houses' plaques so as to fulfill the three above described conditions. Print the remainder after dividing this number by 1000000007 (10 9 + 7) .",
+  "input_specification": "The single line contains two space-separated integers n and k ( 1 ≤ n ≤ 1000, 1 ≤ k ≤ min (8, n ) ) — the number of the houses and the number k from the statement.",
+  "output_specification": "In a single line print a single integer — the answer to the problem modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "5 2",
+      "output": "54"
+    },
+    {
+      "input": "7 4",
+      "output": "1728"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

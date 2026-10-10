@@ -1,0 +1,36 @@
+{
+  "id": "2103E",
+  "source": "problemset",
+  "contest_id": 2103,
+  "problem_index": "E",
+  "name": "Keep the Sum",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 643,
+  "problem_url": "https://codeforces.com/problemset/problem/2103/E",
+  "editorial_url": "https://codeforces.com/blog/entry/142149",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$k$$$ and an array $$$a$$$ of length $$$n$$$, where each element satisfies $$$0 \\le a_i \\le k$$$ for all $$$1 \\le i \\le n$$$. You can perform the following operation on the array: Choose two distinct indices $$$i$$$ and $$$j$$$ ($$$1 \\le i,j \\le n$$$ and $$$i \\neq j$$$) such that $$$a_i + a_j = k$$$. Select an integer $$$x$$$ satisfying $$$-a_j \\le x \\le a_i$$$. Decrease $$$a_i$$$ by $$$x$$$ and increase $$$a_j$$$ by $$$x$$$. In other words, update $$$a_i := a_i - x$$$ and $$$a_j := a_j + x$$$. Note that the constraints on $$$x$$$ ensure that all elements of array $$$a$$$ remain between $$$0$$$ and $$$k$$$ throughout the operations. Your task is to determine whether it is possible to make the array $$$a$$$ non-decreasing$$$^{\\text{∗}}$$$ using the above operation. If it is possible, find a sequence of at most $$$3n$$$ operations that transforms the array into a non-decreasing one. It can be proven that if it is possible to make the array non-decreasing using the above operation, there exists a solution that uses at most $$$3n$$$ operations. $$$^{\\text{∗}}$$$ An array $$$a_1, a_2, \\ldots, a_n$$$ is said to be non-decreasing if for all $$$1 \\le i \\le n - 1$$$, it holds that $$$a_i \\le a_{i+1}$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers, $$$n$$$ and $$$k$$$ ($$$4 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le 10^9$$$) — the length of the array $$$a$$$ and the required sum for the operation. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le k$$$) — the elements of array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$-1$$$ if it is not possible to make the array non-decreasing using the operation. Otherwise, output the number of operations $$$m$$$ ($$$0 \\le m \\le 3n$$$). On each of the next $$$m$$$ lines, output three integers $$$i$$$, $$$j$$$, and $$$x$$$ representing an operation where $$$a_i$$$ is decreased by $$$x$$$ and $$$a_j$$$ is increased by $$$x$$$. Note that you are not required to minimize the number of operations. If there are multiple solutions requiring at most $$$3n$$$ operations, you may output any.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 100\n1 2 3 4 5\n5 6\n1 2 3 5 4\n5 7\n7 1 5 3 1\n10 10\n2 5 3 2 7 3 1 8 4 0",
+      "output": "0\n1\n4 1 1\n-1\n6\n1 8 2\n3 5 2\n5 7 3\n5 9 3\n8 10 5\n2 10 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:25",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

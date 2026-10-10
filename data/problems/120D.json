@@ -1,0 +1,42 @@
+{
+  "id": "120D",
+  "source": "problemset",
+  "contest_id": 120,
+  "problem_index": "D",
+  "name": "Three Sons",
+  "rating": 1400,
+  "tags": [
+    "brute force"
+  ],
+  "solved_count": 2120,
+  "problem_url": "https://codeforces.com/problemset/problem/120/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2892",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Three sons inherited from their father a rectangular corn fiend divided into n × m squares. For each square we know how many tons of corn grows on it. The father, an old farmer did not love all three sons equally, which is why he bequeathed to divide his field into three parts containing A , B and C tons of corn. The field should be divided by two parallel lines. The lines should be parallel to one side of the field and to each other. The lines should go strictly between the squares of the field. Each resulting part of the field should consist of at least one square. Your task is to find the number of ways to divide the field as is described above, that is, to mark two lines, dividing the field in three parts so that on one of the resulting parts grew A tons of corn, B on another one and C on the remaining one.",
+  "input_specification": "The first line contains space-separated integers n and m — the sizes of the original ( 1 ≤ n , m ≤ 50, max ( n , m ) ≥ 3 ). Then the field's description follows: n lines, each containing m space-separated integers c ij , ( 0 ≤ c ij ≤ 100 ) — the number of tons of corn each square contains. The last line contains space-separated integers A , B , C ( 0 ≤ A , B , C ≤ 10 6 ).",
+  "output_specification": "Print the answer to the problem: the number of ways to divide the father's field so that one of the resulting parts contained A tons of corn, another one contained B tons, and the remaining one contained C tons. If no such way exists, print 0.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 1 1\n1 1 1\n1 1 1\n3 3 3",
+      "output": "2"
+    },
+    {
+      "input": "2 5\n1 1 1 1 1\n2 2 2 2 2\n3 6 6",
+      "output": "3"
+    },
+    {
+      "input": "3 3\n1 2 3\n3 1 2\n2 3 1\n5 6 7",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

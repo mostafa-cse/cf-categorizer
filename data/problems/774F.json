@@ -1,0 +1,40 @@
+{
+  "id": "774F",
+  "source": "problemset",
+  "contest_id": 774,
+  "problem_index": "F",
+  "name": "Pens And Days Of Week",
+  "rating": 2700,
+  "tags": [
+    "*special",
+    "binary search",
+    "number theory"
+  ],
+  "solved_count": 203,
+  "problem_url": "https://codeforces.com/problemset/problem/774/F",
+  "editorial_url": "https://codeforces.com/blog/entry/51441",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Stepan has n pens. Every day he uses them, and on the i -th day he uses the pen number i . On the ( n + 1) -th day again he uses the pen number 1 , on the ( n + 2) -th — he uses the pen number 2 and so on. On every working day (from Monday to Saturday, inclusive) Stepan spends exactly 1 milliliter of ink of the pen he uses that day. On Sunday Stepan has a day of rest, he does not stend the ink of the pen he uses that day. Stepan knows the current volume of ink in each of his pens. Now it's the Monday morning and Stepan is going to use the pen number 1 today. Your task is to determine which pen will run out of ink before all the rest (that is, there will be no ink left in it), if Stepan will use the pens according to the conditions described above.",
+  "input_specification": "The first line contains the integer n ( 1 ≤ n ≤ 50 000 ) — the number of pens Stepan has. The second line contains the sequence of integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ), where a i is equal to the number of milliliters of ink which the pen number i currently has.",
+  "output_specification": "Print the index of the pen which will run out of ink before all (it means that there will be no ink left in it), if Stepan will use pens according to the conditions described above. Pens are numbered in the order they are given in input data. The numeration begins from one. Note that the answer is always unambiguous, since several pens can not end at the same time.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 3 3",
+      "output": "2"
+    },
+    {
+      "input": "5\n5 4 5 4 4",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

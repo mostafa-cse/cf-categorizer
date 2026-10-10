@@ -1,0 +1,37 @@
+{
+  "id": "682C",
+  "source": "problemset",
+  "contest_id": 682,
+  "problem_index": "C",
+  "name": "Alyona and the Tree",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 8350,
+  "problem_url": "https://codeforces.com/problemset/problem/682/C",
+  "editorial_url": "https://codeforces.com/blog/entry/45491",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alyona decided to go on a diet and went to the forest to get some apples. There she unexpectedly found a magic rooted tree with root in the vertex 1 , every vertex and every edge of which has a number written on. The girl noticed that some of the tree's vertices are sad , so she decided to play with them. Let's call vertex v sad if there is a vertex u in subtree of vertex v such that dist ( v , u ) > a u , where a u is the number written on vertex u , dist ( v , u ) is the sum of the numbers written on the edges on the path from v to u . Leaves of a tree are vertices connected to a single vertex by a single edge, but the root of a tree is a leaf if and only if the tree consists of a single vertex — root. Thus Alyona decided to remove some of tree leaves until there will be no any sad vertex left in the tree. What is the minimum number of leaves Alyona needs to remove?",
+  "input_specification": "In the first line of the input integer n ( 1 ≤ n ≤ 10 5 ) is given — the number of vertices in the tree. In the second line the sequence of n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) is given, where a i is the number written on vertex i . The next n - 1 lines describe tree edges: i th of them consists of two integers p i and c i (1 ≤ p i ≤ n , - 10 9 ≤ c i ≤ 10 9 ) , meaning that there is an edge connecting vertices i + 1 and p i with number c i written on it.",
+  "output_specification": "Print the only integer — the minimum number of leaves Alyona needs to remove such that there will be no any sad vertex left in the tree.",
+  "sample_testcases": [
+    {
+      "input": "9\n88 22 83 14 95 91 98 53 11\n3 24\n7 -8\n1 67\n1 64\n9 65\n5 12\n6 -80\n3 8",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

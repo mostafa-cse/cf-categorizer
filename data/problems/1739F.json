@@ -1,0 +1,42 @@
+{
+  "id": "1739F",
+  "source": "problemset",
+  "contest_id": 1739,
+  "problem_index": "F",
+  "name": "Keyboard Design",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "dp",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 692,
+  "problem_url": "https://codeforces.com/problemset/problem/1739/F",
+  "editorial_url": "https://codeforces.com/blog/entry/107461",
+  "time_limit": "4 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Monocarp has a dictionary of $$$n$$$ words, consisting of $$$12$$$ first letters of the Latin alphabet. The words are numbered from $$$1$$$ to $$$n$$$. In every pair of adjacent characters in each word, the characters are different. For every word $$$i$$$, Monocarp also has an integer $$$c_i$$$ denoting how often he uses this word. Monocarp wants to design a keyboard that would allow him to type some of the words easily. A keyboard can be denoted as a sequence of $$$12$$$ first letters of the Latin alphabet, where each letter from a to l appears exactly once. A word can be typed with the keyboard easily if, for every pair of adjacent characters in the word, these characters are adjacent in the keyboard as well. The optimality of the keyboard is the sum of $$$c_i$$$ over all words $$$i$$$ that can be typed easily with it. Help Monocarp to design a keyboard with the maximum possible optimality.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 1000$$$) — the number of words. Then, $$$n$$$ lines follow. The $$$i$$$-th of them contains an integer $$$c_i$$$ ($$$1 \\le c_i \\le 10^5$$$) and a string $$$s_i$$$ ($$$2 \\le |s_i| \\le 2000$$$) denoting the $$$i$$$-th word. Each character of $$$s_i$$$ is one of $$$12$$$ first letters of Latin alphabet, in lowercase. For every $$$j \\in [1, |s_i| - 1]$$$, the $$$j$$$-th character of $$$s_i$$$ is different from the $$$(j+1)$$$-th one. Additional constraint on the input: $$$\\sum \\limits_{i=1}^{n} |s_i| \\le 2000$$$.",
+  "output_specification": "Print a sequence of $$$12$$$ first letters of the Latin alphabet, where each letter from a to l appears exactly once, denoting the optimal keyboard. If there are multiple answers, you may print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n7 abacaba\n10 cba\n4 db",
+      "output": "hjkildbacefg"
+    },
+    {
+      "input": "1\n100 abca",
+      "output": "abcdefghijkl"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:17",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

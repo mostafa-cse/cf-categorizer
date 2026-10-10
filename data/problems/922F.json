@@ -1,0 +1,45 @@
+{
+  "id": "922F",
+  "source": "problemset",
+  "contest_id": 922,
+  "problem_index": "F",
+  "name": "Divisibility",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 779,
+  "problem_url": "https://codeforces.com/problemset/problem/922/F",
+  "editorial_url": "https://codeforces.com/blog/entry/57605",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Imp is really pleased that you helped him. But it you solve the last problem, his gladness would raise even more. Let's define for some set of integers as the number of pairs a , b in , such that: a is strictly less than b ; a divides b without a remainder. You are to find such a set , which is a subset of {1, 2, ..., n } (the set that contains all positive integers not greater than n ), that .",
+  "input_specification": "The only line contains two integers n and k .",
+  "output_specification": "If there is no answer, print \" No \". Otherwise, in the first line print \" Yes \", in the second — an integer m that denotes the size of the set you have found, in the second line print m integers — the elements of the set , in any order. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 3",
+      "output": "No"
+    },
+    {
+      "input": "6 6",
+      "output": "Yes\n5\n1 2 4 5 6"
+    },
+    {
+      "input": "8 3",
+      "output": "Yes\n4\n2 4 5 8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

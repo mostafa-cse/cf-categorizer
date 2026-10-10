@@ -1,0 +1,40 @@
+{
+  "id": "553D",
+  "source": "problemset",
+  "contest_id": 553,
+  "problem_index": "D",
+  "name": "Nudist Beach",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 1122,
+  "problem_url": "https://codeforces.com/problemset/problem/553/D",
+  "editorial_url": "https://codeforces.com/blog/entry/18842",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nudist Beach is planning a military operation to attack the Life Fibers. In this operation, they will attack and capture several cities which are currently under the control of the Life Fibers. There are n cities, labeled from 1 to n , and m bidirectional roads between them. Currently, there are Life Fibers in every city. In addition, there are k cities that are fortresses of the Life Fibers that cannot be captured under any circumstances. So, the Nudist Beach can capture an arbitrary non-empty subset of cities with no fortresses. After the operation, Nudist Beach will have to defend the captured cities from counterattack. If they capture a city and it is connected to many Life Fiber controlled cities, it will be easily defeated. So, Nudist Beach would like to capture a set of cities such that for each captured city the ratio of Nudist Beach controlled neighbors among all neighbors of that city is as high as possible. More formally, they would like to capture a non-empty set of cities S with no fortresses of Life Fibers. The strength of a city is defined as (number of neighbors of x in S ) / (total number of neighbors of x ). Here, two cities are called neighbors if they are connnected with a road. The goal is to maximize the strength of the weakest city in S . Given a description of the graph, and the cities with fortresses, find a non-empty subset that maximizes the strength of the weakest city.",
+  "input_specification": "The first line of input contains three integers n , m , k ( 2  ≤ n ≤ 100 000 , 1 ≤ m ≤ 100 000 , 1 ≤ k ≤ n - 1 ). The second line of input contains k integers, representing the cities with fortresses. These cities will all be distinct. The next m lines contain the roads. The i -th of these lines will have 2 integers a i , b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ). Every city will have at least one road adjacent to it. There is no more than one road between each pair of the cities.",
+  "output_specification": "The first line should contain an integer r , denoting the size of an optimum set ( 1 ≤ r ≤ n - k ). The second line should contain r integers, denoting the cities in the set. Cities may follow in an arbitrary order. This line should not contain any of the cities with fortresses. If there are multiple possible answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "9 8 4\n3 9 6 8\n1 2\n1 3\n1 4\n1 5\n2 6\n2 7\n2 8\n2 9",
+      "output": "3\n1 4 5"
+    },
+    {
+      "input": "10 8 2\n2 9\n1 3\n2 9\n4 5\n5 6\n6 7\n7 8\n8 10\n10 4",
+      "output": "8\n1 5 4 8 10 6 3 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

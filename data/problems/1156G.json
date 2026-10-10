@@ -1,0 +1,41 @@
+{
+  "id": "1156G",
+  "source": "problemset",
+  "contest_id": 1156,
+  "problem_index": "G",
+  "name": "Optimizer",
+  "rating": 2700,
+  "tags": [
+    "graphs",
+    "greedy",
+    "hashing",
+    "implementation"
+  ],
+  "solved_count": 192,
+  "problem_url": "https://codeforces.com/problemset/problem/1156/G",
+  "editorial_url": "https://codeforces.com/blog/entry/66827",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's analyze a program written on some strange programming language. The variables in this language have names consisting of $$$1$$$ to $$$4$$$ characters, and each character is a lowercase or an uppercase Latin letter, or a digit. There is an extra constraint that the first character should not be a digit. There are four types of operations in the program, each denoted by one of the characters: $ , ^ , # or & . Each line of the program has one of the following formats: <lvalue>=<rvalue> , where <lvalue> and <rvalue> are valid variable names; <lvalue>=<arg1><op><arg2> , where <lvalue> , <arg1> and <arg2> are valid variable names, and <op> is an operation character. The program is executed line-by-line, and the result of execution is stored in a variable having the name res . If res is never assigned in the program, then the result will be equal to the value of res before running the program. Two programs are called equivalent if no matter which operations do characters $ , ^ , # and & denote (but, obviously, performing the same operation on the same arguments gives the same result) and which values do variables have before execution of program, the value of res after running the first program is equal to the value of res after running the second program (the programs are executed independently). You are given a program consisting of $$$n$$$ lines. Your task is to write a program consisting of minimum possible number of lines that is equivalent to the program you are given.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 1000$$$) — the number of lines in the program. Then $$$n$$$ lines follow — the program itself. Each line corresponds to the format described in the statement and has no extra whitespaces.",
+  "output_specification": "In the first line print $$$k$$$ — the minimum number of lines in the equivalent program. Then print $$$k$$$ lines without any whitespaces — an equivalent program having exactly $$$k$$$ lines, in the same format it is described in the statement.",
+  "sample_testcases": [
+    {
+      "input": "4\nc=aa#bb\nd12=c\nres=c^d12\ntmp=aa$c",
+      "output": "2\naaaa=aa#bb\nres=aaaa^aaaa"
+    },
+    {
+      "input": "2\nmax=aaaa$bbbb\nmin=bbbb^aaaa",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

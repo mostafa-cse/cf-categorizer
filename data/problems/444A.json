@@ -1,0 +1,43 @@
+{
+  "id": "444A",
+  "source": "problemset",
+  "contest_id": 444,
+  "problem_index": "A",
+  "name": "DZY Loves Physics",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 3608,
+  "problem_url": "https://codeforces.com/problemset/problem/444/A",
+  "editorial_url": "https://codeforces.com/blog/entry/12959",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "DZY loves Physics, and he enjoys calculating density. Almost everything has density, even a graph. We define the density of a non-directed graph (nodes and edges of the graph have some values) as follows: where v is the sum of the values of the nodes, e is the sum of the values of the edges. Once DZY got a graph G , now he wants to find a connected induced subgraph G ' of the graph, such that the density of G ' is as large as possible. An induced subgraph G '( V ', E ') of a graph G ( V , E ) is a graph that satisfies: ; edge if and only if , and edge ; the value of an edge in G ' is the same as the value of the corresponding edge in G , so as the value of a node. Help DZY to find the induced subgraph with maximum density. Note that the induced subgraph you choose must be connected.",
+  "input_specification": "The first line contains two space-separated integers n (1 ≤ n ≤ 500) , . Integer n represents the number of nodes of the graph G , m represents the number of edges. The second line contains n space-separated integers x i (1 ≤ x i ≤ 10 6 ) , where x i represents the value of the i -th node. Consider the graph nodes are numbered from 1 to n . Each of the next m lines contains three space-separated integers a i , b i , c i (1 ≤ a i < b i ≤ n ; 1 ≤ c i ≤ 10 3 ) , denoting an edge between node a i and b i with value c i . The graph won't contain multiple edges.",
+  "output_specification": "Output a real number denoting the answer, with an absolute or relative error of at most 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "1 0\n1",
+      "output": "0.000000000000000"
+    },
+    {
+      "input": "2 1\n1 2\n1 2 1",
+      "output": "3.000000000000000"
+    },
+    {
+      "input": "5 6\n13 56 73 98 17\n1 2 56\n1 3 29\n1 4 42\n2 3 95\n2 4 88\n3 4 63",
+      "output": "2.965517241379311"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

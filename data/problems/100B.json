@@ -1,0 +1,39 @@
+{
+  "id": "100B",
+  "source": "problemset",
+  "contest_id": 100,
+  "problem_index": "B",
+  "name": "Friendly Numbers",
+  "rating": 1500,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 622,
+  "problem_url": "https://codeforces.com/problemset/problem/100/B",
+  "editorial_url": "https://codeforces.com/blog/entry/2359",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kiana thinks two integers are friends if and only if one of them divides the other one. For example, 12 and 4 are friends, also 6 and 6 are friends too, but 120 and 36 are not. A group of non-zero integers is called friendly, if each pair of its integers form a friend pair. You are given a group of non-zero integers. See if they're friendly.",
+  "input_specification": "The first line contains n ( 1 ≤ n ≤ 1000 ), where n — the number of integers in the group. The next line contains the elements, sorted in the non-decreasing order. The numbers are comma separated, they have at most 7 digits in their decimal notation and do not have any leading zeros.",
+  "output_specification": "If the group is friendly write \" FRIENDS \", else write \" NOT FRIENDS \".",
+  "sample_testcases": [
+    {
+      "input": "4\n1,3,6,12",
+      "output": "FRIENDS"
+    },
+    {
+      "input": "3\n1,2,9",
+      "output": "NOT FRIENDS"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

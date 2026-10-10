@@ -1,0 +1,37 @@
+{
+  "id": "1523E",
+  "source": "problemset",
+  "contest_id": 1523,
+  "problem_index": "E",
+  "name": "Crypto Lights",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 2058,
+  "problem_url": "https://codeforces.com/problemset/problem/1523/E",
+  "editorial_url": "https://codeforces.com/blog/entry/91271",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "To monitor cryptocurrency exchange rates trader William invented a wonderful device consisting of $$$n$$$ lights arranged in a row. The device functions in the following way: Initially, all lights on William's device are turned off. At the beginning of a new iteration the device randomly, with a uniform distribution, picks a light that is turned off and turns it on, telling William which cryptocurrency he should invest in. After this iteration if any $$$k$$$ consecutive lights contain more than one turned on light, then the device finishes working. William doesn't like uncertainty, so he wants you to calculate the expected value of the number of lights that are turned on in the device after it finishes working.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). Description of the test cases follows. The only line for each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le k \\le n \\le 10^5$$$), which are the total number of lights and the length of subsegment of lights that are being checked, respectively.",
+  "output_specification": "For each test case print the answer, modulo $$$10^9+7$$$. Formally, let $$$M = 10^9+7$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 2\n15 2\n40 15",
+      "output": "333333338\n141946947\n329622137"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

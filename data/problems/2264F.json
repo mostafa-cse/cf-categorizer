@@ -1,0 +1,40 @@
+{
+  "id": "2264F",
+  "source": "problemset",
+  "contest_id": 2264,
+  "problem_index": "F",
+  "name": "Deranged Calculator",
+  "rating": 2800,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 384,
+  "problem_url": "https://codeforces.com/problemset/problem/2264/F",
+  "editorial_url": "https://codeforces.com/blog/entry/156680",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hacks are disabled on this problem. We are excited to introduce a new language for this Codeforces round: the Deranged Calculator language (DC). The DC language is a simplified programming language with some weird constraints. It only supports a single expression on one line and only has a single positive integer $$$n$$$ as input. The syntax of the expression is similar to that of most programming languages (in fact, the expression is valid Python), but it is very limited: Expressions consist of the input parameter $$$n$$$, parenthesized expressions, and calls to the round function. These are joined together by the operators + , - , * , and / . Grouping with parentheses () can be used to change the order of operations, as usual. The operators * and / have equal precedence and take precedence over + and - , which also have equal precedence. Operators of equal precedence are evaluated from left to right. The round function takes a single expression as its argument and rounds its value to the nearest integer, rounding up when the fractional part is exactly $$$0.5$$$. (For example, round(n/(n-n-n-n)) will always evaluate to $$$0$$$, because $$$x/(x-x-x-x)=-\\frac{1}{2}$$$ for a positive integer $$$x$$$. The fractional part is $$$0.5$$$, so it will be rounded up to $$$0$$$.) Only the input value $$$n$$$ can be used; no numeric constants are allowed in the program. All operations are performed using exact fractional arithmetic, so division does not round and can produce fractions. A derangement of $$$n$$$ numbers is a permutation of those numbers in which none of the numbers appears in its original position. For example, the derangements of the sequence $$$[1, 2, 3]$$$ are $$$[2, 3, 1]$$$ and $$$[3, 1, 2]$$$. You are given a single integer $$$k$$$. Your job is to make a valid DC program that, for every integer $$$n$$$ ($$$2 \\le n \\le k$$$), calculates the number of derangements of the sequence $$$[1, 2, \\ldots, n]$$$, when $$$n$$$ is given as input to the DC program. The length of the program should not exceed $$$10\\,000$$$ characters. A local testing tool is provided to help you develop your solution. It can be found under Contest Materials.",
+  "input_specification": "The only line of input contains a single integer $$$k$$$ ($$$k \\in \\{2,3,50\\}$$$). Your DC program should output the correct number of derangements for all integers $$$n$$$ such that $$$2 \\le n \\le k$$$.",
+  "output_specification": "Output a valid DC expression on a single line. The expression should only consist of the characters round()+-*/ and the length of the expression should not exceed $$$10\\,000$$$ characters. Your expression will be run on all integers $$$n$$$ such that $$$2 \\le n \\le k$$$. For each such run, the DC expression should not divide by $$$0$$$ at any time, and its value must be the number of derangements of $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "n-n/n"
+    },
+    {
+      "input": "3",
+      "output": "n+round(n-n*(n/(n+n)))-n"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:24",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1338C",
+  "source": "problemset",
+  "contest_id": 1338,
+  "problem_index": "C",
+  "name": "Perfect Triples",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "divide and conquer",
+    "math"
+  ],
+  "solved_count": 3505,
+  "problem_url": "https://codeforces.com/problemset/problem/1338/C",
+  "editorial_url": "https://codeforces.com/blog/entry/75913",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider the infinite sequence $$$s$$$ of positive integers, created by repeating the following steps: Find the lexicographically smallest triple of positive integers $$$(a, b, c)$$$ such that $$$a \\oplus b \\oplus c = 0$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . $$$a$$$, $$$b$$$, $$$c$$$ are not in $$$s$$$. Here triple of integers $$$(a_1, b_1, c_1)$$$ is considered to be lexicographically smaller than triple $$$(a_2, b_2, c_2)$$$ if sequence $$$[a_1, b_1, c_1]$$$ is lexicographically smaller than sequence $$$[a_2, b_2, c_2]$$$. Append $$$a$$$, $$$b$$$, $$$c$$$ to $$$s$$$ in this order. Go back to the first step. You have integer $$$n$$$. Find the $$$n$$$-th element of $$$s$$$. You have to answer $$$t$$$ independent test cases. A sequence $$$a$$$ is lexicographically smaller than a sequence $$$b$$$ if in the first position where $$$a$$$ and $$$b$$$ differ, the sequence $$$a$$$ has a smaller element than the corresponding element in $$$b$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Each of the next $$$t$$$ lines contains a single integer $$$n$$$ ($$$1\\le n \\le 10^{16}$$$) — the position of the element you want to know.",
+  "output_specification": "In each of the $$$t$$$ lines, output the answer to the corresponding test case.",
+  "sample_testcases": [
+    {
+      "input": "9\n1\n2\n3\n4\n5\n6\n7\n8\n9",
+      "output": "1\n2\n3\n4\n8\n12\n5\n10\n15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

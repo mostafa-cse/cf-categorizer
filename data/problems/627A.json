@@ -1,0 +1,43 @@
+{
+  "id": "627A",
+  "source": "problemset",
+  "contest_id": 627,
+  "problem_index": "A",
+  "name": "XOR Equation",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "math"
+  ],
+  "solved_count": 4959,
+  "problem_url": "https://codeforces.com/problemset/problem/627/A",
+  "editorial_url": "https://codeforces.com/blog/entry/43467",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Two positive integers a and b have a sum of s and a bitwise XOR of x . How many possible values are there for the ordered pair ( a , b ) ?",
+  "input_specification": "The first line of the input contains two integers s and x ( 2 ≤ s ≤ 10 12 , 0 ≤ x ≤ 10 12 ), the sum and bitwise xor of the pair of positive integers, respectively.",
+  "output_specification": "Print a single integer, the number of solutions to the given conditions. If no solutions exist, print 0 .",
+  "sample_testcases": [
+    {
+      "input": "9 5",
+      "output": "4"
+    },
+    {
+      "input": "3 3",
+      "output": "2"
+    },
+    {
+      "input": "5 2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

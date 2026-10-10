@@ -1,0 +1,38 @@
+{
+  "id": "53D",
+  "source": "problemset",
+  "contest_id": 53,
+  "problem_index": "D",
+  "name": "Physical Education",
+  "rating": 1500,
+  "tags": [
+    "sortings"
+  ],
+  "solved_count": 2712,
+  "problem_url": "https://codeforces.com/problemset/problem/53/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1065",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya is a school PE teacher. Unlike other PE teachers, Vasya doesn't like it when the students stand in line according to their height. Instead, he demands that the children stand in the following order: a 1 , a 2 , ..., a n , where a i is the height of the i -th student in the line and n is the number of students in the line. The children find it hard to keep in mind this strange arrangement, and today they formed the line in the following order: b 1 , b 2 , ..., b n , which upset Vasya immensely. Now Vasya wants to rearrange the children so that the resulting order is like this: a 1 , a 2 , ..., a n . During each move Vasya can swap two people who stand next to each other in the line. Help Vasya, find the sequence of swaps leading to the arrangement Vasya needs. It is not required to minimize the number of moves.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 300 ) which is the number of students. The second line contains n space-separated integers a i ( 1 ≤ a i ≤ 10 9 ) which represent the height of the student occupying the i -th place must possess. The third line contains n space-separated integers b i ( 1 ≤ b i ≤ 10 9 ) which represent the height of the student occupying the i -th place in the initial arrangement. It is possible that some students possess similar heights. It is guaranteed that it is possible to arrange the children in the required order, i.e. a and b coincide as multisets.",
+  "output_specification": "In the first line print an integer k ( 0 ≤ k ≤ 10 6 ) which is the number of moves. It is not required to minimize k but it must not exceed 10 6 . Then print k lines each containing two space-separated integers. Line p i , p i + 1 ( 1 ≤ p i ≤ n - 1 ) means that Vasya should swap students occupying places p i and p i + 1 .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 3 2\n3 2 1 2",
+      "output": "4\n2 3\n1 2\n3 4\n2 3"
+    },
+    {
+      "input": "2\n1 100500\n1 100500",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:26",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

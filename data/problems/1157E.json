@@ -1,0 +1,40 @@
+{
+  "id": "1157E",
+  "source": "problemset",
+  "contest_id": 1157,
+  "problem_index": "E",
+  "name": "Minimum Array",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 9417,
+  "problem_url": "https://codeforces.com/problemset/problem/1157/E",
+  "editorial_url": "https://codeforces.com/blog/entry/66737",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$, both of length $$$n$$$. All elements of both arrays are from $$$0$$$ to $$$n-1$$$. You can reorder elements of the array $$$b$$$ (if you want, you may leave the order of elements as it is). After that, let array $$$c$$$ be the array of length $$$n$$$, the $$$i$$$-th element of this array is $$$c_i = (a_i + b_i) \\% n$$$, where $$$x \\% y$$$ is $$$x$$$ modulo $$$y$$$. Your task is to reorder elements of the array $$$b$$$ to obtain the lexicographically minimum possible array $$$c$$$. Array $$$x$$$ of length $$$n$$$ is lexicographically less than array $$$y$$$ of length $$$n$$$, if there exists such $$$i$$$ ($$$1 \\le i \\le n$$$), that $$$x_i \\lt y_i$$$, and for any $$$j$$$ ($$$1 \\le j \\lt i$$$) $$$x_j = y_j$$$.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in $$$a$$$, $$$b$$$ and $$$c$$$. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\lt n$$$), where $$$a_i$$$ is the $$$i$$$-th element of $$$a$$$. The third line of the input contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$0 \\le b_i \\lt n$$$), where $$$b_i$$$ is the $$$i$$$-th element of $$$b$$$.",
+  "output_specification": "Print the lexicographically minimum possible array $$$c$$$. Recall that your task is to reorder elements of the array $$$b$$$ and obtain the lexicographically minimum possible array $$$c$$$, where the $$$i$$$-th element of $$$c$$$ is $$$c_i = (a_i + b_i) \\% n$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n0 1 2 1\n3 2 1 1",
+      "output": "1 0 0 2"
+    },
+    {
+      "input": "7\n2 5 1 5 3 4 3\n2 4 3 5 6 5 1",
+      "output": "0 0 0 1 0 2 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

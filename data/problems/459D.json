@@ -1,0 +1,44 @@
+{
+  "id": "459D",
+  "source": "problemset",
+  "contest_id": 459,
+  "problem_index": "D",
+  "name": "Pashmak and Parmida's problem",
+  "rating": 1800,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "sortings"
+  ],
+  "solved_count": 14237,
+  "problem_url": "https://codeforces.com/problemset/problem/459/D",
+  "editorial_url": "https://codeforces.com/blog/entry/13430",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Parmida is a clever girl and she wants to participate in Olympiads this year. Of course she wants her partner to be clever too (although he's not)! Parmida has prepared the following test problem for Pashmak. There is a sequence a that consists of n integers a 1 , a 2 , ..., a n . Let's denote f ( l , r , x ) the number of indices k such that: l ≤ k ≤ r and a k = x . His task is to calculate the number of pairs of indicies i , j (1 ≤ i < j ≤ n ) such that f (1, i , a i ) > f ( j , n , a j ) . Help Pashmak with the test.",
+  "input_specification": "The first line of the input contains an integer n (1 ≤ n ≤ 10 6 ) . The second line contains n space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) .",
+  "output_specification": "Print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "7\n1 2 1 1 2 2 1",
+      "output": "8"
+    },
+    {
+      "input": "3\n1 1 1",
+      "output": "1"
+    },
+    {
+      "input": "5\n1 2 3 4 5",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

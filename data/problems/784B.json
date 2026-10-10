@@ -1,0 +1,50 @@
+{
+  "id": "784B",
+  "source": "problemset",
+  "contest_id": 784,
+  "problem_index": "B",
+  "name": "Kids' Riddle",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 941,
+  "problem_url": "https://codeforces.com/problemset/problem/784/B",
+  "editorial_url": "https://codeforces.com/blog/entry/51351",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Programmers' kids solve this riddle in 5-10 minutes. How fast can you do it?",
+  "input_specification": "The input contains a single integer n ( 0 ≤ n ≤ 2000000000 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "11",
+      "output": "2"
+    },
+    {
+      "input": "14",
+      "output": "0"
+    },
+    {
+      "input": "61441",
+      "output": "2"
+    },
+    {
+      "input": "571576",
+      "output": "10"
+    },
+    {
+      "input": "2128506",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

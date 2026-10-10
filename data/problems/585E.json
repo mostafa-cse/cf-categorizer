@@ -1,0 +1,40 @@
+{
+  "id": "585E",
+  "source": "problemset",
+  "contest_id": 585,
+  "problem_index": "E",
+  "name": "Present for Vitalik the Philatelist ",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1304,
+  "problem_url": "https://codeforces.com/problemset/problem/585/E",
+  "editorial_url": "https://codeforces.com/blog/entry/20898",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vitalik the philatelist has a birthday today! As he is a regular customer in a stamp store called 'Robin Bobin', the store management decided to make him a gift. Vitalik wants to buy one stamp and the store will give him a non-empty set of the remaining stamps, such that the greatest common divisor (GCD) of the price of the stamps they give to him is more than one. If the GCD of prices of the purchased stamp and prices of present stamps set will be equal to 1 , then Vitalik will leave the store completely happy. The store management asks you to count the number of different situations in which Vitalik will leave the store completely happy. Since the required number of situations can be very large, you need to find the remainder of this number modulo 10 9 + 7 . The situations are different if the stamps purchased by Vitalik are different, or if one of the present sets contains a stamp that the other present does not contain.",
+  "input_specification": "The first line of the input contains integer n ( 2 ≤ n ≤ 5·10 5 ) — the number of distinct stamps, available for sale in the 'Robin Bobin' store. The second line contains a sequence of integers a 1 , a 2 , ..., a n ( 2 ≤ a i ≤ 10 7 ), where a i is the price of the i -th stamp.",
+  "output_specification": "Print a single integer — the remainder of the sought number of situations modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 3 2",
+      "output": "5"
+    },
+    {
+      "input": "2\n9 6",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

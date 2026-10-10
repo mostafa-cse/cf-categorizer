@@ -1,0 +1,39 @@
+{
+  "id": "1174F",
+  "source": "problemset",
+  "contest_id": 1174,
+  "problem_index": "F",
+  "name": "Ehab and the Big Finale",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "divide and conquer",
+    "graphs",
+    "implementation",
+    "interactive",
+    "trees"
+  ],
+  "solved_count": 2147,
+  "problem_url": "https://codeforces.com/problemset/problem/1174/F",
+  "editorial_url": "https://codeforces.com/blog/entry/67388",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. You're given a tree consisting of $$$n$$$ nodes, rooted at node $$$1$$$. A tree is a connected graph with no cycles. We chose a hidden node $$$x$$$. In order to find this node, you can ask queries of two types: d $$$u$$$ ($$$1 \\le u \\le n$$$). We will answer with the distance between nodes $$$u$$$ and $$$x$$$. The distance between two nodes is the number of edges in the shortest path between them. s $$$u$$$ ($$$1 \\le u \\le n$$$). We will answer with the second node on the path from $$$u$$$ to $$$x$$$. However, there's a plot twist. If $$$u$$$ is not an ancestor of $$$x$$$, you'll receive \" Wrong answer \" verdict! Node $$$a$$$ is called an ancestor of node $$$b$$$ if $$$a \\ne b$$$ and the shortest path from node $$$1$$$ to node $$$b$$$ passes through node $$$a$$$. Note that in this problem a node is not an ancestor of itself . Can you find $$$x$$$ in no more than $$$36$$$ queries? The hidden node is fixed in each test beforehand and does not depend on your queries.",
+  "input_specification": "The first line contains the integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of nodes in the tree. Each of the next $$$n-1$$$ lines contains two space-separated integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$) that mean there's an edge between nodes $$$u$$$ and $$$v$$$. It's guaranteed that the given graph is a tree.",
+  "output_specification": "To print the answer, print \" ! x \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n1 3\n3 4\n3 5\n3\n5",
+      "output": "d 2\ns 3\n! 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

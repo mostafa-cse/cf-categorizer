@@ -1,0 +1,37 @@
+{
+  "id": "1423K",
+  "source": "problemset",
+  "contest_id": 1423,
+  "problem_index": "K",
+  "name": "Lonely Numbers",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "math",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 5541,
+  "problem_url": "https://codeforces.com/problemset/problem/1423/K",
+  "editorial_url": "https://codeforces.com//www.bubblecup.org/Content/Media/Booklet2020.pdf",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In number world, two different numbers are friends if they have a lot in common, but also each one has unique perks. More precisely, two different numbers $$$a$$$ and $$$b$$$ are friends if $$$gcd(a,b)$$$, $$$\\frac{a}{gcd(a,b)}$$$, $$$\\frac{b}{gcd(a,b)}$$$ can form sides of a triangle. Three numbers $$$a$$$, $$$b$$$ and $$$c$$$ can form sides of a triangle if $$$a + b \\gt c$$$, $$$b + c \\gt a$$$ and $$$c + a \\gt b$$$. In a group of numbers, a number is lonely if it doesn't have any friends in that group. Given a group of numbers containing all numbers from $$$1, 2, 3, ..., n$$$, how many numbers in that group are lonely?",
+  "input_specification": "The first line contains a single integer $$$t$$$ $$$(1 \\leq t \\leq 10^6)$$$ - number of test cases. On next line there are $$$t$$$ numbers, $$$n_i$$$ $$$(1 \\leq n_i \\leq 10^6)$$$ - meaning that in case $$$i$$$ you should solve for numbers $$$1, 2, 3, ..., n_i$$$.",
+  "output_specification": "For each test case, print the answer on separate lines: number of lonely numbers in group $$$1, 2, 3, ..., n_i$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 5 10",
+      "output": "1\n3\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "547B",
+  "source": "problemset",
+  "contest_id": 547,
+  "problem_index": "B",
+  "name": "Mike and Feet",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "dsu"
+  ],
+  "solved_count": 12038,
+  "problem_url": "https://codeforces.com/problemset/problem/547/B",
+  "editorial_url": "https://codeforces.com/blog/entry/18126",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Mike is the president of country What-The-Fatherland. There are n bears living in this country besides Mike. All of them are standing in a line and they are numbered from 1 to n from left to right. i -th bear is exactly a i feet high. A group of bears is a non-empty contiguous segment of the line. The size of a group is the number of bears in that group. The strength of a group is the minimum height of the bear in that group. Mike is a curious to know for each x such that 1 ≤ x ≤ n the maximum strength among all groups of size x .",
+  "input_specification": "The first line of input contains integer n ( 1 ≤ n ≤ 2 × 10 5 ), the number of bears. The second line contains n integers separated by space, a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ), heights of bears.",
+  "output_specification": "Print n integers in one line. For each x from 1 to n , print the maximum strength among all groups of size x .",
+  "sample_testcases": [
+    {
+      "input": "10\n1 2 3 4 5 4 3 2 1 6",
+      "output": "6 4 4 3 3 2 2 1 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

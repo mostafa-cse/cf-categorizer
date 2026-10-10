@@ -1,0 +1,43 @@
+{
+  "id": "796D",
+  "source": "problemset",
+  "contest_id": 796,
+  "problem_index": "D",
+  "name": "Police Stations",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "shortest paths",
+    "trees"
+  ],
+  "solved_count": 8044,
+  "problem_url": "https://codeforces.com/problemset/problem/796/D",
+  "editorial_url": "https://codeforces.com/blog/entry/51527",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Inzane finally found Zane with a lot of money to spare, so they together decided to establish a country of their own. Ruling a country is not an easy job. Thieves and terrorists are always ready to ruin the country's peace. To fight back, Zane and Inzane have enacted a very effective law: from each city it must be possible to reach a police station by traveling at most d kilometers along the roads. There are n cities in the country, numbered from 1 to n , connected only by exactly n - 1 roads. All roads are 1 kilometer long. It is initially possible to travel from a city to any other city using these roads. The country also has k police stations located in some cities. In particular, the city's structure satisfies the requirement enforced by the previously mentioned law. Also note that there can be multiple police stations in one city. However, Zane feels like having as many as n - 1 roads is unnecessary. The country is having financial issues, so it wants to minimize the road maintenance cost by shutting down as many roads as possible. Help Zane find the maximum number of roads that can be shut down without breaking the law. Also, help him determine such roads.",
+  "input_specification": "The first line contains three integers n , k , and d ( 2 ≤ n ≤ 3·10 5 , 1 ≤ k ≤ 3·10 5 , 0 ≤ d ≤ n - 1 ) — the number of cities, the number of police stations, and the distance limitation in kilometers, respectively. The second line contains k integers p 1 , p 2 , ..., p k ( 1 ≤ p i ≤ n ) — each denoting the city each police station is located in. The i -th of the following n - 1 lines contains two integers u i and v i ( 1 ≤ u i , v i ≤ n , u i ≠ v i ) — the cities directly connected by the road with index i . It is guaranteed that it is possible to travel from one city to any other city using only the roads. Also, it is possible from any city to reach a police station within d kilometers.",
+  "output_specification": "In the first line, print one integer s that denotes the maximum number of roads that can be shut down. In the second line, print s distinct integers, the indices of such roads, in any order. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6 2 4\n1 6\n1 2\n2 3\n3 4\n4 5\n5 6",
+      "output": "1\n5"
+    },
+    {
+      "input": "6 3 2\n1 5 6\n1 2\n1 3\n1 4\n1 5\n5 6",
+      "output": "2\n4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

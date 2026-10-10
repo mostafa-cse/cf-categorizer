@@ -1,0 +1,45 @@
+{
+  "id": "1062D",
+  "source": "problemset",
+  "contest_id": 1062,
+  "problem_index": "D",
+  "name": "Fun with Integers",
+  "rating": 1800,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 4203,
+  "problem_url": "https://codeforces.com/problemset/problem/1062/D",
+  "editorial_url": "https://codeforces.com/blog/entry/63199",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a positive integer $$$n$$$ greater or equal to $$$2$$$. For every pair of integers $$$a$$$ and $$$b$$$ ($$$2 \\le |a|, |b| \\le n$$$), you can transform $$$a$$$ into $$$b$$$ if and only if there exists an integer $$$x$$$ such that $$$1 \\lt |x|$$$ and ($$$a \\cdot x = b$$$ or $$$b \\cdot x = a$$$), where $$$|x|$$$ denotes the absolute value of $$$x$$$. After such a transformation, your score increases by $$$|x|$$$ points and you are not allowed to transform $$$a$$$ into $$$b$$$ nor $$$b$$$ into $$$a$$$ anymore. Initially, you have a score of $$$0$$$. You can start at any integer and transform it as many times as you like. What is the maximum score you can achieve?",
+  "input_specification": "A single line contains a single integer $$$n$$$ ($$$2 \\le n \\le 100\\,000$$$) — the given integer described above.",
+  "output_specification": "Print an only integer — the maximum score that can be achieved with the transformations. If it is not possible to perform even a single transformation for all possible starting integers, print $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "8"
+    },
+    {
+      "input": "6",
+      "output": "28"
+    },
+    {
+      "input": "2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:06",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

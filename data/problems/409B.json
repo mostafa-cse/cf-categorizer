@@ -1,0 +1,29 @@
+{
+  "id": "409B",
+  "source": "problemset",
+  "contest_id": 409,
+  "problem_index": "B",
+  "name": "Mysterious Language",
+  "rating": 1700,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 1438,
+  "problem_url": "https://codeforces.com/problemset/problem/409/B",
+  "editorial_url": "https://codeforces.com/blog/entry/11391",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a mysterious language (codenamed \"Secret\") available in \"Custom Invocation\" tab. Figure out what this language is and write a program which prints its name. Note that the program must be written in this language.",
+  "input_specification": "This program has only one test (your program doesn't have to read anything).",
+  "output_specification": "Output the name of the mysterious language. Note that the name is case-sensitive and might contain digits and special characters.",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

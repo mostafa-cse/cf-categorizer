@@ -1,0 +1,34 @@
+{
+  "id": "690B2",
+  "source": "problemset",
+  "contest_id": 690,
+  "problem_index": "B2",
+  "name": "Recover Polygon (medium)",
+  "rating": 2600,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 271,
+  "problem_url": "https://codeforces.com/problemset/problem/690/B2",
+  "editorial_url": "https://codeforces.com/blog/entry/45628",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Now that Heidi has made sure her Zombie Contamination level checker works, it's time to strike! This time, the zombie lair is a strictly convex polygon on the lattice. Each vertex of the polygon occupies a point on the lattice. For each cell of the lattice, Heidi knows the level of Zombie Contamination – the number of corners of the cell that are inside or on the border of the lair. Given this information, Heidi wants to know the exact shape of the lair to rain destruction on the zombies. Help her!",
+  "input_specification": "The input contains multiple test cases. The first line of each test case contains one integer N , the size of the lattice grid ( 5 ≤ N ≤ 500 ). The next N lines each contain N characters, describing the level of Zombie Contamination of each cell in the lattice. Every character of every line is a digit between 0 and 4. Cells are given in the same order as they are shown in the picture above: rows go in the decreasing value of y coordinate, and in one row cells go in the order of increasing x coordinate. This means that the first row corresponds to cells with coordinates (1, N ), ..., ( N , N ) and the last row corresponds to cells with coordinates (1, 1), ..., ( N , 1) . The last line of the file contains a zero. This line should not be treated as a test case. The sum of the N values for all tests in one file will not exceed 5000 .",
+  "output_specification": "For each test case, give the following output: The first line of the output should contain one integer V , the number of vertices of the polygon that is the secret lair. The next V lines each should contain two integers, denoting the vertices of the polygon in the clockwise order, starting from the lexicographically smallest vertex.",
+  "sample_testcases": [
+    {
+      "input": "8\n00000000\n00000110\n00012210\n01234200\n02444200\n01223200\n00001100\n00000000\n5\n00000\n01210\n02420\n01210\n00000\n7\n0000000\n0122100\n0134200\n0013200\n0002200\n0001100\n0000000\n0",
+      "output": "4\n2 3\n2 4\n6 6\n5 2\n4\n2 2\n2 3\n3 3\n3 2\n3\n2 5\n4 5\n4 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

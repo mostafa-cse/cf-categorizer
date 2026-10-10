@@ -1,0 +1,43 @@
+{
+  "id": "614B",
+  "source": "problemset",
+  "contest_id": 614,
+  "problem_index": "B",
+  "name": "Gena's Code",
+  "rating": 1400,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 7386,
+  "problem_url": "https://codeforces.com/problemset/problem/614/B",
+  "editorial_url": "https://codeforces.com/blog/entry/22832",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It's the year 4527 and the tanks game that we all know and love still exists. There also exists Great Gena's code, written in 2016. The problem this code solves is: given the number of tanks that go into the battle from each country, find their product. If it is turns to be too large, then the servers might have not enough time to assign tanks into teams and the whole game will collapse! There are exactly n distinct countries in the world and the i -th country added a i tanks to the game. As the developers of the game are perfectionists, the number of tanks from each country is beautiful. A beautiful number, according to the developers, is such number that its decimal representation consists only of digits ' 1 ' and ' 0 ', moreover it contains at most one digit ' 1 '. However, due to complaints from players, some number of tanks of one country was removed from the game, hence the number of tanks of this country may not remain beautiful. Your task is to write the program that solves exactly the same problem in order to verify Gena's code correctness. Just in case.",
+  "input_specification": "The first line of the input contains the number of countries n ( 1 ≤ n ≤ 100 000 ). The second line contains n non-negative integers a i without leading zeroes — the number of tanks of the i -th country. It is guaranteed that the second line contains at least n - 1 beautiful numbers and the total length of all these number's representations doesn't exceed 100 000 .",
+  "output_specification": "Print a single number without leading zeroes — the product of the number of tanks presented by each country.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 10 1",
+      "output": "50"
+    },
+    {
+      "input": "4\n1 1 10 11",
+      "output": "110"
+    },
+    {
+      "input": "5\n0 3 1 100 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

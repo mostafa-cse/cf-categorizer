@@ -1,0 +1,38 @@
+{
+  "id": "2190D",
+  "source": "problemset",
+  "contest_id": 2190,
+  "problem_index": "D",
+  "name": "Prufer Vertex",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dsu",
+    "number theory",
+    "probabilities",
+    "trees"
+  ],
+  "solved_count": 1052,
+  "problem_url": "https://codeforces.com/problemset/problem/2190/D",
+  "editorial_url": "https://codeforces.com/blog/entry/150256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "For a tree $$$T$$$ with $$$n \\ge 2$$$ vertices, consider the standard process for generating its Prufer sequence . We repeatedly perform the following steps until only two vertices remain: Select the leaf with the smallest label; Remove it from the tree. It is known that vertex $$$n$$$ is always one of the two remaining vertices. Let $$$v$$$ be the other remaining vertex. We define the Prufer vertex of $$$T$$$ as $$$P(T) = v$$$. You are given a forest with $$$n$$$ vertices and $$$m$$$ edges. Let $$$k$$$ be the number of connected components in this forest, and let their sizes be $$$s_1, s_2, \\ldots, s_k$$$. It is known that there are exactly $$$n^{k - 2} \\prod\\limits_{i=1}^k s_i$$$ ways to add edges to the forest so that it becomes a single tree. For each $$$v$$$ ($$$1 \\le v \\lt n$$$), calculate how many of these ways result in a tree $$$T$$$ satisfying $$$P(T) = v$$$. Since the answers can be large, print them modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le m \\le n - 1$$$) — the number of vertices and edges in the forest, respectively. The next $$$m$$$ lines of each test case contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n, u \\neq v$$$), describing an edge between vertices $$$u$$$ and $$$v$$$. It is guaranteed that these edges form a forest (that is, the graph is acyclic). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print $$$n - 1$$$ integers on a single line. The $$$i$$$-th integer should be the number of ways to add edges to the forest so that it becomes a tree $$$T$$$ satisfying $$$P(T) = i$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 0\n5 4\n4 2\n3 4\n1 2\n4 5\n6 3\n1 6\n6 4\n2 1",
+      "output": "1 2\n0 0 0 1\n12 0 1 6 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:37",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

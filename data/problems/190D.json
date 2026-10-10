@@ -1,0 +1,42 @@
+{
+  "id": "190D",
+  "source": "problemset",
+  "contest_id": 190,
+  "problem_index": "D",
+  "name": "Non-Secret Cypher",
+  "rating": 1900,
+  "tags": [
+    "two pointers"
+  ],
+  "solved_count": 2720,
+  "problem_url": "https://codeforces.com/problemset/problem/190/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4556",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Berland starts to seize the initiative on the war with Flatland. To drive the enemy from their native land, the berlanders need to know exactly how many more flatland soldiers are left in the enemy's reserve. Fortunately, the scouts captured an enemy in the morning, who had a secret encrypted message with the information the berlanders needed so much. The captured enemy had an array of positive integers. Berland intelligence have long been aware of the flatland code: to convey the message, which contained a number m , the enemies use an array of integers a . The number of its subarrays, in which there are at least k equal numbers, equals m . The number k has long been known in the Berland army so General Touristov has once again asked Corporal Vasya to perform a simple task: to decipher the flatlanders' message. Help Vasya, given an array of integers a and number k , find the number of subarrays of the array of numbers a , which has at least k equal numbers. Subarray a [ i ... j ] (1 ≤ i ≤ j ≤ n ) of array a = ( a 1 , a 2 , ..., a n ) is an array, made from its consecutive elements, starting from the i -th one and ending with the j -th one: a [ i ... j ] = ( a i , a i + 1 , ..., a j ) .",
+  "input_specification": "The first line contains two space-separated integers n , k (1 ≤ k ≤ n ≤ 4·10 5 ) , showing how many numbers an array has and how many equal numbers the subarrays are required to have, correspondingly. The second line contains n space-separated integers a i ( 1 ≤ a i ≤ 10 9 ) — elements of the array.",
+  "output_specification": "Print the single number — the number of such subarrays of array a , that they have at least k equal integers. Please do not use the %lld specifier to read or write 64-bit integers in С++. In is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n1 2 1 2",
+      "output": "3"
+    },
+    {
+      "input": "5 3\n1 2 1 1 3",
+      "output": "2"
+    },
+    {
+      "input": "3 1\n1 1 1",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "837D",
+  "source": "problemset",
+  "contest_id": 837,
+  "problem_index": "D",
+  "name": "Round Subset",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "math"
+  ],
+  "solved_count": 8343,
+  "problem_url": "https://codeforces.com/problemset/problem/837/D",
+  "editorial_url": "https://codeforces.com/blog/entry/53662",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call the roundness of the number the number of zeros to which it ends. You have an array of n numbers. You need to choose a subset of exactly k numbers so that the roundness of the product of the selected numbers will be maximum possible.",
+  "input_specification": "The first line contains two integer numbers n and k ( 1 ≤ n ≤ 200, 1 ≤ k ≤ n ). The second line contains n space-separated integer numbers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 18 ).",
+  "output_specification": "Print maximal roundness of product of the chosen subset of length k .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n50 4 20",
+      "output": "3"
+    },
+    {
+      "input": "5 3\n15 16 3 25 9",
+      "output": "3"
+    },
+    {
+      "input": "3 3\n9 77 13",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

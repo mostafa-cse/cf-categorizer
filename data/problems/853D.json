@@ -1,0 +1,40 @@
+{
+  "id": "853D",
+  "source": "problemset",
+  "contest_id": 853,
+  "problem_index": "D",
+  "name": "Michael and Charging Stations",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 733,
+  "problem_url": "https://codeforces.com/problemset/problem/853/D",
+  "editorial_url": "https://codeforces.com/blog/entry/54368",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Michael has just bought a new electric car for moving across city. Michael does not like to overwork, so each day he drives to only one of two his jobs. Michael's day starts from charging his electric car for getting to the work and back. He spends 1000 burles on charge if he goes to the first job, and 2000 burles if he goes to the second job. On a charging station he uses there is a loyalty program that involves bonus cards. Bonus card may have some non-negative amount of bonus burles. Each time customer is going to buy something for the price of x burles, he is allowed to pay an amount of y ( 0 ≤ y ≤ x ) burles that does not exceed the bonus card balance with bonus burles. In this case he pays x - y burles with cash, and the balance on the bonus card is decreased by y bonus burles. If customer pays whole price with cash (i.e., y = 0 ) then 10% of price is returned back to the bonus card. This means that bonus card balance increases by bonus burles. Initially the bonus card balance is equal to 0 bonus burles. Michael has planned next n days and he knows how much does the charge cost on each of those days. Help Michael determine the minimum amount of burles in cash he has to spend with optimal use of bonus card. Assume that Michael is able to cover any part of the price with cash in any day. It is not necessary to spend all bonus burles at the end of the given period.",
+  "input_specification": "The first line of input contains a single integer n ( 1 ≤ n ≤ 300 000 ), the number of days Michael has planned. Next line contains n integers a 1 , a 2 , ..., a n ( a i = 1000 or a i = 2000 ) with a i denoting the charging cost at the day i .",
+  "output_specification": "Output the minimum amount of burles Michael has to spend.",
+  "sample_testcases": [
+    {
+      "input": "3\n1000 2000 1000",
+      "output": "3700"
+    },
+    {
+      "input": "6\n2000 2000 2000 2000 2000 1000",
+      "output": "10000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

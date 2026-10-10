@@ -1,0 +1,43 @@
+{
+  "id": "71E",
+  "source": "problemset",
+  "contest_id": 71,
+  "problem_index": "E",
+  "name": "Nuclear Fusion",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "dp"
+  ],
+  "solved_count": 1006,
+  "problem_url": "https://codeforces.com/problemset/problem/71/E",
+  "editorial_url": "https://codeforces.com/blog/entry/1624",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is the following puzzle popular among nuclear physicists. A reactor contains a set of n atoms of some chemical elements. We shall understand the phrase \"atomic number\" as the number of this atom's element in the periodic table of the chemical elements. You are allowed to take any two different atoms and fuse a new one from them. That results in a new atom, whose number is equal to the sum of the numbers of original atoms. The fusion operation can be performed several times. The aim is getting a new pregiven set of k atoms. The puzzle's difficulty is that it is only allowed to fuse two atoms into one, it is not allowed to split an atom into several atoms. You are suggested to try to solve the puzzle.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ k ≤ n ≤ 17 ). The second line contains space-separated symbols of elements of n atoms, which are available from the start. The third line contains space-separated symbols of elements of k atoms which need to be the result of the fusion. The symbols of the elements coincide with the symbols from the periodic table of the chemical elements. The atomic numbers do not exceed 100 (elements possessing larger numbers are highly unstable). Some atoms can have identical numbers (that is, there can be several atoms of the same element). The sum of numbers of initial atoms is equal to the sum of numbers of the atoms that need to be synthesized.",
+  "output_specification": "If it is impossible to synthesize the required atoms, print \" NO \" without the quotes. Otherwise, print on the first line « YES », and on the next k lines print the way of synthesizing each of k atoms as equations. Each equation has the following form: \" x 1 + x 2 + ... + x t -> y i \", where x j is the symbol of the element of some atom from the original set, and y i is the symbol of the element of some atom from the resulting set. Each atom from the input data should occur in the output data exactly one time. The order of summands in the equations, as well as the output order does not matter. If there are several solutions, print any of them. For a better understanding of the output format, see the samples.",
+  "sample_testcases": [
+    {
+      "input": "10 3\nMn Co Li Mg C P F Zn Sc K\nSn Pt Y",
+      "output": "YES\nMn+C+K->Sn\nCo+Zn+Sc->Pt\nLi+Mg+P+F->Y"
+    },
+    {
+      "input": "2 1\nH H\nHe",
+      "output": "YES\nH+H->He"
+    },
+    {
+      "input": "2 2\nBk Fm\nCf Es",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

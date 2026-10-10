@@ -1,0 +1,40 @@
+{
+  "id": "580B",
+  "source": "problemset",
+  "contest_id": 580,
+  "problem_index": "B",
+  "name": "Kefa and Company",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 33907,
+  "problem_url": "https://codeforces.com/problemset/problem/580/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20468",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kefa wants to celebrate his first big salary by going to restaurant. However, he needs company. Kefa has n friends, each friend will agree to go to the restaurant if Kefa asks. Each friend is characterized by the amount of money he has and the friendship factor in respect to Kefa. The parrot doesn't want any friend to feel poor compared to somebody else in the company (Kefa doesn't count). A friend feels poor if in the company there is someone who has at least d units of money more than he does. Also, Kefa wants the total friendship factor of the members of the company to be maximum. Help him invite an optimal company!",
+  "input_specification": "The first line of the input contains two space-separated integers, n and d ( 1 ≤ n ≤ 10 5 , ) — the number of Kefa's friends and the minimum difference between the amount of money in order to feel poor, respectively. Next n lines contain the descriptions of Kefa's friends, the ( i + 1) -th line contains the description of the i -th friend of type m i , s i ( 0 ≤ m i , s i ≤ 10 9 ) — the amount of money and the friendship factor, respectively.",
+  "output_specification": "Print the maximum total friendship factir that can be reached.",
+  "sample_testcases": [
+    {
+      "input": "4 5\n75 5\n0 100\n150 20\n75 1",
+      "output": "100"
+    },
+    {
+      "input": "5 100\n0 7\n11 32\n99 10\n46 8\n87 54",
+      "output": "111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

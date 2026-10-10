@@ -1,0 +1,35 @@
+{
+  "id": "1620F",
+  "source": "problemset",
+  "contest_id": 1620,
+  "problem_index": "F",
+  "name": "Bipartite Array",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 831,
+  "problem_url": "https://codeforces.com/problemset/problem/1620/F",
+  "editorial_url": "https://codeforces.com/blog/entry/98061",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation $$$p$$$ consisting of $$$n$$$ integers $$$1, 2, \\dots, n$$$ (a permutation is an array where each element from $$$1$$$ to $$$n$$$ occurs exactly once). Let's call an array $$$a$$$ bipartite if the following undirected graph is bipartite: the graph consists of $$$n$$$ vertices; two vertices $$$i$$$ and $$$j$$$ are connected by an edge if $$$i \\lt j$$$ and $$$a_i \\gt a_j$$$. Your task is to find a bipartite array of integers $$$a$$$ of size $$$n$$$, such that $$$a_i = p_i$$$ or $$$a_i = -p_i$$$, or report that no such array exists. If there are multiple answers, print any of them.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^5$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — the size of the permutation. The second line contains $$$n$$$ integers $$$p_1, p_2, \\dots, p_n$$$. The sum of $$$n$$$ over all test cases doesn't exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print the answer in the following format. If such an array $$$a$$$ does not exist, print \" NO \" in a single line. Otherwise, print \" YES \" in the first line and $$$n$$$ integers — array $$$a$$$ in the second line.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n1 2 3\n6\n1 3 2 6 5 4\n4\n4 1 3 2\n8\n3 2 1 6 7 8 5 4",
+      "output": "YES\n1 2 3\nNO\nYES\n-4 -1 -3 -2\nYES\n-3 -2 1 6 7 -8 -5 -4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

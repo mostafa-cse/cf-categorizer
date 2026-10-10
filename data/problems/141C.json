@@ -1,0 +1,40 @@
+{
+  "id": "141C",
+  "source": "problemset",
+  "contest_id": 141,
+  "problem_index": "C",
+  "name": "Queue",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 2781,
+  "problem_url": "https://codeforces.com/problemset/problem/141/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3571",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the Main Berland Bank n people stand in a queue at the cashier, everyone knows his/her height h i , and the heights of the other people in the queue. Each of them keeps in mind number a i — how many people who are taller than him/her and stand in queue in front of him. After a while the cashier has a lunch break and the people in the queue seat on the chairs in the waiting room in a random order. When the lunch break was over, it turned out that nobody can remember the exact order of the people in the queue, but everyone remembers his number a i . Your task is to restore the order in which the people stood in the queue if it is possible. There may be several acceptable orders, but you need to find any of them. Also, you need to print a possible set of numbers h i — the heights of people in the queue, so that the numbers a i are correct.",
+  "input_specification": "The first input line contains integer n — the number of people in the queue ( 1 ≤ n ≤ 3000 ). Then n lines contain descriptions of the people as \" name i a i \" (one description on one line), where name i is a non-empty string consisting of lowercase Latin letters whose length does not exceed 10 characters (the i -th person's name), a i is an integer ( 0 ≤ a i ≤ n - 1 ), that represents the number of people who are higher and stand in the queue in front of person i . It is guaranteed that all names are different.",
+  "output_specification": "If there's no acceptable order of the people in the queue, print the single line containing \" -1 \" without the quotes. Otherwise, print in n lines the people as \" name i h i \", where h i is the integer from 1 to 10 9 (inclusive), the possible height of a man whose name is name i . Print the people in the order in which they stand in the queue, starting from the head of the queue and moving to its tail. Numbers h i are not necessarily unique.",
+  "sample_testcases": [
+    {
+      "input": "4\na 0\nb 2\nc 0\nd 0",
+      "output": "a 150\nc 170\nd 180\nb 160"
+    },
+    {
+      "input": "4\nvasya 0\npetya 1\nmanya 3\ndunay 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

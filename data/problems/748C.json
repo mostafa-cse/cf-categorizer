@@ -1,0 +1,51 @@
+{
+  "id": "748C",
+  "source": "problemset",
+  "contest_id": 748,
+  "problem_index": "C",
+  "name": "Santa Claus and Robot",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 4973,
+  "problem_url": "https://codeforces.com/problemset/problem/748/C",
+  "editorial_url": "https://codeforces.com/blog/entry/49328",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Santa Claus has Robot which lives on the infinite grid and can move along its lines . He can also, having a sequence of m points p 1 , p 2 , ..., p m with integer coordinates, do the following: denote its initial location by p 0 . First, the robot will move from p 0 to p 1 along one of the shortest paths between them (please notice that since the robot moves only along the grid lines, there can be several shortest paths). Then, after it reaches p 1 , it'll move to p 2 , again, choosing one of the shortest ways, then to p 3 , and so on, until he has visited all points in the given order. Some of the points in the sequence may coincide, in that case Robot will visit that point several times according to the sequence order. While Santa was away, someone gave a sequence of points to Robot. This sequence is now lost, but Robot saved the protocol of its unit movements. Please, find the minimum possible length of the sequence.",
+  "input_specification": "The first line of input contains the only positive integer n ( 1 ≤ n ≤ 2·10 5 ) which equals the number of unit segments the robot traveled. The second line contains the movements protocol, which consists of n letters, each being equal either L , or R , or U , or D . k -th letter stands for the direction which Robot traveled the k -th unit segment in: L means that it moved to the left, R — to the right, U — to the top and D — to the bottom. Have a look at the illustrations for better explanation.",
+  "output_specification": "The only line of input should contain the minimum possible length of the sequence.",
+  "sample_testcases": [
+    {
+      "input": "4\nRURD",
+      "output": "2"
+    },
+    {
+      "input": "6\nRRULDD",
+      "output": "2"
+    },
+    {
+      "input": "26\nRRRULURURUULULLLDLDDRDRDLD",
+      "output": "7"
+    },
+    {
+      "input": "3\nRLL",
+      "output": "2"
+    },
+    {
+      "input": "4\nLRLR",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

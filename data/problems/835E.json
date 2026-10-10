@@ -1,0 +1,36 @@
+{
+  "id": "835E",
+  "source": "problemset",
+  "contest_id": 835,
+  "problem_index": "E",
+  "name": "The penguin's game",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "interactive"
+  ],
+  "solved_count": 1425,
+  "problem_url": "https://codeforces.com/problemset/problem/835/E",
+  "editorial_url": "https://codeforces.com/blog/entry/53566",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Pay attention: this problem is interactive. Penguin Xoriy came up with a new game recently. He has n icicles numbered from 1 to n . Each icicle has a temperature — an integer from 1 to 10 9 . Exactly two of these icicles are special: their temperature is y , while a temperature of all the others is x ≠ y . You have to find those special icicles. You can choose a non-empty subset of icicles and ask the penguin what is the bitwise exclusive OR ( XOR ) of the temperatures of the icicles in this subset. Note that you can't ask more than 19 questions. You are to find the special icicles.",
+  "input_specification": "The first line contains three integers n , x , y ( 2 ≤ n ≤ 1000 , 1 ≤ x , y ≤ 10 9 , x ≠ y ) — the number of icicles, the temperature of non-special icicles and the temperature of the special icicles.",
+  "output_specification": "To give your answer to the penguin you have to print character \"!\" (without quotes), then print two integers p 1 , p 2 ( p 1 < p 2 ) — the indexes of the special icicles in ascending order . Note that \"!\" and p 1 should be separated by a space; the indexes should be separated by a space too. After you gave the answer your program should terminate immediately.",
+  "sample_testcases": [
+    {
+      "input": "4 2 1\n2\n1\n1",
+      "output": "? 3 1 2 3\n? 1 1\n? 1 3\n! 1 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

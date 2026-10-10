@@ -1,0 +1,35 @@
+{
+  "id": "1572C",
+  "source": "problemset",
+  "contest_id": 1572,
+  "problem_index": "C",
+  "name": "Paint",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1811,
+  "problem_url": "https://codeforces.com/problemset/problem/1572/C",
+  "editorial_url": "https://codeforces.com/blog/entry/95086",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a $$$1$$$ by $$$n$$$ pixel image. The $$$i$$$-th pixel of the image has color $$$a_i$$$. For each color, the number of pixels of that color is at most $$$20$$$. You can perform the following operation, which works like the bucket tool in paint programs, on this image: pick a color — an integer from $$$1$$$ to $$$n$$$; choose a pixel in the image; for all pixels connected to the selected pixel, change their colors to the selected color (two pixels of the same color are considered connected if all the pixels between them have the same color as those two pixels). Compute the minimum number of operations needed to make all the pixels in the image have the same color.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^3$$$). The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 3\\cdot10^3$$$) — the number of pixels in the image. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the colors of the pixels in the image. Note: for each color, the number of pixels of that color is at most $$$20$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3\\cdot10^3$$$.",
+  "output_specification": "For each test case, print one integer: the minimum number of operations needed to make all the pixels in the image have the same color.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 2 3 2 1\n4\n1 1 2 2\n5\n1 2 1 4 2",
+      "output": "2\n1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:58",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

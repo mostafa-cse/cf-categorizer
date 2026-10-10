@@ -1,0 +1,38 @@
+{
+  "id": "734D",
+  "source": "problemset",
+  "contest_id": 734,
+  "problem_index": "D",
+  "name": "Anton and Chess",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3955,
+  "problem_url": "https://codeforces.com/problemset/problem/734/D",
+  "editorial_url": "https://codeforces.com/blog/entry/48397",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Anton likes to play chess. Also, he likes to do programming. That is why he decided to write the program that plays chess. However, he finds the game on 8 to 8 board to too simple, he uses an infinite one instead. The first task he faced is to check whether the king is in check. Anton doesn't know how to implement this so he asks you to help. Consider that an infinite chess board contains one white king and the number of black pieces. There are only rooks, bishops and queens, as the other pieces are not supported yet. The white king is said to be in check if at least one black piece can reach the cell with the king in one move. Help Anton and write the program that for the given position determines whether the white king is in check. Remainder, on how do chess pieces move: Bishop moves any number of cells diagonally, but it can't \"leap\" over the occupied cells. Rook moves any number of cells horizontally or vertically, but it also can't \"leap\" over the occupied cells. Queen is able to move any number of cells horizontally, vertically or diagonally, but it also can't \"leap\".",
+  "input_specification": "The first line of the input contains a single integer n ( 1 ≤ n ≤ 500 000 ) — the number of black pieces. The second line contains two integers x 0 and y 0 ( - 10 9 ≤ x 0 , y 0 ≤ 10 9 ) — coordinates of the white king. Then follow n lines, each of them contains a character and two integers x i and y i ( - 10 9 ≤ x i , y i ≤ 10 9 ) — type of the i -th piece and its position. Character ' B ' stands for the bishop, ' R ' for the rook and ' Q ' for the queen. It's guaranteed that no two pieces occupy the same position.",
+  "output_specification": "The only line of the output should contains \" YES \" (without quotes) if the white king is in check and \" NO \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2\n4 2\nR 1 1\nB 1 5",
+      "output": "YES"
+    },
+    {
+      "input": "2\n4 2\nR 3 3\nB 1 5",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

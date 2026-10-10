@@ -1,0 +1,40 @@
+{
+  "id": "2086F",
+  "source": "problemset",
+  "contest_id": 2086,
+  "problem_index": "F",
+  "name": "Online Palindrome",
+  "rating": 3000,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "interactive"
+  ],
+  "solved_count": 148,
+  "problem_url": "https://codeforces.com/problemset/problem/2086/F",
+  "editorial_url": "https://codeforces.com/blog/entry/141425",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "This is an interactive problem. The jury has a string $$$s$$$ consisting of lowercase Latin letters. The following constraints apply to this string: the string has an odd length that does not exceed $$$99$$$; the string consists only of the characters \" a \" and \" b \". There is also a string $$$t$$$, which is initially empty. Then, $$$|s|$$$ steps happen. During the $$$i$$$-th step, the following events occur: first, the jury tells you the character $$$s_i$$$ and appends it to the end of the string $$$t$$$; then, you may swap any two characters in $$$t$$$, or do nothing. Your task is to ensure that after the $$$|s|$$$-th step, the string $$$t$$$ is a palindrome.\n\nInteraction The interactive interaction starts immediately. During each step, your program will receive one character — the next character of the string $$$s$$$ or \" 0 \" (zero) if the string has ended. If the character \" 0 \" is received, your program must terminate immediately. After receiving $$$s_{i}$$$, you must output the positions of the characters to be swapped, that is, two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l,r \\le i$$$) or, if you do not want to swap characters, then \" 0 0 \". If your program makes an invalid operation, for example, by trying to swap characters from non-existing positions, or the resulting string $$$t$$$ is not a palindrome, the jury program will print one character \" X \" on a separate line. If your program receives \" X \" as the response, it should terminate immediately ; otherwise, the verdict of your submission will be undefined. The interactor in this problem is not adaptive , meaning that the string $$$s$$$ does not change during the interaction. After each output request, do not forget to output a newline and flush the output buffer. Otherwise, you will receive a verdict of \" Idleness limit exceeded \". To do this, use: fflush(stdout) or cout.flush() in C++ ; System.out.flush() in Java ; sys.stdout.flush() in Python ; refer to the documentation for other languages. Hack format For hacks, use the following format. The first line should contain a single integer $$$|s|$$$ — the length of the string $$$s$$$. The second line should contain the $$$s$$$ itself ($$$1 \\le |s| \\le 99, |s| \\bmod 2 = 1$$$), consisting of lowercase Latin letters \" a \" and \" b \".",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "a\n\na\n\nb\n\n0",
+      "output": "0 0\n\n1 2\n\n2 3"
+    },
+    {
+      "input": "a\n\na\n\nb\n\na\n\nb\n\n0",
+      "output": "0 0\n\n2 1\n\n3 2\n\n4 4\n\n4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

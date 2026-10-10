@@ -1,0 +1,54 @@
+{
+  "id": "1426E",
+  "source": "problemset",
+  "contest_id": 1426,
+  "problem_index": "E",
+  "name": "Rock, Paper, Scissors",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "flows",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 8284,
+  "problem_url": "https://codeforces.com/problemset/problem/1426/E",
+  "editorial_url": "https://codeforces.com/blog/entry/83120",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob have decided to play the game \"Rock, Paper, Scissors\". The game consists of several rounds, each round is independent of each other. In each round, both players show one of the following things at the same time: rock, paper or scissors. If both players showed the same things then the round outcome is a draw. Otherwise, the following rules applied: if one player showed rock and the other one showed scissors, then the player who showed rock is considered the winner and the other one is considered the loser; if one player showed scissors and the other one showed paper, then the player who showed scissors is considered the winner and the other one is considered the loser; if one player showed paper and the other one showed rock, then the player who showed paper is considered the winner and the other one is considered the loser. Alice and Bob decided to play exactly $$$n$$$ rounds of the game described above. Alice decided to show rock $$$a_1$$$ times, show scissors $$$a_2$$$ times and show paper $$$a_3$$$ times. Bob decided to show rock $$$b_1$$$ times, show scissors $$$b_2$$$ times and show paper $$$b_3$$$ times. Though, both Alice and Bob did not choose the sequence in which they show things. It is guaranteed that $$$a_1 + a_2 + a_3 = n$$$ and $$$b_1 + b_2 + b_3 = n$$$. Your task is to find two numbers: the minimum number of round Alice can win; the maximum number of rounds Alice can win.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 10^{9}$$$) — the number of rounds. The second line of the input contains three integers $$$a_1, a_2, a_3$$$ ($$$0 \\le a_i \\le n$$$) — the number of times Alice will show rock, scissors and paper, respectively. It is guaranteed that $$$a_1 + a_2 + a_3 = n$$$. The third line of the input contains three integers $$$b_1, b_2, b_3$$$ ($$$0 \\le b_j \\le n$$$) — the number of times Bob will show rock, scissors and paper, respectively. It is guaranteed that $$$b_1 + b_2 + b_3 = n$$$.",
+  "output_specification": "Print two integers: the minimum and the maximum number of rounds Alice can win.",
+  "sample_testcases": [
+    {
+      "input": "2\n0 1 1\n1 1 0",
+      "output": "0 1"
+    },
+    {
+      "input": "15\n5 5 5\n5 5 5",
+      "output": "0 15"
+    },
+    {
+      "input": "3\n0 0 3\n3 0 0",
+      "output": "3 3"
+    },
+    {
+      "input": "686\n479 178 29\n11 145 530",
+      "output": "22 334"
+    },
+    {
+      "input": "319\n10 53 256\n182 103 34",
+      "output": "119 226"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:31",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

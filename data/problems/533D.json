@@ -1,0 +1,39 @@
+{
+  "id": "533D",
+  "source": "problemset",
+  "contest_id": 533,
+  "problem_index": "D",
+  "name": "Landmarks",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 377,
+  "problem_url": "https://codeforces.com/problemset/problem/533/D",
+  "editorial_url": "https://codeforces.com/blog/entry/17446",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "We have an old building with n + 2 columns in a row. These columns support the ceiling. These columns are located in points with coordinates 0 = x 0 < x 1 < ... < x n < x n + 1 . The leftmost and the rightmost columns are special, we will call them bearing , the other columns are ordinary . For each column we know its durability d i . Let's consider an ordinary column with coordinate x . Let's assume that the coordinate of the closest to it column to the left (bearing or ordinary) is a and the coordinate of the closest to it column to the right (also, bearing or ordinary) is b . In this task let's assume that this column supports the segment of the ceiling from point to point (here both fractions are considered as real division). If the length of the segment of the ceiling supported by the column exceeds d i , then the column cannot support it and it crashes after a while, and after that the load is being redistributeed between the neighbouring columns according to the same principle. Thus, ordinary columns will be crashing for some time until the process stops at some state. One can prove that the set of the remaining columns doesn't depend on the order in which columns crash. If there are only two bearing columns left in the end, then we assume that the whole construction crashes under the weight of the roof. But if at least one ordinary column stays in addition to the bearing ones, then the building doesn't crash. To make the building stronger, we can add one extra ordinary column of arbitrary durability d ' at any (not necessarily integer) point 0 < x ' < x n + 1 . If point x ' is already occupied by an ordinary column, it is replaced by a new one. Your task is to find out: what minimal durability can the added column have so that the building doesn't crash?",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — the number of ordinary columns. The second line contains n + 2 integers x 0 , x 1 , ..., x n , x n + 1 ( x 0 = 0 , x i < x i + 1 for 0 ≤ i ≤ n , x n + 1 ≤ 10 9 ) — the coordinates of the columns. The third line contains n integers d 1 , d 2 , ..., d n ( 1 ≤ d i ≤ 10 9 ).",
+  "output_specification": "Print a single number — the minimum possible durability of the column that you need to add in order to make the building stay. If you do not have to add the column, please print 0 . Your answer will be checked with the relative or absolute error 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "2\n0 20 40 100\n15 40",
+      "output": "10"
+    },
+    {
+      "input": "3\n0 4 10 28 30\n9 13 5",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

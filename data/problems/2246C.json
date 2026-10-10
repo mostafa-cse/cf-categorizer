@@ -1,0 +1,36 @@
+{
+  "id": "2246C",
+  "source": "problemset",
+  "contest_id": 2246,
+  "problem_index": "C",
+  "name": "0mar and Alternating Sums",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 9504,
+  "problem_url": "https://codeforces.com/problemset/problem/2246/C",
+  "editorial_url": "https://codeforces.com/blog/entry/155143",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Define the alternating sum of an array $$$b$$$ of length $$$k$$$ to be $$$\\sum_{i = 1}^{k}(-1)^{i+1}b_i$$$. You are given a non-decreasing$$$^{\\text{∗}}$$$ array $$$a$$$ of length $$$n$$$ such that for all $$$1 \\le i \\le n,$$$ either $$$a_i = -1$$$ or $$$a_i$$$ is a positive integer. Find the number of sequences $$$1 \\le i_1 \\lt i_2 \\lt \\ldots \\lt i_k \\le n$$$ such that the alternating sum of the sequence $$$a_{i_1}, a_{i_2}, \\ldots, a_{i_k}$$$ is $$$0.$$$ Since this number may be large, output it modulo $$$10^9+7$$$. Two sets $$$i_1, \\ldots, i_{k_1}$$$ and $$$i'_1, \\ldots, i'_{k_2}$$$ of indices are considered different if $$$k_1 \\neq k_2$$$ or there exists a $$$j$$$ such that $$$i_j \\neq i'_j.$$$ $$$^{\\text{∗}}$$$A sequence $$$a_1, \\ldots, a_n$$$ is non-decreasing if $$$a_1 \\le a_2 \\le \\ldots \\le a_n$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n \\, (1 \\le n \\le 2 \\cdot 10^5)$$$ — the length of the array. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ — the elements of the array where $$$\\mathbf{a_i = -1}$$$ or $$$\\mathbf{1 \\leq a_i \\leq 10^9}$$$. It is guaranteed that the array is non-decreasing. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, output a single integer — the number of subsequences that have an alternating sum of zero modulo $$$10^9 +7$$$. A subsequence of length $$$0$$$ is considered to have an alternating sum of zero.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n-1 1 1 2 3\n3\n1 2 3\n4\n1 3 5 7\n14\n-1 -1 -1 1 2 2 3 3 3 5 5 5 5 5",
+      "output": "6\n1\n1\n1536"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

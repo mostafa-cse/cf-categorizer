@@ -1,0 +1,44 @@
+{
+  "id": "443B",
+  "source": "problemset",
+  "contest_id": 443,
+  "problem_index": "B",
+  "name": "Kolya and Tandem Repeat",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 4313,
+  "problem_url": "https://codeforces.com/problemset/problem/443/B",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kolya got string s for his birthday, the string consists of small English letters. He immediately added k more characters to the right of the string. Then Borya came and said that the new string contained a tandem repeat of length l as a substring. How large could l be? See notes for definition of a tandem repeat .",
+  "input_specification": "The first line contains s ( 1 ≤ | s | ≤ 200 ). This string contains only small English letters. The second line contains number k ( 1 ≤ k ≤ 200 ) — the number of the added characters.",
+  "output_specification": "Print a single number — the maximum length of the tandem repeat that could have occurred in the new string.",
+  "sample_testcases": [
+    {
+      "input": "aaba\n2",
+      "output": "6"
+    },
+    {
+      "input": "aaabbbb\n2",
+      "output": "6"
+    },
+    {
+      "input": "abracadabra\n10",
+      "output": "20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

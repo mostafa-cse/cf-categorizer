@@ -1,0 +1,35 @@
+{
+  "id": "1809D",
+  "source": "problemset",
+  "contest_id": 1809,
+  "problem_index": "D",
+  "name": "Binary String Sorting",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 7490,
+  "problem_url": "https://codeforces.com/problemset/problem/1809/D",
+  "editorial_url": "https://codeforces.com/blog/entry/114300",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a binary string $$$s$$$ consisting of only characters 0 and/or 1 . You can perform several operations on this string (possibly zero). There are two types of operations: choose two consecutive elements and swap them. In order to perform this operation, you pay $$$10^{12}$$$ coins; choose any element from the string and remove it. In order to perform this operation, you pay $$$10^{12}+1$$$ coins. Your task is to calculate the minimum number of coins required to sort the string $$$s$$$ in non-decreasing order (i. e. transform $$$s$$$ so that $$$s_1 \\le s_2 \\le \\dots \\le s_m$$$, where $$$m$$$ is the length of the string after applying all operations). An empty string is also considered sorted in non-decreasing order.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The only line of each test case contains the string $$$s$$$ ($$$1 \\le |s| \\le 3 \\cdot 10^5$$$), consisting of only characters 0 and/or 1 . The sum of lengths of all given strings doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum number of coins required to sort the string $$$s$$$ in non-decreasing order.",
+  "sample_testcases": [
+    {
+      "input": "6\n100\n0\n0101\n00101101\n1001101\n11111",
+      "output": "1000000000001\n0\n1000000000000\n2000000000001\n2000000000002\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:57",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

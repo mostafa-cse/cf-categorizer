@@ -1,0 +1,42 @@
+{
+  "id": "578C",
+  "source": "problemset",
+  "contest_id": 578,
+  "problem_index": "C",
+  "name": "Weakness and Poorness",
+  "rating": 2000,
+  "tags": [
+    "ternary search"
+  ],
+  "solved_count": 5455,
+  "problem_url": "https://codeforces.com/problemset/problem/578/C",
+  "editorial_url": "https://codeforces.com/blog/entry/20368",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a sequence of n integers a 1 , a 2 , ..., a n . Determine a real number x such that the weakness of the sequence a 1 - x , a 2 - x , ..., a n - x is as small as possible. The weakness of a sequence is defined as the maximum value of the poorness over all segments (contiguous subsequences) of a sequence. The poorness of a segment is defined as the absolute value of sum of the elements of segment.",
+  "input_specification": "The first line contains one integer n ( 1 ≤ n ≤ 200 000 ), the length of a sequence. The second line contains n integers a 1 , a 2 , ..., a n ( | a i | ≤ 10 000 ).",
+  "output_specification": "Output a real number denoting the minimum possible weakness of a 1 - x , a 2 - x , ..., a n - x . Your answer will be considered correct if its relative or absolute error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "1.000000000000000"
+    },
+    {
+      "input": "4\n1 2 3 4",
+      "output": "2.000000000000000"
+    },
+    {
+      "input": "10\n1 10 2 9 3 8 4 7 5 6",
+      "output": "4.500000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

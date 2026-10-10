@@ -1,0 +1,39 @@
+{
+  "id": "513C",
+  "source": "problemset",
+  "contest_id": 513,
+  "problem_index": "C",
+  "name": "Second price auction",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "probabilities"
+  ],
+  "solved_count": 1749,
+  "problem_url": "https://codeforces.com/problemset/problem/513/C",
+  "editorial_url": "https://codeforces.com/blog/entry/16260",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nowadays, most of the internet advertisements are not statically linked to a web page. Instead, what will be shown to the person opening a web page is determined within 100 milliseconds after the web page is opened. Usually, multiple companies compete for each ad slot on the web page in an auction. Each of them receives a request with details about the user, web page and ad slot and they have to respond within those 100 milliseconds with a bid they would pay for putting an advertisement on that ad slot. The company that suggests the highest bid wins the auction and gets to place its advertisement. If there are several companies tied for the highest bid, the winner gets picked at random. However, the company that won the auction does not have to pay the exact amount of its bid. In most of the cases, a second-price auction is used. This means that the amount paid by the company is equal to the maximum of all the other bids placed for this ad slot. Let's consider one such bidding. There are n companies competing for placing an ad. The i -th of these companies will bid an integer number of microdollars equiprobably randomly chosen from the range between L i and R i , inclusive. In the other words, the value of the i -th company bid can be any integer from the range [ L i , R i ] with the same probability. Determine the expected value that the winner will have to pay in a second-price auction.",
+  "input_specification": "The first line of input contains an integer number n ( 2 ≤ n ≤ 5 ). n lines follow, the i -th of them containing two numbers L i and R i ( 1 ≤ L i ≤ R i ≤ 10000 ) describing the i -th company's bid preferences. This problem doesn't have subproblems. You will get 8 points for the correct submission.",
+  "output_specification": "Output the answer with absolute or relative error no more than 1 e - 9 .",
+  "sample_testcases": [
+    {
+      "input": "3\n4 7\n8 10\n5 5",
+      "output": "5.7500000000"
+    },
+    {
+      "input": "3\n2 5\n3 4\n1 6",
+      "output": "3.5000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

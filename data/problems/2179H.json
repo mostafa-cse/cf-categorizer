@@ -1,0 +1,38 @@
+{
+  "id": "2179H",
+  "source": "problemset",
+  "contest_id": 2179,
+  "problem_index": "H",
+  "name": "Blackslex and Plants",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "dp",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1405,
+  "problem_url": "https://codeforces.com/problemset/problem/2179/H",
+  "editorial_url": "https://codeforces.com/blog/entry/149406",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Blackslex has found solace in plants and trees amidst accumulated stress from strained relationships, stressful politics, and strenuous research. Blackslex has $$$n$$$ plants ordered in a straight line, consisting of plant $$$1, 2, 3, \\ldots n$$$. Initially, every plant contains $$$0$$$ millilitres of water. He wants to perform $$$q$$$ watering operations as follows : Given $$$l, r$$$ for each operation water $$$f(i-l+1)$$$ millilitres of water onto the $$$i$$$-th plant for every $$$l \\leq i \\leq r$$$ where $$$f(x)$$$ denotes the product of $$$x$$$ and the value of the least significant set bit of $$$x$$$ $$$^{\\text{∗}}$$$ Your task is to figure out the amount of water in each plant after all watering operations are done. $$$^{\\text{∗}}$$$The value of the least significant set bit of $$$x$$$ is the value of the rightmost set bit (bit that is 1) in the binary representation of $$$x$$$. For instance, the value of the least significant set bit of $$$10 = 1010_2$$$ is $$$0010_2 = 2$$$",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$, $$$q$$$ ($$$1 \\leq n, q \\leq 2\\cdot 10^5$$$) — the number of plants and the number of watering operations, respectively. The next $$$q$$$ lines of each test case contain two integers $$$l$$$, $$$r$$$ ($$$1 \\leq l \\leq r \\leq n$$$) — the left bound and the right bound for each watering operation. It is guaranteed that the sum of all values of $$$n$$$ and the sum of all values of $$$q$$$ across all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$n$$$ integers representing the amount of water in the $$$i$$$-th plant for each $$$i = 1, 2, 3, \\ldots, n$$$",
+  "sample_testcases": [
+    {
+      "input": "2\n5 3\n1 5\n2 3\n2 5\n7 7\n1 3\n1 6\n3 7\n4 7\n7 7\n1 6\n5 5",
+      "output": "1 6 11 19 21\n3 12 10 37 18 43 22"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "144D",
+  "source": "problemset",
+  "contest_id": 144,
+  "problem_index": "D",
+  "name": "Missile Silos",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 5272,
+  "problem_url": "https://codeforces.com/problemset/problem/144/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3693",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A country called Berland consists of n cities, numbered with integer numbers from 1 to n . Some of them are connected by bidirectional roads. Each road has some length. There is a path from each city to any other one by these roads. According to some Super Duper Documents, Berland is protected by the Super Duper Missiles. The exact position of the Super Duper Secret Missile Silos is kept secret but Bob managed to get hold of the information. That information says that all silos are located exactly at a distance l from the capital. The capital is located in the city with number s . The documents give the formal definition: the Super Duper Secret Missile Silo is located at some place (which is either city or a point on a road) if and only if the shortest distance from this place to the capital along the roads of the country equals exactly l . Bob wants to know how many missile silos are located in Berland to sell the information then to enemy spies. Help Bob.",
+  "input_specification": "The first line contains three integers n , m and s ( 2 ≤ n ≤ 10 5 , , 1 ≤ s ≤ n ) — the number of cities, the number of roads in the country and the number of the capital, correspondingly. Capital is the city no. s . Then m lines contain the descriptions of roads. Each of them is described by three integers v i , u i , w i ( 1 ≤ v i , u i ≤ n , v i ≠ u i , 1 ≤ w i ≤ 1000 ), where v i , u i are numbers of the cities connected by this road and w i is its length. The last input line contains integer l ( 0 ≤ l ≤ 10 9 ) — the distance from the capital to the missile silos. It is guaranteed that: between any two cities no more than one road exists; each road connects two different cities; from each city there is at least one way to any other city by the roads.",
+  "output_specification": "Print the single number — the number of Super Duper Secret Missile Silos that are located in Berland.",
+  "sample_testcases": [
+    {
+      "input": "4 6 1\n1 2 1\n1 3 3\n2 3 1\n2 4 1\n3 4 1\n1 4 2\n2",
+      "output": "3"
+    },
+    {
+      "input": "5 6 3\n3 1 1\n3 2 1\n3 4 1\n3 5 1\n1 2 6\n4 5 8\n4",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

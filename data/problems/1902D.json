@@ -1,0 +1,45 @@
+{
+  "id": "1902D",
+  "source": "problemset",
+  "contest_id": 1902,
+  "problem_index": "D",
+  "name": "Robot Queries",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 5529,
+  "problem_url": "https://codeforces.com/problemset/problem/1902/D",
+  "editorial_url": "https://codeforces.com/blog/entry/122951",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is an infinite $$$2$$$-dimensional grid. Initially, a robot stands in the point $$$(0, 0)$$$. The robot can execute four commands: U — move from point $$$(x, y)$$$ to $$$(x, y + 1)$$$; D — move from point $$$(x, y)$$$ to $$$(x, y - 1)$$$; L — move from point $$$(x, y)$$$ to $$$(x - 1, y)$$$; R — move from point $$$(x, y)$$$ to $$$(x + 1, y)$$$. You are given a sequence of commands $$$s$$$ of length $$$n$$$. Your task is to answer $$$q$$$ independent queries: given four integers $$$x$$$, $$$y$$$, $$$l$$$ and $$$r$$$; determine whether the robot visits the point $$$(x, y)$$$, while executing a sequence $$$s$$$, but the substring from $$$l$$$ to $$$r$$$ is reversed (i. e. the robot performs commands in order $$$s_1 s_2 s_3 \\dots s_{l-1} s_r s_{r-1} s_{r-2} \\dots s_l s_{r+1} s_{r+2} \\dots s_n$$$).",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the length of the command sequence and the number of queries, respectively. The second line contains a string $$$s$$$ of length $$$n$$$, consisting of characters U , D , L and/or R . Then $$$q$$$ lines follow, the $$$i$$$-th of them contains four integers $$$x_i$$$, $$$y_i$$$, $$$l_i$$$ and $$$r_i$$$ ($$$-n \\le x_i, y_i \\le n$$$; $$$1 \\le l \\le r \\le n$$$) describing the $$$i$$$-th query.",
+  "output_specification": "For each query, print YES if the robot visits the point $$$(x, y)$$$, while executing a sequence $$$s$$$, but the substring from $$$l$$$ to $$$r$$$ is reversed; otherwise print NO .",
+  "sample_testcases": [
+    {
+      "input": "8 3\nRDLLUURU\n-1 2 1 7\n0 0 3 4\n0 1 7 8",
+      "output": "YES\nYES\nNO"
+    },
+    {
+      "input": "4 2\nRLDU\n0 0 2 2\n-1 -1 2 3",
+      "output": "YES\nNO"
+    },
+    {
+      "input": "10 6\nDLUDLRULLD\n-1 0 1 10\n-1 -2 2 5\n-4 -2 6 10\n-1 0 3 9\n0 1 4 7\n-3 -1 5 8",
+      "output": "YES\nYES\nYES\nNO\nYES\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

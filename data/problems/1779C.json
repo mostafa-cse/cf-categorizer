@@ -1,0 +1,35 @@
+{
+  "id": "1779C",
+  "source": "problemset",
+  "contest_id": 1779,
+  "problem_index": "C",
+  "name": "Least Prefix Sum",
+  "rating": 1600,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 14987,
+  "problem_url": "https://codeforces.com/problemset/problem/1779/C",
+  "editorial_url": "https://codeforces.com/blog/entry/110629",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Baltic, a famous chess player who is also a mathematician, has an array $$$a_1,a_2, \\ldots, a_n$$$, and he can perform the following operation several (possibly $$$0$$$) times: Choose some index $$$i$$$ ($$$1 \\leq i \\leq n$$$); multiply $$$a_i$$$ with $$$-1$$$, that is, set $$$a_i := -a_i$$$. Baltic's favorite number is $$$m$$$, and he wants $$$a_1 + a_2 + \\cdots + a_m$$$ to be the smallest of all non-empty prefix sums. More formally, for each $$$k = 1,2,\\ldots, n$$$ it should hold that $$$$$$a_1 + a_2 + \\cdots + a_k \\geq a_1 + a_2 + \\cdots + a_m.$$$$$$ Please note that multiple smallest prefix sums may exist and that it is only required that $$$a_1 + a_2 + \\cdots + a_m$$$ is one of them. Help Baltic find the minimum number of operations required to make $$$a_1 + a_2 + \\cdots + a_m$$$ the least of all prefix sums. It can be shown that a valid sequence of operations always exists.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10\\,000$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq m \\leq n \\leq 2\\cdot 10^5$$$) — the size of Baltic's array and his favorite number. The second line contains $$$n$$$ integers $$$a_1,a_2, \\ldots, a_n$$$ ($$$-10^9 \\leq a_i \\leq 10^9$$$) — the array. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum number of required operations.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 3\n-1 -2 -3 -4\n4 3\n1 2 3 4\n1 1\n1\n5 5\n-2 3 -5 1 -20\n5 2\n-2 3 -5 -5 -20\n10 4\n345875723 -48 384678321 -375635768 -35867853 -35863586 -358683842 -81725678 38576 -357865873",
+      "output": "1\n1\n0\n0\n3\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

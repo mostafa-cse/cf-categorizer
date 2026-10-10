@@ -1,0 +1,46 @@
+{
+  "id": "2144F",
+  "source": "problemset",
+  "contest_id": 2144,
+  "problem_index": "F",
+  "name": "Bracket Groups",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "dp",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 1128,
+  "problem_url": "https://codeforces.com/problemset/problem/2144/F",
+  "editorial_url": "https://codeforces.com/blog/entry/146474",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "A regular bracket sequence is a bracket sequence that can be transformed into a correct arithmetic sequence. For example: bracket sequences \" ()() \" and \" (()) \" are regular (the resulting expressions are: \" (1)+(1) \" and \" ((1+1)+1) \"); bracket sequences \" )( \", \" ( \" and \" ) \" are not. You are given $$$n$$$ bracket sequences $$$s_1, s_2, \\dots, s_n$$$ (not necessarily regular) and an even integer $$$k$$$. Your task is to split all of them into groups in such a way that: every bracket sequence belongs to exactly one group; for each group, there exists a regular bracket sequence of length exactly $$$k$$$ such that every bracket sequence assigned to this group is not a substring of it. What is the smallest number of groups that this can be achieved for? If it's impossible to do for any number of groups, report so. Otherwise, print the groups and any valid regular bracket sequence for each group. If there are multiple answers with the smallest number of groups, print any of them.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 50$$$; $$$2 \\le k \\le 50$$$; $$$k$$$ is even). The $$$i$$$-th of the next $$$n$$$ lines contains a bracket sequence $$$s_i$$$ ($$$2 \\le |s_i| \\le k$$$). It consists only of characters ' ( ' and ' ) '.",
+  "output_specification": "If it's impossible to split all bracket sequences into groups according to the rules, then print $$$-1$$$. Otherwise, print the smallest possible number of groups $$$m$$$ in the first line. Then, $$$m$$$ blocks of data should follow: The first line of each block should contain a regular bracket sequence of length $$$k$$$. The second line should contain a single integer $$$g$$$ — the number of bracket sequences in the current group. The third line should contain $$$g$$$ integers from $$$1$$$ to $$$n$$$ — the indices of the bracket sequences that belong to the current group. None of these bracket sequences should be a substring of the chosen regular bracket sequence. Each index from $$$1$$$ to $$$n$$$ should belong to exactly one group. If there are multiple answers with the smallest $$$m$$$, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 6\n)))\n(((\n(())",
+      "output": "1\n(()())\n3\n1 2 3"
+    },
+    {
+      "input": "4 6\n(()\n()(\n())\n((((((",
+      "output": "2\n(())()\n1\n2\n()()()\n3\n1 4 3"
+    },
+    {
+      "input": "2 6\n()\n)(",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

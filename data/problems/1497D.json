@@ -1,0 +1,37 @@
+{
+  "id": "1497D",
+  "source": "problemset",
+  "contest_id": 1497,
+  "problem_index": "D",
+  "name": "Genius",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "graphs",
+    "number theory"
+  ],
+  "solved_count": 1803,
+  "problem_url": "https://codeforces.com/problemset/problem/1497/D",
+  "editorial_url": "https://codeforces.com/blog/entry/88677",
+  "time_limit": "2 seconds",
+  "memory_limit": "32 megabytes",
+  "description": "Please note the non-standard memory limit. There are $$$n$$$ problems numbered with integers from $$$1$$$ to $$$n$$$. $$$i$$$-th problem has the complexity $$$c_i = 2^i$$$, tag $$$tag_i$$$ and score $$$s_i$$$. After solving the problem $$$i$$$ it's allowed to solve problem $$$j$$$ if and only if $$$\\text{IQ} \\lt |c_i - c_j|$$$ and $$$tag_i \\neq tag_j$$$. After solving it your $$$\\text{IQ}$$$ changes and becomes $$$\\text{IQ} = |c_i - c_j|$$$ and you gain $$$|s_i - s_j|$$$ points. Any problem can be the first. You can solve problems in any order and as many times as you want. Initially your $$$\\text{IQ} = 0$$$. Find the maximum number of points that can be earned.",
+  "input_specification": "The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 100)$$$  — the number of test cases. The first line of each test case contains an integer $$$n$$$ $$$(1 \\le n \\le 5000)$$$  — the number of problems. The second line of each test case contains $$$n$$$ integers $$$tag_1, tag_2, \\ldots, tag_n$$$ $$$(1 \\le tag_i \\le n)$$$  — tags of the problems. The third line of each test case contains $$$n$$$ integers $$$s_1, s_2, \\ldots, s_n$$$ $$$(1 \\le s_i \\le 10^9)$$$  — scores of the problems. It's guaranteed that sum of $$$n$$$ over all test cases does not exceed $$$5000$$$.",
+  "output_specification": "For each test case print a single integer  — the maximum number of points that can be earned.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n1 2 3 4\n5 10 15 20\n4\n1 2 1 2\n5 10 15 20\n4\n2 2 4 1\n2 8 19 1\n2\n1 1\n6 9\n1\n1\n666",
+      "output": "35\n30\n42\n0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "812C",
+  "source": "problemset",
+  "contest_id": 812,
+  "problem_index": "C",
+  "name": "Sagheer and Nubian Market",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "sortings"
+  ],
+  "solved_count": 18817,
+  "problem_url": "https://codeforces.com/problemset/problem/812/C",
+  "editorial_url": "https://codeforces.com/blog/entry/52318",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "On his trip to Luxor and Aswan, Sagheer went to a Nubian market to buy some souvenirs for his friends and relatives. The market has some strange rules. It contains n different items numbered from 1 to n . The i -th item has base cost a i Egyptian pounds. If Sagheer buys k items with indices x 1 , x 2 , ..., x k , then the cost of item x j is a x j + x j · k for 1 ≤ j ≤ k . In other words, the cost of an item is equal to its base cost in addition to its index multiplied by the factor k . Sagheer wants to buy as many souvenirs as possible without paying more than S Egyptian pounds. Note that he cannot buy a souvenir more than once. If there are many ways to maximize the number of souvenirs, he will choose the way that will minimize the total cost. Can you help him with this task?",
+  "input_specification": "The first line contains two integers n and S ( 1 ≤ n ≤ 10 5 and 1 ≤ S ≤ 10 9 ) — the number of souvenirs in the market and Sagheer's budget. The second line contains n space-separated integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ) — the base costs of the souvenirs.",
+  "output_specification": "On a single line, print two integers k , T — the maximum number of souvenirs Sagheer can buy and the minimum total cost to buy these k souvenirs.",
+  "sample_testcases": [
+    {
+      "input": "3 11\n2 3 5",
+      "output": "2 11"
+    },
+    {
+      "input": "4 100\n1 2 5 6",
+      "output": "4 54"
+    },
+    {
+      "input": "1 7\n7",
+      "output": "0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

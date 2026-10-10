@@ -1,0 +1,39 @@
+{
+  "id": "1354F",
+  "source": "problemset",
+  "contest_id": 1354,
+  "problem_index": "F",
+  "name": "Summoning Minions",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "flows",
+    "graph matchings",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 1565,
+  "problem_url": "https://codeforces.com/problemset/problem/1354/F",
+  "editorial_url": "https://codeforces.com/blog/entry/77593",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Polycarp plays a computer game. In this game, the players summon armies of magical minions, which then fight each other. Polycarp can summon $$$n$$$ different minions. The initial power level of the $$$i$$$-th minion is $$$a_i$$$, and when it is summoned, all previously summoned minions' power levels are increased by $$$b_i$$$. The minions can be summoned in any order. Unfortunately, Polycarp cannot have more than $$$k$$$ minions under his control. To get rid of unwanted minions after summoning them, he may destroy them. Each minion can be summoned (and destroyed) only once. Polycarp's goal is to summon the strongest possible army. Formally, he wants to maximize the sum of power levels of all minions under his control (those which are summoned and not destroyed). Help Polycarp to make up a plan of actions to summon the strongest possible army!",
+  "input_specification": "The first line contains one integer $$$T$$$ ($$$1 \\le T \\le 75$$$) — the number of test cases. Each test case begins with a line containing two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 75$$$) — the number of minions availible for summoning, and the maximum number of minions that can be controlled by Polycarp, respectively. Then $$$n$$$ lines follow, the $$$i$$$-th line contains $$$2$$$ integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i \\le 10^5$$$, $$$0 \\le b_i \\le 10^5$$$) — the parameters of the $$$i$$$-th minion.",
+  "output_specification": "For each test case print the optimal sequence of actions as follows: Firstly, print $$$m$$$ — the number of actions which Polycarp has to perform ($$$0 \\le m \\le 2n$$$). Then print $$$m$$$ integers $$$o_1$$$, $$$o_2$$$, ..., $$$o_m$$$, where $$$o_i$$$ denotes the $$$i$$$-th action as follows: if the $$$i$$$-th action is to summon the minion $$$x$$$, then $$$o_i = x$$$, and if the $$$i$$$-th action is to destroy the minion $$$x$$$, then $$$o_i = -x$$$. Each minion can be summoned at most once and cannot be destroyed before being summoned (and, obviously, cannot be destroyed more than once). The number of minions in Polycarp's army should be not greater than $$$k$$$ after every action. If there are multiple optimal sequences, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 2\n5 3\n7 0\n5 0\n4 0\n10 0\n2 1\n10 100\n50 10\n5 5\n1 5\n2 4\n3 3\n4 2\n5 1",
+      "output": "4\n2 1 -1 5\n1\n2\n5\n5 4 3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

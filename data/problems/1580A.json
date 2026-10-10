@@ -1,0 +1,42 @@
+{
+  "id": "1580A",
+  "source": "problemset",
+  "contest_id": 1580,
+  "problem_index": "A",
+  "name": "Portal",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 3965,
+  "problem_url": "https://codeforces.com/problemset/problem/1580/A",
+  "editorial_url": "https://codeforces.com/blog/entry/95477",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "CQXYM found a rectangle $$$A$$$ of size $$$n \\times m$$$. There are $$$n$$$ rows and $$$m$$$ columns of blocks. Each block of the rectangle is an obsidian block or empty. CQXYM can change an obsidian block to an empty block or an empty block to an obsidian block in one operation. A rectangle $$$M$$$ size of $$$a \\times b$$$ is called a portal if and only if it satisfies the following conditions: $$$a \\geq 5,b \\geq 4$$$. For all $$$1 \\lt x \\lt a$$$, blocks $$$M_{x,1}$$$ and $$$M_{x,b}$$$ are obsidian blocks. For all $$$1 \\lt x \\lt b$$$, blocks $$$M_{1,x}$$$ and $$$M_{a,x}$$$ are obsidian blocks. For all $$$1 \\lt x \\lt a,1 \\lt y \\lt b$$$, block $$$M_{x,y}$$$ is an empty block. $$$M_{1, 1}, M_{1, b}, M_{a, 1}, M_{a, b}$$$ can be any type . Note that the there must be $$$a$$$ rows and $$$b$$$ columns, not $$$b$$$ rows and $$$a$$$ columns. Note that corners can be any type CQXYM wants to know the minimum number of operations he needs to make at least one sub-rectangle a portal.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$t \\geq 1$$$), which is the number of test cases. For each test case, the first line contains two integers $$$n$$$ and $$$m$$$ ($$$5 \\le n \\le 400$$$, $$$4 \\le m \\le 400$$$). Then $$$n$$$ lines follow, each line contains $$$m$$$ characters $$$0$$$ or $$$1$$$. If the $$$j$$$-th character of $$$i$$$-th line is $$$0$$$, block $$$A_{i,j}$$$ is an empty block. Otherwise, block $$$A_{i,j}$$$ is an obsidian block. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$400$$$. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$400$$$.",
+  "output_specification": "Output $$$t$$$ answers, and each answer in a line.",
+  "sample_testcases": [
+    {
+      "input": "1\n5 4\n1000\n0000\n0110\n0000\n0001",
+      "output": "12"
+    },
+    {
+      "input": "1\n9 9\n001010001\n101110100\n000010011\n100000001\n101010101\n110001111\n000001111\n111100000\n000110000",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:56",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

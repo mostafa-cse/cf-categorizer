@@ -1,0 +1,40 @@
+{
+  "id": "526D",
+  "source": "problemset",
+  "contest_id": 526,
+  "problem_index": "D",
+  "name": "Om Nom and Necklace",
+  "rating": 2200,
+  "tags": [
+    "hashing",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 2640,
+  "problem_url": "https://codeforces.com/problemset/problem/526/D",
+  "editorial_url": "https://codeforces.com/blog/entry/17281",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One day Om Nom found a thread with n beads of different colors. He decided to cut the first several beads from this thread to make a bead necklace and present it to his girlfriend Om Nelly. Om Nom knows that his girlfriend loves beautiful patterns. That's why he wants the beads on the necklace to form a regular pattern. A sequence of beads S is regular if it can be represented as S = A + B + A + B + A + ... + A + B + A , where A and B are some bead sequences, \" + \" is the concatenation of sequences, there are exactly 2 k + 1 summands in this sum, among which there are k + 1 \" A \" summands and k \" B \" summands that follow in alternating order. Om Nelly knows that her friend is an eager mathematician, so she doesn't mind if A or B is an empty sequence. Help Om Nom determine in which ways he can cut off the first several beads from the found thread (at least one; probably, all) so that they form a regular pattern . When Om Nom cuts off the beads, he doesn't change their order.",
+  "input_specification": "The first line contains two integers n , k ( 1 ≤ n , k ≤ 1 000 000 ) — the number of beads on the thread that Om Nom found and number k from the definition of the regular sequence above. The second line contains the sequence of n lowercase Latin letters that represent the colors of the beads. Each color corresponds to a single letter.",
+  "output_specification": "Print a string consisting of n zeroes and ones. Position i ( 1 ≤ i ≤ n ) must contain either number one if the first i beads on the thread form a regular sequence, or a zero otherwise.",
+  "sample_testcases": [
+    {
+      "input": "7 2\nbcabcab",
+      "output": "0000011"
+    },
+    {
+      "input": "21 2\nababaababaababaababaa",
+      "output": "000110000111111000011"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

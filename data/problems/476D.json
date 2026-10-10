@@ -1,0 +1,40 @@
+{
+  "id": "476D",
+  "source": "problemset",
+  "contest_id": 476,
+  "problem_index": "D",
+  "name": "Dreamoon and Sets",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 5137,
+  "problem_url": "https://codeforces.com/problemset/problem/476/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14256",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Dreamoon likes to play with sets, integers and . is defined as the largest positive integer that divides both a and b . Let S be a set of exactly four distinct integers greater than 0 . Define S to be of rank k if and only if for all pairs of distinct elements s i , s j from S , . Given k and n , Dreamoon wants to make up n sets of rank k using integers from 1 to m such that no integer is used in two different sets (of course you can leave some integers without use). Calculate the minimum m that makes it possible and print one possible solution.",
+  "input_specification": "The single line of the input contains two space separated integers n , k ( 1 ≤ n ≤ 10 000, 1 ≤ k ≤ 100 ).",
+  "output_specification": "On the first line print a single integer — the minimal possible m . On each of the next n lines print four space separated integers representing the i -th set. Neither the order of the sets nor the order of integers within a set is important. If there are multiple possible solutions with minimal m , print any one of them.",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "5\n1 2 3 5"
+    },
+    {
+      "input": "2 2",
+      "output": "22\n2 4 6 22\n14 18 10 16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

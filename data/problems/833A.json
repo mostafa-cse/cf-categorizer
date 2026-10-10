@@ -1,0 +1,35 @@
+{
+  "id": "833A",
+  "source": "problemset",
+  "contest_id": 833,
+  "problem_index": "A",
+  "name": "The Meaningless Game",
+  "rating": 1700,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 6642,
+  "problem_url": "https://codeforces.com/problemset/problem/833/A",
+  "editorial_url": "https://codeforces.com/blog/entry/53567",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Slastyona and her loyal dog Pushok are playing a meaningless game that is indeed very interesting. The game consists of multiple rounds . Its rules are very simple: in each round, a natural number k is chosen. Then, the one who says (or barks) it faster than the other wins the round . After that, the winner's score is multiplied by k 2 , and the loser's score is multiplied by k . In the beginning of the game , both Slastyona and Pushok have scores equal to one. Unfortunately, Slastyona had lost her notepad where the history of all n games was recorded. She managed to recall the final results for each games, though, but all of her memories of them are vague. Help Slastyona verify their correctness, or, to put it another way, for each given pair of scores determine whether it was possible for a game to finish with such result or not.",
+  "input_specification": "In the first string, the number of games n (1 ≤ n ≤ 350000) is given. Each game is represented by a pair of scores a , b (1 ≤ a , b ≤ 10 9 ) – the results of Slastyona and Pushok, correspondingly.",
+  "output_specification": "For each pair of scores, answer \" Yes \" if it's possible for a game to finish with given score, and \" No \" otherwise. You can output each letter in arbitrary case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "6\n2 4\n75 45\n8 8\n16 16\n247 994\n1000000000 1000000",
+      "output": "Yes\nYes\nYes\nNo\nNo\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

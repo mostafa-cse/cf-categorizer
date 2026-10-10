@@ -1,0 +1,44 @@
+{
+  "id": "1215B",
+  "source": "problemset",
+  "contest_id": 1215,
+  "problem_index": "B",
+  "name": "The Number of Products",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 20110,
+  "problem_url": "https://codeforces.com/problemset/problem/1215/B",
+  "editorial_url": "https://codeforces.com/blog/entry/69815",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a sequence $$$a_1, a_2, \\dots, a_n$$$ consisting of $$$n$$$ non-zero integers (i.e. $$$a_i \\ne 0$$$). You have to calculate two following values: the number of pairs of indices $$$(l, r)$$$ $$$(l \\le r)$$$ such that $$$a_l \\cdot a_{l + 1} \\dots a_{r - 1} \\cdot a_r$$$ is negative; the number of pairs of indices $$$(l, r)$$$ $$$(l \\le r)$$$ such that $$$a_l \\cdot a_{l + 1} \\dots a_{r - 1} \\cdot a_r$$$ is positive;",
+  "input_specification": "The first line contains one integer $$$n$$$ $$$(1 \\le n \\le 2 \\cdot 10^{5})$$$ — the number of elements in the sequence. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ $$$(-10^{9} \\le a_i \\le 10^{9}; a_i \\neq 0)$$$ — the elements of the sequence.",
+  "output_specification": "Print two integers — the number of subsegments with negative product and the number of subsegments with positive product, respectively.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 -3 3 -1 1",
+      "output": "8 7"
+    },
+    {
+      "input": "10\n4 2 -4 3 1 2 -4 3 2 3",
+      "output": "28 27"
+    },
+    {
+      "input": "5\n-1 -2 -3 -4 -5",
+      "output": "9 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

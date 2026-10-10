@@ -1,0 +1,41 @@
+{
+  "id": "812D",
+  "source": "problemset",
+  "contest_id": 812,
+  "problem_index": "D",
+  "name": "Sagheer and Kindergarten",
+  "rating": 2700,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 387,
+  "problem_url": "https://codeforces.com/problemset/problem/812/D",
+  "editorial_url": "https://codeforces.com/blog/entry/52318",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sagheer is working at a kindergarten. There are n children and m different toys. These children use well-defined protocols for playing with the toys: Each child has a lovely set of toys that he loves to play with. He requests the toys one after another at distinct moments of time. A child starts playing if and only if he is granted all the toys in his lovely set. If a child starts playing, then sooner or later he gives the toys back. No child keeps the toys forever. Children request toys at distinct moments of time. No two children request a toy at the same time. If a child is granted a toy, he never gives it back until he finishes playing with his lovely set. If a child is not granted a toy, he waits until he is granted this toy. He can't request another toy while waiting. If two children are waiting for the same toy, then the child who requested it first will take the toy first. Children don't like to play with each other. That's why they never share toys. When a child requests a toy, then granting the toy to this child depends on whether the toy is free or not. If the toy is free, Sagheer will give it to the child. Otherwise, the child has to wait for it and can't request another toy. Children are smart and can detect if they have to wait forever before they get the toys they want. In such case they start crying. In other words, a crying set is a set of children in which each child is waiting for a toy that is kept by another child in the set. Now, we have reached a scenario where all the children made all the requests for their lovely sets, except for one child x that still has one last request for his lovely set. Some children are playing while others are waiting for a toy, but no child is crying, and no one has yet finished playing. If the child x is currently waiting for some toy, he makes his last request just after getting that toy. Otherwise, he makes the request right away. When child x will make his last request, how many children will start crying? You will be given the scenario and q independent queries. Each query will be of the form x y meaning that the last request of the child x is for the toy y . Your task is to help Sagheer find the size of the maximal crying set when child x makes his last request.",
+  "input_specification": "The first line contains four integers n , m , k , q ( 1 ≤ n , m , k , q ≤ 10 5 ) — the number of children, toys, scenario requests and queries. Each of the next k lines contains two integers a , b ( 1 ≤ a ≤ n and 1 ≤ b ≤ m ) — a scenario request meaning child a requests toy b . The requests are given in the order they are made by children. Each of the next q lines contains two integers x , y ( 1 ≤ x ≤ n and 1 ≤ y ≤ m ) — the request to be added to the scenario meaning child x will request toy y just after getting the toy he is waiting for (if any). It is guaranteed that the scenario requests are consistent and no child is initially crying. All the scenario requests are distinct and no query coincides with a scenario request.",
+  "output_specification": "For each query, print on a single line the number of children who will start crying when child x makes his last request for toy y . Please answer all queries independent of each other.",
+  "sample_testcases": [
+    {
+      "input": "3 3 5 1\n1 1\n2 2\n3 3\n1 2\n2 3\n3 1",
+      "output": "3"
+    },
+    {
+      "input": "5 4 7 2\n1 1\n2 2\n2 1\n5 1\n3 3\n4 4\n4 1\n5 3\n5 4",
+      "output": "0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

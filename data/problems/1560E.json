@@ -1,0 +1,37 @@
+{
+  "id": "1560E",
+  "source": "problemset",
+  "contest_id": 1560,
+  "problem_index": "E",
+  "name": "Polycarp and String Transformation",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "implementation",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 8966,
+  "problem_url": "https://codeforces.com/problemset/problem/1560/E",
+  "editorial_url": "https://codeforces.com/blog/entry/94009",
+  "time_limit": "3 s",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has a string $$$s$$$. Polycarp performs the following actions until the string $$$s$$$ is empty ($$$t$$$ is initially an empty string): he adds to the right to the string $$$t$$$ the string $$$s$$$, i.e. he does $$$t = t + s$$$, where $$$t + s$$$ is a concatenation of the strings $$$t$$$ and $$$s$$$; he selects an arbitrary letter of $$$s$$$ and removes from $$$s$$$ all its occurrences ( the selected letter must occur in the string $$$s$$$ at the moment of performing this action ). Polycarp performs this sequence of actions strictly in this order. Note that after Polycarp finishes the actions, the string $$$s$$$ will be empty and the string $$$t$$$ will be equal to some value (that is undefined and depends on the order of removing). E.g. consider $$$s$$$=\" abacaba \" so the actions may be performed as follows: $$$t$$$=\" abacaba \", the letter ' b ' is selected, then $$$s$$$=\" aacaa \"; $$$t$$$=\" abacabaaacaa \", the letter ' a ' is selected, then $$$s$$$=\" c \"; $$$t$$$=\" abacabaaacaac \", the letter ' c ' is selected, then $$$s$$$=\"\" (the empty string). You need to restore the initial value of the string $$$s$$$ using only the final value of $$$t$$$ and find the order of removing letters from $$$s$$$.",
+  "input_specification": "The first line contains one integer $$$T$$$ ($$$1 \\le T \\le 10^4$$$) — the number of test cases. Then $$$T$$$ test cases follow. Each test case contains one string $$$t$$$ consisting of lowercase letters of the Latin alphabet. The length of $$$t$$$ doesn't exceed $$$5 \\cdot 10^5$$$. The sum of lengths of all strings $$$t$$$ in the test cases doesn't exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case output in a separate line: $$$-1$$$, if the answer doesn't exist; two strings separated by spaces. The first one must contain a possible initial value of $$$s$$$. The second one must contain a sequence of letters — it's in what order one needs to remove letters from $$$s$$$ to make the string $$$t$$$. E.g. if the string \" bac \" is outputted, then, first, all occurrences of the letter ' b ' were deleted, then all occurrences of ' a ', and then, finally, all occurrences of ' c '. If there are multiple solutions, print any one.",
+  "sample_testcases": [
+    {
+      "input": "7\nabacabaaacaac\nnowyouknowthat\npolycarppoycarppoyarppyarppyrpprppp\nisi\neverywherevrywhrvryhrvrhrvhv\nhaaha\nqweqeewew",
+      "output": "abacaba bac\n-1\npolycarp lcoayrp\nis si\neverywhere ewyrhv\n-1\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

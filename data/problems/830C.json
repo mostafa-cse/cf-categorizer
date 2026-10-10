@@ -1,0 +1,44 @@
+{
+  "id": "830C",
+  "source": "problemset",
+  "contest_id": 830,
+  "problem_index": "C",
+  "name": "Bamboo Partition",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "data structures",
+    "implementation",
+    "math",
+    "number theory",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 1402,
+  "problem_url": "https://codeforces.com/problemset/problem/830/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53302",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Vladimir wants to modernize partitions in his office. To make the office more comfortable he decided to remove a partition and plant several bamboos in a row. He thinks it would be nice if there are $$$n$$$ bamboos in a row, and the $$$i$$$-th from the left is $$$a_i$$$ meters high. Vladimir has just planted $$$n$$$ bamboos in a row, each of which has height $$$0$$$ meters right now, but they grow $$$1$$$ meter each day. In order to make the partition nice Vladimir can cut each bamboo once at any height (no greater that the height of the bamboo), and then the bamboo will stop growing. Vladimir wants to check the bamboos each $$$d$$$ days (i.e. $$$d$$$ days after he planted, then after $$$2d$$$ days and so on), and cut the bamboos that reached the required height. Vladimir wants the total length of bamboo parts he will cut off to be no greater than $$$k$$$ meters. What is the maximum value $$$d$$$ he can choose so that he can achieve what he wants without cutting off more than $$$k$$$ meters of bamboo?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 100$$$, $$$1 \\le k \\le 10^{11}$$$) — the number of bamboos and the maximum total length of cut parts, in meters. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the required heights of bamboos, in meters.",
+  "output_specification": "Print a single integer — the maximum value of $$$d$$$ such that Vladimir can reach his goal.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 3 5",
+      "output": "3"
+    },
+    {
+      "input": "3 40\n10 30 50",
+      "output": "32"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

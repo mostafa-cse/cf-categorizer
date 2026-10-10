@@ -1,0 +1,39 @@
+{
+  "id": "980C",
+  "source": "problemset",
+  "contest_id": 980,
+  "problem_index": "C",
+  "name": "Posterized",
+  "rating": 1700,
+  "tags": [
+    "games",
+    "greedy"
+  ],
+  "solved_count": 3964,
+  "problem_url": "https://codeforces.com/problemset/problem/980/C",
+  "editorial_url": "https://codeforces.com/blog/entry/59350",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Professor Ibrahim has prepared the final homework for his algorithm’s class. He asked his students to implement the Posterization Image Filter. Their algorithm will be tested on an array of integers, where the $$$i$$$-th integer represents the color of the $$$i$$$-th pixel in the image. The image is in black and white, therefore the color of each pixel will be an integer between 0 and 255 (inclusive). To implement the filter, students are required to divide the black and white color range [0, 255] into groups of consecutive colors, and select one color in each group to be the group’s key. In order to preserve image details, the size of a group must not be greater than $$$k$$$, and each color should belong to exactly one group. Finally, the students will replace the color of each pixel in the array with that color’s assigned group key. To better understand the effect, here is an image of a basking turtle where the Posterization Filter was applied with increasing $$$k$$$ to the right. To make the process of checking the final answer easier, Professor Ibrahim wants students to divide the groups and assign the keys in a way that produces the lexicographically smallest possible array.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 10^5$$$, $$$1 \\leq k \\leq 256$$$), the number of pixels in the image, and the maximum size of a group, respectively. The second line contains $$$n$$$ integers $$$p_1, p_2, \\dots, p_n$$$ ($$$0 \\leq p_i \\leq 255$$$), where $$$p_i$$$ is the color of the $$$i$$$-th pixel.",
+  "output_specification": "Print $$$n$$$ space-separated integers; the lexicographically smallest possible array that represents the image after applying the Posterization filter.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n2 14 3 4",
+      "output": "0 12 3 3"
+    },
+    {
+      "input": "5 2\n0 2 1 255 254",
+      "output": "0 1 1 254 254"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:22",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

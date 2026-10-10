@@ -1,0 +1,43 @@
+{
+  "id": "306C",
+  "source": "problemset",
+  "contest_id": 306,
+  "problem_index": "C",
+  "name": "White, Black and White Again",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "number theory"
+  ],
+  "solved_count": 669,
+  "problem_url": "https://codeforces.com/problemset/problem/306/C",
+  "editorial_url": null,
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus is sure that his life fits the description: \"first there is a white stripe, then a black one, then a white one again\". So, Polycarpus is sure that this rule is going to fulfill during the next n days. Polycarpus knows that he is in for w good events and b not-so-good events. At least one event is going to take place during each day. As each day is unequivocally characterizes as a part of a white or a black stripe, then each day is going to have events of the same type only (ether good or not-so-good). What is the number of distinct ways this scenario can develop over the next n days if Polycarpus is in for a white stripe (a stripe that has good events only, the stripe's length is at least 1 day), the a black stripe (a stripe that has not-so-good events only, the stripe's length is at least 1 day) and a white stripe again (a stripe that has good events only, the stripe's length is at least 1 day). Each of n days will belong to one of the three stripes only. Note that even the events of the same type are distinct from each other. Even if some events occur on the same day, they go in some order (there are no simultaneous events). Write a code that prints the number of possible configurations to sort the events into days. See the samples for clarifications on which scenarios should be considered distinct. Print the answer modulo 1000000009 (10 9 + 9) .",
+  "input_specification": "The single line of the input contains integers n , w and b ( 3 ≤ n ≤ 4000 , 2 ≤ w ≤ 4000 , 1 ≤ b ≤ 4000 ) — the number of days, the number of good events and the number of not-so-good events. It is guaranteed that w + b ≥ n .",
+  "output_specification": "Print the required number of ways modulo 1000000009 (10 9 + 9) .",
+  "sample_testcases": [
+    {
+      "input": "3 2 1",
+      "output": "2"
+    },
+    {
+      "input": "4 2 2",
+      "output": "4"
+    },
+    {
+      "input": "3 2 2",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

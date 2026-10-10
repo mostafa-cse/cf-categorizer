@@ -1,0 +1,37 @@
+{
+  "id": "989E",
+  "source": "problemset",
+  "contest_id": 989,
+  "problem_index": "E",
+  "name": "A Trance of Nightfall",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "geometry",
+    "matrices",
+    "probabilities"
+  ],
+  "solved_count": 354,
+  "problem_url": "https://codeforces.com/problemset/problem/989/E",
+  "editorial_url": "https://codeforces.com/blog/entry/59968",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The cool breeze blows gently, the flowing water ripples steadily. \"Flowing and passing like this, the water isn't gone ultimately; Waxing and waning like that, the moon doesn't shrink or grow eventually.\" \"Everything is transient in a way and perennial in another.\" Kanno doesn't seem to make much sense out of Mino's isolated words, but maybe it's time that they enjoy the gentle breeze and the night sky — the inexhaustible gifts from nature. Gazing into the sky of stars, Kanno indulges in a night's tranquil dreams. There is a set $$$S$$$ of $$$n$$$ points on a coordinate plane. Kanno starts from a point $$$P$$$ that can be chosen on the plane. $$$P$$$ is not added to $$$S$$$ if it doesn't belong to $$$S$$$. Then the following sequence of operations (altogether called a move ) is repeated several times, in the given order: Choose a line $$$l$$$ such that it passes through at least two elements in $$$S$$$ and passes through Kanno's current position. If there are multiple such lines, one is chosen equiprobably. Move to one of the points that belong to $$$S$$$ and lie on $$$l$$$. The destination is chosen equiprobably among all possible ones, including Kanno's current position (if it does belong to $$$S$$$). There are $$$q$$$ queries each consisting of two integers $$$(t_i, m_i)$$$. For each query, you're to help Kanno maximize the probability of the stopping position being the $$$t_i$$$-th element in $$$S$$$ after $$$m_i$$$ moves with a proper selection of $$$P$$$, and output this maximum probability. Note that according to rule 1, $$$P$$$ should belong to at least one line that passes through at least two points from $$$S$$$.",
+  "input_specification": "The first line contains a positive integer $$$n$$$ ($$$2 \\leq n \\leq 200$$$) — the number of points in $$$S$$$. The $$$i$$$-th of the following $$$n$$$ lines contains two space-separated integers $$$x_i$$$ and $$$y_i$$$ ($$$-10^4 \\leq x_i, y_i \\leq 10^4$$$) — the coordinates of the $$$i$$$-th point in $$$S$$$. The input guarantees that for all $$$1 \\leq i \\lt j \\leq n$$$, $$$(x_i, y_i) \\neq (x_j, y_j)$$$ holds. The next line contains a positive integer $$$q$$$ ($$$1 \\leq q \\leq 200$$$) — the number of queries. Each of the following $$$q$$$ lines contains two space-separated integers $$$t$$$ and $$$m$$$ ($$$1 \\leq t_i \\leq n$$$, $$$1 \\leq m_i \\leq 10^4$$$) — the index of the target point and the number of moves, respectively.",
+  "output_specification": "Output $$$q$$$ lines each containing a decimal number — the $$$i$$$-th among them denotes the maximum probability of staying on the $$$t_i$$$-th point after $$$m_i$$$ steps, with a proper choice of starting position $$$P$$$. Your answer will be considered correct if each number in your output differs from the corresponding one in jury's answer by at most $$$10^{-6}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer is considered correct if $$$|a - b| \\le 10^{-6}$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 0\n1 3\n2 2\n3 1\n4 4\n10\n1 1\n2 1\n3 1\n4 1\n5 1\n3 2\n3 3\n3 4\n3 5\n3 6",
+      "output": "0.50000000000000000000\n0.50000000000000000000\n0.33333333333333331483\n0.50000000000000000000\n0.50000000000000000000\n0.18518518518518517491\n0.15226337448559670862\n0.14494741655235482414\n0.14332164812274550414\n0.14296036624949901017"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:20",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

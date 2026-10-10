@@ -1,0 +1,43 @@
+{
+  "id": "457A",
+  "source": "problemset",
+  "contest_id": 457,
+  "problem_index": "A",
+  "name": "Golden System",
+  "rating": 1700,
+  "tags": [
+    "math",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 1430,
+  "problem_url": "https://codeforces.com/problemset/problem/457/A",
+  "editorial_url": "https://codeforces.com/blog/entry/13855",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Piegirl got bored with binary, decimal and other integer based counting systems. Recently she discovered some interesting properties about number , in particular that q 2 = q + 1 , and she thinks it would make a good base for her new unique system. She called it \"golden system\". In golden system the number is a non-empty string containing 0's and 1's as digits. The decimal value of expression a 0 a 1 ... a n equals to . Soon Piegirl found out that this system doesn't have same properties that integer base systems do and some operations can not be performed on it. She wasn't able to come up with a fast way of comparing two numbers. She is asking for your help. Given two numbers written in golden system notation, determine which of them has larger decimal value.",
+  "input_specification": "Input consists of two lines — one for each number. Each line contains non-empty string consisting of '0' and '1' characters. The length of each string does not exceed 100000 .",
+  "output_specification": "Print \" > \" if the first number is larger, \" < \" if it is smaller and \" = \" if they are equal.",
+  "sample_testcases": [
+    {
+      "input": "1000\n111",
+      "output": "<"
+    },
+    {
+      "input": "00100\n11",
+      "output": "="
+    },
+    {
+      "input": "110\n101",
+      "output": ">"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

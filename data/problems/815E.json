@@ -1,0 +1,40 @@
+{
+  "id": "815E",
+  "source": "problemset",
+  "contest_id": 815,
+  "problem_index": "E",
+  "name": "Karen and Neighborhood",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "implementation"
+  ],
+  "solved_count": 372,
+  "problem_url": "https://codeforces.com/problemset/problem/815/E",
+  "editorial_url": "https://codeforces.com/blog/entry/52742",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "It's been long after the events of the previous problems, and Karen has now moved on from student life and is looking to relocate to a new neighborhood. The neighborhood consists of n houses in a straight line, labelled 1 to n from left to right, all an equal distance apart. Everyone in this neighborhood loves peace and quiet. Because of this, whenever a new person moves into the neighborhood, he or she always chooses the house whose minimum distance to any occupied house is maximized. If there are multiple houses with the maximum possible minimum distance, he or she chooses the leftmost one. Note that the first person to arrive always moves into house 1 . Karen is the k -th person to enter this neighborhood. If everyone, including herself, follows this rule, which house will she move into?",
+  "input_specification": "The first and only line of input contains two integers, n and k ( 1 ≤ k ≤ n ≤ 10 18 ), describing the number of houses in the neighborhood, and that Karen was the k -th person to move in, respectively.",
+  "output_specification": "Output a single integer on a line by itself, the label of the house Karen will move into.",
+  "sample_testcases": [
+    {
+      "input": "6 4",
+      "output": "2"
+    },
+    {
+      "input": "39 3",
+      "output": "20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

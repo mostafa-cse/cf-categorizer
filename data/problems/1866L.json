@@ -1,0 +1,40 @@
+{
+  "id": "1866L",
+  "source": "problemset",
+  "contest_id": 1866,
+  "problem_index": "L",
+  "name": "Lihmuf Balling",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "brute force",
+    "math"
+  ],
+  "solved_count": 921,
+  "problem_url": "https://codeforces.com/problemset/problem/1866/L",
+  "editorial_url": "https://codeforces.com/blog/entry/120025",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After working at a factory (Lihmuf Sorting), Lihmuf wants to play a game with his good friend, Pak Chanek. There are $$$N$$$ boxes numbered from $$$1$$$ to $$$N$$$. The $$$i$$$-th box contains $$$i$$$ balls. Pak Chanek and Lihmuf will play a game using those boxes. There will be $$$N$$$ turns numbered from $$$1$$$ to $$$N$$$. On each turn, Pak Chanek chooses one box and takes all balls from that box, then Lihmuf does the same thing for one box he chooses (it is possible that the two chosen boxes are the same). Given an integer $$$M$$$. Before the game begins, Lihmuf must choose an integer $$$K$$$ satisfying $$$1 \\leq K \\leq M$$$. It is known that on the $$$j$$$-th turn, Pak Chanek will choose the $$$j$$$-th box, while Lihmuf will choose the $$$y$$$-th box, with $$$y=((j \\times K - 1) \\bmod N) + 1$$$. Help Lihmuf choose the correct value of $$$K$$$ so that he will get as many balls as possible! If there are more than one possible values of $$$K$$$ that result in the maximum total balls, find the minimum such value of $$$K$$$. Keep in mind that each box can be chosen more than once, but after a box is chosen for the first time, the box becomes empty.",
+  "input_specification": "The only line contains two integers $$$N$$$ and $$$M$$$ ($$$1 \\leq N \\leq 10^9$$$; $$$1 \\leq M \\leq 2000$$$) — the number of boxes and the maximum limit for the value of $$$K$$$.",
+  "output_specification": "An integer representing the value of $$$K$$$ that will make Lihmuf get as many balls as possible. If there are more than one possible value of $$$K$$$ that result in the maximum total balls, find the minimum such value of $$$K$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 1",
+      "output": "1"
+    },
+    {
+      "input": "5 4",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

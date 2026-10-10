@@ -1,0 +1,40 @@
+{
+  "id": "1989F",
+  "source": "problemset",
+  "contest_id": 1989,
+  "problem_index": "F",
+  "name": "Simultaneous Coloring",
+  "rating": 3000,
+  "tags": [
+    "dfs and similar",
+    "divide and conquer",
+    "graphs"
+  ],
+  "solved_count": 637,
+  "problem_url": "https://codeforces.com/problemset/problem/1989/F",
+  "editorial_url": "https://codeforces.com/blog/entry/130937",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a matrix, consisting of $$$n$$$ rows and $$$m$$$ columns. You can perform two types of actions on it: paint the entire column in blue; paint the entire row in red. Note that you cannot choose which color to paint the row or column. In one second, you can perform either one action or multiple actions at the same time. If you perform one action, it will be free. If you perform $$$k \\gt 1$$$ actions at the same time, it will cost $$$k^2$$$ coins. When multiple actions are performed at the same time, for each cell affected by actions of both types, the color can be chosen independently. You are asked to process $$$q$$$ queries. Before each query, all cells become colorless. Initially, there are no restrictions on the color of any cells. In the $$$i$$$-th query, a restriction of the following form is added: $$$x_i~y_i~c_i$$$ — the cell in row $$$x_i$$$ in column $$$y_i$$$ should be painted in color $$$c_i$$$. Thus, after $$$i$$$ queries, there are $$$i$$$ restrictions on the required colors of the matrix cells. After each query, output the minimum cost of painting the matrix according to the restrictions.",
+  "input_specification": "The first line contains three integers $$$n, m$$$ and $$$q$$$ ($$$1 \\le n, m, q \\le 2 \\cdot 10^5$$$) — the size of the matrix and the number of queries. In the $$$i$$$-th of the next $$$q$$$ lines, two integers $$$x_i, y_i$$$ and a character $$$c_i$$$ ($$$1 \\le x_i \\le n$$$; $$$1 \\le y_i \\le m$$$; $$$c_i \\in$$$ { 'R' , 'B' }, where 'R' means red, and 'B' means blue) — description of the $$$i$$$-th restriction. The cells in all queries are pairwise distinct.",
+  "output_specification": "Print $$$q$$$ integers — after each query, output the minimum cost of painting the matrix according to the restrictions.",
+  "sample_testcases": [
+    {
+      "input": "2 2 4\n1 1 R\n2 2 R\n1 2 B\n2 1 B",
+      "output": "0\n0\n0\n16"
+    },
+    {
+      "input": "3 5 10\n1 1 B\n2 5 B\n2 2 B\n2 3 R\n2 1 B\n3 2 R\n3 3 B\n1 2 R\n1 3 B\n3 1 B",
+      "output": "0\n0\n0\n0\n0\n0\n16\n16\n25\n25"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:01",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

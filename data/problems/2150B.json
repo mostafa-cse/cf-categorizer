@@ -1,0 +1,36 @@
+{
+  "id": "2150B",
+  "source": "problemset",
+  "contest_id": 2150,
+  "problem_index": "B",
+  "name": "Grid Counting",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 8546,
+  "problem_url": "https://codeforces.com/problemset/problem/2150/B",
+  "editorial_url": "https://codeforces.com/blog/entry/146651",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "ParagonX9 - HyperioxX ⠀ Alice has a grid of size $$$n \\times n$$$. Initially, all cells are colored white. Alice wants to color some cells black satisfying certain properties. Let $$$(x_1, y_1), (x_2, y_2), \\ldots, (x_m, y_m)$$$ be the cells colored black. You are given an array $$$a$$$ of size $$$n$$$. The following conditions must be satisfied: For each row $$$k$$$ ($$$1 \\le k \\le n$$$), there exists exactly $$$a_k$$$ indices $$$i$$$ ($$$1 \\le i \\le m$$$) such that $$$x_i = k$$$. Less formally, there should be $$$a_k$$$ black cells in row $$$k$$$. For each $$$k$$$ ($$$1 \\le k \\le n$$$), there exists exactly one index $$$i$$$ such that $$$\\max(x_i, y_i) = k$$$. For each $$$k$$$ ($$$1 \\le k \\le n$$$), there exists exactly one index $$$i$$$ such that $$$\\max(x_i, n + 1 - y_i) = k$$$. For example, when $$$a = [2, 2, 1, 0, 0]$$$, a possible set of black cells is $$$\\{(1, 1), (2, 2), (3, 3), (2, 4), (1, 5)\\}$$$. This corresponds to the following grid: 5×5 grid with specified black cells. Count the number of possible grids. $$$2$$$ grids are said to be different if there is some cell which is colored black in one of the grids, and white in the other. Since the answer may be large, output it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers — $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le n$$$) It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing an integer: the number of valid grids modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n5\n2 2 1 0 0\n2\n2 0\n2\n1 1\n4\n3 1 0 0\n4\n0 0 0 0",
+      "output": "1\n1\n0\n2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

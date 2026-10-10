@@ -1,0 +1,52 @@
+{
+  "id": "1886E",
+  "source": "problemset",
+  "contest_id": 1886,
+  "problem_index": "E",
+  "name": "I Wanna be the Team Leader",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 1936,
+  "problem_url": "https://codeforces.com/problemset/problem/1886/E",
+  "editorial_url": "https://codeforces.com/blog/entry/121255",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Monocarp is a team leader in a massive IT company. There are $$$m$$$ projects his team of programmers has to complete, numbered from $$$1$$$ to $$$m$$$. The $$$i$$$-th project has a difficulty level $$$b_i$$$. There are $$$n$$$ programmers in the team, numbered from $$$1$$$ to $$$n$$$. The $$$j$$$-th programmer has a stress tolerance level $$$a_j$$$. Monocarp wants to assign the programmers to the projects in such a way that: each programmer is assigned to no more than one project; each project has at least one programmer assigned to it; let $$$k$$$ programmers be assigned to the $$$i$$$-th project; then all the assigned programmers have to have a stress tolerance level greater than or equal to $$$\\frac{b_i}{k}$$$. Help Monocarp to find a valid assignment. If there are multiple answers, print any of them.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$1 \\le m \\le 20$$$) — the number of programmers and the number of projects. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the stress tolerance level of each programmer. The third line contains $$$m$$$ integers $$$b_1, b_2, \\dots, b_m$$$ ($$$1 \\le b_i \\le 10^9$$$) — the difficulty level of each project.",
+  "output_specification": "If there is no valid assignment, print \" NO \". Otherwise, in the first line, print \" YES \". In the $$$i$$$-th of the next $$$m$$$ lines, print the list of the programmers assigned to the $$$i$$$-th project: first, the number of programmers, then their indices in an arbitrary order. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n4 6 100 5 1\n50 1 12",
+      "output": "YES\n1 3\n1 5\n3 2 4 1"
+    },
+    {
+      "input": "5 3\n3 6 100 5 1\n50 1 12",
+      "output": "NO"
+    },
+    {
+      "input": "5 3\n2 2 2 2 4\n3 5 1",
+      "output": "YES\n1 5\n3 1 2 3\n1 4"
+    },
+    {
+      "input": "5 1\n10 20 30 40 50\n4",
+      "output": "YES\n1 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

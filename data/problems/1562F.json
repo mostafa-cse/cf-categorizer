@@ -1,0 +1,37 @@
+{
+  "id": "1562F",
+  "source": "problemset",
+  "contest_id": 1562,
+  "problem_index": "F",
+  "name": "Tubular Bells",
+  "rating": 2900,
+  "tags": [
+    "interactive",
+    "math",
+    "number theory",
+    "probabilities"
+  ],
+  "solved_count": 484,
+  "problem_url": "https://codeforces.com/problemset/problem/1562/F",
+  "editorial_url": "https://codeforces.com/blog/entry/94278",
+  "time_limit": "5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Do you know what tubular bells are? They are a musical instrument made up of cylindrical metal tubes. In an orchestra, tubular bells are used to mimic the ringing of bells. Mike has tubular bells, too! They consist of $$$n$$$ tubes, and each of the tubes has a length that can be expressed by a integer from $$$l$$$ to $$$r$$$ inclusive. It is clear that the lengths of all the tubes are different (it makes no sense to make the same tubes). It is also known that $$$r-l+1 = n$$$. Formally, we can say that Mike's tubular bells are described by a permutation $$$a$$$ of length $$$n$$$ that contains all numbers from $$$l$$$ to $$$r$$$ inclusive, with $$$a_i$$$ denoting the length of the $$$i$$$-th tube. You are offered an interesting task: to guess what Mike's instrument looks like. Simply, you must guess the permutation. Mike won't tell you $$$l$$$ or $$$r$$$. He will only tell you $$$n$$$, and will allow you to ask no more than $$$n + 5000$$$ queries. In each query, you name two positive integers $$$x$$$, $$$y$$$ such that $$$1 \\le x, y \\le n, x \\neq y$$$. In response to this query, the program written by Mike will give you $$$\\mathrm{lcm}(a_x, a_y)$$$, where $$$\\mathrm{lcm}(c,d)$$$ denotes the least common multiple of $$$c$$$ and $$$d$$$. Solve Mike's problem!",
+  "input_specification": "Each test contains multiple test cases. The first line contains one positive integer $$$t$$$ ($$$1 \\le t \\le 20$$$), denoting the number of test cases. Description of the test cases follows. The single line of each test case contains one positive integer $$$n$$$ ($$$3 \\le n \\le 10^5$$$) — number of tubes in Mike's tubular bells. Also $$$1 \\le l \\le r \\le 2 \\cdot 10^5$$$, i.e. the lengths of the tubes do not exceed $$$2 \\cdot 10^5$$$. It is guaranteed that the sum of maximal number of queries (i.e. $$$n + 5000$$$) over all test cases does not exceed $$$10^5 + 5000$$$. It means that sum of $$$n$$$ does not exceed $$$10^5 + 5000 - t \\cdot 5000$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n8 10 7 6 9\n5\n24 25 28 27 26\n7\n1 2 3 4 5 6 7",
+      "output": "? 1 2\n40\n? 2 5\n90\n? 3 1\n56\n? 4 5\n18\n! 8 10 7 6 9\n? 1 5\n312\n? 2 4\n675\n! 24 25 28 27 26\n? 1 4\n4\n? 2 5\n10\n? 3 7\n21\n? 6 2\n6\n? 2 5\n10\n? 1 2\n2\n? 1 2\n2\n? 1 2\n2\n? 1 2\n2\n? 1 2\n2\n! 1 2 3 4 5 6 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:00",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

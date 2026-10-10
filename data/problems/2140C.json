@@ -1,0 +1,36 @@
+{
+  "id": "2140C",
+  "source": "problemset",
+  "contest_id": 2140,
+  "problem_index": "C",
+  "name": "Ultimate Value",
+  "rating": 1500,
+  "tags": [
+    "data structures",
+    "games",
+    "greedy"
+  ],
+  "solved_count": 13391,
+  "problem_url": "https://codeforces.com/problemset/problem/2140/C",
+  "editorial_url": "https://codeforces.com/blog/entry/146218",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's define a function $$$f(a)$$$ for an array $$$a$$$ of length $$$n$$$ as $$$$$$f(a) = \\textrm{cost} + (a_1 - a_2 + a_3 - a_4 \\cdots a_n)$$$$$$ where $$$\\textrm{cost}$$$ is zero initially. Now consider the scenario where Alice and Bob are given an array $$$a$$$ of length $$$n$$$. They play a game taking at most $$$10^{100}$$$ turns alternately with Alice going first. In each turn, they must perform any one (only one) of the following operations: End the game for both Alice and Bob. Choose two indices $$$l,r$$$ with $$$1 \\le l \\le r \\le n$$$ and swap $$$a_l$$$ and $$$a_r$$$; this adds $$$(r - l)$$$ to the $$$\\textrm{cost}$$$. Assume that Alice tries to maximize $$$f(a)$$$ and Bob tries to minimize it. Your task is to determine the final value of $$$f(a)$$$ assuming both players play optimally.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot10^5$$$) — the length of the array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1,a_2,a_3,\\ldots,a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each testcase, output a single integer — the final value of $$$f(a)$$$ assuming both players play optimally.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n1000 1\n5\n9 9 9 9 9\n4\n7 1 8 4\n6\n1 14 1 14 1 15\n9\n31 12 14 22 89 6 78 25 91",
+      "output": "999\n13\n12\n-7\n265"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

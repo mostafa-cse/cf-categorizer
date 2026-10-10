@@ -1,0 +1,46 @@
+{
+  "id": "612E",
+  "source": "problemset",
+  "contest_id": 612,
+  "problem_index": "E",
+  "name": "Square Root of Permutation",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 2175,
+  "problem_url": "https://codeforces.com/problemset/problem/612/E",
+  "editorial_url": "https://codeforces.com/blog/entry/22299",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A permutation of length n is an array containing each integer from 1 to n exactly once. For example, q = [4, 5, 1, 2, 3] is a permutation. For the permutation q the square of permutation is the permutation p that p [ i ] = q [ q [ i ]] for each i = 1... n . For example, the square of q = [4, 5, 1, 2, 3] is p = q 2 = [2, 3, 4, 5, 1] . This problem is about the inverse operation: given the permutation p you task is to find such permutation q that q 2 = p . If there are several such q find any of them.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 6 ) — the number of elements in permutation p . The second line contains n distinct integers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ n ) — the elements of permutation p .",
+  "output_specification": "If there is no permutation q such that q 2 = p print the number \" -1 \". If the answer exists print it. The only line should contain n different integers q i ( 1 ≤ q i ≤ n ) — the elements of the permutation q . If there are several solutions print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 1 4 3",
+      "output": "3 4 2 1"
+    },
+    {
+      "input": "4\n2 1 3 4",
+      "output": "-1"
+    },
+    {
+      "input": "5\n2 3 4 5 1",
+      "output": "4 5 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

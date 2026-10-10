@@ -1,0 +1,36 @@
+{
+  "id": "400E",
+  "source": "problemset",
+  "contest_id": 400,
+  "problem_index": "E",
+  "name": "Inna and Binary Logic",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures"
+  ],
+  "solved_count": 1080,
+  "problem_url": "https://codeforces.com/problemset/problem/400/E",
+  "editorial_url": "https://codeforces.com/blog/entry/10755",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Inna is fed up with jokes about female logic. So she started using binary logic instead. Inna has an array of n elements a 1 [1], a 1 [2], ..., a 1 [ n ] . Girl likes to train in her binary logic, so she does an exercise consisting of n stages: on the first stage Inna writes out all numbers from array a 1 , on the i -th ( i ≥ 2) stage girl writes all elements of array a i , which consists of n - i + 1 integers; the k -th integer of array a i is defined as follows: a i [ k ] = a i - 1 [ k ] AND a i - 1 [ k + 1] . Here AND is bit-wise binary logical operation. Dima decided to check Inna's skill. He asks Inna to change array, perform the exercise and say the sum of all elements she wrote out during the current exercise. Help Inna to answer the questions!",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n , m ≤ 10 5 ) — size of array a 1 and number of Dima's questions. Next line contains n integers a 1 [1], a 1 [2], ..., a 1 [ n ] (0 ≤ a i ≤ 10 5 ) — initial array elements. Each of next m lines contains two integers — Dima's question description. Each question consists of two integers p i , v i (1 ≤ p i ≤ n ; 0 ≤ v i ≤ 10 5 ) . For this question Inna should make a 1 [ p i ] equals v i , and then perform the exercise. Please, note that changes are saved from question to question.",
+  "output_specification": "For each question print Inna's answer on a single line.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 1 1\n1 1\n2 2\n3 2\n1 2",
+      "output": "6\n4\n7\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

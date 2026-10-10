@@ -1,0 +1,37 @@
+{
+  "id": "2245E",
+  "source": "problemset",
+  "contest_id": 2245,
+  "problem_index": "E",
+  "name": "Tom and Jerry",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "games",
+    "trees"
+  ],
+  "solved_count": 1211,
+  "problem_url": "https://codeforces.com/problemset/problem/2245/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155232",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected tree consisting of $$$n$$$ vertices. A simple path $$$p$$$ of length $$$k$$$ is defined as a sequence of distinct vertices $$$p_0,p_1,\\ldots,p_k$$$ such that there exists an undirected edge between vertices $$$p_i$$$ and $$$p_{i+1}$$$ for every $$$0 \\le i \\lt k$$$. A simple path is uniquely identified by the unordered pair of its endpoints, $$$(p_0,p_k)$$$. That is, $$$(u,v)$$$ and $$$(v,u)$$$ represent the same simple path . Tom and Jerry are playing a game on this tree. The players take turns, with Tom going first. In the $$$i$$$-th turn ($$$i \\ge 1$$$), the current player chooses a simple path $$$(x_i,y_i)$$$ that satisfies the following conditions: $$$x_i \\ne y_i$$$. The path does not share any edges with any of the previously chosen paths. Either $$$x_i$$$ or $$$y_i$$$ belongs to the path chosen in the $$$(i-1)$$$-th turn. Note that this condition only applies when $$$i \\ge 2$$$. The player who is unable to choose a valid path on their turn loses the game. Assuming both Tom and Jerry play optimally, your task is to compute the total number of distinct simple paths Tom can choose in the first turn such that he can guarantee a win.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$), representing the number of vertices in the tree. Each of the next $$$n-1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\ne v$$$), representing an undirected edge between vertices $$$u$$$ and $$$v$$$. It is guaranteed that the edges form a valid tree. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output an integer representing the total number of distinct simple paths Tom can choose in the first turn such that he can guarantee a win.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n1 2\n3\n1 2\n2 3\n5\n1 2\n2 3\n2 4\n2 5\n5\n1 2\n2 3\n3 4\n4 5\n7\n1 2\n2 3\n2 4\n4 5\n5 6\n5 7",
+      "output": "1\n1\n6\n1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

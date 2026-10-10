@@ -1,0 +1,36 @@
+{
+  "id": "2057G",
+  "source": "problemset",
+  "contest_id": 2057,
+  "problem_index": "G",
+  "name": "Secret Message",
+  "rating": 3000,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "math"
+  ],
+  "solved_count": 830,
+  "problem_url": "https://codeforces.com/problemset/problem/2057/G",
+  "editorial_url": "https://codeforces.com/blog/entry/138119",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Every Saturday, Alexander B., a teacher of parallel X, writes a secret message to Alexander G., a teacher of parallel B, in the evening. Since Alexander G. is giving a lecture at that time and the message is very important, Alexander B. has to write this message on an interactive online board. The interactive online board is a grid consisting of $$$n$$$ rows and $$$m$$$ columns, where each cell is $$$1 \\times 1$$$ in size. Some cells of this board are already filled in, and it is impossible to write a message in them; such cells are marked with the symbol \" . \", while the remaining cells are called free and are marked with the symbol \" # \". Let us introduce two characteristics of the online board: $$$s$$$ is the number of free cells. $$$p$$$ is the perimeter of the grid figure formed by the union of free cells. Let $$$A$$$ be the set of free cells. Your goal is to find a set of cells $$$S \\subseteq A$$$ that satisfies the following properties: $$$|S| \\le \\frac{1}{5} \\cdot (s+p)$$$. Any cell from $$$A$$$ either lies in $$$S$$$ or shares a side with some cell from $$$S$$$. We can show that at least one set $$$S$$$ satisfying these properties exists; you are required to find any suitable one.",
+  "input_specification": "The first line contains the number $$$t$$$ ($$$1 \\le t \\le 80\\,000$$$) — the number of test cases. In the first line of each test case, the numbers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^6$$$) — the dimensions of the grid are given. The following $$$n$$$ lines contain the description of the grid. It is guaranteed that the sum of $$$n \\cdot m$$$ across all test cases does not exceed $$$2 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, output $$$n$$$ lines consisting of $$$m$$$ symbols, where each symbol encodes the state of the cell: \" # \" — the cell is in $$$A$$$ but not in $$$S$$$; \" S \" — the cell is in both $$$A$$$ and $$$S$$$; \" . \" — the cell is neither in $$$A$$$ nor in $$$S$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 3\n.#.\n###\n.#.\n2 6\n######\n######\n3 7\n###....\n#.#.###\n###....",
+      "output": ".#.\n#S#\n.#.\n#S##S#\n#S##S#\nS#S....\n#.#.S#S\nS#S...."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

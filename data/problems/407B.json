@@ -1,0 +1,43 @@
+{
+  "id": "407B",
+  "source": "problemset",
+  "contest_id": 407,
+  "problem_index": "B",
+  "name": "Long Path",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 7303,
+  "problem_url": "https://codeforces.com/problemset/problem/407/B",
+  "editorial_url": "https://codeforces.com/blog/entry/11333",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One day, little Vasya found himself in a maze consisting of ( n + 1) rooms, numbered from 1 to ( n + 1) . Initially, Vasya is at the first room and to get out of the maze, he needs to get to the ( n + 1) -th one. The maze is organized as follows. Each room of the maze has two one-way portals. Let's consider room number i (1 ≤ i ≤ n ) , someone can use the first portal to move from it to room number ( i + 1) , also someone can use the second portal to move from it to room number p i , where 1 ≤ p i ≤ i . In order not to get lost, Vasya decided to act as follows. Each time Vasya enters some room, he paints a cross on its ceiling. Initially, Vasya paints a cross at the ceiling of room 1 . Let's assume that Vasya is in room i and has already painted a cross on its ceiling. Then, if the ceiling now contains an odd number of crosses, Vasya uses the second portal (it leads to room p i ), otherwise Vasya uses the first portal. Help Vasya determine the number of times he needs to use portals to get to room ( n + 1) in the end.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 3 ) — the number of rooms. The second line contains n integers p i ( 1 ≤ p i ≤ i ). Each p i denotes the number of the room, that someone can reach, if he will use the second portal in the i -th room.",
+  "output_specification": "Print a single number — the number of portal moves the boy needs to go out of the maze. As the number can be rather large, print it modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "4"
+    },
+    {
+      "input": "4\n1 1 2 3",
+      "output": "20"
+    },
+    {
+      "input": "5\n1 1 1 1 1",
+      "output": "62"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

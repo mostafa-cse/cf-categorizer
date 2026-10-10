@@ -1,0 +1,39 @@
+{
+  "id": "2025G",
+  "source": "problemset",
+  "contest_id": 2025,
+  "problem_index": "G",
+  "name": "Variable Damage",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "flows"
+  ],
+  "solved_count": 239,
+  "problem_url": "https://codeforces.com/problemset/problem/2025/G",
+  "editorial_url": "https://codeforces.com/blog/entry/135173",
+  "time_limit": "5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Monocarp is gathering an army to fight a dragon in a videogame. The army consists of two parts: the heroes and the defensive artifacts. Each hero has one parameter — his health. Each defensive artifact also has one parameter — its durability. Before the battle begins, Monocarp distributes artifacts to the heroes so that each hero receives at most one artifact. The battle consists of rounds that proceed as follows: first, the dragon deals damage equal to $$$\\frac{1}{a + b}$$$ ( a real number without rounding ) to each hero, where $$$a$$$ is the number of heroes alive and $$$b$$$ is the number of active artifacts; after that, all heroes with health $$$0$$$ or less die; finally, some artifacts are deactivated. An artifact with durability $$$x$$$ is deactivated when one of the following occurs: the hero holding the artifact either dies or receives $$$x$$$ total damage (from the start of the battle). If an artifact is not held by any hero, it is inactive from the beginning of the battle. The battle ends when there are no heroes left alive. Initially, the army is empty. There are $$$q$$$ queries: add a hero with health $$$x$$$ or an artifact with durability $$$y$$$ to the army. After each query, determine the maximum number of rounds that Monocarp can survive if he distributes the artifacts optimally.",
+  "input_specification": "The first line contains one integer $$$q$$$ ($$$1 \\le q \\le 3 \\cdot 10^5$$$) — the number of queries. In the $$$i$$$-th of the following $$$q$$$ lines, there are two integers $$$t_i$$$ and $$$v_i$$$ ($$$t_i \\in \\{1, 2\\}$$$; $$$1 \\le v_i \\le 10^9$$$) — the type of the query and the value of the query parameter. If the type is $$$1$$$, a hero with health $$$v_i$$$ is added. If the type is $$$2$$$, an artifact with durability $$$v_i$$$ is added.",
+  "output_specification": "Print $$$q$$$ integers. After each query, output the maximum number of rounds that Monocarp can survive if he distributes the artifacts optimally.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 5\n1 4\n1 10",
+      "output": "0\n8\n19"
+    },
+    {
+      "input": "10\n1 9\n1 6\n2 4\n1 8\n1 3\n2 10\n1 3\n1 6\n1 10\n2 6",
+      "output": "9\n15\n19\n27\n30\n39\n42\n48\n59\n65"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

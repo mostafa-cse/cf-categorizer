@@ -1,0 +1,40 @@
+{
+  "id": "217E",
+  "source": "problemset",
+  "contest_id": 217,
+  "problem_index": "E",
+  "name": "Alien DNA",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "dsu",
+    "trees"
+  ],
+  "solved_count": 367,
+  "problem_url": "https://codeforces.com/problemset/problem/217/E",
+  "editorial_url": "https://codeforces.com/blog/entry/5285",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Professor Bajtocy is conducting experiments on alien DNA. He has discovered that it is subject to repetitive mutations — each mutation happens in the same way: some continuous subsequence of the alien DNA becomes active, copies itself, the copy gets mangled and inserts itself right after the original subsequence. The mangled copy of the activated continuous subsequence is formed by first joining all the elements at the even positions in that subsequence, and then joining all the elements at the odd ones at the end. That is, if the activated subsequence consists of 11 elements and represented as s 1 s 2 ... s 11 , its mangled copy is s 2 s 4 s 6 s 8 s 10 s 1 s 3 s 5 s 7 s 9 s 11 . For example, if the original sequence was \" ACTGG \" and the mutation happened on the segment [2, 4] (that is the activated subsequence is \" CTG \"), the mutated DNA is: \" ACTG TCG G \". The mangled copy of the activated subsequence is marked with bold font. Professor Bajtocy has written down the original DNA sequence and the mutations that sequentially happened to it, and he now asks you to recover the first k elements of the DNA sequence after all the mutations.",
+  "input_specification": "The first line of input contains the original DNA sequence, consisting only of letters \" A \", \" C \", \" T \" and \" G \" and not exceeding 3·10 6 in length. The second line contains a single integer k ( 1 ≤ k ≤ 3·10 6 ). The third line contains a single integer n ( 0 ≤ n ≤ 5000 ) — the number of mutations. The next n lines describe the mutations in chronological order — each mutation is described by two numbers l i and r i ( 1 ≤ l i ≤ r i ≤ 10 9 ), meaning that the continuous subsequence [ l i , r i ] has become active and cloned itself, joining itself with the mangled copy. It is guaranteed that the input data is correct, that is, no mutation acts on non-existing elements of the DNA sequence, and the resulting DNA sequence has at least k elements. Assume that the DNA elements are indexed starting from 1 and that the notation [ l , r ] meaning the continuous subsequence of DNA sequence that consists of r - l + 1 elements starting at the l -th DNA sequence element and ending at the r -th DNA sequence element.",
+  "output_specification": "Output a single line, containing the first k letters of the mutated DNA sequence.",
+  "sample_testcases": [
+    {
+      "input": "GAGA\n4\n0",
+      "output": "GAGA"
+    },
+    {
+      "input": "ACGTACGT\n16\n2\n1 2\n2 8",
+      "output": "ACCAGTACCGACATCG"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:15",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

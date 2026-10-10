@@ -1,0 +1,39 @@
+{
+  "id": "1699E",
+  "source": "problemset",
+  "contest_id": 1699,
+  "problem_index": "E",
+  "name": "Three Days Grace",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "math",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 1442,
+  "problem_url": "https://codeforces.com/problemset/problem/1699/E",
+  "editorial_url": "https://codeforces.com/blog/entry/108560",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ibti was thinking about a good title for this problem that would fit the round theme (numerus ternarium). He immediately thought about the third derivative, but that was pretty lame so he decided to include the best band in the world — Three Days Grace . You are given a multiset $$$A$$$ with initial size $$$n$$$, whose elements are integers between $$$1$$$ and $$$m$$$. In one operation, do the following: select a value $$$x$$$ from the multiset $$$A$$$, then select two integers $$$p$$$ and $$$q$$$ such that $$$p, q \\gt 1$$$ and $$$p \\cdot q = x$$$. Insert $$$p$$$ and $$$q$$$ to $$$A$$$, delete $$$x$$$ from $$$A$$$. Note that the size of the multiset $$$A$$$ increases by $$$1$$$ after each operation. We define the balance of the multiset $$$A$$$ as $$$\\max(a_i) - \\min(a_i)$$$. Find the minimum possible balance after performing any number (possible zero) of operations.",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The second line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^6$$$, $$$1 \\le m \\le 5 \\cdot 10^6$$$) — the initial size of the multiset, and the maximum value of an element. The third line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le m$$$) — the elements in the initial multiset. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$10^6$$$ and the sum of $$$m$$$ across all test cases does not exceed $$$5 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum possible balance.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 10\n2 4 2 4 2\n3 50\n12 2 3\n2 40\n6 35\n2 5\n1 5",
+      "output": "0\n1\n2\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

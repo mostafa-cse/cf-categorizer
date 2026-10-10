@@ -1,0 +1,47 @@
+{
+  "id": "165C",
+  "source": "problemset",
+  "contest_id": 165,
+  "problem_index": "C",
+  "name": "Another Problem on Strings",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "brute force",
+    "dp",
+    "math",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 14200,
+  "problem_url": "https://codeforces.com/problemset/problem/165/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4124",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A string is binary , if it consists only of characters \" 0 \" and \" 1 \". String v is a substring of string w if it has a non-zero length and can be read starting from some position in string w . For example, string \" 010 \" has six substrings: \" 0 \", \" 1 \", \" 0 \", \" 01 \", \" 10 \", \" 010 \". Two substrings are considered different if their positions of occurrence are different. So, if some string occurs multiple times, we should consider it the number of times it occurs. You are given a binary string s . Your task is to find the number of its substrings, containing exactly k characters \" 1 \".",
+  "input_specification": "The first line contains the single integer k ( 0 ≤ k ≤ 10 6 ). The second line contains a non-empty binary string s . The length of s does not exceed 10 6 characters.",
+  "output_specification": "Print the single number — the number of substrings of the given string, containing exactly k characters \" 1 \". Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "1\n1010",
+      "output": "6"
+    },
+    {
+      "input": "2\n01010",
+      "output": "4"
+    },
+    {
+      "input": "100\n01010",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

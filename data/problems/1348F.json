@@ -1,0 +1,41 @@
+{
+  "id": "1348F",
+  "source": "problemset",
+  "contest_id": 1348,
+  "problem_index": "F",
+  "name": "Phoenix and Memory",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 980,
+  "problem_url": "https://codeforces.com/problemset/problem/1348/F",
+  "editorial_url": "https://codeforces.com/blog/entry/76555",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Phoenix is trying to take a photo of his $$$n$$$ friends with labels $$$1, 2, \\dots, n$$$ who are lined up in a row in a special order. But before he can take the photo, his friends get distracted by a duck and mess up their order. Now, Phoenix must restore the order but he doesn't remember completely! He only remembers that the $$$i$$$-th friend from the left had a label between $$$a_i$$$ and $$$b_i$$$ inclusive. Does there exist a unique way to order his friends based of his memory?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot10^5$$$)  — the number of friends. The $$$i$$$-th of the next $$$n$$$ lines contain two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i \\le b_i \\le n$$$)  — Phoenix's memory of the $$$i$$$-th position from the left. It is guaranteed that Phoenix's memory is valid so there is at least one valid ordering.",
+  "output_specification": "If Phoenix can reorder his friends in a unique order, print YES followed by $$$n$$$ integers  — the $$$i$$$-th integer should be the label of the $$$i$$$-th friend from the left. Otherwise, print NO . Then, print any two distinct valid orderings on the following two lines. If are multiple solutions, print any.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 4\n1 3\n2 4\n3 4",
+      "output": "YES\n4 1 2 3"
+    },
+    {
+      "input": "4\n1 3\n2 4\n3 4\n2 3",
+      "output": "NO\n1 3 4 2 \n1 2 4 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:54",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

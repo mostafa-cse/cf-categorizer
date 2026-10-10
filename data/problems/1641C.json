@@ -1,0 +1,39 @@
+{
+  "id": "1641C",
+  "source": "problemset",
+  "contest_id": 1641,
+  "problem_index": "C",
+  "name": "Anonymity Is Important",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dsu",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 2923,
+  "problem_url": "https://codeforces.com/problemset/problem/1641/C",
+  "editorial_url": "https://codeforces.com/blog/entry/100249",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the work of a doctor, it is important to maintain the anonymity of clients and the results of tests. The test results are sent to everyone personally by email, but people are very impatient and they want to know the results right away. That's why in the testing lab \"De-vitro\" doctors came up with an experimental way to report the results. Let's assume that $$$n$$$ people took the tests in the order of the queue. Then the chief doctor Sam can make several statements, in each telling if there is a sick person among the people in the queue from $$$l$$$-th to $$$r$$$-th (inclusive), for some values $$$l$$$ and $$$r$$$. During the process, Sam will check how well this scheme works and will be interested in whether it is possible to find out the test result of $$$i$$$-th person from the information he announced. And if it can be done, then is that patient sick or not. Help Sam to test his scheme.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the number of people and the number of queries. In each of the next $$$q$$$ lines, the description of the query is given. The first number in the line is $$$t$$$ ($$$t = 0$$$ or $$$t = 1$$$) — the type of the query. If $$$t = 0$$$, the line contains three more integers $$$l, r, x$$$ ($$$1 \\le l \\le r \\le n$$$, $$$x = 0$$$ or $$$x = 1$$$). This query means that Sam tells that among the people in the queue from $$$l$$$-th to $$$r$$$-th (inclusive): there was at least one sick person, if $$$x=1$$$, there is no sick people, if $$$x=0$$$. If $$$t = 1$$$, the line contains one more integer $$$j$$$ ($$$1 \\le j \\le n$$$) — the position of the patient in the queue, for which Sam wants to know the status. All queries are correct, that means that there always exists an example of the queue of length $$$n$$$ for which all reported results (statements from queries with $$$t = 0$$$) are true.",
+  "output_specification": "After each Sam question (query with $$$t = 1$$$) print: \" NO \", if the patient is definitely not sick, \" YES \", if the patient is definitely sick. \" N/A \", if it is impossible to definitely identify the status of patient having the given information.",
+  "sample_testcases": [
+    {
+      "input": "6 9\n0 4 5 0\n1 5\n1 6\n0 4 6 1\n1 6\n0 2 5 1\n0 2 2 0\n1 3\n1 2",
+      "output": "NO\nN/A\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

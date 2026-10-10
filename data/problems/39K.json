@@ -1,0 +1,40 @@
+{
+  "id": "39K",
+  "source": "problemset",
+  "contest_id": 39,
+  "problem_index": "K",
+  "name": "Testing",
+  "rating": 2600,
+  "tags": [],
+  "solved_count": 153,
+  "problem_url": "https://codeforces.com/problemset/problem/39/K",
+  "editorial_url": "https://codeforces.com/blog/entry/786",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You take part in the testing of new weapon. For the testing a polygon was created. The polygon is a rectangular field n × m in size, divided into unit squares 1 × 1 in size. The polygon contains k objects, each of which is a rectangle with sides, parallel to the polygon sides and entirely occupying several unit squares. The objects don't intersect and don't touch each other. The principle according to which the weapon works is highly secret. You only know that one can use it to strike any rectangular area whose area is not equal to zero with sides, parallel to the sides of the polygon. The area must completely cover some of the unit squares into which the polygon is divided and it must not touch the other squares. Of course the area mustn't cross the polygon border. Your task is as follows: you should hit no less than one and no more than three rectangular objects. Each object must either lay completely inside the area (in that case it is considered to be hit), or lay completely outside the area. Find the number of ways of hitting.",
+  "input_specification": "The first line has three integers n , m и k ( 1 ≤ n , m ≤ 1000 , 1 ≤ k ≤ 90 ) — the sizes of the polygon and the number of objects on it respectively. Next n lines contain m symbols each and describe the polygon. The symbol \" * \" stands for a square occupied an object, whereas the symbol \" . \" stands for an empty space. The symbols \" * \" form exactly k rectangular connected areas that meet the requirements of the task.",
+  "output_specification": "Output a single number — the number of different ways to hit a target.",
+  "sample_testcases": [
+    {
+      "input": "3 3 3\n*.*\n...\n*..",
+      "output": "21"
+    },
+    {
+      "input": "4 5 4\n.*.**\n...**\n**...\n...**",
+      "output": "38"
+    },
+    {
+      "input": "2 2 1\n.*\n..",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "27E",
+  "source": "problemset",
+  "contest_id": 27,
+  "problem_index": "E",
+  "name": "Number With The Given Amount Of Divisors",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "dp",
+    "number theory"
+  ],
+  "solved_count": 5049,
+  "problem_url": "https://codeforces.com/problemset/problem/27/E",
+  "editorial_url": "https://codeforces.com/blog/entry/653",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given the number n , find the smallest positive integer which has exactly n divisors. It is guaranteed that for the given n the answer will not exceed 10 18 .",
+  "input_specification": "The first line of the input contains integer n ( 1 ≤ n ≤ 1000 ).",
+  "output_specification": "Output the smallest positive integer with exactly n divisors.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "6"
+    },
+    {
+      "input": "6",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

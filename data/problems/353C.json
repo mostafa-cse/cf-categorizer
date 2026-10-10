@@ -1,0 +1,40 @@
+{
+  "id": "353C",
+  "source": "problemset",
+  "contest_id": 353,
+  "problem_index": "C",
+  "name": "Find Maximum",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5319,
+  "problem_url": "https://codeforces.com/problemset/problem/353/C",
+  "editorial_url": "https://codeforces.com/blog/entry/9145",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Valera has array a , consisting of n integers a 0 , a 1 , ..., a n - 1 , and function f ( x ) , taking an integer from 0 to 2 n - 1 as its single argument. Value f ( x ) is calculated by formula , where value bit ( i ) equals one if the binary representation of number x contains a 1 on the i -th position, and zero otherwise. For example, if n = 4 and x = 11 (11 = 2 0 + 2 1 + 2 3 ) , then f ( x ) = a 0 + a 1 + a 3 . Help Valera find the maximum of function f ( x ) among all x , for which an inequality holds: 0 ≤ x ≤ m .",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 10 5 ) — the number of array elements. The next line contains n space-separated integers a 0 , a 1 , ..., a n - 1 (0 ≤ a i ≤ 10 4 ) — elements of array a . The third line contains a sequence of digits zero and one without spaces s 0 s 1 ... s n - 1 — the binary representation of number m . Number m equals .",
+  "output_specification": "Print a single integer — the maximum value of function f ( x ) for all .",
+  "sample_testcases": [
+    {
+      "input": "2\n3 8\n10",
+      "output": "3"
+    },
+    {
+      "input": "5\n17 0 10 2 1\n11010",
+      "output": "27"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

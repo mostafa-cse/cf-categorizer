@@ -1,0 +1,39 @@
+{
+  "id": "1781C",
+  "source": "problemset",
+  "contest_id": 1781,
+  "problem_index": "C",
+  "name": "Equal Frequencies",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 11367,
+  "problem_url": "https://codeforces.com/problemset/problem/1781/C",
+  "editorial_url": "https://codeforces.com/blog/entry/111783",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's call a string balanced if all characters that are present in it appear the same number of times. For example, \" coder \", \" appall \", and \" ttttttt \" are balanced, while \" wowwow \" and \" codeforces \" are not. You are given a string $$$s$$$ of length $$$n$$$ consisting of lowercase English letters. Find a balanced string $$$t$$$ of the same length $$$n$$$ consisting of lowercase English letters that is different from the string $$$s$$$ in as few positions as possible. In other words, the number of indices $$$i$$$ such that $$$s_i \\ne t_i$$$ should be as small as possible.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. Each test case consists of two lines. The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the string $$$s$$$. The second line contains the string $$$s$$$ of length $$$n$$$ consisting of lowercase English letters. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the smallest number of positions where string $$$s$$$ and a balanced string $$$t$$$ can differ, followed by such a string $$$t$$$. If there are multiple solutions, print any. It can be shown that at least one balanced string always exists.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\nhello\n10\ncodeforces\n5\neevee\n6\nappall",
+      "output": "1\nhelno\n2\ncodefofced\n1\neeeee\n0\nappall"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

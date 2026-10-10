@@ -1,0 +1,36 @@
+{
+  "id": "843B",
+  "source": "problemset",
+  "contest_id": 843,
+  "problem_index": "B",
+  "name": "Interactive LowerBound",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "interactive",
+    "probabilities"
+  ],
+  "solved_count": 2672,
+  "problem_url": "https://codeforces.com/problemset/problem/843/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54029",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. You are given a sorted in increasing order singly linked list. You should find the minimum integer in the list which is greater than or equal to x . More formally, there is a singly liked list built on an array of n elements. Element with index i contains two integers: value i is the integer value in this element, and next i that is the index of the next element of the singly linked list (or -1 , if the current element is the last). The list is sorted, i.e. if next i ≠  - 1 , then value next i > value i . You are given the number of elements in the list n , the index of the first element start , and the integer x . You can make up to 2000 queries of the following two types: ? i ( 1 ≤ i ≤ n ) — ask the values value i and next i , ! ans — give the answer for the problem: the minimum integer, greater than or equal to x , or ! -1 , if there are no such integers. Your program should terminate after this query. Write a program that solves this problem.",
+  "input_specification": "The first line contains three integers n , start , x ( 1 ≤ n ≤ 50000 , 1 ≤ start ≤ n , 0 ≤ x ≤ 10 9 ) — the number of elements in the list, the index of the first element and the integer x .",
+  "output_specification": "To print the answer for the problem, print ! ans , where ans is the minimum integer in the list greater than or equal to x , or -1 , if there is no such integer.",
+  "sample_testcases": [
+    {
+      "input": "5 3 80\n97 -1\n58 5\n16 2\n81 1\n79 4",
+      "output": "? 1\n? 2\n? 3\n? 4\n? 5\n! 81"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

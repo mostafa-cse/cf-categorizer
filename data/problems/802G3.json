@@ -1,0 +1,34 @@
+{
+  "id": "802G3",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "G3",
+  "name": "Fake News (hard)",
+  "rating": 2300,
+  "tags": [
+    "string suffix structures"
+  ],
+  "solved_count": 1888,
+  "problem_url": "https://codeforces.com/problemset/problem/802/G3",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Now that you have proposed a fake post for the HC 2 Facebook page, Heidi wants to measure the quality of the post before actually posting it. She recently came across a (possibly fake) article about the impact of fractal structure on multimedia messages and she is now trying to measure the self-similarity of the message, which is defined as where the sum is over all nonempty strings p and is the number of occurences of p in s as a substring . (Note that the sum is infinite, but it only has a finite number of nonzero summands.) Heidi refuses to do anything else until she knows how to calculate this self-similarity. Could you please help her? (If you would like to instead convince Heidi that a finite string cannot be a fractal anyway – do not bother, we have already tried.)",
+  "input_specification": "The input starts with a line indicating the number of test cases T ( 1 ≤ T ≤ 10 ). After that, T test cases follow, each of which consists of one line containing a string s ( 1 ≤ | s | ≤ 100 000 ) composed of lowercase letters ( a - z ).",
+  "output_specification": "Output T lines, every line containing one number – the answer to the corresponding test case.",
+  "sample_testcases": [
+    {
+      "input": "4\naa\nabcd\nccc\nabcc",
+      "output": "5\n10\n14\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

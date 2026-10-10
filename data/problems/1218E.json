@@ -1,0 +1,35 @@
+{
+  "id": "1218E",
+  "source": "problemset",
+  "contest_id": 1218,
+  "problem_index": "E",
+  "name": "Product Tuples",
+  "rating": 2500,
+  "tags": [
+    "divide and conquer",
+    "fft"
+  ],
+  "solved_count": 541,
+  "problem_url": "https://codeforces.com/problemset/problem/1218/E",
+  "editorial_url": "https://codeforces.com/blog/entry/69752",
+  "time_limit": "8 seconds",
+  "memory_limit": "128 megabytes",
+  "description": "While roaming the mystic areas of Stonefalls, in order to drop legendary loot, an adventurer was given a quest as follows. He was given an array $$$A = {a_1,a_2,...,a_N }$$$ of length $$$N$$$, and a number $$$K$$$. Define array $$$B$$$ as $$$B(q, A) = $$$ { $$$q-a_1, q-a_2, ..., q-a_N$$$ }. Define function $$$F$$$ as $$$F(B,K)$$$ being sum of products of all $$$K$$$-tuples of elements in array $$$B$$$. For example, if the array $$$B$$$ is $$$[2,3,4,5]$$$, and with $$$K=3$$$, sum of products of all 3-tuples is $$$$$$F(B, 3) = 2*3*4+2*3*5+3*4*5+2*4*5$$$$$$ He was then given a number Q, number of queries of two types: Type 1: Given $$$q$$$, $$$i$$$, and $$$d$$$ calculate $$$F(B(q, A), K)$$$ where we make change to initial array as $$$A[i] = d$$$. Type 2: Given $$$q$$$, $$$L$$$, $$$R$$$, and $$$d$$$ calculate $$$F(B(q, A), K)$$$ where we make change to initial array as $$$A[i] = A[i] + d$$$ for all $$$i$$$ in range $$$[L, R]$$$ inclusive. All changes are temporarily made to initial array, and don't propagate to following queries. Help the adventurer calculate the answer to a quest, and finally get that loot!",
+  "input_specification": "In the first two lines, numbers $$$N$$$ ($$$1 \\leq N \\leq 2*10^4$$$) and $$$K$$$ ($$$1 \\leq K \\leq N$$$), the length of initial array $$$A$$$, and tuple size, followed by $$$a_1,a_2,a_3,…,a_N$$$ ($$$0 \\leq a_i \\leq 10^9$$$) , elements of array $$$A$$$, in the next line. Then follows number $$$Q$$$ ($$$Q \\leq 10$$$), number of queries. In the next $$$Q$$$ lines come queries of the form: 1 q i d, for type 1, 2 q L R d, for type 2, as explained above ($$$0 \\leq q, d \\leq 10^9, 1 \\leq i,L,R \\leq N$$$)",
+  "output_specification": "Print $$$Q$$$ lines, the answers to queries, modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n1 2 3 4 5\n3\n1 6 1 1\n1 6 5 2\n2 6 2 3 1",
+      "output": "85\n127\n63"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:24",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

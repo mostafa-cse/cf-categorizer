@@ -1,0 +1,35 @@
+{
+  "id": "2255E1",
+  "source": "problemset",
+  "contest_id": 2255,
+  "problem_index": "E1",
+  "name": "What Will Remain at the End? (Easy Version)",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "data structures"
+  ],
+  "solved_count": 296,
+  "problem_url": "https://codeforces.com/problemset/problem/2255/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/155840",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference between the two versions is the set of allowed values for the initial array and for $$$x$$$ in operations of type $$$1$$$. In this version, all these values belong to $$$\\{-1,0,1\\}$$$. You can make hacks only if both versions of the problem are solved. Before her final sortie, Chtholly asks Willem three questions. The second is this: what will remain if the sky truly reaches its end? Willem cannot answer her directly. Instead, he opens a chronicle containing $$$n$$$ records, numbered from $$$1$$$ to $$$n$$$. Each record holds an integer: a positive value represents hope, while a negative value represents despair. The initial contents of the chronicle form an array $$$a_1,a_2,\\ldots,a_n$$$, called version $$$0$$$. Chtholly then performs $$$q$$$ operations. For each $$$1\\le i\\le q$$$, the $$$i$$$-th operation creates a new version $$$i$$$ from version $$$i-1$$$. Each operation has one of the following four types: $$$\\texttt{1 l r x}$$$: set $$$a_k\\gets x$$$ for every $$$l\\le k\\le r$$$. $$$\\texttt{2 l r}$$$: set $$$a_k\\gets -a_k$$$ for every $$$l\\le k\\le r$$$. $$$\\texttt{3 l r}$$$: set $$$a_k\\gets\\max(a_k,0)$$$ for every $$$l\\le k\\le r$$$. $$$\\texttt{4 p}$$$: consider the value at position $$$p$$$ in every previous version $$$0,1,\\ldots, i-1$$$. Let these values be $$$b_0,b_1,\\ldots,b_{i-1}$$$. Find the maximum sum over all non-empty subarrays$$$^{\\text{∗}}$$$ of this sequence. If the operation is of type $$$1$$$, $$$2$$$, or $$$3$$$, the specified modification is applied to version $$$i-1$$$ to obtain version $$$i$$$. An operation of type $$$4$$$ does not modify the array, so version $$$i$$$ is identical to version $$$i-1$$$. The operations are encoded and must be processed in order. Their decoding depends on $$$\\mathrm{lastans}$$$, which is updated after every operation of type $$$4$$$. Help Willem answer every operation of type $$$4$$$. $$$^{\\text{∗}}$$$An array $$$c$$$ is a subarray of an array $$$b$$$ if $$$c$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1\\le n,q\\le5\\cdot10^5$$$) — the length of the array and the number of operations. The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$a_i\\in\\{-1,0,1\\}$$$) — the array in version $$$0$$$. Each of the next $$$q$$$ lines describes one operation in one of the following encoded formats: The first integer on the line is the operation type. $$$\\texttt{1 u v x}$$$ ($$$0\\le u,v \\lt 2^{64}$$$, $$$x\\in\\{-1,0,1\\}$$$); $$$\\texttt{2 u v}$$$ ($$$0\\le u,v \\lt 2^{64}$$$); $$$\\texttt{3 u v}$$$ ($$$0\\le u,v \\lt 2^{64}$$$); $$$\\texttt{4 u}$$$ ($$$0\\le u \\lt 2^{64}$$$). The operations are encoded and must be processed in order. Their decoding depends on a value $$$\\mathrm{lastans}$$$. Initially, $$$\\mathrm{lastans}=0$$$. After answering an operation of type $$$4$$$, set $$$\\mathrm{lastans}$$$ to the least non-negative residue of its answer modulo $$$2^{64}$$$. Operations of all other types leave $$$\\mathrm{lastans}$$$ unchanged. For every encoded coordinate $$$y$$$, define $$$d(y)=\\left(\\left(y\\oplus\\mathrm{lastans}\\right)\\bmod n\\right)+1$$$. Here, $$$\\oplus$$$ denotes the bitwise XOR operation . For an operation $$$\\texttt{1 u v x}$$$, let $$$l=\\min(d(u),d(v))$$$ and $$$r=\\max(d(u),d(v))$$$. The value $$$x$$$ is not encoded. For an operation $$$\\texttt{2 u v}$$$ or $$$\\texttt{3 u v}$$$, let $$$l=\\min(d(u),d(v))$$$ and $$$r=\\max(d(u),d(v))$$$. For an operation $$$\\texttt{4 u}$$$, let $$$p=d(u)$$$. The operation type is not encoded. Do not forget to update $$$\\mathrm{lastans}$$$ after answering each operation of type $$$4$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5\\cdot10^5$$$. It is guaranteed that the sum of $$$q$$$ over all test cases does not exceed $$$5\\cdot10^5$$$.",
+  "output_specification": "For every operation of type $$$4$$$, output a single integer — the maximum sum of a non-empty subarray of the sequence of the values at position $$$p$$$ over all versions preceding this operation.",
+  "sample_testcases": [
+    {
+      "input": "2\n4 8\n1 -1 1 -1\n4 1\n2 18446744073709551615 18446744073709551613\n4 18446744073709551614\n3 0 3\n1 0 2 -1\n4 0\n2 2 0\n4 0\n3 6\n1 -1 1\n4 0\n1 0 3 -1\n4 3\n2 2 3\n3 3 0\n4 3",
+      "output": "-1\n1\n3\n1\n1\n2\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

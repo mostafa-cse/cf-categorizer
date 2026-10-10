@@ -1,0 +1,44 @@
+{
+  "id": "845B",
+  "source": "problemset",
+  "contest_id": 845,
+  "problem_index": "B",
+  "name": "Luba And The Ticket",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 5653,
+  "problem_url": "https://codeforces.com/problemset/problem/845/B",
+  "editorial_url": "https://codeforces.com/blog/entry/53986",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Luba has a ticket consisting of 6 digits. In one move she can choose digit in any position and replace it with arbitrary digit. She wants to know the minimum number of digits she needs to replace in order to make the ticket lucky. The ticket is considered lucky if the sum of first three digits equals to the sum of last three digits.",
+  "input_specification": "You are given a string consisting of 6 characters (all characters are digits from 0 to 9 ) — this string denotes Luba's ticket. The ticket can start with the digit 0 .",
+  "output_specification": "Print one number — the minimum possible number of digits Luba needs to replace to make the ticket lucky.",
+  "sample_testcases": [
+    {
+      "input": "000000",
+      "output": "0"
+    },
+    {
+      "input": "123456",
+      "output": "2"
+    },
+    {
+      "input": "111000",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

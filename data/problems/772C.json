@@ -1,0 +1,42 @@
+{
+  "id": "772C",
+  "source": "problemset",
+  "contest_id": 772,
+  "problem_index": "C",
+  "name": "Vulnerable Kerbals",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "graphs",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1505,
+  "problem_url": "https://codeforces.com/problemset/problem/772/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51598",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer m , and a list of n distinct integers between 0 and m - 1 . You would like to construct a sequence satisfying the properties: Each element is an integer between 0 and m - 1 , inclusive. All prefix products of the sequence modulo m are distinct. No prefix product modulo m appears as an element of the input list. The length of the sequence is maximized. Construct any sequence satisfying the properties above.",
+  "input_specification": "The first line of input contains two integers n and m ( 0 ≤ n < m ≤ 200 000 ) — the number of forbidden prefix products and the modulus. If n is non-zero, the next line of input contains n distinct integers between 0 and m - 1 , the forbidden prefix products. If n is zero, this line doesn't exist.",
+  "output_specification": "On the first line, print the number k , denoting the length of your sequence. On the second line, print k space separated integers, denoting your sequence.",
+  "sample_testcases": [
+    {
+      "input": "0 5",
+      "output": "5\n1 2 4 3 0"
+    },
+    {
+      "input": "3 10\n2 9 1",
+      "output": "6\n3 9 2 9 8 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

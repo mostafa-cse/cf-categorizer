@@ -1,0 +1,40 @@
+{
+  "id": "1051G",
+  "source": "problemset",
+  "contest_id": 1051,
+  "problem_index": "G",
+  "name": "Distinctification",
+  "rating": 2900,
+  "tags": [
+    "data structures",
+    "dsu",
+    "greedy"
+  ],
+  "solved_count": 563,
+  "problem_url": "https://codeforces.com/problemset/problem/1051/G",
+  "editorial_url": "https://codeforces.com/blog/entry/61969",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Suppose you are given a sequence $$$S$$$ of $$$k$$$ pairs of integers $$$(a_1, b_1), (a_2, b_2), \\dots, (a_k, b_k)$$$. You can perform the following operations on it: Choose some position $$$i$$$ and increase $$$a_i$$$ by $$$1$$$. That can be performed only if there exists at least one such position $$$j$$$ that $$$i \\ne j$$$ and $$$a_i = a_j$$$. The cost of this operation is $$$b_i$$$; Choose some position $$$i$$$ and decrease $$$a_i$$$ by $$$1$$$. That can be performed only if there exists at least one such position $$$j$$$ that $$$a_i = a_j + 1$$$. The cost of this operation is $$$-b_i$$$. Each operation can be performed arbitrary number of times (possibly zero). Let $$$f(S)$$$ be minimum possible $$$x$$$ such that there exists a sequence of operations with total cost $$$x$$$, after which all $$$a_i$$$ from $$$S$$$ are pairwise distinct. Now for the task itself ... You are given a sequence $$$P$$$ consisting of $$$n$$$ pairs of integers $$$(a_1, b_1), (a_2, b_2), \\dots, (a_n, b_n)$$$. All $$$b_i$$$ are pairwise distinct. Let $$$P_i$$$ be the sequence consisting of the first $$$i$$$ pairs of $$$P$$$. Your task is to calculate the values of $$$f(P_1), f(P_2), \\dots, f(P_n)$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of pairs in sequence $$$P$$$. Next $$$n$$$ lines contain the elements of $$$P$$$: $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^5$$$, $$$1 \\le b_i \\le n$$$). It is guaranteed that all values of $$$b_i$$$ are pairwise distinct.",
+  "output_specification": "Print $$$n$$$ integers — the $$$i$$$-th number should be equal to $$$f(P_i)$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 1\n3 3\n5 5\n4 2\n2 4",
+      "output": "0\n0\n0\n-5\n-16"
+    },
+    {
+      "input": "4\n2 4\n2 3\n2 2\n1 1",
+      "output": "0\n3\n7\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:09",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

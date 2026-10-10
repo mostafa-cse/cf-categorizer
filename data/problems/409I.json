@@ -1,0 +1,46 @@
+{
+  "id": "409I",
+  "source": "problemset",
+  "contest_id": 409,
+  "problem_index": "I",
+  "name": "Feed the Golorp",
+  "rating": 2400,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 171,
+  "problem_url": "https://codeforces.com/problemset/problem/409/I",
+  "editorial_url": "https://codeforces.com/blog/entry/11391",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Golorps are mysterious creatures who feed on variables. Golorp's name is a program in some programming language. Some scientists believe that this language is Befunge; golorps are tantalizingly silent. Variables consumed by golorps can take values from 0 to 9, inclusive. For each golorp its daily diet is defined by its name. Some golorps are so picky that they can't be fed at all. Besides, all golorps are very health-conscious and try to eat as little as possible. Given a choice of several valid sequences of variable values, each golorp will choose lexicographically smallest one. For the purposes of this problem you can assume that a golorp consists of jaws and a stomach. The number of variables necessary to feed a golorp is defined by the shape of its jaws. Variables can get to the stomach only via the jaws. A hungry golorp is visiting you. You know its name; feed it or figure out that it's impossible.",
+  "input_specification": "The input is a single string (between 13 and 1024 characters long) — the name of the visiting golorp. All names are similar and will resemble the ones given in the samples. The name is guaranteed to be valid.",
+  "output_specification": "Output lexicographically smallest sequence of variable values fit for feeding this golorp. Values should be listed in the order in which they get into the jaws. If the golorp is impossible to feed, output \" false \".",
+  "sample_testcases": [
+    {
+      "input": "?(_-_/___*__):-___>__.",
+      "output": "0010"
+    },
+    {
+      "input": "?(__-_+_/_____):-__>__,_____<__.",
+      "output": "false"
+    },
+    {
+      "input": "?(______________________/____+_______*__-_____*______-___):-__<___,___<____,____<_____,_____<______,______<_______.",
+      "output": "0250341"
+    },
+    {
+      "input": "?(__+___+__-___):-___>__.",
+      "output": "0101"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

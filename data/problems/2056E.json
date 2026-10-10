@@ -1,0 +1,38 @@
+{
+  "id": "2056E",
+  "source": "problemset",
+  "contest_id": 2056,
+  "problem_index": "E",
+  "name": "Nested Segments",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "math"
+  ],
+  "solved_count": 1080,
+  "problem_url": "https://codeforces.com/problemset/problem/2056/E",
+  "editorial_url": "https://codeforces.com/blog/entry/138487",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A set $$$A$$$ consisting of pairwise distinct segments $$$[l, r]$$$ with integer endpoints is called good if $$$1\\le l\\le r\\le n$$$, and for any pair of distinct segments $$$[l_i, r_i], [l_j, r_j]$$$ in $$$A$$$, exactly one of the following conditions holds: $$$r_i \\lt l_j$$$ or $$$r_j \\lt l_i$$$ (the segments do not intersect) $$$l_i \\le l_j \\le r_j \\le r_i$$$ or $$$l_j \\le l_i \\le r_i \\le r_j$$$ (one segment is fully contained within the other) You are given a good set $$$S$$$ consisting of $$$m$$$ pairwise distinct segments $$$[l_i, r_i]$$$ with integer endpoints. You want to add as many additional segments to the set $$$S$$$ as possible while ensuring that set $$$S$$$ remains good. Since this task is too easy, you need to determine the number of different ways to add the maximum number of additional segments to $$$S$$$, ensuring that the set remains good. Two ways are considered different if there exists a segment that is being added in one of the ways, but not in the other. Formally, you need to find the number of good sets $$$T$$$ of distinct segments, such that $$$S$$$ is a subset of $$$T$$$ and $$$T$$$ has the maximum possible size. Since the result might be very large, compute the answer modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le m \\le 2 \\cdot 10^5$$$) — the maximum right endpoint of the segments, and the size of $$$S$$$. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l_i \\le r_i \\le n$$$) — the boundaries of the segments in set $$$S$$$. It is guaranteed that the given set $$$S$$$ is good, and the segments in set $$$S$$$ are pairwise distinct. It is guaranteed that both the sum of $$$n$$$ and the sum of $$$m$$$ over all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer representing the number of different ways, modulo $$$998\\,244\\,353$$$, that you can add the maximum number of additional segments to set $$$S$$$ while ensuring that set $$$S$$$ remains good.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 0\n2 3\n1 1\n2 2\n1 2\n5 2\n1 3\n2 3\n4 1\n1 1\n6 2\n1 3\n4 6\n2300 0",
+      "output": "1\n1\n2\n5\n4\n187997613"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

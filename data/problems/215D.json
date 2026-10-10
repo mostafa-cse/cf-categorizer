@@ -1,0 +1,38 @@
+{
+  "id": "215D",
+  "source": "problemset",
+  "contest_id": 215,
+  "problem_index": "D",
+  "name": "Hot Days",
+  "rating": 1900,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 1696,
+  "problem_url": "https://codeforces.com/problemset/problem/215/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5018",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The official capital and the cultural capital of Berland are connected by a single road running through n regions. Each region has a unique climate, so the i -th (1 ≤ i ≤ n ) region has a stable temperature of t i degrees in summer. This summer a group of m schoolchildren wants to get from the official capital to the cultural capital to visit museums and sights. The trip organizers transport the children between the cities in buses, but sometimes it is very hot. Specifically, if the bus is driving through the i -th region and has k schoolchildren, then the temperature inside the bus is t i + k degrees. Of course, nobody likes it when the bus is hot. So, when the bus drives through the i -th region, if it has more than T i degrees inside, each of the schoolchild in the bus demands compensation for the uncomfortable conditions. The compensation is as large as x i rubles and it is charged in each region where the temperature in the bus exceeds the limit. To save money, the organizers of the trip may arbitrarily add or remove extra buses in the beginning of the trip, and between regions (of course, they need at least one bus to pass any region). The organizers can also arbitrarily sort the children into buses, however, each of buses in the i -th region will cost the organizers cost i rubles. Please note that sorting children into buses takes no money. Your task is to find the minimum number of rubles, which the organizers will have to spend to transport all schoolchildren.",
+  "input_specification": "The first input line contains two integers n and m (1 ≤ n ≤ 10 5 ; 1 ≤ m ≤ 10 6 ) — the number of regions on the way and the number of schoolchildren in the group, correspondingly. Next n lines contain four integers each: the i -th line contains t i , T i , x i and cost i ( 1 ≤ t i , T i , x i , cost i ≤ 10 6 ). The numbers in the lines are separated by single spaces.",
+  "output_specification": "Print the only integer — the minimum number of roubles the organizers will have to spend to transport all schoolchildren. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "2 10\n30 35 1 100\n20 35 10 10",
+      "output": "120"
+    },
+    {
+      "input": "3 100\n10 30 1000 1\n5 10 1000 3\n10 40 1000 100000",
+      "output": "200065"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

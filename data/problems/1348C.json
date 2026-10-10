@@ -1,0 +1,37 @@
+{
+  "id": "1348C",
+  "source": "problemset",
+  "contest_id": 1348,
+  "problem_index": "C",
+  "name": "Phoenix and Distribution",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 15725,
+  "problem_url": "https://codeforces.com/problemset/problem/1348/C",
+  "editorial_url": "https://codeforces.com/blog/entry/76555",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Phoenix has a string $$$s$$$ consisting of lowercase Latin letters. He wants to distribute all the letters of his string into $$$k$$$ non-empty strings $$$a_1, a_2, \\dots, a_k$$$ such that every letter of $$$s$$$ goes to exactly one of the strings $$$a_i$$$. The strings $$$a_i$$$ do not need to be substrings of $$$s$$$. Phoenix can distribute letters of $$$s$$$ and rearrange the letters within each string $$$a_i$$$ however he wants. For example, if $$$s = $$$ baba and $$$k=2$$$, Phoenix may distribute the letters of his string in many ways, such as: ba and ba a and abb ab and ab aa and bb But these ways are invalid: baa and ba b and ba baba and empty string ($$$a_i$$$ should be non-empty) Phoenix wants to distribute the letters of his string $$$s$$$ into $$$k$$$ strings $$$a_1, a_2, \\dots, a_k$$$ to minimize the lexicographically maximum string among them, i. e. minimize $$$max(a_1, a_2, \\dots, a_k)$$$. Help him find the optimal distribution and print the minimal possible value of $$$max(a_1, a_2, \\dots, a_k)$$$. String $$$x$$$ is lexicographically less than string $$$y$$$ if either $$$x$$$ is a prefix of $$$y$$$ and $$$x \\ne y$$$, or there exists an index $$$i$$$ ($$$1 \\le i \\le min(|x|, |y|))$$$ such that $$$x_i$$$ < $$$y_i$$$ and for every $$$j$$$ $$$(1 \\le j \\lt i)$$$ $$$x_j = y_j$$$. Here $$$|x|$$$ denotes the length of the string $$$x$$$.",
+  "input_specification": "The input consists of multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Each test case consists of two lines. The first line of each test case consists of two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 10^5$$$) — the length of string $$$s$$$ and the number of non-empty strings, into which Phoenix wants to distribute letters of $$$s$$$, respectively. The second line of each test case contains a string $$$s$$$ of length $$$n$$$ consisting only of lowercase Latin letters. It is guaranteed that the sum of $$$n$$$ over all test cases is $$$\\le 10^5$$$.",
+  "output_specification": "Print $$$t$$$ answers — one per test case. The $$$i$$$-th answer should be the minimal possible value of $$$max(a_1, a_2, \\dots, a_k)$$$ in the $$$i$$$-th test case.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 2\nbaba\n5 2\nbaacb\n5 3\nbaacb\n5 3\naaaaa\n6 4\naaxxzz\n7 1\nphoenix",
+      "output": "ab\nabbc\nb\naa\nx\nehinopx"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:54",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

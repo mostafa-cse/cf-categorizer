@@ -1,0 +1,40 @@
+{
+  "id": "558E",
+  "source": "problemset",
+  "contest_id": 558,
+  "problem_index": "E",
+  "name": "A Simple Task",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 7966,
+  "problem_url": "https://codeforces.com/problemset/problem/558/E",
+  "editorial_url": "https://codeforces.com/blog/entry/19212",
+  "time_limit": "5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This task is very simple. Given a string S of length n and q queries each query is on the format i j k which means sort the substring consisting of the characters from i to j in non-decreasing order if k = 1 or in non-increasing order if k = 0 . Output the final string after applying the queries.",
+  "input_specification": "The first line will contain two integers n , q ( 1 ≤ n ≤ 10 5 , 0 ≤ q ≤ 50 000 ), the length of the string and the number of queries respectively. Next line contains a string S itself. It contains only lowercase English letters. Next q lines will contain three integers each i , j , k ( 1 ≤ i ≤ j ≤ n , ).",
+  "output_specification": "Output one line, the string S after applying the queries.",
+  "sample_testcases": [
+    {
+      "input": "10 5\nabacdabcda\n7 10 0\n5 8 1\n1 4 0\n3 6 0\n7 10 1",
+      "output": "cbcaaaabdd"
+    },
+    {
+      "input": "10 1\nagjucbvdfk\n1 10 1",
+      "output": "abcdfgjkuv"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

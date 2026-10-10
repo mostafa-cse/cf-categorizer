@@ -1,0 +1,42 @@
+{
+  "id": "676E",
+  "source": "problemset",
+  "contest_id": 676,
+  "problem_index": "E",
+  "name": "The Last Fight Between Human and AI",
+  "rating": 2400,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 971,
+  "problem_url": "https://codeforces.com/problemset/problem/676/E",
+  "editorial_url": "https://codeforces.com/blog/entry/45018",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "100 years have passed since the last victory of the man versus computer in Go. Technologies made a huge step forward and robots conquered the Earth! It's time for the final fight between human and robot that will decide the faith of the planet. The following game was chosen for the fights: initially there is a polynomial P ( x ) = a n x n + a n - 1 x n - 1 + ... + a 1 x + a 0 , with yet undefined coefficients and the integer k . Players alternate their turns. At each turn, a player pick some index j , such that coefficient a j that stay near x j is not determined yet and sets it to any value (integer or real, positive or negative, 0 is also allowed). Computer moves first. The human will be declared the winner if and only if the resulting polynomial will be divisible by Q ( x ) = x - k . Polynomial P ( x ) is said to be divisible by polynomial Q ( x ) if there exists a representation P ( x ) = B ( x ) Q ( x ) , where B ( x ) is also some polynomial. Some moves have been made already and now you wonder, is it true that human can guarantee the victory if he plays optimally?",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n ≤ 100 000, | k | ≤ 10 000 ) — the size of the polynomial and the integer k . The i -th of the following n + 1 lines contain character ' ? ' if the coefficient near x i - 1 is yet undefined or the integer value a i , if the coefficient is already known ( - 10 000 ≤ a i ≤ 10 000 ). Each of integers a i (and even a n ) may be equal to 0 . Please note, that it's not guaranteed that you are given the position of the game where it's computer's turn to move.",
+  "output_specification": "Print \" Yes \" (without quotes) if the human has winning strategy, or \" No \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "1 2\n-1\n?",
+      "output": "Yes"
+    },
+    {
+      "input": "2 100\n-10000\n0\n1",
+      "output": "Yes"
+    },
+    {
+      "input": "4 5\n?\n1\n?\n1\n?",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

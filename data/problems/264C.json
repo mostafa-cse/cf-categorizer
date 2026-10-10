@@ -1,0 +1,38 @@
+{
+  "id": "264C",
+  "source": "problemset",
+  "contest_id": 264,
+  "problem_index": "C",
+  "name": "Choosing Balls",
+  "rating": 2000,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 3510,
+  "problem_url": "https://codeforces.com/problemset/problem/264/C",
+  "editorial_url": "https://speakerdeck.com/snuke/codeforces162-div1-e",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n balls. They are arranged in a row. Each ball has a color (for convenience an integer) and an integer value. The color of the i -th ball is c i and the value of the i -th ball is v i . Squirrel Liss chooses some balls and makes a new sequence without changing the relative order of the balls. She wants to maximize the value of this sequence. The value of the sequence is defined as the sum of following values for each ball (where a and b are given constants): If the ball is not in the beginning of the sequence and the color of the ball is same as previous ball's color, add (the value of the ball) × a . Otherwise, add (the value of the ball) × b . You are given q queries. Each query contains two integers a i and b i . For each query find the maximal value of the sequence she can make when a = a i and b = b i . Note that the new sequence can be empty , and the value of an empty sequence is defined as zero.",
+  "input_specification": "The first line contains two integers n and q ( 1 ≤ n ≤ 10 5 ; 1 ≤ q ≤ 500 ). The second line contains n integers: v 1 , v 2 , ..., v n ( | v i | ≤ 10 5 ). The third line contains n integers: c 1 , c 2 , ..., c n ( 1 ≤ c i ≤ n ). The following q lines contain the values of the constants a and b for queries. The i -th of these lines contains two integers a i and b i ( | a i |, | b i | ≤ 10 5 ). In each line integers are separated by single spaces.",
+  "output_specification": "For each query, output a line containing an integer — the answer to the query. The i -th line contains the answer to the i -th query in the input order. Please, do not write the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "6 3\n1 -2 3 4 0 -1\n1 2 1 2 1 1\n5 1\n-2 1\n1 0",
+      "output": "20\n9\n4"
+    },
+    {
+      "input": "4 1\n-3 6 -1 2\n1 2 3 1\n1 -1",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

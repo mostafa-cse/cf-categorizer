@@ -1,0 +1,35 @@
+{
+  "id": "72B",
+  "source": "problemset",
+  "contest_id": 72,
+  "problem_index": "B",
+  "name": "INI-file",
+  "rating": 2200,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 118,
+  "problem_url": "https://codeforces.com/problemset/problem/72/B",
+  "editorial_url": "https://codeforces.com/blog/entry/1535",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The INI file format is a de facto standard for configuration files. INI files are simple text files with a basic structure. They are commonly associated with Microsoft Windows, but are also used on other platforms. Each line in INI-file stands for key-value mapping or defines new section. A key-value line has a format \" key=value \",where key — is the name of some property, and value — it's value. It is possible that it will be spaces from the both sides of key and/or value , the spaces should be ignored. A section line has a format \" [section] \". It means that all key-value lines after it define properties of the specified section. Of cause, the following section line changes the current section. A section line may have spaces around any of brackets. Also you should ignore comment lines — the first non-space character of comment line is \" ; \". You task is to write the program which will format given INI-file in a special way: first, print key-value lines which do not belong to any section; print all the sections in the lexicographical (alphabetical) order of their names; inside each of two previous items, order key-value lines lexicographically by \" key \"; if there are more than one key-value lines with the same key inside a single section (or outside any sections), leave only one line (which appears later in the input data); remove all redundant spaces and lines.",
+  "input_specification": "The first line contains single integer n ( 1 ≤ n ≤ 510 ) — the number of lines in given INI-file. The rest of the input contains a valid INI-file in n lines. Values of section , key and value contain only Latin letters, digits, \" . \" and/or \" - \". Each line has length not exceeding 255 characters and not less than 1 character. The total length of all the lines does’t exceed 10000.",
+  "output_specification": "Print formatted INI-file.",
+  "sample_testcases": [
+    {
+      "input": "11\na= 1\nb=a\na = 2\n; comment\n[z]\n1=2\n[y]\n2=3\n[z]\n2=1\n[w]",
+      "output": "a=2\nb=a\n[w]\n[y]\n2=3\n[z]\n1=2\n2=1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

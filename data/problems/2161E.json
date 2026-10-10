@@ -1,0 +1,36 @@
+{
+  "id": "2161E",
+  "source": "problemset",
+  "contest_id": 2161,
+  "problem_index": "E",
+  "name": "Left is Always Right",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 832,
+  "problem_url": "https://codeforces.com/problemset/problem/2161/E",
+  "editorial_url": "https://codeforces.com/blog/entry/147941",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Consider a binary string of length $$$n$$$ and an odd number $$$k$$$. We will call the binary string good if for each substring of length $$$k$$$, the leftmost character of the substring occurs more than the other. For example, if $$$k = 3$$$, 000101 is a good string, because for all substrings of length 3 ( 000 , 001 , 010 , and 101 ) the first character of the substring occurs more than the other character. On the other hand, 1011 is not good, because the property is false for 011 . Given a pattern of length $$$n$$$ consisting of characters 0 , 1 and ? , find the number of ways to replace question marks with 0 or 1 , such that the resulting binary string is good. Since the answer may be large, find it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^3$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$3 \\le k \\le n \\le 10^5$$$, $$$k$$$ is odd). The second line contains $$$n$$$ characters 0 , 1 or ? — the pattern. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print the number of ways to replace ? with 0 or 1 such that the resulting string is good, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 3\n0??0?\n7 7\n1??1??1\n9 5\n?????????",
+      "output": "3\n15\n46"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

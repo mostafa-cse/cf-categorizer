@@ -1,0 +1,46 @@
+{
+  "id": "153D",
+  "source": "problemset",
+  "contest_id": 153,
+  "problem_index": "D",
+  "name": "Date Change",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 91,
+  "problem_url": "https://codeforces.com/problemset/problem/153/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3948",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a date in \" DD.MM.YYYY \" (\"day.month.year\") format and a number of days shift you have to add to this date. Output the resulting date.",
+  "input_specification": "The first line of input contains the date in \" DD.MM.YYYY \" format: two digits for day (with leading zero if needed), dot, two digits for month (with leading zero if needed), dot, four digits for year. The notation is guaranteed to give a valid date between 1980 and 2020, inclusive. The second line contains an integer shift ( - 1000 ≤ shift ≤ 1000 ).",
+  "output_specification": "Output a date equal to the given one + shift days, in the same format \" DD.MM.YYYY \".",
+  "sample_testcases": [
+    {
+      "input": "10.02.2012\n12",
+      "output": "22.02.2012"
+    },
+    {
+      "input": "01.02.2010\n-40",
+      "output": "23.12.2009"
+    },
+    {
+      "input": "01.01.2000\n365",
+      "output": "31.12.2000"
+    },
+    {
+      "input": "13.08.1990\n-609",
+      "output": "12.12.1988"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

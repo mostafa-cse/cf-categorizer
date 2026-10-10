@@ -1,0 +1,41 @@
+{
+  "id": "2093G",
+  "source": "problemset",
+  "contest_id": 2093,
+  "problem_index": "G",
+  "name": "Shorten the Array",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures",
+    "dfs and similar",
+    "greedy",
+    "strings",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 4118,
+  "problem_url": "https://codeforces.com/problemset/problem/2093/G",
+  "editorial_url": "https://codeforces.com/blog/entry/141434",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "The beauty of an array $$$b$$$ of length $$$m$$$ is defined as $$$\\max(b_i \\oplus b_j)$$$ among all possible pairs $$$1 \\le i \\le j \\le m$$$, where $$$x \\oplus y$$$ is the bitwise XOR of numbers $$$x$$$ and $$$y$$$. We denote the beauty value of the array $$$b$$$ as $$$f(b)$$$. An array $$$b$$$ is called beautiful if $$$f(b) \\ge k$$$. Recently, Kostya bought an array $$$a$$$ of length $$$n$$$ from the store. He considers this array too long, so he plans to cut out some beautiful subarray from it. That is, he wants to choose numbers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) such that the array $$$a_{l \\dots r}$$$ is beautiful. The length of such a subarray will be the number $$$r - l + 1$$$. The entire array $$$a$$$ is also considered a subarray (with $$$l = 1$$$ and $$$r = n$$$). Your task is to find the length of the shortest beautiful subarray in the array $$$a$$$. If no subarray is beautiful, you should output the number $$$-1$$$.",
+  "input_specification": "The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Next, there are $$$t$$$ blocks of two lines: In the first line of the block, there are two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le k \\le 10^9$$$). In the second line of the block, there is the array $$$a$$$ consisting of $$$n$$$ integers ($$$0 \\le a_i \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ across all tests does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, you need to output a single integer — the minimum length of the segment $$$(l, r)$$$ for which $$$f(a_{l \\dots r}) \\ge k$$$. If such a segment is not found, you should output $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 0\n1 2 3 4 5\n5 7\n1 2 3 4 5\n5 8\n1 2 3 4 5\n5 7\n3 5 1 4 2\n5 3\n3 5 1 4 2\n6 71\n26 56 12 45 60 27",
+      "output": "1\n2\n-1\n4\n2\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:27",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

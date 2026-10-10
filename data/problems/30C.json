@@ -1,0 +1,39 @@
+{
+  "id": "30C",
+  "source": "problemset",
+  "contest_id": 30,
+  "problem_index": "C",
+  "name": "Shooting Gallery",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "probabilities"
+  ],
+  "solved_count": 2500,
+  "problem_url": "https://codeforces.com/problemset/problem/30/C",
+  "editorial_url": "https://codeforces.com/blog/entry/696",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One warm and sunny day king Copa decided to visit the shooting gallery, located at the Central Park, and try to win the main prize — big pink plush panda. The king is not good at shooting, so he invited you to help him. The shooting gallery is an infinite vertical plane with Cartesian coordinate system on it. The targets are points on this plane. Each target is described by it's coordinates x i , and y i , by the time of it's appearance t i and by the number p i , which gives the probability that Copa hits this target if he aims at it. A target appears and disappears instantly, so Copa can hit the target only if at the moment t i his gun sight aimed at ( x i , y i ) . Speed of movement of the gun sight on the plane is equal to 1. Copa knows all the information about the targets beforehand (remember, he is a king!). He wants to play in the optimal way, which maximizes the expected value of the amount of hit targets. He can aim at any target at the moment 0.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 1000 ) — amount of targets in the shooting gallery. Then n lines follow, each describing one target. Each description consists of four numbers x i , y i , t i , p i (where x i , y i , t i — integers, - 1000 ≤ x i , y i ≤ 1000, 0 ≤ t i ≤ 10 9 , real number p i is given with no more than 6 digits after the decimal point, 0 ≤ p i ≤ 1 ). No two targets may be at the same point.",
+  "output_specification": "Output the maximum expected value of the amount of targets that was shot by the king. Your answer will be accepted if it differs from the correct answer by not more than 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "1\n0 0 0 0.5",
+      "output": "0.5000000000"
+    },
+    {
+      "input": "2\n0 0 0 0.6\n5 0 5 0.7",
+      "output": "1.3000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

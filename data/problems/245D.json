@@ -1,0 +1,43 @@
+{
+  "id": "245D",
+  "source": "problemset",
+  "contest_id": 245,
+  "problem_index": "D",
+  "name": "Restoring Table",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 2956,
+  "problem_url": "https://codeforces.com/problemset/problem/245/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5921",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recently Polycarpus has learned the \"bitwise AND\" operation (which is also called \" AND \") of non-negative integers. Now he wants to demonstrate the school IT teacher his superb manipulation with the learned operation. For that Polycarpus came to school a little earlier and wrote on the board a sequence of non-negative integers a 1 , a 2 , ..., a n . He also wrote a square matrix b of size n × n . The element of matrix b that sits in the i -th row in the j -th column (we'll denote it as b ij ) equals: the \"bitwise AND\" of numbers a i and a j (that is, b ij = a i & a j ), if i ≠ j ; -1, if i = j . Having written out matrix b , Polycarpus got very happy and wiped a off the blackboard. But the thing is, the teacher will want this sequence to check whether Polycarpus' calculations were correct. Polycarus urgently needs to restore the removed sequence of integers, or else he won't prove that he can count correctly. Help Polycarpus, given matrix b , restore the sequence of numbers a 1 , a 2 , ..., a n , that he has removed from the board. Polycarpus doesn't like large numbers, so any number in the restored sequence mustn't exceed 10 9 .",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 100) — the size of square matrix b . Next n lines contain matrix b . The i -th of these lines contains n space-separated integers: the j -th number represents the element of matrix b ij . It is guaranteed, that for all i (1 ≤ i ≤ n ) the following condition fulfills: b ii = -1. It is guaranteed that for all i , j (1 ≤ i , j ≤ n ; i ≠ j ) the following condition fulfills: 0 ≤ b ij ≤ 10 9 , b ij = b ji .",
+  "output_specification": "Print n non-negative integers a 1 , a 2 , ..., a n (0 ≤ a i ≤ 10 9 ) — the sequence that Polycarpus wiped off the board. Separate the numbers by whitespaces. It is guaranteed that there is sequence a that satisfies the problem conditions. If there are multiple such sequences, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "1\n-1",
+      "output": "0"
+    },
+    {
+      "input": "3\n-1 18 0\n18 -1 0\n0 0 -1",
+      "output": "18 18 0"
+    },
+    {
+      "input": "4\n-1 128 128 128\n128 -1 148 160\n128 148 -1 128\n128 160 128 -1",
+      "output": "128 180 148 160"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

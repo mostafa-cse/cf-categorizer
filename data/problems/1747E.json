@@ -1,0 +1,36 @@
+{
+  "id": "1747E",
+  "source": "problemset",
+  "contest_id": 1747,
+  "problem_index": "E",
+  "name": "List Generation",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 733,
+  "problem_url": "https://codeforces.com/problemset/problem/1747/E",
+  "editorial_url": "https://codeforces.com/blog/entry/108782",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "For given integers $$$n$$$ and $$$m$$$, let's call a pair of arrays $$$a$$$ and $$$b$$$ of integers good , if they satisfy the following conditions: $$$a$$$ and $$$b$$$ have the same length, let their length be $$$k$$$. $$$k \\ge 2$$$ and $$$a_1 = 0, a_k = n, b_1 = 0, b_k = m$$$. For each $$$1 \\lt i \\le k$$$ the following holds: $$$a_i \\geq a_{i - 1}$$$, $$$b_i \\geq b_{i - 1}$$$, and $$$a_i + b_i \\neq a_{i - 1} + b_{i - 1}$$$. Find the sum of $$$|a|$$$ over all good pairs of arrays $$$(a,b)$$$. Since the answer can be very large, output it modulo $$$10^9 + 7$$$.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t (1 \\leq t \\leq 10^4)$$$  — the number of test cases. The description of the test cases follows. The only line of each test case contains two integers $$$n$$$ and $$$m$$$ $$$(1 \\leq n, m \\leq 5 \\cdot 10^6)$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^6$$$ and the sum of $$$m$$$ over all test cases does not exceed $$$5 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, output a single integer  — the sum of $$$|a|$$$ over all good pairs of arrays $$$(a,b)$$$ modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1\n1 2\n2 2\n100 100",
+      "output": "8\n26\n101\n886336572"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:17",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

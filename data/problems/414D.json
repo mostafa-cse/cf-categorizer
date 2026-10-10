@@ -1,0 +1,42 @@
+{
+  "id": "414D",
+  "source": "problemset",
+  "contest_id": 414,
+  "problem_index": "D",
+  "name": "Mashmokh and Water Tanks",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 787,
+  "problem_url": "https://codeforces.com/problemset/problem/414/D",
+  "editorial_url": "https://codeforces.com/blog/entry/11470",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Mashmokh is playing a new game. In the beginning he has k liters of water and p coins. Additionally he has a rooted tree (an undirected connected acyclic graph) that consists of m vertices. Each vertex of the tree contains a water tank that is empty in the beginning. The game begins with the fact that Mashmokh chooses some (no more than k ) of these tanks (except the root) and pours into each of them exactly 1 liter of water. Then the following process is performed until there is no water remained in tanks. The process consists of several steps. At the beginning of each step Mashmokh opens doors of all tanks. Then Mashmokh closes doors of some tanks (he is not allowed to close door of tank in the root) for the duration of this move. Let's denote the number of liters in some tank with closed door as w , Mashmokh pays w coins for the closing of that tank during this move. Let's denote by x 1 , x 2 , ..., x m as the list of vertices of the tree sorted (nondecreasing) by their depth. The vertices from this list should be considered one by one in the order. Firstly vertex x 1 (which is the root itself) is emptied. Then for each vertex x i ( i > 1) , if its door is closed then skip the vertex else move all the water from the tank of vertex x i to the tank of its father (even if the tank of the father is closed). Suppose l moves were made until the tree became empty. Let's denote the amount of water inside the tank of the root after the i -th move by w i then Mashmokh will win max ( w 1 , w 2 , ..., w l ) dollars. Mashmokh wanted to know what is the maximum amount of dollars he can win by playing the above game. He asked you to find this value for him.",
+  "input_specification": "The first line of the input contains three space-separated integers m , k , p (2 ≤ m ≤ 10 5 ; 0 ≤ k , p ≤ 10 9 ) . Each of the following m - 1 lines contains two space-separated integers a i , b i (1 ≤ a i , b i ≤ m ; a i ≠ b i ) — the edges of the tree. Consider that the vertices of the tree are numbered from 1 to m . The root of the tree has number 1.",
+  "output_specification": "Output a single integer, the number Mashmokh asked you to find.",
+  "sample_testcases": [
+    {
+      "input": "10 2 1\n1 2\n1 3\n3 4\n3 5\n2 6\n6 8\n6 7\n9 8\n8 10",
+      "output": "2"
+    },
+    {
+      "input": "5 1000 1000\n1 2\n1 3\n3 4\n3 5",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:43",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

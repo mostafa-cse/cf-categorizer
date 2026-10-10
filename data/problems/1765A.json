@@ -1,0 +1,41 @@
+{
+  "id": "1765A",
+  "source": "problemset",
+  "contest_id": 1765,
+  "problem_index": "A",
+  "name": "Access Levels",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "dsu",
+    "flows",
+    "graph matchings"
+  ],
+  "solved_count": 898,
+  "problem_url": "https://codeforces.com/problemset/problem/1765/A",
+  "editorial_url": "https://codeforces.com/contest/1765/attachments/download/36340/contest-30348-en.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "BerSoft is the biggest IT corporation in Berland, and Monocarp is the head of its security department. This time, he faced the most difficult task ever. Basically, there are $$$n$$$ developers working at BerSoft, numbered from $$$1$$$ to $$$n$$$. There are $$$m$$$ documents shared on the internal network, numbered from $$$1$$$ to $$$m$$$. There is a table of access requirements $$$a$$$ such that $$$a_{i,j}$$$ (the $$$j$$$-th element of the $$$i$$$-th row) is $$$1$$$ if the $$$i$$$-th developer should have access to the $$$j$$$-th document, and $$$0$$$ if they should have no access to it. In order to restrict the access, Monocarp is going to perform the following actions: choose the number of access groups $$$k \\ge 1$$$; assign each document an access group (an integer from $$$1$$$ to $$$k$$$) and the required access level (an integer from $$$1$$$ to $$$10^9$$$); assign each developer $$$k$$$ integer values (from $$$1$$$ to $$$10^9$$$) — their access levels for each of the access groups. The developer $$$i$$$ has access to the document $$$j$$$ if their access level for the access group of the document is greater than or equal to the required access level of the document. What's the smallest number of access groups Monocarp can choose so that it's possible to assign access groups and access levels in order to satisfy the table of access requirements?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 500$$$) — the number of developers and the number of documents. Each of the next $$$n$$$ lines contains a binary string of length $$$m$$$ — the table of access requirements. The $$$j$$$-th element of the $$$i$$$-th row is $$$1$$$ if the $$$i$$$-th developer should have access to the $$$j$$$-th document, and $$$0$$$ if they should have no access to it.",
+  "output_specification": "The first line should contain a single integer $$$k$$$ — the smallest number of access groups Monocarp can choose so that it's possible to assign access groups and access levels in order to satisfy the table of access requirements. The second line should contain $$$m$$$ integers from $$$1$$$ to $$$k$$$ — the access groups of the documents. The third line should contain $$$m$$$ integers from $$$1$$$ to $$$10^9$$$ — the required access levels of the documents. The $$$i$$$-th of the next $$$n$$$ lines should contain $$$k$$$ integers from $$$1$$$ to $$$10^9$$$ — the access level of the $$$i$$$-th developer on each of the access groups. If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n01\n11\n10",
+      "output": "2\n1 2 \n2 2 \n1 2 \n2 2 \n2 1"
+    },
+    {
+      "input": "2 3\n101\n100",
+      "output": "1\n1 1 1\n1 10 5\n8\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:11",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "865B",
+  "source": "problemset",
+  "contest_id": 865,
+  "problem_index": "B",
+  "name": "Ordering Pizza",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "sortings",
+    "ternary search"
+  ],
+  "solved_count": 1967,
+  "problem_url": "https://codeforces.com/problemset/problem/865/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54888",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It's another Start[c]up finals, and that means there is pizza to order for the onsite contestants. There are only 2 types of pizza (obviously not, but let's just pretend for the sake of the problem), and all pizzas contain exactly S slices. It is known that the i -th contestant will eat s i slices of pizza, and gain a i happiness for each slice of type 1 pizza they eat, and b i happiness for each slice of type 2 pizza they eat. We can order any number of type 1 and type 2 pizzas, but we want to buy the minimum possible number of pizzas for all of the contestants to be able to eat their required number of slices. Given that restriction, what is the maximum possible total happiness that can be achieved?",
+  "input_specification": "The first line of input will contain integers N and S (1 ≤ N ≤ 10 5 , 1 ≤ S ≤ 10 5 ) , the number of contestants and the number of slices per pizza, respectively. N lines follow. The i -th such line contains integers s i , a i , and b i (1 ≤ s i ≤ 10 5 , 1 ≤ a i ≤ 10 5 , 1 ≤ b i ≤ 10 5 ) , the number of slices the i -th contestant will eat, the happiness they will gain from each type 1 slice they eat, and the happiness they will gain from each type 2 slice they eat, respectively.",
+  "output_specification": "Print the maximum total happiness that can be achieved.",
+  "sample_testcases": [
+    {
+      "input": "3 12\n3 5 7\n4 6 7\n5 9 5",
+      "output": "84"
+    },
+    {
+      "input": "6 10\n7 4 7\n5 8 8\n12 5 8\n6 11 6\n3 3 7\n5 9 6",
+      "output": "314"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

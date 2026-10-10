@@ -1,0 +1,38 @@
+{
+  "id": "1935E",
+  "source": "problemset",
+  "contest_id": 1935,
+  "problem_index": "E",
+  "name": "Distance Learning Courses in MAC",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1723,
+  "problem_url": "https://codeforces.com/problemset/problem/1935/E",
+  "editorial_url": "https://codeforces.com/blog/entry/126662",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The New Year has arrived in the Master's Assistance Center, which means it's time to introduce a new feature! Now students are given distance learning courses, with a total of $$$n$$$ courses available. For the $$$i$$$-th distance learning course, a student can receive a grade ranging from $$$x_i$$$ to $$$y_i$$$. However, not all courses may be available to each student. Specifically, the $$$j$$$-th student is only given courses with numbers from $$$l_j$$$ to $$$r_j$$$, meaning the distance learning courses with numbers $$$l_j, l_j + 1, \\ldots, r_j$$$. The creators of the distance learning courses have decided to determine the final grade in a special way. Let the $$$j$$$-th student receive grades $$$c_{l_j}, c_{l_j + 1}, \\ldots, c_{r_j}$$$ for their distance learning courses. Then their final grade will be equal to $$$c_{l_j}$$$ $$$|$$$ $$$c_{l_j + 1}$$$ $$$|$$$ $$$\\ldots$$$ $$$|$$$ $$$c_{r_j}$$$, where $$$|$$$ denotes the bitwise OR operation. Since the chatbot for solving distance learning courses is broken, the students have asked for your help. For each of the $$$q$$$ students, tell them the maximum final grade they can achieve.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 2 \\cdot 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of distance learning courses. Each of the following $$$n$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$0 \\le x_i \\le y_i \\lt 2^{30}$$$) — the minimum and maximum grade that can be received for the $$$i$$$-th course. The next line contains a single integer $$$q$$$ ($$$1 \\le q \\le 2\\cdot10^5$$$) — the number of students. Each of the following $$$q$$$ lines contains two integers $$$l_j$$$ and $$$r_j$$$ ($$$1 \\le l_j \\le r_j \\le n$$$) — the minimum and maximum course numbers accessible to the $$$j$$$-th student. It is guaranteed that the sum of $$$n$$$ over all test cases and the sum of $$$q$$$ over all test cases do not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each test case, output $$$q$$$ integers, where the $$$j$$$-th integer is the maximum final grade that the $$$j$$$-th student can achieve.",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n0 1\n3 4\n3\n1 1\n1 2\n2 2\n4\n1 7\n1 7\n3 10\n2 2\n5\n1 3\n3 4\n2 3\n1 4\n1 2\n6\n1 2\n2 2\n0 1\n1 1\n3 3\n0 0\n4\n3 4\n5 5\n2 5\n1 2",
+      "output": "1 5 4 \n15 11 15 15 7 \n1 3 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:27",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "899D",
+  "source": "problemset",
+  "contest_id": 899,
+  "problem_index": "D",
+  "name": "Shovel Sale",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 3291,
+  "problem_url": "https://codeforces.com/problemset/problem/899/D",
+  "editorial_url": "https://codeforces.com/blog/entry/56392",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n shovels in Polycarp's shop. The i -th shovel costs i burles, that is, the first shovel costs 1 burle, the second shovel costs 2 burles, the third shovel costs 3 burles, and so on. Polycarps wants to sell shovels in pairs. Visitors are more likely to buy a pair of shovels if their total cost ends with several 9 s. Because of this, Polycarp wants to choose a pair of shovels to sell in such a way that the sum of their costs ends with maximum possible number of nines. For example, if he chooses shovels with costs 12345 and 37454 , their total cost is 49799 , it ends with two nines. You are to compute the number of pairs of shovels such that their total cost ends with maximum possible number of nines. Two pairs are considered different if there is a shovel presented in one pair, but not in the other.",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 10 9 ) — the number of shovels in Polycarp's shop.",
+  "output_specification": "Print the number of pairs of shovels such that their total cost ends with maximum possible number of nines. Note that it is possible that the largest number of 9s at the end is 0, then you should count all such ways. It is guaranteed that for every n ≤ 10 9 the answer doesn't exceed 2·10 9 .",
+  "sample_testcases": [
+    {
+      "input": "7",
+      "output": "3"
+    },
+    {
+      "input": "14",
+      "output": "9"
+    },
+    {
+      "input": "50",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

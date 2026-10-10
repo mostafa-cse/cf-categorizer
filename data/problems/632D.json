@@ -1,0 +1,40 @@
+{
+  "id": "632D",
+  "source": "problemset",
+  "contest_id": 632,
+  "problem_index": "D",
+  "name": "Longest Subsequence",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 4799,
+  "problem_url": "https://codeforces.com/problemset/problem/632/D",
+  "editorial_url": "https://codeforces.com/blog/entry/43493",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given array a with n elements and the number m . Consider some subsequence of a and the value of least common multiple (LCM) of its elements. Denote LCM as l . Find any longest subsequence of a with the value l ≤ m . A subsequence of a is an array we can get by erasing some elements of a . It is allowed to erase zero or all elements. The LCM of an empty array equals 1 .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 10 6 ) — the size of the array a and the parameter from the problem statement. The second line contains n integers a i ( 1 ≤ a i ≤ 10 9 ) — the elements of a .",
+  "output_specification": "In the first line print two integers l and k max ( 1 ≤ l ≤ m , 0 ≤ k max ≤ n ) — the value of LCM and the number of elements in optimal subsequence. In the second line print k max integers — the positions of the elements from the optimal subsequence in the ascending order. Note that you can find and print any subsequence with the maximum length.",
+  "sample_testcases": [
+    {
+      "input": "7 8\n6 2 9 2 7 2 3",
+      "output": "6 5\n1 2 4 6 7"
+    },
+    {
+      "input": "6 4\n2 2 2 3 3 3",
+      "output": "2 3\n1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

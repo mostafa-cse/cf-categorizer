@@ -1,0 +1,43 @@
+{
+  "id": "524B",
+  "source": "problemset",
+  "contest_id": 524,
+  "problem_index": "B",
+  "name": "Фото на память - 2 (round version)",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1571,
+  "problem_url": "https://codeforces.com/problemset/problem/524/B",
+  "editorial_url": null,
+  "time_limit": "ограничение по времени на тест 2 секунды",
+  "memory_limit": "ограничение по памяти на тест 256 мегабайт",
+  "description": "Прошло много лет, и на вечеринке снова встретились n друзей. С момента последней встречи техника шагнула далеко вперёд, появились фотоаппараты с автоспуском, и теперь не требуется, чтобы один из друзей стоял с фотоаппаратом, и, тем самым, оказывался не запечатлённым на снимке. Упрощенно процесс фотографирования можно описать следующим образом. На фотографии каждый из друзей занимает прямоугольник из пикселей: в стоячем положении i -й из них занимает прямоугольник ширины w i пикселей и высоты h i пикселей. Но также, при фотографировании каждый человек может лечь, и тогда он будет занимать прямоугольник ширины h i пикселей и высоты w i пикселей. Общая фотография будет иметь размеры W × H , где W — суммарная ширина всех прямоугольников-людей, а H — максимальная из высот. Друзья хотят определить, какую минимальную площадь может иметь общая фотография. Помогите им в этом.",
+  "input_specification": "В первой строке следует целое число n ( 1 ≤ n ≤ 1000 ) — количество друзей. В последующих n строках следуют по два целых числа w i , h i ( 1 ≤ w i , h i ≤ 1000 ), обозначающие размеры прямоугольника, соответствующего i -му из друзей.",
+  "output_specification": "Выведите единственное целое число, равное минимальной возможной площади фотографии, вмещающей всех друзей.",
+  "sample_testcases": [
+    {
+      "input": "3\n10 1\n20 2\n30 3",
+      "output": "180"
+    },
+    {
+      "input": "3\n3 1\n2 2\n4 3",
+      "output": "21"
+    },
+    {
+      "input": "1\n5 10",
+      "output": "50"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

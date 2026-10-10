@@ -1,0 +1,41 @@
+{
+  "id": "1422E",
+  "source": "problemset",
+  "contest_id": 1422,
+  "problem_index": "E",
+  "name": "Minlexes",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 928,
+  "problem_url": "https://codeforces.com/problemset/problem/1422/E",
+  "editorial_url": "https://codeforces.com/blog/entry/83452",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Some time ago Lesha found an entertaining string $$$s$$$ consisting of lowercase English letters. Lesha immediately developed an unique algorithm for this string and shared it with you. The algorithm is as follows. Lesha chooses an arbitrary (possibly zero) number of pairs on positions $$$(i, i + 1)$$$ in such a way that the following conditions are satisfied: for each pair $$$(i, i + 1)$$$ the inequality $$$0 \\le i \\lt |s| - 1$$$ holds; for each pair $$$(i, i + 1)$$$ the equality $$$s_i = s_{i + 1}$$$ holds; there is no index that is contained in more than one pair. After that Lesha removes all characters on indexes contained in these pairs and the algorithm is over. Lesha is interested in the lexicographically smallest strings he can obtain by applying the algorithm to the suffixes of the given string.",
+  "input_specification": "The only line contains the string $$$s$$$ ($$$1 \\le |s| \\le 10^5$$$) — the initial string consisting of lowercase English letters only.",
+  "output_specification": "In $$$|s|$$$ lines print the lengths of the answers and the answers themselves, starting with the answer for the longest suffix. The output can be large, so, when some answer is longer than $$$10$$$ characters, instead print the first $$$5$$$ characters, then \" ... \", then the last $$$2$$$ characters of the answer.",
+  "sample_testcases": [
+    {
+      "input": "abcdd",
+      "output": "3 abc\n2 bc\n1 c\n0 \n1 d"
+    },
+    {
+      "input": "abbcdddeaaffdfouurtytwoo",
+      "output": "18 abbcd...tw\n17 bbcdd...tw\n16 bcddd...tw\n15 cddde...tw\n14 dddea...tw\n13 ddeaa...tw\n12 deaad...tw\n11 eaadf...tw\n10 aadfortytw\n9 adfortytw\n8 dfortytw\n9 fdfortytw\n8 dfortytw\n7 fortytw\n6 ortytw\n5 rtytw\n6 urtytw\n5 rtytw\n4 tytw\n3 ytw\n2 tw\n1 w\n0 \n1 o"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

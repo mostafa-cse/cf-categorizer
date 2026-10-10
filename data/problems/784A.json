@@ -1,0 +1,34 @@
+{
+  "id": "784A",
+  "source": "problemset",
+  "contest_id": 784,
+  "problem_index": "A",
+  "name": "Numbers Joke",
+  "rating": 1700,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 3381,
+  "problem_url": "https://codeforces.com/problemset/problem/784/A",
+  "editorial_url": "https://codeforces.com/blog/entry/51351",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "",
+  "input_specification": "The input contains a single integer a ( 1 ≤ a ≤ 30 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "27"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

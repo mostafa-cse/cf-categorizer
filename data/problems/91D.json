@@ -1,0 +1,40 @@
+{
+  "id": "91D",
+  "source": "problemset",
+  "contest_id": 91,
+  "problem_index": "D",
+  "name": "Grocer's Problem",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 323,
+  "problem_url": "https://codeforces.com/problemset/problem/91/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2182",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Yesterday was a fair in a supermarket's grocery section. There were n jars with spices on the fair. Before the event the jars were numbered from 1 to n from the left to the right. After the event the jars were moved and the grocer had to sort them by the increasing of the numbers. The grocer has a special machine at his disposal. The machine can take any 5 or less jars and rearrange them in the way the grocer wants. Note that the jars do not have to stand consecutively. For example, from the permutation 2 , 6 , 5 , 4 , 3 , 1 one can get permutation 1 , 2 , 3 , 4 , 5 , 6 , if pick the jars on the positions 1 , 2 , 3 , 5 and 6 . Which minimum number of such operations is needed to arrange all the jars in the order of their numbers' increasing?",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 5 ). The second line contains n space-separated integers a i ( 1 ≤ a i ≤ n ) — the i -th number represents the number of a jar that occupies the i -th position. It is guaranteed that all the numbers are distinct.",
+  "output_specification": "Print on the first line the least number of operations needed to rearrange all the jars in the order of the numbers' increasing. Then print the description of all actions in the following format. On the first line of the description of one action indicate the number of jars that need to be taken ( k ), on the second line indicate from which positions the jars need to be taken ( b 1 , b 2 , ..., b k ), on the third line indicate the jar's new order ( c 1 , c 2 , ..., c k ). After the operation is fulfilled the jar from position b i will occupy the position c i . The set ( c 1 , c 2 , ..., c k ) should be the rearrangement of the set ( b 1 , b 2 , ..., b k ). If there are multiple solutions, output any.",
+  "sample_testcases": [
+    {
+      "input": "6\n3 5 6 1 2 4",
+      "output": "2\n4\n1 3 6 4\n3 6 4 1\n2\n2 5\n5 2"
+    },
+    {
+      "input": "14\n9 13 11 3 10 7 12 14 1 5 4 6 8 2",
+      "output": "3\n4\n2 13 8 14\n13 8 14 2\n5\n6 7 12 5 10\n7 12 6 10 5\n5\n3 11 4 1 9\n11 4 3 9 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:06",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

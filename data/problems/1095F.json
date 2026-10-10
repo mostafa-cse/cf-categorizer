@@ -1,0 +1,44 @@
+{
+  "id": "1095F",
+  "source": "problemset",
+  "contest_id": 1095,
+  "problem_index": "F",
+  "name": "Make It Connected",
+  "rating": 1900,
+  "tags": [
+    "dsu",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 8100,
+  "problem_url": "https://codeforces.com/problemset/problem/1095/F",
+  "editorial_url": "https://codeforces.com/blog/entry/64130",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected graph consisting of $$$n$$$ vertices. A number is written on each vertex; the number on vertex $$$i$$$ is $$$a_i$$$. Initially there are no edges in the graph. You may add some edges to this graph, but you have to pay for them. The cost of adding an edge between vertices $$$x$$$ and $$$y$$$ is $$$a_x + a_y$$$ coins. There are also $$$m$$$ special offers, each of them is denoted by three numbers $$$x$$$, $$$y$$$ and $$$w$$$, and means that you can add an edge connecting vertices $$$x$$$ and $$$y$$$ and pay $$$w$$$ coins for it. You don't have to use special offers: if there is a pair of vertices $$$x$$$ and $$$y$$$ that has a special offer associated with it, you still may connect these two vertices paying $$$a_x + a_y$$$ coins for it. What is the minimum number of coins you have to spend to make the graph connected? Recall that a graph is connected if it's possible to get from any vertex to any other vertex using only the edges belonging to this graph.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le m \\le 2 \\cdot 10^5$$$) — the number of vertices in the graph and the number of special offers, respectively. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^{12}$$$) — the numbers written on the vertices. Then $$$m$$$ lines follow, each containing three integers $$$x$$$, $$$y$$$ and $$$w$$$ ($$$1 \\le x, y \\le n$$$, $$$1 \\le w \\le 10^{12}$$$, $$$x \\ne y$$$) denoting a special offer: you may add an edge connecting vertex $$$x$$$ and vertex $$$y$$$, and this edge will cost $$$w$$$ coins.",
+  "output_specification": "Print one integer — the minimum number of coins you have to pay to make the graph connected.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3 3\n2 3 5\n2 1 1",
+      "output": "5"
+    },
+    {
+      "input": "4 0\n1 3 3 7",
+      "output": "16"
+    },
+    {
+      "input": "5 4\n1 2 3 4 5\n1 2 8\n1 3 10\n1 4 7\n1 5 15",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:57",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

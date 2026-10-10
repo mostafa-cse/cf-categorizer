@@ -1,0 +1,38 @@
+{
+  "id": "45F",
+  "source": "problemset",
+  "contest_id": 45,
+  "problem_index": "F",
+  "name": "Goats and Wolves",
+  "rating": 2500,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 202,
+  "problem_url": "https://codeforces.com/problemset/problem/45/F",
+  "editorial_url": "https://codeforces.com/blog/entry/861",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Once Vasya needed to transport m goats and m wolves from riverbank to the other as quickly as possible. The boat can hold n animals and Vasya, in addition, he is permitted to put less than n animals in the boat. If in one place (on one of the banks or in the boat) the wolves happen to strictly outnumber the goats, then the wolves eat the goats and Vasya gets upset. When Vasya swims on the boat from one shore to the other, he must take at least one animal to accompany him, otherwise he will get bored and he will, yet again, feel upset. When the boat reaches the bank, first all the animals get off simultaneously, and then the animals chosen by Vasya simultaneously get on the boat. That means that at the moment when the animals that have just arrived have already got off and the animals that are going to leave haven't yet got on, somebody might eat someone. Vasya needs to transport all the animals from one river bank to the other so that nobody eats anyone and Vasya doesn't get upset. What is the minimal number of times he will have to cross the river?",
+  "input_specification": "The first line contains two space-separated numbers m and n ( 1 ≤ m , n ≤ 10 5 ) — the number of animals and the boat's capacity.",
+  "output_specification": "If it is impossible to transport all the animals so that no one got upset, and all the goats survived, print -1. Otherwise print the single number — how many times Vasya will have to cross the river.",
+  "sample_testcases": [
+    {
+      "input": "3 2",
+      "output": "11"
+    },
+    {
+      "input": "33 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

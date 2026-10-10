@@ -1,0 +1,37 @@
+{
+  "id": "311C",
+  "source": "problemset",
+  "contest_id": 311,
+  "problem_index": "C",
+  "name": "Fetch the Treasure",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 607,
+  "problem_url": "https://codeforces.com/problemset/problem/311/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7785",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Rainbow built h cells in a row that are numbered from 1 to h from left to right. There are n cells with treasure. We call each of these n cells \"Treasure Cell\". The i -th \"Treasure Cell\" is the a i -th cell and the value of treasure in it is c i dollars. Then, Freda went in the first cell. For now, she can go just k cells forward, or return to the first cell. That means Freda was able to reach the 1st, ( k + 1 )-th, ( 2· k + 1 )-th, ( 3· k + 1 )-th cells and so on. Then Rainbow gave Freda m operations. Each operation is one of the following three types: Add another method x : she can also go just x cells forward at any moment. For example, initially she has only one method k . If at some moment she has methods a 1 , a 2 , ..., a r then she can reach all the cells with number in form , where v i — some non-negative integer. Reduce the value of the treasure in the x -th \"Treasure Cell\" by y dollars. In other words, to apply assignment c x = c x - y . Ask the value of the most valuable treasure among the cells Freda can reach. If Freda cannot reach any cell with the treasure then consider the value of the most valuable treasure equal to 0, and do nothing. Otherwise take the most valuable treasure away. If several \"Treasure Cells\" have the most valuable treasure, take the \"Treasure Cell\" with the minimum number (not necessarily with the minimum number of cell). After that the total number of cells with a treasure is decreased by one. As a programmer, you are asked by Freda to write a program to answer each query.",
+  "input_specification": "The first line of the input contains four integers: h (1 ≤ h ≤ 10 18 ), n , m (1 ≤ n , m ≤ 10 5 ) and k (1 ≤ k ≤ 10 4 ) . Each of the next n lines contains two integers: a i (1 ≤ a i ≤ h ), c i (1 ≤ c i ≤ 10 9 ) . That means the i -th \"Treasure Cell\" is the a i -th cell and cost of the treasure in that cell is c i dollars. All the a i are distinct. Each of the next m lines is in one of the three following formats: \"1 x \" — an operation of type 1, 1 ≤ x ≤ h ; \"2 x y \" — an operation of type 2, 1 ≤ x ≤ n , 0 ≤ y < c x ; \"3\" — an operation of type 3. There are at most 20 operations of type 1. It's guaranteed that at any moment treasure in each cell has positive value. It's guaranteed that all operations is correct (no operation can decrease the value of the taken tresure). Please, do not use the %lld specifier to read 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "output_specification": "For each operation of type 3, output an integer indicates the value (in dollars) of the most valuable treasure among the \"Treasure Cells\" Freda can reach. If there is no such treasure, output 0.",
+  "sample_testcases": [
+    {
+      "input": "10 3 5 2\n5 50\n7 60\n8 100\n2 2 5\n3\n1 3\n3\n3",
+      "output": "55\n100\n50"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

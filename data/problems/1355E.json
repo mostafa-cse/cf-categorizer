@@ -1,0 +1,54 @@
+{
+  "id": "1355E",
+  "source": "problemset",
+  "contest_id": 1355,
+  "problem_index": "E",
+  "name": "Restorer Distance",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "sortings",
+    "ternary search"
+  ],
+  "solved_count": 6193,
+  "problem_url": "https://codeforces.com/problemset/problem/1355/E",
+  "editorial_url": "https://codeforces.com/blog/entry/77491",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have to restore the wall. The wall consists of $$$N$$$ pillars of bricks, the height of the $$$i$$$-th pillar is initially equal to $$$h_{i}$$$, the height is measured in number of bricks. After the restoration all the $$$N$$$ pillars should have equal heights. You are allowed the following operations: put a brick on top of one pillar, the cost of this operation is $$$A$$$; remove a brick from the top of one non-empty pillar, the cost of this operation is $$$R$$$; move a brick from the top of one non-empty pillar to the top of another pillar, the cost of this operation is $$$M$$$. You cannot create additional pillars or ignore some of pre-existing pillars even if their height becomes $$$0$$$. What is the minimal total cost of restoration, in other words, what is the minimal total cost to make all the pillars of equal height?",
+  "input_specification": "The first line of input contains four integers $$$N$$$, $$$A$$$, $$$R$$$, $$$M$$$ ($$$1 \\le N \\le 10^{5}$$$, $$$0 \\le A, R, M \\le 10^{4}$$$) — the number of pillars and the costs of operations. The second line contains $$$N$$$ integers $$$h_{i}$$$ ($$$0 \\le h_{i} \\le 10^{9}$$$) — initial heights of pillars.",
+  "output_specification": "Print one integer — the minimal cost of restoration.",
+  "sample_testcases": [
+    {
+      "input": "3 1 100 100\n1 3 8",
+      "output": "12"
+    },
+    {
+      "input": "3 100 1 100\n1 3 8",
+      "output": "9"
+    },
+    {
+      "input": "3 100 100 1\n1 3 8",
+      "output": "4"
+    },
+    {
+      "input": "5 1 2 4\n5 5 3 6 5",
+      "output": "4"
+    },
+    {
+      "input": "5 1 2 2\n5 5 3 6 5",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

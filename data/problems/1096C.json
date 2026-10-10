@@ -1,0 +1,35 @@
+{
+  "id": "1096C",
+  "source": "problemset",
+  "contest_id": 1096,
+  "problem_index": "C",
+  "name": "Polygon for the Angle",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "geometry"
+  ],
+  "solved_count": 7299,
+  "problem_url": "https://codeforces.com/problemset/problem/1096/C",
+  "editorial_url": "https://codeforces.com/blog/entry/64156",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an angle $$$\\text{ang}$$$. The Jury asks You to find such regular $$$n$$$-gon (regular polygon with $$$n$$$ vertices) that it has three vertices $$$a$$$, $$$b$$$ and $$$c$$$ (they can be non-consecutive) with $$$\\angle{abc} = \\text{ang}$$$ or report that there is no such $$$n$$$-gon. If there are several answers, print the minimal one. It is guarantied that if answer exists then it doesn't exceed $$$998244353$$$.",
+  "input_specification": "The first line contains single integer $$$T$$$ ($$$1 \\le T \\le 180$$$) — the number of queries. Each of the next $$$T$$$ lines contains one integer $$$\\text{ang}$$$ ($$$1 \\le \\text{ang} \\lt 180$$$) — the angle measured in degrees .",
+  "output_specification": "For each query print single integer $$$n$$$ ($$$3 \\le n \\le 998244353$$$) — minimal possible number of vertices in the regular $$$n$$$-gon or $$$-1$$$ if there is no such $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n54\n50\n2\n178",
+      "output": "10\n18\n90\n180"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:57",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "813D",
+  "source": "problemset",
+  "contest_id": 813,
+  "problem_index": "D",
+  "name": "Two Melodies",
+  "rating": 2600,
+  "tags": [
+    "dp",
+    "flows"
+  ],
+  "solved_count": 1267,
+  "problem_url": "https://codeforces.com/problemset/problem/813/D",
+  "editorial_url": "https://codeforces.com/blog/entry/52410",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice is a beginner composer and now she is ready to create another masterpiece. And not even the single one but two at the same time! Alice has a sheet with n notes written on it. She wants to take two such non-empty non-intersecting subsequences that both of them form a melody and sum of their lengths is maximal. Subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements. Subsequence forms a melody when each two adjacent notes either differs by 1 or are congruent modulo 7 . You should write a program which will calculate maximum sum of lengths of such two non-empty non-intersecting subsequences that both of them form a melody.",
+  "input_specification": "The first line contains one integer number n ( 2 ≤ n ≤ 5000 ). The second line contains n integer numbers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ) — notes written on a sheet.",
+  "output_specification": "Print maximum sum of lengths of such two non-empty non-intersecting subsequences that both of them form a melody.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 4 5",
+      "output": "4"
+    },
+    {
+      "input": "6\n62 22 60 61 48 49",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

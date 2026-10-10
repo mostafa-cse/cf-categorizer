@@ -1,0 +1,49 @@
+{
+  "id": "1114C",
+  "source": "problemset",
+  "contest_id": 1114,
+  "problem_index": "C",
+  "name": "Trailing Loves (or L'oeufs?)",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 8090,
+  "problem_url": "https://codeforces.com/problemset/problem/1114/C",
+  "editorial_url": "https://codeforces.com/blog/entry/65136",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The number \"zero\" is called \"love\" (or \"l'oeuf\" to be precise, literally means \"egg\" in French), for example when denoting the zero score in a game of tennis. Aki is fond of numbers, especially those with trailing zeros. For example, the number $$$9200$$$ has two trailing zeros. Aki thinks the more trailing zero digits a number has, the prettier it is. However, Aki believes, that the number of trailing zeros of a number is not static, but depends on the base (radix) it is represented in. Thus, he considers a few scenarios with some numbers and bases. And now, since the numbers he used become quite bizarre, he asks you to help him to calculate the beauty of these numbers. Given two integers $$$n$$$ and $$$b$$$ (in decimal notation), your task is to calculate the number of trailing zero digits in the $$$b$$$-ary (in the base/radix of $$$b$$$) representation of $$$n\\,!$$$ ( factorial of $$$n$$$).",
+  "input_specification": "The only line of the input contains two integers $$$n$$$ and $$$b$$$ ($$$1 \\le n \\le 10^{18}$$$, $$$2 \\le b \\le 10^{12}$$$).",
+  "output_specification": "Print an only integer — the number of trailing zero digits in the $$$b$$$-ary representation of $$$n!$$$",
+  "sample_testcases": [
+    {
+      "input": "6 9",
+      "output": "1"
+    },
+    {
+      "input": "38 11",
+      "output": "3"
+    },
+    {
+      "input": "5 2",
+      "output": "3"
+    },
+    {
+      "input": "5 10",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:51",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

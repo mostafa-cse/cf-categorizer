@@ -1,0 +1,38 @@
+{
+  "id": "435C",
+  "source": "problemset",
+  "contest_id": 435,
+  "problem_index": "C",
+  "name": "Cardiogram",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2762,
+  "problem_url": "https://codeforces.com/problemset/problem/435/C",
+  "editorial_url": "https://codeforces.com/blog/entry/12479",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "In this problem, your task is to use ASCII graphics to paint a cardiogram. A cardiogram is a polyline with the following corners: That is, a cardiogram is fully defined by a sequence of positive integers a 1 , a 2 , ..., a n . Your task is to paint a cardiogram by given sequence a i .",
+  "input_specification": "The first line contains integer n (2 ≤ n ≤ 1000) . The next line contains the sequence of integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 1000) . It is guaranteed that the sum of all a i doesn't exceed 1000 .",
+  "output_specification": "Print max | y i - y j | lines (where y k is the y coordinate of the k -th point of the polyline), in each line print characters. Each character must equal either « / » (slash), « \\ » (backslash), « » (space). The printed image must be the image of the given polyline. Please study the test samples for better understanding of how to print a cardiogram. Note that in this problem the checker checks your answer taking spaces into consideration. Do not print any extra characters. Remember that the wrong answer to the first pretest doesn't give you a penalty.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 1 2 5 1",
+      "output": "/\n\\\n/\n\\\n/\n\\\n/\n\\\n/\n\\\n\\\n/"
+    },
+    {
+      "input": "3\n1 5 1",
+      "output": "/\n\\\n\\\n\\\n\\\n\\\n/"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

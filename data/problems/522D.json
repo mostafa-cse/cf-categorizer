@@ -1,0 +1,39 @@
+{
+  "id": "522D",
+  "source": "problemset",
+  "contest_id": 522,
+  "problem_index": "D",
+  "name": "Closest Equals",
+  "rating": 2000,
+  "tags": [
+    "*special",
+    "data structures"
+  ],
+  "solved_count": 4338,
+  "problem_url": "https://codeforces.com/problemset/problem/522/D",
+  "editorial_url": "https://codeforces.com/blog/entry/16853",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given sequence a 1 , a 2 , ..., a n and m queries l j , r j ( 1 ≤ l j ≤ r j ≤ n ). For each query you need to print the minimum distance between such pair of elements a x and a y ( x ≠ y ), that: both indexes of the elements lie within range [ l j , r j ], that is, l j ≤ x , y ≤ r j ; the values of the elements are equal, that is a x = a y . The text above understands distance as | x - y | .",
+  "input_specification": "The first line of the input contains a pair of integers n , m ( 1 ≤ n , m ≤ 5·10 5 ) — the length of the sequence and the number of queries, correspondingly. The second line contains the sequence of integers a 1 , a 2 , ..., a n ( - 10 9 ≤ a i ≤ 10 9 ). Next m lines contain the queries, one per line. Each query is given by a pair of numbers l j , r j ( 1 ≤ l j ≤ r j ≤ n ) — the indexes of the query range limits.",
+  "output_specification": "Print m integers — the answers to each query. If there is no valid match for some query, please print -1 as an answer to this query.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 1 2 3 2\n1 5\n2 4\n3 5",
+      "output": "1\n-1\n2"
+    },
+    {
+      "input": "6 5\n1 2 1 3 2 3\n4 6\n1 3\n2 5\n2 4\n1 6",
+      "output": "2\n2\n3\n-1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:11",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

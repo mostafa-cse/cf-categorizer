@@ -1,0 +1,38 @@
+{
+  "id": "1594D",
+  "source": "problemset",
+  "contest_id": 1594,
+  "problem_index": "D",
+  "name": "The Number of Imposters",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "graphs"
+  ],
+  "solved_count": 10089,
+  "problem_url": "https://codeforces.com/problemset/problem/1594/D",
+  "editorial_url": "https://codeforces.com/blog/entry/95525",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Theofanis started playing the new online game called \"Among them\". However, he always plays with Cypriot players, and they all have the same name: \"Andreas\" (the most common name in Cyprus). In each game, Theofanis plays with $$$n$$$ other players. Since they all have the same name, they are numbered from $$$1$$$ to $$$n$$$. The players write $$$m$$$ comments in the chat. A comment has the structure of \"$$$i$$$ $$$j$$$ $$$c$$$\" where $$$i$$$ and $$$j$$$ are two distinct integers and $$$c$$$ is a string ($$$1 \\le i, j \\le n$$$; $$$i \\neq j$$$; $$$c$$$ is either imposter or crewmate ). The comment means that player $$$i$$$ said that player $$$j$$$ has the role $$$c$$$. An imposter always lies, and a crewmate always tells the truth. Help Theofanis find the maximum possible number of imposters among all the other Cypriot players, or determine that the comments contradict each other (see the notes for further explanation). Note that each player has exactly one role: either imposter or crewmate .",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Description of each test case follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$0 \\le m \\le 5 \\cdot 10^5$$$) — the number of players except Theofanis and the number of comments. Each of the next $$$m$$$ lines contains a comment made by the players of the structure \"$$$i$$$ $$$j$$$ $$$c$$$\" where $$$i$$$ and $$$j$$$ are two distinct integers and $$$c$$$ is a string ($$$1 \\le i, j \\le n$$$; $$$i \\neq j$$$; $$$c$$$ is either imposter or crewmate ). There can be multiple comments for the same pair of $$$(i, j)$$$. It is guaranteed that the sum of all $$$n$$$ does not exceed $$$2 \\cdot 10^5$$$ and the sum of all $$$m$$$ does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the maximum possible number of imposters. If the comments contradict each other, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 2\n1 2 imposter\n2 3 crewmate\n5 4\n1 3 crewmate\n2 5 crewmate\n2 4 imposter\n3 4 imposter\n2 2\n1 2 imposter\n2 1 crewmate\n3 5\n1 2 imposter\n1 2 imposter\n3 2 crewmate\n3 2 crewmate\n1 3 imposter\n5 0",
+      "output": "2\n4\n-1\n2\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

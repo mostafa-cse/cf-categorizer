@@ -1,0 +1,39 @@
+{
+  "id": "1990E2",
+  "source": "problemset",
+  "contest_id": 1990,
+  "problem_index": "E2",
+  "name": "Catch the Mole(Hard Version)",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dfs and similar",
+    "divide and conquer",
+    "interactive",
+    "trees"
+  ],
+  "solved_count": 1234,
+  "problem_url": "https://codeforces.com/problemset/problem/1990/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/131716",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The only difference is the limit on the number of queries. This is an interactive problem. You are given a tree of $$$n$$$ nodes with node $$$1$$$ as its root node. There is a hidden mole in one of the nodes. To find its position, you can pick an integer $$$x$$$ ($$$1 \\le x \\le n$$$) to make an inquiry to the jury. Next, the jury will return $$$1$$$ when the mole is in subtree $$$x$$$. Otherwise, the judge will return $$$0$$$. If the judge returns $$$0$$$ and the mole is not in root node $$$1$$$, the mole will move to the parent node of the node it is currently on. Use at most $$$160$$$ operations to find the current node where the mole is located.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n2\n1 2\n\n1\n\n6\n1 2\n1 3\n1 4\n4 5\n5 6\n\n0\n\n0\n\n1",
+      "output": "? 2\n\n! 2\n\n\n\n\n\n\n? 2\n\n? 6\n\n? 4\n\n! 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:01",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "811D",
+  "source": "problemset",
+  "contest_id": 811,
+  "problem_index": "D",
+  "name": "Vladik and Favorite Game",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "interactive"
+  ],
+  "solved_count": 1977,
+  "problem_url": "https://codeforces.com/problemset/problem/811/D",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Vladik has favorite game, in which he plays all his free time. Game field could be represented as n × m matrix which consists of cells of three types: « . » — normal cell, player can visit it. « F » — finish cell, player has to finish his way there to win. There is exactly one cell of this type. « * » — dangerous cell, if player comes to this cell, he loses. Initially player is located in the left top cell with coordinates (1, 1) . Player has access to 4 buttons \" U \", \" D \", \" L \", \" R \", each of them move player up, down, left and right directions respectively. But it’s not that easy! Sometimes friends play game and change functions of buttons. Function of buttons \" L \" and \" R \" could have been swapped, also functions of buttons \" U \" and \" D \" could have been swapped. Note that functions of buttons can be changed only at the beginning of the game. Help Vladik win the game!",
+  "input_specification": "First line contains two space-separated integers n and m ( 1 ≤ n , m ≤ 100 ) — number of rows and columns respectively. Each of next n lines contains m characters describing corresponding row of field. Set of characters in field is described above. Guaranteed that cell with coordinates (1, 1) is normal and there is at least one way from initial cell to finish cell without dangerous cells.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4 3\n...\n**.\nF*.\n...\n1 1\n1 2\n1 3\n1 3\n2 3\n3 3\n4 3\n4 2\n4 1\n3 1",
+      "output": "R\nL\nL\nD\nU\nU\nU\nR\nR\nD"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

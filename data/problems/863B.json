@@ -1,0 +1,40 @@
+{
+  "id": "863B",
+  "source": "problemset",
+  "contest_id": 863,
+  "problem_index": "B",
+  "name": "Kayaking",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 11818,
+  "problem_url": "https://codeforces.com/problemset/problem/863/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54708",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vadim is really keen on travelling. Recently he heard about kayaking activity near his town and became very excited about it, so he joined a party of kayakers. Now the party is ready to start its journey, but firstly they have to choose kayaks. There are 2· n people in the group (including Vadim), and they have exactly n - 1 tandem kayaks (each of which, obviously, can carry two people) and 2 single kayaks. i -th person's weight is w i , and weight is an important matter in kayaking — if the difference between the weights of two people that sit in the same tandem kayak is too large, then it can crash. And, of course, people want to distribute their seats in kayaks in order to minimize the chances that kayaks will crash. Formally, the instability of a single kayak is always 0 , and the instability of a tandem kayak is the absolute difference between weights of the people that are in this kayak. Instability of the whole journey is the total instability of all kayaks. Help the party to determine minimum possible total instability!",
+  "input_specification": "The first line contains one number n ( 2 ≤ n ≤ 50 ). The second line contains 2· n integer numbers w 1 , w 2 , ..., w 2 n , where w i is weight of person i ( 1 ≤ w i ≤ 1000 ).",
+  "output_specification": "Print minimum possible total instability.",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2 3 4",
+      "output": "1"
+    },
+    {
+      "input": "4\n1 3 4 6 3 4 100 200",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

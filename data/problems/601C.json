@@ -1,0 +1,44 @@
+{
+  "id": "601C",
+  "source": "problemset",
+  "contest_id": 601,
+  "problem_index": "C",
+  "name": "Kleofáš and the n-thlon",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1479,
+  "problem_url": "https://codeforces.com/problemset/problem/601/C",
+  "editorial_url": "https://codeforces.com/blog/entry/21755",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Kleofáš is participating in an n -thlon - a tournament consisting of n different competitions in n different disciplines (numbered 1 through n ). There are m participants in the n -thlon and each of them participates in all competitions. In each of these n competitions, the participants are given ranks from 1 to m in such a way that no two participants are given the same rank - in other words, the ranks in each competition form a permutation of numbers from 1 to m . The score of a participant in a competition is equal to his/her rank in it. The overall score of each participant is computed as the sum of that participant's scores in all competitions. The overall rank of each participant is equal to 1 + k , where k is the number of participants with strictly smaller overall score. The n -thlon is over now, but the results haven't been published yet. Kleofáš still remembers his ranks in each particular competition; however, he doesn't remember anything about how well the other participants did. Therefore, Kleofáš would like to know his expected overall rank. All competitors are equally good at each discipline, so all rankings (permutations of ranks of everyone except Kleofáš) in each competition are equiprobable.",
+  "input_specification": "The first line of the input contains two space-separated integers n ( 1 ≤ n ≤ 100 ) and m ( 1 ≤ m ≤ 1000 ) — the number of competitions and the number of participants respectively. Then, n lines follow. The i -th of them contains one integer x i ( 1 ≤ x i ≤ m ) — the rank of Kleofáš in the i -th competition.",
+  "output_specification": "Output a single real number – the expected overall rank of Kleofáš. Your answer will be considered correct if its relative or absolute error doesn't exceed 10 - 9 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct, if .",
+  "sample_testcases": [
+    {
+      "input": "4 10\n2\n1\n2\n1",
+      "output": "1.0000000000000000"
+    },
+    {
+      "input": "5 5\n1\n2\n3\n4\n5",
+      "output": "2.7500000000000000"
+    },
+    {
+      "input": "3 6\n2\n4\n2",
+      "output": "1.6799999999999999"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

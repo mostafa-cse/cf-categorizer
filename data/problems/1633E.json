@@ -1,0 +1,50 @@
+{
+  "id": "1633E",
+  "source": "problemset",
+  "contest_id": 1633,
+  "problem_index": "E",
+  "name": "Spanning Tree Queries",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "math",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 1837,
+  "problem_url": "https://codeforces.com/problemset/problem/1633/E",
+  "editorial_url": "https://codeforces.com/blog/entry/99539",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a connected weighted undirected graph, consisting of $$$n$$$ vertices and $$$m$$$ edges. You are asked $$$k$$$ queries about it. Each query consists of a single integer $$$x$$$. For each query, you select a spanning tree in the graph. Let the weights of its edges be $$$w_1, w_2, \\dots, w_{n-1}$$$. The cost of a spanning tree is $$$\\sum \\limits_{i=1}^{n-1} |w_i - x|$$$ (the sum of absolute differences between the weights and $$$x$$$). The answer to a query is the lowest cost of a spanning tree. The queries are given in a compressed format. The first $$$p$$$ $$$(1 \\le p \\le k)$$$ queries $$$q_1, q_2, \\dots, q_p$$$ are provided explicitly. For queries from $$$p+1$$$ to $$$k$$$, $$$q_j = (q_{j-1} \\cdot a + b) \\mod c$$$. Print the xor of answers to all queries.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 50$$$; $$$n - 1 \\le m \\le 300$$$) — the number of vertices and the number of edges in the graph. Each of the next $$$m$$$ lines contains a description of an undirected edge: three integers $$$v$$$, $$$u$$$ and $$$w$$$ ($$$1 \\le v, u \\le n$$$; $$$v \\neq u$$$; $$$0 \\le w \\le 10^8$$$) — the vertices the edge connects and its weight. Note that there might be multiple edges between a pair of vertices. The edges form a connected graph. The next line contains five integers $$$p, k, a, b$$$ and $$$c$$$ ($$$1 \\le p \\le 10^5$$$; $$$p \\le k \\le 10^7$$$; $$$0 \\le a, b \\le 10^8$$$; $$$1 \\le c \\le 10^8$$$) — the number of queries provided explicitly, the total number of queries and parameters to generate the queries. The next line contains $$$p$$$ integers $$$q_1, q_2, \\dots, q_p$$$ ($$$0 \\le q_j \\lt c$$$) — the first $$$p$$$ queries.",
+  "output_specification": "Print a single integer — the xor of answers to all queries.",
+  "sample_testcases": [
+    {
+      "input": "5 8\n4 1 4\n3 1 0\n3 5 3\n2 5 4\n3 4 8\n4 3 4\n4 2 8\n5 3 9\n3 11 1 1 10\n0 1 2",
+      "output": "4"
+    },
+    {
+      "input": "6 7\n2 4 0\n5 4 7\n2 4 0\n2 1 7\n2 6 1\n3 4 4\n1 4 8\n4 10 3 3 7\n3 0 2 1",
+      "output": "5"
+    },
+    {
+      "input": "3 3\n1 2 50\n2 3 100\n1 3 150\n1 10000000 0 0 100000000\n75",
+      "output": "164"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

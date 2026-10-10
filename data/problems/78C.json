@@ -1,0 +1,40 @@
+{
+  "id": "78C",
+  "source": "problemset",
+  "contest_id": 78,
+  "problem_index": "C",
+  "name": "Beaver Game",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "games",
+    "number theory"
+  ],
+  "solved_count": 2260,
+  "problem_url": "https://codeforces.com/problemset/problem/78/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1812",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Two beavers, Timur and Marsel, play the following game. There are n logs, each of exactly m meters in length. The beavers move in turns. For each move a beaver chooses a log and gnaws it into some number (more than one) of equal parts, the length of each one is expressed by an integer and is no less than k meters. Each resulting part is also a log which can be gnawed in future by any beaver. The beaver that can't make a move loses. Thus, the other beaver wins. Timur makes the first move. The players play in the optimal way. Determine the winner.",
+  "input_specification": "The first line contains three integers n , m , k ( 1 ≤ n , m , k ≤ 10 9 ).",
+  "output_specification": "Print \" Timur \", if Timur wins, or \" Marsel \", if Marsel wins. You should print everything without the quotes.",
+  "sample_testcases": [
+    {
+      "input": "1 15 4",
+      "output": "Timur"
+    },
+    {
+      "input": "4 9 5",
+      "output": "Marsel"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

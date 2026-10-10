@@ -1,0 +1,36 @@
+{
+  "id": "1254A",
+  "source": "problemset",
+  "contest_id": 1254,
+  "problem_index": "A",
+  "name": "Feeding Chicken",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 5793,
+  "problem_url": "https://codeforces.com/problemset/problem/1254/A",
+  "editorial_url": "https://codeforces.com/blog/entry/71594",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Long is a huge fan of CFC (Codeforces Fried Chicken). But the price of CFC is increasing, so he decides to breed the chicken on his own farm. His farm is presented by a rectangle grid with $$$r$$$ rows and $$$c$$$ columns. Some of these cells contain rice, others are empty. $$$k$$$ chickens are living on his farm. The number of chickens is not greater than the number of cells with rice on the farm. Long wants to give his chicken playgrounds by assigning these farm cells to his chickens. He would like to satisfy the following requirements: Each cell of the farm is assigned to exactly one chicken. Each chicken is assigned at least one cell. The set of cells assigned to every chicken forms a connected area. More precisely, if two cells $$$(x, y)$$$ and $$$(u, v)$$$ are assigned to the same chicken, this chicken is able to walk from $$$(x, y)$$$ to $$$(u, v)$$$ by passing only its cells and moving from each cell to another cell sharing a side. Long also wants to prevent his chickens from fighting for food. Hence he wants the difference between the maximum and the minimum number of cells with rice assigned to a chicken to be as small as possible. Please help him.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$T$$$ ($$$1 \\le T \\le 2 \\cdot 10^4$$$). Description of the test cases follows. The first line of each test case contains three integers $$$r$$$, $$$c$$$ and $$$k$$$ ($$$1 \\leq r, c \\leq 100, 1 \\leq k \\leq 62$$$), representing the size of Long's farm and the number of chickens Long has. Each of the next $$$r$$$ lines contains $$$c$$$ characters, each is either \" . \" or \" R \", representing an empty cell or a cell with rice. It is guaranteed that the number of chickens is not greater than the number of cells with rice on the farm. It is guaranteed that the sum of $$$r \\cdot c$$$ over all test cases does not exceed $$$2 \\cdot 10^4$$$.",
+  "output_specification": "For each test case, print $$$r$$$ lines with $$$c$$$ characters on each line. Each character should be either a lowercase English character, an uppercase English character, or a digit. Two characters should be equal if and only if the two corresponding cells are assigned to the same chicken. Uppercase and lowercase characters are considered different, so \" A \" and \" a \" belong to two different chickens. If there are multiple optimal answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 5 3\n..R..\n...R.\n....R\n6 4 6\nR..R\nR..R\nRRRR\nRRRR\nR..R\nR..R\n5 5 4\nRRR..\nR.R..\nRRR..\nR..R.\nR...R\n2 31 62\nRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\nRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "output": "11122\n22223\n33333\naacc\naBBc\naBBc\nCbbA\nCbbA\nCCAA\n11114\n22244\n32444\n33344\n33334\nabcdefghijklmnopqrstuvwxyzABCDE\nFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

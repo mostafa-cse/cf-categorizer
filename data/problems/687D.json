@@ -1,0 +1,38 @@
+{
+  "id": "687D",
+  "source": "problemset",
+  "contest_id": 687,
+  "problem_index": "D",
+  "name": "Dividing Kingdom II",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dsu",
+    "graphs",
+    "sortings"
+  ],
+  "solved_count": 1171,
+  "problem_url": "https://codeforces.com/problemset/problem/687/D",
+  "editorial_url": "https://codeforces.com/blog/entry/45770",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Long time ago, there was a great kingdom and it was being ruled by The Great Arya and Pari The Great. These two had some problems about the numbers they like, so they decided to divide the great kingdom between themselves. The great kingdom consisted of n cities numbered from 1 to n and m bidirectional roads between these cities, numbered from 1 to m . The i -th road had length equal to w i . The Great Arya and Pari The Great were discussing about destructing some prefix (all road with numbers less than some x ) and suffix (all roads with numbers greater than some x ) of the roads so there will remain only the roads with numbers l , l + 1, ..., r - 1 and r . After that they will divide the great kingdom into two pieces (with each city belonging to exactly one piece) such that the hardness of the division is minimized . The hardness of a division is the maximum length of a road such that its both endpoints are in the same piece of the kingdom. In case there is no such road, the hardness of the division is considered to be equal to - 1 . Historians found the map of the great kingdom, and they have q guesses about the l and r chosen by those great rulers. Given these data, for each guess l i and r i print the minimum possible hardness of the division of the kingdom.",
+  "input_specification": "The first line of the input contains three integers n , m and q ( 1 ≤ n , q ≤ 1000 , ) — the number of cities and roads in the great kingdom, and the number of guesses, respectively. The i -th line of the following m lines contains three integers u i , v i and w i ( 1  ≤ u i , v i ≤ n , 0 ≤ w i ≤ 10 9 ), denoting the road number i connects cities u i and v i and its length is equal w i . It's guaranteed that no road connects the city to itself and no pair of cities is connected by more than one road. Each of the next q lines contains a pair of integers l i and r i ( 1  ≤ l i ≤ r i ≤ m ) — a guess from the historians about the remaining roads in the kingdom.",
+  "output_specification": "For each guess print the minimum possible hardness of the division in described scenario.",
+  "sample_testcases": [
+    {
+      "input": "5 6 5\n5 4 86\n5 1 0\n1 3 38\n2 1 33\n2 4 28\n2 3 40\n3 5\n2 6\n1 3\n2 3\n1 6",
+      "output": "-1\n33\n-1\n-1\n33"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

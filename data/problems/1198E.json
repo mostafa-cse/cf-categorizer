@@ -1,0 +1,40 @@
+{
+  "id": "1198E",
+  "source": "problemset",
+  "contest_id": 1198,
+  "problem_index": "E",
+  "name": "Rectangle Painting 2",
+  "rating": 2500,
+  "tags": [
+    "flows",
+    "graph matchings",
+    "graphs"
+  ],
+  "solved_count": 1365,
+  "problem_url": "https://codeforces.com/problemset/problem/1198/E",
+  "editorial_url": "https://codeforces.com/blog/entry/68775",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There is a square grid of size $$$n \\times n$$$. Some cells are colored in black, all others are colored in white. In one operation you can select some rectangle and color all its cells in white. It costs $$$\\min(h, w)$$$ to color a rectangle of size $$$h \\times w$$$. You are to make all cells white for minimum total cost. The square is large, so we give it to you in a compressed way. The set of black cells is the union of $$$m$$$ rectangles.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^{9}$$$, $$$0 \\le m \\le 50$$$) — the size of the square grid and the number of black rectangles. Each of the next $$$m$$$ lines contains 4 integers $$$x_{i1}$$$ $$$y_{i1}$$$ $$$x_{i2}$$$ $$$y_{i2}$$$ ($$$1 \\le x_{i1} \\le x_{i2} \\le n$$$, $$$1 \\le y_{i1} \\le y_{i2} \\le n$$$) — the coordinates of the bottom-left and the top-right corner cells of the $$$i$$$-th black rectangle. The rectangles may intersect.",
+  "output_specification": "Print a single integer — the minimum total cost of painting the whole square in white.",
+  "sample_testcases": [
+    {
+      "input": "10 2\n4 1 5 10\n1 4 10 5",
+      "output": "4"
+    },
+    {
+      "input": "7 6\n2 1 2 1\n4 2 4 3\n2 5 2 5\n2 3 5 3\n1 2 1 2\n3 2 5 3",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:32",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "216. Min Cost Max Flow (MCMF)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Model constraint matching as minimum-cost flow. Augment along the shortest augmenting path using SPFA or Dijkstra with Johnson's potentials."
+}

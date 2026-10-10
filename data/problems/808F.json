@@ -1,0 +1,40 @@
+{
+  "id": "808F",
+  "source": "problemset",
+  "contest_id": 808,
+  "problem_index": "F",
+  "name": "Card Game",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 1707,
+  "problem_url": "https://codeforces.com/problemset/problem/808/F",
+  "editorial_url": "https://codeforces.com/blog/entry/52010",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Digital collectible card games have become very popular recently. So Vova decided to try one of these. Vova has n cards in his collection. Each of these cards is characterised by its power p i , magic number c i and level l i . Vova wants to build a deck with total power not less than k , but magic numbers may not allow him to do so — Vova can't place two cards in a deck if the sum of the magic numbers written on these cards is a prime number. Also Vova cannot use a card if its level is greater than the level of Vova's character. At the moment Vova's character's level is 1 . Help Vova to determine the minimum level he needs to reach in order to build a deck with the required total power.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 100 , 1 ≤ k ≤ 100000 ). Then n lines follow, each of these lines contains three numbers that represent the corresponding card: p i , c i and l i ( 1 ≤ p i ≤ 1000 , 1 ≤ c i ≤ 100000 , 1 ≤ l i ≤ n ).",
+  "output_specification": "If Vova won't be able to build a deck with required power, print - 1 . Otherwise print the minimum level Vova has to reach in order to build a deck.",
+  "sample_testcases": [
+    {
+      "input": "5 8\n5 5 1\n1 5 4\n4 6 3\n1 12 4\n3 12 1",
+      "output": "4"
+    },
+    {
+      "input": "3 7\n4 4 1\n5 8 2\n5 3 3",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

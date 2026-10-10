@@ -1,0 +1,38 @@
+{
+  "id": "1090J",
+  "source": "problemset",
+  "contest_id": 1090,
+  "problem_index": "J",
+  "name": "Two Prefixes",
+  "rating": 2600,
+  "tags": [
+    "strings"
+  ],
+  "solved_count": 621,
+  "problem_url": "https://codeforces.com/problemset/problem/1090/J",
+  "editorial_url": "https://codeforces.com//neerc.ifmo.ru/school/archive/2018-2019/ru-olymp-team-russia-2018-presentation.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Misha didn't do his math homework for today's lesson once again. As a punishment, his teacher Dr. Andrew decided to give him a hard, but very useless task. Dr. Andrew has written two strings s and t of lowercase English letters at the blackboard. He reminded Misha that prefix of a string is a string formed by removing several (possibly none) of its last characters, and a concatenation of two strings is a string formed by appending the second string to the right of the first string. The teacher asked Misha to write down on the blackboard all strings that are the concatenations of some non-empty prefix of s and some non-empty prefix of t . When Misha did it, Dr. Andrew asked him how many distinct strings are there. Misha spent almost the entire lesson doing that and completed the task. Now he asks you to write a program that would do this task automatically.",
+  "input_specification": "The first line contains the string s consisting of lowercase English letters. The second line contains the string t consisting of lowercase English letters. The lengths of both string do not exceed 10 5 .",
+  "output_specification": "Output a single integer — the number of distinct strings that are concatenations of some non-empty prefix of s with some non-empty prefix of t .",
+  "sample_testcases": [
+    {
+      "input": "aba\naa",
+      "output": "5"
+    },
+    {
+      "input": "aaaaa\naaaa",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:59",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

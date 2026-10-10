@@ -1,0 +1,41 @@
+{
+  "id": "2248G",
+  "source": "problemset",
+  "contest_id": 2248,
+  "problem_index": "G",
+  "name": "No Balance Left",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 259,
+  "problem_url": "https://codeforces.com/problemset/problem/2248/G",
+  "editorial_url": "https://codeforces.com/blog/entry/155640",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alisa has a shopping card with an initial balance of $$$h$$$. There are $$$n$$$ types of products in a supermarket. A product of type $$$i$$$ costs $$$c_i$$$, and Alisa can buy any number of products of each type. There are also $$$m$$$ rebate activities. The $$$j$$$-th activity applies to a purchase if its total cost is at least $$$a_j$$$ and gives a rebate of $$$b_j$$$. For each purchase, Alisa performs the following operations: She chooses one or more products whose total cost $$$x$$$ does not exceed the current balance on her card and pays $$$x$$$ using the card. Among all rebate activities that apply to this purchase, the one with the largest rebate takes effect and its rebate is added to the card balance. If no rebate activity applies, no rebate is added. For every $$$h$$$ from $$$1$$$ to $$$s$$$, determine whether Alisa can make the balance on her card equal to $$$0$$$ after finitely many purchases.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$, and $$$s$$$ ($$$1 \\le n, m, s \\le 125\\,000$$$) — the number of product types, the number of rebate activities, and the maximum initial balance to consider, respectively. The second line contains $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le 125\\,000$$$) — the price of a product of each type. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 125\\,000$$$) — the spending threshold and the rebate of the $$$i$$$-th activity, respectively. It is guaranteed that $$$a_1 \\lt a_2 \\lt \\cdots \\lt a_m$$$ and $$$b_1 \\lt b_2 \\lt \\cdots \\lt b_m$$$.",
+  "output_specification": "Print $$$s$$$ lines. For each $$$i$$$ ($$$1 \\le i \\le s$$$), print \" YES \" if Alisa can make the balance on her card equal to $$$0$$$ when its initial balance is $$$i$$$, and print \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "2 1 15\n4 7\n8 4",
+      "output": "NO\nNO\nNO\nYES\nNO\nNO\nYES\nYES\nNO\nNO\nYES\nYES\nNO\nYES\nYES"
+    },
+    {
+      "input": "5 3 25\n4 8 12 16 20\n6 8\n7 9\n8 10",
+      "output": "NO\nNO\nNO\nYES\nNO\nNO\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

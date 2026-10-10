@@ -1,0 +1,44 @@
+{
+  "id": "2125D",
+  "source": "problemset",
+  "contest_id": 2125,
+  "problem_index": "D",
+  "name": "Segments Covering",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 9899,
+  "problem_url": "https://codeforces.com/problemset/problem/2125/D",
+  "editorial_url": "https://codeforces.com/blog/entry/144998",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a linear strip divided into $$$m$$$ cells, numbered from $$$1$$$ to $$$m$$$ from left to right. You are given $$$n$$$ segments. Each segment is defined by four numbers: $$$l$$$, $$$r$$$, $$$p$$$ and $$$q$$$ — the segment covers cells from $$$l$$$ to $$$r$$$ inclusively and exists with probability $$$\\frac{p}{q}$$$ (independently). Your task is to calculate the probability that each cell is covered by exactly one segment.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$). Then $$$n$$$ lines follow. The $$$i$$$-th of them contains four integers $$$l_i$$$, $$$r_i$$$, $$$p_i$$$ and $$$q_i$$$ ($$$1 \\le l_i \\le r_i \\le m$$$; $$$1 \\le p_i \\lt q_i \\lt 998244353$$$).",
+  "output_specification": "Print a single integer — the probability that each cell is covered by exactly one segment, taken modulo $$$998244353$$$. Formally, the probability can be expressed as an irreducible fraction $$$\\frac{x}{y}$$$. You have to print the value of $$$x \\cdot y^{-1} \\bmod 998244353$$$, where $$$y^{-1}$$$ is an integer such that $$$y \\cdot y^{-1} \\bmod 998244353 = 1$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2 1 3\n3 3 1 2\n1 3 2 3",
+      "output": "610038216"
+    },
+    {
+      "input": "2 3\n1 2 1 2\n2 3 1 2",
+      "output": "0"
+    },
+    {
+      "input": "8 5\n1 3 1 2\n1 5 1 6\n1 4 4 5\n5 5 1 7\n4 5 1 2\n4 5 2 5\n3 3 2 7\n1 2 1 3",
+      "output": "94391813"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

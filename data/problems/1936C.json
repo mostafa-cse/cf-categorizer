@@ -1,0 +1,39 @@
+{
+  "id": "1936C",
+  "source": "problemset",
+  "contest_id": 1936,
+  "problem_index": "C",
+  "name": "Pokémon Arena",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "graphs",
+    "greedy",
+    "implementation",
+    "shortest paths",
+    "sortings"
+  ],
+  "solved_count": 1805,
+  "problem_url": "https://codeforces.com/problemset/problem/1936/C",
+  "editorial_url": "https://codeforces.com/blog/entry/126513",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are at a dueling arena. You also possess $$$n$$$ Pokémons. Initially, only the $$$1$$$-st Pokémon is standing in the arena. Each Pokémon has $$$m$$$ attributes. The $$$j$$$-th attribute of the $$$i$$$-th Pokémon is $$$a_{i,j}$$$. Each Pokémon also has a cost to be hired: the $$$i$$$-th Pokémon's cost is $$$c_i$$$. You want to have the $$$n$$$-th Pokémon stand in the arena. To do that, you can perform the following two types of operations any number of times in any order: Choose three integers $$$i$$$, $$$j$$$, $$$k$$$ ($$$1 \\le i \\le n$$$, $$$1 \\le j \\le m$$$, $$$k \\gt 0$$$), increase $$$a_{i,j}$$$ by $$$k$$$ permanently. The cost of this operation is $$$k$$$. Choose two integers $$$i$$$, $$$j$$$ ($$$1 \\le i \\le n$$$, $$$1 \\le j \\le m$$$) and hire the $$$i$$$-th Pokémon to duel with the current Pokémon in the arena based on the $$$j$$$-th attribute. The $$$i$$$-th Pokémon will win if $$$a_{i,j}$$$ is greater than or equal to the $$$j$$$-th attribute of the current Pokémon in the arena (otherwise, it will lose). After the duel, only the winner will stand in the arena. The cost of this operation is $$$c_i$$$. Find the minimum cost you need to pay to have the $$$n$$$-th Pokémon stand in the arena.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 4 \\cdot 10^5$$$, $$$1 \\le m \\le 2 \\cdot 10^5$$$, $$$2 \\leq n \\cdot m \\leq 4 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le 10^9$$$). The $$$i$$$-th of the following $$$n$$$ lines contains $$$m$$$ integers $$$a_{i,1}, a_{i,2}, \\ldots, a_{i,m}$$$ ($$$1 \\le a_{i,j} \\le 10^9$$$). It is guaranteed that the sum of $$$n \\cdot m$$$ over all test cases does not exceed $$$4 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the minimum cost to make the $$$n$$$-th Pokémon stand in the arena.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n2 3 1\n2 9 9\n6 1 7\n1 2 1\n3 3\n2 3 1\n9 9 9\n6 1 7\n1 2 1\n4 2\n2 8 3 5\n18 24\n17 10\n1 10\n1 1\n6 3\n21412674 3212925 172015806 250849370 306960171 333018900\n950000001 950000001 950000001\n821757276 783362401 760000001\n570000001 700246226 600757652\n380000001 423513575 474035234\n315201473 300580025 287023445\n1 1 1",
+      "output": "2\n6\n17\n1224474550"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:27",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "1153F",
+  "source": "problemset",
+  "contest_id": 1153,
+  "problem_index": "F",
+  "name": "Serval and Bonus Problem",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1024,
+  "problem_url": "https://codeforces.com/problemset/problem/1153/F",
+  "editorial_url": "https://codeforces.com/blog/entry/66539",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Getting closer and closer to a mathematician, Serval becomes a university student on math major in Japari University. On the Calculus class, his teacher taught him how to calculate the expected length of a random subsegment of a given segment. Then he left a bonus problem as homework, with the award of a garage kit from IOI. The bonus is to extend this problem to the general case as follows. You are given a segment with length $$$l$$$. We randomly choose $$$n$$$ segments by choosing two points (maybe with non-integer coordinates) from the given segment equiprobably and the interval between the two points forms a segment. You are given the number of random segments $$$n$$$, and another integer $$$k$$$. The $$$2n$$$ endpoints of the chosen segments split the segment into $$$(2n+1)$$$ intervals. Your task is to calculate the expected total length of those intervals that are covered by at least $$$k$$$ segments of the $$$n$$$ random segments. You should find the answer modulo $$$998244353$$$.",
+  "input_specification": "First line contains three space-separated positive integers $$$n$$$, $$$k$$$ and $$$l$$$ ($$$1\\leq k \\leq n \\leq 2000$$$, $$$1\\leq l\\leq 10^9$$$).",
+  "output_specification": "Output one integer — the expected total length of all the intervals covered by at least $$$k$$$ segments of the $$$n$$$ random segments modulo $$$998244353$$$. Formally, let $$$M = 998244353$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sample_testcases": [
+    {
+      "input": "1 1 1",
+      "output": "332748118"
+    },
+    {
+      "input": "6 2 1",
+      "output": "760234711"
+    },
+    {
+      "input": "7 5 3",
+      "output": "223383352"
+    },
+    {
+      "input": "97 31 9984524",
+      "output": "267137618"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

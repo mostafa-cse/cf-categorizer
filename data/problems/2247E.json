@@ -1,0 +1,36 @@
+{
+  "id": "2247E",
+  "source": "problemset",
+  "contest_id": 2247,
+  "problem_index": "E",
+  "name": "Build a Tree",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "trees",
+    "two pointers"
+  ],
+  "solved_count": 1210,
+  "problem_url": "https://codeforces.com/problemset/problem/2247/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155337",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$n$$$ and $$$k$$$. Construct a tree$$$^{\\text{∗}}$$$ with $$$n$$$ vertices such that $$$\\sum\\limits_{i = 1}^{n} \\operatorname{dist}(i, (i \\bmod n) + 1) = k$$$$$$^{\\text{†}}$$$, or determine that no such tree exists. $$$^{\\text{∗}}$$$A tree is a connected graph without cycles. $$$^{\\text{†}}$$$$$$\\operatorname{dist}(i, j)$$$ is the number of edges on the shortest path from vertex $$$i$$$ to vertex $$$j$$$ in the tree.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le k \\le n^2$$$) — the number of vertices in the tree and the required value of $$$k$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if there is no solution, output $$$-1$$$. Otherwise, output $$$n - 1$$$ lines. Each line should contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$), denoting an edge of the tree. The edges may be output in any order. If there are multiple suitable trees, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 2\n4 6\n5 10\n5 14\n100 8347",
+      "output": "1 2\n1 4\n1 3\n1 2\n3 2\n3 4\n4 1\n5 3\n-1\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "70C",
+  "source": "problemset",
+  "contest_id": 70,
+  "problem_index": "C",
+  "name": "Lucky Tickets",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 665,
+  "problem_url": "https://codeforces.com/problemset/problem/70/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1598",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In Walrusland public transport tickets are characterized by two integers: by the number of the series and by the number of the ticket in the series. Let the series number be represented by a and the ticket number — by b , then a ticket is described by the ordered pair of numbers ( a , b ) . The walruses believe that a ticket is lucky if a * b = rev ( a ) * rev ( b ) . The function rev ( x ) reverses a number written in the decimal system, at that the leading zeroes disappear. For example, rev (12343) = 34321 , rev (1200) = 21 . The Public Transport Management Committee wants to release x series, each containing y tickets, so that at least w lucky tickets were released and the total number of released tickets ( x * y ) were minimum. The series are numbered from 1 to x inclusive. The tickets in each series are numbered from 1 to y inclusive. The Transport Committee cannot release more than max x series and more than max y tickets in one series.",
+  "input_specification": "The first line contains three integers max x , max y , w ( 1 ≤ max x , max y ≤ 10 5 , 1 ≤ w ≤ 10 7 ).",
+  "output_specification": "Print on a single line two space-separated numbers, the x and the y . If there are several possible variants, print any of them. If such x and y do not exist, print a single number - 1 .",
+  "sample_testcases": [
+    {
+      "input": "2 2 1",
+      "output": "1 1"
+    },
+    {
+      "input": "132 10 35",
+      "output": "7 5"
+    },
+    {
+      "input": "5 18 1000",
+      "output": "-1"
+    },
+    {
+      "input": "48 132 235",
+      "output": "22 111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

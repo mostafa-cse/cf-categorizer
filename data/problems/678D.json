@@ -1,0 +1,43 @@
+{
+  "id": "678D",
+  "source": "problemset",
+  "contest_id": 678,
+  "problem_index": "D",
+  "name": "Iterated Linear Function",
+  "rating": 1700,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5587,
+  "problem_url": "https://codeforces.com/problemset/problem/678/D",
+  "editorial_url": "https://codeforces.com/blog/entry/45405",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a linear function f ( x ) = Ax + B . Let's define g (0) ( x ) = x and g ( n ) ( x ) = f ( g ( n - 1) ( x )) for n > 0 . For the given integer values A , B , n and x find the value of g ( n ) ( x ) modulo 10 9 + 7 .",
+  "input_specification": "The only line contains four integers A , B , n and x ( 1 ≤ A , B , x ≤ 10 9 , 1 ≤ n ≤ 10 18 ) — the parameters from the problem statement. Note that the given value n can be too large, so you should use 64 -bit integer type to store it. In C++ you can use the long long integer type and in Java you can use long integer type.",
+  "output_specification": "Print the only integer s — the value g ( n ) ( x ) modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 4 1 1",
+      "output": "7"
+    },
+    {
+      "input": "3 4 2 1",
+      "output": "25"
+    },
+    {
+      "input": "3 4 3 1",
+      "output": "79"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "266. Linear Congruence Equation",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply modular properties, binary exponentiation (a^b mod P in O(log b)), and modular multiplicative inverse using Extended Euclidean Algorithm."
+}

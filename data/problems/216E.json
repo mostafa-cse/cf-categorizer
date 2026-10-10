@@ -1,0 +1,43 @@
+{
+  "id": "216E",
+  "source": "problemset",
+  "contest_id": 216,
+  "problem_index": "E",
+  "name": "Martian Luck",
+  "rating": 2000,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 722,
+  "problem_url": "https://codeforces.com/problemset/problem/216/E",
+  "editorial_url": "https://codeforces.com/blog/entry/5066",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You know that the Martians use a number system with base k . Digit b ( 0 ≤ b < k ) is considered lucky , as the first contact between the Martians and the Earthlings occurred in year b (by Martian chronology). A digital root d ( x ) of number x is a number that consists of a single digit, resulting after cascading summing of all digits of number x . Word \"cascading\" means that if the first summing gives us a number that consists of several digits, then we sum up all digits again, and again, until we get a one digit number. For example, d (3504 7 ) = d ((3 + 5 + 0 + 4) 7 ) = d (15 7 ) = d ((1 + 5) 7 ) = d (6 7 ) = 6 7 . In this sample the calculations are performed in the 7-base notation. If a number's digital root equals b , the Martians also call this number lucky. You have string s , which consists of n digits in the k -base notation system. Your task is to find, how many distinct substrings of the given string are lucky numbers. Leading zeroes are permitted in the numbers. Note that substring s [ i ... j ] of the string s = a 1 a 2 ... a n ( 1 ≤ i ≤ j ≤ n ) is the string a i a i + 1 ... a j . Two substrings s [ i 1 ... j 1 ] and s [ i 2 ... j 2 ] of the string s are different if either i 1 ≠ i 2 or j 1 ≠ j 2 .",
+  "input_specification": "The first line contains three integers k , b and n ( 2 ≤ k ≤ 10 9 , 0 ≤ b < k , 1 ≤ n ≤ 10 5 ). The second line contains string s as a sequence of n integers, representing digits in the k -base notation: the i -th integer equals a i ( 0 ≤ a i < k ) — the i -th digit of string s . The numbers in the lines are space-separated.",
+  "output_specification": "Print a single integer — the number of substrings that are lucky numbers. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin, cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "10 5 6\n3 2 0 5 6 1",
+      "output": "5"
+    },
+    {
+      "input": "7 6 4\n3 5 0 4",
+      "output": "1"
+    },
+    {
+      "input": "257 0 3\n0 0 256",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:15",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

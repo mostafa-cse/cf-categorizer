@@ -1,0 +1,38 @@
+{
+  "id": "1646C",
+  "source": "problemset",
+  "contest_id": 1646,
+  "problem_index": "C",
+  "name": "Factorials and Powers of Two",
+  "rating": 1500,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "dp",
+    "math"
+  ],
+  "solved_count": 21232,
+  "problem_url": "https://codeforces.com/problemset/problem/1646/C",
+  "editorial_url": "https://codeforces.com/blog/entry/100584",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A number is called powerful if it is a power of two or a factorial. In other words, the number $$$m$$$ is powerful if there exists a non-negative integer $$$d$$$ such that $$$m=2^d$$$ or $$$m=d!$$$, where $$$d!=1\\cdot 2\\cdot \\ldots \\cdot d$$$ (in particular, $$$0! = 1$$$). For example $$$1$$$, $$$4$$$, and $$$6$$$ are powerful numbers, because $$$1=1!$$$, $$$4=2^2$$$, and $$$6=3!$$$ but $$$7$$$, $$$10$$$, or $$$18$$$ are not. You are given a positive integer $$$n$$$. Find the minimum number $$$k$$$ such that $$$n$$$ can be represented as the sum of $$$k$$$ distinct powerful numbers, or say that there is no such $$$k$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Description of the test cases follows. A test case consists of only one line, containing one integer $$$n$$$ ($$$1\\le n\\le 10^{12}$$$).",
+  "output_specification": "For each test case print the answer on a separate line. If $$$n$$$ can not be represented as the sum of distinct powerful numbers, print $$$-1$$$. Otherwise, print a single positive integer  — the minimum possible value of $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n7\n11\n240\n17179869184",
+      "output": "2\n3\n4\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

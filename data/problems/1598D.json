@@ -1,0 +1,38 @@
+{
+  "id": "1598D",
+  "source": "problemset",
+  "contest_id": 1598,
+  "problem_index": "D",
+  "name": "Training Session",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "geometry",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 10990,
+  "problem_url": "https://codeforces.com/problemset/problem/1598/D",
+  "editorial_url": "https://codeforces.com/blog/entry/95890",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp is the coach of the Berland State University programming teams. He decided to compose a problemset for a training session for his teams. Monocarp has $$$n$$$ problems that none of his students have seen yet. The $$$i$$$-th problem has a topic $$$a_i$$$ (an integer from $$$1$$$ to $$$n$$$) and a difficulty $$$b_i$$$ (an integer from $$$1$$$ to $$$n$$$). All problems are different, that is, there are no two tasks that have the same topic and difficulty at the same time. Monocarp decided to select exactly $$$3$$$ problems from $$$n$$$ problems for the problemset. The problems should satisfy at least one of two conditions (possibly, both): the topics of all three selected problems are different; the difficulties of all three selected problems are different. Your task is to determine the number of ways to select three problems for the problemset.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 50000$$$) — the number of testcases. The first line of each testcase contains an integer $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$) — the number of problems that Monocarp have. In the $$$i$$$-th of the following $$$n$$$ lines, there are two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le n$$$) — the topic and the difficulty of the $$$i$$$-th problem. It is guaranteed that there are no two problems that have the same topic and difficulty at the same time. The sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "Print the number of ways to select three training problems that meet either of the requirements described in the statement.",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n2 4\n3 4\n2 1\n1 3\n5\n1 5\n2 4\n3 3\n4 2\n5 1",
+      "output": "3\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

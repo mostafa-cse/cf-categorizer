@@ -1,0 +1,43 @@
+{
+  "id": "785E",
+  "source": "problemset",
+  "contest_id": 785,
+  "problem_index": "E",
+  "name": "Anton and Permutation",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "data structures"
+  ],
+  "solved_count": 2320,
+  "problem_url": "https://codeforces.com/problemset/problem/785/E",
+  "editorial_url": "https://codeforces.com/blog/entry/50996",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Anton likes permutations, especially he likes to permute their elements. Note that a permutation of n elements is a sequence of numbers { a 1 , a 2 , ..., a n } , in which every number from 1 to n appears exactly once. One day Anton got a new permutation and started to play with it. He does the following operation q times: he takes two elements of the permutation and swaps these elements. After each operation he asks his friend Vanya, how many inversions there are in the new permutation. The number of inversions in a permutation is the number of distinct pairs ( i , j ) such that 1 ≤ i < j ≤ n and a i > a j . Vanya is tired of answering Anton's silly questions. So he asked you to write a program that would answer these questions instead of him. Initially Anton's permutation was {1, 2, ..., n } , that is a i = i for all i such that 1 ≤ i ≤ n .",
+  "input_specification": "The first line of the input contains two integers n and q (1 ≤ n ≤ 200 000, 1 ≤ q ≤ 50 000) — the length of the permutation and the number of operations that Anton does. Each of the following q lines of the input contains two integers l i and r i (1 ≤ l i , r i ≤ n ) — the indices of elements that Anton swaps during the i -th operation. Note that indices of elements that Anton swaps during the i -th operation can coincide. Elements in the permutation are numbered starting with one.",
+  "output_specification": "Output q lines. The i -th line of the output is the number of inversions in the Anton's permutation after the i -th operation.",
+  "sample_testcases": [
+    {
+      "input": "5 4\n4 5\n2 4\n2 5\n2 2",
+      "output": "1\n4\n3\n3"
+    },
+    {
+      "input": "2 1\n2 1",
+      "output": "1"
+    },
+    {
+      "input": "6 7\n1 4\n3 5\n2 3\n3 3\n3 6\n2 1\n5 1",
+      "output": "5\n6\n7\n7\n10\n11\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

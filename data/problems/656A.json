@@ -1,0 +1,38 @@
+{
+  "id": "656A",
+  "source": "problemset",
+  "contest_id": 656,
+  "problem_index": "A",
+  "name": "Da Vinci Powers",
+  "rating": 1900,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 3875,
+  "problem_url": "https://codeforces.com/problemset/problem/656/A",
+  "editorial_url": "https://codeforces.com/blog/entry/44141",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "",
+  "input_specification": "The input contains a single integer a ( 0 ≤ a ≤ 35 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "8"
+    },
+    {
+      "input": "10",
+      "output": "1024"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

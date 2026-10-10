@@ -1,0 +1,38 @@
+{
+  "id": "50B",
+  "source": "problemset",
+  "contest_id": 50,
+  "problem_index": "B",
+  "name": "Choosing Symbol Pairs",
+  "rating": 1500,
+  "tags": [
+    "strings"
+  ],
+  "solved_count": 6632,
+  "problem_url": "https://codeforces.com/problemset/problem/50/B",
+  "editorial_url": "https://codeforces.com/blog/entry/1006",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a given string S consisting of N symbols. Your task is to find the number of ordered pairs of integers i and j such that 1. 1 ≤ i , j ≤ N 2. S [ i ] = S [ j ] , that is the i -th symbol of string S is equal to the j -th.",
+  "input_specification": "The single input line contains S , consisting of lowercase Latin letters and digits. It is guaranteed that string S in not empty and its length does not exceed 10 5 .",
+  "output_specification": "Print a single number which represents the number of pairs i and j with the needed property. Pairs ( x , y ) and ( y , x ) should be considered different, i.e. the ordered pairs count.",
+  "sample_testcases": [
+    {
+      "input": "great10",
+      "output": "7"
+    },
+    {
+      "input": "aaaaaaaaaa",
+      "output": "100"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:26",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

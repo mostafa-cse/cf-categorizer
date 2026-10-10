@@ -1,0 +1,43 @@
+{
+  "id": "1077E",
+  "source": "problemset",
+  "contest_id": 1077,
+  "problem_index": "E",
+  "name": "Thematic Contests",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 5201,
+  "problem_url": "https://codeforces.com/problemset/problem/1077/E",
+  "editorial_url": "https://codeforces.com/blog/entry/63274",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has prepared $$$n$$$ competitive programming problems. The topic of the $$$i$$$-th problem is $$$a_i$$$, and some problems' topics may coincide. Polycarp has to host several thematic contests. All problems in each contest should have the same topic, and all contests should have pairwise distinct topics . He may not use all the problems. It is possible that there are no contests for some topics. Polycarp wants to host competitions on consecutive days, one contest per day. Polycarp wants to host a set of contests in such a way that: number of problems in each contest is exactly twice as much as in the previous contest (one day ago), the first contest can contain arbitrary number of problems; the total number of problems in all the contests should be maximized. Your task is to calculate the maximum number of problems in the set of thematic contests. Note, that you should not maximize the number of contests.",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of problems Polycarp has prepared. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) where $$$a_i$$$ is the topic of the $$$i$$$-th problem.",
+  "output_specification": "Print one integer — the maximum number of problems in the set of thematic contests.",
+  "sample_testcases": [
+    {
+      "input": "18\n2 1 2 10 2 10 10 2 2 1 10 10 10 10 1 1 10 10",
+      "output": "14"
+    },
+    {
+      "input": "10\n6 6 6 3 6 1000000000 3 3 6 6",
+      "output": "9"
+    },
+    {
+      "input": "3\n1337 1337 1337",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

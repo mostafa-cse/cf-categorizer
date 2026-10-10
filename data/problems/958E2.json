@@ -1,0 +1,45 @@
+{
+  "id": "958E2",
+  "source": "problemset",
+  "contest_id": 958,
+  "problem_index": "E2",
+  "name": "Guard Duty (medium)",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 1229,
+  "problem_url": "https://codeforces.com/problemset/problem/958/E2",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2018-editorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Princess Heidi decided to give orders to all her K Rebel ship commanders in person. Unfortunately, she is currently travelling through hyperspace, and will leave it only at N specific moments t 1 , t 2 , ..., t N . The meetings with commanders must therefore start and stop at those times. Namely, each commander will board her ship at some time t i and disembark at some later time t j . Of course, Heidi needs to meet with all commanders, and no two meetings can be held during the same time. Two commanders cannot even meet at the beginnings/endings of the hyperspace jumps, because too many ships in one position could give out their coordinates to the enemy. Your task is to find minimum time that Princess Heidi has to spend on meetings, with her schedule satisfying the conditions above.",
+  "input_specification": "The first line contains two integers K , N ( 2 ≤ 2 K ≤ N ≤ 500000 , K ≤ 5000 ). The second line contains N distinct integers t 1 , t 2 , ..., t N ( 1 ≤ t i ≤ 10 9 ) representing the times when Heidi leaves hyperspace.",
+  "output_specification": "Output only one integer: the minimum time spent on meetings.",
+  "sample_testcases": [
+    {
+      "input": "2 5\n1 4 6 7 12",
+      "output": "4"
+    },
+    {
+      "input": "3 6\n6 3 4 2 5 1",
+      "output": "3"
+    },
+    {
+      "input": "4 12\n15 7 4 19 3 30 14 1 5 23 17 25",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

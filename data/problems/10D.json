@@ -1,0 +1,38 @@
+{
+  "id": "10D",
+  "source": "problemset",
+  "contest_id": 10,
+  "problem_index": "D",
+  "name": "LCIS",
+  "rating": 2800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 6130,
+  "problem_url": "https://codeforces.com/problemset/problem/10/D",
+  "editorial_url": "https://codeforces.com/blog/entry/298",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This problem differs from one which was on the online contest. The sequence a 1 , a 2 , ..., a n is called increasing, if a i < a i + 1 for i < n . The sequence s 1 , s 2 , ..., s k is called the subsequence of the sequence a 1 , a 2 , ..., a n , if there exist such a set of indexes 1 ≤ i 1 < i 2 < ... < i k ≤ n that a i j = s j . In other words, the sequence s can be derived from the sequence a by crossing out some elements. You are given two sequences of integer numbers. You are to find their longest common increasing subsequence, i.e. an increasing sequence of maximum length that is the subsequence of both sequences.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 500 ) — the length of the first sequence. The second line contains n space-separated integers from the range [0, 10 9 ] — elements of the first sequence. The third line contains an integer m ( 1 ≤ m ≤ 500 ) — the length of the second sequence. The fourth line contains m space-separated integers from the range [0, 10 9 ] — elements of the second sequence.",
+  "output_specification": "In the first line output k — the length of the longest common increasing subsequence. In the second line output the subsequence itself. Separate the elements with a space. If there are several solutions, output any.",
+  "sample_testcases": [
+    {
+      "input": "7\n2 3 1 6 5 4 6\n4\n1 3 5 6",
+      "output": "3\n3 5 6"
+    },
+    {
+      "input": "5\n1 2 0 2 1\n3\n1 0 1",
+      "output": "2\n0 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

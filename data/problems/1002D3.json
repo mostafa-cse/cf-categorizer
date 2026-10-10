@@ -1,0 +1,29 @@
+{
+  "id": "1002D3",
+  "source": "problemset",
+  "contest_id": 1002,
+  "problem_index": "D3",
+  "name": "Oracle for majority function",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 341,
+  "problem_url": "https://codeforces.com/problemset/problem/1002/D3",
+  "editorial_url": "https://assets.codeforces.com/rounds/997-998/main-contest-editorial.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Implement a quantum oracle on 3 qubits which implements a majority function. Majority function on 3-bit vectors is defined as follows: if vector has two or three 1s, and 0 if it has zero or one 1s. For an explanation on how this type of quantum oracles works, see Introduction to quantum oracles . You have to implement an operation which takes the following inputs: an array of 3 qubits x in arbitrary state (input register), a qubit y in arbitrary state (output qubit). The operation doesn't have an output; its \"output\" is the state in which it leaves the qubits. Your code should have the following signature: namespace Solution { open Microsoft.Quantum.Primitive; open Microsoft.Quantum.Canon; operation Solve (x : Qubit[], y : Qubit) : () { body { // your code here } } }",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

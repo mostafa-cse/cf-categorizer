@@ -1,0 +1,50 @@
+{
+  "id": "899E",
+  "source": "problemset",
+  "contest_id": 899,
+  "problem_index": "E",
+  "name": "Segments Removal",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "dsu",
+    "flows",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 3716,
+  "problem_url": "https://codeforces.com/problemset/problem/899/E",
+  "editorial_url": "https://codeforces.com/blog/entry/56392",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has an array of integers of length n . Vasya performs the following operations on the array: on each step he finds the longest segment of consecutive equal integers (the leftmost, if there are several such segments) and removes it. For example, if Vasya's array is [13, 13, 7, 7, 7, 2, 2, 2] , then after one operation it becomes [13, 13, 2, 2, 2] . Compute the number of operations Vasya should make until the array becomes empty, i.e. Vasya removes all elements from it.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 200 000 ) — the length of the array. The second line contains a sequence a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — Vasya's array.",
+  "output_specification": "Print the number of operations Vasya should make to remove all elements from the array.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 5 5 2",
+      "output": "2"
+    },
+    {
+      "input": "5\n6 3 4 1 5",
+      "output": "5"
+    },
+    {
+      "input": "8\n4 4 4 2 2 100 100 100",
+      "output": "3"
+    },
+    {
+      "input": "6\n10 10 50 10 50 50",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

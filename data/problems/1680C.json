@@ -1,0 +1,37 @@
+{
+  "id": "1680C",
+  "source": "problemset",
+  "contest_id": 1680,
+  "problem_index": "C",
+  "name": "Binary String",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "greedy",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 11411,
+  "problem_url": "https://codeforces.com/problemset/problem/1680/C",
+  "editorial_url": "https://codeforces.com/blog/entry/102852",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a string $$$s$$$ consisting of characters 0 and/or 1 . You have to remove several (possibly zero) characters from the beginning of the string, and then several (possibly zero) characters from the end of the string. The string may become empty after the removals . The cost of the removal is the maximum of the following two values: the number of characters 0 left in the string; the number of characters 1 removed from the string. What is the minimum cost of removal you can achieve?",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of one line containing the string $$$s$$$ ($$$1 \\le |s| \\le 2 \\cdot 10^5$$$), consisting of characters 0 and/or 1 . The total length of strings $$$s$$$ in all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the minimum cost of removal you can achieve.",
+  "sample_testcases": [
+    {
+      "input": "5\n101110110\n1001001001001\n0000111111\n00000\n1111",
+      "output": "1\n3\n0\n0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

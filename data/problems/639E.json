@@ -1,0 +1,45 @@
+{
+  "id": "639E",
+  "source": "problemset",
+  "contest_id": 639,
+  "problem_index": "E",
+  "name": "Bear and Paradox",
+  "rating": 2800,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 663,
+  "problem_url": "https://codeforces.com/problemset/problem/639/E",
+  "editorial_url": "https://codeforces.com/blog/entry/44047",
+  "time_limit": "3.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Limak is a big polar bear. He prepared n problems for an algorithmic contest. The i -th problem has initial score p i . Also, testers said that it takes t i minutes to solve the i -th problem. Problems aren't necessarily sorted by difficulty and maybe harder problems have smaller initial score but it's too late to change it — Limak has already announced initial scores for problems. Though it's still possible to adjust the speed of losing points, denoted by c in this statement. Let T denote the total number of minutes needed to solve all problems (so, T = t 1 + t 2 + ... + t n ). The contest will last exactly T minutes. So it's just enough to solve all problems. Points given for solving a problem decrease linearly. Solving the i -th problem after x minutes gives exactly points, where is some real constant that Limak must choose. Let's assume that c is fixed. During a contest a participant chooses some order in which he or she solves problems. There are n ! possible orders and each of them gives some total number of points, not necessarily integer. We say that an order is optimal if it gives the maximum number of points. In other words, the total number of points given by this order is greater or equal than the number of points given by any other order. It's obvious that there is at least one optimal order. However, there may be more than one optimal order. Limak assumes that every participant will properly estimate t i at the very beginning and will choose some optimal order. He also assumes that testers correctly predicted time needed to solve each problem. For two distinct problems i and j such that p i < p j Limak wouldn't be happy to see a participant with strictly more points for problem i than for problem j . He calls such a situation a paradox . It's not hard to prove that there will be no paradox for c = 0 . The situation may be worse for bigger c . What is the maximum real value c (remember that ) for which there is no paradox possible, that is, there will be no paradox for any optimal order of solving problems? It can be proved that the answer (the maximum c as described) always exists.",
+  "input_specification": "The first line contains one integer n ( 2 ≤ n ≤ 150 000 ) — the number of problems. The second line contains n integers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ 10 8 ) — initial scores. The third line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 10 8 ) where t i is the number of minutes needed to solve the i -th problem.",
+  "output_specification": "Print one real value on a single line — the maximum value of c that and there is no optimal order with a paradox. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "3\n4 3 10\n1 1 8",
+      "output": "0.62500000000"
+    },
+    {
+      "input": "4\n7 20 15 10\n7 20 15 10",
+      "output": "0.31901840491"
+    },
+    {
+      "input": "2\n10 20\n10 1",
+      "output": "1.00000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

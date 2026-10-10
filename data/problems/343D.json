@@ -1,0 +1,37 @@
+{
+  "id": "343D",
+  "source": "problemset",
+  "contest_id": 343,
+  "problem_index": "D",
+  "name": "Water Tree",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 7520,
+  "problem_url": "https://codeforces.com/problemset/problem/343/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8860",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mad scientist Mike has constructed a rooted tree, which consists of n vertices. Each vertex is a reservoir which can be either empty or filled with water. The vertices of the tree are numbered from 1 to n with the root at vertex 1. For each vertex, the reservoirs of its children are located below the reservoir of this vertex, and the vertex is connected with each of the children by a pipe through which water can flow downwards. Mike wants to do the following operations with the tree: Fill vertex v with water. Then v and all its children are filled with water. Empty vertex v . Then v and all its ancestors are emptied. Determine whether vertex v is filled with water at the moment. Initially all vertices of the tree are empty. Mike has already compiled a full list of operations that he wants to perform in order. Before experimenting with the tree Mike decided to run the list through a simulation. Help Mike determine what results will he get after performing all the operations.",
+  "input_specification": "The first line of the input contains an integer n ( 1 ≤ n ≤ 500000 ) — the number of vertices in the tree. Each of the following n - 1 lines contains two space-separated numbers a i , b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ) — the edges of the tree. The next line contains a number q ( 1 ≤ q ≤ 500000 ) — the number of operations to perform. Each of the following q lines contains two space-separated numbers c i ( 1 ≤ c i ≤ 3 ), v i ( 1 ≤ v i ≤ n ), where c i is the operation type (according to the numbering given in the statement), and v i is the vertex on which the operation is performed. It is guaranteed that the given graph is a tree.",
+  "output_specification": "For each type 3 operation print 1 on a separate line if the vertex is full, and 0 if the vertex is empty. Print the answers to queries in the order in which the queries are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n5 1\n2 3\n4 2\n12\n1 1\n2 3\n3 1\n3 2\n3 3\n3 4\n1 2\n2 4\n3 1\n3 3\n3 4\n3 5",
+      "output": "0\n0\n0\n1\n0\n1\n0\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:11",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

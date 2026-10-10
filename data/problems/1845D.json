@@ -1,0 +1,41 @@
+{
+  "id": "1845D",
+  "source": "problemset",
+  "contest_id": 1845,
+  "problem_index": "D",
+  "name": "Rating System",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "dsu",
+    "greedy",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 9442,
+  "problem_url": "https://codeforces.com/problemset/problem/1845/D",
+  "editorial_url": "https://codeforces.com/blog/entry/117791",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are developing a rating system for an online game. Every time a player participates in a match, the player's rating changes depending on the results. Initially, the player's rating is $$$0$$$. There are $$$n$$$ matches; after the $$$i$$$-th match, the rating change is equal to $$$a_i$$$ (the rating increases by $$$a_i$$$ if $$$a_i$$$ is positive, or decreases by $$$|a_i|$$$ if it's negative. There are no zeros in the sequence $$$a$$$). The system has an additional rule: for a fixed integer $$$k$$$, if a player's rating has reached the value $$$k$$$, it will never fall below it. Formally, if a player's rating at least $$$k$$$, and a rating change would make it less than $$$k$$$, then the rating will decrease to exactly $$$k$$$ . Your task is to determine the value $$$k$$$ in such a way that the player's rating after all $$$n$$$ matches is the maximum possible (among all integer values of $$$k$$$). If there are multiple possible answers, you can print any of them.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of matches. The second line contains $$$n$$$ integer $$$a_1, a_2, \\dots, a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$; $$$a_i \\ne 0$$$) — the rating change after the $$$i$$$-th match. The sum of $$$n$$$ over all test cases doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer $$$m$$$ ($$$-10^{18} \\le m \\le 10^{18}$$$) — the value of $$$k$$$ such that the rating of the player will be the maximum possible when using this value. It can be shown that at least one of the optimal answers meets the constraint $$$-10^{18} \\le m \\le 10^{18}$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n4\n3 -2 1 2\n3\n-1 -2 -1\n2\n4 2\n7\n5 1 -3 2 -1 -2 2",
+      "output": "3\n0\n25\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

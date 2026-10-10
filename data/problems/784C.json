@@ -1,0 +1,35 @@
+{
+  "id": "784C",
+  "source": "problemset",
+  "contest_id": 784,
+  "problem_index": "C",
+  "name": "INTERCALC",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 782,
+  "problem_url": "https://codeforces.com/problemset/problem/784/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51351",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "DO YOU EXPECT ME TO FIND THIS OUT? WHAT BASE AND/XOR LANGUAGE INCLUDES string? DON'T BYTE OF MORE THAN YOU CAN CHEW YOU CAN ONLY DISTORT THE LARGEST OF MATHEMATICS SO FAR SAYING \"ABRACADABRA\" WITHOUT A MAGIC AND WON'T DO YOU ANY GOOD THE LAST STACK RUPTURES. ALL DIE. OH, THE EMBARRASSMENT! I HAVE NO ARRAY AND I MUST SCREAM ELEMENTS MAY NOT BE STORED IN WEST HYPERSPACE",
+  "input_specification": "The first line of input data contains a single integer n ( 1 ≤ n ≤ 10 ). The second line of input data contains n space-separated integers a i ( 1 ≤ a i ≤ 11 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 5 3 1",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1857G",
+  "source": "problemset",
+  "contest_id": 1857,
+  "problem_index": "G",
+  "name": "Counting Graphs",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "divide and conquer",
+    "dsu",
+    "graphs",
+    "greedy",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 5782,
+  "problem_url": "https://codeforces.com/problemset/problem/1857/G",
+  "editorial_url": "https://codeforces.com/blog/entry/119134",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a tree consisting of $$$n$$$ vertices. A tree is a connected undirected graph without cycles. Each edge of the tree has its weight, $$$w_i$$$. Your task is to count the number of different graphs that satisfy all four conditions: The graph does not have self-loops and multiple edges. The weights on the edges of the graph are integers and do not exceed $$$S$$$. The graph has exactly one minimum spanning tree . The minimum spanning tree of the graph is the given tree. Two graphs are considered different if their sets of edges are different, taking into account the weights of the edges. The answer can be large, output it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$S$$$ ($$$2 \\le n \\le 2 \\cdot 10^5, 1\\le S\\le 10^9$$$) — the number of vertices and the upper bound of the weights. Then follow $$$n-1$$$ lines describing the tree, the $$$i$$$-th line contains three integers $$$u_i$$$, $$$v_i$$$, and $$$w_i$$$ ($$$1\\le u_i,v_i\\le n, u_i \\ne v_i, 1\\le w_i\\le S$$$) — an edge in the tree with weight $$$w_i$$$. It is guaranteed that the sum of $$$n$$$ for all tests does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test, output the number of different graphs that satisfy the conditions, modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 5\n1 2 4\n4 5\n1 2 2\n2 3 4\n3 4 3\n5 6\n1 2 3\n1 3 2\n3 4 6\n3 5 1\n10 200\n1 2 3\n2 3 33\n3 4 200\n1 5 132\n5 6 1\n5 7 29\n7 8 187\n7 9 20\n7 10 4",
+      "output": "1\n8\n80\n650867886"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

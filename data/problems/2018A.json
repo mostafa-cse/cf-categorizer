@@ -1,0 +1,38 @@
+{
+  "id": "2018A",
+  "source": "problemset",
+  "contest_id": 2018,
+  "problem_index": "A",
+  "name": "Cards Partition",
+  "rating": 1600,
+  "tags": [
+    "2-sat",
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 12975,
+  "problem_url": "https://codeforces.com/problemset/problem/2018/A",
+  "editorial_url": "https://codeforces.com/blog/entry/134420",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "DJ Genki vs Gram - Einherjar Joker ⠀ You have some cards. An integer between $$$1$$$ and $$$n$$$ is written on each card: specifically, for each $$$i$$$ from $$$1$$$ to $$$n$$$, you have $$$a_i$$$ cards which have the number $$$i$$$ written on them. There is also a shop which contains unlimited cards of each type. You have $$$k$$$ coins, so you can buy at most $$$k$$$ new cards in total, and the cards you buy can contain any integer between $$$\\mathbf{1}$$$ and $$$\\mathbf{n}$$$ , inclusive. After buying the new cards, you must partition all your cards into decks, according to the following rules: all the decks must have the same size; there are no pairs of cards with the same value in the same deck. Find the maximum possible size of a deck after buying cards and partitioning them optimally.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$, $$$k$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$, $$$0 \\leq k \\leq 10^{16}$$$) — the number of distinct types of cards and the number of coins. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 10^{10}$$$, $$$\\sum a_i \\geq 1$$$) — the number of cards of type $$$i$$$ you have at the beginning, for each $$$1 \\leq i \\leq n$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer: the maximum possible size of a deck if you operate optimally.",
+  "sample_testcases": [
+    {
+      "input": "9\n3 1\n3 2 2\n5 4\n2 6 1 2 4\n2 100\n1410065408 10000000000\n10 8\n7 4 6 6 9 3 10 2 8 7\n2 12\n2 2\n2 70\n0 1\n1 0\n1\n3 0\n2 1 2\n3 1\n0 3 3",
+      "output": "2\n3\n1\n7\n2\n2\n1\n1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1495D",
+  "source": "problemset",
+  "contest_id": 1495,
+  "problem_index": "D",
+  "name": "BFS Trees",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "graphs",
+    "math",
+    "shortest paths",
+    "trees"
+  ],
+  "solved_count": 1632,
+  "problem_url": "https://codeforces.com/problemset/problem/1495/D",
+  "editorial_url": "https://codeforces.com/blog/entry/88533",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "We define a spanning tree of a graph to be a BFS tree rooted at vertex $$$s$$$ if and only if for every node $$$t$$$ the shortest distance between $$$s$$$ and $$$t$$$ in the graph is equal to the shortest distance between $$$s$$$ and $$$t$$$ in the spanning tree. Given a graph, we define $$$f(x,y)$$$ to be the number of spanning trees of that graph that are BFS trees rooted at vertices $$$x$$$ and $$$y$$$ at the same time. You are given an undirected connected graph with $$$n$$$ vertices and $$$m$$$ edges. Calculate $$$f(i,j)$$$ for all $$$i$$$, $$$j$$$ by modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$m$$$ ($$$1 \\le n \\le 400$$$, $$$0 \\le m \\le 600$$$) — the number of vertices and the number of edges in the graph. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$a_i$$$, $$$b_i$$$ ($$$1 \\leq a_i, b_i \\leq n$$$, $$$a_i \\lt b_i$$$), representing an edge connecting $$$a_i$$$ and $$$b_i$$$. It is guaranteed that all edges are distinct and the graph is connected.",
+  "output_specification": "Print $$$n$$$ lines, each consisting of $$$n$$$ integers. The integer printed in the row $$$i$$$ and the column $$$j$$$ should be $$$f(i,j) \\bmod 998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n1 2\n2 3\n3 4\n1 4",
+      "output": "2 1 0 1\n1 2 1 0\n0 1 2 1\n1 0 1 2"
+    },
+    {
+      "input": "8 9\n1 2\n1 3\n1 4\n2 7\n3 5\n3 6\n4 8\n2 3\n3 4",
+      "output": "1 0 0 0 0 0 0 0\n0 2 0 0 0 0 2 0\n0 0 1 0 1 1 0 0\n0 0 0 2 0 0 0 2\n0 0 1 0 1 1 0 0\n0 0 1 0 1 1 0 0\n0 2 0 0 0 0 2 0\n0 0 0 2 0 0 0 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1207E",
+  "source": "problemset",
+  "contest_id": 1207,
+  "problem_index": "E",
+  "name": "XOR Guessing",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 6836,
+  "problem_url": "https://codeforces.com/problemset/problem/1207/E",
+  "editorial_url": "https://codeforces.com/blog/entry/69314",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Remember to flush your output while communicating with the testing program. You may use fflush(stdout) in C++, system.out.flush() in Java, stdout.flush() in Python or flush(output) in Pascal to flush the output. If you use some other programming language, consult its documentation. You may also refer to the guide on interactive problems: https://codeforces.com/blog/entry/45307 . The jury picked an integer $$$x$$$ not less than $$$0$$$ and not greater than $$$2^{14} - 1$$$. You have to guess this integer. To do so, you may ask no more than $$$2$$$ queries. Each query should consist of $$$100$$$ integer numbers $$$a_1$$$, $$$a_2$$$, ..., $$$a_{100}$$$ (each integer should be not less than $$$0$$$ and not greater than $$$2^{14} - 1$$$). In response to your query, the jury will pick one integer $$$i$$$ ($$$1 \\le i \\le 100$$$) and tell you the value of $$$a_i \\oplus x$$$ (the bitwise XOR of $$$a_i$$$ and $$$x$$$). There is an additional constraint on the queries: all $$$200$$$ integers you use in the queries should be distinct. It is guaranteed that the value of $$$x$$$ is fixed beforehand in each test, but the choice of $$$i$$$ in every query may depend on the integers you send.",
+  "input_specification": "",
+  "output_specification": "To give the answer, your program should print one line $$$!$$$ $$$x$$$ with a line break in the end . After that, it should flush the output and terminate gracefully.",
+  "sample_testcases": [
+    {
+      "input": "0\n32",
+      "output": "? 3 5 6\n? 32 24 37\n! 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

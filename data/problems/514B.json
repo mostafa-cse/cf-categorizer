@@ -1,0 +1,42 @@
+{
+  "id": "514B",
+  "source": "problemset",
+  "contest_id": 514,
+  "problem_index": "B",
+  "name": "Han Solo and Lazer Gun",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "data structures",
+    "geometry",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 22991,
+  "problem_url": "https://codeforces.com/problemset/problem/514/B",
+  "editorial_url": "https://codeforces.com/blog/entry/16398",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n Imperial stormtroopers on the field. The battle field is a plane with Cartesian coordinate system. Each stormtrooper is associated with his coordinates ( x , y ) on this plane. Han Solo has the newest duplex lazer gun to fight these stormtroopers. It is situated at the point ( x 0 , y 0 ) . In one shot it can can destroy all the stormtroopers, situated on some line that crosses point ( x 0 , y 0 ) . Your task is to determine what minimum number of shots Han Solo needs to defeat all the stormtroopers. The gun is the newest invention, it shoots very quickly and even after a very large number of shots the stormtroopers don't have enough time to realize what's happening and change their location.",
+  "input_specification": "The first line contains three integers n , x 0 и y 0 ( 1 ≤ n ≤ 1000 , - 10 4 ≤ x 0 , y 0 ≤ 10 4 ) — the number of stormtroopers on the battle field and the coordinates of your gun. Next n lines contain two integers each x i , y i ( - 10 4 ≤ x i , y i ≤ 10 4 ) — the coordinates of the stormtroopers on the battlefield. It is guaranteed that no stormtrooper stands at the same point with the gun. Multiple stormtroopers can stand at the same point.",
+  "output_specification": "Print a single integer — the minimum number of shots Han Solo needs to destroy all the stormtroopers.",
+  "sample_testcases": [
+    {
+      "input": "4 0 0\n1 1\n2 2\n2 0\n-1 -1",
+      "output": "2"
+    },
+    {
+      "input": "2 1 2\n1 1\n1 0",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

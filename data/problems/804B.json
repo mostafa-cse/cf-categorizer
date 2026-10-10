@@ -1,0 +1,41 @@
+{
+  "id": "804B",
+  "source": "problemset",
+  "contest_id": 804,
+  "problem_index": "B",
+  "name": "Minimum number of steps",
+  "rating": 1400,
+  "tags": [
+    "combinatorics",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 10332,
+  "problem_url": "https://codeforces.com/problemset/problem/804/B",
+  "editorial_url": "https://codeforces.com/blog/entry/51846",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "We have a string of letters ' a ' and ' b '. We want to perform some operations on it. On each step we choose one of substrings \" ab \" in the string and replace it with the string \" bba \". If we have no \" ab \" as a substring, our job is done. Print the minimum number of steps we should perform to make our job done modulo 10 9 + 7 . The string \" ab \" appears as a substring if there is a letter ' b ' right after the letter ' a ' somewhere in the string.",
+  "input_specification": "The first line contains the initial string consisting of letters ' a ' and ' b ' only with length from 1 to 10 6 .",
+  "output_specification": "Print the minimum number of steps modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "ab",
+      "output": "1"
+    },
+    {
+      "input": "aab",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

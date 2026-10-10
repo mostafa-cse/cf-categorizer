@@ -1,0 +1,40 @@
+{
+  "id": "900C",
+  "source": "problemset",
+  "contest_id": 900,
+  "problem_index": "C",
+  "name": "Remove Extra One",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 5120,
+  "problem_url": "https://codeforces.com/problemset/problem/900/C",
+  "editorial_url": "https://codeforces.com/blog/entry/56294",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation p of length n . Remove one element from permutation to make the number of records the maximum possible. We remind that in a sequence of numbers a 1 , a 2 , ..., a k the element a i is a record if for every integer j ( 1 ≤ j < i ) the following holds: a j < a i .",
+  "input_specification": "The first line contains the only integer n ( 1 ≤ n ≤ 10 5 ) — the length of the permutation. The second line contains n integers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ n ) — the permutation. All the integers are distinct.",
+  "output_specification": "Print the only integer — the element that should be removed to make the number of records the maximum possible. If there are multiple such elements, print the smallest one.",
+  "sample_testcases": [
+    {
+      "input": "1\n1",
+      "output": "1"
+    },
+    {
+      "input": "5\n5 1 2 3 4",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

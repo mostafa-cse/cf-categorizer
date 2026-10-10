@@ -1,0 +1,40 @@
+{
+  "id": "188H",
+  "source": "problemset",
+  "contest_id": 188,
+  "problem_index": "H",
+  "name": "Stack",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "expression parsing",
+    "implementation"
+  ],
+  "solved_count": 764,
+  "problem_url": "https://codeforces.com/problemset/problem/188/H",
+  "editorial_url": "https://codeforces.com/blog/entry/4633",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In this problem we'll use a stack which supports two types of operations: Push a given number on the stack. Pop two numbers from the stack, perform a given operation (addition or multiplication) on them and push the result on the stack. You are given a string which describes the sequence of operations to be performed on the stack. i -th character corresponds to i -th operation: If i -th character is a digit, push the corresponding number on the stack. If i -th character is « + » or « * », perform the corresponding operation. Initially the stack is empty. Output the topmost number on the stack after executing all given operations.",
+  "input_specification": "The only line of input contains a string of operations, consisting of characters « + », « * » and digits ( 0..9 ). The length of the string will be between 1 and 20 characters, inclusive. The given sequence of operations is guaranteed to be correct, i.e. the stack will have at least two elements before every math operation. The numbers on the stack will never exceed 10 6 .",
+  "output_specification": "Output a single number — the topmost element of the stack after performing all given operations.",
+  "sample_testcases": [
+    {
+      "input": "12+3*66*+",
+      "output": "45"
+    },
+    {
+      "input": "149",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2249B",
+  "source": "problemset",
+  "contest_id": 2249,
+  "problem_index": "B",
+  "name": "Permutation Cuts",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 4639,
+  "problem_url": "https://codeforces.com/problemset/problem/2249/B",
+  "editorial_url": "https://codeforces.com/blog/entry/155516",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$ and an array $$$a$$$ of length $$$n-1$$$. For a permutation$$$^{\\text{∗}}$$$ $$$p$$$ of length $$$n$$$, define $$$$$$ v_i=\\min\\left(\\max_{1\\le j\\le i}p_j, \\max_{i+1\\le j\\le n}p_j\\right), $$$$$$ where $$$1\\le i\\le n-1$$$. In other words, cut the permutation between positions $$$i$$$ and $$$i+1$$$, take the maximum element on each side, and let $$$v_i$$$ be the smaller of these two values. Your task is to count the number of permutations $$$p$$$ of length $$$n$$$ such that $$$v_i=a_i$$$ for each $$$1\\le i\\le n-1$$$. Output the answer modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$2\\le n\\le 10^6$$$) — the length of $$$p$$$. The second line contains $$$n-1$$$ integers $$$a_1,a_2,\\ldots,a_{n-1}$$$ ($$$1\\le a_i\\le n$$$) — the elements of $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output one integer — the number of suitable permutations, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "11\n2\n1\n3\n2 2\n3\n1 1\n4\n2 3 2\n5\n3 3 4 2\n2\n2\n3\n1 2\n4\n3 3 3\n5\n4 4 4 4\n4\n2 1 2\n6\n3 3 5 5 5",
+      "output": "2\n2\n0\n0\n2\n0\n2\n4\n12\n0\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

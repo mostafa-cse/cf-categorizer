@@ -1,0 +1,38 @@
+{
+  "id": "316C1",
+  "source": "problemset",
+  "contest_id": 316,
+  "problem_index": "C1",
+  "name": "Tidying Up",
+  "rating": 2200,
+  "tags": [
+    "flows"
+  ],
+  "solved_count": 618,
+  "problem_url": "https://codeforces.com/problemset/problem/316/C1",
+  "editorial_url": "https://codeforces.com/blog/entry/7890",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Smart Beaver is careful about his appearance and pays special attention to shoes so he has a huge number of pairs of shoes from the most famous brands of the forest. He's trying to handle his shoes carefully so that each pair stood side by side. But by the end of the week because of his very active lifestyle in his dressing room becomes a mess. Smart Beaver from ABBYY is not only the brightest beaver in the area, but he also is the most domestically oriented. For example, on Mondays the Smart Beaver cleans everything in his home. It's Monday morning. Smart Beaver does not want to spend the whole day cleaning, besides, there is much in to do and it’s the gym day, so he wants to clean up as soon as possible. Now the floors are washed, the dust is wiped off — it’s time to clean up in the dressing room. But as soon as the Smart Beaver entered the dressing room, all plans for the day were suddenly destroyed: chaos reigned there and it seemed impossible to handle, even in a week. Give our hero some hope: tell him what is the minimum number of shoes need to change the position to make the dressing room neat. The dressing room is rectangular and is divided into n × m equal squares, each square contains exactly one shoe. Each pair of shoes has a unique number that is integer from 1 to , more formally, a square with coordinates ( i , j ) contains an integer number of the pair which is lying on it. The Smart Beaver believes that the dressing room is neat only when each pair of sneakers lies together. We assume that the pair of sneakers in squares ( i 1 , j 1 ) and ( i 2 , j 2 ) lies together if | i 1 - i 2 | + | j 1 - j 2 | = 1 .",
+  "input_specification": "The first line contains two space-separated integers n and m . They correspond to the dressing room size. Next n lines contain m space-separated integers each. Those numbers describe the dressing room. Each number corresponds to a snicker. It is guaranteed that: n · m is even. All numbers, corresponding to the numbers of pairs of shoes in the dressing room, will lie between 1 and . Each number from 1 to will occur exactly twice. The input limits for scoring 30 points are (subproblem C1): 2 ≤ n , m ≤ 8 . The input limits for scoring 100 points are (subproblems C1+C2): 2 ≤ n , m ≤ 80 .",
+  "output_specification": "Print exactly one integer — the minimum number of the sneakers that need to change their location.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 1 2\n2 3 3",
+      "output": "2"
+    },
+    {
+      "input": "3 4\n1 3 2 6\n2 1 5 6\n4 4 5 3",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:29",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

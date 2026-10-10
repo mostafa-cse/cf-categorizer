@@ -1,0 +1,53 @@
+{
+  "id": "1975G",
+  "source": "problemset",
+  "contest_id": 1975,
+  "problem_index": "G",
+  "name": "Zimpha Fan Club",
+  "rating": 3000,
+  "tags": [
+    "fft",
+    "greedy",
+    "math",
+    "strings"
+  ],
+  "solved_count": 364,
+  "problem_url": "https://codeforces.com/problemset/problem/1975/G",
+  "editorial_url": "https://codeforces.com/blog/entry/129801",
+  "time_limit": "12 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "One day, Zimpha casually came up with a problem. As a member of \"Zimpha fan club\", you decided to solve that problem. You are given two strings $$$s$$$ and $$$t$$$ of length $$$n$$$ and $$$m$$$, respectively. Both strings only consist of lowercase English letters, - and * . You need to replace all occurrences of * and - , observing the following rules: For each - , you must replace it with any lowercase English letter. For each * , you must replace it with a string of any (possibly, zero) length which only consists of lowercase English letters. Note that you can replace two different instances of - with different characters. You can also replace each two different instances of * with different strings. Suppose $$$s$$$ and $$$t$$$ have been transformed into $$$s'$$$ and $$$t'$$$. Now you're wondering if there's a replacement that makes $$$s'=t'$$$.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 2 \\cdot 10^6$$$) — the length of the strings $$$s$$$ and $$$t$$$, respectively. The second line contains the string $$$s$$$ of length $$$n$$$. It is guaranteed that $$$s$$$ only consists of lowercase English letters, - and * . The third line contains the string $$$t$$$ of length $$$m$$$. It is guaranteed that $$$t$$$ only consists of lowercase English letters, - and * .",
+  "output_specification": "For each test case, output \" Yes \" if there is a replacement that makes $$$s'=t'$$$, and output \" No \" otherwise. You can output \" Yes \" and \" No \" in any case (for example, strings \" yEs \", \" yes \", \" Yes \" and \" YES \" will be recognized as a positive response).",
+  "sample_testcases": [
+    {
+      "input": "10 10\njustmonika\nj-stsayori",
+      "output": "No"
+    },
+    {
+      "input": "7 8\nttk-wxx\n*tt-l-xx",
+      "output": "Yes"
+    },
+    {
+      "input": "13 11\nasoulwangziji\n-soulg*z-y-",
+      "output": "No"
+    },
+    {
+      "input": "7 3\nabc*cba\na*c",
+      "output": "No"
+    },
+    {
+      "input": "20 18\nbulijiojio-dibuliduo\n*li*ji-*ox*i*-du*-",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:10",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

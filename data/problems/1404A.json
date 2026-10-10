@@ -1,0 +1,35 @@
+{
+  "id": "1404A",
+  "source": "problemset",
+  "contest_id": 1404,
+  "problem_index": "A",
+  "name": "Balanced Bitstring",
+  "rating": 1500,
+  "tags": [
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 20608,
+  "problem_url": "https://codeforces.com/problemset/problem/1404/A",
+  "editorial_url": "https://codeforces.com/blog/entry/82366",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A bitstring is a string consisting only of the characters 0 and 1 . A bitstring is called $$$k$$$- balanced if every substring of size $$$k$$$ of this bitstring has an equal amount of 0 and 1 characters ($$$\\frac{k}{2}$$$ of each). You are given an integer $$$k$$$ and a string $$$s$$$ which is composed only of characters 0 , 1 , and ? . You need to determine whether you can make a $$$k$$$-balanced bitstring by replacing every ? characters in $$$s$$$ with either 0 or 1 . A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le k \\le n \\le 3 \\cdot 10^5$$$, $$$k$$$ is even)  — the length of the string and the parameter for a balanced bitstring. The next line contains the string $$$s$$$ ($$$|s| = n$$$). It is given that $$$s$$$ consists of only 0 , 1 , and ? . It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print YES if we can replace every ? in $$$s$$$ with 0 or 1 such that the resulting bitstring is $$$k$$$-balanced, or NO if it is not possible.",
+  "sample_testcases": [
+    {
+      "input": "9\n6 4\n100110\n3 2\n1?1\n3 2\n1?0\n4 4\n????\n7 4\n1?0??1?\n10 10\n11??11??11\n4 2\n1??1\n4 4\n?0?0\n6 2\n????00",
+      "output": "YES\nYES\nNO\nYES\nYES\nNO\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

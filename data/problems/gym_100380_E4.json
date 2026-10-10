@@ -1,0 +1,21 @@
+{
+  "id": "gym_100380_E4",
+  "source": "gym",
+  "contest_id": 100380,
+  "problem_index": "E4",
+  "name": "Roots (subtask 4)",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100380/problem/E4",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:30:34",
+  "updated_at": "2026-10-10 06:30:34"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "gym_100438_F",
+  "source": "gym",
+  "contest_id": 100438,
+  "problem_index": "F",
+  "name": "Sentry Robots",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100438/problem/F",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:30:41",
+  "updated_at": "2026-10-10 06:30:41"
+}

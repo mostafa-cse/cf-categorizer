@@ -1,0 +1,49 @@
+{
+  "id": "1253E",
+  "source": "problemset",
+  "contest_id": 1253,
+  "problem_index": "E",
+  "name": "Antenna Coverage",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3207,
+  "problem_url": "https://codeforces.com/problemset/problem/1253/E",
+  "editorial_url": "https://codeforces.com/blog/entry/71489?locale=en",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The mayor of the Central Town wants to modernize Central Street, represented in this problem by the $$$(Ox)$$$ axis. On this street, there are $$$n$$$ antennas, numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th antenna lies on the position $$$x_i$$$ and has an initial scope of $$$s_i$$$: it covers all integer positions inside the interval $$$[x_i - s_i; x_i + s_i]$$$. It is possible to increment the scope of any antenna by $$$1$$$, this operation costs $$$1$$$ coin. We can do this operation as much as we want (multiple times on the same antenna if we want). To modernize the street, we need to make all integer positions from $$$1$$$ to $$$m$$$ inclusive covered by at least one antenna. Note that it is authorized to cover positions outside $$$[1; m]$$$, even if it's not required. What is the minimum amount of coins needed to achieve this modernization?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 80$$$ and $$$n \\le m \\le 100\\ 000$$$). The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$x_i$$$ and $$$s_i$$$ ($$$1 \\le x_i \\le m$$$ and $$$0 \\le s_i \\le m$$$). On each position, there is at most one antenna (values $$$x_i$$$ are pairwise distinct).",
+  "output_specification": "You have to output a single integer: the minimum amount of coins required to make all integer positions from $$$1$$$ to $$$m$$$ inclusive covered by at least one antenna.",
+  "sample_testcases": [
+    {
+      "input": "3 595\n43 2\n300 4\n554 10",
+      "output": "281"
+    },
+    {
+      "input": "1 1\n1 1",
+      "output": "0"
+    },
+    {
+      "input": "2 50\n20 0\n3 1",
+      "output": "30"
+    },
+    {
+      "input": "5 240\n13 0\n50 25\n60 5\n155 70\n165 70",
+      "output": "26"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

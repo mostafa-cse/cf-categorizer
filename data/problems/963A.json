@@ -1,0 +1,39 @@
+{
+  "id": "963A",
+  "source": "problemset",
+  "contest_id": 963,
+  "problem_index": "A",
+  "name": "Alternating Sum",
+  "rating": 1800,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3697,
+  "problem_url": "https://codeforces.com/problemset/problem/963/A",
+  "editorial_url": "https://codeforces.com/blog/entry/58991",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$a$$$ and $$$b$$$. Moreover, you are given a sequence $$$s_0, s_1, \\dots, s_{n}$$$. All values in $$$s$$$ are integers $$$1$$$ or $$$-1$$$. It's known that sequence is $$$k$$$-periodic and $$$k$$$ divides $$$n+1$$$. In other words, for each $$$k \\leq i \\leq n$$$ it's satisfied that $$$s_{i} = s_{i - k}$$$. Find out the non-negative remainder of division of $$$\\sum \\limits_{i=0}^{n} s_{i} a^{n - i} b^{i}$$$ by $$$10^{9} + 9$$$. Note that the modulo is unusual!",
+  "input_specification": "The first line contains four integers $$$n, a, b$$$ and $$$k$$$ $$$(1 \\leq n \\leq 10^{9}, 1 \\leq a, b \\leq 10^{9}, 1 \\leq k \\leq 10^{5})$$$. The second line contains a sequence of length $$$k$$$ consisting of characters ' + ' and ' - '. If the $$$i$$$-th character (0-indexed) is ' + ', then $$$s_{i} = 1$$$, otherwise $$$s_{i} = -1$$$. Note that only the first $$$k$$$ members of the sequence are given, the rest can be obtained using the periodicity property.",
+  "output_specification": "Output a single integer — value of given expression modulo $$$10^{9} + 9$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 2 3 3\n+-+",
+      "output": "7"
+    },
+    {
+      "input": "4 1 5 1\n-",
+      "output": "999999228"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "266. Linear Congruence Equation",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply modular properties, binary exponentiation (a^b mod P in O(log b)), and modular multiplicative inverse using Extended Euclidean Algorithm."
+}

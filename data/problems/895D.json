@@ -1,0 +1,44 @@
+{
+  "id": "895D",
+  "source": "problemset",
+  "contest_id": 895,
+  "problem_index": "D",
+  "name": "String Mark",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "math",
+    "strings"
+  ],
+  "solved_count": 1296,
+  "problem_url": "https://codeforces.com/problemset/problem/895/D",
+  "editorial_url": "https://codeforces.com/blog/entry/56028",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "At the Byteland State University marks are strings of the same length. Mark x is considered better than y if string y is lexicographically smaller than x . Recently at the BSU was an important test work on which Vasya recived the mark a . It is very hard for the teacher to remember the exact mark of every student, but he knows the mark b , such that every student recieved mark strictly smaller than b . Vasya isn't satisfied with his mark so he decided to improve it. He can swap characters in the string corresponding to his mark as many times as he like. Now he want to know only the number of different ways to improve his mark so that his teacher didn't notice something suspicious. More formally: you are given two strings a , b of the same length and you need to figure out the number of different strings c such that: 1) c can be obtained from a by swapping some characters, in other words c is a permutation of a . 2) String a is lexicographically smaller than c . 3) String c is lexicographically smaller than b . For two strings x and y of the same length it is true that x is lexicographically smaller than y if there exists such i , that x 1 = y 1 , x 2 = y 2 , ..., x i - 1 = y i - 1 , x i < y i . Since the answer can be very large, you need to find answer modulo 10 9 + 7 .",
+  "input_specification": "First line contains string a , second line contains string b . Strings a , b consist of lowercase English letters. Their lengths are equal and don't exceed 10 6 . It is guaranteed that a is lexicographically smaller than b .",
+  "output_specification": "Print one integer  — the number of different strings satisfying the condition of the problem modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "abc\nddd",
+      "output": "5"
+    },
+    {
+      "input": "abcdef\nabcdeg",
+      "output": "0"
+    },
+    {
+      "input": "abacaba\nubuduba",
+      "output": "64"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

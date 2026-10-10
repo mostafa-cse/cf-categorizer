@@ -1,0 +1,43 @@
+{
+  "id": "665F",
+  "source": "problemset",
+  "contest_id": 665,
+  "problem_index": "F",
+  "name": "Four Divisors",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "dp",
+    "math",
+    "number theory",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 847,
+  "problem_url": "https://codeforces.com/problemset/problem/665/F",
+  "editorial_url": "https://codeforces.com/blog/entry/44466",
+  "time_limit": "10 seconds",
+  "memory_limit": "768 megabytes",
+  "description": "If an integer a is divisible by another integer b , then b is called the divisor of a . For example: 12 has positive 6 divisors. They are 1 , 2 , 3 , 4 , 6 and 12 . Let’s define a function D ( n ) — number of integers between 1 and n (inclusive) which has exactly four positive divisors. Between 1 and 10 only the integers 6 , 8 and 10 has exactly four positive divisors. So, D (10) = 3 . You are given an integer n . You have to calculate D ( n ) .",
+  "input_specification": "The only line contains integer n ( 1 ≤ n ≤ 10 11 ) — the parameter from the problem statement.",
+  "output_specification": "Print the only integer c — the number of integers between 1 and n with exactly four divisors.",
+  "sample_testcases": [
+    {
+      "input": "10",
+      "output": "3"
+    },
+    {
+      "input": "20",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

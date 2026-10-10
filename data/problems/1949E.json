@@ -1,0 +1,43 @@
+{
+  "id": "1949E",
+  "source": "problemset",
+  "contest_id": 1949,
+  "problem_index": "E",
+  "name": "Damage per Second",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "math"
+  ],
+  "solved_count": 155,
+  "problem_url": "https://codeforces.com/problemset/problem/1949/E",
+  "editorial_url": "https://codeforces.com/blog/entry/127514",
+  "time_limit": "5 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You just created a new character in your favourite role-playing game and now have to decide how to skill him. The two skill attributes to be chosen are: damage per hit and hits per second . Damage per hit is the amount of damage you deal with a single hit, while hits per second is the number of hits you can make in one second. Initially, both skill attributes are set at $$$0$$$. You have $$$k$$$ skill points to distribute as you want; in other words, you can choose the values of the two skills so that they are positive integers with sum at most $$$k$$$. The tutorial of the game (the boring part you want to finish as soon as possible) consists of $$$n$$$ monsters to be killed one after the other. The $$$i$$$-th monster has $$$h_i$$$ health points, i.e., it dies after you have inflicted at least $$$h_i$$$ damage. How can you assign the two skill attributes to minimize the time necessary to kill all the $$$n$$$ monsters?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1\\leq n\\leq200\\,000$$$, $$$2\\leq k\\leq200\\,000$$$) — the number of enemies and the number of skill points. The second line contains $$$n$$$ integers $$$h_i$$$ ($$$1\\leq h_i\\leq10^{13}$$$) — the health of the $$$i$$$th enemy.",
+  "output_specification": "Print two positive integers $$$x$$$ and $$$y$$$ ($$$1\\le x, y$$$ and $$$x+y\\le k$$$) — the number of skill points you want to invest in damage per hit and hits per second. If there are multiple optimal solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "1 7\n14",
+      "output": "3 4"
+    },
+    {
+      "input": "4 9\n1 2 3 4",
+      "output": "4 5"
+    },
+    {
+      "input": "5 13\n3 4 5 6 7",
+      "output": "7 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:21",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

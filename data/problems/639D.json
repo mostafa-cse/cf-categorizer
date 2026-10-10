@@ -1,0 +1,45 @@
+{
+  "id": "639D",
+  "source": "problemset",
+  "contest_id": 639,
+  "problem_index": "D",
+  "name": "Bear and Contribution",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 1108,
+  "problem_url": "https://codeforces.com/problemset/problem/639/D",
+  "editorial_url": "https://codeforces.com/blog/entry/44047",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Codeforces is a wonderful platform and one its feature shows how much someone contributes to the community. Every registered user has contribution — an integer number, not necessarily positive. There are n registered users and the i -th of them has contribution t i . Limak is a little polar bear and he's new into competitive programming. He doesn't even have an account in Codeforces but he is able to upvote existing blogs and comments. We assume that every registered user has infinitely many blogs and comments. Limak can spend b minutes to read one blog and upvote it. Author's contribution will be increased by 5 . Limak can spend c minutes to read one comment and upvote it. Author's contribution will be increased by 1 . Note that it's possible that Limak reads blogs faster than comments. Limak likes ties. He thinks it would be awesome to see a tie between at least k registered users. To make it happen he is going to spend some time on reading and upvoting. After that, there should exist an integer value x that at least k registered users have contribution exactly x . How much time does Limak need to achieve his goal?",
+  "input_specification": "The first line contains four integers n , k , b and c ( 2 ≤ k ≤ n ≤ 200 000, 1 ≤ b , c ≤ 1000 ) — the number of registered users, the required minimum number of users with the same contribution, time needed to read and upvote a blog, and time needed to read and upvote a comment, respectively. The second line contains n integers t 1 , t 2 , ..., t n ( | t i | ≤ 10 9 ) where t i denotes contribution of the i -th registered user.",
+  "output_specification": "Print the minimum number of minutes Limak will spend to get a tie between at least k registered users.",
+  "sample_testcases": [
+    {
+      "input": "4 3 100 30\n12 2 6 1",
+      "output": "220"
+    },
+    {
+      "input": "4 3 30 100\n12 2 6 1",
+      "output": "190"
+    },
+    {
+      "input": "6 2 987 789\n-8 42 -4 -65 -8 -8",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

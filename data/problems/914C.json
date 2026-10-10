@@ -1,0 +1,40 @@
+{
+  "id": "914C",
+  "source": "problemset",
+  "contest_id": 914,
+  "problem_index": "C",
+  "name": "Travelling Salesman and Special Numbers",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 4479,
+  "problem_url": "https://codeforces.com/problemset/problem/914/C",
+  "editorial_url": "https://codeforces.com/blog/entry/57250",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The Travelling Salesman spends a lot of time travelling so he tends to get bored. To pass time, he likes to perform operations on numbers. One such operation is to take a positive integer x and reduce it to the number of bits set to 1 in the binary representation of x . For example for number 13 it's true that 13 10 = 1101 2 , so it has 3 bits set and 13 will be reduced to 3 in one operation. He calls a number special if the minimum number of operations to reduce it to 1 is k . He wants to find out how many special numbers exist which are not greater than n . Please help the Travelling Salesman, as he is about to reach his destination! Since the answer can be large, output it modulo 10 9 + 7 .",
+  "input_specification": "The first line contains integer n ( 1 ≤ n < 2 1000 ). The second line contains integer k ( 0 ≤ k ≤ 1000 ). Note that n is given in its binary representation without any leading zeros.",
+  "output_specification": "Output a single integer — the number of special numbers not greater than n , modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "110\n2",
+      "output": "3"
+    },
+    {
+      "input": "111111011\n2",
+      "output": "169"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

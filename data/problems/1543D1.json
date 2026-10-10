@@ -1,0 +1,37 @@
+{
+  "id": "1543D1",
+  "source": "problemset",
+  "contest_id": 1543,
+  "problem_index": "D1",
+  "name": "RPD and Rap Sheet (Easy Version)",
+  "rating": 1700,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 8086,
+  "problem_url": "https://codeforces.com/problemset/problem/1543/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/92582",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference is that here $$$k=2$$$. You can make hacks only if both the versions of the problem are solved. This is an interactive problem. Every decimal number has a base $$$k$$$ equivalent. The individual digits of a base $$$k$$$ number are called $$$k$$$-its. Let's define the $$$k$$$-itwise XOR of two $$$k$$$-its $$$a$$$ and $$$b$$$ as $$$(a + b)\\bmod k$$$. The $$$k$$$-itwise XOR of two base $$$k$$$ numbers is equal to the new number formed by taking the $$$k$$$-itwise XOR of their corresponding $$$k$$$-its. The $$$k$$$-itwise XOR of two decimal numbers $$$a$$$ and $$$b$$$ is denoted by $$$a\\oplus_{k} b$$$ and is equal to the decimal representation of the $$$k$$$-itwise XOR of the base $$$k$$$ representations of $$$a$$$ and $$$b$$$. All further numbers used in the statement below are in decimal unless specified. When $$$k = 2$$$ (it is always true in this version), the $$$k$$$-itwise XOR is the same as the bitwise XOR . You have hacked the criminal database of Rockport Police Department (RPD), also known as the Rap Sheet. But in order to access it, you require a password. You don't know it, but you are quite sure that it lies between $$$0$$$ and $$$n-1$$$ inclusive. So, you have decided to guess it. Luckily, you can try at most $$$n$$$ times without being blocked by the system. But the system is adaptive. Each time you make an incorrect guess, it changes the password. Specifically, if the password before the guess was $$$x$$$, and you guess a different number $$$y$$$, then the system changes the password to a number $$$z$$$ such that $$$x\\oplus_{k} z=y$$$. Guess the password and break into the system.",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ ($$$1\\leq t\\leq 10\\,000$$$) denoting the number of test cases. $$$t$$$ test cases follow. The first line of each test case contains two integers $$$n$$$ ($$$1\\leq n\\leq 2\\cdot 10^5$$$) and $$$k$$$ ($$$k=2$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "1\n5 2\n\n0\n\n0\n\n1",
+      "output": "3\n\n4\n\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

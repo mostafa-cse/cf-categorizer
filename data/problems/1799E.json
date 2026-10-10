@@ -1,0 +1,40 @@
+{
+  "id": "1799E",
+  "source": "problemset",
+  "contest_id": 1799,
+  "problem_index": "E",
+  "name": "City Union",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dsu",
+    "geometry",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1447,
+  "problem_url": "https://codeforces.com/problemset/problem/1799/E",
+  "editorial_url": "https://codeforces.com/blog/entry/113321",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n \\times m$$$ grid. Some cells are filled and some are empty. A city is a maximal (by inclusion) set of filled cells such that it is possible to get from any cell in the set to any other cell in the set by moving to adjacent (by side) cells, without moving into any cells not in the set. In other words, a city is a connected component of filled cells with edges between adjacent (by side) cells. Initially, there are two cities on the grid. You want to change some empty cells into filled cells so that both of the following are satisfied: There is one city on the resulting grid. The shortest path between any two filled cells, achievable only by moving onto filled cells, is equal to the Manhattan distance between them. The Manhattan distance between two cells $$$(a, b)$$$ and $$$(c, d)$$$ is equal to $$$|a - c| + |b - d|$$$. Find a way to add filled cells that satisfies these conditions and minimizes the total number of filled cells.",
+  "input_specification": "Input consists of multiple test cases. The first line contains a single integer $$$t$$$, the number of test cases ($$$1 \\le t \\le 5000$$$). The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 50$$$, $$$nm \\geq 3$$$). The next $$$n$$$ lines describe the grid. The $$$i$$$-th line contains a string $$$s_i$$$ of length $$$m$$$. $$$s_{i,j}$$$ is ' # ' if the cell in position $$$(i, j)$$$ is filled, and ' . ' if it is empty. It is guaranteed that there are exactly two cities in the initial grid. It is guaranteed that the sum of $$$n\\cdot m$$$ over all test cases does not exceed $$$25\\,000$$$.",
+  "output_specification": "For each test case, output $$$n$$$ lines, each containing a string of length $$$m$$$, describing the grid you create in the same format as the input. If there are multiple possible answers with the minimum number of filled cells print any.",
+  "sample_testcases": [
+    {
+      "input": "11\n1 3\n#.#\n2 2\n.#\n#.\n4 4\n..##\n...#\n#...\n##..\n6 6\n.##...\n##....\n......\n....##\n.....#\n...###\n6 5\n.#..#\n.#..#\n.#..#\n.#.##\n.#...\n##...\n5 5\n#####\n#...#\n#.#.#\n#...#\n#####\n4 4\n.##.\n##.#\n#.##\n.##.\n5 5\n..###\n....#\n.....\n#....\n#....\n5 6\n.##...\n##....\n#....#\n....##\n...##.\n6 5\n..##.\n...##\n....#\n#....\n##...\n.##..\n5 4\n..##\n..#.\n..#.\n#...\n#...",
+      "output": "###\n\n.#\n##\n\n..##\n..##\n###.\n##..\n\n.##...\n###...\n..#...\n..####\n...###\n...###\n\n.####\n.####\n.####\n.####\n.#...\n##...\n\n#####\n#####\n#####\n#####\n#####\n\n.##.\n####\n####\n.##.\n\n..###\n..###\n..#..\n###..\n#....\n\n.##...\n###...\n######\n...###\n...##.\n\n..##.\n..###\n..###\n###..\n###..\n.##..\n\n..##\n..#.\n..#.\n###.\n#..."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:01",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

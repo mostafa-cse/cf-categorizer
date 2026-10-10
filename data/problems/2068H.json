@@ -1,0 +1,40 @@
+{
+  "id": "2068H",
+  "source": "problemset",
+  "contest_id": 2068,
+  "problem_index": "H",
+  "name": "Statues",
+  "rating": 2700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 438,
+  "problem_url": "https://codeforces.com/problemset/problem/2068/H",
+  "editorial_url": "https://codeforces.com/blog/entry/140239",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "The mayor of a city wants to place $$$n$$$ statues at intersections around the city. The intersections in the city are at all points $$$(x, y)$$$ with integer coordinates. Distances between intersections are measured using Manhattan distance, defined as follows: $$$$$$ \\text{distance}((x_1, y_1), (x_2, y_2)) = |x_1 - x_2| + |y_1 - y_2|. $$$$$$ The city council has provided the following requirements for the placement of the statues: The first statue is placed at $$$(0, 0)$$$; The $$$n$$$-th statue is placed at $$$(a, b)$$$; For $$$i = 1, \\dots, n-1$$$, the distance between the $$$i$$$-th statue and the $$$(i+1)$$$-th statue is $$$d_i$$$. It is allowed to place multiple statues at the same intersection. Help the mayor find a valid arrangement of the $$$n$$$ statues, or determine that it does not exist.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$3 \\le n \\le 50$$$) — the number of statues. The second line contains two integers $$$a$$$ and $$$b$$$ ($$$0 \\le a, b \\le 10^9$$$) — the coordinates of the intersection where the $$$n$$$-th statue must be placed. The third line contains $$$n-1$$$ integers $$$d_1, \\dots, d_{n-1}$$$ ($$$0 \\le d_i \\le 10^9$$$) — the distance between the $$$i$$$-th statue and the $$$(i+1)$$$-th statue.",
+  "output_specification": "Print $$$\\texttt{YES}$$$ if there is a valid arrangement of the $$$n$$$ statues. Otherwise, print $$$\\texttt{NO}$$$. If there is a valid arrangement, print a valid arrangement in the following $$$n$$$ lines. The $$$i$$$-th of these lines must contain two integers $$$x_i$$$ and $$$y_i$$$ — the coordinates of the intersection where the $$$i$$$-th statue is placed. You can print any valid arrangement if multiple exist.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 8\n9 0",
+      "output": "NO"
+    },
+    {
+      "input": "4\n10 6\n7 8 5",
+      "output": "YES\n0 0\n6 -1\n11 2\n10 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:35",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

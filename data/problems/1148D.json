@@ -1,0 +1,39 @@
+{
+  "id": "1148D",
+  "source": "problemset",
+  "contest_id": 1148,
+  "problem_index": "D",
+  "name": "Dirty Deeds Done Dirt Cheap",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 5322,
+  "problem_url": "https://codeforces.com/problemset/problem/1148/D",
+  "editorial_url": "https://codeforces.com/blog/entry/67366",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ pairs of integers $$$(a_1, b_1), (a_2, b_2), \\ldots, (a_n, b_n)$$$. All of the integers in the pairs are distinct and are in the range from $$$1$$$ to $$$2 \\cdot n$$$ inclusive. Let's call a sequence of integers $$$x_1, x_2, \\ldots, x_{2k}$$$ good if either $$$x_1 \\lt x_2 \\gt x_3 \\lt \\ldots \\lt x_{2k-2} \\gt x_{2k-1} \\lt x_{2k}$$$, or $$$x_1 \\gt x_2 \\lt x_3 \\gt \\ldots \\gt x_{2k-2} \\lt x_{2k-1} \\gt x_{2k}$$$. You need to choose a subset of distinct indices $$$i_1, i_2, \\ldots, i_t$$$ and their order in a way that if you write down all numbers from the pairs in a single sequence (the sequence would be $$$a_{i_1}, b_{i_1}, a_{i_2}, b_{i_2}, \\ldots, a_{i_t}, b_{i_t}$$$), this sequence is good. What is the largest subset of indices you can choose? You also need to construct the corresponding index sequence $$$i_1, i_2, \\ldots, i_t$$$.",
+  "input_specification": "The first line contains single integer $$$n$$$ ($$$2 \\leq n \\leq 3 \\cdot 10^5$$$) — the number of pairs. Each of the next $$$n$$$ lines contain two numbers — $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 2 \\cdot n$$$) — the elements of the pairs. It is guaranteed that all integers in the pairs are distinct, that is, every integer from $$$1$$$ to $$$2 \\cdot n$$$ is mentioned exactly once.",
+  "output_specification": "In the first line print a single integer $$$t$$$ — the number of pairs in the answer. Then print $$$t$$$ distinct integers $$$i_1, i_2, \\ldots, i_t$$$ — the indexes of pairs in the corresponding order.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 7\n6 4\n2 10\n9 8\n3 5",
+      "output": "3\n1 5 3"
+    },
+    {
+      "input": "3\n5 4\n3 2\n6 1",
+      "output": "3\n3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:46",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

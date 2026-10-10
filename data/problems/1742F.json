@@ -1,0 +1,36 @@
+{
+  "id": "1742F",
+  "source": "problemset",
+  "contest_id": 1742,
+  "problem_index": "F",
+  "name": "Smaller",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 14520,
+  "problem_url": "https://codeforces.com/problemset/problem/1742/F",
+  "editorial_url": "https://codeforces.com/blog/entry/107962",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alperen has two strings, $$$s$$$ and $$$t$$$ which are both initially equal to \" a \". He will perform $$$q$$$ operations of two types on the given strings: $$$1 \\;\\; k \\;\\; x$$$ — Append the string $$$x$$$ exactly $$$k$$$ times at the end of string $$$s$$$. In other words, $$$s := s + \\underbrace{x + \\dots + x}_{k \\text{ times}}$$$. $$$2 \\;\\; k \\;\\; x$$$ — Append the string $$$x$$$ exactly $$$k$$$ times at the end of string $$$t$$$. In other words, $$$t := t + \\underbrace{x + \\dots + x}_{k \\text{ times}}$$$. After each operation, determine if it is possible to rearrange the characters of $$$s$$$ and $$$t$$$ such that $$$s$$$ is lexicographically smaller$$$^{\\dagger}$$$ than $$$t$$$. Note that the strings change after performing each operation and don't go back to their initial states. $$$^{\\dagger}$$$ Simply speaking, the lexicographical order is the order in which words are listed in a dictionary. A formal definition is as follows: string $$$p$$$ is lexicographically smaller than string $$$q$$$ if there exists a position $$$i$$$ such that $$$p_i \\lt q_i$$$, and for all $$$j \\lt i$$$, $$$p_j = q_j$$$. If no such $$$i$$$ exists, then $$$p$$$ is lexicographically smaller than $$$q$$$ if the length of $$$p$$$ is less than the length of $$$q$$$. For example, $$$\\texttt{abdc} \\lt \\texttt{abe}$$$ and $$$\\texttt{abc} \\lt \\texttt{abcd}$$$, where we write $$$p \\lt q$$$ if $$$p$$$ is lexicographically smaller than $$$q$$$.",
+  "input_specification": "The first line of the input contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains an integer $$$q$$$ $$$(1 \\leq q \\leq 10^5)$$$ — the number of operations Alperen will perform. Then $$$q$$$ lines follow, each containing two positive integers $$$d$$$ and $$$k$$$ ($$$1 \\leq d \\leq 2$$$; $$$1 \\leq k \\leq 10^5$$$) and a non-empty string $$$x$$$ consisting of lowercase English letters — the type of the operation, the number of times we will append string $$$x$$$ and the string we need to append respectively. It is guaranteed that the sum of $$$q$$$ over all test cases doesn't exceed $$$10^5$$$ and that the sum of lengths of all strings $$$x$$$ in the input doesn't exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each operation, output \" YES \", if it is possible to arrange the elements in both strings in such a way that $$$s$$$ is lexicographically smaller than $$$t$$$ and \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n2 1 aa\n1 2 a\n2 3 a\n1 2 b\n2 3 abca\n2\n1 5 mihai\n2 2 buiucani\n3\n1 5 b\n2 3 a\n2 4 paiu",
+      "output": "YES\nNO\nYES\nNO\nYES\nNO\nYES\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:17",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

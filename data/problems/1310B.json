@@ -1,0 +1,43 @@
+{
+  "id": "1310B",
+  "source": "problemset",
+  "contest_id": 1310,
+  "problem_index": "B",
+  "name": "Double Elimination",
+  "rating": 2500,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 639,
+  "problem_url": "https://codeforces.com/problemset/problem/1310/B",
+  "editorial_url": "https://codeforces.com/blog/entry/74214",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "The biggest event of the year – Cota 2 world championship \"The Innernational\" is right around the corner. $$$2^n$$$ teams will compete in a double-elimination format (please, carefully read problem statement even if you know what is it) to identify the champion. Teams are numbered from $$$1$$$ to $$$2^n$$$ and will play games one-on-one. All teams start in the upper bracket. All upper bracket matches will be held played between teams that haven't lost any games yet. Teams are split into games by team numbers. Game winner advances in the next round of upper bracket, losers drop into the lower bracket. Lower bracket starts with $$$2^{n-1}$$$ teams that lost the first upper bracket game. Each lower bracket round consists of two games. In the first game of a round $$$2^k$$$ teams play a game with each other (teams are split into games by team numbers). $$$2^{k-1}$$$ loosing teams are eliminated from the championship, $$$2^{k-1}$$$ winning teams are playing $$$2^{k-1}$$$ teams that got eliminated in this round of upper bracket (again, teams are split into games by team numbers). As a result of each round both upper and lower bracket have $$$2^{k-1}$$$ teams remaining. See example notes for better understanding. Single remaining team of upper bracket plays with single remaining team of lower bracket in grand-finals to identify championship winner. You are a fan of teams with numbers $$$a_1, a_2, ..., a_k$$$. You want the championship to have as many games with your favourite teams as possible. Luckily, you can affect results of every championship game the way you want. What's maximal possible number of championship games that include teams you're fan of?",
+  "input_specification": "First input line has two integers $$$n, k$$$ — $$$2^n$$$ teams are competing in the championship. You are a fan of $$$k$$$ teams ($$$2 \\le n \\le 17; 0 \\le k \\le 2^n$$$). Second input line has $$$k$$$ distinct integers $$$a_1, \\ldots, a_k$$$ — numbers of teams you're a fan of ($$$1 \\le a_i \\le 2^n$$$).",
+  "output_specification": "Output single integer — maximal possible number of championship games that include teams you're fan of.",
+  "sample_testcases": [
+    {
+      "input": "3 1\n6",
+      "output": "6"
+    },
+    {
+      "input": "3 3\n1 7 8",
+      "output": "11"
+    },
+    {
+      "input": "3 4\n1 3 5 7",
+      "output": "14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

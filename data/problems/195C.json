@@ -1,0 +1,43 @@
+{
+  "id": "195C",
+  "source": "problemset",
+  "contest_id": 195,
+  "problem_index": "C",
+  "name": "Try and Catch",
+  "rating": 1800,
+  "tags": [
+    "expression parsing",
+    "implementation"
+  ],
+  "solved_count": 1266,
+  "problem_url": "https://codeforces.com/problemset/problem/195/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4699",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya is developing his own programming language VPL (Vasya Programming Language). Right now he is busy making the system of exceptions. He thinks that the system of exceptions must function like that. The exceptions are processed by try-catch-blocks. There are two operators that work with the blocks: The try operator. It opens a new try-catch-block. The catch(<exception_type>, <message>) operator. It closes the try-catch-block that was started last and haven't yet been closed. This block can be activated only via exception of type <exception_type>. When we activate this block, the screen displays the <message>. If at the given moment there is no open try-catch-block, then we can't use the catch operator. The exceptions can occur in the program in only one case: when we use the throw operator. The throw(<exception_type>) operator creates the exception of the given type. Let's suggest that as a result of using some throw operator the program created an exception of type a . In this case a try-catch-block is activated, such that this block's try operator was described in the program earlier than the used throw operator. Also, this block's catch operator was given an exception type a as a parameter and this block's catch operator is described later that the used throw operator. If there are several such try-catch-blocks, then the system activates the block whose catch operator occurs earlier than others. If no try-catch-block was activated, then the screen displays message \" Unhandled Exception \". To test the system, Vasya wrote a program that contains only try , catch and throw operators, one line contains no more than one operator, the whole program contains exactly one throw operator. Your task is: given a program in VPL, determine, what message will be displayed on the screen.",
+  "input_specification": "The first line contains a single integer: n (1 ≤ n ≤ 10 5 ) the number of lines in the program. Next n lines contain the program in language VPL. Each line contains no more than one operator. It means that input file can contain empty lines and lines, consisting only of spaces. The program contains only operators try , catch and throw . It is guaranteed that the program is correct. It means that each started try-catch-block was closed, the catch operators aren't used unless there is an open try-catch-block. The program has exactly one throw operator. The program may have spaces at the beginning of a line, at the end of a line, before and after a bracket, a comma or a quote mark. The exception type is a nonempty string, that consists only of upper and lower case english letters. The length of the string does not exceed 20 symbols. Message is a nonempty string, that consists only of upper and lower case english letters, digits and spaces. Message is surrounded with quote marks. Quote marks shouldn't be printed. The length of the string does not exceed 20 symbols. Length of any line in the input file does not exceed 50 symbols.",
+  "output_specification": "Print the message the screen will show after the given program is executed.",
+  "sample_testcases": [
+    {
+      "input": "8\ntry\ntry\nthrow ( AE )\ncatch ( BE, \"BE in line 3\")\ntry\ncatch(AE, \"AE in line 5\")\ncatch(AE,\"AE somewhere\")",
+      "output": "AE somewhere"
+    },
+    {
+      "input": "8\ntry\ntry\nthrow ( AE )\ncatch ( AE, \"AE in line 3\")\ntry\ncatch(BE, \"BE in line 5\")\ncatch(AE,\"AE somewhere\")",
+      "output": "AE in line 3"
+    },
+    {
+      "input": "8\ntry\ntry\nthrow ( CE )\ncatch ( BE, \"BE in line 3\")\ntry\ncatch(AE, \"AE in line 5\")\ncatch(AE,\"AE somewhere\")",
+      "output": "Unhandled Exception"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

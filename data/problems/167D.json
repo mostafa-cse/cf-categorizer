@@ -1,0 +1,42 @@
+{
+  "id": "167D",
+  "source": "problemset",
+  "contest_id": 167,
+  "problem_index": "D",
+  "name": "Wizards and Roads",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "graph matchings",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 323,
+  "problem_url": "https://codeforces.com/problemset/problem/167/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4214",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In some country live wizards. They love to build cities and roads. The country used to have k cities, the j -th city ( 1 ≤ j ≤ k ) was located at a point ( x j , y j ). It was decided to create another n - k cities. And the i -th one ( k < i ≤ n ) was created at a point with coordinates ( x i , y i ): x i = ( a · x i - 1 + b ) mod (10 9 + 9) y i = ( c · y i - 1 + d ) mod (10 9 + 9) Here a , b , c , d are primes. Also, a ≠ c , b ≠ d . After the construction of all n cities, the wizards have noticed something surprising. It turned out that for every two different cities i and j , x i ≠ x j and y i ≠ y j holds. The cities are built, it's time to build roads! It was decided to use the most difficult (and, of course, the most powerful) spell for the construction of roads. Using this spell creates a road between the towns of u , v ( y u > y v ) if and only if for any city w which lies strictly inside the corner at the point u , v (see below), there is a city s that does not lie in the corner, which is located along the x -coordinate strictly between w and u and simultaneously y s > y v . A corner on the points p 2 ( x 2 , y 2 ), p 1 ( x 1 , y 1 ) ( y 1 < y 2 ) is the set of points ( x , y ), for which at least one of the two conditions is fulfilled: min ( x 1 , x 2 ) ≤ x ≤ max ( x 1 , x 2 ) and y ≥ y 1 y 1 ≤ y ≤ y 2 and ( x - x 2 )·( x 1 - x 2 ) ≥ 0 The pictures showing two different corners In order to test the spell, the wizards will apply it to all the cities that lie on the x -coordinate in the interval [ L , R ] . After the construction of roads the national government wants to choose the maximum number of pairs of cities connected by the road, so that no city occurs in two or more pairs. Your task is for each m offered variants of values L , R to calculate the maximum number of such pairs after the construction of the roads. Please note that the cities that do not lie in the interval [ L , R ] on the x -coordinate, do not affect the construction of roads in any way.",
+  "input_specification": "The first line contains two space-separated integers n , k ( 1 ≤ k ≤ n ≤ 10 5 , k ≤ 30 ). Next k lines contain coordinates of the cities' location points from the first to the k -th one. The j -th line contains space-separated pair of integers x j , y j ( 0 ≤ x j , y j < 10 9 + 9 ) — coordinates of the j -th city. The next line contains space-separated integers a , b , c , d ( 2 ≤ a , b , c , d < 10 9 + 9 ). It is guaranteed that those numbers are prime and also that a ≠ c , b ≠ d . It's guaranteed, that for every two different cities i and j , x i ≠ x j and y i ≠ y j holds. The next line contains integer m ( 1 ≤ m ≤ 10 5 ) — the number of variants to build the roads. Next m lines contain pairs of space-separated integers L i , R i ( 0 ≤ L i ≤ R i < 10 9 + 9 ) — the variants of choosing the cities to build the roads.",
+  "output_specification": "For any pair of numbers L i , R i print the answer to the problem on a single line. Print the answers for the pairs in the order, in which the pairs are given in the input data.",
+  "sample_testcases": [
+    {
+      "input": "6 6\n0 0\n1 1\n2 2\n3 3\n4 4\n5 5\n2 3 3 2\n4\n0 5\n1 4\n2 3\n3 3",
+      "output": "3\n2\n1\n0"
+    },
+    {
+      "input": "6 1\n0 0\n3 5 23917 11\n4\n0 1000000008\n0 10\n100 150\n200 10000",
+      "output": "2\n1\n0\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

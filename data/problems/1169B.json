@@ -1,0 +1,43 @@
+{
+  "id": "1169B",
+  "source": "problemset",
+  "contest_id": 1169,
+  "problem_index": "B",
+  "name": "Pairs",
+  "rating": 1500,
+  "tags": [
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 10886,
+  "problem_url": "https://codeforces.com/problemset/problem/1169/B",
+  "editorial_url": "https://codeforces.com/blog/entry/67241",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Toad Ivan has $$$m$$$ pairs of integers, each integer is between $$$1$$$ and $$$n$$$, inclusive. The pairs are $$$(a_1, b_1), (a_2, b_2), \\ldots, (a_m, b_m)$$$. He asks you to check if there exist two integers $$$x$$$ and $$$y$$$ ($$$1 \\leq x \\lt y \\leq n$$$) such that in each given pair at least one integer is equal to $$$x$$$ or $$$y$$$.",
+  "input_specification": "The first line contains two space-separated integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 300\\,000$$$, $$$1 \\leq m \\leq 300\\,000$$$) — the upper bound on the values of integers in the pairs, and the number of given pairs. The next $$$m$$$ lines contain two integers each, the $$$i$$$-th of them contains two space-separated integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\leq a_i, b_i \\leq n, a_i \\neq b_i$$$) — the integers in the $$$i$$$-th pair.",
+  "output_specification": "Output \" YES \" if there exist two integers $$$x$$$ and $$$y$$$ ($$$1 \\leq x \\lt y \\leq n$$$) such that in each given pair at least one integer is equal to $$$x$$$ or $$$y$$$. Otherwise, print \" NO \". You can print each letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "4 6\n1 2\n1 3\n1 4\n2 3\n2 4\n3 4",
+      "output": "NO"
+    },
+    {
+      "input": "5 4\n1 2\n2 3\n3 4\n4 5",
+      "output": "YES"
+    },
+    {
+      "input": "300000 5\n1 2\n1 2\n1 2\n1 2\n1 2",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

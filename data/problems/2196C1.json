@@ -1,0 +1,39 @@
+{
+  "id": "2196C1",
+  "source": "problemset",
+  "contest_id": 2196,
+  "problem_index": "C1",
+  "name": "Interactive Graph (Simple Version)",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "interactive"
+  ],
+  "solved_count": 4033,
+  "problem_url": "https://codeforces.com/problemset/problem/2196/C1",
+  "editorial_url": "https://codeforces.com/blog/entry/151052",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the simple version of the problem. The difference between the versions is that in this version, you can ask no more than $$$32 \\cdot (n + m)$$$ questions, and $$$n \\leq 15$$$. You can hack only if you solved all versions of this problem. This is an interactive problem. The jury has thought of a directed acyclic graph without loops and multiple edges, which has $$$n$$$ vertices and $$$m$$$ edges. Your task is to determine which edges are in this graph. To do this, you can ask questions of the form: what does the $$$k$$$-th path look like in the lexicographically$$$^{\\text{∗}}$$$ sorted list of all paths in the graph. A path in the graph is a sequence of vertices $$$u_{1}, u_{2}, \\dots, u_{l}$$$, such that for any $$$i \\lt l$$$, there exists an edge ($$$u_{i}, u_{i + 1}$$$) in the graph. Your task is to accomplish this by asking no more than $$$32 \\cdot (n + m)$$$ questions. $$$^{\\text{∗}}$$$A sequence $$$a$$$ is lexicographically smaller than a sequence $$$b$$$ if and only if one of the following holds: $$$a$$$ is a prefix of $$$b$$$, but $$$a \\ne b$$$; or in the first position where $$$a$$$ and $$$b$$$ differ, the sequence $$$a$$$ has a smaller element than the corresponding element in $$$b$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). The description of the test cases follows. Each test case consists of a single line with an integer $$$n$$$ ($$$1 \\le n \\le 15$$$) — the number of vertices in the graph. The jury guarantees that the given graph does not contain cycles or multiple edges. Note that $$$m$$$ is unknown to you.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n\n1 1\n\n2 1 2\n\n3 1 2 4\n\n3 1 2 5\n\n2 1 3\n\n3 1 3 4\n\n3 1 3 5\n\n1 2\n\n1 3\n\n1 4\n\n1 5\n\n1\n\n0\n\n2\n\n1 1\n\n1 2\n\n2 2 1",
+      "output": "? 1\n\n? 2\n\n? 3\n\n? 4\n\n? 5\n\n? 6\n\n? 7\n\n? 8\n\n? 11\n\n? 14\n\n? 15\n\n! 6\n1 3\n1 2\n2 4\n3 4\n2 5\n3 5\n\n? 2\n\n! 0\n\n? 1\n\n? 2\n\n? 3\n\n! 1\n2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

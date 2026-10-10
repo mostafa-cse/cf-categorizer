@@ -1,0 +1,44 @@
+{
+  "id": "1154F",
+  "source": "problemset",
+  "contest_id": 1154,
+  "problem_index": "F",
+  "name": "Shovels Shop",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3457,
+  "problem_url": "https://codeforces.com/problemset/problem/1154/F",
+  "editorial_url": "https://codeforces.com/blog/entry/66586",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ shovels in the nearby shop. The $$$i$$$-th shovel costs $$$a_i$$$ bourles. Misha has to buy exactly $$$k$$$ shovels. Each shovel can be bought no more than once . Misha can buy shovels by several purchases. During one purchase he can choose any subset of remaining (non-bought) shovels and buy this subset. There are also $$$m$$$ special offers in the shop. The $$$j$$$-th of them is given as a pair $$$(x_j, y_j)$$$, and it means that if Misha buys exactly $$$x_j$$$ shovels during one purchase then $$$y_j$$$ most cheapest of them are for free (i.e. he will not pay for $$$y_j$$$ most cheapest shovels during the current purchase). Misha can use any offer any (possibly, zero) number of times, but he cannot use more than one offer during one purchase (but he can buy shovels without using any offers). Your task is to calculate the minimum cost of buying $$$k$$$ shovels, if Misha buys them optimally.",
+  "input_specification": "The first line of the input contains three integers $$$n, m$$$ and $$$k$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5, 1 \\le k \\le min(n, 2000)$$$) — the number of shovels in the shop, the number of special offers and the number of shovels Misha has to buy, correspondingly. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^5$$$), where $$$a_i$$$ is the cost of the $$$i$$$-th shovel. The next $$$m$$$ lines contain special offers. The $$$j$$$-th of them is given as a pair of integers $$$(x_i, y_i)$$$ ($$$1 \\le y_i \\le x_i \\le n$$$) and means that if Misha buys exactly $$$x_i$$$ shovels during some purchase, then he can take $$$y_i$$$ most cheapest of them for free.",
+  "output_specification": "Print one integer — the minimum cost of buying $$$k$$$ shovels if Misha buys them optimally.",
+  "sample_testcases": [
+    {
+      "input": "7 4 5\n2 5 4 2 6 3 1\n2 1\n6 5\n2 1\n3 1",
+      "output": "7"
+    },
+    {
+      "input": "9 4 8\n6 8 5 1 8 1 1 2 1\n9 2\n8 4\n5 3\n9 7",
+      "output": "17"
+    },
+    {
+      "input": "5 1 4\n2 5 7 4 6\n5 4",
+      "output": "17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

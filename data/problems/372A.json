@@ -1,0 +1,41 @@
+{
+  "id": "372A",
+  "source": "problemset",
+  "contest_id": 372,
+  "problem_index": "A",
+  "name": "Counting Kangaroos is Fun",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 16154,
+  "problem_url": "https://codeforces.com/problemset/problem/372/A",
+  "editorial_url": "https://codeforces.com/blog/entry/9944",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n kangaroos with pockets. Each kangaroo has a size (integer number). A kangaroo can go into another kangaroo's pocket if and only if the size of kangaroo who hold the kangaroo is at least twice as large as the size of kangaroo who is held. Each kangaroo can hold at most one kangaroo, and the kangaroo who is held by another kangaroo cannot hold any kangaroos. The kangaroo who is held by another kangaroo cannot be visible from outside. Please, find a plan of holding kangaroos with the minimal number of kangaroos who is visible.",
+  "input_specification": "The first line contains a single integer — n (1 ≤ n ≤ 5·10 5 ) . Each of the next n lines contains an integer s i — the size of the i -th kangaroo (1 ≤ s i ≤ 10 5 ) .",
+  "output_specification": "Output a single integer — the optimal number of visible kangaroos.",
+  "sample_testcases": [
+    {
+      "input": "8\n2\n5\n7\n6\n9\n8\n4\n2",
+      "output": "5"
+    },
+    {
+      "input": "8\n9\n1\n6\n2\n6\n5\n8\n3",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

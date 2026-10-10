@@ -1,0 +1,48 @@
+{
+  "id": "510C",
+  "source": "problemset",
+  "contest_id": 510,
+  "problem_index": "C",
+  "name": "Fox And Names",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "sortings"
+  ],
+  "solved_count": 24277,
+  "problem_url": "https://codeforces.com/problemset/problem/510/C",
+  "editorial_url": "https://codeforces.com/blog/entry/16173",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel is going to publish a paper on FOCS (Foxes Operated Computer Systems, pronounce: \"Fox\"). She heard a rumor: the authors list on the paper is always sorted in the lexicographical order. After checking some examples, she found out that sometimes it wasn't true. On some papers authors' names weren't sorted in lexicographical order in normal sense. But it was always true that after some modification of the order of letters in alphabet, the order of authors becomes lexicographical ! She wants to know, if there exists an order of letters in Latin alphabet such that the names on the paper she is submitting are following in the lexicographical order. If so, you should find out any such order. Lexicographical order is defined in following way. When we compare s and t , first we find the leftmost position with differing characters: s i ≠ t i . If there is no such position (i. e. s is a prefix of t or vice versa) the shortest string is less. Otherwise, we compare characters s i and t i according to their order in alphabet.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 100 ): number of names. Each of the following n lines contain one string name i ( 1 ≤ | name i | ≤ 100 ), the i -th name. Each name contains only lowercase Latin letters. All names are different.",
+  "output_specification": "If there exists such order of letters that the given names are sorted lexicographically, output any such order as a permutation of characters 'a'–'z' (i. e. first output the first letter of the modified alphabet, then the second, and so on). Otherwise output a single word \"Impossible\" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "3\nrivest\nshamir\nadleman",
+      "output": "bcdefghijklmnopqrsatuvwxyz"
+    },
+    {
+      "input": "10\ntourist\npetr\nwjmzbmr\nyeputons\nvepifanov\nscottwu\noooooooooooooooo\nsubscriber\nrowdark\ntankengineer",
+      "output": "Impossible"
+    },
+    {
+      "input": "10\npetr\negor\nendagorion\nfeferivan\nilovetanyaromanova\nkostka\ndmitriyh\nmaratsnowbear\nbredorjaguarturnik\ncgyforever",
+      "output": "aghjlnopefikdmbcqrstuvwxyz"
+    },
+    {
+      "input": "7\ncar\ncare\ncareful\ncarefully\nbecarefuldontforgetsomething\notherwiseyouwillbehacked\ngoodluck",
+      "output": "acbdefhijklmnogpqrstuvwxyz"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

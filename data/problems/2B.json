@@ -1,0 +1,35 @@
+{
+  "id": "2B",
+  "source": "problemset",
+  "contest_id": 2,
+  "problem_index": "B",
+  "name": "The least round way",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "math"
+  ],
+  "solved_count": 13643,
+  "problem_url": "https://codeforces.com/problemset/problem/2/B",
+  "editorial_url": "https://codeforces.com/blog/entry/107",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "There is a square matrix n × n , consisting of non-negative integer numbers. You should find such a way on it that starts in the upper left cell of the matrix; each following cell is to the right or down from the current cell; the way ends in the bottom right cell. Moreover, if we multiply together all the numbers along the way, the result should be the least \"round\". In other words, it should end in the least possible number of zeros.",
+  "input_specification": "The first line contains an integer number n ( 2 ≤ n ≤ 1000 ), n is the size of the matrix. Then follow n lines containing the matrix elements (non-negative integer numbers not exceeding 10 9 ).",
+  "output_specification": "In the first line print the least number of trailing zeros. In the second line print the correspondent way itself.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3\n4 5 6\n7 8 9",
+      "output": "0\nDDRR"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

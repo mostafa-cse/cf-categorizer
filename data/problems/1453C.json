@@ -1,0 +1,35 @@
+{
+  "id": "1453C",
+  "source": "problemset",
+  "contest_id": 1453,
+  "problem_index": "C",
+  "name": "Triangles",
+  "rating": 1700,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 6298,
+  "problem_url": "https://codeforces.com/problemset/problem/1453/C",
+  "editorial_url": "https://codeforces.com/blog/entry/85288",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Gildong has a square board consisting of $$$n$$$ rows and $$$n$$$ columns of square cells, each consisting of a single digit (from $$$0$$$ to $$$9$$$). The cell at the $$$j$$$-th column of the $$$i$$$-th row can be represented as $$$(i, j)$$$, and the length of the side of each cell is $$$1$$$. Gildong likes big things, so for each digit $$$d$$$, he wants to find a triangle such that: Each vertex of the triangle is in the center of a cell. The digit of every vertex of the triangle is $$$d$$$. At least one side of the triangle is parallel to one of the sides of the board. You may assume that a side of length $$$0$$$ is parallel to both sides of the board. The area of the triangle is maximized. Of course, he can't just be happy with finding these triangles as is. Therefore, for each digit $$$d$$$, he's going to change the digit of exactly one cell of the board to $$$d$$$, then find such a triangle. He changes it back to its original digit after he is done with each digit. Find the maximum area of the triangle he can make for each digit. Note that he can put multiple vertices of the triangle on the same cell, and the triangle can be a degenerate triangle ; i.e. the area of the triangle can be $$$0$$$. Also, note that he is allowed to change the digit of a cell from $$$d$$$ to $$$d$$$.",
+  "input_specification": "Each test contains one or more test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 2000$$$) — the number of rows and columns of the board. The next $$$n$$$ lines of each test case each contain a string of $$$n$$$ digits without spaces. The $$$j$$$-th digit of the $$$i$$$-th line is the digit of the cell at $$$(i, j)$$$. Each digit is one of the characters from $$$0$$$ to $$$9$$$. It is guaranteed that the sum of $$$n^2$$$ in all test cases doesn't exceed $$$4 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, print one line with $$$10$$$ integers. The $$$i$$$-th integer is the maximum area of triangle Gildong can make when $$$d = i-1$$$, multiplied by $$$2$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n000\n122\n001\n2\n57\n75\n4\n0123\n4012\n3401\n2340\n1\n9\n8\n42987101\n98289412\n38949562\n87599023\n92834718\n83917348\n19823743\n38947912",
+      "output": "4 4 1 0 0 0 0 0 0 0\n0 0 0 0 0 1 0 1 0 0\n9 6 9 9 6 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0\n18 49 49 49 49 15 0 30 42 42"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:25",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

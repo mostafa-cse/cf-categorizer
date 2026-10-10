@@ -1,0 +1,40 @@
+{
+  "id": "1801D",
+  "source": "problemset",
+  "contest_id": 1801,
+  "problem_index": "D",
+  "name": "The way home",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "graphs",
+    "greedy",
+    "shortest paths",
+    "sortings"
+  ],
+  "solved_count": 3027,
+  "problem_url": "https://codeforces.com/problemset/problem/1801/D",
+  "editorial_url": "https://codeforces.com/blog/entry/113857",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "The famous magician Borya Budini traveled through the country $$$X$$$, which consists of $$$n$$$ cities. However, an accident happened, and he was robbed in the city number $$$1$$$. Now Budini will have a hard way home to the city number $$$n$$$. He's going to get there by plane. In total, there are $$$m$$$ flights in the country, $$$i$$$-th flies from city $$$a_i$$$ to city $$$b_i$$$ and costs $$$s_i$$$ coins. Note that the $$$i$$$-th flight is one-way, so it can't be used to get from city $$$b_i$$$ to city $$$a_i$$$. To use it, Borya must be in the city $$$a_i$$$ and have at least $$$s_i$$$ coins (which he will spend on the flight). After the robbery, he has only $$$p$$$ coins left, but he does not despair! Being in the city $$$i$$$, he can organize performances every day, each performance will bring him $$$w_i$$$ coins. Help the magician find out if he will be able to get home, and what is the minimum number of performances he will have to organize.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 80$$$) – the number of test cases. The description of test cases follows. The first line contains three integers $$$n$$$, $$$m$$$ and $$$p$$$ ($$$2 \\le n \\le 800$$$, $$$1 \\le m \\le 3000$$$, $$$0 \\le p \\le 10^9$$$) — the number of cities, the number of flights and the initial amount of coins. The second line contains $$$n$$$ integers $$$w_1, w_2, \\ldots, w_n$$$ $$$(1 \\le w_i \\le 10^9)$$$ — profit from representations. The following $$$m$$$ lines each contain three integers $$$a_i$$$, $$$b_i$$$ and $$$s_i$$$ ($$$1 \\le a_i, b_i \\le n$$$, $$$1 \\le s_i \\le 10^9$$$) — the starting and ending city, and the cost of $$$i$$$-th flight. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$800$$$ and the sum of $$$m$$$ over all test cases does not exceed $$$10000$$$.",
+  "output_specification": "For each test case print a single integer — the minimum number of performances Borya will have to organize to get home, or $$$-1$$$ if it is impossible to do this.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 4 2\n7 4 3 1\n1 2 21\n3 2 6\n1 3 8\n2 4 11\n4 4 10\n1 2 10 1\n1 2 20\n2 4 30\n1 3 25\n3 4 89\n4 4 7\n5 1 6 2\n1 2 5\n2 3 10\n3 4 50\n3 4 70\n4 1 2\n1 1 1 1\n1 3 2",
+      "output": "4\n24\n10\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

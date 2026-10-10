@@ -1,0 +1,47 @@
+{
+  "id": "2025F",
+  "source": "problemset",
+  "contest_id": 2025,
+  "problem_index": "F",
+  "name": "Choose Your Queries",
+  "rating": 2700,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 1321,
+  "problem_url": "https://codeforces.com/problemset/problem/2025/F",
+  "editorial_url": "https://codeforces.com/blog/entry/135173",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given an array $$$a$$$, consisting of $$$n$$$ integers (numbered from $$$1$$$ to $$$n$$$). Initially, they are all zeroes. You have to process $$$q$$$ queries. The $$$i$$$-th query consists of two different integers $$$x_i$$$ and $$$y_i$$$. During the $$$i$$$-th query, you have to choose an integer $$$p$$$ (which is either $$$x_i$$$ or $$$y_i$$$) and an integer $$$d$$$ (which is either $$$1$$$ or $$$-1$$$), and assign $$$a_p = a_p + d$$$. After each query, every element of $$$a$$$ should be a non-negative integer. Process all queries in such a way that the sum of all elements of $$$a$$$ after the last query is the minimum possible.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le q \\le 3 \\cdot 10^5$$$) — the number of elements in $$$a$$$ and the number of queries, respectively. Then $$$q$$$ lines follow. The $$$i$$$-th of these lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i, y_i \\le n$$$; $$$x_i \\ne y_i$$$) — the description of the $$$i$$$-th query.",
+  "output_specification": "For each query, print a line containing two characters: the first character should be x if you choose $$$p=x_i$$$, or y if you choose $$$p=y_i$$$; the second character should be + if you choose $$$d=1$$$, or - if you choose $$$d=-1$$$. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 2\n3 2\n3 1\n1 2",
+      "output": "y+\nx+\nx-\ny-"
+    },
+    {
+      "input": "4 4\n1 2\n2 3\n3 4\n3 2",
+      "output": "y+\ny+\nx-\ny-"
+    },
+    {
+      "input": "4 2\n2 1\n4 3",
+      "output": "y+\nx+"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

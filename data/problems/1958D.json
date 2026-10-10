@@ -1,0 +1,34 @@
+{
+  "id": "1958D",
+  "source": "problemset",
+  "contest_id": 1958,
+  "problem_index": "D",
+  "name": "Staircase",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 745,
+  "problem_url": "https://codeforces.com/problemset/problem/1958/D",
+  "editorial_url": "https://codeforces.com/blog/entry/129483",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a staircase consisting of $$$n$$$ steps. Each step is either intact, or broken. For each broken step, an integer $$$a_i$$$ is given denoting the difficulty of repairing it. Every day, you can either: repair an arbitrary broken step. The effort it takes to repair the $$$i$$$-th step is equal to $$$a_i$$$; or repair two adjacent broken steps. The effort it takes to repair both the $$$i$$$-th step and the $$$(i+1)$$$-th step is equal to $$$2 \\cdot (a_i+a_{i+1})$$$. You want to repair all broken steps of the staircase, and you want to do it in the minimum possible number of days. What is the minimum total effort it will take to repair all broken steps in the minimum number of days?",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of two lines: the first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of steps; the second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^8$$$). If $$$a_i = 0$$$, then the $$$i$$$-th step does not need to be repaired; otherwise, the $$$i$$$-th step is broken and $$$a_i$$$ is the difficulty of repairing it. Additional constraint on the input: the sum of values of $$$n$$$ does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the minimum possible total effort it will take to repair all broken steps in the minimum number of days.",
+  "sample_testcases": [
+    {
+      "input": "6\n5\n0 0 0 0 0\n4\n0 13 15 8\n4\n13 15 0 8\n8\n1 2 3 4 5 6 7 8\n5\n99999999 100000000 99999999 99999999 99999999\n5\n2 3 4 3 2",
+      "output": "0\n59\n64\n72\n899999993\n24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2113F",
+  "source": "problemset",
+  "contest_id": 2113,
+  "problem_index": "F",
+  "name": "Two Arrays",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 1017,
+  "problem_url": "https://codeforces.com/problemset/problem/2113/F",
+  "editorial_url": "https://codeforces.com/blog/entry/143785",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$ of length $$$n$$$. You can perform the following operation an unlimited number of times: Choose an integer $$$i$$$ from $$$1$$$ to $$$n$$$ and swap $$$a_i$$$ and $$$b_i$$$. Let $$$f(c)$$$ be the number of distinct numbers in array $$$c$$$. Find the maximum value of $$$f(a) + f(b)$$$. Also, output the arrays $$$a$$$ and $$$b$$$ after performing all operations.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the length of the arrays. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 2n$$$) — the elements of array $$$a$$$. The third line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 2n$$$) — the elements of array $$$b$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print a single integer in the first line — the maximum value of $$$f(a) + f(b)$$$. In the second line, print $$$n$$$ integers — the elements of array $$$a$$$ after performing the operations. In the third line, print $$$n$$$ integers — the elements of array $$$b$$$ after performing the operations.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 2 4 4 4\n1 3 3 5 2\n7\n2 2 4 4 5 5 5\n1 3 3 2 1 6 6\n7\n12 3 3 4 5 6 4\n1 2 13 8 10 13 7",
+      "output": "9\n1 3 4 5 2 \n1 2 3 4 4 \n12\n2 3 4 2 1 5 6 \n1 2 3 4 5 6 5 \n14\n12 3 13 8 10 6 4 \n1 2 3 4 5 13 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:22",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

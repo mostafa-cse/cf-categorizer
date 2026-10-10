@@ -1,0 +1,44 @@
+{
+  "id": "1082D",
+  "source": "problemset",
+  "contest_id": 1082,
+  "problem_index": "D",
+  "name": "Maximum Diameter Graph",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "graphs",
+    "implementation"
+  ],
+  "solved_count": 4210,
+  "problem_url": "https://codeforces.com/problemset/problem/1082/D",
+  "editorial_url": "https://codeforces.com/blog/entry/63544",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Graph constructive problems are back! This time the graph you are asked to build should match the following properties. The graph is connected if and only if there exists a path between every pair of vertices. The diameter (aka \"longest shortest path\") of a connected undirected graph is the maximum number of edges in the shortest path between any pair of its vertices. The degree of a vertex is the number of edges incident to it. Given a sequence of $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ construct a connected undirected graph of $$$n$$$ vertices such that: the graph contains no self-loops and no multiple edges; the degree $$$d_i$$$ of the $$$i$$$-th vertex doesn't exceed $$$a_i$$$ (i.e. $$$d_i \\le a_i$$$); the diameter of the graph is maximum possible. Output the resulting graph or report that no solution exists.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$3 \\le n \\le 500$$$) — the number of vertices in the graph. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le n - 1$$$) — the upper limits to vertex degrees.",
+  "output_specification": "Print \" NO \" if no graph can be constructed under the given conditions. Otherwise print \" YES \" and the diameter of the resulting graph in the first line. The second line should contain a single integer $$$m$$$ — the number of edges in the resulting graph. The $$$i$$$-th of the next $$$m$$$ lines should contain two integers $$$v_i, u_i$$$ ($$$1 \\le v_i, u_i \\le n$$$, $$$v_i \\neq u_i$$$) — the description of the $$$i$$$-th edge. The graph should contain no multiple edges — for each pair $$$(x, y)$$$ you output, you should output no more pairs $$$(x, y)$$$ or $$$(y, x)$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 2",
+      "output": "YES 2\n2\n1 2\n2 3"
+    },
+    {
+      "input": "5\n1 4 1 1 1",
+      "output": "YES 2\n4\n1 2\n3 2\n4 2\n5 2"
+    },
+    {
+      "input": "3\n1 1 1",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

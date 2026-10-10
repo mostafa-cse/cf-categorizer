@@ -1,0 +1,36 @@
+{
+  "id": "838B",
+  "source": "problemset",
+  "contest_id": 838,
+  "problem_index": "B",
+  "name": "Diverging Directions",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "trees"
+  ],
+  "solved_count": 1196,
+  "problem_url": "https://codeforces.com/problemset/problem/838/B",
+  "editorial_url": "https://codeforces.com/blog/entry/53736",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a directed weighted graph with n nodes and 2 n - 2 edges. The nodes are labeled from 1 to n , while the edges are labeled from 1 to 2 n - 2 . The graph's edges can be split into two parts. The first n - 1 edges will form a rooted spanning tree, with node 1 as the root. All these edges will point away from the root. The last n - 1 edges will be from node i to node 1 , for all 2 ≤ i ≤ n . You are given q queries. There are two types of queries 1 i w : Change the weight of the i -th edge to w 2 u v : Print the length of the shortest path between nodes u to v Given these queries, print the shortest path lengths.",
+  "input_specification": "The first line of input will contain two integers n , q ( 2 ≤ n , q ≤ 200 000 ), the number of nodes, and the number of queries, respectively. The next 2 n - 2 integers will contain 3 integers a i , b i , c i , denoting a directed edge from node a i to node b i with weight c i . The first n - 1 of these lines will describe a rooted spanning tree pointing away from node 1 , while the last n - 1 of these lines will have b i = 1 . More specifically, The edges ( a 1 , b 1 ), ( a 2 , b 2 ), ... ( a n - 1 , b n - 1 ) will describe a rooted spanning tree pointing away from node 1 . b j = 1 for n ≤ j ≤ 2 n - 2 . a n , a n + 1 , ..., a 2 n - 2 will be distinct and between 2 and n . The next q lines will contain 3 integers, describing a query in the format described in the statement. All edge weights will be between 1 and 10 6 .",
+  "output_specification": "For each type 2 query, print the length of the shortest path in its own line.",
+  "sample_testcases": [
+    {
+      "input": "5 9\n1 3 1\n3 2 2\n1 4 3\n3 5 4\n5 1 5\n3 1 6\n2 1 7\n4 1 8\n2 1 1\n2 1 3\n2 3 5\n2 5 2\n1 1 100\n2 1 3\n1 8 30\n2 4 2\n2 2 4",
+      "output": "0\n1\n4\n8\n100\n132\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

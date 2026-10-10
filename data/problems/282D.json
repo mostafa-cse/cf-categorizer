@@ -1,0 +1,43 @@
+{
+  "id": "282D",
+  "source": "problemset",
+  "contest_id": 282,
+  "problem_index": "D",
+  "name": "Yet Another Number Game",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 1711,
+  "problem_url": "https://codeforces.com/problemset/problem/282/D",
+  "editorial_url": "https://codeforces.com/blog/entry/6999",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Since most contestants do not read this part, I have to repeat that Bitlandians are quite weird. They have their own jobs, their own working method, their own lives, their own sausages and their own games! Since you are so curious about Bitland, I'll give you the chance of peeking at one of these games. BitLGM and BitAryo are playing yet another of their crazy-looking genius-needed Bitlandish games. They've got a sequence of n non-negative integers a 1 , a 2 , ..., a n . The players make moves in turns. BitLGM moves first. Each player can and must do one of the two following actions in his turn: Take one of the integers (we'll denote it as a i ). Choose integer x (1 ≤ x ≤ a i ) . And then decrease a i by x , that is, apply assignment: a i = a i - x . Choose integer x . And then decrease all a i by x , that is, apply assignment: a i = a i - x , for all i . The player who cannot make a move loses. You're given the initial sequence a 1 , a 2 , ..., a n . Determine who wins, if both players plays optimally well and if BitLGM and BitAryo start playing the described game in this sequence.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 3 ). The next line contains n integers a 1 , a 2 , ..., a n (0 ≤ a i < 300) .",
+  "output_specification": "Write the name of the winner (provided that both players play optimally well). Either \" BitLGM \" or \" BitAryo \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2\n1 1",
+      "output": "BitLGM"
+    },
+    {
+      "input": "2\n1 2",
+      "output": "BitAryo"
+    },
+    {
+      "input": "3\n1 2 1",
+      "output": "BitLGM"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1977C",
+  "source": "problemset",
+  "contest_id": 1977,
+  "problem_index": "C",
+  "name": "Nikita and LCM",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp",
+    "greedy",
+    "math",
+    "number theory",
+    "sortings"
+  ],
+  "solved_count": 8284,
+  "problem_url": "https://codeforces.com/problemset/problem/1977/C",
+  "editorial_url": "https://codeforces.com/blog/entry/129858",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nikita is a student passionate about number theory and algorithms. He faces an interesting problem related to an array of numbers. Suppose Nikita has an array of integers $$$a$$$ of length $$$n$$$. He will call a subsequence$$$^\\dagger$$$ of the array special if its least common multiple (LCM) is not contained in $$$a$$$. The LCM of an empty subsequence is equal to $$$0$$$. Nikita wonders: what is the length of the longest special subsequence of $$$a$$$? Help him answer this question! $$$^\\dagger$$$ A sequence $$$b$$$ is a subsequence of $$$a$$$ if $$$b$$$ can be obtained from $$$a$$$ by the deletion of several (possibly, zero or all) elements, without changing the order of the remaining elements. For example, $$$[5,2,3]$$$ is a subsequence of $$$[1,5,7,8,2,4,3]$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 2000$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2000$$$.",
+  "output_specification": "For each test case, output a single integer — the length of the longest special subsequence of $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5\n1 2 4 8 16\n6\n3 2 10 20 60 1\n7\n2 3 4 6 12 100003 1200036\n9\n2 42 7 3 6 7 7 1 6\n8\n4 99 57 179 10203 2 11 40812\n1\n1",
+      "output": "0\n4\n4\n5\n8\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:10",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

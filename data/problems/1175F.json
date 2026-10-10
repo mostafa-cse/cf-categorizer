@@ -1,0 +1,42 @@
+{
+  "id": "1175F",
+  "source": "problemset",
+  "contest_id": 1175,
+  "problem_index": "F",
+  "name": "The Number of Subpermutations",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "divide and conquer",
+    "hashing",
+    "math"
+  ],
+  "solved_count": 3012,
+  "problem_url": "https://codeforces.com/problemset/problem/1175/F",
+  "editorial_url": "https://codeforces.com/blog/entry/67484",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array $$$a_1, a_2, \\dots, a_n$$$. Let's call some subarray $$$a_l, a_{l + 1}, \\dots , a_r$$$ of this array a subpermutation if it contains all integers from $$$1$$$ to $$$r-l+1$$$ exactly once. For example, array $$$a = [2, 2, 1, 3, 2, 3, 1]$$$ contains $$$6$$$ subarrays which are subpermutations: $$$[a_2 \\dots a_3]$$$, $$$[a_2 \\dots a_4]$$$, $$$[a_3 \\dots a_3]$$$, $$$[a_3 \\dots a_5]$$$, $$$[a_5 \\dots a_7]$$$, $$$[a_7 \\dots a_7]$$$. You are asked to calculate the number of subpermutations.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots , a_n$$$ ($$$1 \\le a_i \\le n$$$). This array can contain the same integers.",
+  "output_specification": "Print the number of subpermutations of the array $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "8\n2 4 1 3 4 2 1 2",
+      "output": "7"
+    },
+    {
+      "input": "5\n1 1 2 1 2",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

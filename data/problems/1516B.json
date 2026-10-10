@@ -1,0 +1,37 @@
+{
+  "id": "1516B",
+  "source": "problemset",
+  "contest_id": 1516,
+  "problem_index": "B",
+  "name": "AGAGA XOOORRR",
+  "rating": 1500,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 27488,
+  "problem_url": "https://codeforces.com/problemset/problem/1516/B",
+  "editorial_url": "https://codeforces.com/blog/entry/89846",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Baby Ehab is known for his love for a certain operation. He has an array $$$a$$$ of length $$$n$$$, and he decided to keep doing the following operation on it: he picks $$$2$$$ adjacent elements; he then removes them and places a single integer in their place: their bitwise XOR . Note that the length of the array decreases by one. Now he asks you if he can make all elements of the array equal. Since babies like to make your life harder, he requires that you leave at least $$$2$$$ elements remaining.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 15$$$) — the number of test cases you need to solve. The first line of each test case contains an integers $$$n$$$ ($$$2 \\le n \\le 2000$$$) — the number of elements in the array $$$a$$$. The second line contains $$$n$$$ space-separated integers $$$a_1$$$, $$$a_2$$$, $$$\\ldots$$$, $$$a_{n}$$$ ($$$0 \\le a_i \\lt 2^{30}$$$) — the elements of the array $$$a$$$.",
+  "output_specification": "If Baby Ehab can make all elements equal while leaving at least $$$2$$$ elements standing, print \" YES \". Otherwise, print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "2\n3\n0 2 2\n4\n2 3 1 10",
+      "output": "YES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

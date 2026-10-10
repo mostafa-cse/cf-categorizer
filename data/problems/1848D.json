@@ -1,0 +1,37 @@
+{
+  "id": "1848D",
+  "source": "problemset",
+  "contest_id": 1848,
+  "problem_index": "D",
+  "name": "Vika and Bonuses",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "brute force",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 3057,
+  "problem_url": "https://codeforces.com/problemset/problem/1848/D",
+  "editorial_url": "https://codeforces.com/blog/entry/118333",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A new bonus system has been introduced at Vika's favorite cosmetics store, \"Golden Pear\"! The system works as follows: suppose a customer has $$$b$$$ bonuses. Before paying for the purchase, the customer can choose one of two options: Get a discount equal to the current number of bonuses, while the bonuses are not deducted. Accumulate an additional $$$x$$$ bonuses, where $$$x$$$ is the last digit of the number $$$b$$$. As a result, the customer's account will have $$$b+x$$$ bonuses. For example, if a customer had $$$24$$$ bonuses, he can either get a discount of $$$24$$$ or accumulate an additional $$$4$$$ bonuses, after which his account will have $$$28$$$ bonuses. At the moment, Vika has already accumulated $$$s$$$ bonuses. The girl knows that during the remaining time of the bonus system, she will make $$$k$$$ more purchases at the \"Golden Pear\" store network. After familiarizing herself with the rules of the bonus system, Vika became interested in the maximum total discount she can get. Help the girl answer this question.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The description of the test cases follows. The test case consists of a single line containing two integers $$$s$$$ and $$$k$$$ ($$$0 \\le s \\le 10^9$$$, $$$1 \\le k \\le 10^9$$$) — the current number of bonuses in Vika's account and how many more purchases the girl will make.",
+  "output_specification": "For each test case, output a single integer — the maximum total discount that can be obtained through the bonus system.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 3\n11 3\n0 179\n5 1000000000\n723252212 856168102\n728598293 145725253",
+      "output": "4\n33\n0\n9999999990\n1252047198518668448\n106175170582793129"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

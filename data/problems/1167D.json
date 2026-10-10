@@ -1,0 +1,43 @@
+{
+  "id": "1167D",
+  "source": "problemset",
+  "contest_id": 1167,
+  "problem_index": "D",
+  "name": "Bicolored RBS",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 7424,
+  "problem_url": "https://codeforces.com/problemset/problem/1167/D",
+  "editorial_url": "https://codeforces.com/blog/entry/67058",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A string is called bracket sequence if it does not contain any characters other than \" ( \" and \" ) \". A bracket sequence is called regular (shortly, RBS) if it is possible to obtain correct arithmetic expression by inserting characters \" + \" and \" 1 \" into this sequence. For example, \" \", \" (()) \" and \" ()() \" are RBS and \" )( \" and \" (() \" are not. We can see that each opening bracket in RBS is paired with some closing bracket, and, using this fact, we can define nesting depth of the RBS as maximum number of bracket pairs, such that the $$$2$$$-nd pair lies inside the $$$1$$$-st one, the $$$3$$$-rd one — inside the $$$2$$$-nd one and so on. For example, nesting depth of \" \" is $$$0$$$, \" ()()() \" is $$$1$$$ and \" ()((())()) \" is $$$3$$$. Now, you are given RBS $$$s$$$ of even length $$$n$$$. You should color each bracket of $$$s$$$ into one of two colors: red or blue. Bracket sequence $$$r$$$, consisting only of red brackets, should be RBS, and bracket sequence, consisting only of blue brackets $$$b$$$, should be RBS. Any of them can be empty. You are not allowed to reorder characters in $$$s$$$, $$$r$$$ or $$$b$$$. No brackets can be left uncolored. Among all possible variants you should choose one that minimizes maximum of $$$r$$$'s and $$$b$$$'s nesting depth. If there are multiple solutions you can print any of them.",
+  "input_specification": "The first line contains an even integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the length of RBS $$$s$$$. The second line contains regular bracket sequence $$$s$$$ ($$$|s| = n$$$, $$$s_i \\in \\{$$$\" ( \", \" ) \"$$$\\}$$$).",
+  "output_specification": "Print single string $$$t$$$ of length $$$n$$$ consisting of \" 0 \"-s and \" 1 \"-s. If $$$t_i$$$ is equal to 0 then character $$$s_i$$$ belongs to RBS $$$r$$$, otherwise $$$s_i$$$ belongs to $$$b$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n()",
+      "output": "11"
+    },
+    {
+      "input": "4\n(())",
+      "output": "0101"
+    },
+    {
+      "input": "10\n((()())())",
+      "output": "0110001111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

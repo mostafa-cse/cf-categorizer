@@ -1,0 +1,34 @@
+{
+  "id": "656D",
+  "source": "problemset",
+  "contest_id": 656,
+  "problem_index": "D",
+  "name": "Rosetta Problem",
+  "rating": 2100,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 1016,
+  "problem_url": "https://codeforces.com/problemset/problem/656/D",
+  "editorial_url": "https://codeforces.com/blog/entry/44141",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "++++++++[>+>++>+++>++++>+++++>++++++>+++++++>++++++++>+++++++++>++++++++++>+\n++++++++++>++++++++++++>+++++++++++++>++++++++++++++>+++++++++++++++>+++++++\n+++++++++<<<<<<<<<<<<<<<<-]>>>>>>>>>>.<<<<<<<<<<>>>>>>>>>>>>>>++.--<<<<<<<<<\n<<<<<>>>>>>>>>>>>>+.-<<<<<<<<<<<<<>>>>>>>>>>>>>>--.++<<<<<<<<<<<<<<>>>>>>>>>\n>>>>>>----.++++<<<<<<<<<<<<<<<>>>>.<<<<>>>>>>>>>>>>>>--.++<<<<<<<<<<<<<<>>>>\n>>>>>>>>>>>---.+++<<<<<<<<<<<<<<<>>>>>>>>>>>>>>---.+++<<<<<<<<<<<<<<>>>>>>>>\n>>>>++.--<<<<<<<<<<<<>>>>>>>>>>>>>---.+++<<<<<<<<<<<<<>>>>>>>>>>>>>>++.--<<<\n<<<<<<<<<<<.\n\nDCBA:^!~}|{zyxwvutsrqponmlkjihgfedcba`_^]\\[ZYXWVUTSRQPONMLKJIHdcbD`Y^]\\UZYRv\n9876543210/.-,+*)('&%$#\"!~}|{zyxwvutsrqponm+*)('&%$#cya`=^]\\[ZYXWVUTSRQPONML\nKJfe^cba`_X]VzTYRv98TSRQ3ONMLEi,+*)('&%$#\"!~}|{zyxwvutsrqponmlkjihgfedcba`_^\n]\\[ZYXWVUTSonPlkjchg`ed]#DCBA@?>=<;:9876543OHGLKDIHGFE>b%$#\"!~}|{zyxwvutsrqp\nonmlkjihgfedcba`_^]\\[ZYXWVUTSRQPONMibafedcba`_X|?>Z<XWVUTSRKo\\ v34*8+6+,78+9*3+,93+9*5+,28+9*1+,55+9*4+,23*6*2*,91,@,+7*9*25,*48,+3*9+38,+<\n>62*9*2+,34*9*3+,66+9*8+,52*9*7+,75+9*8+,92+9*6+,48+9*3+,43*9*2+,84*,26*9*3^",
+  "input_specification": "The input contains a single integer a ( 0 ≤ a ≤ 1 000 000 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "129",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

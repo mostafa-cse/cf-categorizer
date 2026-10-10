@@ -1,0 +1,50 @@
+{
+  "id": "926C",
+  "source": "problemset",
+  "contest_id": 926,
+  "problem_index": "C",
+  "name": "Is This a Zebra?",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2116,
+  "problem_url": "https://codeforces.com/problemset/problem/926/C",
+  "editorial_url": "https://codeforces.com/blog/entry/58424",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A camera you have accidentally left in a desert has taken an interesting photo. The photo has a resolution of n pixels width, and each column of this photo is all white or all black. Thus, we can represent the photo as a sequence of n zeros and ones, where 0 means that the corresponding column is all white, and 1 means that the corresponding column is black. You think that this photo can contain a zebra. In this case the whole photo should consist of several (possibly, only one) alternating black and white stripes of equal width. For example, the photo [0, 0, 0, 1, 1, 1, 0, 0, 0] can be a photo of zebra, while the photo [0, 0, 0, 1, 1, 1, 1] can not, because the width of the black stripe is 3 , while the width of the white stripe is 4 . Can the given photo be a photo of zebra or not?",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 100 000 ) — the width of the photo. The second line contains a sequence of integers a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 1 ) — the description of the photo. If a i is zero, the i -th column is all black. If a i is one, then the i -th column is all white.",
+  "output_specification": "If the photo can be a photo of zebra, print \" YES \" (without quotes). Otherwise, print \" NO \". You can print each letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "9\n0 0 0 1 1 1 0 0 0",
+      "output": "YES"
+    },
+    {
+      "input": "7\n0 0 0 1 1 1 1",
+      "output": "NO"
+    },
+    {
+      "input": "5\n1 1 1 1 1",
+      "output": "YES"
+    },
+    {
+      "input": "8\n1 1 1 0 0 0 1 1",
+      "output": "NO"
+    },
+    {
+      "input": "9\n1 1 0 1 1 0 1 1 0",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

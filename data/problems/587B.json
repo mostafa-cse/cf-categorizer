@@ -1,0 +1,38 @@
+{
+  "id": "587B",
+  "source": "problemset",
+  "contest_id": 587,
+  "problem_index": "B",
+  "name": "Duff in Beach",
+  "rating": 2100,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1525,
+  "problem_url": "https://codeforces.com/problemset/problem/587/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20971",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While Duff was resting in the beach, she accidentally found a strange array b 0 , b 1 , ..., b l - 1 consisting of l positive integers. This array was strange because it was extremely long, but there was another (maybe shorter) array, a 0 , ..., a n - 1 that b can be build from a with formula: b i = a i mod n where a mod b denoted the remainder of dividing a by b . Duff is so curious, she wants to know the number of subsequences of b like b i 1 , b i 2 , ..., b i x ( 0 ≤ i 1 < i 2 < ... < i x < l ), such that: 1 ≤ x ≤ k For each 1 ≤ j ≤ x - 1 , For each 1 ≤ j ≤ x - 1 , b i j ≤ b i j + 1 . i.e this subsequence is non-decreasing. Since this number can be very large, she want to know it modulo 10 9 + 7 . Duff is not a programmer, and Malek is unavailable at the moment. So she asked for your help. Please tell her this number.",
+  "input_specification": "The first line of input contains three integers, n , l and k ( 1 ≤ n , k , n × k ≤ 10 6 and 1 ≤ l ≤ 10 18 ). The second line contains n space separated integers, a 0 , a 1 , ..., a n - 1 ( 1 ≤ a i ≤ 10 9 for each 0 ≤ i ≤ n - 1 ).",
+  "output_specification": "Print the answer modulo 1 000 000 007 in one line.",
+  "sample_testcases": [
+    {
+      "input": "3 5 3\n5 9 1",
+      "output": "10"
+    },
+    {
+      "input": "5 10 3\n1 2 3 4 5",
+      "output": "25"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

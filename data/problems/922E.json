@@ -1,0 +1,42 @@
+{
+  "id": "922E",
+  "source": "problemset",
+  "contest_id": 922,
+  "problem_index": "E",
+  "name": "Birds",
+  "rating": 2200,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 2586,
+  "problem_url": "https://codeforces.com/problemset/problem/922/E",
+  "editorial_url": "https://codeforces.com/blog/entry/57605",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Apart from plush toys, Imp is a huge fan of little yellow birds! To summon birds, Imp needs strong magic. There are n trees in a row on an alley in a park, there is a nest on each of the trees. In the i -th nest there are c i birds; to summon one bird from this nest Imp needs to stay under this tree and it costs him cost i points of mana. However, for each bird summoned, Imp increases his mana capacity by B points. Imp summons birds one by one, he can summon any number from 0 to c i birds from the i -th nest. Initially Imp stands under the first tree and has W points of mana, and his mana capacity equals W as well. He can only go forward, and each time he moves from a tree to the next one, he restores X points of mana (but it can't exceed his current mana capacity). Moving only forward, what is the maximum number of birds Imp can summon?",
+  "input_specification": "The first line contains four integers n , W , B , X ( 1 ≤ n ≤ 10 3 , 0 ≤ W , B , X ≤ 10 9 ) — the number of trees, the initial points of mana, the number of points the mana capacity increases after a bird is summoned, and the number of points restored when Imp moves from a tree to the next one. The second line contains n integers c 1 , c 2 , ..., c n ( 0 ≤ c i ≤ 10 4 ) — where c i is the number of birds living in the i -th nest. It is guaranteed that . The third line contains n integers cost 1 , cost 2 , ..., cost n ( 0 ≤ cost i ≤ 10 9 ), where cost i is the mana cost to summon a bird from the i -th nest.",
+  "output_specification": "Print a single integer — the maximum number of birds Imp can summon.",
+  "sample_testcases": [
+    {
+      "input": "2 12 0 4\n3 4\n4 2",
+      "output": "6"
+    },
+    {
+      "input": "4 1000 10 35\n1 2 4 5\n1000 500 250 200",
+      "output": "5"
+    },
+    {
+      "input": "2 10 7 11\n2 10\n6 1",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

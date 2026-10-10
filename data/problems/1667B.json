@@ -1,0 +1,35 @@
+{
+  "id": "1667B",
+  "source": "problemset",
+  "contest_id": 1667,
+  "problem_index": "B",
+  "name": "Optimal Partition",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 4499,
+  "problem_url": "https://codeforces.com/problemset/problem/1667/B",
+  "editorial_url": "https://codeforces.com/blog/entry/102013",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ integers. You should divide $$$a$$$ into continuous non-empty subarrays (there are $$$2^{n-1}$$$ ways to do that). Let $$$s=a_l+a_{l+1}+\\ldots+a_r$$$. The value of a subarray $$$a_l, a_{l+1}, \\ldots, a_r$$$ is: $$$(r-l+1)$$$ if $$$s \\gt 0$$$, $$$0$$$ if $$$s=0$$$, $$$-(r-l+1)$$$ if $$$s \\lt 0$$$. What is the maximum sum of values you can get with a partition?",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 5 \\cdot 10^5$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 5 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, ..., $$$a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print a single integer — the maximum sum of values you can get with an optimal parition.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n1 2 -3\n4\n0 -2 3 -4\n5\n-1 -2 3 -1 -1\n6\n-1 2 -3 4 -5 6\n7\n1 -1 -1 1 -1 -1 1",
+      "output": "1\n2\n1\n6\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

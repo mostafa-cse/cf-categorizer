@@ -1,0 +1,40 @@
+{
+  "id": "894D",
+  "source": "problemset",
+  "contest_id": 894,
+  "problem_index": "D",
+  "name": "Ralph And His Tour in Binary Country",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 1239,
+  "problem_url": "https://codeforces.com/problemset/problem/894/D",
+  "editorial_url": "https://codeforces.com/blog/entry/55884",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Ralph is in the Binary Country. The Binary Country consists of n cities and ( n - 1) bidirectional roads connecting the cities. The roads are numbered from 1 to ( n - 1) , the i -th road connects the city labeled (here ⌊ x ⌋ denotes the x rounded down to the nearest integer) and the city labeled ( i + 1) , and the length of the i -th road is L i . Now Ralph gives you m queries. In each query he tells you some city A i and an integer H i . He wants to make some tours starting from this city. He can choose any city in the Binary Country (including A i ) as the terminal city for a tour. He gains happiness ( H i - L ) during a tour, where L is the distance between the city A i and the terminal city. Ralph is interested in tours from A i in which he can gain positive happiness. For each query, compute the sum of happiness gains for all such tours. Ralph will never take the same tour twice or more (in one query), he will never pass the same city twice or more in one tour.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n ≤ 10 6 , 1 ≤ m ≤ 10 5 ). ( n - 1) lines follow, each line contains one integer L i ( 1 ≤ L i ≤ 10 5 ), which denotes the length of the i -th road. m lines follow, each line contains two integers A i and H i ( 1 ≤ A i ≤ n , 0 ≤ H i ≤ 10 7 ).",
+  "output_specification": "Print m lines, on the i -th line print one integer — the answer for the i -th query.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n5\n1 8\n2 4",
+      "output": "11\n4"
+    },
+    {
+      "input": "6 4\n2\n1\n1\n3\n2\n2 4\n1 3\n3 2\n1 7",
+      "output": "11\n6\n3\n28"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

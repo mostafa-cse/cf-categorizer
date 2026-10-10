@@ -1,0 +1,39 @@
+{
+  "id": "1379F1",
+  "source": "problemset",
+  "contest_id": 1379,
+  "problem_index": "F1",
+  "name": "Chess Strikes Back (easy version)",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 762,
+  "problem_url": "https://codeforces.com/problemset/problem/1379/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/80216",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Note that the difference between easy and hard versions is that in hard version unavailable cells can become available again and in easy version can't. You can make hacks only if all versions are solved. Ildar and Ivan are tired of chess, but they really like the chessboard, so they invented a new game. The field is a chessboard $$$2n \\times 2m$$$: it has $$$2n$$$ rows, $$$2m$$$ columns, and the cell in row $$$i$$$ and column $$$j$$$ is colored white if $$$i+j$$$ is even, and is colored black otherwise. The game proceeds as follows: Ildar marks some of the white cells of the chessboard as unavailable , and asks Ivan to place $$$n \\times m$$$ kings on the remaining white cells in such way, so that there are no kings attacking each other. A king can attack another king if they are located in the adjacent cells, sharing an edge or a corner. Ildar would like to explore different combinations of cells. Initially all cells are marked as available, and then he has $$$q$$$ queries. In each query he marks a cell as unavailable. After each query he would like to know whether it is possible to place the kings on the available cells in a desired way. Please help him!",
+  "input_specification": "The first line of input contains three integers $$$n$$$, $$$m$$$, $$$q$$$ ($$$1 \\leq n, m, q \\leq 200\\,000$$$) — the size of the board and the number of queries. $$$q$$$ lines follow, each of them contains a description of a query: two integers $$$i$$$ and $$$j$$$, denoting a white cell $$$(i, j)$$$ on the board ($$$1 \\leq i \\leq 2n$$$, $$$1 \\leq j \\leq 2m$$$, $$$i + j$$$ is even) that becomes unavailable. It's guaranteed, that each cell $$$(i, j)$$$ appears in input at most once.",
+  "output_specification": "Output $$$q$$$ lines, $$$i$$$-th line should contain answer for a board after $$$i$$$ queries of Ildar. This line should contain \" YES \" if it is possible to place the kings on the available cells in the desired way, or \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "1 3 3\n1 1\n1 5\n2 4",
+      "output": "YES\nYES\nNO"
+    },
+    {
+      "input": "3 2 7\n4 2\n6 4\n1 3\n2 2\n2 4\n4 4\n3 1",
+      "output": "YES\nYES\nNO\nNO\nNO\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:45",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "851B",
+  "source": "problemset",
+  "contest_id": 851,
+  "problem_index": "B",
+  "name": "Arpa and an exam about geometry",
+  "rating": 1400,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 5942,
+  "problem_url": "https://codeforces.com/problemset/problem/851/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54317",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Arpa is taking a geometry exam. Here is the last problem of the exam. You are given three points a , b , c . Find a point and an angle such that if we rotate the page around the point by the angle, the new position of a is the same as the old position of b , and the new position of b is the same as the old position of c . Arpa is doubting if the problem has a solution or not (i.e. if there exists a point and an angle satisfying the condition). Help Arpa determine if the question has a solution or not.",
+  "input_specification": "The only line contains six integers a x , a y , b x , b y , c x , c y ( | a x |, | a y |, | b x |, | b y |, | c x |, | c y | ≤ 10 9 ). It's guaranteed that the points are distinct.",
+  "output_specification": "Print \" Yes \" if the problem has a solution, \" No \" otherwise. You can print each letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "0 1 1 1 1 0",
+      "output": "Yes"
+    },
+    {
+      "input": "1 1 0 0 1000 1000",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

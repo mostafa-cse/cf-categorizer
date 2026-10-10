@@ -1,0 +1,38 @@
+{
+  "id": "1956F",
+  "source": "problemset",
+  "contest_id": 1956,
+  "problem_index": "F",
+  "name": "Nene and the Passing Game",
+  "rating": 3000,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "dsu",
+    "graphs",
+    "sortings"
+  ],
+  "solved_count": 770,
+  "problem_url": "https://codeforces.com/problemset/problem/1956/F",
+  "editorial_url": "https://codeforces.com/blog/entry/128426",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nene is training her team as a basketball coach. Nene's team consists of $$$n$$$ players, numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th player has an arm interval $$$[l_i,r_i]$$$. Two players $$$i$$$ and $$$j$$$ ($$$i \\neq j$$$) can pass the ball to each other if and only if $$$|i-j|\\in[l_i+l_j,r_i+r_j]$$$ (here, $$$|x|$$$ denotes the absolute value of $$$x$$$). Nene wants to test the cooperation ability of these players. In order to do this, she will hold several rounds of assessment. In each round, Nene will select a sequence of players $$$p_1,p_2,\\ldots,p_m$$$ such that players $$$p_i$$$ and $$$p_{i+1}$$$ can pass the ball to each other for all $$$1 \\le i \\lt m$$$. The length of the sequence $$$m$$$ can be chosen by Nene. Each player can appear in the sequence $$$p_1,p_2,\\ldots,p_m$$$ multiple times or not appear in it at all. Then, Nene will throw a ball to player $$$p_1$$$, player $$$p_1$$$ will pass the ball to player $$$p_2$$$ and so on... Player $$$p_m$$$ will throw a ball away from the basketball court so it can no longer be used. As a coach, Nene wants each of $$$n$$$ players to appear in at least one round of assessment. Since Nene has to go on a date after school, Nene wants you to calculate the minimum number of rounds of assessment needed to complete the task.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2\\cdot 10^5$$$). The description of test cases follows. The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot 10^6$$$) — the number of players. The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1\\leq l_i\\leq r_i\\leq n$$$) — the arm interval of the $$$i$$$-th player. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^6$$$.",
+  "output_specification": "For each test case, output one integer — the minimum number of rounds of assessment Nene needs to complete her work.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n1 1\n1 1\n2\n1 1\n2 2\n3\n1 3\n1 3\n1 3\n5\n1 1\n2 2\n1 5\n2 2\n1 1\n6\n1 2\n5 5\n2 3\n2 3\n2 2\n1 2",
+      "output": "2\n2\n2\n1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:18",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

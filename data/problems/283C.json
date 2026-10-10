@@ -1,0 +1,42 @@
+{
+  "id": "283C",
+  "source": "problemset",
+  "contest_id": 283,
+  "problem_index": "C",
+  "name": "Coin Troubles",
+  "rating": 2100,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1634,
+  "problem_url": "https://codeforces.com/problemset/problem/283/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7037",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the Isle of Guernsey there are n different types of coins. For each i (1 ≤ i ≤ n ) , coin of type i is worth a i cents. It is possible that a i = a j for some i and j ( i ≠ j ) . Bessie has some set of these coins totaling t cents. She tells Jessie q pairs of integers. For each i (1 ≤ i ≤ q ) , the pair b i , c i tells Jessie that Bessie has a strictly greater number of coins of type b i than coins of type c i . It is known that all b i are distinct and all c i are distinct. Help Jessie find the number of possible combinations of coins Bessie could have. Two combinations are considered different if there is some i (1 ≤ i ≤ n ) , such that the number of coins Bessie has of type i is different in the two combinations. Since the answer can be very large, output it modulo 1000000007 (10 9 + 7) . If there are no possible combinations of coins totaling t cents that satisfy Bessie's conditions, output 0.",
+  "input_specification": "The first line contains three space-separated integers, n , q and t (1 ≤ n ≤ 300; 0 ≤ q ≤ n ; 1 ≤ t ≤ 10 5 ) . The second line contains n space separated integers, a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 5 ) . The next q lines each contain two distinct space-separated integers, b i and c i (1 ≤ b i , c i ≤ n ; b i ≠ c i ) . It's guaranteed that all b i are distinct and all c i are distinct.",
+  "output_specification": "A single integer, the number of valid coin combinations that Bessie could have, modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "4 2 17\n3 1 2 5\n4 2\n3 4",
+      "output": "3"
+    },
+    {
+      "input": "3 2 6\n3 1 1\n1 2\n2 3",
+      "output": "0"
+    },
+    {
+      "input": "3 2 10\n1 2 3\n1 2\n2 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1436C",
+  "source": "problemset",
+  "contest_id": 1436,
+  "problem_index": "C",
+  "name": "Binary Search",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "combinatorics"
+  ],
+  "solved_count": 11916,
+  "problem_url": "https://codeforces.com/problemset/problem/1436/C",
+  "editorial_url": "https://codeforces.com/blog/entry/84024",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Andrey thinks he is truly a successful developer, but in reality he didn't know about the binary search algorithm until recently. After reading some literature Andrey understood that this algorithm allows to quickly find a certain number $$$x$$$ in an array. For an array $$$a$$$ indexed from zero, and an integer $$$x$$$ the pseudocode of the algorithm is as follows: Note that the elements of the array are indexed from zero, and the division is done in integers (rounding down). Andrey read that the algorithm only works if the array is sorted. However, he found this statement untrue, because there certainly exist unsorted arrays for which the algorithm find $$$x$$$! Andrey wants to write a letter to the book authors, but before doing that he must consider the permutations of size $$$n$$$ such that the algorithm finds $$$x$$$ in them. A permutation of size $$$n$$$ is an array consisting of $$$n$$$ distinct integers between $$$1$$$ and $$$n$$$ in arbitrary order. Help Andrey and find the number of permutations of size $$$n$$$ which contain $$$x$$$ at position $$$pos$$$ and for which the given implementation of the binary search algorithm finds $$$x$$$ (returns true). As the result may be extremely large, print the remainder of its division by $$$10^9+7$$$.",
+  "input_specification": "The only line of input contains integers $$$n$$$, $$$x$$$ and $$$pos$$$ ($$$1 \\le x \\le n \\le 1000$$$, $$$0 \\le pos \\le n - 1$$$) — the required length of the permutation, the number to search, and the required position of that number, respectively.",
+  "output_specification": "Print a single number — the remainder of the division of the number of valid permutations by $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 1 2",
+      "output": "6"
+    },
+    {
+      "input": "123 42 24",
+      "output": "824071958"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

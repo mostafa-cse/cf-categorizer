@@ -1,0 +1,48 @@
+{
+  "id": "1133D",
+  "source": "problemset",
+  "contest_id": 1133,
+  "problem_index": "D",
+  "name": "Zero Quantity Maximization",
+  "rating": 1500,
+  "tags": [
+    "hashing",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 17840,
+  "problem_url": "https://codeforces.com/problemset/problem/1133/D",
+  "editorial_url": "https://codeforces.com/blog/entry/65807",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$, each contains $$$n$$$ integers. You want to create a new array $$$c$$$ as follows: choose some real (i.e. not necessarily integer) number $$$d$$$, and then for every $$$i \\in [1, n]$$$ let $$$c_i := d \\cdot a_i + b_i$$$. Your goal is to maximize the number of zeroes in array $$$c$$$. What is the largest possible answer, if you choose $$$d$$$ optimally?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in both arrays. The second line contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, ..., $$$a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$). The third line contains $$$n$$$ integers $$$b_1$$$, $$$b_2$$$, ..., $$$b_n$$$ ($$$-10^9 \\le b_i \\le 10^9$$$).",
+  "output_specification": "Print one integer — the maximum number of zeroes in array $$$c$$$, if you choose $$$d$$$ optimally.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 4 5\n2 4 7 11 3",
+      "output": "2"
+    },
+    {
+      "input": "3\n13 37 39\n1 2 3",
+      "output": "2"
+    },
+    {
+      "input": "4\n0 0 0 0\n1 2 3 4",
+      "output": "0"
+    },
+    {
+      "input": "3\n1 2 -1\n-6 -12 6",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:47",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

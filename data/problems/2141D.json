@@ -1,0 +1,36 @@
+{
+  "id": "2141D",
+  "source": "problemset",
+  "contest_id": 2141,
+  "problem_index": "D",
+  "name": "Avoid Minimums",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 495,
+  "problem_url": "https://codeforces.com/problemset/problem/2141/D",
+  "editorial_url": "https://codeforces.com/blog/entry/146347",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer array $$$a_1, a_2, a_3, \\dots, a_n$$$. Your task is to make all elements of $$$a$$$ equal. In order to do it, you can perform the following operation at most $$$k$$$ times: choose any index $$$i$$$ from $$$1$$$ to $$$n$$$ and increase $$$a_i$$$ by one. You can choose any element of the array, but if the chosen $$$a_i$$$ is strictly greater than the current minimum of the array, you'll earn one coin. What is the maximum number of coins you can earn among all possible ways to make the array equal?",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Next, $$$t$$$ cases follow (all cases are independent). The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le k \\le 10^{12}$$$) — the size of array $$$a$$$ and the maximum number of operations you can perform. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array itself. It's guaranteed that the total sum of $$$n$$$ over all test cases doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if it's impossible to make all elements equal, print $$$-1$$$. Otherwise, print the maximum number of coins you can earn while making all elements equal.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 16\n1 10 2\n4 20\n6 2 4 9\n5 9\n7 7 7 7 7\n2 1000000000000\n1000000000 1000000000",
+      "output": "-1\n11\n0\n499999999999"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "852E",
+  "source": "problemset",
+  "contest_id": 852,
+  "problem_index": "E",
+  "name": "Casinos and travel",
+  "rating": 2100,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1255,
+  "problem_url": "https://codeforces.com/problemset/problem/852/E",
+  "editorial_url": "http://bubblecup.org/Content/Media/Booklet2017.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "John has just bought a new car and is planning a journey around the country. Country has N cities, some of which are connected by bidirectional roads. There are N - 1 roads and every city is reachable from any other city. Cities are labeled from 1 to N . John first has to select from which city he will start his journey. After that, he spends one day in a city and then travels to a randomly choosen city which is directly connected to his current one and which he has not yet visited. He does this until he can't continue obeying these rules. To select the starting city, he calls his friend Jack for advice. Jack is also starting a big casino business and wants to open casinos in some of the cities (max 1 per city, maybe nowhere). Jack knows John well and he knows that if he visits a city with a casino, he will gamble exactly once before continuing his journey. He also knows that if John enters a casino in a good mood, he will leave it in a bad mood and vice versa. Since he is John's friend, he wants him to be in a good mood at the moment when he finishes his journey. John is in a good mood before starting the journey. In how many ways can Jack select a starting city for John and cities where he will build casinos such that no matter how John travels, he will be in a good mood at the end? Print answer modulo 10 9 + 7 .",
+  "input_specification": "In the first line, a positive integer N (1 ≤ N ≤ 100000) , the number of cities. In the next N - 1 lines, two numbers a , b (1 ≤ a , b ≤ N ) separated by a single space meaning that cities a and b are connected by a bidirectional road.",
+  "output_specification": "Output one number, the answer to the problem modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "4"
+    },
+    {
+      "input": "3\n1 2\n2 3",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

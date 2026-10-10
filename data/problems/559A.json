@@ -1,0 +1,40 @@
+{
+  "id": "559A",
+  "source": "problemset",
+  "contest_id": 559,
+  "problem_index": "A",
+  "name": "Gerald's Hexagon",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "geometry",
+    "math"
+  ],
+  "solved_count": 11148,
+  "problem_url": "https://codeforces.com/problemset/problem/559/A",
+  "editorial_url": "https://codeforces.com/blog/entry/19237",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerald got a very curious hexagon for his birthday. The boy found out that all the angles of the hexagon are equal to . Then he measured the length of its sides, and found that each of them is equal to an integer number of centimeters. There the properties of the hexagon ended and Gerald decided to draw on it. He painted a few lines, parallel to the sides of the hexagon. The lines split the hexagon into regular triangles with sides of 1 centimeter. Now Gerald wonders how many triangles he has got. But there were so many of them that Gerald lost the track of his counting. Help the boy count the triangles.",
+  "input_specification": "The first and the single line of the input contains 6 space-separated integers a 1 , a 2 , a 3 , a 4 , a 5 and a 6 ( 1 ≤ a i ≤ 1000 ) — the lengths of the sides of the hexagons in centimeters in the clockwise order. It is guaranteed that the hexagon with the indicated properties and the exactly such sides exists.",
+  "output_specification": "Print a single integer — the number of triangles with the sides of one 1 centimeter, into which the hexagon is split.",
+  "sample_testcases": [
+    {
+      "input": "1 1 1 1 1 1",
+      "output": "6"
+    },
+    {
+      "input": "1 2 1 2 1 2",
+      "output": "13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

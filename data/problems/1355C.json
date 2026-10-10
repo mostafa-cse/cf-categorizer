@@ -1,0 +1,45 @@
+{
+  "id": "1355C",
+  "source": "problemset",
+  "contest_id": 1355,
+  "problem_index": "C",
+  "name": "Count Triangles",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 12468,
+  "problem_url": "https://codeforces.com/problemset/problem/1355/C",
+  "editorial_url": "https://codeforces.com/blog/entry/77491",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Like any unknown mathematician, Yuri has favourite numbers: $$$A$$$, $$$B$$$, $$$C$$$, and $$$D$$$, where $$$A \\leq B \\leq C \\leq D$$$. Yuri also likes triangles and once he thought: how many non-degenerate triangles with integer sides $$$x$$$, $$$y$$$, and $$$z$$$ exist, such that $$$A \\leq x \\leq B \\leq y \\leq C \\leq z \\leq D$$$ holds? Yuri is preparing problems for a new contest now, so he is very busy. That's why he asked you to calculate the number of triangles with described property. The triangle is called non-degenerate if and only if its vertices are not collinear.",
+  "input_specification": "The first line contains four integers: $$$A$$$, $$$B$$$, $$$C$$$ and $$$D$$$ ($$$1 \\leq A \\leq B \\leq C \\leq D \\leq 5 \\cdot 10^5$$$) — Yuri's favourite numbers.",
+  "output_specification": "Print the number of non-degenerate triangles with integer sides $$$x$$$, $$$y$$$, and $$$z$$$ such that the inequality $$$A \\leq x \\leq B \\leq y \\leq C \\leq z \\leq D$$$ holds.",
+  "sample_testcases": [
+    {
+      "input": "1 2 3 4",
+      "output": "4"
+    },
+    {
+      "input": "1 2 2 5",
+      "output": "3"
+    },
+    {
+      "input": "500000 500000 500000 500000",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

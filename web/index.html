@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CF Categorizer — Competitive Programming Curriculum Explorer</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cf: {
+              dark: '#0b0f17',
+              panel: '#111827',
+              card: '#162032',
+              border: '#1f2d44'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- MathJax Configuration for LaTeX Formula Rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-[#0b0f17] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Navigation Header -->
+  <header class="sticky top-0 z-30 h-16 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between gap-4">
+    <!-- Brand / Logo -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-sky-500/20 text-white font-black text-lg">
+        CF
+      </div>
+      <div>
+        <h1 class="text-base font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+          CF Categorizer
+        </h1>
+        <p class="text-[10px] text-slate-400 font-medium">576-Technique Competitive Programming Curriculum</p>
+      </div>
+    </div>
+
+    <!-- Global Search -->
+    <div class="flex-1 max-w-lg mx-auto relative hidden sm:block">
+      <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400 text-sm">
+        🔍
+      </div>
+      <input type="text" id="global-search" placeholder="Search by Problem ID (e.g. 1497D), name, or algorithm trick... (Press '/' to focus)" 
+             class="w-full pl-9 pr-10 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+      <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-[11px] font-mono text-slate-500">
+        /
+      </div>
+    </div>
+
+    <!-- Right Top Header Actions & Stats -->
+    <div class="flex items-center gap-3 shrink-0">
+      <div id="top-stats-container" class="hidden xl:flex items-center">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Quick Solved / Bookmark Stats -->
+      <div class="flex items-center gap-1.5 text-xs font-semibold">
+        <button onclick="setStatusFilter('solved')" class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 hover:bg-emerald-500/20 transition-colors" title="View Solved Problems">
+          <span>✓</span>
+          <span id="header-solved-count">0</span>
+        </button>
+        <button onclick="setStatusFilter('bookmarked')" class="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500/20 transition-colors" title="View Bookmarked Problems">
+          <span>★</span>
+          <span id="header-bookmarked-count">0</span>
+        </button>
+      </div>
+
+      <!-- Pick Random Problem Button -->
+      <button onclick="pickRandomProblem()" class="px-3 py-1.5 rounded-lg bg-sky-500 text-white hover:bg-sky-400 transition-colors text-xs font-semibold flex items-center gap-1.5 shadow-sm shadow-sky-500/20">
+        <span>🎲</span>
+        <span class="hidden md:inline">Random Problem</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout Container -->
+  <div class="flex-1 flex flex-col md:flex-row overflow-hidden max-w-[1920px] w-full mx-auto">
+
+    <!-- Left Sidebar: Taxonomy Explorer (11 Topics -> Subtopics -> Subsubtopics) -->
+    <aside class="w-full md:w-80 lg:w-96 border-r border-slate-800/80 bg-slate-950/40 flex flex-col shrink-0 h-[calc(100vh-4rem)] sticky top-16">
+      <!-- Sidebar Header -->
+      <div class="p-3.5 border-b border-slate-800/80 flex flex-col gap-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+            <span>🗺️</span> Taxonomy Explorer
+          </span>
+          <button onclick="selectAllTopics()" class="text-[11px] text-sky-400 hover:text-sky-300 font-medium transition-colors">
+            Reset All
+          </button>
+        </div>
+        <!-- Search within taxonomy -->
+        <div class="relative">
+          <input type="text" id="taxonomy-search" placeholder="Filter techniques (e.g. seg, dp, flow)..." 
+                 class="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500 transition-colors">
+        </div>
+      </div>
+
+      <!-- Scrollable Taxonomy Tree -->
+      <div id="taxonomy-tree-container" class="flex-1 overflow-y-auto p-3 space-y-1">
+        <div class="py-12 flex justify-center text-slate-500 text-xs">Loading curriculum tree...</div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area: Problem Explorer & Catalog -->
+    <main class="flex-1 flex flex-col h-[calc(100vh-4rem)] overflow-y-auto">
+
+      <!-- Breadcrumbs & Technique Header Banner -->
+      <div class="px-6 pt-5 pb-3">
+        <div id="breadcrumbs-container" class="text-xs text-slate-400 mb-2 flex items-center gap-1.5 flex-wrap">
+          <span class="text-slate-200 font-semibold">All Topics</span>
+        </div>
+
+        <div id="technique-header-card" class="glass-panel rounded-xl p-5 mb-3 hidden">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Filter & Control Toolbar -->
+        <div class="glass-panel rounded-xl p-4 border border-slate-800/90 flex flex-col gap-3.5">
+          <!-- Importance Filter -->
+          <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-slate-800/60">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs text-slate-400 font-medium mr-1">Importance:</span>
+              <button onclick="setImportanceFilter('all')" data-filter-importance="all" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500 text-white transition-colors">
+                All
+              </button>
+              <button onclick="setImportanceFilter('***')" data-filter-importance="***" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-colors">
+                ★★★ Masterpieces (Must-Solve)
+              </button>
+              <button onclick="setImportanceFilter('**')" data-filter-importance="**" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-colors">
+                ★★ Core Techniques
+              </button>
+              <button onclick="setImportanceFilter('*')" data-filter-importance="*" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 transition-colors">
+                ★ Practice
+              </button>
+            </div>
+
+            <!-- Sort By Selector -->
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-slate-400 font-medium">Sort:</span>
+              <select onchange="setSortOrder(this.value)" class="bg-slate-900 border border-slate-800 text-xs text-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-none focus:border-sky-500">
+                <option value="rating_asc">Rating: Low to High</option>
+                <option value="rating_desc">Rating: High to Low</option>
+                <option value="solves_desc">Most Solved</option>
+                <option value="importance_desc">Importance (Masterpieces First)</option>
+                <option value="id_asc">Problem ID</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Difficulty Rating Presets & Custom Rating -->
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="text-xs text-slate-400 font-medium mr-1">Rating:</span>
+              <button onclick="setRatingPreset(null, null)" class="px-2.5 py-1 rounded text-xs bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800 font-mono">All</button>
+              <button onclick="setRatingPreset(1400, 1599)" class="px-2.5 py-1 rounded text-xs cf-rating-cyan font-mono">1400-1599</button>
+              <button onclick="setRatingPreset(1600, 1899)" class="px-2.5 py-1 rounded text-xs cf-rating-blue font-mono">1600-1899</button>
+              <button onclick="setRatingPreset(1900, 2199)" class="px-2.5 py-1 rounded text-xs cf-rating-purple font-mono">1900-2199</button>
+              <button onclick="setRatingPreset(2200, 2399)" class="px-2.5 py-1 rounded text-xs cf-rating-orange font-mono">2200-2399</button>
+              <button onclick="setRatingPreset(2400, 2999)" class="px-2.5 py-1 rounded text-xs cf-rating-red font-mono">2400-2999</button>
+              <button onclick="setRatingPreset(3000, null)" class="px-2.5 py-1 rounded text-xs cf-rating-legendary font-mono">3000+</button>
+            </div>
+
+            <!-- Custom Min/Max -->
+            <div class="flex items-center gap-1.5 text-xs text-slate-400">
+              <input type="number" id="filter-min-rating" placeholder="Min" class="w-16 px-2 py-1 bg-slate-900 border border-slate-800 rounded text-slate-200 text-center font-mono">
+              <span>-</span>
+              <input type="number" id="filter-max-rating" placeholder="Max" class="w-16 px-2 py-1 bg-slate-900 border border-slate-800 rounded text-slate-200 text-center font-mono">
+              <button onclick="applyCustomRating()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 font-medium transition-colors">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Problems Result Counter -->
+        <div class="flex items-center justify-between text-xs text-slate-400 pt-3 pb-1 px-1">
+          <div id="problems-count-badge" class="font-medium text-slate-300 font-mono">Loading problems...</div>
+          <button onclick="resetFilters()" class="text-slate-500 hover:text-slate-300 transition-colors">Clear all filters</button>
+        </div>
+      </div>
+
+      <!-- Problem Cards Grid -->
+      <div class="px-6 pb-6 flex-1">
+        <div id="problems-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <!-- Injected via app.js -->
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination-container" class="mt-6">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Full Problem Details & Statement Modal -->
+  <div id="problem-modal" class="fixed inset-0 z-50 modal-backdrop hidden flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-[#101726] border border-slate-800 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl relative animate-fade-in flex flex-col" id="problem-modal-content">
+      <!-- Populated via openProblemModal() -->
+    </div>
+  </div>
+
+  <!-- Custom App JS -->
+  <script src="/static/app.js"></script>
+</body>
+</html>

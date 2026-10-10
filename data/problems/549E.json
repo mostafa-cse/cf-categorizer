@@ -1,0 +1,39 @@
+{
+  "id": "549E",
+  "source": "problemset",
+  "contest_id": 549,
+  "problem_index": "E",
+  "name": "Sasha Circle",
+  "rating": 2700,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 179,
+  "problem_url": "https://codeforces.com/problemset/problem/549/E",
+  "editorial_url": "https://codeforces.com/blog/entry/18363",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Berlanders like to eat cones after a hard day. Misha Square and Sasha Circle are local authorities of Berland. Each of them controls its points of cone trade. Misha has n points, Sasha — m . Since their subordinates constantly had conflicts with each other, they decided to build a fence in the form of a circle, so that the points of trade of one businessman are strictly inside a circle, and points of the other one are strictly outside. It doesn't matter which of the two gentlemen will have his trade points inside the circle. Determine whether they can build a fence or not.",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n , m ≤ 10000) , numbers of Misha's and Sasha's trade points respectively. The next n lines contains pairs of space-separated integers M x , M y ( - 10 4 ≤ M x , M y ≤ 10 4 ), coordinates of Misha's trade points. The next m lines contains pairs of space-separated integers S x , S y ( - 10 4 ≤ S x , S y ≤ 10 4 ), coordinates of Sasha's trade points. It is guaranteed that all n + m points are distinct.",
+  "output_specification": "The only output line should contain either word \" YES \" without quotes in case it is possible to build a such fence or word \" NO \" in the other case.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n-1 0\n1 0\n0 -1\n0 1",
+      "output": "NO"
+    },
+    {
+      "input": "4 4\n1 0\n0 1\n-1 0\n0 -1\n1 1\n-1 1\n-1 -1\n1 -1",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

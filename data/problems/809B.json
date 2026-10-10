@@ -1,0 +1,35 @@
+{
+  "id": "809B",
+  "source": "problemset",
+  "contest_id": 809,
+  "problem_index": "B",
+  "name": "Glad to see you!",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "interactive"
+  ],
+  "solved_count": 1838,
+  "problem_url": "https://codeforces.com/problemset/problem/809/B",
+  "editorial_url": "https://codeforces.com/blog/entry/52099",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. In the output section below you will see the information about flushing the output. On Sunday Leha the hacker took Nura from the house where she lives and went with her to one of the most luxurious restaurants in Vičkopolis. Upon arrival, they left the car in a huge parking lot near the restaurant and hurried inside the building. In the restaurant a polite waiter immediately brought the menu to Leha and Noora, consisting of n dishes. It is interesting that all dishes in the menu are numbered with integers from 1 to n . After a little thought, the girl ordered exactly k different dishes from available in the menu. To pass the waiting time while the chefs prepare ordered dishes, the girl invited the hacker to play a game that will help them get to know each other better. The game itself is very simple: Noora wants Leha to guess any two dishes among all ordered. At the same time, she is ready to answer only one type of questions. Leha can say two numbers x and y (1 ≤ x , y ≤ n ) . After that Noora chooses some dish a for the number x such that, at first, a is among the dishes Noora ordered ( x can be equal to a ), and, secondly, the value is the minimum possible. By the same rules the girl chooses dish b for y . After that Noora says « TAK » to Leha, if , and « NIE » otherwise. However, the restaurant is preparing quickly, so Leha has enough time to ask no more than 60 questions. After that he should name numbers of any two dishes Noora ordered. Help Leha to solve this problem!",
+  "input_specification": "There are two numbers n and k (2 ≤ k ≤ n ≤ 10 5 ) in the single line of input denoting the number of dishes in the menu and the number of dishes Noora ordered.",
+  "output_specification": "If you want to provide an answer, output a string of the form 2 x y (1 ≤ x , y ≤ n , x ≠ y ) , if you think the dishes x and y was among dishes ordered by Noora. After that, flush the output and terminate your program.",
+  "sample_testcases": [
+    {
+      "input": "3 2\nNIE\nTAK\nNIE\nTAK\nTAK\nTAK",
+      "output": "1 1 2\n1 2 1\n1 1 3\n1 3 1\n1 2 3\n1 3 2\n2 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

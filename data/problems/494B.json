@@ -1,0 +1,43 @@
+{
+  "id": "494B",
+  "source": "problemset",
+  "contest_id": 494,
+  "problem_index": "B",
+  "name": "Obsessive String",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 3300,
+  "problem_url": "https://codeforces.com/problemset/problem/494/B",
+  "editorial_url": "https://codeforces.com/blog/entry/15148",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hamed has recently found a string t and suddenly became quite fond of it. He spent several days trying to find all occurrences of t in other strings he had. Finally he became tired and started thinking about the following problem. Given a string s how many ways are there to extract k ≥ 1 non-overlapping substrings from it such that each of them contains string t as a substring? More formally, you need to calculate the number of ways to choose two sequences a 1 , a 2 , ..., a k and b 1 , b 2 , ..., b k satisfying the following requirements: k ≥ 1 t is a substring of string s a i s a i + 1 ... s b i (string s is considered as 1 -indexed). As the number of ways can be rather large print it modulo 10 9 + 7 .",
+  "input_specification": "Input consists of two lines containing strings s and t ( 1 ≤ | s |, | t | ≤ 10 5 ). Each string consists of lowercase Latin letters.",
+  "output_specification": "Print the answer in a single line.",
+  "sample_testcases": [
+    {
+      "input": "ababa\naba",
+      "output": "5"
+    },
+    {
+      "input": "welcometoroundtwohundredandeightytwo\nd",
+      "output": "274201"
+    },
+    {
+      "input": "ddd\nd",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

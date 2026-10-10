@@ -1,0 +1,59 @@
+{
+  "id": "65A",
+  "source": "problemset",
+  "contest_id": 65,
+  "problem_index": "A",
+  "name": "Harry Potter and Three Spells",
+  "rating": 1800,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2062,
+  "problem_url": "https://codeforces.com/problemset/problem/65/A",
+  "editorial_url": "https://codeforces.com/blog/entry/1431",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A long time ago (probably even in the first book), Nicholas Flamel, a great alchemist and the creator of the Philosopher's Stone, taught Harry Potter three useful spells. The first one allows you to convert a grams of sand into b grams of lead, the second one allows you to convert c grams of lead into d grams of gold and third one allows you to convert e grams of gold into f grams of sand. When Harry told his friends about these spells, Ron Weasley was amazed. After all, if they succeed in turning sand into lead, lead into gold, and then turning part of the gold into sand again and so on, then it will be possible to start with a small amount of sand and get huge amounts of gold! Even an infinite amount of gold! Hermione Granger, by contrast, was skeptical about that idea. She argues that according to the law of conservation of matter getting an infinite amount of matter, even using magic, is impossible. On the contrary, the amount of matter may even decrease during transformation, being converted to magical energy. Though Hermione's theory seems convincing, Ron won't believe her. As far as Ron is concerned, Hermione made up her law of conservation of matter to stop Harry and Ron wasting their time with this nonsense, and to make them go and do homework instead. That's why Ron has already collected a certain amount of sand for the experiments. A quarrel between the friends seems unavoidable... Help Harry to determine which one of his friends is right, and avoid the quarrel after all. To do this you have to figure out whether it is possible to get the amount of gold greater than any preassigned number from some finite amount of sand.",
+  "input_specification": "The first line contains 6 integers a , b , c , d , e , f ( 0 ≤ a , b , c , d , e , f ≤ 1000 ).",
+  "output_specification": "Print \"Ron\", if it is possible to get an infinitely large amount of gold having a certain finite amount of sand (and not having any gold and lead at all), i.e., Ron is right. Otherwise, print \"Hermione\".",
+  "sample_testcases": [
+    {
+      "input": "100 200 250 150 200 250",
+      "output": "Ron"
+    },
+    {
+      "input": "100 50 50 200 200 100",
+      "output": "Hermione"
+    },
+    {
+      "input": "100 10 200 20 300 30",
+      "output": "Hermione"
+    },
+    {
+      "input": "0 0 0 0 0 0",
+      "output": "Hermione"
+    },
+    {
+      "input": "1 1 0 1 1 1",
+      "output": "Ron"
+    },
+    {
+      "input": "1 0 1 2 1 2",
+      "output": "Hermione"
+    },
+    {
+      "input": "100 1 100 1 0 1",
+      "output": "Ron"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

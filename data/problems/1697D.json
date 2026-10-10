@@ -1,0 +1,36 @@
+{
+  "id": "1697D",
+  "source": "problemset",
+  "contest_id": 1697,
+  "problem_index": "D",
+  "name": "Guess The String",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "interactive"
+  ],
+  "solved_count": 5105,
+  "problem_url": "https://codeforces.com/problemset/problem/1697/D",
+  "editorial_url": "https://codeforces.com/blog/entry/103835",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is an interactive problem. Remember to flush your output while communicating with the testing program. You may use fflush(stdout) in C++, system.out.flush() in Java, stdout.flush() in Python or flush(output) in Pascal to flush the output. If you use some other programming language, consult its documentation. You may also refer to the guide on interactive problems: https://codeforces.com/blog/entry/45307 . The jury has chosen a string $$$s$$$ consisting of $$$n$$$ characters; each character of $$$s$$$ is a lowercase Latin letter. Your task is to guess this string; initially, you know only its length. You may ask queries of two types: $$$1$$$ $$$i$$$ — the query of the first type, where $$$i$$$ is an integer from $$$1$$$ to $$$n$$$. In response to this query, the jury will tell you the character $$$s_i$$$; $$$2$$$ $$$l$$$ $$$r$$$ — the query of the second type, where $$$l$$$ and $$$r$$$ are integers such that $$$1 \\le l \\le r \\le n$$$. In response to this query, the jury will tell you the number of different characters among $$$s_l, s_{l+1}, \\dots, s_r$$$. You are allowed to ask no more than $$$26$$$ queries of the first type, and no more than $$$6000$$$ queries of the second type. Your task is to restore the string $$$s$$$. For each test in this problem, the string $$$s$$$ is fixed beforehand, and will be the same for every submission.",
+  "input_specification": "Initially, the jury program sends one integer $$$n$$$ on a separate line — the size of $$$s$$$ ($$$1 \\le n \\le 1000$$$).",
+  "output_specification": "To give the answer, print one line ! s with a line break in the end , where $$$s$$$ should be the string picked by the jury. After that, your program should flush the output and terminate gracefully.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\nu\n2\ng\ne\ns\n1",
+      "output": "? 2 1 5\n? 1 2\n? 2 1 2\n? 1 1\n? 1 3\n? 1 4\n? 2 4 5\n! guess"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:28",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

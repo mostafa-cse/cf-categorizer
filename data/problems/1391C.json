@@ -1,0 +1,41 @@
+{
+  "id": "1391C",
+  "source": "problemset",
+  "contest_id": 1391,
+  "problem_index": "C",
+  "name": "Cyclic Permutations ",
+  "rating": 1500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 16250,
+  "problem_url": "https://codeforces.com/problemset/problem/1391/C",
+  "editorial_url": "https://codeforces.com/blog/entry/81265",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array) and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array). Consider a permutation $$$p$$$ of length $$$n$$$, we build a graph of size $$$n$$$ using it as follows: For every $$$1 \\leq i \\leq n$$$, find the largest $$$j$$$ such that $$$1 \\leq j \\lt i$$$ and $$$p_j \\gt p_i$$$, and add an undirected edge between node $$$i$$$ and node $$$j$$$ For every $$$1 \\leq i \\leq n$$$, find the smallest $$$j$$$ such that $$$i \\lt j \\leq n$$$ and $$$p_j \\gt p_i$$$, and add an undirected edge between node $$$i$$$ and node $$$j$$$ In cases where no such $$$j$$$ exists, we make no edges. Also, note that we make edges between the corresponding indices, not the values at those indices. For clarity, consider as an example $$$n = 4$$$, and $$$p = [3,1,4,2]$$$; here, the edges of the graph are $$$(1,3),(2,1),(2,3),(4,3)$$$. A permutation $$$p$$$ is cyclic if the graph built using $$$p$$$ has at least one simple cycle. Given $$$n$$$, find the number of cyclic permutations of length $$$n$$$. Since the number may be very large, output it modulo $$$10^9+7$$$. Please refer to the Notes section for the formal definition of a simple cycle",
+  "input_specification": "The first and only line contains a single integer $$$n$$$ ($$$3 \\le n \\le 10^6$$$).",
+  "output_specification": "Output a single integer $$$0 \\leq x \\lt 10^9+7$$$, the number of cyclic permutations of length $$$n$$$ modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "16"
+    },
+    {
+      "input": "583291",
+      "output": "135712853"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

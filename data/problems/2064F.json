@@ -1,0 +1,37 @@
+{
+  "id": "2064F",
+  "source": "problemset",
+  "contest_id": 2064,
+  "problem_index": "F",
+  "name": "We Be Summing",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 750,
+  "problem_url": "https://codeforces.com/problemset/problem/2064/F",
+  "editorial_url": "https://codeforces.com/blog/entry/138912",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of length $$$n$$$ and an integer $$$k$$$. Call a non-empty array $$$b$$$ of length $$$m$$$ epic if there exists an integer $$$i$$$ where $$$1 \\le i \\lt m$$$ and $$$\\min(b_1,\\ldots,b_i) + \\max(b_{i + 1},\\ldots,b_m) = k$$$. Count the number of epic subarrays$$$^{\\text{∗}}$$$ of $$$a$$$. $$$^{\\text{∗}}$$$An array $$$a$$$ is a subarray of an array $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$; $$$n \\lt k \\lt 2 \\cdot n$$$) — the length of the array $$$a$$$ and $$$k$$$. The second line of each testcase contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\le a_i \\le n$$$). The sum of $$$n$$$ across all testcases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, output the number of epic contiguous subarrays of $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 7\n1 2 3 4 5\n7 13\n6 6 6 6 7 7 7\n6 9\n4 5 6 6 5 1\n5 9\n5 5 4 5 5\n5 6\n3 3 3 3 3\n6 8\n4 5 4 5 4 5",
+      "output": "2\n12\n3\n8\n10\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:35",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "756A",
+  "source": "problemset",
+  "contest_id": 756,
+  "problem_index": "A",
+  "name": "Pavel and barbecue",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar"
+  ],
+  "solved_count": 3244,
+  "problem_url": "https://codeforces.com/problemset/problem/756/A",
+  "editorial_url": "https://codeforces.com/blog/entry/49946",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Pavel cooks barbecue. There are n skewers, they lay on a brazier in a row, each on one of n positions. Pavel wants each skewer to be cooked some time in every of n positions in two directions: in the one it was directed originally and in the reversed direction. Pavel has a plan: a permutation p and a sequence b 1 , b 2 , ..., b n , consisting of zeros and ones. Each second Pavel move skewer on position i to position p i , and if b i equals 1 then he reverses it. So he hope that every skewer will visit every position in both directions. Unfortunately, not every pair of permutation p and sequence b suits Pavel. What is the minimum total number of elements in the given permutation p and the given sequence b he needs to change so that every skewer will visit each of 2 n placements? Note that after changing the permutation should remain a permutation as well. There is no problem for Pavel, if some skewer visits some of the placements several times before he ends to cook. In other words, a permutation p and a sequence b suit him if there is an integer k ( k ≥ 2 n ), so that after k seconds each skewer visits each of the 2 n placements. It can be shown that some suitable pair of permutation p and sequence b exists for any n .",
+  "input_specification": "The first line contain the integer n ( 1 ≤ n ≤ 2·10 5 ) — the number of skewers. The second line contains a sequence of integers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ n ) — the permutation, according to which Pavel wants to move the skewers. The third line contains a sequence b 1 , b 2 , ..., b n consisting of zeros and ones, according to which Pavel wants to reverse the skewers.",
+  "output_specification": "Print single integer — the minimum total number of elements in the given permutation p and the given sequence b he needs to change so that every skewer will visit each of 2 n placements.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 3 2 1\n0 1 1 1",
+      "output": "2"
+    },
+    {
+      "input": "3\n2 3 1\n0 0 0",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

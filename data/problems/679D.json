@@ -1,0 +1,51 @@
+{
+  "id": "679D",
+  "source": "problemset",
+  "contest_id": 679,
+  "problem_index": "D",
+  "name": "Bear and Chase",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 407,
+  "problem_url": "https://codeforces.com/problemset/problem/679/D",
+  "editorial_url": "https://codeforces.com/blog/entry/45310",
+  "time_limit": "7 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bearland has n cities, numbered 1 through n . There are m bidirectional roads. The i -th road connects two distinct cities a i and b i . No two roads connect the same pair of cities. It's possible to get from any city to any other city (using one or more roads). The distance between cities a and b is defined as the minimum number of roads used to travel between a and b . Limak is a grizzly bear. He is a criminal and your task is to catch him, or at least to try to catch him. You have only two days (today and tomorrow) and after that Limak is going to hide forever. Your main weapon is BCD (Bear Criminal Detector). Where you are in some city, you can use BCD and it tells you the distance between you and a city where Limak currently is. Unfortunately, BCD can be used only once a day. You don't know much about Limak's current location. You assume that he is in one of n cities, chosen uniformly at random (each city with probability ). You decided for the following plan: Choose one city and use BCD there. After using BCD you can try to catch Limak (but maybe it isn't a good idea). In this case you choose one city and check it. You win if Limak is there. Otherwise, Limak becomes more careful and you will never catch him (you loose). Wait 24 hours to use BCD again. You know that Limak will change his location during that time. In detail, he will choose uniformly at random one of roads from his initial city, and he will use the chosen road, going to some other city. Tomorrow, you will again choose one city and use BCD there. Finally, you will try to catch Limak. You will choose one city and check it. You will win if Limak is there, and loose otherwise. Each time when you choose one of cities, you can choose any of n cities. Let's say it isn't a problem for you to quickly get somewhere. What is the probability of finding Limak, if you behave optimally?",
+  "input_specification": "The first line of the input contains two integers n and m ( 2 ≤ n ≤ 400 , ) — the number of cities and the number of roads, respectively. Then, m lines follow. The i -th of them contains two integers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ) — cities connected by the i -th road. No two roads connect the same pair of cities. It's possible to get from any city to any other city.",
+  "output_specification": "Print one real number — the probability of finding Limak, if you behave optimally. Your answer will be considered correct if its absolute error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct if | a - b | ≤ 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n1 3\n2 3",
+      "output": "0.833333333333"
+    },
+    {
+      "input": "5 4\n1 2\n3 1\n5 1\n1 4",
+      "output": "1.000000000000"
+    },
+    {
+      "input": "4 4\n1 2\n1 3\n2 3\n1 4",
+      "output": "0.916666666667"
+    },
+    {
+      "input": "5 5\n1 2\n2 3\n3 4\n4 5\n1 5",
+      "output": "0.900000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

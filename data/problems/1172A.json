@@ -1,0 +1,43 @@
+{
+  "id": "1172A",
+  "source": "problemset",
+  "contest_id": 1172,
+  "problem_index": "A",
+  "name": "Nauuo and Cards",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 5306,
+  "problem_url": "https://codeforces.com/problemset/problem/1172/A",
+  "editorial_url": "https://codeforces.com/blog/entry/67511",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Nauuo is a girl who loves playing cards. One day she was playing cards but found that the cards were mixed with some empty ones. There are $$$n$$$ cards numbered from $$$1$$$ to $$$n$$$, and they were mixed with another $$$n$$$ empty cards. She piled up the $$$2n$$$ cards and drew $$$n$$$ of them. The $$$n$$$ cards in Nauuo's hands are given. The remaining $$$n$$$ cards in the pile are also given in the order from top to bottom. In one operation she can choose a card in her hands and play it — put it at the bottom of the pile, then draw the top card from the pile. Nauuo wants to make the $$$n$$$ numbered cards piled up in increasing order (the $$$i$$$-th card in the pile from top to bottom is the card $$$i$$$) as quickly as possible. Can you tell her the minimum number of operations?",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1\\le n\\le 2\\cdot 10^5$$$) — the number of numbered cards. The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$0\\le a_i\\le n$$$) — the initial cards in Nauuo's hands. $$$0$$$ represents an empty card. The third line contains $$$n$$$ integers $$$b_1,b_2,\\ldots,b_n$$$ ($$$0\\le b_i\\le n$$$) — the initial cards in the pile, given in order from top to bottom. $$$0$$$ represents an empty card. It is guaranteed that each number from $$$1$$$ to $$$n$$$ appears exactly once, either in $$$a_{1..n}$$$ or $$$b_{1..n}$$$.",
+  "output_specification": "The output contains a single integer — the minimum number of operations to make the $$$n$$$ numbered cards piled up in increasing order.",
+  "sample_testcases": [
+    {
+      "input": "3\n0 2 0\n3 0 1",
+      "output": "2"
+    },
+    {
+      "input": "3\n0 2 0\n1 0 3",
+      "output": "4"
+    },
+    {
+      "input": "11\n0 0 0 5 0 0 0 4 0 0 11\n9 2 6 0 8 1 7 0 3 0 10",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

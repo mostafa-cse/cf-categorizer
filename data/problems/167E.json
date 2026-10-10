@@ -1,0 +1,53 @@
+{
+  "id": "167E",
+  "source": "problemset",
+  "contest_id": 167,
+  "problem_index": "E",
+  "name": "Wizards and Bets",
+  "rating": 2900,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 741,
+  "problem_url": "https://codeforces.com/problemset/problem/167/E",
+  "editorial_url": "https://codeforces.com/blog/entry/4214",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In some country live wizards. They like to make weird bets. Two wizards draw an acyclic directed graph with n vertices and m edges (the graph's vertices are numbered from 1 to n ). A source is a vertex with no incoming edges, and a sink is the vertex with no outgoing edges. Note that a vertex could be the sink and the source simultaneously. In the wizards' graph the number of the sinks and the sources is the same. Wizards numbered the sources in the order of increasing numbers of the vertices from 1 to k . The sinks are numbered from 1 to k in the similar way. To make a bet, they, as are real wizards, cast a spell, which selects a set of k paths from all sources to the sinks in such a way that no two paths intersect at the vertices. In this case, each sink has exactly one path going to it from exactly one source. Let's suppose that the i -th sink has a path going to it from the a i 's source. Then let's call pair ( i , j ) an inversion if i < j and a i > a j . If the number of inversions among all possible pairs ( i , j ) , such that (1 ≤ i < j ≤ k ) , is even, then the first wizard wins (the second one gives him one magic coin). Otherwise, the second wizard wins (he gets one magic coin from the first one). Our wizards are captured with feverish excitement, so they kept choosing new paths again and again for so long that eventually they have chosen every possible set of paths for exactly once. The two sets of non-intersecting pathes are considered to be different, if and only if there is an edge, which lies at some path in one set and doesn't lie at any path of another set. To check their notes, they asked you to count the total winnings of the first player for all possible sets of paths modulo a prime number p .",
+  "input_specification": "The first line contains three space-separated integers n , m , p ( 1 ≤ n ≤ 600 , 0 ≤ m ≤ 10 5 , 2 ≤ p ≤ 10 9 + 7 ). It is guaranteed that p is prime number. Next m lines contain edges of the graph. Each line contains a pair of space-separated integers, a i b i — an edge from vertex a i to vertex b i . It is guaranteed that the graph is acyclic and that the graph contains the same number of sources and sinks. Please note that the graph can have multiple edges.",
+  "output_specification": "Print the answer to the problem — the total winnings of the first player modulo a prime number p . Please note that the winnings may be negative, but the modulo residue must be non-negative (see the sample).",
+  "sample_testcases": [
+    {
+      "input": "4 2 1000003\n1 3\n2 4",
+      "output": "1"
+    },
+    {
+      "input": "4 2 1000003\n4 1\n3 2",
+      "output": "1000002"
+    },
+    {
+      "input": "4 4 1000003\n2 1\n2 4\n3 1\n3 4",
+      "output": "0"
+    },
+    {
+      "input": "6 5 1000003\n1 4\n1 5\n1 6\n2 6\n3 6",
+      "output": "0"
+    },
+    {
+      "input": "5 2 1000003\n5 1\n3 4",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

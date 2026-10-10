@@ -1,0 +1,43 @@
+{
+  "id": "1237C2",
+  "source": "problemset",
+  "contest_id": 1237,
+  "problem_index": "C2",
+  "name": "Balanced Removals (Harder)",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "divide and conquer",
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 4617,
+  "problem_url": "https://codeforces.com/problemset/problem/1237/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/70547",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "This is a harder version of the problem. In this version, $$$n \\le 50\\,000$$$. There are $$$n$$$ distinct points in three-dimensional space numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th point has coordinates $$$(x_i, y_i, z_i)$$$. The number of points $$$n$$$ is even. You'd like to remove all $$$n$$$ points using a sequence of $$$\\frac{n}{2}$$$ snaps. In one snap, you can remove any two points $$$a$$$ and $$$b$$$ that have not been removed yet and form a perfectly balanced pair. A pair of points $$$a$$$ and $$$b$$$ is perfectly balanced if no other point $$$c$$$ (that has not been removed yet) lies within the axis-aligned minimum bounding box of points $$$a$$$ and $$$b$$$. Formally, point $$$c$$$ lies within the axis-aligned minimum bounding box of points $$$a$$$ and $$$b$$$ if and only if $$$\\min(x_a, x_b) \\le x_c \\le \\max(x_a, x_b)$$$, $$$\\min(y_a, y_b) \\le y_c \\le \\max(y_a, y_b)$$$, and $$$\\min(z_a, z_b) \\le z_c \\le \\max(z_a, z_b)$$$. Note that the bounding box might be degenerate. Find a way to remove all points in $$$\\frac{n}{2}$$$ snaps.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 50\\,000$$$; $$$n$$$ is even), denoting the number of points. Each of the next $$$n$$$ lines contains three integers $$$x_i$$$, $$$y_i$$$, $$$z_i$$$ ($$$-10^8 \\le x_i, y_i, z_i \\le 10^8$$$), denoting the coordinates of the $$$i$$$-th point. No two points coincide.",
+  "output_specification": "Output $$$\\frac{n}{2}$$$ pairs of integers $$$a_i, b_i$$$ ($$$1 \\le a_i, b_i \\le n$$$), denoting the indices of points removed on snap $$$i$$$. Every integer between $$$1$$$ and $$$n$$$, inclusive, must appear in your output exactly once. We can show that it is always possible to remove all points. If there are many solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n3 1 0\n0 3 0\n2 2 0\n1 0 0\n1 3 0\n0 1 0",
+      "output": "3 6\n5 1\n2 4"
+    },
+    {
+      "input": "8\n0 1 1\n1 0 1\n1 1 0\n1 1 1\n2 2 2\n3 2 2\n2 3 2\n2 2 3",
+      "output": "4 5\n1 6\n2 7\n3 8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

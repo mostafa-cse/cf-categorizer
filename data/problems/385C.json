@@ -1,0 +1,44 @@
+{
+  "id": "385C",
+  "source": "problemset",
+  "contest_id": 385,
+  "problem_index": "C",
+  "name": "Bear and Prime Numbers",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 10925,
+  "problem_url": "https://codeforces.com/problemset/problem/385/C",
+  "editorial_url": "https://codeforces.com/blog/entry/10514",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Recently, the bear started studying data structures and faced the following problem. You are given a sequence of integers x 1 , x 2 , ..., x n of length n and m queries, each of them is characterized by two integers l i , r i . Let's introduce f ( p ) to represent the number of such indexes k , that x k is divisible by p . The answer to the query l i , r i is the sum: , where S ( l i , r i ) is a set of prime numbers from segment [ l i , r i ] (both borders are included in the segment). Help the bear cope with the problem.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 10 6 ) . The second line contains n integers x 1 , x 2 , ..., x n (2 ≤ x i ≤ 10 7 ) . The numbers are not necessarily distinct. The third line contains integer m (1 ≤ m ≤ 50000) . Each of the following m lines contains a pair of space-separated integers, l i and r i (2 ≤ l i ≤ r i ≤ 2·10 9 ) — the numbers that characterize the current query.",
+  "output_specification": "Print m integers — the answers to the queries on the order the queries appear in the input.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 5 7 10 14 15\n3\n2 11\n3 12\n4 4",
+      "output": "9\n7\n0"
+    },
+    {
+      "input": "7\n2 3 5 7 11 4 8\n2\n8 10\n2 123",
+      "output": "0\n7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

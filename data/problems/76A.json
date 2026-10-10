@@ -1,0 +1,37 @@
+{
+  "id": "76A",
+  "source": "problemset",
+  "contest_id": 76,
+  "problem_index": "A",
+  "name": "Gift",
+  "rating": 2200,
+  "tags": [
+    "dsu",
+    "graphs",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 2585,
+  "problem_url": "https://codeforces.com/problemset/problem/76/A",
+  "editorial_url": "https://codeforces.com/blog/entry/1712",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The kingdom of Olympia consists of N cities and M bidirectional roads. Each road connects exactly two cities and two cities can be connected with more than one road. Also it possible that some roads connect city with itself making a loop. All roads are constantly plundered with bandits. After a while bandits became bored of wasting time in road robberies, so they suggested the king of Olympia to pay off. According to the offer, bandits want to get a gift consisted of gold and silver coins. Offer also contains a list of restrictions: for each road it is known g i — the smallest amount of gold and s i — the smallest amount of silver coins that should be in the gift to stop robberies on the road. That is, if the gift contains a gold and b silver coins, then bandits will stop robberies on all the roads that g i ≤ a and s i ≤ b . Unfortunately kingdom treasury doesn't contain neither gold nor silver coins, but there are Olympian tugriks in it. The cost of one gold coin in tugriks is G , and the cost of one silver coin in tugriks is S . King really wants to send bandits such gift that for any two cities there will exist a safe path between them. Your task is to find the minimal cost in Olympian tugriks of the required gift.",
+  "input_specification": "The first line of the input contains two integers N and M ( 2 ≤ N ≤ 200 , 1 ≤ M ≤ 50 000 ) — the number of cities and the number of roads, respectively. The second line contains two integers G and S ( 1 ≤ G , S ≤ 10 9 ) — the prices of gold and silver coins in tugriks. The following M lines contain information about the offer. Each of the records in list is given as four integers x i , y i , g i , s i , where x i and y i are the numbers of cities that the road connects and g i , s i are minimal gold and silver coins requirements for the i -th road ( 1 ≤ x i , y i ≤ N , 1 ≤ g i , s i ≤ 10 9 ). Cities are numbered from 1 to N . It is possible that there are more than one road between a pair of cities. It is possible that a road connects the city with itself.",
+  "output_specification": "The output should contain the minimal cost of the gift in Olympian tugriks. If there is no gift that satisfies the given requirements output .",
+  "sample_testcases": [
+    {
+      "input": "3 3\n2 1\n1 2 10 15\n1 2 4 20\n1 3 5 1",
+      "output": "30"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:11",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

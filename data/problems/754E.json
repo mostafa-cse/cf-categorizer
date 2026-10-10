@@ -1,0 +1,46 @@
+{
+  "id": "754E",
+  "source": "problemset",
+  "contest_id": 754,
+  "problem_index": "E",
+  "name": "Dasha and cyclic table",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "fft",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 626,
+  "problem_url": "https://codeforces.com/problemset/problem/754/E",
+  "editorial_url": "https://codeforces.com/blog/entry/49613",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Dasha is fond of challenging puzzles: Rubik's Cube 3 × 3 × 3 , 4 × 4 × 4 , 5 × 5 × 5 and so on. This time she has a cyclic table of size n × m , and each cell of the table contains a lowercase English letter. Each cell has coordinates ( i , j ) ( 0 ≤ i < n , 0 ≤ j < m ). The table is cyclic means that to the right of cell ( i , j ) there is the cell , and to the down there is the cell . Dasha has a pattern as well. A pattern is a non-cyclic table of size r × c . Each cell is either a lowercase English letter or a question mark. Each cell has coordinates ( i , j ) ( 0 ≤ i < r , 0 ≤ j < c ). The goal of the puzzle is to find all the appearance positions of the pattern in the cyclic table. We say that the cell ( i , j ) of cyclic table is an appearance position, if for every pair ( x , y ) such that 0 ≤ x < r and 0 ≤ y < c one of the following conditions holds: There is a question mark in the cell ( x , y ) of the pattern, or The cell of the cyclic table equals to the cell ( x , y ) of the pattern. Dasha solved this puzzle in no time, as well as all the others she ever tried. Can you solve it?.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 400 ) — the cyclic table sizes. Each of the next n lines contains a string of m lowercase English characters — the description of the cyclic table. The next line contains two integers r and c ( 1 ≤ r , c ≤ 400 ) — the sizes of the pattern. Each of the next r lines contains a string of c lowercase English letter and/or characters ' ? ' — the description of the pattern.",
+  "output_specification": "Print n lines. Each of the n lines should contain m characters. Each of the characters should equal ' 0 ' or ' 1 '. The j -th character of the i -th ( 0 -indexed) line should be equal to ' 1 ', in case the cell ( i , j ) is an appearance position, otherwise it should be equal to ' 0 '.",
+  "sample_testcases": [
+    {
+      "input": "5 7\nqcezchs\nhhedywq\nwikywqy\nqckrqzt\nbqexcxz\n3 2\n??\nyw\n?q",
+      "output": "0000100\n0001001\n0000000\n0000000\n0000000"
+    },
+    {
+      "input": "10 10\nfwtoayylhw\nyyaryyjawr\nywrdzwhscy\nhnsyyxiphn\nbnjwzyyjvo\nkkjgseenwn\ngvmiflpcsy\nlxvkwrobwu\nwyybbcocyy\nyysijsvqry\n2 2\n??\nyy",
+      "output": "1000100000\n0000000001\n0001000000\n0000010000\n0000000000\n0000000000\n0000000000\n0100000010\n1000000001\n0000010000"
+    },
+    {
+      "input": "8 6\nibrgxl\nxqdcsg\nokbcgi\ntvpetc\nxgxxig\nigghzo\nlmlaza\ngpswzv\n1 4\ngx??",
+      "output": "000100\n000001\n000000\n000000\n010001\n000000\n000000\n000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:15",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

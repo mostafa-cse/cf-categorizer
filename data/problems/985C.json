@@ -1,0 +1,46 @@
+{
+  "id": "985C",
+  "source": "problemset",
+  "contest_id": 985,
+  "problem_index": "C",
+  "name": "Liebig's Barrels",
+  "rating": 1500,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 6047,
+  "problem_url": "https://codeforces.com/problemset/problem/985/C",
+  "editorial_url": "https://codeforces.com/blog/entry/59623",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have m = n · k wooden staves. The i -th stave has length a i . You have to assemble n barrels consisting of k staves each, you can use any k staves to construct a barrel. Each stave must belong to exactly one barrel. Let volume v j of barrel j be equal to the length of the minimal stave in it. You want to assemble exactly n barrels with the maximal total sum of volumes. But you have to make them equal enough , so a difference between volumes of any pair of the resulting barrels must not exceed l , i.e. | v x - v y | ≤ l for any 1 ≤ x ≤ n and 1 ≤ y ≤ n . Print maximal total sum of volumes of equal enough barrels or 0 if it's impossible to satisfy the condition above.",
+  "input_specification": "The first line contains three space-separated integers n , k and l ( 1 ≤ n , k ≤ 10 5 , 1 ≤ n · k ≤ 10 5 , 0 ≤ l ≤ 10 9 ). The second line contains m = n · k space-separated integers a 1 , a 2 , ..., a m ( 1 ≤ a i ≤ 10 9 ) — lengths of staves.",
+  "output_specification": "Print single integer — maximal total sum of the volumes of barrels or 0 if it's impossible to construct exactly n barrels satisfying the condition | v x - v y | ≤ l for any 1 ≤ x ≤ n and 1 ≤ y ≤ n .",
+  "sample_testcases": [
+    {
+      "input": "4 2 1\n2 2 1 2 3 2 2 3",
+      "output": "7"
+    },
+    {
+      "input": "2 1 0\n10 10",
+      "output": "20"
+    },
+    {
+      "input": "1 2 1\n5 2",
+      "output": "2"
+    },
+    {
+      "input": "3 2 1\n1 2 3 4 5 6",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:22",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

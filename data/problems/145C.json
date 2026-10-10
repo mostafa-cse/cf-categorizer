@@ -1,0 +1,40 @@
+{
+  "id": "145C",
+  "source": "problemset",
+  "contest_id": 145,
+  "problem_index": "C",
+  "name": "Lucky Subsequence",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 2240,
+  "problem_url": "https://codeforces.com/problemset/problem/145/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3746",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya loves lucky numbers very much. Everybody knows that lucky numbers are positive integers whose decimal record contains only the lucky digits 4 and 7 . For example, numbers 47 , 744 , 4 are lucky and 5 , 17 , 467 are not. Petya has sequence a consisting of n integers. The subsequence of the sequence a is such subsequence that can be obtained from a by removing zero or more of its elements. Two sequences are considered different if index sets of numbers included in them are different. That is, the values ​of the elements ​do not matter in the comparison of subsequences. In particular, any sequence of length n has exactly 2 n different subsequences (including an empty subsequence). A subsequence is considered lucky if it has a length exactly k and does not contain two identical lucky numbers (unlucky numbers can be repeated any number of times). Help Petya find the number of different lucky subsequences of the sequence a . As Petya's parents don't let him play with large numbers, you should print the result modulo prime number 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains two integers n and k (1 ≤ k ≤ n ≤ 10 5 ) . The next line contains n integers a i ( 1 ≤ a i ≤ 10 9 ) — the sequence a .",
+  "output_specification": "On the single line print the single number — the answer to the problem modulo prime number 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n10 10 10",
+      "output": "3"
+    },
+    {
+      "input": "4 2\n4 4 7 7",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

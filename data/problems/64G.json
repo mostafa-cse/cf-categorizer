@@ -1,0 +1,38 @@
+{
+  "id": "64G",
+  "source": "problemset",
+  "contest_id": 64,
+  "problem_index": "G",
+  "name": "Path Canonization",
+  "rating": 2200,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 131,
+  "problem_url": "https://codeforces.com/problemset/problem/64/G",
+  "editorial_url": "https://codeforces.com/blog/entry/1316",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "A path in some Unix-similar file system is given. The path consists of elements separated with characters \" / \". For example: \" /usr/share/mysql/../tomcat6/conf/server.xml \". The path starts with the root directory (i.e. starts with the character \" / \"). Each element means a name of file or directory, or it is one of two special elements: \" . \" или \" .. \". First of them stands for the current directory (for example, path \" /./usr/././share \" is equal to \" /usr/share \"). The second element \" .. \" stands for the moving to the parent directory (for example, path \" /usr/share/../lib \" is equal to \" /usr/lib \"). You task is to convert the given path to such a path, which doesn't contain special elements \" . \" and/or \" .. \". If it is impossible, print \" -1 \". The only reason for it is an attempt to move to the parent directory from the root.",
+  "input_specification": "The only line contains the given path. The path starts with \" / \" and consists of elements separated with \" / \". No two \" / \" follow one after another (consecutively). The only path which can end with \" / \" is the root directory path equal to \" / \". Each element may contain \" a \"-\" z \", \" 0 \"-\" 9 \" and dots. Any element different from specials \" . \" and \" .. \" contains at least one character different from the dots. The path length is between 1 and 1000 inclusively.",
+  "output_specification": "Print the required path or \" -1 \".",
+  "sample_testcases": [
+    {
+      "input": "/usr/share/mysql/../tomcat6/conf/server.xml",
+      "output": "/usr/share/tomcat6/conf/server.xml"
+    },
+    {
+      "input": "/a/./././..",
+      "output": "/"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

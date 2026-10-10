@@ -1,0 +1,38 @@
+{
+  "id": "1998D",
+  "source": "problemset",
+  "contest_id": 1998,
+  "problem_index": "D",
+  "name": "Determine Winning Islands in Race",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dp",
+    "graphs",
+    "greedy",
+    "shortest paths"
+  ],
+  "solved_count": 4224,
+  "problem_url": "https://codeforces.com/problemset/problem/1998/D",
+  "editorial_url": "https://codeforces.com/blog/entry/132512",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "MOOOOOOOOOOOOOOOOO — Bessie the Cow, The Art of Racing on Islands Two of Farmer John's cows, Bessie and Elsie, are planning to race on $$$n$$$ islands. There are $$$n - 1$$$ main bridges, connecting island $$$i$$$ to island $$$i + 1$$$ for all $$$1 \\leq i \\leq n - 1$$$. Additionally, there are $$$m$$$ alternative bridges. Elsie can use both main and alternative bridges, while Bessie can only use main bridges. All bridges are one way and can only be used to travel from an island with a lower index to an island with a higher index. Initially, Elsie starts on island $$$1$$$, and Bessie starts on island $$$s$$$. The cows alternate turns, with Bessie making the first turn. Suppose the cow is on island $$$i$$$. During a cow's turn, if there are any bridges connecting island $$$i$$$ to island $$$j$$$, then the cow can move to island $$$j$$$. Then, island $$$i$$$ collapses, and all bridges connecting to island $$$i$$$ also collapse. Also, note the following: If there are no bridges connecting island $$$i$$$ to another island, then island $$$i$$$ collapses, and this cow is eliminated from the race. If the other cow is also on island $$$i$$$, then after this cow moves to another island, the island collapses, and the other cow is eliminated from the race. After an island or bridge collapses, no cows may use them. If a cow is eliminated, their turn is skipped for the rest of the race. The race ends once either cow reaches island $$$n$$$. It can be shown that regardless of the cows' strategies, at least one cow reaches island $$$n$$$. Bessie wins if and only if she reaches island $$$n$$$ first. For each $$$1 \\leq s \\leq n - 1$$$, determine whether Bessie wins if she starts the race on island $$$s$$$. Assume both cows follow optimal strategies to ensure their own respective victories.",
+  "input_specification": "The first line contains $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) – the number of test cases. The first line of each test case contains $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$, $$$0 \\leq m \\leq 2 \\cdot 10^5$$$) – the number of islands and the number of alternative bridges. The next $$$m$$$ lines of each test case contain $$$u$$$ and $$$v$$$ ($$$1 \\leq u \\lt v \\leq n$$$) – the islands that the alternative bridge connects. It is guaranteed all alternative bridges are distinct, and they do not coincide with the main bridges. It is guaranteed that neither the sum of $$$n$$$ nor the sum of $$$m$$$ over all test cases exceeds $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a binary string of length $$$n - 1$$$ on a new line. The $$$i$$$'th character is $$$1$$$ if it is possible for Bessie to win if she starts on island $$$i$$$. Otherwise, it is $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n6 0\n6 1\n2 6\n6 1\n1 5\n10 4\n1 3\n1 6\n2 7\n3 8\n15 3\n2 8\n4 9\n8 15",
+      "output": "11111\n11011\n10011\n100001111\n11000111000111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:55",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Connectivity",
+  "subsubtopic": "150. Articulation Bridges and Bridge Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Perform DFS and compute tin[u] and low[u] entry times. Edges with low[v] > tin[u] form critical bridges; condense 2-edge connected components into a bridge tree."
+}

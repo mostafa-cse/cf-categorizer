@@ -1,0 +1,38 @@
+{
+  "id": "470H",
+  "source": "problemset",
+  "contest_id": 470,
+  "problem_index": "H",
+  "name": "Array Sorting",
+  "rating": 2300,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 199,
+  "problem_url": "https://codeforces.com/problemset/problem/470/H",
+  "editorial_url": "https://codeforces.com/blog/entry/13777",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Sorting arrays is traditionally associated with high-level languages. How hard can it be in FALSE? Sort the given array in non-descending order.",
+  "input_specification": "The input consists of a single line of space-separated integers. The first number is n ( 1 ≤ n ≤ 10 ) — the size of the array. The following n numbers are the elements of the array ( 1 ≤ a i ≤ 100 ).",
+  "output_specification": "Output space-separated elements of the sorted array.",
+  "sample_testcases": [
+    {
+      "input": "3 3 1 2",
+      "output": "1 2 3"
+    },
+    {
+      "input": "7 12 2 3 44 5 60 2",
+      "output": "2 2 3 5 12 44 60"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

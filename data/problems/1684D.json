@@ -1,0 +1,36 @@
+{
+  "id": "1684D",
+  "source": "problemset",
+  "contest_id": 1684,
+  "problem_index": "D",
+  "name": "Traps",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 10949,
+  "problem_url": "https://codeforces.com/problemset/problem/1684/D",
+  "editorial_url": "https://codeforces.com/blog/entry/102995",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ traps numbered from $$$1$$$ to $$$n$$$. You will go through them one by one in order. The $$$i$$$-th trap deals $$$a_i$$$ base damage to you. Instead of going through a trap, you can jump it over. You can jump over no more than $$$k$$$ traps. If you jump over a trap, it does not deal any damage to you. But there is an additional rule: if you jump over a trap, all next traps damages increase by $$$1$$$ (this is a bonus damage). Note that if you jump over a trap, you don't get any damage (neither base damage nor bonus damage). Also, the bonus damage stacks so, for example, if you go through a trap $$$i$$$ with base damage $$$a_i$$$, and you have already jumped over $$$3$$$ traps, you get $$$(a_i + 3)$$$ damage. You have to find the minimal damage that it is possible to get if you are allowed to jump over no more than $$$k$$$ traps.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le n$$$) — the number of traps and the number of jump overs that you are allowed to make. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — base damage values of all traps. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case output a single integer — the minimal total damage that it is possible to get if you are allowed to jump over no more than $$$k$$$ traps.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 4\n8 7 1 4\n4 1\n5 10 11 5\n7 5\n8 2 5 15 11 2 8\n6 3\n1 2 3 4 5 6\n1 1\n7",
+      "output": "0\n21\n9\n6\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

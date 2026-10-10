@@ -1,0 +1,40 @@
+{
+  "id": "1066E",
+  "source": "problemset",
+  "contest_id": 1066,
+  "problem_index": "E",
+  "name": "Binary Numbers AND Sum",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 6668,
+  "problem_url": "https://codeforces.com/problemset/problem/1066/E",
+  "editorial_url": "https://codeforces.com/blog/entry/62419",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two huge binary integer numbers $$$a$$$ and $$$b$$$ of lengths $$$n$$$ and $$$m$$$ respectively. You will repeat the following process: if $$$b \\gt 0$$$, then add to the answer the value $$$a~ \\&~ b$$$ and divide $$$b$$$ by $$$2$$$ rounding down (i.e. remove the last digit of $$$b$$$), and repeat the process again, otherwise stop the process. The value $$$a~ \\&~ b$$$ means bitwise AND of $$$a$$$ and $$$b$$$. Your task is to calculate the answer modulo $$$998244353$$$. Note that you should add the value $$$a~ \\&~ b$$$ to the answer in decimal notation, not in binary. So your task is to calculate the answer in decimal notation. For example, if $$$a = 1010_2~ (10_{10})$$$ and $$$b = 1000_2~ (8_{10})$$$, then the value $$$a~ \\&~ b$$$ will be equal to $$$8$$$, not to $$$1000$$$.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$) — the length of $$$a$$$ and the length of $$$b$$$ correspondingly. The second line of the input contains one huge integer $$$a$$$. It is guaranteed that this number consists of exactly $$$n$$$ zeroes and ones and the first digit is always $$$1$$$. The third line of the input contains one huge integer $$$b$$$. It is guaranteed that this number consists of exactly $$$m$$$ zeroes and ones and the first digit is always $$$1$$$.",
+  "output_specification": "Print the answer to this problem in decimal notation modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n1010\n1101",
+      "output": "12"
+    },
+    {
+      "input": "4 5\n1001\n10101",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:06",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

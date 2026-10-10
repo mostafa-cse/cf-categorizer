@@ -1,0 +1,36 @@
+{
+  "id": "2228D",
+  "source": "problemset",
+  "contest_id": 2228,
+  "problem_index": "D",
+  "name": "Sanae, Cross and Color",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 3053,
+  "problem_url": "https://codeforces.com/problemset/problem/2228/D",
+  "editorial_url": "https://codeforces.com/blog/entry/153619",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Faith Is for the Transient People — Mountain of Faith Upon the mountain, Sanae gazes at the stars. Faith, for her, is where winds encounter one another and choices diverge, and it is the point where all directions meet. For the glory of the Holy Cross, let us trace the sign of faith together. There are $$$n$$$ distinct integer points in the plane, where the $$$i$$$-th point is located at $$$(x_i,y_i)$$$. To color the points, choose two integers $$$k_1$$$ and $$$k_2$$$ such that each of the four regions divided by the lines $$$x=k_1+0.5$$$ and $$$y=k_2+0.5$$$ contains at least one point . Each point $$$(x,y)$$$ is colored according to the region it lies in: Top-left ($$$x\\leq k_1$$$ and $$$y \\gt k_2$$$): the point is colored red. Top-right ($$$x \\gt k_1$$$ and $$$y \\gt k_2$$$): the point is colored green. Bottom-left ($$$x\\leq k_1$$$ and $$$y\\leq k_2$$$): the point is colored blue. Bottom-right ($$$x \\gt k_1$$$ and $$$y\\leq k_2$$$): the point is colored yellow. A valid coloring of the third test case, where $$$k_1=4$$$ and $$$k_2=5$$$. Find the number of distinct colorings, where two colorings are considered distinct if and only if there exists at least one point colored differently, regardless of the choice of $$$k_1$$$ and $$$k_2$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$4 \\leq n \\leq 2 \\cdot 10^6$$$). The following $$$n$$$ lines each contain two integers $$$x_i$$$, $$$y_i$$$ ($$$1 \\leq x_i, y_i \\leq n$$$), representing the coordinates of the $$$i$$$-th point. It is guaranteed that the points are pairwise distinct in each test case. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^6$$$.",
+  "output_specification": "For each test case, output the number of distinct colorings.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n1 1\n2 2\n3 3\n4 4\n4\n1 4\n4 1\n1 1\n4 4\n8\n7 2\n5 7\n2 7\n1 3\n6 7\n3 6\n7 5\n1 6\n8\n6 1\n3 6\n1 4\n1 1\n4 2\n5 5\n3 4\n4 1\n6\n5 5\n5 4\n3 5\n1 5\n5 3\n2 2",
+      "output": "0\n1\n12\n8\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:52",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

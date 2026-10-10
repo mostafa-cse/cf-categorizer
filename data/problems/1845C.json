@@ -1,0 +1,37 @@
+{
+  "id": "1845C",
+  "source": "problemset",
+  "contest_id": 1845,
+  "problem_index": "C",
+  "name": "Strong Password",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 17350,
+  "problem_url": "https://codeforces.com/problemset/problem/1845/C",
+  "editorial_url": "https://codeforces.com/blog/entry/117791",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp finally got the courage to register on ForceCoders. He came up with a handle but is still thinking about the password. He wants his password to be as strong as possible, so he came up with the following criteria: the length of the password should be exactly $$$m$$$; the password should only consist of digits from $$$0$$$ to $$$9$$$; the password should not appear in the password database (given as a string $$$s$$$) as a subsequence (not necessarily contiguous). Monocarp also came up with two strings of length $$$m$$$: $$$l$$$ and $$$r$$$, both consisting only of digits from $$$0$$$ to $$$9$$$. He wants the $$$i$$$-th digit of his password to be between $$$l_i$$$ and $$$r_i$$$, inclusive. Does there exist a password that fits all criteria?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains a string $$$s$$$ ($$$1 \\le |s| \\le 3 \\cdot 10^5$$$), consisting only of digits from $$$0$$$ to $$$9$$$ — the password database. The second line contains a single integer $$$m$$$ ($$$1 \\le m \\le 10$$$) — the required length of the password. The third line contains a string $$$l$$$ ($$$|l| = m$$$), consisting only of digits from $$$0$$$ to $$$9$$$ — the lower restriction on each digit. The fourth line contains a string $$$r$$$ ($$$|r| = m$$$), consisting only of digits from $$$0$$$ to $$$9$$$ — the upper restriction on each digit. $$$l_i \\le r_i$$$ for all $$$i$$$ from $$$1$$$ to $$$m$$$. The sum of lengths of $$$s$$$ over all testcases doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print \" YES \" if there exists a password that fits all criteria. Print \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5\n88005553535123456\n2\n50\n56\n123412341234\n3\n111\n444\n1234\n4\n4321\n4321\n459\n2\n49\n59\n00010\n2\n10\n11",
+      "output": "YES\nNO\nYES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

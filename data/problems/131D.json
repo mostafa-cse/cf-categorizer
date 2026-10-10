@@ -1,0 +1,39 @@
+{
+  "id": "131D",
+  "source": "problemset",
+  "contest_id": 131,
+  "problem_index": "D",
+  "name": "Subway",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 5387,
+  "problem_url": "https://codeforces.com/problemset/problem/131/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A subway scheme, classic for all Berland cities is represented by a set of n stations connected by n passages, each of which connects exactly two stations and does not pass through any others. Besides, in the classic scheme one can get from any station to any other one along the passages. The passages can be used to move in both directions. Between each pair of stations there is no more than one passage. Berland mathematicians have recently proved a theorem that states that any classic scheme has a ringroad. There can be only one ringroad. In other words, in any classic scheme one can find the only scheme consisting of stations (where any two neighbouring ones are linked by a passage) and this cycle doesn't contain any station more than once. This invention had a powerful social impact as now the stations could be compared according to their distance from the ringroad. For example, a citizen could say \"I live in three passages from the ringroad\" and another one could reply \"you loser, I live in one passage from the ringroad\". The Internet soon got filled with applications that promised to count the distance from the station to the ringroad (send a text message to a short number...). The Berland government decided to put an end to these disturbances and start to control the situation. You are requested to write a program that can determine the remoteness from the ringroad for each station by the city subway scheme.",
+  "input_specification": "The first line contains an integer n ( 3 ≤ n ≤ 3000 ), n is the number of stations (and trains at the same time) in the subway scheme. Then n lines contain descriptions of the trains, one per line. Each line contains a pair of integers x i , y i ( 1 ≤ x i , y i ≤ n ) and represents the presence of a passage from station x i to station y i . The stations are numbered from 1 to n in an arbitrary order. It is guaranteed that x i ≠ y i and that no pair of stations contain more than one passage. The passages can be used to travel both ways. It is guaranteed that the given description represents a classic subway scheme.",
+  "output_specification": "Print n numbers. Separate the numbers by spaces, the i -th one should be equal to the distance of the i -th station from the ringroad. For the ringroad stations print number 0 .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3\n4 3\n4 2\n1 2",
+      "output": "0 0 0 0"
+    },
+    {
+      "input": "6\n1 2\n3 4\n6 4\n2 3\n1 3\n3 5",
+      "output": "0 0 0 1 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

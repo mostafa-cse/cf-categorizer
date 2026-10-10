@@ -1,0 +1,39 @@
+{
+  "id": "243C",
+  "source": "problemset",
+  "contest_id": 243,
+  "problem_index": "C",
+  "name": "Colorado Potato Beetle",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "implementation"
+  ],
+  "solved_count": 595,
+  "problem_url": "https://codeforces.com/problemset/problem/243/C",
+  "editorial_url": "https://codeforces.com/blog/entry/5895",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Old MacDonald has a farm and a large potato field, (10 10 + 1) × (10 10 + 1) square meters in size. The field is divided into square garden beds, each bed takes up one square meter. Old McDonald knows that the Colorado potato beetle is about to invade his farm and can destroy the entire harvest. To fight the insects, Old McDonald wants to spray some beds with insecticides. So Old McDonald went to the field, stood at the center of the central field bed and sprayed this bed with insecticides. Now he's going to make a series of movements and spray a few more beds. During each movement Old McDonald moves left, right, up or down the field some integer number of meters. As Old McDonald moves, he sprays all the beds he steps on. In other words, the beds that have any intersection at all with Old McDonald's trajectory, are sprayed with insecticides. When Old McDonald finished spraying, he wrote out all his movements on a piece of paper. Now he wants to know how many beds won't be infected after the invasion of the Colorado beetles. It is known that the invasion of the Colorado beetles goes as follows. First some bed on the field border gets infected. Than any bed that hasn't been infected, hasn't been sprayed with insecticides and has a common side with an infected bed, gets infected as well. Help Old McDonald and determine the number of beds that won't be infected by the Colorado potato beetle.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 1000 ) — the number of Old McDonald's movements. Next n lines contain the description of Old McDonald's movements. The i -th of these lines describes the i -th movement. Each movement is given in the format \" d i x i \", where d i is the character that determines the direction of the movement (\" L \", \" R \", \" U \" or \" D \" for directions \"left\", \"right\", \"up\" and \"down\", correspondingly), and x i ( 1 ≤ x i ≤ 10 6 ) is an integer that determines the number of meters in the movement.",
+  "output_specification": "Print a single integer — the number of beds that won't be infected by the Colorado potato beetle. Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "5\nR 8\nU 9\nL 9\nD 8\nL 2",
+      "output": "101"
+    },
+    {
+      "input": "7\nR 10\nD 2\nL 7\nU 9\nD 2\nR 3\nD 10",
+      "output": "52"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

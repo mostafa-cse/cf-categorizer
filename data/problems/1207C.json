@@ -1,0 +1,35 @@
+{
+  "id": "1207C",
+  "source": "problemset",
+  "contest_id": 1207,
+  "problem_index": "C",
+  "name": "Gas Pipeline",
+  "rating": 1500,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 10708,
+  "problem_url": "https://codeforces.com/problemset/problem/1207/C",
+  "editorial_url": "https://codeforces.com/blog/entry/69314",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are responsible for installing a gas pipeline along a road. Let's consider the road (for simplicity) as a segment $$$[0, n]$$$ on $$$OX$$$ axis. The road can have several crossroads, but for simplicity, we'll denote each crossroad as an interval $$$(x, x + 1)$$$ with integer $$$x$$$. So we can represent the road as a binary string consisting of $$$n$$$ characters, where character 0 means that current interval doesn't contain a crossroad, and 1 means that there is a crossroad. Usually, we can install the pipeline along the road on height of $$$1$$$ unit with supporting pillars in each integer point (so, if we are responsible for $$$[0, n]$$$ road, we must install $$$n + 1$$$ pillars). But on crossroads we should lift the pipeline up to the height $$$2$$$, so the pipeline won't obstruct the way for cars. We can do so inserting several zig-zag-like lines. Each zig-zag can be represented as a segment $$$[x, x + 1]$$$ with integer $$$x$$$ consisting of three parts: $$$0.5$$$ units of horizontal pipe + $$$1$$$ unit of vertical pipe + $$$0.5$$$ of horizontal. Note that if pipeline is currently on height $$$2$$$, the pillars that support it should also have length equal to $$$2$$$ units. Each unit of gas pipeline costs us $$$a$$$ bourles, and each unit of pillar — $$$b$$$ bourles. So, it's not always optimal to make the whole pipeline on the height $$$2$$$. Find the shape of the pipeline with minimum possible cost and calculate that cost. Note that you must start and finish the pipeline on height $$$1$$$ and, also, it's guaranteed that the first and last characters of the input string are equal to 0 .",
+  "input_specification": "The fist line contains one integer $$$T$$$ ($$$1 \\le T \\le 100$$$) — the number of queries. Next $$$2 \\cdot T$$$ lines contain independent queries — one query per two lines. The first line contains three integers $$$n$$$, $$$a$$$, $$$b$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le a \\le 10^8$$$, $$$1 \\le b \\le 10^8$$$) — the length of the road, the cost of one unit of the pipeline and the cost of one unit of the pillar, respectively. The second line contains binary string $$$s$$$ ($$$|s| = n$$$, $$$s_i \\in \\{0, 1\\}$$$, $$$s_1 = s_n = 0$$$) — the description of the road. It's guaranteed that the total length of all strings $$$s$$$ doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "Print $$$T$$$ integers — one per query. For each query print the minimum possible cost of the constructed pipeline.",
+  "sample_testcases": [
+    {
+      "input": "4\n8 2 5\n00110010\n8 1 1\n00110010\n9 100000000 100000000\n010101010\n2 5 1\n00",
+      "output": "94\n25\n2900000000\n13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

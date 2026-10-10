@@ -1,0 +1,46 @@
+{
+  "id": "1530F",
+  "source": "problemset",
+  "contest_id": 1530,
+  "problem_index": "F",
+  "name": "Bingo",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1218,
+  "problem_url": "https://codeforces.com/problemset/problem/1530/F",
+  "editorial_url": "https://codeforces.com/blog/entry/92951",
+  "time_limit": "7 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Getting ready for VK Fest 2021, you prepared a table with $$$n$$$ rows and $$$n$$$ columns, and filled each cell of this table with some event related with the festival that could either happen or not: for example, whether you will win a prize on the festival, or whether it will rain. Forecasting algorithms used in VK have already estimated the probability for each event to happen. Event in row $$$i$$$ and column $$$j$$$ will happen with probability $$$a_{i, j} \\cdot 10^{-4}$$$. All of the events are mutually independent. Let's call the table winning if there exists a line such that all $$$n$$$ events on it happen. The line could be any horizontal line (cells $$$(i, 1), (i, 2), \\ldots, (i, n)$$$ for some $$$i$$$), any vertical line (cells $$$(1, j), (2, j), \\ldots, (n, j)$$$ for some $$$j$$$), the main diagonal (cells $$$(1, 1), (2, 2), \\ldots, (n, n)$$$), or the antidiagonal (cells $$$(1, n), (2, n - 1), \\ldots, (n, 1)$$$). Find the probability of your table to be winning, and output it modulo $$$31\\,607$$$ (see Output section).",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 21$$$) — the dimensions of the table. The $$$i$$$-th of the next $$$n$$$ lines contains $$$n$$$ integers $$$a_{i, 1}, a_{i, 2}, \\ldots, a_{i, n}$$$ ($$$0 \\lt a_{i, j} \\lt 10^4$$$). The probability of event in cell $$$(i, j)$$$ to happen is $$$a_{i, j} \\cdot 10^{-4}$$$.",
+  "output_specification": "Print the probability that your table will be winning, modulo $$$31\\,607$$$. Formally, let $$$M = 31\\,607$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n5000 5000\n5000 5000",
+      "output": "5927"
+    },
+    {
+      "input": "2\n2500 6000\n3000 4000",
+      "output": "24812"
+    },
+    {
+      "input": "3\n1000 2000 3000\n4000 5000 6000\n7000 8000 9000",
+      "output": "25267"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

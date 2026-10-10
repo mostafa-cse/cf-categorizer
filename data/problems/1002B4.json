@@ -1,0 +1,29 @@
+{
+  "id": "1002B4",
+  "source": "problemset",
+  "contest_id": 1002,
+  "problem_index": "B4",
+  "name": "Distinguish four 2-qubit states - 2",
+  "rating": 1700,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 317,
+  "problem_url": "https://codeforces.com/problemset/problem/1002/B4",
+  "editorial_url": "https://assets.codeforces.com/rounds/997-998/main-contest-editorial.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given 2 qubits which are guaranteed to be in one of the four orthogonal states: Your task is to perform necessary operations and measurements to figure out which state it was and to return the index of that state (0 for , 1 for etc.). The state of the qubits after the operations does not matter. You have to implement an operation which takes an array of 2 qubits as an input and returns an integer. Your code should have the following signature: namespace Solution { open Microsoft.Quantum.Primitive; open Microsoft.Quantum.Canon; operation Solve (qs : Qubit[]) : Int { body { // your code here } } }",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

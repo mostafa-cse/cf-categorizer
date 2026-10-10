@@ -1,0 +1,40 @@
+{
+  "id": "570C",
+  "source": "problemset",
+  "contest_id": 570,
+  "problem_index": "C",
+  "name": "Replacement",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 9642,
+  "problem_url": "https://codeforces.com/problemset/problem/570/C",
+  "editorial_url": "https://codeforces.com/blog/entry/19770",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Daniel has a string s , consisting of lowercase English letters and period signs (characters ' . '). Let's define the operation of replacement as the following sequence of steps: find a substring \" .. \" (two consecutive periods) in string s , of all occurrences of the substring let's choose the first one, and replace this substring with string \" . \". In other words, during the replacement operation, the first two consecutive periods are replaced by one. If string s contains no two consecutive periods, then nothing happens. Let's define f ( s ) as the minimum number of operations of replacement to perform, so that the string does not have any two consecutive periods left. You need to process m queries, the i -th results in that the character at position x i ( 1 ≤ x i ≤ n ) of string s is assigned value c i . After each operation you have to calculate and output the value of f ( s ) . Help Daniel to process all queries.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 300 000 ) the length of the string and the number of queries. The second line contains string s , consisting of n lowercase English letters and period signs. The following m lines contain the descriptions of queries. The i -th line contains integer x i and c i ( 1 ≤ x i ≤ n , c i — a lowercas English letter or a period sign), describing the query of assigning symbol c i to position x i .",
+  "output_specification": "Print m numbers, one per line, the i -th of these numbers must be equal to the value of f ( s ) after performing the i -th assignment.",
+  "sample_testcases": [
+    {
+      "input": "10 3\n.b..bz....\n1 h\n3 c\n9 f",
+      "output": "4\n3\n1"
+    },
+    {
+      "input": "4 4\n.cc.\n2 .\n3 .\n2 a\n1 a",
+      "output": "1\n3\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

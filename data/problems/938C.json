@@ -1,0 +1,36 @@
+{
+  "id": "938C",
+  "source": "problemset",
+  "contest_id": 938,
+  "problem_index": "C",
+  "name": "Constructing Tests",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms"
+  ],
+  "solved_count": 3500,
+  "problem_url": "https://codeforces.com/problemset/problem/938/C",
+  "editorial_url": "https://codeforces.com/blog/entry/57840",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's denote a m -free matrix as a binary (that is, consisting of only 1 's and 0 's) matrix such that every square submatrix of size m × m of this matrix contains at least one zero. Consider the following problem: You are given two integers n and m . You have to construct an m -free square matrix of size n × n such that the number of 1 's in this matrix is maximum possible . Print the maximum possible number of 1 's in such matrix. You don't have to solve this problem. Instead, you have to construct a few tests for it. You will be given t numbers x 1 , x 2 , ..., x t . For every , find two integers n i and m i ( n i ≥ m i ) such that the answer for the aforementioned problem is exactly x i if we set n = n i and m = m i .",
+  "input_specification": "The first line contains one integer t ( 1 ≤ t ≤ 100 ) — the number of tests you have to construct. Then t lines follow, i -th line containing one integer x i ( 0 ≤ x i ≤ 10 9 ). Note that in hacks you have to set t = 1 .",
+  "output_specification": "For each test you have to construct, output two positive numbers n i and m i ( 1 ≤ m i ≤ n i ≤ 10 9 ) such that the maximum number of 1 's in a m i -free n i × n i matrix is exactly x i . If there are multiple solutions, you may output any of them; and if this is impossible to construct a test, output a single integer - 1 .",
+  "sample_testcases": [
+    {
+      "input": "3\n21\n0\n1",
+      "output": "5 2\n1 1\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

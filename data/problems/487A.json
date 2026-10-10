@@ -1,0 +1,40 @@
+{
+  "id": "487A",
+  "source": "problemset",
+  "contest_id": 487,
+  "problem_index": "A",
+  "name": "Fight the Monster",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 3990,
+  "problem_url": "https://codeforces.com/problemset/problem/487/A",
+  "editorial_url": "https://codeforces.com/blog/entry/14832",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A monster is attacking the Cyberland! Master Yang, a braver, is going to beat the monster. Yang and the monster each have 3 attributes: hitpoints ( HP ), offensive power ( ATK ) and defensive power ( DEF ). During the battle, every second the monster's HP decrease by max (0, ATK Y - DEF M ) , while Yang's HP decreases by max (0, ATK M - DEF Y ) , where index Y denotes Master Yang and index M denotes monster. Both decreases happen simultaneously Once monster's HP ≤ 0 and the same time Master Yang's HP > 0 , Master Yang wins. Master Yang can buy attributes from the magic shop of Cyberland: h bitcoins per HP , a bitcoins per ATK , and d bitcoins per DEF . Now Master Yang wants to know the minimum number of bitcoins he can spend in order to win.",
+  "input_specification": "The first line contains three integers HP Y , ATK Y , DEF Y , separated by a space, denoting the initial HP , ATK and DEF of Master Yang. The second line contains three integers HP M , ATK M , DEF M , separated by a space, denoting the HP , ATK and DEF of the monster. The third line contains three integers h , a , d , separated by a space, denoting the price of 1 HP , 1 ATK and 1 DEF . All numbers in input are integer and lie between 1 and 100 inclusively.",
+  "output_specification": "The only output line should contain an integer, denoting the minimum bitcoins Master Yang should spend in order to win.",
+  "sample_testcases": [
+    {
+      "input": "1 2 1\n1 100 1\n1 100 100",
+      "output": "99"
+    },
+    {
+      "input": "100 100 100\n1 1 1\n1 1 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "289B",
+  "source": "problemset",
+  "contest_id": 289,
+  "problem_index": "B",
+  "name": "Polo the Penguin and Matrix",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "dp",
+    "implementation",
+    "sortings",
+    "ternary search"
+  ],
+  "solved_count": 19310,
+  "problem_url": "https://codeforces.com/problemset/problem/289/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7241",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little penguin Polo has an n × m matrix, consisting of integers. Let's index the matrix rows from 1 to n from top to bottom and let's index the columns from 1 to m from left to right. Let's represent the matrix element on the intersection of row i and column j as a ij . In one move the penguin can add or subtract number d from some matrix element. Find the minimum number of moves needed to make all matrix elements equal. If the described plan is impossible to carry out, say so.",
+  "input_specification": "The first line contains three integers n , m and d (1 ≤ n , m ≤ 100, 1 ≤ d ≤ 10 4 ) — the matrix sizes and the d parameter. Next n lines contain the matrix: the j -th integer in the i -th row is the matrix element a ij (1 ≤ a ij ≤ 10 4 ) .",
+  "output_specification": "In a single line print a single integer — the minimum number of moves the penguin needs to make all matrix elements equal. If that is impossible, print \" -1 \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2 2 2\n2 4\n6 8",
+      "output": "4"
+    },
+    {
+      "input": "1 2 7\n6 7",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "367A",
+  "source": "problemset",
+  "contest_id": 367,
+  "problem_index": "A",
+  "name": "Sereja and Algorithm ",
+  "rating": 1500,
+  "tags": [
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 4582,
+  "problem_url": "https://codeforces.com/problemset/problem/367/A",
+  "editorial_url": "https://codeforces.com/blog/entry/9726",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sereja loves all sorts of algorithms. He has recently come up with a new algorithm, which receives a string as an input. Let's represent the input string of the algorithm as q = q 1 q 2 ... q k . The algorithm consists of two steps: Find any continuous subsequence (substring) of three characters of string q , which doesn't equal to either string \" zyx \", \" xzy \", \" yxz \". If q doesn't contain any such subsequence, terminate the algorithm, otherwise go to step 2. Rearrange the letters of the found subsequence randomly and go to step 1. Sereja thinks that the algorithm works correctly on string q if there is a non-zero probability that the algorithm will be terminated. But if the algorithm anyway will work for infinitely long on a string, then we consider the algorithm to work incorrectly on this string. Sereja wants to test his algorithm. For that, he has string s = s 1 s 2 ... s n , consisting of n characters. The boy conducts a series of m tests. As the i -th test, he sends substring s l i s l i + 1 ... s r i (1 ≤ l i ≤ r i ≤ n ) to the algorithm input. Unfortunately, the implementation of his algorithm works too long, so Sereja asked you to help. For each test ( l i , r i ) determine if the algorithm works correctly on this test or not.",
+  "input_specification": "The first line contains non-empty string s , its length ( n ) doesn't exceed 10 5 . It is guaranteed that string s only contains characters: ' x ', ' y ', ' z '. The second line contains integer m (1 ≤ m ≤ 10 5 ) — the number of tests. Next m lines contain the tests. The i -th line contains a pair of integers l i , r i (1 ≤ l i ≤ r i ≤ n ) .",
+  "output_specification": "For each test, print \" YES \" (without the quotes) if the algorithm works correctly on the corresponding test and \" NO \" (without the quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "zyxxxxxxyyz\n5\n5 5\n1 3\n1 11\n1 4\n3 6",
+      "output": "YES\nYES\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

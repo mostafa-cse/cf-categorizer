@@ -1,0 +1,34 @@
+{
+  "id": "630O",
+  "source": "problemset",
+  "contest_id": 630,
+  "problem_index": "O",
+  "name": "Arrow",
+  "rating": 2000,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 953,
+  "problem_url": "https://codeforces.com/problemset/problem/630/O",
+  "editorial_url": "https://codeforces.com/blog/entry/24160",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Petya has recently started working as a programmer in the IT city company that develops computer games. Besides game mechanics implementation to create a game it is necessary to create tool programs that can be used by game designers to create game levels. Petya's first assignment is to create a tool that allows to paint different arrows on the screen. A user of this tool will choose a point on the screen, specify a vector (the arrow direction) and vary several parameters to get the required graphical effect. In the first version of the program Petya decided to limit parameters of the arrow by the following: a point with coordinates ( px , py ) , a nonzero vector with coordinates ( vx , vy ) , positive scalars a , b , c , d , a > c . The produced arrow should have the following properties. The arrow consists of a triangle and a rectangle. The triangle is isosceles with base of length a and altitude of length b perpendicular to the base. The rectangle sides lengths are c and d . Point ( px , py ) is situated in the middle of the triangle base and in the middle of side of rectangle that has length c . Area of intersection of the triangle and the rectangle is zero. The direction from ( px , py ) point to the triangle vertex opposite to base containing the point coincides with direction of ( vx , vy ) vector. Enumerate the arrow points coordinates in counter-clockwise order starting from the tip.",
+  "input_specification": "The only line of the input contains eight integers px , py , vx , vy ( - 1000 ≤ px , py , vx , vy ≤ 1000, vx 2 + vy 2 > 0 ), a , b , c , d ( 1 ≤ a , b , c , d ≤ 1000, a > c ).",
+  "output_specification": "Output coordinates of the arrow points in counter-clockwise order. Each line should contain two coordinates, first x , then y . Relative or absolute error should not be greater than 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "8 8 0 2 8 3 4 5",
+      "output": "8.000000000000 11.000000000000\n4.000000000000 8.000000000000\n6.000000000000 8.000000000000\n6.000000000000 3.000000000000\n10.000000000000 3.000000000000\n10.000000000000 8.000000000000\n12.000000000000 8.000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

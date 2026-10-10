@@ -1,0 +1,30 @@
+{
+  "id": "952D",
+  "source": "problemset",
+  "contest_id": 952,
+  "problem_index": "D",
+  "name": "I'm Feeling Lucky!",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "probabilities"
+  ],
+  "solved_count": 2597,
+  "problem_url": "https://codeforces.com/problemset/problem/952/D",
+  "editorial_url": "https://codeforces.com/blog/entry/58681",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have one chip and one chance to play roulette. Are you feeling lucky?",
+  "input_specification": "",
+  "output_specification": "Print your bet. Your chip must be placed entirely within some square (not on an edge or a corner shared by adjacent squares).",
+  "sample_testcases": [],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

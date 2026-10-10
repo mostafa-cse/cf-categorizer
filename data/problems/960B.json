@@ -1,0 +1,44 @@
+{
+  "id": "960B",
+  "source": "problemset",
+  "contest_id": 960,
+  "problem_index": "B",
+  "name": "Minimize the error",
+  "rating": 1500,
+  "tags": [
+    "data structures",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 13696,
+  "problem_url": "https://codeforces.com/problemset/problem/960/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58802",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays A and B , each of size n . The error, E , between these two arrays is defined . You have to perform exactly k 1 operations on array A and exactly k 2 operations on array B . In one operation, you have to choose one element of the array and increase or decrease it by 1 . Output the minimum possible value of error after k 1 operations on array A and k 2 operations on array B have been performed.",
+  "input_specification": "The first line contains three space-separated integers n ( 1 ≤ n ≤ 10 3 ), k 1 and k 2 ( 0 ≤ k 1 + k 2 ≤ 10 3 , k 1 and k 2 are non-negative) — size of arrays and number of operations to perform on A and B respectively. Second line contains n space separated integers a 1 , a 2 , ..., a n ( - 10 6 ≤ a i ≤ 10 6 ) — array A . Third line contains n space separated integers b 1 , b 2 , ..., b n ( - 10 6 ≤ b i ≤ 10 6 )— array B .",
+  "output_specification": "Output a single integer — the minimum possible value of after doing exactly k 1 operations on array A and exactly k 2 operations on array B .",
+  "sample_testcases": [
+    {
+      "input": "2 0 0\n1 2\n2 3",
+      "output": "2"
+    },
+    {
+      "input": "2 1 0\n1 2\n2 2",
+      "output": "0"
+    },
+    {
+      "input": "2 5 7\n3 4\n14 4",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

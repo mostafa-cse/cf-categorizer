@@ -1,0 +1,45 @@
+{
+  "id": "833C",
+  "source": "problemset",
+  "contest_id": 833,
+  "problem_index": "C",
+  "name": "Ever-Hungry Krakozyabra",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 546,
+  "problem_url": "https://codeforces.com/problemset/problem/833/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53567",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Recently, a wild Krakozyabra appeared at Jelly Castle. It is, truth to be said, always eager to have something for dinner. Its favorite meal is natural numbers (typically served with honey sauce), or, to be more precise, the zeros in their corresponding decimal representations. As for other digits, Krakozyabra dislikes them; moreover, they often cause it indigestion! So, as a necessary precaution, Krakozyabra prefers to sort the digits of a number in non-descending order before proceeding to feast. Then, the leading zeros of the resulting number are eaten and the remaining part is discarded as an inedible tail . For example, if Krakozyabra is to have the number 57040 for dinner, its inedible tail would be the number 457 . Slastyona is not really fond of the idea of Krakozyabra living in her castle. Hovewer, her natural hospitality prevents her from leaving her guest without food. Slastyona has a range of natural numbers from L to R , which she is going to feed the guest with. Help her determine how many distinct inedible tails are going to be discarded by Krakozyabra by the end of the dinner.",
+  "input_specification": "In the first and only string, the numbers L and R are given – the boundaries of the range (1 ≤ L ≤ R ≤ 10 18 ) .",
+  "output_specification": "Output the sole number – the answer for the problem.",
+  "sample_testcases": [
+    {
+      "input": "1 10",
+      "output": "9"
+    },
+    {
+      "input": "40 57",
+      "output": "17"
+    },
+    {
+      "input": "157 165",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2199F",
+  "source": "problemset",
+  "contest_id": 2199,
+  "problem_index": "F",
+  "name": "Self-Produced Sequences",
+  "rating": 2000,
+  "tags": [
+    "*special",
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 190,
+  "problem_url": "https://codeforces.com/problemset/problem/2199/F",
+  "editorial_url": "https://codeforces.com/blog/entry/151783",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's call an integer sequence self-produced if for every $$$i$$$ ($$$1 \\le i \\le n$$$) at least one of the following conditions holds: $$$a_i$$$ is equal to the sum of the elements on the left (i. e. $$$a_i = \\displaystyle\\sum\\limits_{j = 1}^{i - 1} a_j$$$); $$$a_i$$$ is equal to the sum of the elements on the right (i. e. $$$a_i = \\displaystyle\\sum\\limits_{j = i + 1}^{n} a_j$$$). Note that $$$0$$$ at the beginning/end of the sequence is also considered valid. You are given an integer array $$$a$$$ of size $$$n$$$. Your task is to calculate the number of self-produced subsequences of the array $$$a$$$. Since the answer might be large, print it modulo $$$998244353$$$. Two subsequences are different if the indices of chosen elements are different.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$). Additional constraint on the input: the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the number of self-produced subsequences of the array $$$a$$$ taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n1 1 2\n2\n0 0\n5\n0 1 0 1 0\n6\n1 0 2 2 1 1\n11\n2 0 3 1 0 0 2 3 0 3 2",
+      "output": "2\n4\n12\n8\n41"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:37",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

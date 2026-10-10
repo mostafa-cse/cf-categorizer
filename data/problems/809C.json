@@ -1,0 +1,36 @@
+{
+  "id": "809C",
+  "source": "problemset",
+  "contest_id": 809,
+  "problem_index": "C",
+  "name": "Find a car",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 955,
+  "problem_url": "https://codeforces.com/problemset/problem/809/C",
+  "editorial_url": "https://codeforces.com/blog/entry/52099",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After a wonderful evening in the restaurant the time to go home came. Leha as a true gentlemen suggested Noora to give her a lift. Certainly the girl agreed with pleasure. Suddenly one problem appeared: Leha cannot find his car on a huge parking near the restaurant. So he decided to turn to the watchman for help. Formally the parking can be represented as a matrix 10 9 × 10 9 . There is exactly one car in every cell of the matrix. All cars have their own machine numbers represented as a positive integer. Let's index the columns of the matrix by integers from 1 to 10 9 from left to right and the rows by integers from 1 to 10 9 from top to bottom. By coincidence it turned out, that for every cell ( x , y ) the number of the car, which stands in this cell, is equal to the minimum positive integer, which can't be found in the cells ( i , y ) and ( x , j ) , 1 ≤ i < x , 1 ≤ j < y . The upper left fragment 5 × 5 of the parking Leha wants to ask the watchman q requests, which can help him to find his car. Every request is represented as five integers x 1 , y 1 , x 2 , y 2 , k . The watchman have to consider all cells ( x , y ) of the matrix, such that x 1 ≤ x ≤ x 2 and y 1 ≤ y ≤ y 2 , and if the number of the car in cell ( x , y ) does not exceed k , increase the answer to the request by the number of the car in cell ( x , y ) . For each request Leha asks the watchman to tell him the resulting sum. Due to the fact that the sum can turn out to be quite large, hacker asks to calculate it modulo 10 9 + 7 . However the requests seem to be impracticable for the watchman. Help the watchman to answer all Leha's requests.",
+  "input_specification": "The first line contains one integer q (1 ≤ q ≤ 10 4 ) — the number of Leha's requests. The next q lines contain five integers x 1 , y 1 , x 2 , y 2 , k (1 ≤ x 1 ≤ x 2 ≤ 10 9 , 1 ≤ y 1 ≤ y 2 ≤ 10 9 , 1 ≤ k ≤ 2·10 9 ) — parameters of Leha's requests.",
+  "output_specification": "Print exactly q lines — in the first line print the answer to the first request, in the second — the answer to the second request and so on.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 1 1 1\n3 2 5 4 5\n1 1 5 5 10000\n1 4 2 5 2",
+      "output": "1\n13\n93\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

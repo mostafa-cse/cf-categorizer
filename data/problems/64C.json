@@ -1,0 +1,41 @@
+{
+  "id": "64C",
+  "source": "problemset",
+  "contest_id": 64,
+  "problem_index": "C",
+  "name": "Table",
+  "rating": 1600,
+  "tags": [
+    "*special",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 362,
+  "problem_url": "https://codeforces.com/problemset/problem/64/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1316",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "The integer numbers from 1 to nm was put into rectangular table having n rows and m columns. The numbers was put from left to right, from top to bottom, i.e. the first row contains integers 1, 2, ..., m , the second — m + 1, m + 2, ..., 2 * m and so on. After it these numbers was written on the paper in another order: from top to bottom, from left to right. First, the numbers in the first column was written (from top to bottom) and so on. Print the k -th number on the paper.",
+  "input_specification": "The only line in the input contains three integer numbers n , m and k ( 1 ≤ n , m ≤ 20000 , 1 ≤ k ≤ nm ).",
+  "output_specification": "Print the required number.",
+  "sample_testcases": [
+    {
+      "input": "3 4 11",
+      "output": "8"
+    },
+    {
+      "input": "20000 10000 200000000",
+      "output": "200000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

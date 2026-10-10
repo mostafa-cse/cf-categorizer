@@ -1,0 +1,38 @@
+{
+  "id": "240F",
+  "source": "problemset",
+  "contest_id": 240,
+  "problem_index": "F",
+  "name": "TorCoder",
+  "rating": 2600,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 2373,
+  "problem_url": "https://codeforces.com/problemset/problem/240/F",
+  "editorial_url": "https://codeforces.com/blog/entry/5531",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A boy named Leo doesn't miss a single TorCoder contest round. On the last TorCoder round number 100666 Leo stumbled over the following problem. He was given a string s , consisting of n lowercase English letters, and m queries. Each query is characterised by a pair of integers l i , r i (1 ≤ l i ≤ r i ≤ n ) . We'll consider the letters in the string numbered from 1 to n from left to right, that is, s = s 1 s 2 ... s n . After each query he must swap letters with indexes from l i to r i inclusive in string s so as to make substring ( l i , r i ) a palindrome. If there are multiple such letter permutations, you should choose the one where string ( l i , r i ) will be lexicographically minimum. If no such permutation exists, you should ignore the query (that is, not change string s ). Everybody knows that on TorCoder rounds input line and array size limits never exceed 60 , so Leo solved this problem easily. Your task is to solve the problem on a little bit larger limits. Given string s and m queries, print the string that results after applying all m queries to string s .",
+  "input_specification": "The first input line contains two integers n and m (1 ≤ n , m ≤ 10 5 ) — the string length and the number of the queries. The second line contains string s , consisting of n lowercase Latin letters. Each of the next m lines contains a pair of integers l i , r i ( 1 ≤ l i ≤ r i ≤ n ) — a query to apply to the string.",
+  "output_specification": "In a single line print the result of applying m queries to string s . Print the queries in the order in which they are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "7 2\naabcbaa\n1 3\n5 7",
+      "output": "abacaba"
+    },
+    {
+      "input": "3 2\nabc\n1 2\n2 3",
+      "output": "abc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

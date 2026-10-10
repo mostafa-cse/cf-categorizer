@@ -1,0 +1,42 @@
+{
+  "id": "1571D",
+  "source": "problemset",
+  "contest_id": 1571,
+  "problem_index": "D",
+  "name": "Sweepstake",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "brute force",
+    "constructive algorithms",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 375,
+  "problem_url": "https://codeforces.com/problemset/problem/1571/D",
+  "editorial_url": "https://codeforces.com/blog/entry/95785",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kotlin Heroes competition is nearing completion. This time $$$n$$$ programmers took part in the competition. Now organizers are thinking how to entertain spectators as well. One of the possibilities is holding sweepstakes. So for now they decided to conduct a survey among spectators. In total, organizers asked $$$m$$$ viewers two questions: Who will take the first place? Who will take the last place? After receiving answers, organizers ranked all spectators based on the number of programmers they guessed right. Suppose, there are $$$c_2$$$ viewers who guessed right both first and last place, $$$c_1$$$ viewers who guessed either first or last place right and $$$c_0$$$ viewers who didn't guess at all. All $$$c_2$$$ viewers will get rank $$$1$$$, all viewers with one right answer will get rank $$$c_2 + 1$$$ and all remaining viewers — rank $$$c_2 + c_1 + 1$$$. You were one of the interviewed spectators. Also, as one of the organizers, you have access to survey results, but not to competition results. Calculate, what is the worst rank you can possibly get according to organizers' ranking system?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 1000$$$; $$$1 \\le m \\le 2 \\cdot 10^5$$$) — the number of programmers participating in the competition and the number of surveyed spectators. Next $$$m$$$ lines contain answers of spectators. The $$$i$$$-th line contains two integers $$$f_i$$$ and $$$l_i$$$ ($$$1 \\le f_i, l_i \\le n$$$; $$$f_i \\ne l_i$$$) — the indices of programmers who will take the first and last places in opinion of the $$$i$$$-th viewer. For simplicity, you are the first among spectators, so your answers are $$$f_1$$$ and $$$l_1$$$.",
+  "output_specification": "Print the single integer — the worst rank among spectators you can possibly get according to organizers' ranking system (bigger rank — worse, of course).",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 2\n2 1\n2 1",
+      "output": "3"
+    },
+    {
+      "input": "3 6\n3 1\n3 2\n2 1\n3 2\n3 2\n3 1",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:58",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

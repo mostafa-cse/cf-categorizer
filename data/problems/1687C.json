@@ -1,0 +1,39 @@
+{
+  "id": "1687C",
+  "source": "problemset",
+  "contest_id": 1687,
+  "problem_index": "C",
+  "name": "Sanae and Giant Robot",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dsu",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 1757,
+  "problem_url": "https://codeforces.com/problemset/problem/1687/C",
+  "editorial_url": "https://codeforces.com/blog/entry/103493",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Is it really?! The robot only existing in my imagination?! The Colossal Walking Robot?!! — Kochiya Sanae Sanae made a giant robot — Hisoutensoku, but something is wrong with it. To make matters worse, Sanae can not figure out how to stop it, and she is forced to fix it on-the-fly. The state of a robot can be represented by an array of integers of length $$$n$$$. Initially, the robot is at state $$$a$$$. She wishes to turn it into state $$$b$$$. As a great programmer, Sanae knows the art of copy-and-paste. In one operation, she can choose some segment from given segments, copy the segment from $$$b$$$ and paste it into the same place of the robot, replacing the original state there. However, she has to ensure that the sum of $$$a$$$ does not change after each copy operation in case the robot go haywire. Formally, Sanae can choose segment $$$[l,r]$$$ and assign $$$a_i = b_i$$$ ($$$l\\le i\\le r$$$) if $$$\\sum\\limits_{i=1}^n a_i$$$ does not change after the operation. Determine whether it is possible for Sanae to successfully turn the robot from the initial state $$$a$$$ to the desired state $$$b$$$ with any (possibly, zero) operations.",
+  "input_specification": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 2\\cdot 10^4$$$) — the number of test cases. The descriptions of the test cases follow. The first line of each test case contains two integers $$$n$$$, $$$m$$$ ($$$2 \\leq n\\leq 2\\cdot 10^5$$$, $$$1 \\leq m\\leq 2\\cdot 10^5$$$) — the length of $$$a$$$, $$$b$$$ and the number of segments. The second line contains $$$n$$$ intergers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\leq a_i \\leq 10^9$$$) — the initial state $$$a$$$. The third line contains $$$n$$$ intergers $$$b_1,b_2,\\ldots,b_n$$$ ($$$1 \\leq b_i \\leq 10^9$$$) — the desired state $$$b$$$. Then $$$m$$$ lines follow, the $$$i$$$-th line contains two intergers $$$l_i,r_i$$$ ($$$1 \\leq l_i \\lt r_i \\leq n$$$) — the segments that can be copy-pasted by Sanae. It is guaranteed that both the sum of $$$n$$$ and the sum of $$$m$$$ over all test cases does not exceed $$$2 \\cdot 10 ^ 5$$$.",
+  "output_specification": "For each test case, print \" YES \" (without quotes) if $$$a$$$ can be turned into $$$b$$$, or \" NO \" (without quotes) otherwise. You can output \" YES \" and \" NO \" in any case (for example, strings \" yEs \", \" yes \" and \" Yes \" will be recognized as a positive response).",
+  "sample_testcases": [
+    {
+      "input": "2\n5 2\n1 5 4 2 3\n3 2 5 4 1\n1 3\n2 5\n5 2\n1 5 4 2 3\n3 2 4 5 1\n1 2\n2 4",
+      "output": "YES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:34",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "498E",
+  "source": "problemset",
+  "contest_id": 498,
+  "problem_index": "E",
+  "name": "Stairs and Lines",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 623,
+  "problem_url": "https://codeforces.com/problemset/problem/498/E",
+  "editorial_url": "https://codeforces.com/blog/entry/15353",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a figure on a grid representing stairs consisting of 7 steps. The width of the stair on height i is w i squares. Formally, the figure is created by consecutively joining rectangles of size w i × i so that the w i sides lie on one straight line. Thus, for example, if all w i = 1 , the figure will look like that (different colors represent different rectangles): And if w = {5, 1, 0, 3, 0, 0, 1} , then it looks like that: Find the number of ways to color some borders of the figure's inner squares so that no square had all four borders colored. The borders of the squares lying on the border of the figure should be considered painted. The ways that differ with the figure's rotation should be considered distinct.",
+  "input_specification": "The single line of the input contains 7 numbers w 1 , w 2 , ..., w 7 ( 0 ≤ w i ≤ 10 5 ). It is guaranteed that at least one of the w i 's isn't equal to zero.",
+  "output_specification": "In the single line of the output display a single number — the answer to the problem modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "0 1 0 0 0 0 0",
+      "output": "1"
+    },
+    {
+      "input": "0 2 0 0 0 0 0",
+      "output": "7"
+    },
+    {
+      "input": "1 1 1 0 0 0 0",
+      "output": "9"
+    },
+    {
+      "input": "5 1 0 3 0 0 1",
+      "output": "411199181"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

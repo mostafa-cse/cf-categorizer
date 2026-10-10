@@ -1,0 +1,37 @@
+{
+  "id": "1808C",
+  "source": "problemset",
+  "contest_id": 1808,
+  "problem_index": "C",
+  "name": "Unlucky Numbers",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 4446,
+  "problem_url": "https://codeforces.com/problemset/problem/1808/C",
+  "editorial_url": "https://codeforces.com/blog/entry/114523",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In this problem, unlike problem A, you need to look for unluckiest number , not the luckiest one. Note that the constraints of this problem differ from such in problem A. Olympus City recently launched the production of personal starships. Now everyone on Mars can buy one and fly to other planets inexpensively. Each starship has a number —some positive integer $$$x$$$. Let's define the luckiness of a number $$$x$$$ as the difference between the largest and smallest digits of that number. For example, $$$142857$$$ has $$$8$$$ as its largest digit and $$$1$$$ as its smallest digit, so its luckiness is $$$8-1=7$$$. And the number $$$111$$$ has all digits equal to $$$1$$$, so its luckiness is zero. Hateehc is a famous Martian blogger who often flies to different corners of the solar system. To release interesting videos even faster, he decided to buy himself a starship. When he came to the store, he saw starships with numbers from $$$l$$$ to $$$r$$$ inclusively. While in the store, Hateehc wanted to find a starship with the unluckiest number. Since there are a lot of starships in the store, and Hateehc can't program, you have to help the blogger and write a program that answers his question.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 600$$$) —the number of test cases. Each of the following $$$t$$$ lines contains a description of the test case. The description consists of two integers $$$l$$$, $$$r$$$ ($$$1 \\le l \\le r \\le 10^{18}$$$) — the largest and smallest numbers of the starships in the store.",
+  "output_specification": "Print $$$t$$$ lines, one line for each test case, containing the unluckiest starship number in the store. If there are several ways to choose the unluckiest number, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n59 63\n42 49\n48 53\n90 90\n1 100",
+      "output": "63\n44\n53\n90\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

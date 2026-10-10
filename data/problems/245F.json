@@ -1,0 +1,45 @@
+{
+  "id": "245F",
+  "source": "problemset",
+  "contest_id": 245,
+  "problem_index": "F",
+  "name": "Log Stream Analysis",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 1004,
+  "problem_url": "https://codeforces.com/problemset/problem/245/F",
+  "editorial_url": "https://codeforces.com/blog/entry/5921",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You've got a list of program warning logs. Each record of a log stream is a string in this format: \" 2012-MM-DD HH:MM:SS:MESSAGE \" (without the quotes). String \" MESSAGE \" consists of spaces, uppercase and lowercase English letters and characters \" ! \", \" . \", \" , \", \" ? \". String \" 2012-MM-DD \" determines a correct date in the year of 2012. String \" HH:MM:SS \" determines a correct time in the 24 hour format. The described record of a log stream means that at a certain time the record has got some program warning (string \" MESSAGE \" contains the warning's description). Your task is to print the first moment of time, when the number of warnings for the last n seconds was not less than m .",
+  "input_specification": "The first line of the input contains two space-separated integers n and m (1 ≤ n , m ≤ 10000) . The second and the remaining lines of the input represent the log stream. The second line of the input contains the first record of the log stream, the third line contains the second record and so on. Each record of the log stream has the above described format. All records are given in the chronological order, that is, the warning records are given in the order, in which the warnings appeared in the program. It is guaranteed that the log has at least one record. It is guaranteed that the total length of all lines of the log stream doesn't exceed 5·10 6 (in particular, this means that the length of some line does not exceed 5·10 6 characters). It is guaranteed that all given dates and times are correct, and the string ' MESSAGE \" in all records is non-empty.",
+  "output_specification": "If there is no sought moment of time, print -1. Otherwise print a string in the format \" 2012-MM-DD HH:MM:SS \" (without the quotes) — the first moment of time when the number of warnings for the last n seconds got no less than m .",
+  "sample_testcases": [
+    {
+      "input": "60 3\n2012-03-16 16:15:25: Disk size is\n2012-03-16 16:15:25: Network failute\n2012-03-16 16:16:29: Cant write varlog\n2012-03-16 16:16:42: Unable to start process\n2012-03-16 16:16:43: Disk size is too small\n2012-03-16 16:16:53: Timeout detected",
+      "output": "2012-03-16 16:16:43"
+    },
+    {
+      "input": "1 2\n2012-03-16 23:59:59:Disk size\n2012-03-17 00:00:00: Network\n2012-03-17 00:00:01:Cant write varlog",
+      "output": "-1"
+    },
+    {
+      "input": "2 2\n2012-03-16 23:59:59:Disk size is too sm\n2012-03-17 00:00:00:Network failute dete\n2012-03-17 00:00:01:Cant write varlogmysq",
+      "output": "2012-03-17 00:00:00"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

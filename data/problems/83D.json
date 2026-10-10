@@ -1,0 +1,44 @@
+{
+  "id": "83D",
+  "source": "problemset",
+  "contest_id": 83,
+  "problem_index": "D",
+  "name": "Numbers",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1094,
+  "problem_url": "https://codeforces.com/problemset/problem/83/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1947",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One quite ordinary day Valera went to school (there's nowhere else he should go on a week day). In a maths lesson his favorite teacher Ms. Evans told students about divisors. Despite the fact that Valera loved math, he didn't find this particular topic interesting. Even more, it seemed so boring that he fell asleep in the middle of a lesson. And only a loud ringing of a school bell could interrupt his sweet dream. Of course, the valuable material and the teacher's explanations were lost. However, Valera will one way or another have to do the homework. As he does not know the new material absolutely, he cannot do the job himself. That's why he asked you to help. You're his best friend after all, you just cannot refuse to help. Valera's home task has only one problem, which, though formulated in a very simple way, has not a trivial solution. Its statement looks as follows: if we consider all positive integers in the interval [ a ; b ] then it is required to count the amount of such numbers in this interval that their smallest divisor will be a certain integer k (you do not have to consider divisor equal to one) . In other words, you should count the amount of such numbers from the interval [ a ; b ] , that are not divisible by any number between 2 and k - 1 and yet are divisible by k .",
+  "input_specification": "The first and only line contains three positive integers a , b , k ( 1 ≤ a ≤ b ≤ 2·10 9 , 2 ≤ k ≤ 2·10 9 ).",
+  "output_specification": "Print on a single line the answer to the given problem.",
+  "sample_testcases": [
+    {
+      "input": "1 10 2",
+      "output": "5"
+    },
+    {
+      "input": "12 23 3",
+      "output": "2"
+    },
+    {
+      "input": "6 19 5",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1594E2",
+  "source": "problemset",
+  "contest_id": 1594,
+  "problem_index": "E2",
+  "name": "Rubik's Cube Coloring (hard version)",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "dp",
+    "implementation",
+    "math",
+    "trees"
+  ],
+  "solved_count": 1703,
+  "problem_url": "https://codeforces.com/problemset/problem/1594/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/95525",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It is the hard version of the problem. The difference is that in this version, there are nodes with already chosen colors. Theofanis is starving, and he wants to eat his favorite food, sheftalia. However, he should first finish his homework. Can you help him with this problem? You have a perfect binary tree of $$$2^k - 1$$$ nodes — a binary tree where all vertices $$$i$$$ from $$$1$$$ to $$$2^{k - 1} - 1$$$ have exactly two children: vertices $$$2i$$$ and $$$2i + 1$$$. Vertices from $$$2^{k - 1}$$$ to $$$2^k - 1$$$ don't have any children. You want to color its vertices with the $$$6$$$ Rubik's cube colors (White, Green, Red, Blue, Orange and Yellow). Let's call a coloring good when all edges connect nodes with colors that are neighboring sides in the Rubik's cube. A picture of Rubik's cube and its 2D map. More formally: a white node can not be neighboring with white and yellow nodes; a yellow node can not be neighboring with white and yellow nodes; a green node can not be neighboring with green and blue nodes; a blue node can not be neighboring with green and blue nodes; a red node can not be neighboring with red and orange nodes; an orange node can not be neighboring with red and orange nodes; However, there are $$$n$$$ special nodes in the tree, colors of which are already chosen. You want to calculate the number of the good colorings of the binary tree. Two colorings are considered different if at least one node is colored with a different color. The answer may be too large, so output the answer modulo $$$10^9+7$$$.",
+  "input_specification": "The first line contains the integers $$$k$$$ ($$$1 \\le k \\le 60$$$) — the number of levels in the perfect binary tree you need to color. The second line contains the integer $$$n$$$ ($$$1 \\le n \\le \\min(2^k - 1, 2000)$$$) — the number of nodes, colors of which are already chosen. The next $$$n$$$ lines contains integer $$$v$$$ ($$$1 \\le v \\le 2^k - 1$$$) and string $$$s$$$ — the index of the node and the color of the node ($$$s$$$ is one of the white , yellow , green , blue , red and orange ). It is guaranteed that each node $$$v$$$ appears in the input at most once.",
+  "output_specification": "Print one integer — the number of the different colorings modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n5 orange\n2 white",
+      "output": "1024"
+    },
+    {
+      "input": "2\n2\n1 white\n2 white",
+      "output": "0"
+    },
+    {
+      "input": "10\n3\n1 blue\n4 red\n5 orange",
+      "output": "328925088"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "1682E",
+  "source": "problemset",
+  "contest_id": 1682,
+  "problem_index": "E",
+  "name": "Unordered Swaps",
+  "rating": 2700,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "graphs",
+    "greedy",
+    "math",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 799,
+  "problem_url": "https://codeforces.com/problemset/problem/1682/E",
+  "editorial_url": "https://codeforces.com/blog/entry/103097",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice had a permutation $$$p$$$ of numbers from $$$1$$$ to $$$n$$$. Alice can swap a pair $$$(x, y)$$$ which means swapping elements at positions $$$x$$$ and $$$y$$$ in $$$p$$$ (i.e. swap $$$p_x$$$ and $$$p_y$$$). Alice recently learned her first sorting algorithm, so she decided to sort her permutation in the minimum number of swaps possible. She wrote down all the swaps in the order in which she performed them to sort the permutation on a piece of paper. For example, $$$[(2, 3), (1, 3)]$$$ is a valid swap sequence by Alice for permutation $$$p = [3, 1, 2]$$$ whereas $$$[(1, 3), (2, 3)]$$$ is not because it doesn't sort the permutation. Note that we cannot sort the permutation in less than $$$2$$$ swaps. $$$[(1, 2), (2, 3), (2, 4), (2, 3)]$$$ cannot be a sequence of swaps by Alice for $$$p = [2, 1, 4, 3]$$$ even if it sorts the permutation because $$$p$$$ can be sorted in $$$2$$$ swaps, for example using the sequence $$$[(4, 3), (1, 2)]$$$. Unfortunately, Bob shuffled the sequence of swaps written by Alice. You are given Alice's permutation $$$p$$$ and the swaps performed by Alice in arbitrary order. Can you restore the correct sequence of swaps that sorts the permutation $$$p$$$? Since Alice wrote correct swaps before Bob shuffled them up, it is guaranteed that there exists some order of swaps that sorts the permutation.",
+  "input_specification": "The first line contains $$$2$$$ integers $$$n$$$ and $$$m$$$ $$$(2 \\le n \\le 2 \\cdot 10^5, 1 \\le m \\le n - 1)$$$  — the size of permutation and the minimum number of swaps required to sort the permutation. The next line contains $$$n$$$ integers $$$p_1, p_2, ..., p_n$$$ ($$$1 \\le p_i \\le n$$$, all $$$p_i$$$ are distinct)  — the elements of $$$p$$$. It is guaranteed that $$$p$$$ forms a permutation. Then $$$m$$$ lines follow. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$  — the $$$i$$$-th swap $$$(x_i, y_i)$$$. It is guaranteed that it is possible to sort $$$p$$$ with these $$$m$$$ swaps and that there is no way to sort $$$p$$$ with less than $$$m$$$ swaps.",
+  "output_specification": "Print a permutation of $$$m$$$ integers  — a valid order of swaps written by Alice that sorts the permutation $$$p$$$. See sample explanation for better understanding. In case of multiple possible answers, output any.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n2 3 4 1\n1 4\n2 1\n1 3",
+      "output": "2 3 1"
+    },
+    {
+      "input": "6 4\n6 5 1 3 2 4\n3 1\n2 5\n6 3\n6 4",
+      "output": "4 1 3 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:31",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

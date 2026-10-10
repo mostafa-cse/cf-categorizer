@@ -1,0 +1,37 @@
+{
+  "id": "2147C",
+  "source": "problemset",
+  "contest_id": 2147,
+  "problem_index": "C",
+  "name": "Rabbits",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 12502,
+  "problem_url": "https://codeforces.com/problemset/problem/2147/C",
+  "editorial_url": "https://codeforces.com/blog/entry/146633",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have $$$n$$$ flower pots arranged in a line numbered from $$$1$$$ to $$$n$$$ left to right. Some of the pots contain flowers, while others are empty. You are given a binary string $$$s$$$ describing which pots contain flowers ($$$s_i = 1$$$) and which are empty ($$$s_i = 0$$$). You also have some rabbits, and you want to take a nice picture of rabbits and flowers. You want to put rabbits in every empty pot ($$$s_i = 0$$$), and for each rabbit, you can put it looking either to the left or to the right. Unfortunately, the rabbits are quite naughty, and they will try to jump, which will ruin the picture. Each rabbit will prepare to jump into the next pot in the direction they are looking, but they won't jump if there is a rabbit in that pot already or if there is another rabbit that prepares to jump into the same pot from the opposite side. Rabbits won't jump out of the borders (a rabbit at pot $$$1$$$ looking to the left won't jump, same for a rabbit looking to the right at pot $$$n$$$). Your goal is to choose the directions of the rabbits so that they never jump, allowing you to take your time to take the picture. You need to determine if there is a valid arrangement of rabbits such that no rabbit ever jumps.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line contains a binary string $$$s$$$ of size $$$n$$$, denoting the occupied and empty pots. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print \" YES \" if there exists a configuration of rabbits that satisfies the condition, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "12\n4\n0100\n3\n000\n8\n11011011\n5\n00100\n1\n1\n5\n01011\n2\n01\n7\n0101011\n7\n1101010\n5\n11001\n4\n1101\n9\n001101100",
+      "output": "YES\nYES\nNO\nYES\nYES\nYES\nYES\nYES\nYES\nYES\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

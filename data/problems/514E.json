@@ -1,0 +1,35 @@
+{
+  "id": "514E",
+  "source": "problemset",
+  "contest_id": 514,
+  "problem_index": "E",
+  "name": "Darth Vader and Tree",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 1813,
+  "problem_url": "https://codeforces.com/problemset/problem/514/E",
+  "editorial_url": "https://codeforces.com/blog/entry/16398",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "When Darth Vader gets bored, he sits down on the sofa, closes his eyes and thinks of an infinite rooted tree where each node has exactly n sons, at that for each node, the distance between it an its i -th left child equals to d i . The Sith Lord loves counting the number of nodes in the tree that are at a distance at most x from the root. The distance is the sum of the lengths of edges on the path between nodes. But he has got used to this activity and even grew bored of it. 'Why does he do that, then?' — you may ask. It's just that he feels superior knowing that only he can solve this problem. Do you want to challenge Darth Vader himself? Count the required number of nodes. As the answer can be rather large, find it modulo 10 9 + 7 .",
+  "input_specification": "The first line contains two space-separated integers n and x ( 1 ≤ n ≤ 10 5 , 0 ≤ x ≤ 10 9 ) — the number of children of each node and the distance from the root within the range of which you need to count the nodes. The next line contains n space-separated integers d i ( 1 ≤ d i ≤ 100 ) — the length of the edge that connects each node with its i -th child.",
+  "output_specification": "Print a single number — the number of vertexes in the tree at distance from the root equal to at most x .",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2 3",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

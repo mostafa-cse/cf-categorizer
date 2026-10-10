@@ -1,0 +1,47 @@
+{
+  "id": "1270F",
+  "source": "problemset",
+  "contest_id": 1270,
+  "problem_index": "F",
+  "name": "Awesome Substrings",
+  "rating": 2600,
+  "tags": [
+    "math",
+    "strings"
+  ],
+  "solved_count": 1400,
+  "problem_url": "https://codeforces.com/problemset/problem/1270/F",
+  "editorial_url": null,
+  "time_limit": "8 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's call a binary string $$$s$$$ awesome , if it has at least $$$1$$$ symbol 1 and length of the string is divisible by the number of 1 in it. In particular, 1 , 1010 , 111 are awesome , but 0 , 110 , 01010 aren't. You are given a binary string $$$s$$$. Count the number of its awesome substrings. A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "The first line contains the string $$$s$$$ ($$$1 \\leq |s|\\le 200\\,000$$$) consisting only of zeros and ones.",
+  "output_specification": "Output a single number — the number of awesome substrings of $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "111",
+      "output": "6"
+    },
+    {
+      "input": "01010",
+      "output": "10"
+    },
+    {
+      "input": "0000",
+      "output": "0"
+    },
+    {
+      "input": "1111100000",
+      "output": "25"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:12",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

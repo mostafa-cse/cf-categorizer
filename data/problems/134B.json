@@ -1,0 +1,41 @@
+{
+  "id": "134B",
+  "source": "problemset",
+  "contest_id": 134,
+  "problem_index": "B",
+  "name": "Pairs of Numbers",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2571,
+  "problem_url": "https://codeforces.com/problemset/problem/134/B",
+  "editorial_url": "https://codeforces.com/blog/entry/3284",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's assume that we have a pair of numbers ( a , b ). We can get a new pair ( a + b , b ) or ( a , a + b ) from the given pair in a single step. Let the initial pair of numbers be (1,1). Your task is to find number k , that is, the least number of steps needed to transform (1,1) into the pair where at least one number equals n .",
+  "input_specification": "The input contains the only integer n ( 1 ≤ n ≤ 10 6 ).",
+  "output_specification": "Print the only integer k .",
+  "sample_testcases": [
+    {
+      "input": "5",
+      "output": "3"
+    },
+    {
+      "input": "1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

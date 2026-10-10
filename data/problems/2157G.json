@@ -1,0 +1,43 @@
+{
+  "id": "2157G",
+  "source": "problemset",
+  "contest_id": 2157,
+  "problem_index": "G",
+  "name": "Isaac's Queries",
+  "rating": 2800,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "dfs and similar",
+    "divide and conquer",
+    "dp",
+    "greedy",
+    "interactive",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 994,
+  "problem_url": "https://codeforces.com/problemset/problem/2157/G",
+  "editorial_url": "https://codeforces.com/blog/entry/148631",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "wavetearz - contemporary chemical bonds ⠀ You have reached the final level of the popular roguelike game \"Isaac's Keybindings\". Instead of a boss, you encounter a shopkeeper who holds an hidden array of integers $$$a_1, a_2, \\ldots, a_n$$$, where $$$0 \\leq a_i \\lt 2^{30}$$$ for each $$$i$$$ in $$$[1, n]$$$. It is guaranteed that the array is generated randomly , i.e., each $$$a_i$$$ ($$$1 \\leq i \\leq n$$$) is an integer independently generated uniformly at random in $$$[0, 2^{30})$$$, in all the tests excluding the example. Let $$$f(u, v) = a_u \\oplus a_{u+1} \\oplus \\ldots \\oplus a_v$$$, where $$$\\oplus$$$ is the bitwise $$$\\texttt{XOR}$$$. You can ask queries of the following form: $$$\\texttt{? u v}$$$, with $$$1 \\leq u \\leq v \\leq n$$$. The answer to the query is: $$$-1$$$, if $$$f(u, v) = 0$$$; $$$\\lfloor \\log_2(f(u, v)) \\rfloor$$$ otherwise. Each query has a cost of $$$\\frac{1}{v-u+1}$$$ robocoins. On each test, you are given $$$300$$$ robocoins in total to pass at most $$$30$$$ test cases (that is, you can spend $$$10$$$ robocoins on average for a single test case). If your balance ever becomes negative you lose. Note that your robocoin balance does not need to be an integer at any moment. Find the answer to all possible $$$\\frac{n(n+1)}{2}$$$ queries without losing.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 30$$$). The description of the test cases follows. The first line of each test case contains one integer $$$n$$$ ($$$n = 3$$$ or $$$n = 100$$$) — the length of the array $$$a_1, a_2, \\ldots, a_n$$$. It is guaranteed that the array is generated randomly in all the tests excluding the example. There are exactly $$$50$$$ tests in this problem (including the example). The example has $$$t = 1$$$ and $$$n = 3$$$, and all the other tests have $$$t = 30$$$ and $$$n = 100$$$. Hacks are not allowed in this problem.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "1\n3\n\n2\n\n-1\n\n1",
+      "output": "? 1 2\n\n? 1 3\n\n? 2 3\n\n!\n1 2 -1 \n2 1 \n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

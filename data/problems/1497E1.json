@@ -1,0 +1,39 @@
+{
+  "id": "1497E1",
+  "source": "problemset",
+  "contest_id": 1497,
+  "problem_index": "E1",
+  "name": "Square-Free Division (easy version)",
+  "rating": 1700,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "math",
+    "number theory",
+    "two pointers"
+  ],
+  "solved_count": 9244,
+  "problem_url": "https://codeforces.com/problemset/problem/1497/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/88677",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference is that in this version $$$k = 0$$$. There is an array $$$a_1, a_2, \\ldots, a_n$$$ of $$$n$$$ positive integers. You should divide it into a minimal number of continuous segments, such that in each segment there are no two numbers (on different positions), whose product is a perfect square. Moreover, it is allowed to do at most $$$k$$$ such operations before the division: choose a number in the array and change its value to any positive integer. But in this version $$$k = 0$$$, so it is not important. What is the minimum number of continuous segments you should use if you will make changes optimally?",
+  "input_specification": "The first line contains a single integer $$$t$$$ $$$(1 \\le t \\le 1000)$$$  — the number of test cases. The first line of each test case contains two integers $$$n$$$, $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$k = 0$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^7$$$). It's guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print a single integer  — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 0\n18 6 2 4 1\n5 0\n6 8 1 24 8\n1 0\n1",
+      "output": "3\n2\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

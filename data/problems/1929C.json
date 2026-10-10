@@ -1,0 +1,39 @@
+{
+  "id": "1929C",
+  "source": "problemset",
+  "contest_id": 1929,
+  "problem_index": "C",
+  "name": "Sasha and the Casino",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "games",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 17740,
+  "problem_url": "https://codeforces.com/problemset/problem/1929/C",
+  "editorial_url": "https://codeforces.com/blog/entry/125943",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Sasha decided to give his girlfriend the best handbag, but unfortunately for Sasha, it is very expensive. Therefore, Sasha wants to earn it. After looking at earning tips on the internet, he decided to go to the casino. Sasha knows that the casino operates under the following rules. If Sasha places a bet of $$$y$$$ coins (where $$$y$$$ is a positive integer), then in case of winning, he will receive $$$y \\cdot k$$$ coins (i.e., his number of coins will increase by $$$y \\cdot (k - 1)$$$). And in case of losing, he will lose the entire bet amount (i.e., his number of coins will decrease by $$$y$$$). Note that the bet amount must always be a positive ($$$ \\gt 0$$$) integer and cannot exceed Sasha's current number of coins. Sasha also knows that there is a promotion at the casino: he cannot lose more than $$$x$$$ times in a row. Initially, Sasha has $$$a$$$ coins. He wonders whether he can place bets such that he is guaranteed to win any number of coins. In other words, is it true that for any integer $$$n$$$, Sasha can make bets so that for any outcome that does not contradict the rules described above, at some moment of time he will have at least $$$n$$$ coins.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The description of the test cases follows. The single line of each test case contains three integers $$$k, x$$$ and $$$a$$$ ($$$2 \\leq k \\leq 30$$$, $$$1 \\leq x \\leq 100$$$, $$$1 \\leq a \\leq 10^9$$$) — the number of times the bet is increased in case of a win, the maximum number of consecutive losses, and the initial number of coins Sasha has.",
+  "output_specification": "For each test case, output \" YES \" (without quotes) if Sasha can achieve it and \" NO \" (without quotes) otherwise. You can output \" YES \" and \" NO \" in any case (for example, the strings \" yEs \", \" yes \" and \" Yes \" will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "9\n2 1 7\n2 1 1\n2 3 15\n3 3 6\n4 4 5\n5 4 7\n4 88 1000000000\n25 69 231\n13 97 18806",
+      "output": "YES\nNO\nYES\nNO\nNO\nYES\nNO\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:29",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

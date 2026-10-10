@@ -1,0 +1,40 @@
+{
+  "id": "1534D",
+  "source": "problemset",
+  "contest_id": 1534,
+  "problem_index": "D",
+  "name": "Lost Tree",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "trees"
+  ],
+  "solved_count": 7056,
+  "problem_url": "https://codeforces.com/problemset/problem/1534/D",
+  "editorial_url": "https://codeforces.com/blog/entry/91760",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem . Little Dormi was faced with an awkward problem at the carnival: he has to guess the edges of an unweighted tree of $$$n$$$ nodes! The nodes of the tree are numbered from $$$1$$$ to $$$n$$$. The game master only allows him to ask one type of question: Little Dormi picks a node $$$r$$$ ($$$1 \\le r \\le n$$$), and the game master will reply with an array $$$d_1, d_2, \\ldots, d_n$$$, where $$$d_i$$$ is the length of the shortest path from node $$$r$$$ to $$$i$$$, for all $$$1 \\le i \\le n$$$. Additionally, to make the game unfair challenge Little Dormi the game master will allow at most $$$\\lceil\\frac{n}{2}\\rceil$$$ questions, where $$$\\lceil x \\rceil$$$ denotes the smallest integer greater than or equal to $$$x$$$. Faced with the stomach-churning possibility of not being able to guess the tree, Little Dormi needs your help to devise a winning strategy! Note that the game master creates the tree before the game starts, and does not change it during the game.",
+  "input_specification": "The first line of input contains the integer $$$n$$$ ($$$2 \\le n \\le 2\\,000$$$), the number of nodes in the tree. You will then begin interaction.",
+  "output_specification": "When your program has found the tree, first output a line consisting of a single \" ! \" followed by $$$n-1$$$ lines each with two space separated integers $$$a$$$ and $$$b$$$, denoting an edge connecting nodes $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le n$$$). Once you are done, terminate your program normally immediately after flushing the output stream. You may output the edges in any order and an edge $$$(a,b)$$$ is considered the same as an edge $$$(b,a)$$$. Answering is not considered as a query.",
+  "sample_testcases": [
+    {
+      "input": "4\n\n0 1 2 2\n\n1 0 1 1",
+      "output": "? 1\n\n? 2\n\n!\n4 2\n1 2\n2 3"
+    },
+    {
+      "input": "5\n\n2 2 1 1 0",
+      "output": "? 5\n\n!\n4 5\n3 5\n2 4\n1 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

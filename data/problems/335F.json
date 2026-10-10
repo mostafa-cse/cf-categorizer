@@ -1,0 +1,43 @@
+{
+  "id": "335F",
+  "source": "problemset",
+  "contest_id": 335,
+  "problem_index": "F",
+  "name": "Buy One, Get One Free",
+  "rating": 3000,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 782,
+  "problem_url": "https://codeforces.com/problemset/problem/335/F",
+  "editorial_url": "https://codeforces.com/blog/entry/8538",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A nearby pie shop is having a special sale. For each pie you pay full price for, you may select one pie of a strictly lesser value to get for free. Given the prices of all the pies you wish to acquire, determine the minimum total amount you must pay for all of the pies.",
+  "input_specification": "Input will begin with an integer n ( 1 ≤ n ≤ 500000 ), the number of pies you wish to acquire. Following this is a line with n integers, each indicating the cost of a pie. All costs are positive integers not exceeding 10 9 .",
+  "output_specification": "Print the minimum cost to acquire all the pies. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "6\n3 4 5 3 4 5",
+      "output": "14"
+    },
+    {
+      "input": "5\n5 5 5 5 5",
+      "output": "25"
+    },
+    {
+      "input": "4\n309999 6000 2080 2080",
+      "output": "314159"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

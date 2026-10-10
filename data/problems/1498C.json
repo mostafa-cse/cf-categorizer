@@ -1,0 +1,40 @@
+{
+  "id": "1498C",
+  "source": "problemset",
+  "contest_id": 1498,
+  "problem_index": "C",
+  "name": "Planar Reflections",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 12865,
+  "problem_url": "https://codeforces.com/problemset/problem/1498/C",
+  "editorial_url": "https://codeforces.com/blog/entry/89137",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Gaurang has grown up in a mystical universe. He is faced by $$$n$$$ consecutive 2D planes. He shoots a particle of decay age $$$k$$$ at the planes. A particle can pass through a plane directly, however, every plane produces an identical copy of the particle going in the opposite direction with a decay age $$$k-1$$$. If a particle has decay age equal to $$$1$$$, it will NOT produce a copy. For example, if there are two planes and a particle is shot with decay age $$$3$$$ (towards the right), the process is as follows: (here, $$$D(x)$$$ refers to a single particle with decay age $$$x$$$) the first plane produces a $$$D(2)$$$ to the left and lets $$$D(3)$$$ continue on to the right; the second plane produces a $$$D(2)$$$ to the left and lets $$$D(3)$$$ continue on to the right; the first plane lets $$$D(2)$$$ continue on to the left and produces a $$$D(1)$$$ to the right; the second plane lets $$$D(1)$$$ continue on to the right ($$$D(1)$$$ cannot produce any copies). In total, the final multiset $$$S$$$ of particles is $$$\\{D(3), D(2), D(2), D(1)\\}$$$. (See notes for visual explanation of this test case.) Gaurang is unable to cope up with the complexity of this situation when the number of planes is too large. Help Gaurang find the size of the multiset $$$S$$$, given $$$n$$$ and $$$k$$$. Since the size of the multiset can be very large, you have to output it modulo $$$10^9+7$$$. Note: Particles can go back and forth between the planes without colliding with each other.",
+  "input_specification": "The first line of the input contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Then, $$$t$$$ lines follow, each containing two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 1000$$$). Additionally, the sum of $$$n$$$ over all test cases will not exceed $$$1000$$$, and the sum of $$$k$$$ over all test cases will not exceed $$$1000$$$. All test cases in one test are different.",
+  "output_specification": "Output $$$t$$$ integers. The $$$i$$$-th of them should be equal to the answer to the $$$i$$$-th test case.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 3\n2 2\n3 1\n1 3",
+      "output": "4\n3\n1\n2"
+    },
+    {
+      "input": "3\n1 1\n1 500\n500 250",
+      "output": "1\n2\n257950823"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

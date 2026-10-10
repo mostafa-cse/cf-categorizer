@@ -1,0 +1,42 @@
+{
+  "id": "939D",
+  "source": "problemset",
+  "contest_id": 939,
+  "problem_index": "D",
+  "name": "Love Rescue",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 8410,
+  "problem_url": "https://codeforces.com/problemset/problem/939/D",
+  "editorial_url": "https://codeforces.com/blog/entry/57892",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Valya and Tolya are an ideal pair, but they quarrel sometimes. Recently, Valya took offense at her boyfriend because he came to her in t-shirt with lettering that differs from lettering on her pullover. Now she doesn't want to see him and Tolya is seating at his room and crying at her photos all day long. This story could be very sad but fairy godmother (Tolya's grandmother) decided to help them and restore their relationship. She secretly took Tolya's t-shirt and Valya's pullover and wants to make the letterings on them same. In order to do this, for one unit of mana she can buy a spell that can change some letters on the clothes. Your task is calculate the minimum amount of mana that Tolya's grandmother should spend to rescue love of Tolya and Valya. More formally, letterings on Tolya's t-shirt and Valya's pullover are two strings with same length n consisting only of lowercase English letters. Using one unit of mana, grandmother can buy a spell of form ( c 1 , c 2 ) (where c 1 and c 2 are some lowercase English letters), which can arbitrary number of times transform a single letter c 1 to c 2 and vise-versa on both Tolya's t-shirt and Valya's pullover. You should find the minimum amount of mana that grandmother should spend to buy a set of spells that can make the letterings equal. In addition you should output the required set of spells.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 10 5 ) — the length of the letterings. The second line contains a string with length n , consisting of lowercase English letters — the lettering on Valya's pullover. The third line contains the lettering on Tolya's t-shirt in the same format.",
+  "output_specification": "In the first line output a single integer — the minimum amount of mana t required for rescuing love of Valya and Tolya. In the next t lines output pairs of space-separated lowercase English letters — spells that Tolya's grandmother should buy. Spells and letters in spells can be printed in any order. If there are many optimal answers, output any.",
+  "sample_testcases": [
+    {
+      "input": "3\nabb\ndad",
+      "output": "2\na d\nb a"
+    },
+    {
+      "input": "8\ndrpepper\ncocacola",
+      "output": "7\nl e\ne d\nd c\nc p\np o\no r\nr a"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

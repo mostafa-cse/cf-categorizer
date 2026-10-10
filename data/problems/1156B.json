@@ -1,0 +1,38 @@
+{
+  "id": "1156B",
+  "source": "problemset",
+  "contest_id": 1156,
+  "problem_index": "B",
+  "name": "Ugly Pairs",
+  "rating": 1800,
+  "tags": [
+    "dfs and similar",
+    "greedy",
+    "implementation",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 6623,
+  "problem_url": "https://codeforces.com/problemset/problem/1156/B",
+  "editorial_url": "https://codeforces.com/blog/entry/66827",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string, consisting of lowercase Latin letters. A pair of neighbouring letters in a string is considered ugly if these letters are also neighbouring in a alphabet. For example, string \" abaca \" contains ugly pairs at positions $$$(1, 2)$$$ — \" ab \" and $$$(2, 3)$$$ — \" ba \". Letters ' a ' and ' z ' aren't considered neighbouring in a alphabet. Can you rearrange the letters of a given string so that there are no ugly pairs? You can choose any order of the letters of the given string but you can't add any new letters or remove the existing ones. You can also leave the order the same. If there are multiple answers, print any of them. You also have to answer $$$T$$$ separate queries.",
+  "input_specification": "The first line contains a single integer $$$T$$$ ($$$1 \\le T \\le 100$$$) — the number of queries. Each of the next $$$T$$$ lines contains string $$$s$$$ $$$(1 \\le |s| \\le 100)$$$ — the string for the next query. It is guaranteed that it contains only lowercase Latin letters. Note that in hacks you have to set $$$T = 1$$$ .",
+  "output_specification": "Print $$$T$$$ lines. The $$$i$$$-th line should contain the answer to the $$$i$$$-th query. If the answer for the $$$i$$$-th query exists, then print such a rearrangment of letters of the given string that it contains no ugly pairs. You can choose any order of the letters of the given string but you can't add any new letters or remove the existing ones. You can also leave the order the same. If there are multiple answers, print any of them. Otherwise print \" No answer \" for that query.",
+  "sample_testcases": [
+    {
+      "input": "4\nabcd\ngg\ncodeforces\nabaca",
+      "output": "cadb\ngg\ncodfoerces\nNo answer"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:42",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "294B",
+  "source": "problemset",
+  "contest_id": 294,
+  "problem_index": "B",
+  "name": "Shaass and Bookshelf",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 5146,
+  "problem_url": "https://codeforces.com/problemset/problem/294/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7287",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Shaass has n books. He wants to make a bookshelf for all his books. He wants the bookshelf's dimensions to be as small as possible. The thickness of the i -th book is t i and its pages' width is equal to w i . The thickness of each book is either 1 or 2 . All books have the same page heights. Shaass puts the books on the bookshelf in the following way. First he selects some of the books and put them vertically. Then he puts the rest of the books horizontally above the vertical books. The sum of the widths of the horizontal books must be no more than the total thickness of the vertical books. A sample arrangement of the books is depicted in the figure. Help Shaass to find the minimum total thickness of the vertical books that we can achieve.",
+  "input_specification": "The first line of the input contains an integer n , (1 ≤ n ≤ 100) . Each of the next n lines contains two integers t i and w i denoting the thickness and width of the i -th book correspondingly, ( 1 ≤ t i ≤ 2, 1 ≤ w i ≤ 100 ).",
+  "output_specification": "On the only line of the output print the minimum total thickness of the vertical books that we can achieve.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 12\n1 3\n2 15\n2 5\n2 1",
+      "output": "5"
+    },
+    {
+      "input": "3\n1 10\n2 1\n2 4",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

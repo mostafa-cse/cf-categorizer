@@ -1,0 +1,40 @@
+{
+  "id": "534B",
+  "source": "problemset",
+  "contest_id": 534,
+  "problem_index": "B",
+  "name": "Covered Path",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 11600,
+  "problem_url": "https://codeforces.com/problemset/problem/534/B",
+  "editorial_url": "https://codeforces.com/blog/entry/17366",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The on-board computer on Polycarp's car measured that the car speed at the beginning of some section of the path equals v 1 meters per second, and in the end it is v 2 meters per second. We know that this section of the route took exactly t seconds to pass. Assuming that at each of the seconds the speed is constant, and between seconds the speed can change at most by d meters per second in absolute value (i.e., the difference in the speed of any two adjacent seconds does not exceed d in absolute value), find the maximum possible length of the path section in meters.",
+  "input_specification": "The first line contains two integers v 1 and v 2 ( 1 ≤ v 1 , v 2 ≤ 100 ) — the speeds in meters per second at the beginning of the segment and at the end of the segment, respectively. The second line contains two integers t ( 2 ≤ t ≤ 100 ) — the time when the car moves along the segment in seconds, d (0 ≤ d ≤ 10) — the maximum value of the speed change between adjacent seconds. It is guaranteed that there is a way to complete the segment so that: the speed in the first second equals v 1 , the speed in the last second equals v 2 , the absolute value of difference of speeds between any two adjacent seconds doesn't exceed d .",
+  "output_specification": "Print the maximum possible length of the path segment in meters.",
+  "sample_testcases": [
+    {
+      "input": "5 6\n4 2",
+      "output": "26"
+    },
+    {
+      "input": "10 10\n10 0",
+      "output": "100"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

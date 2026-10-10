@@ -1,0 +1,52 @@
+{
+  "id": "1809G",
+  "source": "problemset",
+  "contest_id": 1809,
+  "problem_index": "G",
+  "name": "Prediction",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 690,
+  "problem_url": "https://codeforces.com/problemset/problem/1809/G",
+  "editorial_url": "https://codeforces.com/blog/entry/114300",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Consider a tournament with $$$n$$$ participants. The rating of the $$$i$$$-th participant is $$$a_i$$$. The tournament will be organized as follows. First of all, organizers will assign each participant an index from $$$1$$$ to $$$n$$$. All indices will be unique. Let $$$p_i$$$ be the participant who gets the index $$$i$$$. Then, $$$n-1$$$ games will be held. In the first game, participants $$$p_1$$$ and $$$p_2$$$ will play. In the second game, the winner of the first game will play against $$$p_3$$$. In the third game, the winner of the second game will play against $$$p_4$$$, and so on — in the last game, the winner of the $$$(n-2)$$$-th game will play against $$$p_n$$$. Monocarp wants to predict the results of all $$$n-1$$$ games (of course, he will do the prediction only after the indices of the participants are assigned). He knows for sure that, when two participants with ratings $$$x$$$ and $$$y$$$ play, and $$$|x - y| \\gt k$$$, the participant with the higher rating wins. But if $$$|x - y| \\le k$$$, any of the two participants may win. Among all $$$n!$$$ ways to assign the indices to participants, calculate the number of ways to do this so that Monocarp can predict the results of all $$$n-1$$$ games. Since the answer can be large, print it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^6$$$; $$$0 \\le k \\le 10^9$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_1 \\le a_2 \\le \\dots \\le a_n \\le 10^9$$$).",
+  "output_specification": "Print one integer — the number of ways to assign the indices to the participants so that Monocarp can predict the results of all $$$n-1$$$ games.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n7 12 17 21",
+      "output": "24"
+    },
+    {
+      "input": "3 7\n4 9 28",
+      "output": "4"
+    },
+    {
+      "input": "4 1\n1 2 3 4",
+      "output": "0"
+    },
+    {
+      "input": "4 1\n1 2 2 4",
+      "output": "12"
+    },
+    {
+      "input": "16 30\n8 12 15 27 39 44 49 50 51 53 58 58 59 67 68 100",
+      "output": "527461297"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

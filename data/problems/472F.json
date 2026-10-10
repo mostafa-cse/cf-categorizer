@@ -1,0 +1,48 @@
+{
+  "id": "472F",
+  "source": "problemset",
+  "contest_id": 472,
+  "problem_index": "F",
+  "name": "Design Tutorial: Change the Goal",
+  "rating": 2700,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 319,
+  "problem_url": "https://codeforces.com/problemset/problem/472/F",
+  "editorial_url": "https://codeforces.com/blog/entry/14028",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are some tasks which have the following structure: you are given a model, and you can do some operations, you should use these operations to achive the goal. One way to create a new task is to use the same model and same operations, but change the goal. Let's have a try. I have created the following task for Topcoder SRM 557 Div1-Hard: you are given n integers x 1 , x 2 , ..., x n . You are allowed to perform the assignments (as many as you want) of the following form x i ^= x j (in the original task i and j must be different, but in this task we allow i to equal j ). The goal is to maximize the sum of all x i . Now we just change the goal. You are also given n integers y 1 , y 2 , ..., y n . You should make x 1 , x 2 , ..., x n exactly equal to y 1 , y 2 , ..., y n . In other words, for each i number x i should be equal to y i .",
+  "input_specification": "The first line contains an integer n (1 ≤ n ≤ 10000) . The second line contains n integers: x 1 to x n (0 ≤ x i ≤ 10 9 ) . The third line contains n integers: y 1 to y n (0 ≤ y i ≤ 10 9 ) .",
+  "output_specification": "If there is no solution, output -1 . If there is a solution, then in the first line output an integer m (0 ≤ m ≤ 1000000) – the number of assignments you need to perform. Then print m lines, each line should contain two integers i and j (1 ≤ i , j ≤ n ) , which denote assignment x i ^= x j . If there are multiple solutions you can print any of them. We can prove that under these constraints if there exists a solution then there always exists a solution with no more than 10 6 operations.",
+  "sample_testcases": [
+    {
+      "input": "2\n3 5\n6 0",
+      "output": "2\n1 2\n2 2"
+    },
+    {
+      "input": "5\n0 0 0 0 0\n1 2 3 4 5",
+      "output": "-1"
+    },
+    {
+      "input": "3\n4 5 6\n1 2 3",
+      "output": "5\n3 1\n1 2\n2 2\n2 3\n3 1"
+    },
+    {
+      "input": "3\n1 2 3\n4 5 6",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:21",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

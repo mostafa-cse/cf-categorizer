@@ -1,0 +1,39 @@
+{
+  "id": "271D",
+  "source": "problemset",
+  "contest_id": 271,
+  "problem_index": "D",
+  "name": "Good Substrings",
+  "rating": 1800,
+  "tags": [
+    "data structures",
+    "strings"
+  ],
+  "solved_count": 14988,
+  "problem_url": "https://codeforces.com/problemset/problem/271/D",
+  "editorial_url": "https://codeforces.com/blog/entry/6662",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You've got string s , consisting of small English letters. Some of the English letters are good , the rest are bad . A substring s [ l ... r ] ( 1 ≤ l ≤ r ≤ | s | ) of string s = s 1 s 2 ... s | s | (where | s | is the length of string s ) is string s l s l + 1 ... s r . The substring s [ l ... r ] is good , if among the letters s l , s l + 1 , ..., s r there are at most k bad ones (look at the sample's explanation to understand it more clear). Your task is to find the number of distinct good substrings of the given string s . Two substrings s [ x ... y ] and s [ p ... q ] are considered distinct if their content is different, i.e. s [ x ... y ] ≠ s [ p ... q ] .",
+  "input_specification": "The first line of the input is the non-empty string s , consisting of small English letters, the string's length is at most 1500 characters. The second line of the input is the string of characters \" 0 \" and \" 1 \", the length is exactly 26 characters. If the i -th character of this string equals \" 1 \", then the i -th English letter is good, otherwise it's bad. That is, the first character of this string corresponds to letter \" a \", the second one corresponds to letter \" b \" and so on. The third line of the input consists a single integer k ( 0 ≤ k ≤ | s | ) — the maximum acceptable number of bad characters in a good substring.",
+  "output_specification": "Print a single integer — the number of distinct good substrings of string s .",
+  "sample_testcases": [
+    {
+      "input": "ababab\n01000000000000000000000000\n1",
+      "output": "5"
+    },
+    {
+      "input": "acbacbacaa\n00000000000000000000000000\n2",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

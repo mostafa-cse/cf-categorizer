@@ -1,0 +1,49 @@
+{
+  "id": "1073F",
+  "source": "problemset",
+  "contest_id": 1073,
+  "problem_index": "F",
+  "name": "Choosing Two Paths",
+  "rating": 2500,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 677,
+  "problem_url": "https://codeforces.com/problemset/problem/1073/F",
+  "editorial_url": "https://codeforces.com/blog/entry/62742",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected unweighted tree consisting of $$$n$$$ vertices. An undirected tree is a connected undirected graph with $$$n - 1$$$ edges. Your task is to choose two pairs of vertices of this tree (all the chosen vertices should be distinct ) $$$(x_1, y_1)$$$ and $$$(x_2, y_2)$$$ in such a way that neither $$$x_1$$$ nor $$$y_1$$$ belong to the simple path from $$$x_2$$$ to $$$y_2$$$ and vice versa (neither $$$x_2$$$ nor $$$y_2$$$ should not belong to the simple path from $$$x_1$$$ to $$$y_1$$$). It is guaranteed that it is possible to choose such pairs for the given tree. Among all possible ways to choose such pairs you have to choose one with the maximum number of common vertices between paths from $$$x_1$$$ to $$$y_1$$$ and from $$$x_2$$$ to $$$y_2$$$. And among all such pairs you have to choose one with the maximum total length of these two paths. It is guaranteed that the answer with at least two common vertices exists for the given tree. The length of the path is the number of edges in it. The simple path is the path that visits each vertex at most once.",
+  "input_specification": "The first line contains an integer $$$n$$$ — the number of vertices in the tree ($$$6 \\le n \\le 2 \\cdot 10^5$$$). Each of the next $$$n - 1$$$ lines describes the edges of the tree. Edge $$$i$$$ is denoted by two integers $$$u_i$$$ and $$$v_i$$$, the labels of vertices it connects ($$$1 \\le u_i, v_i \\le n$$$, $$$u_i \\ne v_i$$$). It is guaranteed that the given edges form a tree. It is guaranteed that the answer with at least two common vertices exists for the given tree.",
+  "output_specification": "Print any two pairs of vertices satisfying the conditions described in the problem statement. It is guaranteed that it is possible to choose such pairs for the given tree.",
+  "sample_testcases": [
+    {
+      "input": "7\n1 4\n1 5\n1 6\n2 3\n2 4\n4 7",
+      "output": "3 6\n7 5"
+    },
+    {
+      "input": "9\n9 3\n3 5\n1 2\n4 3\n4 7\n1 7\n4 6\n3 8",
+      "output": "2 9\n6 8"
+    },
+    {
+      "input": "10\n6 8\n10 3\n3 7\n5 8\n1 7\n7 2\n2 9\n2 8\n1 4",
+      "output": "10 6\n4 5"
+    },
+    {
+      "input": "11\n1 2\n2 3\n3 4\n1 5\n1 6\n6 7\n5 8\n5 9\n4 10\n4 11",
+      "output": "9 11\n8 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:04",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

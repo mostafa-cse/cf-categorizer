@@ -1,0 +1,40 @@
+{
+  "id": "1421E",
+  "source": "problemset",
+  "contest_id": 1421,
+  "problem_index": "E",
+  "name": "Swedish Heroes",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 1042,
+  "problem_url": "https://codeforces.com/problemset/problem/1421/E",
+  "editorial_url": "https://codeforces.com/blog/entry/83761",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While playing yet another strategy game, Mans has recruited $$$n$$$ Swedish heroes , whose powers which can be represented as an array $$$a$$$. Unfortunately, not all of those mighty heroes were created as capable as he wanted, so that he decided to do something about it. In order to accomplish his goal, he can pick two consecutive heroes, with powers $$$a_i$$$ and $$$a_{i+1}$$$, remove them and insert a hero with power $$$-(a_i+a_{i+1})$$$ back in the same position. For example if the array contains the elements $$$[5, 6, 7, 8]$$$, he can pick $$$6$$$ and $$$7$$$ and get $$$[5, -(6+7), 8] = [5, -13, 8]$$$. After he will perform this operation $$$n-1$$$ times, Mans will end up having only one hero. He wants his power to be as big as possible. What's the largest possible power he can achieve?",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 200000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$-10^9 \\le a_i \\le 10^9$$$) — powers of the heroes.",
+  "output_specification": "Print the largest possible power he can achieve after $$$n-1$$$ operations.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 6 7 8",
+      "output": "26"
+    },
+    {
+      "input": "5\n4 -5 9 -2 1",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

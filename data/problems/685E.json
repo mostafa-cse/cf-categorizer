@@ -1,0 +1,37 @@
+{
+  "id": "685E",
+  "source": "problemset",
+  "contest_id": 685,
+  "problem_index": "E",
+  "name": "Travelling Through the Snow Queen's Kingdom",
+  "rating": 2800,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "divide and conquer",
+    "graphs"
+  ],
+  "solved_count": 688,
+  "problem_url": "https://codeforces.com/problemset/problem/685/E",
+  "editorial_url": "https://codeforces.com/blog/entry/45558",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerda is travelling to the palace of the Snow Queen. The road network consists of n intersections and m bidirectional roads. Roads are numbered from 1 to m . Snow Queen put a powerful spell on the roads to change the weather conditions there. Now, if Gerda steps on the road i at the moment of time less or equal to i , she will leave the road exactly at the moment i . In case she steps on the road i at the moment of time greater than i , she stays there forever. Gerda starts at the moment of time l at the intersection number s and goes to the palace of the Snow Queen, located at the intersection number t . Moreover, she has to be there at the moment r (or earlier), before the arrival of the Queen. Given the description of the road network, determine for q queries l i , r i , s i and t i if it's possible for Gerda to get to the palace on time.",
+  "input_specification": "The first line of the input contains integers n , m and q ( 2 ≤ n ≤ 1000 , 1 ≤ m , q ≤ 200 000 ) — the number of intersections in the road network of Snow Queen's Kingdom, the number of roads and the number of queries you have to answer. The i -th of the following m lines contains the description of the road number i . The description consists of two integers v i and u i ( 1 ≤ v i , u i ≤ n , v i ≠ u i ) — the indices of the intersections connected by the i -th road. It's possible to get both from v i to u i and from u i to v i using only this road. Each pair of intersection may appear several times, meaning there are several roads connecting this pair. Last q lines contain the queries descriptions. Each of them consists of four integers l i , r i , s i and t i ( 1 ≤ l i ≤ r i ≤ m , 1 ≤ s i , t i ≤ n , s i ≠ t i ) — the moment of time Gerda starts her journey, the last moment of time she is allowed to arrive to the palace, the index of the starting intersection and the index of the intersection where palace is located.",
+  "output_specification": "For each query print \" Yes \" (without quotes) if Gerda can be at the Snow Queen palace on time (not later than r i ) or \" No \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5 4 6\n1 2\n2 3\n3 4\n3 5\n1 3 1 4\n1 3 2 4\n1 4 4 5\n1 4 4 1\n2 3 1 4\n2 2 2 3",
+      "output": "Yes\nYes\nYes\nNo\nNo\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

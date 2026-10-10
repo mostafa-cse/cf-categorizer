@@ -1,0 +1,39 @@
+{
+  "id": "231D",
+  "source": "problemset",
+  "contest_id": 231,
+  "problem_index": "D",
+  "name": "Magic Box",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "geometry"
+  ],
+  "solved_count": 4381,
+  "problem_url": "https://codeforces.com/problemset/problem/231/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5486",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day Vasya was going home when he saw a box lying on the road. The box can be represented as a rectangular parallelepiped. Vasya needed no time to realize that the box is special, as all its edges are parallel to the coordinate axes, one of its vertices is at point (0, 0, 0) , and the opposite one is at point ( x 1 , y 1 , z 1 ) . The six faces of the box contain some numbers a 1 , a 2 , ..., a 6 , exactly one number right in the center of each face. The numbers are located on the box like that: number a 1 is written on the face that lies on the ZOX plane; a 2 is written on the face, parallel to the plane from the previous point; a 3 is written on the face that lies on the XOY plane; a 4 is written on the face, parallel to the plane from the previous point; a 5 is written on the face that lies on the YOZ plane; a 6 is written on the face, parallel to the plane from the previous point. At the moment Vasya is looking at the box from point ( x , y , z ) . Find the sum of numbers that Vasya sees. Note that all faces of the box are not transparent and Vasya can't see the numbers through the box. The picture contains transparent faces just to make it easier to perceive. You can consider that if Vasya is looking from point, lying on the plane of some face, than he can not see the number that is written on this face. It is enough to see the center of a face to see the corresponding number for Vasya. Also note that Vasya always reads correctly the a i numbers that he sees, independently of their rotation, angle and other factors (that is, for example, if Vasya sees some a i = 6 , then he can't mistake this number for 9 and so on).",
+  "input_specification": "The fist input line contains three space-separated integers x , y and z ( | x |, | y |, | z | ≤ 10 6 ) — the coordinates of Vasya's position in space. The second line contains three space-separated integers x 1 , y 1 , z 1 ( 1 ≤ x 1 , y 1 , z 1 ≤ 10 6 ) — the coordinates of the box's vertex that is opposite to the vertex at point (0, 0, 0) . The third line contains six space-separated integers a 1 , a 2 , ..., a 6 ( 1 ≤ a i ≤ 10 6 ) — the numbers that are written on the box faces. It is guaranteed that point ( x , y , z ) is located strictly outside the box.",
+  "output_specification": "Print a single integer — the sum of all numbers on the box faces that Vasya sees.",
+  "sample_testcases": [
+    {
+      "input": "2 2 2\n1 1 1\n1 2 3 4 5 6",
+      "output": "12"
+    },
+    {
+      "input": "0 0 10\n3 2 3\n1 2 3 4 5 6",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

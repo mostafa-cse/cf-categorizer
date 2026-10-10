@@ -1,0 +1,37 @@
+{
+  "id": "2028C",
+  "source": "problemset",
+  "contest_id": 2028,
+  "problem_index": "C",
+  "name": "Alice's Adventures in Cutting Cake",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 10446,
+  "problem_url": "https://codeforces.com/problemset/problem/2028/C",
+  "editorial_url": "https://codeforces.com/blog/entry/136096",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice is at the Mad Hatter's tea party! There is a long sheet cake made up of $$$n$$$ sections with tastiness values $$$a_1, a_2, \\ldots, a_n$$$. There are $$$m$$$ creatures at the tea party, excluding Alice. Alice will cut the cake into $$$m + 1$$$ pieces. Formally, she will partition the cake into $$$m + 1$$$ subarrays, where each subarray consists of some number of adjacent sections. The tastiness of a piece is the sum of tastiness of its sections. Afterwards, she will divvy these $$$m + 1$$$ pieces up among the $$$m$$$ creatures and herself (her piece can be empty). However, each of the $$$m$$$ creatures will only be happy when the tastiness of its piece is $$$v$$$ or more. Alice wants to make sure every creature is happy. Limited by this condition, she also wants to maximize the tastiness of her own piece. Can you help Alice find the maximum tastiness her piece can have? If there is no way to make sure every creature is happy, output $$$-1$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n, m, v$$$ ($$$1\\le m\\le n\\le 2\\cdot 10^5$$$; $$$1\\le v\\le 10^9$$$) — the number of sections, the number of creatures, and the creatures' minimum requirement for tastiness, respectively. The next line contains $$$n$$$ space separated integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the tastinesses of the sections. The sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the maximum tastiness Alice can achieve for her piece, or $$$-1$$$ if there is no way to make sure every creature is happy.",
+  "sample_testcases": [
+    {
+      "input": "7\n6 2 1\n1 1 10 1 1 10\n6 2 2\n1 1 10 1 1 10\n6 2 3\n1 1 10 1 1 10\n6 2 10\n1 1 10 1 1 10\n6 2 11\n1 1 10 1 1 10\n6 2 12\n1 1 10 1 1 10\n6 2 12\n1 1 1 1 10 10",
+      "output": "22\n12\n2\n2\n2\n0\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

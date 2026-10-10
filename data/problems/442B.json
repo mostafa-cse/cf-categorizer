@@ -1,0 +1,40 @@
+{
+  "id": "442B",
+  "source": "problemset",
+  "contest_id": 442,
+  "problem_index": "B",
+  "name": "Andrey and Problem",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 6338,
+  "problem_url": "https://codeforces.com/problemset/problem/442/B",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andrey needs one more problem to conduct a programming contest. He has n friends who are always willing to help. He can ask some of them to come up with a contest problem. Andrey knows one value for each of his fiends — the probability that this friend will come up with a problem if Andrey asks him. Help Andrey choose people to ask. As he needs only one problem, Andrey is going to be really upset if no one comes up with a problem or if he gets more than one problem from his friends. You need to choose such a set of people that maximizes the chances of Andrey not getting upset.",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 100) — the number of Andrey's friends. The second line contains n real numbers p i (0.0 ≤ p i ≤ 1.0) — the probability that the i -th friend can come up with a problem. The probabilities are given with at most 6 digits after decimal point.",
+  "output_specification": "Print a single real number — the probability that Andrey won't get upset at the optimal choice of friends. The answer will be considered valid if it differs from the correct one by at most 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "4\n0.1 0.2 0.3 0.8",
+      "output": "0.800000000000"
+    },
+    {
+      "input": "2\n0.1 0.2",
+      "output": "0.260000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

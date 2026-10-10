@@ -1,0 +1,39 @@
+{
+  "id": "209B",
+  "source": "problemset",
+  "contest_id": 209,
+  "problem_index": "B",
+  "name": "Pixels",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 509,
+  "problem_url": "https://codeforces.com/problemset/problem/209/B",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Flatland is inhabited by pixels of three colors: red, green and blue. We know that if two pixels of different colors meet in a violent fight, only one of them survives the fight (that is, the total number of pixels decreases by one). Besides, if pixels of colors x and y ( x ≠ y ) meet in a violent fight, then the pixel that survives the fight immediately changes its color to z ( z ≠ x ; z ≠ y ) . Pixels of the same color are friends, so they don't fight. The King of Flatland knows that his land will be peaceful and prosperous when the pixels are of the same color. For each of the three colors you know the number of pixels of this color that inhabit Flatland. Help the king and determine whether fights can bring peace and prosperity to the country and if it is possible, find the minimum number of fights needed to make the land peaceful and prosperous.",
+  "input_specification": "The first line contains three space-separated integers a , b and c (0 ≤ a , b , c ≤ 2 31 ; a + b + c > 0) — the number of red, green and blue pixels, correspondingly.",
+  "output_specification": "Print a single number — the minimum number of pixel fights before the country becomes peaceful and prosperous. If making the country peaceful and prosperous is impossible, print -1 .",
+  "sample_testcases": [
+    {
+      "input": "1 1 1",
+      "output": "1"
+    },
+    {
+      "input": "3 1 0",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

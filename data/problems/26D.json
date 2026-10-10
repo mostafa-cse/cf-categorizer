@@ -1,0 +1,44 @@
+{
+  "id": "26D",
+  "source": "problemset",
+  "contest_id": 26,
+  "problem_index": "D",
+  "name": "Tickets",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1024,
+  "problem_url": "https://codeforces.com/problemset/problem/26/D",
+  "editorial_url": "https://codeforces.com/blog/entry/610",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "As a big fan of Formula One, Charlie is really happy with the fact that he has to organize ticket sells for the next Grand Prix race in his own city. Unfortunately, the finacial crisis is striking everywhere and all the banknotes left in his country are valued either 10 euros or 20 euros. The price of all tickets for the race is 10 euros, so whenever someone comes to the ticket store only with 20 euro banknote Charlie must have a 10 euro banknote to give them change. Charlie realize that with the huge deficit of banknotes this could be a problem. Charlie has some priceless information but couldn't make use of it, so he needs your help. Exactly n + m people will come to buy a ticket. n of them will have only a single 10 euro banknote, and m of them will have only a single 20 euro banknote. Currently Charlie has k 10 euro banknotes, which he can use for change if needed. All n + m people will come to the ticket store in random order, all orders are equiprobable. Return the probability that the ticket selling process will run smoothly, i.e. Charlie will have change for every person with 20 euro banknote.",
+  "input_specification": "The input consist of a single line with three space separated integers, n , m and k ( 0 ≤ n , m ≤ 10 5 , 0 ≤ k ≤ 10 ).",
+  "output_specification": "Output on a single line the desired probability with at least 4 digits after the decimal point.",
+  "sample_testcases": [
+    {
+      "input": "5 3 1",
+      "output": "0.857143"
+    },
+    {
+      "input": "0 5 5",
+      "output": "1"
+    },
+    {
+      "input": "0 1 0",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

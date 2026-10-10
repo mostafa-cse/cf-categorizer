@@ -1,0 +1,39 @@
+{
+  "id": "1186C",
+  "source": "problemset",
+  "contest_id": 1186,
+  "problem_index": "C",
+  "name": "Vus the Cossack and Strings",
+  "rating": 1800,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 6746,
+  "problem_url": "https://codeforces.com/problemset/problem/1186/C",
+  "editorial_url": "https://codeforces.com/blog/entry/67968",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vus the Cossack has two binary strings, that is, strings that consist only of \" 0 \" and \" 1 \". We call these strings $$$a$$$ and $$$b$$$. It is known that $$$|b| \\leq |a|$$$, that is, the length of $$$b$$$ is at most the length of $$$a$$$. The Cossack considers every substring of length $$$|b|$$$ in string $$$a$$$. Let's call this substring $$$c$$$. He matches the corresponding characters in $$$b$$$ and $$$c$$$, after which he counts the number of positions where the two strings are different. We call this function $$$f(b, c)$$$. For example, let $$$b = 00110$$$, and $$$c = 11000$$$. In these strings, the first, second, third and fourth positions are different. Vus the Cossack counts the number of such substrings $$$c$$$ such that $$$f(b, c)$$$ is even . For example, let $$$a = 01100010$$$ and $$$b = 00110$$$. $$$a$$$ has four substrings of the length $$$|b|$$$: $$$01100$$$, $$$11000$$$, $$$10001$$$, $$$00010$$$. $$$f(00110, 01100) = 2$$$; $$$f(00110, 11000) = 4$$$; $$$f(00110, 10001) = 4$$$; $$$f(00110, 00010) = 1$$$. Since in three substrings, $$$f(b, c)$$$ is even, the answer is $$$3$$$. Vus can not find the answer for big strings. That is why he is asking you to help him.",
+  "input_specification": "The first line contains a binary string $$$a$$$ ($$$1 \\leq |a| \\leq 10^6$$$) — the first string. The second line contains a binary string $$$b$$$ ($$$1 \\leq |b| \\leq |a|$$$) — the second string.",
+  "output_specification": "Print one number — the answer.",
+  "sample_testcases": [
+    {
+      "input": "01100010\n00110",
+      "output": "3"
+    },
+    {
+      "input": "1010111110\n0110",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:34",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

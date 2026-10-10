@@ -1,0 +1,39 @@
+{
+  "id": "827C",
+  "source": "problemset",
+  "contest_id": 827,
+  "problem_index": "C",
+  "name": "DNA Evolution",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "strings"
+  ],
+  "solved_count": 1840,
+  "problem_url": "https://codeforces.com/problemset/problem/827/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53268",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Everyone knows that DNA strands consist of nucleotides. There are four types of nucleotides: \" A \", \" T \", \" G \", \" C \". A DNA strand is a sequence of nucleotides. Scientists decided to track evolution of a rare species, which DNA strand was string s initially. Evolution of the species is described as a sequence of changes in the DNA. Every change is a change of some nucleotide, for example, the following change can happen in DNA strand \" AAGC \": the second nucleotide can change to \" T \" so that the resulting DNA strand is \" ATGC \". Scientists know that some segments of the DNA strand can be affected by some unknown infections. They can represent an infection as a sequence of nucleotides. Scientists are interested if there are any changes caused by some infections. Thus they sometimes want to know the value of impact of some infection to some segment of the DNA. This value is computed as follows: Let the infection be represented as a string e , and let scientists be interested in DNA strand segment starting from position l to position r , inclusive. Prefix of the string eee ... (i.e. the string that consists of infinitely many repeats of string e ) is written under the string s from position l to position r , inclusive. The value of impact is the number of positions where letter of string s coincided with the letter written under it. Being a developer, Innokenty is interested in bioinformatics also, so the scientists asked him for help. Innokenty is busy preparing VK Cup, so he decided to delegate the problem to the competitors. Help the scientists!",
+  "input_specification": "The first line contains the string s ( 1 ≤ | s | ≤ 10 5 ) that describes the initial DNA strand. It consists only of capital English letters \" A \", \" T \", \" G \" and \" C \". The next line contains single integer q ( 1 ≤ q ≤ 10 5 ) — the number of events. After that, q lines follow, each describes one event. Each of the lines has one of two formats: 1 x c , where x is an integer ( 1 ≤ x ≤ | s | ), and c is a letter \" A \", \" T \", \" G \" or \" C \", which means that there is a change in the DNA: the nucleotide at position x is now c . 2 l r e , where l , r are integers ( 1 ≤ l ≤ r ≤ | s | ), and e is a string of letters \" A \", \" T \", \" G \" and \" C \" ( 1 ≤ | e | ≤ 10 ), which means that scientists are interested in the value of impact of infection e to the segment of DNA strand from position l to position r , inclusive.",
+  "output_specification": "For each scientists' query (second type query) print a single integer in a new line — the value of impact of the infection on the DNA.",
+  "sample_testcases": [
+    {
+      "input": "ATGCATGC\n4\n2 1 8 ATGC\n2 2 6 TTT\n1 4 T\n2 2 6 TA",
+      "output": "8\n2\n4"
+    },
+    {
+      "input": "GAGTTGTTAA\n6\n2 3 4 TATGGTG\n1 1 T\n1 6 G\n2 5 9 AGTAATA\n1 10 G\n2 2 6 TTGT",
+      "output": "0\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

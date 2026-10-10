@@ -1,0 +1,40 @@
+{
+  "id": "1800E2",
+  "source": "problemset",
+  "contest_id": 1800,
+  "problem_index": "E2",
+  "name": "Unforgivable Curse (hard version)",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 15787,
+  "problem_url": "https://codeforces.com/problemset/problem/1800/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/113477",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is a complex version of the problem. This version has no additional restrictions on the number $$$k$$$. The chief wizard of the Wizengamot once caught the evil wizard Drahyrt, but the evil wizard has returned and wants revenge on the chief wizard. So he stole spell $$$s$$$ from his student Harry. The spell — is a $$$n$$$-length string of lowercase Latin letters. Drahyrt wants to replace spell with an unforgivable curse — string $$$t$$$. Dragirt, using ancient magic, can swap letters at a distance $$$k$$$ or $$$k+1$$$ in spell as many times as he wants. In other words, Drahyrt can change letters in positions $$$i$$$ and $$$j$$$ in spell $$$s$$$ if $$$|i-j|=k$$$ or $$$|i-j|=k+1$$$. For example, if $$$k = 3, s = $$$ \" talant \" and $$$t = $$$ \" atltna \", Drahyrt can act as follows: swap the letters at positions $$$1$$$ and $$$4$$$ to get spell \" aaltnt \". swap the letters at positions $$$2$$$ and $$$6$$$ to get spell \" atltna \". You are given spells $$$s$$$ and $$$t$$$. Can Drahyrt change spell $$$s$$$ to $$$t$$$?",
+  "input_specification": "The first line of input gives a single integer $$$T$$$ ($$$1 \\le T \\le 10^4$$$) — the number of test cases in the test. Descriptions of the test cases are follow. The first line contains two integers $$$n, k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le 2 \\cdot 10^5$$$) — the length spells and the number $$$k$$$ such that Drahyrt can change letters in a spell at a distance $$$k$$$ or $$$k+1$$$. The second line gives spell $$$s$$$ — a string of length $$$n$$$ consisting of lowercase Latin letters. The third line gives spell $$$t$$$ — a string of length $$$n$$$ consisting of lowercase Latin letters. It is guaranteed that the sum of $$$n$$$ values over all test cases does not exceed $$$2 \\cdot 10^5$$$. Note that there is no limit on the sum of $$$k$$$ values over all test cases.",
+  "output_specification": "For each test case, output on a separate line \" YES \" if Drahyrt can change spell $$$s$$$ to $$$t$$$ and \" NO \" otherwise. You can output the answer in any case (for example, lines \" yEs \", \" yes \", \" Yes \" and \" YES \" will be recognized as positive answer).",
+  "sample_testcases": [
+    {
+      "input": "7\n6 3\ntalant\natltna\n7 1\nabacaba\naaaabbc\n12 6\nabracadabraa\navadakedavra\n5 3\naccio\ncicao\n5 4\nlumos\nmolus\n4 3\nuwjt\ntwju\n4 3\nkvpx\nvxpk",
+      "output": "YES\nYES\nNO\nYES\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:01",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

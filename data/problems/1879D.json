@@ -1,0 +1,46 @@
+{
+  "id": "1879D",
+  "source": "problemset",
+  "contest_id": 1879,
+  "problem_index": "D",
+  "name": "Sum of XOR Functions",
+  "rating": 1700,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "divide and conquer",
+    "dp",
+    "math"
+  ],
+  "solved_count": 11438,
+  "problem_url": "https://codeforces.com/problemset/problem/1879/D",
+  "editorial_url": "https://codeforces.com/blog/entry/120773",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of length $$$n$$$ consisting of non-negative integers. You have to calculate the value of $$$\\sum_{l=1}^{n} \\sum_{r=l}^{n} f(l, r) \\cdot (r - l + 1)$$$, where $$$f(l, r)$$$ is $$$a_l \\oplus a_{l+1} \\oplus \\dots \\oplus a_{r-1} \\oplus a_r$$$ (the character $$$\\oplus$$$ denotes bitwise XOR). Since the answer can be very large, print it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the length of the array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9)$$$.",
+  "output_specification": "Print the one integer — the value of $$$\\sum_{l=1}^{n} \\sum_{r=l}^{n} f(l, r) \\cdot (r - l + 1)$$$, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 3 2",
+      "output": "12"
+    },
+    {
+      "input": "4\n39 68 31 80",
+      "output": "1337"
+    },
+    {
+      "input": "7\n313539461 779847196 221612534 488613315 633203958 394620685 761188160",
+      "output": "257421502"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

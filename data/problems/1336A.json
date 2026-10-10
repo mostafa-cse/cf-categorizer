@@ -1,0 +1,46 @@
+{
+  "id": "1336A",
+  "source": "problemset",
+  "contest_id": 1336,
+  "problem_index": "A",
+  "name": "Linova and Kingdom",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 26100,
+  "problem_url": "https://codeforces.com/problemset/problem/1336/A",
+  "editorial_url": "https://codeforces.com/blog/entry/76099",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Writing light novels is the most important thing in Linova's life. Last night, Linova dreamed about a fantastic kingdom. She began to write a light novel for the kingdom as soon as she woke up, and of course, she is the queen of it. There are $$$n$$$ cities and $$$n-1$$$ two-way roads connecting pairs of cities in the kingdom. From any city, you can reach any other city by walking through some roads. The cities are numbered from $$$1$$$ to $$$n$$$, and the city $$$1$$$ is the capital of the kingdom. So, the kingdom has a tree structure. As the queen, Linova plans to choose exactly $$$k$$$ cities developing industry, while the other cities will develop tourism. The capital also can be either industrial or tourism city. A meeting is held in the capital once a year. To attend the meeting, each industry city sends an envoy. All envoys will follow the shortest path from the departure city to the capital (which is unique). Traveling in tourism cities is pleasant. For each envoy, his happiness is equal to the number of tourism cities on his path. In order to be a queen loved by people, Linova wants to choose $$$k$$$ cities which can maximize the sum of happinesses of all envoys. Can you calculate the maximum sum for her?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$2\\le n\\le 2 \\cdot 10^5$$$, $$$1\\le k \\lt n$$$)  — the number of cities and industry cities respectively. Each of the next $$$n-1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1\\le u,v\\le n$$$), denoting there is a road connecting city $$$u$$$ and city $$$v$$$. It is guaranteed that from any city, you can reach any other city by the roads.",
+  "output_specification": "Print the only line containing a single integer  — the maximum possible sum of happinesses of all envoys.",
+  "sample_testcases": [
+    {
+      "input": "7 4\n1 2\n1 3\n1 4\n3 5\n3 6\n4 7",
+      "output": "7"
+    },
+    {
+      "input": "4 1\n1 2\n1 3\n2 4",
+      "output": "2"
+    },
+    {
+      "input": "8 5\n7 5\n1 7\n6 1\n3 7\n8 3\n2 1\n4 5",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

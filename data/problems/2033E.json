@@ -1,0 +1,40 @@
+{
+  "id": "2033E",
+  "source": "problemset",
+  "contest_id": 2033,
+  "problem_index": "E",
+  "name": "Sakurako, Kosuke, and the Permutation",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 14990,
+  "problem_url": "https://codeforces.com/problemset/problem/2033/E",
+  "editorial_url": "https://codeforces.com/blog/entry/135520",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Sakurako's exams are over, and she did excellently. As a reward, she received a permutation $$$p$$$. Kosuke was not entirely satisfied because he failed one exam and did not receive a gift. He decided to sneak into her room (thanks to the code for her lock) and spoil the permutation so that it becomes simple . A permutation $$$p$$$ is considered simple if for every $$$i$$$ $$$(1\\le i \\le n)$$$ one of the following conditions holds: $$$p_i=i$$$ $$$p_{p_i}=i$$$ For example, the permutations $$$[1, 2, 3, 4]$$$, $$$[5, 2, 4, 3, 1]$$$, and $$$[2, 1]$$$ are simple , while $$$[2, 3, 1]$$$ and $$$[5, 2, 1, 4, 3]$$$ are not. In one operation, Kosuke can choose indices $$$i,j$$$ $$$(1\\le i,j\\le n)$$$ and swap the elements $$$p_i$$$ and $$$p_j$$$. Sakurako is about to return home. Your task is to calculate the minimum number of operations that Kosuke needs to perform to make the permutation simple .",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. Each test case is described by two lines. The first line contains one integer $$$n$$$ ($$$1\\le n \\le 10^6$$$) — the length of the permutation $$$p$$$. The second line contains $$$n$$$ integers $$$p_i$$$ ($$$1\\le p_i\\le n$$$) — the elements of the permutation $$$p$$$. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$10^6$$$. It is guaranteed that $$$p$$$ is a permutation.",
+  "output_specification": "For each test case, output the minimum number of operations that Kosuke needs to perform to make the permutation simple .",
+  "sample_testcases": [
+    {
+      "input": "6\n5\n1 2 3 4 5\n5\n5 4 3 2 1\n5\n2 3 4 5 1\n4\n2 3 4 1\n3\n1 3 2\n7\n2 3 1 5 6 7 4",
+      "output": "0\n0\n2\n1\n0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

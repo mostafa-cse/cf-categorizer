@@ -1,0 +1,30 @@
+{
+  "id": "2052I",
+  "source": "problemset",
+  "contest_id": 2052,
+  "problem_index": "I",
+  "name": "Incompetent Delivery Guy",
+  "rating": 2800,
+  "tags": [
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 172,
+  "problem_url": "https://codeforces.com/problemset/problem/2052/I",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/2052/I]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:39",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

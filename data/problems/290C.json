@@ -1,0 +1,37 @@
+{
+  "id": "290C",
+  "source": "problemset",
+  "contest_id": 290,
+  "problem_index": "C",
+  "name": "WTF?",
+  "rating": 1700,
+  "tags": [
+    "*special",
+    "graph matchings",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 1691,
+  "problem_url": "https://codeforces.com/problemset/problem/290/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7216",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "HAI I HAS A TUX GIMMEH TUX I HAS A FOO ITS 0 I HAS A BAR ITS 0 I HAS A BAZ ITS 0 I HAS A QUZ ITS 1 TUX IS NOW A NUMBR IM IN YR LOOP NERFIN YR TUX TIL BOTH SAEM TUX AN 0 I HAS A PUR GIMMEH PUR PUR IS NOW A NUMBR FOO R SUM OF FOO AN PUR BAR R SUM OF BAR AN 1 BOTH SAEM BIGGR OF PRODUKT OF FOO AN QUZ AN PRODUKT OF BAR BAZ AN PRODUKT OF FOO AN QUZ O RLY? YA RLY BAZ R FOO QUZ R BAR OIC IM OUTTA YR LOOP BAZ IS NOW A NUMBAR VISIBLE SMOOSH QUOSHUNT OF BAZ QUZ KTHXBYE",
+  "input_specification": "The input contains between 1 and 10 lines, i -th line contains an integer number x i (0 ≤ x i ≤ 9) .",
+  "output_specification": "Output a single real number. The answer is considered to be correct if its absolute or relative error does not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "3\n0\n1\n1",
+      "output": "0.666667"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:42",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1025D",
+  "source": "problemset",
+  "contest_id": 1025,
+  "problem_index": "D",
+  "name": "Recovering BST",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 4395,
+  "problem_url": "https://codeforces.com/problemset/problem/1025/D",
+  "editorial_url": "https://codeforces.com/blog/entry/61323",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Dima the hamster enjoys nibbling different things: cages, sticks, bad problemsetters and even trees! Recently he found a binary search tree and instinctively nibbled all of its edges, hence messing up the vertices. Dima knows that if Andrew, who has been thoroughly assembling the tree for a long time, comes home and sees his creation demolished, he'll get extremely upset. To not let that happen, Dima has to recover the binary search tree. Luckily, he noticed that any two vertices connected by a direct edge had their greatest common divisor value exceed $$$1$$$. Help Dima construct such a binary search tree or determine that it's impossible. The definition and properties of a binary search tree can be found here.",
+  "input_specification": "The first line contains the number of vertices $$$n$$$ ($$$2 \\le n \\le 700$$$). The second line features $$$n$$$ distinct integers $$$a_i$$$ ($$$2 \\le a_i \\le 10^9$$$) — the values of vertices in ascending order .",
+  "output_specification": "If it is possible to reassemble the binary search tree, such that the greatest common divisor of any two vertices connected by the edge is greater than $$$1$$$, print \" Yes \" (quotes for clarity). Otherwise, print \" No \" (quotes for clarity).",
+  "sample_testcases": [
+    {
+      "input": "6\n3 6 9 18 36 108",
+      "output": "Yes"
+    },
+    {
+      "input": "2\n7 17",
+      "output": "No"
+    },
+    {
+      "input": "9\n4 8 10 12 15 18 33 44 81",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:14",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

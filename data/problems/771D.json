@@ -1,0 +1,50 @@
+{
+  "id": "771D",
+  "source": "problemset",
+  "contest_id": 771,
+  "problem_index": "D",
+  "name": "Bear and Company",
+  "rating": 2500,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1696,
+  "problem_url": "https://codeforces.com/problemset/problem/771/D",
+  "editorial_url": "https://codeforces.com/blog/entry/51068",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Bear Limak prepares problems for a programming competition. Of course, it would be unprofessional to mention the sponsor name in the statement. Limak takes it seriously and he is going to change some words. To make it still possible to read, he will try to modify each word as little as possible. Limak has a string s that consists of uppercase English letters. In one move he can swap two adjacent letters of the string. For example, he can transform a string \" ABBC \" into \" BABC \" or \" ABCB \" in one move. Limak wants to obtain a string without a substring \" VK \" (i.e. there should be no letter ' V ' immediately followed by letter ' K '). It can be easily proved that it's possible for any initial string s . What is the minimum possible number of moves Limak can do?",
+  "input_specification": "The first line of the input contains an integer n ( 1 ≤ n ≤ 75 ) — the length of the string. The second line contains a string s , consisting of uppercase English letters. The length of the string is equal to n .",
+  "output_specification": "Print one integer, denoting the minimum possible number of moves Limak can do, in order to obtain a string without a substring \" VK \".",
+  "sample_testcases": [
+    {
+      "input": "4\nVKVK",
+      "output": "3"
+    },
+    {
+      "input": "5\nBVVKV",
+      "output": "2"
+    },
+    {
+      "input": "7\nVVKEVKK",
+      "output": "3"
+    },
+    {
+      "input": "20\nVKVKVVVKVOVKVQKKKVVK",
+      "output": "8"
+    },
+    {
+      "input": "5\nLIMAK",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

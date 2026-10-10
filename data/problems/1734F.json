@@ -1,0 +1,37 @@
+{
+  "id": "1734F",
+  "source": "problemset",
+  "contest_id": 1734,
+  "problem_index": "F",
+  "name": "Zeros and Ones",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1031,
+  "problem_url": "https://codeforces.com/problemset/problem/1734/F",
+  "editorial_url": "https://codeforces.com/blog/entry/107231",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$S$$$ be the Thue-Morse sequence . In other words, $$$S$$$ is the $$$0$$$-indexed binary string with infinite length that can be constructed as follows: Initially, let $$$S$$$ be \" 0 \". Then, we perform the following operation infinitely many times: concatenate $$$S$$$ with a copy of itself with flipped bits. For example, here are the first four iterations: Iteration $$$S$$$ before iteration $$$S$$$ before iteration with flipped bits Concatenated $$$S$$$ 1 0 1 01 2 01 10 0110 3 0110 1001 01101001 4 01101001 10010110 0110100110010110 $$$\\ldots$$$ $$$\\ldots$$$ $$$\\ldots$$$ $$$\\ldots$$$ You are given two positive integers $$$n$$$ and $$$m$$$. Find the number of positions where the strings $$$S_0 S_1 \\ldots S_{m-1}$$$ and $$$S_n S_{n + 1} \\ldots S_{n + m - 1}$$$ are different.",
+  "input_specification": "Each test contains multiple test cases. The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The description of the test cases follows. The first and only line of each test case contains two positive integers, $$$n$$$ and $$$m$$$ respectively ($$$1 \\leq n,m \\leq 10^{18}$$$).",
+  "output_specification": "For each testcase, output a non-negative integer — the Hamming distance between the two required strings.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n5 10\n34 211\n73 34\n19124639 56348772\n12073412269 96221437021",
+      "output": "1\n6\n95\n20\n28208137\n48102976088"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1194D",
+  "source": "problemset",
+  "contest_id": 1194,
+  "problem_index": "D",
+  "name": "1-2-K Game",
+  "rating": 1700,
+  "tags": [
+    "games",
+    "math"
+  ],
+  "solved_count": 7467,
+  "problem_url": "https://codeforces.com/problemset/problem/1194/D",
+  "editorial_url": "https://codeforces.com/blog/entry/68405",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob play a game. There is a paper strip which is divided into n + 1 cells numbered from left to right starting from 0 . There is a chip placed in the n -th cell (the last one). Players take turns, Alice is first. Each player during his or her turn has to move the chip 1 , 2 or k cells to the left (so, if the chip is currently in the cell i , the player can move it into cell i - 1 , i - 2 or i - k ). The chip should not leave the borders of the paper strip: it is impossible, for example, to move it k cells to the left if the current cell has number i < k . The player who can't make a move loses the game. Who wins if both participants play optimally? Alice and Bob would like to play several games, so you should determine the winner in each game.",
+  "input_specification": "The first line contains the single integer T ( 1 ≤ T ≤ 100 ) — the number of games. Next T lines contain one game per line. All games are independent. Each of the next T lines contains two integers n and k ( 0 ≤ n ≤ 10 9 , 3 ≤ k ≤ 10 9 ) — the length of the strip and the constant denoting the third move, respectively.",
+  "output_specification": "For each game, print Alice if Alice wins this game and Bob otherwise.",
+  "sample_testcases": [
+    {
+      "input": "4\n0 3\n3 3\n3 4\n4 4",
+      "output": "Bob\nAlice\nBob\nAlice"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:34",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

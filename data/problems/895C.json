@@ -1,0 +1,45 @@
+{
+  "id": "895C",
+  "source": "problemset",
+  "contest_id": 895,
+  "problem_index": "C",
+  "name": "Square Subsets",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 7990,
+  "problem_url": "https://codeforces.com/problemset/problem/895/C",
+  "editorial_url": "https://codeforces.com/blog/entry/56028",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya was late for the lesson too. The teacher gave him an additional task. For some array a Petya should find the number of different ways to select non-empty subset of elements from it in such a way that their product is equal to a square of some integer. Two ways are considered different if sets of indexes of elements chosen by these ways are different. Since the answer can be very large, you should find the answer modulo 10 9 + 7 .",
+  "input_specification": "First line contains one integer n ( 1 ≤ n ≤ 10 5 ) — the number of elements in the array. Second line contains n integers a i ( 1 ≤ a i ≤ 70 ) — the elements of the array.",
+  "output_specification": "Print one integer — the number of different ways to choose some elements so that their product is a square of a certain integer modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 1 1",
+      "output": "15"
+    },
+    {
+      "input": "4\n2 2 2 2",
+      "output": "7"
+    },
+    {
+      "input": "5\n1 2 4 5 8",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

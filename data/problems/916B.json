@@ -1,0 +1,44 @@
+{
+  "id": "916B",
+  "source": "problemset",
+  "contest_id": 916,
+  "problem_index": "B",
+  "name": "Jamie and Binary Sequence (changed after round)",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2059,
+  "problem_url": "https://codeforces.com/problemset/problem/916/B",
+  "editorial_url": "https://codeforces.com/blog/entry/57223",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Jamie is preparing a Codeforces round. He has got an idea for a problem, but does not know how to solve it. Help him write a solution to the following problem: Find k integers such that the sum of two to the power of each number equals to the number n and the largest integer in the answer is as small as possible. As there may be multiple answers, you are asked to output the lexicographically largest one. To be more clear, consider all integer sequence with length k ( a 1 , a 2 , ..., a k ) with . Give a value to each sequence. Among all sequence(s) that have the minimum y value, output the one that is the lexicographically largest. For definitions of powers and lexicographical order see notes.",
+  "input_specification": "The first line consists of two integers n and k ( 1 ≤ n ≤ 10 18 , 1 ≤ k ≤ 10 5 ) — the required sum and the length of the sequence.",
+  "output_specification": "Output \" No \" (without quotes) in a single line if there does not exist such sequence. Otherwise, output \" Yes \" (without quotes) in the first line, and k numbers separated by space in the second line — the required sequence. It is guaranteed that the integers in the answer sequence fit the range [ - 10 18 , 10 18 ] .",
+  "sample_testcases": [
+    {
+      "input": "23 5",
+      "output": "Yes\n3 3 2 1 0"
+    },
+    {
+      "input": "13 2",
+      "output": "No"
+    },
+    {
+      "input": "1 2",
+      "output": "Yes\n-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

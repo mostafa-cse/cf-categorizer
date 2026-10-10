@@ -1,0 +1,36 @@
+{
+  "id": "484E",
+  "source": "problemset",
+  "contest_id": 484,
+  "problem_index": "E",
+  "name": "Sign on Fence",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "data structures"
+  ],
+  "solved_count": 3337,
+  "problem_url": "https://codeforces.com/problemset/problem/484/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14592",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bizon the Champion has recently finished painting his wood fence. The fence consists of a sequence of n panels of 1 meter width and of arbitrary height. The i -th panel's height is h i meters. The adjacent planks follow without a gap between them. After Bizon painted the fence he decided to put a \"for sale\" sign on it. The sign will be drawn on a rectangular piece of paper and placed on the fence so that the sides of the sign are parallel to the fence panels and are also aligned with the edges of some panels. Bizon the Champion introduced the following constraints for the sign position: The width of the sign should be exactly w meters. The sign must fit into the segment of the fence from the l -th to the r -th panels, inclusive (also, it can't exceed the fence's bound in vertical direction). The sign will be really pretty, So Bizon the Champion wants the sign's height to be as large as possible. You are given the description of the fence and several queries for placing sign. For each query print the maximum possible height of the sign that can be placed on the corresponding segment of the fence with the given fixed width of the sign.",
+  "input_specification": "The first line of the input contains integer n — the number of panels in the fence ( 1 ≤ n ≤ 10 5 ). The second line contains n space-separated integers h i , — the heights of the panels ( 1 ≤ h i ≤ 10 9 ). The third line contains an integer m — the number of the queries ( 1 ≤ m ≤ 10 5 ). The next m lines contain the descriptions of the queries, each query is represented by three integers l , r and w ( 1 ≤ l ≤ r ≤ n , 1 ≤ w ≤ r - l + 1 ) — the segment of the fence and the width of the sign respectively.",
+  "output_specification": "For each query print the answer on a separate line — the maximum height of the sign that can be put in the corresponding segment of the fence with all the conditions being satisfied.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 2 3 3\n3\n2 5 3\n2 5 2\n1 5 5",
+      "output": "2\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

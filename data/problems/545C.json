@@ -1,0 +1,39 @@
+{
+  "id": "545C",
+  "source": "problemset",
+  "contest_id": 545,
+  "problem_index": "C",
+  "name": "Woodcutters",
+  "rating": 1500,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 34832,
+  "problem_url": "https://codeforces.com/problemset/problem/545/C",
+  "editorial_url": "https://codeforces.com/blog/entry/17982",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little Susie listens to fairy tales before bed every day. Today's fairy tale was about wood cutters and the little girl immediately started imagining the choppers cutting wood. She imagined the situation that is described below. There are n trees located along the road at points with coordinates x 1 , x 2 , ..., x n . Each tree has its height h i . Woodcutters can cut down a tree and fell it to the left or to the right. After that it occupies one of the segments [ x i - h i , x i ] or [ x i ; x i + h i ] . The tree that is not cut down occupies a single point with coordinate x i . Woodcutters can fell a tree if the segment to be occupied by the fallen tree doesn't contain any occupied point. The woodcutters want to process as many trees as possible, so Susie wonders, what is the maximum number of trees to fell.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ) — the number of trees. Next n lines contain pairs of integers x i , h i ( 1 ≤ x i , h i ≤ 10 9 ) — the coordinate and the height of the і -th tree. The pairs are given in the order of ascending x i . No two trees are located at the point with the same coordinate.",
+  "output_specification": "Print a single number — the maximum number of trees that you can cut down by the given rules.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n2 1\n5 10\n10 9\n19 1",
+      "output": "3"
+    },
+    {
+      "input": "5\n1 2\n2 1\n5 10\n10 9\n20 1",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

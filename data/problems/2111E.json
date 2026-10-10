@@ -1,0 +1,39 @@
+{
+  "id": "2111E",
+  "source": "problemset",
+  "contest_id": 2111,
+  "problem_index": "E",
+  "name": "Changing the String",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "implementation",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 5589,
+  "problem_url": "https://codeforces.com/problemset/problem/2111/E",
+  "editorial_url": "https://codeforces.com/blog/entry/143528",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Given a string $$$s$$$ that consists only of the first three letters of the Latin alphabet, meaning each character of the string is either a , b , or c . Also given are $$$q$$$ operations that need to be performed on the string. In each operation, two letters $$$x$$$ and $$$y$$$ from the set of the first three letters of the Latin alphabet are provided, and for each operation, one of the following two actions must be taken: change any (one) occurrence of the letter $$$x$$$ in the string $$$s$$$ to the letter $$$y$$$ (if at least one occurrence of the letter $$$x$$$ exists); do nothing. The goal is to perform all operations in the given order in such a way that the string $$$s$$$ becomes lexicographically minimal. Recall that a string $$$a$$$ is lexicographically less than a string $$$b$$$ if and only if one of the following conditions holds: $$$a$$$ is a prefix of $$$b$$$, but $$$a \\neq b$$$; at the first position where $$$a$$$ and $$$b$$$ differ, the string $$$a$$$ has a letter that comes earlier in the alphabet than the corresponding letter in $$$b$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^{3}$$$) — the number of test cases. The description of the test cases follows. In the first line of each test case, there are two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^{5}$$$) — the length of the string $$$s$$$ and the number of operations. In the second line of each test case, the string $$$s$$$ is given — a string of exactly $$$n$$$ characters, each of which is a , b , or c . The next $$$q$$$ lines of each test case contain the description of the operations. Each line contains two characters $$$x$$$ and $$$y$$$, each of which is a , b , or c . Additional constraints on the input: the sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^{5}$$$; the sum of $$$q$$$ across all test cases does not exceed $$$2 \\cdot 10^{5}$$$.",
+  "output_specification": "For each test case, output the lexicographically minimal string that can be obtained from $$$s$$$ using the given operations.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2\ncb\nc b\nb a\n10 10\nbbbbbbbbbb\nb a\nb c\nc b\nb a\nc a\nb c\nb c\nb a\na b\nc a\n30 20\nabcaababcbbcabcbbcabcbabbbbabc\nb c\nb c\nc a\nb c\nb c\nb a\nb c\nb c\nb a\nb a\nb a\nb a\nc a\nb c\nc a\nb c\nc a\nc a\nb c\nc b",
+      "output": "ab\naaaaabbbbb\naaaaaaaaaaaaaaabbbabcbabbbbabc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:23",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

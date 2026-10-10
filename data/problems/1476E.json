@@ -1,0 +1,48 @@
+{
+  "id": "1476E",
+  "source": "problemset",
+  "contest_id": 1476,
+  "problem_index": "E",
+  "name": "Pattern Matching",
+  "rating": 2300,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "hashing",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 2881,
+  "problem_url": "https://codeforces.com/problemset/problem/1476/E",
+  "editorial_url": "https://codeforces.com/blog/entry/87356",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ patterns $$$p_1, p_2, \\dots, p_n$$$ and $$$m$$$ strings $$$s_1, s_2, \\dots, s_m$$$. Each pattern $$$p_i$$$ consists of $$$k$$$ characters that are either lowercase Latin letters or wildcard characters (denoted by underscores). All patterns are pairwise distinct. Each string $$$s_j$$$ consists of $$$k$$$ lowercase Latin letters. A string $$$a$$$ matches a pattern $$$b$$$ if for each $$$i$$$ from $$$1$$$ to $$$k$$$ either $$$b_i$$$ is a wildcard character or $$$b_i=a_i$$$. You are asked to rearrange the patterns in such a way that the first pattern the $$$j$$$-th string matches is $$$p[mt_j]$$$. You are allowed to leave the order of the patterns unchanged. Can you perform such a rearrangement? If you can, then print any valid order.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1 \\le n, m \\le 10^5$$$, $$$1 \\le k \\le 4$$$) — the number of patterns, the number of strings and the length of each pattern and string. Each of the next $$$n$$$ lines contains a pattern — $$$k$$$ characters that are either lowercase Latin letters or underscores. All patterns are pairwise distinct. Each of the next $$$m$$$ lines contains a string — $$$k$$$ lowercase Latin letters, and an integer $$$mt$$$ ($$$1 \\le mt \\le n$$$) — the index of the first pattern the corresponding string should match.",
+  "output_specification": "Print \" NO \" if there is no way to rearrange the patterns in such a way that the first pattern that the $$$j$$$-th string matches is $$$p[mt_j]$$$. Otherwise, print \" YES \" in the first line. The second line should contain $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ — the order of the patterns. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 3 4\n_b_d\n__b_\naaaa\nab__\n_bcd\nabcd 4\nabba 2\ndbcd 5",
+      "output": "YES\n3 2 4 5 1"
+    },
+    {
+      "input": "1 1 3\n__c\ncba 1",
+      "output": "NO"
+    },
+    {
+      "input": "2 2 2\na_\n_b\nab 1\nab 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:21",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

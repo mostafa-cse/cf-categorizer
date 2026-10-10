@@ -1,0 +1,49 @@
+{
+  "id": "1909I",
+  "source": "problemset",
+  "contest_id": 1909,
+  "problem_index": "I",
+  "name": "Short Permutation Problem",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 185,
+  "problem_url": "https://codeforces.com/problemset/problem/1909/I",
+  "editorial_url": "https://codeforces.com/blog/entry/123584",
+  "time_limit": "7 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Xomu - Last Dance ⠀ You are given an integer $$$n$$$. For each $$$(m, k)$$$ such that $$$3 \\leq m \\leq n+1$$$ and $$$0 \\leq k \\leq n-1$$$, count the permutations of $$$[1, 2, ..., n]$$$ such that $$$p_i + p_{i+1} \\geq m$$$ for exactly $$$k$$$ indices $$$i$$$, modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The input consists of a single line, which contains two integers $$$n$$$, $$$x$$$ ($$$2 \\leq n \\leq 4000$$$, $$$1 \\leq x \\lt 1\\,000\\,000\\,007$$$).",
+  "output_specification": "Let $$$a_{m,k}$$$ be the answer for the pair $$$(m, k)$$$, modulo $$$998\\,244\\,353$$$. Let $$$$$$\\large S = \\sum_{m=3}^{n+1} \\sum_{k=0}^{n-1} a_{m,k}x^{mn+k}\\phantom{0}.$$$$$$ Output a single line with an integer: $$$S$$$ modulo $$$1\\,000\\,000\\,007$$$. Note that using two different modulos is intentional. We want you to calculate all the $$$a_{m,k}$$$ modulo $$$998\\,244\\,353$$$, then treat them like integers in the range $$$[0, 998\\,244\\,352]$$$, and hash them modulo $$$1\\,000\\,000\\,007$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 2",
+      "output": "77824"
+    },
+    {
+      "input": "4 1000000000",
+      "output": "30984329"
+    },
+    {
+      "input": "8 327869541",
+      "output": "85039220"
+    },
+    {
+      "input": "4000 1149333",
+      "output": "584870166"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:36",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

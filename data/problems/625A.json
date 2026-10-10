@@ -1,0 +1,39 @@
+{
+  "id": "625A",
+  "source": "problemset",
+  "contest_id": 625,
+  "problem_index": "A",
+  "name": "Guest From the Past",
+  "rating": 1700,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 5697,
+  "problem_url": "https://codeforces.com/problemset/problem/625/A",
+  "editorial_url": "https://codeforces.com/blog/entry/23342",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Kolya Gerasimov loves kefir very much. He lives in year 1984 and knows all the details of buying this delicious drink. One day, as you probably know, he found himself in year 2084, and buying kefir there is much more complicated. Kolya is hungry, so he went to the nearest milk shop. In 2084 you may buy kefir in a plastic liter bottle, that costs a rubles, or in glass liter bottle, that costs b rubles. Also, you may return empty glass bottle and get c ( c < b ) rubles back, but you cannot return plastic bottles. Kolya has n rubles and he is really hungry, so he wants to drink as much kefir as possible. There were no plastic bottles in his 1984, so Kolya doesn't know how to act optimally and asks for your help.",
+  "input_specification": "First line of the input contains a single integer n ( 1 ≤ n ≤ 10 18 ) — the number of rubles Kolya has at the beginning. Then follow three lines containing integers a , b and c ( 1 ≤ a ≤ 10 18 , 1 ≤ c < b ≤ 10 18 ) — the cost of one plastic liter bottle, the cost of one glass liter bottle and the money one can get back by returning an empty glass bottle, respectively.",
+  "output_specification": "Print the only integer — maximum number of liters of kefir, that Kolya can drink.",
+  "sample_testcases": [
+    {
+      "input": "10\n11\n9\n8",
+      "output": "2"
+    },
+    {
+      "input": "10\n5\n6\n1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "793B",
+  "source": "problemset",
+  "contest_id": 793,
+  "problem_index": "B",
+  "name": "Igor and his way to work",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "shortest paths"
+  ],
+  "solved_count": 4954,
+  "problem_url": "https://codeforces.com/problemset/problem/793/B",
+  "editorial_url": "https://codeforces.com/blog/entry/51685",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Woken up by the alarm clock Igor the financial analyst hurried up to the work. He ate his breakfast and sat in his car. Sadly, when he opened his GPS navigator, he found that some of the roads in Bankopolis, the city where he lives, are closed due to road works. Moreover, Igor has some problems with the steering wheel, so he can make no more than two turns on his way to his office in bank. Bankopolis looks like a grid of n rows and m columns. Igor should find a way from his home to the bank that has no more than two turns and doesn't contain cells with road works, or determine that it is impossible and he should work from home. A turn is a change in movement direction. Igor's car can only move to the left, to the right, upwards and downwards. Initially Igor can choose any direction. Igor is still sleepy, so you should help him.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 1000 ) — the number of rows and the number of columns in the grid. Each of the next n lines contains m characters denoting the corresponding row of the grid. The following characters can occur: \" . \" — an empty cell; \" * \" — a cell with road works; \" S \" — the cell where Igor's home is located; \" T \" — the cell where Igor's office is located. It is guaranteed that \" S \" and \" T \" appear exactly once each.",
+  "output_specification": "In the only line print \" YES \" if there is a path between Igor's home and Igor's office with no more than two turns, and \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n..S..\n****.\nT....\n****.\n.....",
+      "output": "YES"
+    },
+    {
+      "input": "5 5\nS....\n****.\n.....\n.****\n..T..",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

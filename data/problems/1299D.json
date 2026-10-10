@@ -1,0 +1,48 @@
+{
+  "id": "1299D",
+  "source": "problemset",
+  "contest_id": 1299,
+  "problem_index": "D",
+  "name": "Around the World",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "math",
+    "trees"
+  ],
+  "solved_count": 726,
+  "problem_url": "https://codeforces.com/problemset/problem/1299/D",
+  "editorial_url": "https://codeforces.com/blog/entry/73763",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Guy-Manuel and Thomas are planning $$$144$$$ trips around the world. You are given a simple weighted undirected connected graph with $$$n$$$ vertexes and $$$m$$$ edges with the following restriction: there isn't any simple cycle (i. e. a cycle which doesn't pass through any vertex more than once) of length greater than $$$3$$$ which passes through the vertex $$$1$$$. The cost of a path (not necessarily simple) in this graph is defined as the XOR of weights of all edges in that path with each edge being counted as many times as the path passes through it. But the trips with cost $$$0$$$ aren't exciting. You may choose any subset of edges incident to the vertex $$$1$$$ and remove them. How many are there such subsets, that, when removed, there is not any nontrivial cycle with the cost equal to $$$0$$$ which passes through the vertex $$$1$$$ in the resulting graph? A cycle is called nontrivial if it passes through some edge odd number of times. As the answer can be very big, output it modulo $$$10^9+7$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n,m \\le 10^5$$$) — the number of vertexes and edges in the graph. The $$$i$$$-th of the next $$$m$$$ lines contains three integers $$$a_i$$$, $$$b_i$$$ and $$$w_i$$$ ($$$1 \\le a_i, b_i \\le n, a_i \\neq b_i, 0 \\le w_i \\lt 32$$$) — the endpoints of the $$$i$$$-th edge and its weight. It's guaranteed there aren't any multiple edges, the graph is connected and there isn't any simple cycle of length greater than $$$3$$$ which passes through the vertex $$$1$$$.",
+  "output_specification": "Output the answer modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "6 8\n1 2 0\n2 3 1\n2 4 3\n2 6 2\n3 4 8\n3 5 4\n5 4 5\n5 6 6",
+      "output": "2"
+    },
+    {
+      "input": "7 9\n1 2 0\n1 3 1\n2 3 9\n2 4 3\n2 5 4\n4 5 7\n3 6 6\n3 7 7\n6 7 8",
+      "output": "1"
+    },
+    {
+      "input": "4 4\n1 2 27\n1 3 1\n1 4 1\n3 4 0",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:06",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

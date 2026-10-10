@@ -1,0 +1,39 @@
+{
+  "id": "2038M",
+  "source": "problemset",
+  "contest_id": 2038,
+  "problem_index": "M",
+  "name": "Royal Flush",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 348,
+  "problem_url": "https://codeforces.com/problemset/problem/2038/M",
+  "editorial_url": "https://codeforces.com/contest/2038/attachments/download/28399/presentation_rus.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Consider the following game. There is a deck, which consists of cards of $$$n$$$ different suits. For each suit, there are $$$13$$$ cards in the deck, all with different ranks (the ranks are $$$2$$$, $$$3$$$, $$$4$$$, ..., $$$10$$$, Jack, Queen, King and Ace). Initially, the deck is shuffled randomly (all $$$(13n)!$$$ possible orders of cards have the same probability). You draw $$$5$$$ topmost cards from the deck. Then, every turn of the game, the following events happen, in the given order: if the cards in your hand form a Royal Flush (a $$$10$$$, a Jack, a Queen, a King, and an Ace, all of the same suit), you win, and the game ends; if you haven't won yet, and the deck is empty, you lose, and the game ends; if the game hasn't ended yet, you may choose any cards from your hand (possibly, all of them) and discard them. When a card is discarded, it is removed from the game; finally, you draw cards from the deck, until you have $$$5$$$ cards or the deck becomes empty. Your goal is to find a strategy that allows you to win in the minimum expected number of turns. Note that the turn when the game ends is not counted (for example, if the $$$5$$$ cards you draw initially already form a Royal Flush , you win in $$$0$$$ turns). Calculate the minimum possible expected number of turns required to win the game.",
+  "input_specification": "The only line contains one integer $$$n$$$ ($$$1 \\le n \\le 4$$$) — the number of suits used in the game.",
+  "output_specification": "Print the minimum expected number of turns. Your answer will be considered correct if its absolute or relative error does not exceed $$$10^{-6}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer will be accepted if and only if $$$\\frac{|a - b|}{\\max{(1, |b|)}} \\le 10^{-6}$$$.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "3.598290598"
+    },
+    {
+      "input": "2",
+      "output": "8.067171309"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

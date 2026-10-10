@@ -1,0 +1,35 @@
+{
+  "id": "484A",
+  "source": "problemset",
+  "contest_id": 484,
+  "problem_index": "A",
+  "name": "Bits",
+  "rating": 1700,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms"
+  ],
+  "solved_count": 13983,
+  "problem_url": "https://codeforces.com/problemset/problem/484/A",
+  "editorial_url": "https://codeforces.com/blog/entry/14592",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's denote as the number of bits set ('1' bits) in the binary representation of the non-negative integer x . You are given multiple queries consisting of pairs of integers l and r . For each query, find the x , such that l ≤ x ≤ r , and is maximum possible. If there are multiple such numbers find the smallest of them.",
+  "input_specification": "The first line contains integer n — the number of queries ( 1 ≤ n ≤ 10000 ). Each of the following n lines contain two integers l i , r i — the arguments for the corresponding query ( 0 ≤ l i ≤ r i ≤ 10 18 ).",
+  "output_specification": "For each query print the answer in a separate line.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n2 4\n1 10",
+      "output": "1\n3\n7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

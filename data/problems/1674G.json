@@ -1,0 +1,44 @@
+{
+  "id": "1674G",
+  "source": "problemset",
+  "contest_id": 1674,
+  "problem_index": "G",
+  "name": "Remove Directed Edges",
+  "rating": 2000,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 3021,
+  "problem_url": "https://codeforces.com/problemset/problem/1674/G",
+  "editorial_url": "https://codeforces.com/blog/entry/102482",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a directed acyclic graph, consisting of $$$n$$$ vertices and $$$m$$$ edges. The vertices are numbered from $$$1$$$ to $$$n$$$. There are no multiple edges and self-loops. Let $$$\\mathit{in}_v$$$ be the number of incoming edges (indegree) and $$$\\mathit{out}_v$$$ be the number of outgoing edges (outdegree) of vertex $$$v$$$. You are asked to remove some edges from the graph. Let the new degrees be $$$\\mathit{in'}_v$$$ and $$$\\mathit{out'}_v$$$. You are only allowed to remove the edges if the following conditions hold for every vertex $$$v$$$: $$$\\mathit{in'}_v \\lt \\mathit{in}_v$$$ or $$$\\mathit{in'}_v = \\mathit{in}_v = 0$$$; $$$\\mathit{out'}_v \\lt \\mathit{out}_v$$$ or $$$\\mathit{out'}_v = \\mathit{out}_v = 0$$$. Let's call a set of vertices $$$S$$$ cute if for each pair of vertices $$$v$$$ and $$$u$$$ ($$$v \\neq u$$$) such that $$$v \\in S$$$ and $$$u \\in S$$$, there exists a path either from $$$v$$$ to $$$u$$$ or from $$$u$$$ to $$$v$$$ over the non-removed edges. What is the maximum possible size of a cute set $$$S$$$ after you remove some edges from the graph and both indegrees and outdegrees of all vertices either decrease or remain equal to $$$0$$$?",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$0 \\le m \\le 2 \\cdot 10^5$$$) — the number of vertices and the number of edges of the graph. Each of the next $$$m$$$ lines contains two integers $$$v$$$ and $$$u$$$ ($$$1 \\le v, u \\le n$$$; $$$v \\neq u$$$) — the description of an edge. The given edges form a valid directed acyclic graph. There are no multiple edges.",
+  "output_specification": "Print a single integer — the maximum possible size of a cute set $$$S$$$ after you remove some edges from the graph and both indegrees and outdegrees of all vertices either decrease or remain equal to $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n2 3\n1 3",
+      "output": "2"
+    },
+    {
+      "input": "5 0",
+      "output": "1"
+    },
+    {
+      "input": "7 8\n7 1\n1 3\n6 2\n2 3\n7 2\n2 4\n7 3\n6 3",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

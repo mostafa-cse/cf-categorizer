@@ -1,0 +1,41 @@
+{
+  "id": "769D",
+  "source": "problemset",
+  "contest_id": 769,
+  "problem_index": "D",
+  "name": "k-Interesting Pairs Of Integers",
+  "rating": 1700,
+  "tags": [
+    "*special",
+    "bitmasks",
+    "brute force",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 2588,
+  "problem_url": "https://codeforces.com/problemset/problem/769/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50897?locale=en",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has the sequence consisting of n integers. Vasya consider the pair of integers x and y k-interesting , if their binary representation differs from each other exactly in k bits. For example, if k = 2 , the pair of integers x = 5 and y = 3 is k-interesting , because their binary representation x = 101 and y = 011 differs exactly in two bits. Vasya wants to know how many pairs of indexes ( i , j ) are in his sequence so that i < j and the pair of integers a i and a j is k-interesting . Your task is to help Vasya and determine this number.",
+  "input_specification": "The first line contains two integers n and k ( 2 ≤ n ≤ 10 5 , 0 ≤ k ≤ 14 ) — the number of integers in Vasya's sequence and the number of bits in which integers in k-interesting pair should differ. The second line contains the sequence a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 10 4 ), which Vasya has.",
+  "output_specification": "Print the number of pairs ( i , j ) so that i < j and the pair of integers a i and a j is k-interesting .",
+  "sample_testcases": [
+    {
+      "input": "4 1\n0 3 2 1",
+      "output": "4"
+    },
+    {
+      "input": "6 0\n200 100 100 100 200 200",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

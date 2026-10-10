@@ -1,0 +1,37 @@
+{
+  "id": "1878E",
+  "source": "problemset",
+  "contest_id": 1878,
+  "problem_index": "E",
+  "name": "Iva & Pav",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 23350,
+  "problem_url": "https://codeforces.com/problemset/problem/1878/E",
+  "editorial_url": "https://codeforces.com/blog/entry/120813",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Iva and Pav are a famous Serbian competitive programming couple. In Serbia, they call Pav \"papuca\" and that's why he will make all of Iva's wishes come true. Iva gave Pav an array $$$a$$$ of $$$n$$$ elements. Let's define $$$f(l, r) = a_l \\ \\& \\ a_{l+1} \\ \\& \\dots \\& \\ a_r$$$ (here $$$\\&$$$ denotes the bitwise AND operation ). Note that $$$f(l, r)$$$ is not defined when $$$l \\gt r$$$. Iva also gave Pav $$$q$$$ queries. Each query consists of 2 numbers, $$$k$$$ and $$$l$$$, and she wants Pav to find the largest index $$$r$$$ ($$$l \\le r \\le n$$$), such that $$$f(l, r) \\ge k$$$. Pav wants to solve this problem fast because he doesn't want to upset Iva. He needs your help.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the length of array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of array $$$a$$$. The third line of each test case contains a single integer $$$q$$$ ($$$1 \\le q \\le 10^5$$$) — the number of queries Iva gave Pav. The next $$$q$$$ lines of each test case contains two numbers, $$$l$$$ and $$$k$$$ ($$$1 \\le l \\le n$$$, $$$1 \\le k \\le 10^9$$$) — the left bound for the subsegment, and the integer $$$k$$$ described in statement. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. Also, it is guaranteed that the sum of $$$q$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each query output maximal index $$$r$$$ ($$$l \\le r \\le n$$$) such that $$$a_l \\ \\& \\ a_{l+1} \\ \\& \\dots \\& \\ a_r \\ \\ge \\ k$$$. If such $$$r$$$ doesn't exist, output $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n15 14 17 42 34\n3\n1 7\n2 15\n4 5\n5\n7 5 3 1 7\n4\n1 7\n5 7\n2 3\n2 2\n7\n19 20 15 12 21 7 11\n4\n1 15\n4 4\n7 12\n5 7",
+      "output": "2 -1 5 \n1 5 2 2 \n2 6 -1 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:44",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "294C",
+  "source": "problemset",
+  "contest_id": 294,
+  "problem_index": "C",
+  "name": "Shaass and Lights",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "number theory"
+  ],
+  "solved_count": 4537,
+  "problem_url": "https://codeforces.com/problemset/problem/294/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7287",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are n lights aligned in a row. These lights are numbered 1 to n from left to right. Initially some of the lights are switched on. Shaass wants to switch all the lights on. At each step he can switch a light on (this light should be switched off at that moment) if there's at least one adjacent light which is already switched on. He knows the initial state of lights and he's wondering how many different ways there exist to switch all the lights on. Please find the required number of ways modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line of the input contains two integers n and m where n is the number of lights in the sequence and m is the number of lights which are initially switched on, (1 ≤ n ≤ 1000, 1 ≤ m ≤ n ) . The second line contains m distinct integers, each between 1 to n inclusive, denoting the indices of lights which are initially switched on.",
+  "output_specification": "In the only line of the output print the number of different possible ways to switch on all the lights modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "3 1\n1",
+      "output": "1"
+    },
+    {
+      "input": "4 2\n1 4",
+      "output": "2"
+    },
+    {
+      "input": "11 2\n4 8",
+      "output": "6720"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:38",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "778E",
+  "source": "problemset",
+  "contest_id": 778,
+  "problem_index": "E",
+  "name": "Selling Numbers",
+  "rating": 3000,
+  "tags": [
+    "dp",
+    "sortings"
+  ],
+  "solved_count": 451,
+  "problem_url": "https://codeforces.com/problemset/problem/778/E",
+  "editorial_url": "https://codeforces.com/blog/entry/50724",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Boris really likes numbers and even owns a small shop selling interesting numbers. He has n decimal numbers B i . Cost of the number in his shop is equal to the sum of costs of its digits. You are given the values c d , where c d is the cost of the digit d . Of course, Boris is interested in that numbers he owns have the maximum cost possible. Recently Boris got hold of the magical artifact A , which can allow him to increase the cost of his collection. Artifact is a string, consisting of digits and ' ? ' symbols. To use the artifact, Boris must replace all ' ? ' with digits to get a decimal number without leading zeros (it is also not allowed to get number 0). After that, the resulting number is added to all numbers B i in Boris' collection. He uses the artifact exactly once. What is the maximum cost of the collection Boris can achieve after using the artifact?",
+  "input_specification": "First line contains artifact A , consisting of digits ' 0 '–' 9 ' and ' ? ' symbols ( 1 ≤ | A | ≤ 1000 ). Next line contains n — the amount of numbers in Boris' collection ( 1 ≤ n ≤ 1000 ). Next n lines contain integers B i ( 1 ≤ B i < 10 1000 ). A doesn't start with ' 0 '. Last line contains ten integers — costs of digits c 0 , c 1 , ..., c 9 ( 0 ≤ c i ≤ 1000 ).",
+  "output_specification": "Output one integer — the maximum possible cost of the collection after using the artifact.",
+  "sample_testcases": [
+    {
+      "input": "42\n3\n89\n1\n958\n0 0 1 1 2 2 3 3 4 4",
+      "output": "4"
+    },
+    {
+      "input": "?5?\n4\n2203\n5229\n276\n6243\n2 1 6 1 1 2 5 2 2 3",
+      "output": "62"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

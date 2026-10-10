@@ -1,0 +1,21 @@
+{
+  "id": "gym_100988_F",
+  "source": "gym",
+  "contest_id": 100988,
+  "problem_index": "F",
+  "name": "Задача без Поликарпа",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100988/problem/F",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:31:44",
+  "updated_at": "2026-10-10 06:31:44"
+}

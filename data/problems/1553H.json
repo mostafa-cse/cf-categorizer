@@ -1,0 +1,40 @@
+{
+  "id": "1553H",
+  "source": "problemset",
+  "contest_id": 1553,
+  "problem_index": "H",
+  "name": "XOR and Distance",
+  "rating": 2900,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "trees"
+  ],
+  "solved_count": 927,
+  "problem_url": "https://codeforces.com/problemset/problem/1553/H",
+  "editorial_url": "https://codeforces.com/blog/entry/93105",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ distinct elements and an integer $$$k$$$. Each element in the array is a non-negative integer not exceeding $$$2^k-1$$$. Let's define the XOR distance for a number $$$x$$$ as the value of $$$$$$f(x) = \\min\\limits_{i = 1}^{n} \\min\\limits_{j = i + 1}^{n} |(a_i \\oplus x) - (a_j \\oplus x)|,$$$$$$ where $$$\\oplus$$$ denotes the bitwise XOR operation . For every integer $$$x$$$ from $$$0$$$ to $$$2^k-1$$$, you have to calculate $$$f(x)$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le 19$$$; $$$2 \\le n \\le 2^k$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 2^k-1$$$). All these integers are distinct.",
+  "output_specification": "Print $$$2^k$$$ integers. The $$$i$$$-th of them should be equal to $$$f(i-1)$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n6 0 3",
+      "output": "3 1 1 2 2 1 1 3"
+    },
+    {
+      "input": "3 4\n13 4 2",
+      "output": "2 2 6 6 3 1 2 2 2 2 1 3 6 6 2 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:02",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

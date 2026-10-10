@@ -1,0 +1,43 @@
+{
+  "id": "1228C",
+  "source": "problemset",
+  "contest_id": 1228,
+  "problem_index": "C",
+  "name": "Primes and Multiplication",
+  "rating": 1700,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 9817,
+  "problem_url": "https://codeforces.com/problemset/problem/1228/C",
+  "editorial_url": "https://codeforces.com/blog/entry/70162",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's introduce some definitions that will be needed later. Let $$$prime(x)$$$ be the set of prime divisors of $$$x$$$. For example, $$$prime(140) = \\{ 2, 5, 7 \\}$$$, $$$prime(169) = \\{ 13 \\}$$$. Let $$$g(x, p)$$$ be the maximum possible integer $$$p^k$$$ where $$$k$$$ is an integer such that $$$x$$$ is divisible by $$$p^k$$$. For example: $$$g(45, 3) = 9$$$ ($$$45$$$ is divisible by $$$3^2=9$$$ but not divisible by $$$3^3=27$$$), $$$g(63, 7) = 7$$$ ($$$63$$$ is divisible by $$$7^1=7$$$ but not divisible by $$$7^2=49$$$). Let $$$f(x, y)$$$ be the product of $$$g(y, p)$$$ for all $$$p$$$ in $$$prime(x)$$$. For example: $$$f(30, 70) = g(70, 2) \\cdot g(70, 3) \\cdot g(70, 5) = 2^1 \\cdot 3^0 \\cdot 5^1 = 10$$$, $$$f(525, 63) = g(63, 3) \\cdot g(63, 5) \\cdot g(63, 7) = 3^2 \\cdot 5^0 \\cdot 7^1 = 63$$$. You have integers $$$x$$$ and $$$n$$$. Calculate $$$f(x, 1) \\cdot f(x, 2) \\cdot \\ldots \\cdot f(x, n) \\bmod{(10^{9} + 7)}$$$.",
+  "input_specification": "The only line contains integers $$$x$$$ and $$$n$$$ ($$$2 \\le x \\le 10^{9}$$$, $$$1 \\le n \\le 10^{18}$$$) — the numbers used in formula.",
+  "output_specification": "Print the answer.",
+  "sample_testcases": [
+    {
+      "input": "10 2",
+      "output": "2"
+    },
+    {
+      "input": "20190929 1605",
+      "output": "363165664"
+    },
+    {
+      "input": "947 987654321987654321",
+      "output": "593574252"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

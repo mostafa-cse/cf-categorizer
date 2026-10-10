@@ -1,0 +1,40 @@
+{
+  "id": "744B",
+  "source": "problemset",
+  "contest_id": 744,
+  "problem_index": "B",
+  "name": "Hongcow's Game",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "interactive"
+  ],
+  "solved_count": 1976,
+  "problem_url": "https://codeforces.com/problemset/problem/744/B",
+  "editorial_url": "https://codeforces.com/blog/entry/49126",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. In the interaction section below you will see the information about flushing the output. In this problem, you will be playing a game with Hongcow. How lucky of you! Hongcow has a hidden n by n matrix M . Let M i , j denote the entry i -th row and j -th column of the matrix. The rows and columns are labeled from 1 to n . The matrix entries are between 0 and 10 9 . In addition, M i , i = 0 for all valid i . Your task is to find the minimum value along each row, excluding diagonal elements. Formally, for each i , you must find . To do this, you can ask Hongcow some questions. A question consists of giving Hongcow a subset of distinct indices { w 1 , w 2 , ..., w k } , with 1 ≤ k ≤ n . Hongcow will respond with n integers. The i -th integer will contain the minimum value of min 1 ≤ j ≤ k M i , w j . You may only ask Hongcow at most 20 questions — he thinks you only need that many questions answered. When you are ready to answer, print out a single integer - 1 on its own line, then n integers on the next line. The i -th integer should be the minimum value in the i -th row of the matrix, excluding the i -th element. Do not forget to flush the final answer as well. Printing the answer does not count as asking a question. You will get Wrong Answer verdict if Your question or answers are not in the format described in this statement. You ask strictly more than 20 questions. Your question contains duplicate indices. The value of k in your question does not lie in the range from 1 to n , inclusive. Your final answer is not correct. You will get Idleness Limit Exceeded if you don't print anything or if you forget to flush the output, including for the final answer (more info about flushing output below).",
+  "input_specification": "The first line of input will contain a single integer n ( 2 ≤ n ≤ 1, 000 ).",
+  "output_specification": "To print the final answer, print out the string -1 on its own line. Then, the next line should contain n integers. The i -th integer should be the minimum value of the i -th row of the matrix, excluding elements on the diagonal. Do not forget to flush your answer!",
+  "sample_testcases": [
+    {
+      "input": "3\n0 0 0\n2 7 0\n0 0 4\n3 0 8\n0 5 4",
+      "output": "3\n1 2 3\n1\n3\n2\n1 2\n1\n2\n1\n1\n-1\n2 5 4"
+    },
+    {
+      "input": "2\n0 0\n0 0",
+      "output": "1\n2\n1\n1\n-1\n0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "601E",
+  "source": "problemset",
+  "contest_id": 601,
+  "problem_index": "E",
+  "name": "A Museum Robbery",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 1314,
+  "problem_url": "https://codeforces.com/problemset/problem/601/E",
+  "editorial_url": "https://codeforces.com/blog/entry/21755",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There's a famous museum in the city where Kleofáš lives. In the museum, n exhibits (numbered 1 through n ) had been displayed for a long time; the i -th of those exhibits has value v i and mass w i . Then, the museum was bought by a large financial group and started to vary the exhibits. At about the same time, Kleofáš... gained interest in the museum, so to say. You should process q events of three types: type 1 — the museum displays an exhibit with value v and mass w ; the exhibit displayed in the i -th event of this type is numbered n + i (see sample explanation for more details) type 2 — the museum removes the exhibit with number x and stores it safely in its vault type 3 — Kleofáš visits the museum and wonders (for no important reason at all, of course): if there was a robbery and exhibits with total mass at most m were stolen, what would their maximum possible total value be? For each event of type 3, let s ( m ) be the maximum possible total value of stolen exhibits with total mass ≤ m . Formally, let D be the set of numbers of all exhibits that are currently displayed (so initially D = {1, ..., n}). Let P ( D ) be the set of all subsets of D and let Then, s ( m ) is defined as Compute s ( m ) for each . Note that the output follows a special format.",
+  "input_specification": "The first line of the input contains two space-separated integers n and k ( 1 ≤ n ≤ 5000 , 1 ≤ k ≤ 1000 ) — the initial number of exhibits in the museum and the maximum interesting mass of stolen exhibits. Then, n lines follow. The i -th of them contains two space-separated positive integers v i and w i ( 1 ≤ v i ≤ 1 000 000 , 1 ≤ w i ≤ 1000 ) — the value and mass of the i -th exhibit. The next line contains a single integer q ( 1 ≤ q ≤ 30 000 ) — the number of events. Each of the next q lines contains the description of one event in the following format: 1 v w — an event of type 1, a new exhibit with value v and mass w has been added ( 1 ≤ v ≤ 1 000 000 , 1 ≤ w ≤ 1000 ) 2 x — an event of type 2, the exhibit with number x has been removed; it's guaranteed that the removed exhibit had been displayed at that time 3 — an event of type 3, Kleofáš visits the museum and asks his question There will be at most 10 000 events of type 1 and at least one event of type 3.",
+  "output_specification": "As the number of values s ( m ) can get large, output the answers to events of type 3 in a special format. For each event of type 3, consider the values s ( m ) computed for the question that Kleofáš asked in this event; print one line containing a single number where p = 10 7 + 19 and q = 10 9 + 7 . Print the answers to events of type 3 in the order in which they appear in the input.",
+  "sample_testcases": [
+    {
+      "input": "3 10\n30 4\n60 6\n5 1\n9\n3\n1 42 5\n1 20 3\n3\n2 2\n2 4\n3\n1 40 6\n3",
+      "output": "556674384\n168191145\n947033915\n181541912"
+    },
+    {
+      "input": "3 1000\n100 42\n100 47\n400 15\n4\n2 2\n2 1\n2 3\n3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

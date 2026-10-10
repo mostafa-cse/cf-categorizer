@@ -1,0 +1,40 @@
+{
+  "id": "1481E",
+  "source": "problemset",
+  "contest_id": 1481,
+  "problem_index": "E",
+  "name": "Sorting Books",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 2527,
+  "problem_url": "https://codeforces.com/problemset/problem/1481/E",
+  "editorial_url": "https://codeforces.com/blog/entry/87523",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day you wanted to read something, so you went to your bookshelf to grab some book. But when you saw how messy the bookshelf was you decided to clean it up first. There are $$$n$$$ books standing in a row on the shelf, the $$$i$$$-th book has color $$$a_i$$$. You'd like to rearrange the books to make the shelf look beautiful. The shelf is considered beautiful if all books of the same color are next to each other. In one operation you can take one book from any position on the shelf and move it to the right end of the shelf. What is the minimum number of operations you need to make the shelf beautiful?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 5 \\cdot 10^5$$$) — the number of books. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the book colors.",
+  "output_specification": "Output the minimum number of operations to make the shelf beautiful.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 2 1 3",
+      "output": "2"
+    },
+    {
+      "input": "5\n1 2 2 1 1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

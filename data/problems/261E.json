@@ -1,0 +1,44 @@
+{
+  "id": "261E",
+  "source": "problemset",
+  "contest_id": 261,
+  "problem_index": "E",
+  "name": "Maxim and Calculator",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 453,
+  "problem_url": "https://codeforces.com/problemset/problem/261/E",
+  "editorial_url": "https://codeforces.com/blog/entry/6398",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Maxim has got a calculator. The calculator has two integer cells. Initially, the first cell contains number 1 , and the second cell contains number 0 . In one move you can perform one of the following operations: Let's assume that at the current time the first cell contains number a , and the second cell contains number b . Write to the second cell number b + 1 ; Let's assume that at the current time the first cell contains number a , and the second cell contains number b . Write to the first cell number a · b . Maxim is wondering, how many integers x ( l ≤ x ≤ r ) are there, such that we can write the number x to the first cell of the calculator, having performed at most p moves.",
+  "input_specification": "The first line contains three integers: l , r , p (2 ≤ l ≤ r ≤ 10 9 , 1 ≤ p ≤ 100) . The numbers in the line are separated by single spaces.",
+  "output_specification": "In a single line print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "2 10 3",
+      "output": "1"
+    },
+    {
+      "input": "2 111 100",
+      "output": "106"
+    },
+    {
+      "input": "2 111 11",
+      "output": "47"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

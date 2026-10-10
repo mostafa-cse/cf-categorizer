@@ -1,0 +1,37 @@
+{
+  "id": "1979F",
+  "source": "problemset",
+  "contest_id": 1979,
+  "problem_index": "F",
+  "name": "Kostyanych's Theorem",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "graphs",
+    "interactive"
+  ],
+  "solved_count": 455,
+  "problem_url": "https://codeforces.com/problemset/problem/1979/F",
+  "editorial_url": "https://codeforces.com/blog/entry/130213",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Kostyanych has chosen a complete undirected graph$$$^{\\dagger}$$$ with $$$n$$$ vertices, and then removed exactly $$$(n - 2)$$$ edges from it. You can ask queries of the following type: \" ? $$$d$$$\" — Kostyanych tells you the number of vertex $$$v$$$ with a degree at least $$$d$$$. Among all possible such vertices, he selects the vertex with the minimum degree , and if there are several such vertices, he selects the one with the minimum number. He also tells you the number of another vertex in the graph, with which $$$v$$$ is not connected by an edge (if none is found, then $$$0$$$ is reported). Among all possible such vertices, he selects the one with the minimum number. Then he removes the vertex $$$v$$$ and all edges coming out of it. If the required vertex $$$v$$$ is not found, then \"$$$0\\ 0$$$\" is reported. Find a Hamiltonian path$$$^{\\ddagger}$$$ in the original graph in at most $$$n$$$ queries. It can be proven that under these constraints, a Hamiltonian path always exists. $$$^{\\dagger}$$$A complete undirected graph is a graph in which there is exactly one undirected edge between any pair of distinct vertices. Thus, a complete undirected graph with $$$n$$$ vertices contains $$$\\frac{n(n-1)}{2}$$$ edges. $$$^{\\ddagger}$$$A Hamiltonian path in a graph is a path that passes through each vertex exactly once.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — the number of vertices in the graph. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n\n0 0\n\n1 4\n\n2 3\n\n4\n\n1 0\n\n4 2\n\n2\n\n1 0",
+      "output": "? 3\n\n? 2\n\n? 1\n\n! 4 3 1 2\n\n? 3\n\n? 0\n\n! 4 1 2 3\n\n? 0\n\n! 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:05",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

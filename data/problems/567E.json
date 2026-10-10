@@ -1,0 +1,45 @@
+{
+  "id": "567E",
+  "source": "problemset",
+  "contest_id": 567,
+  "problem_index": "E",
+  "name": "President and Roads",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "hashing",
+    "shortest paths"
+  ],
+  "solved_count": 2460,
+  "problem_url": "https://codeforces.com/problemset/problem/567/E",
+  "editorial_url": "https://codeforces.com/blog/entry/19604",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Berland has n cities, the capital is located in city s , and the historic home town of the President is in city t ( s ≠ t ). The cities are connected by one-way roads, the travel time for each of the road is a positive integer. Once a year the President visited his historic home town t , for which his motorcade passes along some path from s to t (he always returns on a personal plane). Since the president is a very busy man, he always chooses the path from s to t , along which he will travel the fastest. The ministry of Roads and Railways wants to learn for each of the road: whether the President will definitely pass through it during his travels, and if not, whether it is possible to repair it so that it would definitely be included in the shortest path from the capital to the historic home town of the President. Obviously, the road can not be repaired so that the travel time on it was less than one. The ministry of Berland, like any other, is interested in maintaining the budget, so it wants to know the minimum cost of repairing the road. Also, it is very fond of accuracy, so it repairs the roads so that the travel time on them is always a positive integer.",
+  "input_specification": "The first lines contain four integers n , m , s and t ( 2 ≤ n ≤ 10 5 ; 1 ≤ m ≤ 10 5 ; 1 ≤ s , t ≤ n ) — the number of cities and roads in Berland, the numbers of the capital and of the Presidents' home town ( s ≠ t ). Next m lines contain the roads. Each road is given as a group of three integers a i , b i , l i ( 1 ≤ a i , b i ≤ n ; a i ≠ b i ; 1 ≤ l i ≤ 10 6 ) — the cities that are connected by the i -th road and the time needed to ride along it. The road is directed from city a i to city b i . The cities are numbered from 1 to n . Each pair of cities can have multiple roads between them. It is guaranteed that there is a path from s to t along the roads.",
+  "output_specification": "Print m lines. The i -th line should contain information about the i -th road (the roads are numbered in the order of appearance in the input). If the president will definitely ride along it during his travels, the line must contain a single word \" YES \" (without the quotes). Otherwise, if the i -th road can be repaired so that the travel time on it remains positive and then president will definitely ride along it, print space-separated word \" CAN \" (without the quotes), and the minimum cost of repairing. If we can't make the road be such that president will definitely ride along it , print \" NO \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "6 7 1 6\n1 2 2\n1 3 10\n2 3 7\n2 4 8\n3 5 3\n4 5 2\n5 6 1",
+      "output": "YES\nCAN 2\nCAN 1\nCAN 1\nCAN 1\nCAN 1\nYES"
+    },
+    {
+      "input": "3 3 1 3\n1 2 10\n2 3 10\n1 3 100",
+      "output": "YES\nYES\nCAN 81"
+    },
+    {
+      "input": "2 2 1 2\n1 2 1\n1 2 2",
+      "output": "YES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

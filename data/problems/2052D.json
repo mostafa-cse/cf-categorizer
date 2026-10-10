@@ -1,0 +1,47 @@
+{
+  "id": "2052D",
+  "source": "problemset",
+  "contest_id": 2052,
+  "problem_index": "D",
+  "name": "DAG Serialization",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "graphs"
+  ],
+  "solved_count": 1271,
+  "problem_url": "https://codeforces.com/problemset/problem/2052/D",
+  "editorial_url": "https://codeforces.com//nerc.itmo.ru/archive/2024/nef-2024-tutorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Consider a simple single-bit boolean register that supports two operations: set — sets the register to true if it was false , and returns true ; otherwise, it returns false ; unset — sets the register to false if it was true , and returns true ; otherwise, it returns false . The initial state of the register is false . Suppose there were $$$n$$$ operations $$$op_i$$$ (for $$$1 \\le i \\le n$$$) where at most two operations returned true . Also, we are given the partial order of operations as a directed acyclic graph (DAG): an edge $$$i \\rightarrow j$$$ means that $$$op_i$$$ happened before $$$op_j$$$. You are asked whether it is possible to put these operations in some linear sequential order that satisfies the given partial order and such that if operations are applied to the register in that order, their results are the same as given.",
+  "input_specification": "In the first line, you are given an integer $$$n$$$ — the number of operations ($$$1 \\le n \\le 10^5$$$). In the following $$$n$$$ lines, you are given operations in the format \" type result \", where type is either \" set \" or \" unset \" and result is either \" true \" or \" false \". It is guaranteed that at most two operations have \" true \" results. In the next line, you are given an integer $$$m$$$ — the number of arcs of the DAG ($$$0 \\le m \\le 10^5$$$). In the following $$$m$$$ lines, you are given arcs — pairs of integers $$$a$$$ and $$$b$$$ ($$$1 \\leq a, b \\leq n$$$; $$$a \\neq b$$$). Each arc indicates that operation $$$op_a$$$ happened before operation $$$op_b$$$.",
+  "output_specification": "Print any linear order of operations that satisfies the DAG constraints and ensures the results of the operations match the ones given in the input. If a correct operation order does not exist, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\nset true\nunset true\nset false\nunset false\nunset false\n2\n1 4\n5 2",
+      "output": "5 1 3 2 4"
+    },
+    {
+      "input": "3\nunset true\nunset false\nset true\n0",
+      "output": "2 3 1"
+    },
+    {
+      "input": "2\nunset false\nset true\n1\n2 1",
+      "output": "-1"
+    },
+    {
+      "input": "2\nunset false\nset false\n0",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:39",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

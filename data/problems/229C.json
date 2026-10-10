@@ -1,0 +1,40 @@
+{
+  "id": "229C",
+  "source": "problemset",
+  "contest_id": 229,
+  "problem_index": "C",
+  "name": "Triangles",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 1871,
+  "problem_url": "https://codeforces.com/problemset/problem/229/C",
+  "editorial_url": "https://codeforces.com/blog/entry/5437",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob don't play games anymore. Now they study properties of all sorts of graphs together. Alice invented the following task: she takes a complete undirected graph with n vertices, chooses some m edges and keeps them. Bob gets the remaining edges. Alice and Bob are fond of \"triangles\" in graphs, that is, cycles of length 3. That's why they wonder: what total number of triangles is there in the two graphs formed by Alice and Bob's edges, correspondingly?",
+  "input_specification": "The first line contains two space-separated integers n and m ( 1 ≤ n ≤ 10 6 , 0 ≤ m ≤ 10 6 ) — the number of vertices in the initial complete graph and the number of edges in Alice's graph, correspondingly. Then m lines follow: the i -th line contains two space-separated integers a i , b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ), — the numbers of the two vertices connected by the i -th edge in Alice's graph. It is guaranteed that Alice's graph contains no multiple edges and self-loops. It is guaranteed that the initial complete graph also contains no multiple edges and self-loops. Consider the graph vertices to be indexed in some way from 1 to n .",
+  "output_specification": "Print a single number — the total number of cycles of length 3 in Alice and Bob's graphs together. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is advised to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n1 2\n1 3\n2 3\n2 4\n3 4",
+      "output": "3"
+    },
+    {
+      "input": "5 3\n1 2\n2 3\n1 3",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

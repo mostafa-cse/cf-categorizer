@@ -1,0 +1,35 @@
+{
+  "id": "1513C",
+  "source": "problemset",
+  "contest_id": 1513,
+  "problem_index": "C",
+  "name": "Add One",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 17176,
+  "problem_url": "https://codeforces.com/problemset/problem/1513/C",
+  "editorial_url": "https://codeforces.com/blog/entry/89550",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$. You have to apply $$$m$$$ operations to it. In a single operation, you must replace every digit $$$d$$$ of the number with the decimal representation of integer $$$d + 1$$$. For example, $$$1912$$$ becomes $$$21023$$$ after applying the operation once. You have to find the length of $$$n$$$ after applying $$$m$$$ operations. Since the answer can be very large, print it modulo $$$10^9+7$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^5$$$) — the number of test cases. The only line of each test case contains two integers $$$n$$$ ($$$1 \\le n \\le 10^9$$$) and $$$m$$$ ($$$1 \\le m \\le 2 \\cdot 10^5$$$) — the initial number and the number of operations.",
+  "output_specification": "For each test case output the length of the resulting number modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1912 1\n5 6\n999 1\n88 2\n12 100",
+      "output": "5\n2\n6\n4\n2115"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

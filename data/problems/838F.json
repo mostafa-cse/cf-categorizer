@@ -1,0 +1,32 @@
+{
+  "id": "838F",
+  "source": "problemset",
+  "contest_id": 838,
+  "problem_index": "F",
+  "name": "Expected Earnings",
+  "rating": 2800,
+  "tags": [],
+  "solved_count": 168,
+  "problem_url": "https://codeforces.com/problemset/problem/838/F",
+  "editorial_url": "https://codeforces.com/blog/entry/53736",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing a game with a bag of red and black balls. Initially, you are told that the bag has n balls total. In addition, you are also told that the bag has probability p i / 10 6 of containing exactly i red balls. You now would like to buy balls from this bag. You really like the color red, so red balls are worth a unit of 1 , while black balls are worth nothing. To buy a ball, if there are still balls in the bag, you pay a cost c with 0 ≤ c ≤ 1 , and draw a ball randomly from the bag. You can choose to stop buying at any point (and you can even choose to not buy anything at all). Given that you buy optimally to maximize the expected profit (i.e. # red balls - cost needed to obtain them), print the maximum expected profit.",
+  "input_specification": "The first line of input will contain two integers n , X ( 1 ≤ n ≤ 10 000 , 0 ≤ X ≤ 10 6 ). The next line of input will contain n + 1 integers p 0 , p 1 , ... p n ( 0 ≤ p i ≤ 10 6 , ) The value of c can be computed as .",
+  "output_specification": "Print a single floating point number representing the optimal expected value. Your answer will be accepted if it has absolute or relative error at most 10 - 9 . More specifically, if your answer is a and the jury answer is b , your answer will be accepted if .",
+  "sample_testcases": [
+    {
+      "input": "3 200000\n250000 250000 250000 250000",
+      "output": "0.9000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

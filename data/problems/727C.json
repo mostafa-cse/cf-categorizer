@@ -1,0 +1,36 @@
+{
+  "id": "727C",
+  "source": "problemset",
+  "contest_id": 727,
+  "problem_index": "C",
+  "name": "Guess the Array",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 9371,
+  "problem_url": "https://codeforces.com/problemset/problem/727/C",
+  "editorial_url": "https://codeforces.com/blog/entry/47773",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. You should use flush operation after each printed line. For example, in C++ you should use fflush(stdout) , in Java you should use System.out.flush() , and in Pascal — flush(output) . In this problem you should guess an array a which is unknown for you. The only information you have initially is the length n of the array a . The only allowed action is to ask the sum of two elements by their indices. Formally, you can print two indices i and j (the indices should be distinct ). Then your program should read the response: the single integer equals to a i + a j . It is easy to prove that it is always possible to guess the array using at most n requests. Write a program that will guess the array a by making at most n requests.\n\nInteraction In each test your program should guess a single array. The input starts with a line containing integer n ( 3 ≤ n ≤ 5000 ) — the length of the array. Your program should read it at first. After that your program should print to the standard output the requests about the sum of two elements or inform that the array is guessed. In case your program is making a request to ask the sum of two elements, it should print line in the format \" ? i j \" ( i and j are distinct integers between 1 and n ), where i and j are indices in the array a . In case your program informs that the array is guessed, it should print line in the format \" ! a 1 a 2 ... a n \" (it is guaranteed that all a i are positive integers not exceeding 10 5 ), where a i is the i -th element of the array a . The response on a request is a single integer equal to a i + a j , printed on a separate line. Your program can do at most n requests. Note that the final line « ! a 1 a 2 ... a n » is not counted as a request. Do not forget about flush operation after each printed line. After you program prints the guessed array, it should terminate normally.",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "5\n9\n7\n9\n11\n6",
+      "output": "? 1 5\n? 2 3\n? 4 1\n? 5 2\n? 3 4\n! 4 6 1 5 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1320A",
+  "source": "problemset",
+  "contest_id": 1320,
+  "problem_index": "A",
+  "name": "Journey Planning",
+  "rating": 1400,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 23419,
+  "problem_url": "https://codeforces.com/problemset/problem/1320/A",
+  "editorial_url": "https://codeforces.com/blog/entry/74431",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Tanya wants to go on a journey across the cities of Berland. There are $$$n$$$ cities situated along the main railroad line of Berland, and these cities are numbered from $$$1$$$ to $$$n$$$. Tanya plans her journey as follows. First of all, she will choose some city $$$c_1$$$ to start her journey. She will visit it, and after that go to some other city $$$c_2 \\gt c_1$$$, then to some other city $$$c_3 \\gt c_2$$$, and so on, until she chooses to end her journey in some city $$$c_k \\gt c_{k - 1}$$$. So, the sequence of visited cities $$$[c_1, c_2, \\dots, c_k]$$$ should be strictly increasing. There are some additional constraints on the sequence of cities Tanya visits. Each city $$$i$$$ has a beauty value $$$b_i$$$ associated with it. If there is only one city in Tanya's journey, these beauty values imply no additional constraints. But if there are multiple cities in the sequence, then for any pair of adjacent cities $$$c_i$$$ and $$$c_{i + 1}$$$, the condition $$$c_{i + 1} - c_i = b_{c_{i + 1}} - b_{c_i}$$$ must hold. For example, if $$$n = 8$$$ and $$$b = [3, 4, 4, 6, 6, 7, 8, 9]$$$, there are several three possible ways to plan a journey: $$$c = [1, 2, 4]$$$; $$$c = [3, 5, 6, 8]$$$; $$$c = [7]$$$ (a journey consisting of one city is also valid). There are some additional ways to plan a journey that are not listed above. Tanya wants her journey to be as beautiful as possible. The beauty value of the whole journey is the sum of beauty values over all visited cities. Can you help her to choose the optimal plan, that is, to maximize the beauty value of the journey?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of cities in Berland. The second line contains $$$n$$$ integers $$$b_1$$$, $$$b_2$$$, ..., $$$b_n$$$ ($$$1 \\le b_i \\le 4 \\cdot 10^5$$$), where $$$b_i$$$ is the beauty value of the $$$i$$$-th city.",
+  "output_specification": "Print one integer — the maximum beauty of a journey Tanya can choose.",
+  "sample_testcases": [
+    {
+      "input": "6\n10 7 1 9 10 15",
+      "output": "26"
+    },
+    {
+      "input": "1\n400000",
+      "output": "400000"
+    },
+    {
+      "input": "7\n8 9 26 11 12 29 14",
+      "output": "55"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

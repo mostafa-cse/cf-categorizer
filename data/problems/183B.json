@@ -1,0 +1,35 @@
+{
+  "id": "183B",
+  "source": "problemset",
+  "contest_id": 183,
+  "problem_index": "B",
+  "name": "Zoo",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "geometry"
+  ],
+  "solved_count": 864,
+  "problem_url": "https://codeforces.com/problemset/problem/183/B",
+  "editorial_url": "https://codeforces.com/blog/entry/4419",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Zoo in the Grid Kingdom is represented by an infinite grid. The Zoo has n observation binoculars located at the OX axis. For each i between 1 and n , inclusive, there exists a single binocular located at the point with coordinates ( i , 0) . There are m flamingos in the Zoo, located at points with positive coordinates. The flamingos are currently sleeping and you can assume that they don't move. In order to get a good view over the flamingos, each of the binoculars can be independently rotated to face any angle (not necessarily integer). Then, the binocular can be used to observe all flamingos that is located at the straight line passing through the binocular at the angle it is set. In other words, you can assign each binocular a direction corresponding to any straight line passing through the binocular, and the binocular will be able to see all flamingos located on that line. Today, some kids from the prestigious Codeforces kindergarten went on a Field Study to the Zoo. Their teacher would like to set each binocular an angle to maximize the number of flamingos that can be seen by the binocular. The teacher is very interested in the sum of these values over all binoculars. Please help him find this sum.",
+  "input_specification": "The first line contains two space-separated integers n and m (1 ≤ n ≤ 10 6 , 1 ≤ m ≤ 250) , denoting the number of binoculars and the number of flamingos, respectively. Then m lines follow, the i -th line will contain two space-separated integers x i and y i ( 1 ≤ x i , y i ≤ 10 9 ), which means that the i -th flamingo is located at point ( x i , y i ) . All flamingos will be located at distinct points.",
+  "output_specification": "Print a single integer denoting the maximum total number of flamingos that can be seen by all the binoculars.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n2 1\n4 1\n3 2\n4 3\n4 4",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

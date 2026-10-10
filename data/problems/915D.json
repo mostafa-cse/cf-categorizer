@@ -1,0 +1,39 @@
+{
+  "id": "915D",
+  "source": "problemset",
+  "contest_id": 915,
+  "problem_index": "D",
+  "name": "Almost Acyclic Graph",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 4251,
+  "problem_url": "https://codeforces.com/problemset/problem/915/D",
+  "editorial_url": "https://codeforces.com/blog/entry/57123",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a directed graph consisting of n vertices and m edges (each edge is directed, so it can be traversed in only one direction). You are allowed to remove at most one edge from it. Can you make this graph acyclic by removing at most one edge from it? A directed graph is called acyclic iff it doesn't contain any cycle (a non-empty path that starts and ends in the same vertex).",
+  "input_specification": "The first line contains two integers n and m ( 2 ≤ n ≤ 500 , 1 ≤ m ≤ min ( n ( n - 1), 100000) ) — the number of vertices and the number of edges, respectively. Then m lines follow. Each line contains two integers u and v denoting a directed edge going from vertex u to vertex v ( 1 ≤ u , v ≤ n , u ≠ v ). Each ordered pair ( u , v ) is listed at most once (there is at most one directed edge from u to v ).",
+  "output_specification": "If it is possible to make this graph acyclic by removing at most one edge, print YES . Otherwise, print NO .",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 2\n2 3\n3 2\n3 1",
+      "output": "YES"
+    },
+    {
+      "input": "5 6\n1 2\n2 3\n3 2\n3 1\n2 1\n4 5",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "993B",
+  "source": "problemset",
+  "contest_id": 993,
+  "problem_index": "B",
+  "name": "Open Communication",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "brute force"
+  ],
+  "solved_count": 2063,
+  "problem_url": "https://codeforces.com/problemset/problem/993/B",
+  "editorial_url": "https://codeforces.com/blog/entry/60047",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Two participants are each given a pair of distinct numbers from 1 to 9 such that there's exactly one number that is present in both pairs. They want to figure out the number that matches by using a communication channel you have access to without revealing it to you. Both participants communicated to each other a set of pairs of numbers, that includes the pair given to them. Each pair in the communicated sets comprises two different numbers. Determine if you can with certainty deduce the common number, or if you can determine with certainty that both participants know the number but you do not.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 12$$$) — the number of pairs the first participant communicated to the second and vice versa. The second line contains $$$n$$$ pairs of integers, each between $$$1$$$ and $$$9$$$, — pairs of numbers communicated from first participant to the second. The third line contains $$$m$$$ pairs of integers, each between $$$1$$$ and $$$9$$$, — pairs of numbers communicated from the second participant to the first. All pairs within each set are distinct (in particular, if there is a pair $$$(1,2)$$$, there will be no pair $$$(2,1)$$$ within the same set), and no pair contains the same number twice. It is guaranteed that the two sets do not contradict the statements, in other words, there is pair from the first set and a pair from the second set that share exactly one number.",
+  "output_specification": "If you can deduce the shared number with certainty, print that number. If you can with certainty deduce that both participants know the shared number, but you do not know it, print $$$0$$$. Otherwise print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n1 2 3 4\n1 5 3 4",
+      "output": "1"
+    },
+    {
+      "input": "2 2\n1 2 3 4\n1 5 6 4",
+      "output": "0"
+    },
+    {
+      "input": "2 3\n1 2 4 5\n1 2 1 3 2 3",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:20",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

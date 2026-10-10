@@ -1,0 +1,44 @@
+{
+  "id": "774E",
+  "source": "problemset",
+  "contest_id": 774,
+  "problem_index": "E",
+  "name": "Big Number and Remainder",
+  "rating": 2300,
+  "tags": [
+    "*special",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 283,
+  "problem_url": "https://codeforces.com/problemset/problem/774/E",
+  "editorial_url": "https://codeforces.com/blog/entry/51441",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Stepan has a very big positive integer. Let's consider all cyclic shifts of Stepan's integer (if we look at his integer like at a string) which are also integers (i.e. they do not have leading zeros). Let's call such shifts as good shifts . For example, for the integer 10203 the good shifts are the integer itself 10203 and integers 20310 and 31020 . Stepan wants to know the minimum remainder of the division by the given number m among all good shifts. Your task is to determine the minimum remainder of the division by m .",
+  "input_specification": "The first line contains the integer which Stepan has. The length of Stepan's integer is between 2 and 200 000 digits, inclusive. It is guaranteed that Stepan's integer does not contain leading zeros. The second line contains the integer m ( 2 ≤ m ≤ 10 8 ) — the number by which Stepan divides good shifts of his integer.",
+  "output_specification": "Print the minimum remainder which Stepan can get if he divides all good shifts of his integer by the given number m .",
+  "sample_testcases": [
+    {
+      "input": "521\n3",
+      "output": "2"
+    },
+    {
+      "input": "1001\n5",
+      "output": "0"
+    },
+    {
+      "input": "5678901234567890123456789\n10000",
+      "output": "123"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

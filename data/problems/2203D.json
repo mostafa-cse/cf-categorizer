@@ -1,0 +1,37 @@
+{
+  "id": "2203D",
+  "source": "problemset",
+  "contest_id": 2203,
+  "problem_index": "D",
+  "name": "Divisibility Game",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "games",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 6388,
+  "problem_url": "https://codeforces.com/problemset/problem/2203/D",
+  "editorial_url": "https://codeforces.com/blog/entry/151612",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Alice and Bob are playing a game. They have an array $$$a$$$ of $$$n$$$ elements and an array $$$b$$$ of $$$m$$$ elements. The players take turns. Alice goes first. On their turn, each player chooses a number $$$x$$$ from array $$$a$$$ and a number $$$y$$$ from array $$$b$$$. Alice has her own rule for choosing $$$x$$$ and $$$y$$$, and Bob has his: Alice must choose $$$x$$$ and $$$y$$$ such that $$$y$$$ is divisible by $$$x$$$. Bob must choose $$$x$$$ and $$$y$$$ such that $$$y$$$ is not divisible by $$$x$$$. After choosing $$$x$$$ and $$$y$$$, $$$y$$$ is removed from the array $$$b$$$ (but $$$x$$$ remains in $$$a$$$). When $$$y$$$ is removed from $$$b$$$, if there are multiple occurrences of $$$y$$$, only one is removed. The player who cannot make a move loses. Who will win if both players play optimally?",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 10^{6}$$$). The second line of each test case contains $$$n$$$ integers $$$a_{i}$$$ ($$$1 \\le a_{i} \\le n + m$$$) — the elements of the array $$$a$$$. The last line of each test case contains $$$m$$$ integers $$$b_{i}$$$ ($$$1 \\le b_{i} \\le n + m$$$) — the elements of the array $$$b$$$. Additional constraints on the input: the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$; the sum of $$$m$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print one word: Alice if Alice wins; Bob if Bob wins.",
+  "sample_testcases": [
+    {
+      "input": "3\n9 3\n3 2 4 2 2 4 4 2 4\n6 7 12\n10 3\n3 2 5 4 2 5 3 4 4 4\n10 7 13\n1 5\n1\n1 2 3 4 5",
+      "output": "Alice\nBob\nAlice"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "135E",
+  "source": "problemset",
+  "contest_id": 135,
+  "problem_index": "E",
+  "name": "Weak Subsequence",
+  "rating": 3000,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 507,
+  "problem_url": "https://codeforces.com/problemset/problem/135/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3353",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Petya very much likes strings. Recently he has received a voucher to purchase a string as a gift from his mother. The string can be bought in the local shop. One can consider that the shop has all sorts of strings over the alphabet of fixed size. The size of the alphabet is equal to k . However, the voucher has a string type limitation: specifically, the voucher can be used to purchase string s if the length of string's longest substring that is also its weak subsequence (see the definition given below) equals w . String a with the length of n is considered the weak subsequence of the string s with the length of m , if there exists such a set of indexes 1 ≤ i 1 < i 2 < ... < i n ≤ m , that has the following two properties: a k = s i k for all k from 1 to n ; there exists at least one such k ( 1 ≤ k < n ), for which i k + 1 – i k > 1 . Petya got interested how many different strings are available for him to purchase in the shop. As the number of strings can be very large, please find it modulo 1000000007 ( 10 9 + 7 ). If there are infinitely many such strings, print \"-1\".",
+  "input_specification": "The first line contains two integers k ( 1 ≤ k ≤ 10 6 ) and w ( 2 ≤ w ≤ 10 9 ) — the alphabet size and the required length of the maximum substring that also is the weak subsequence, correspondingly.",
+  "output_specification": "Print a single number — the number of strings Petya can buy using the voucher, modulo 1000000007 ( 10 9 + 7 ). If there are infinitely many such strings, print \"-1\" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "10"
+    },
+    {
+      "input": "3 5",
+      "output": "1593"
+    },
+    {
+      "input": "2 139",
+      "output": "717248223"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

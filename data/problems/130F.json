@@ -1,0 +1,38 @@
+{
+  "id": "130F",
+  "source": "problemset",
+  "contest_id": 130,
+  "problem_index": "F",
+  "name": "Prime factorization",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 305,
+  "problem_url": "https://codeforces.com/problemset/problem/130/F",
+  "editorial_url": "https://codeforces.com/blog/entry/3226",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given an integer n . Output its prime factorization. If n = a 1 b 1 a 2 b 2 ... a k b k , where a k are prime numbers, the output of your program should look as follows: a 1 a 1 ... a 1 a 2 a 2 ... a 2 ... a k a k ... a k , where factors are ordered in non-decreasing order, and each factor a i is printed b i times.",
+  "input_specification": "The only line of input contains an integer n ( 2 ≤ n ≤ 250 ).",
+  "output_specification": "Output the prime factorization of n , as described above.",
+  "sample_testcases": [
+    {
+      "input": "245",
+      "output": "5 7 7"
+    },
+    {
+      "input": "13",
+      "output": "13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

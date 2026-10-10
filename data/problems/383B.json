@@ -1,0 +1,45 @@
+{
+  "id": "383B",
+  "source": "problemset",
+  "contest_id": 383,
+  "problem_index": "B",
+  "name": "Volcanoes",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "implementation",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 822,
+  "problem_url": "https://codeforces.com/problemset/problem/383/B",
+  "editorial_url": "https://codeforces.com/blog/entry/10476",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Iahub got lost in a very big desert. The desert can be represented as a n × n square matrix, where each cell is a zone of the desert. The cell ( i , j ) represents the cell at row i and column j (1 ≤ i , j ≤ n ) . Iahub can go from one cell ( i , j ) only down or right, that is to cells ( i + 1, j ) or ( i , j + 1) . Also, there are m cells that are occupied by volcanoes, which Iahub cannot enter. Iahub is initially at cell (1, 1) and he needs to travel to cell ( n , n ) . Knowing that Iahub needs 1 second to travel from one cell to another, find the minimum time in which he can arrive in cell ( n , n ) .",
+  "input_specification": "The first line contains two integers n (1 ≤ n ≤ 10 9 ) and m (1 ≤ m ≤ 10 5 ) . Each of the next m lines contains a pair of integers, x and y (1 ≤ x , y ≤ n ) , representing the coordinates of the volcanoes. Consider matrix rows are numbered from 1 to n from top to bottom, and matrix columns are numbered from 1 to n from left to right. There is no volcano in cell (1, 1) . No two volcanoes occupy the same location.",
+  "output_specification": "Print one integer, the minimum time in which Iahub can arrive at cell ( n , n ) . If no solution exists (there is no path to the final cell), print -1.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n1 3\n1 4",
+      "output": "6"
+    },
+    {
+      "input": "7 8\n1 6\n2 6\n3 5\n3 6\n4 3\n5 1\n5 2\n5 3",
+      "output": "12"
+    },
+    {
+      "input": "2 2\n1 2\n2 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

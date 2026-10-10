@@ -1,0 +1,35 @@
+{
+  "id": "630P",
+  "source": "problemset",
+  "contest_id": 630,
+  "problem_index": "P",
+  "name": "Area of a Star",
+  "rating": 2100,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 1426,
+  "problem_url": "https://codeforces.com/problemset/problem/630/P",
+  "editorial_url": "https://codeforces.com/blog/entry/24160",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "It was decided in IT City to distinguish successes of local IT companies by awards in the form of stars covered with gold from one side. To order the stars it is necessary to estimate order cost that depends on the area of gold-plating. Write a program that can calculate the area of a star. A \"star\" figure having n ≥ 5 corners where n is a prime number is constructed the following way. On the circle of radius r n points are selected so that the distances between the adjacent ones are equal. Then every point is connected by a segment with two maximally distant points. All areas bounded by the segments parts are the figure parts.",
+  "input_specification": "The only line of the input contains two integers n ( 5 ≤ n < 10 9 , n is prime) and r ( 1 ≤ r ≤ 10 9 ) — the number of the star corners and the radius of the circumcircle correspondingly.",
+  "output_specification": "Output one number — the star area. The relative error of your answer should not be greater than 10 - 7 .",
+  "sample_testcases": [
+    {
+      "input": "7 10",
+      "output": "108.395919545675"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

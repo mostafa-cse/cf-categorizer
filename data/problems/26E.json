@@ -1,0 +1,42 @@
+{
+  "id": "26E",
+  "source": "problemset",
+  "contest_id": 26,
+  "problem_index": "E",
+  "name": "Multithreading",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 460,
+  "problem_url": "https://codeforces.com/problemset/problem/26/E",
+  "editorial_url": "https://codeforces.com/blog/entry/610",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given the following concurrent program. There are N processes and the i -th process has the following pseudocode: repeat n i times y i := y y := y i + 1 end repeat Here y is a shared variable. Everything else is local for the process. All actions on a given row are atomic, i.e. when the process starts executing a row it is never interrupted. Beyond that all interleavings are possible, i.e. every process that has yet work to do can be granted the rights to execute its next row. In the beginning y = 0 . You will be given an integer W and n i , for i = 1, ... , N . Determine if it is possible that after all processes terminate, y = W , and if it is possible output an arbitrary schedule that will produce this final value.",
+  "input_specification": "In the first line of the input you will be given two space separated integers N ( 1 ≤ N ≤ 100 ) and W ( - 10 9 ≤ W ≤ 10 9 ). In the second line there are N space separated integers n i ( 1 ≤ n i ≤ 1000 ).",
+  "output_specification": "On the first line of the output write Yes if it is possible that at the end y = W , or No otherwise. If the answer is No then there is no second line, but if the answer is Yes , then on the second line output a space separated list of integers representing some schedule that leads to the desired result. For more information see note.",
+  "sample_testcases": [
+    {
+      "input": "1 10\n11",
+      "output": "No"
+    },
+    {
+      "input": "2 3\n4 4",
+      "output": "Yes\n1 1 2 1 2 2 2 2 2 1 2 1 1 1 1 2"
+    },
+    {
+      "input": "3 6\n1 2 3",
+      "output": "Yes\n1 1 2 2 2 2 3 3 3 3 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

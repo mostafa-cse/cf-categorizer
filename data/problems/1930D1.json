@@ -1,0 +1,37 @@
+{
+  "id": "1930D1",
+  "source": "problemset",
+  "contest_id": 1930,
+  "problem_index": "D1",
+  "name": "Sum over all Substrings (Easy Version)",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 4956,
+  "problem_url": "https://codeforces.com/problemset/problem/1930/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/126043",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference between the two versions is the constraint on $$$t$$$ and $$$n$$$. You can make hacks only if both versions of the problem are solved. For a binary$$$^\\dagger$$$ pattern $$$p$$$ and a binary string $$$q$$$, both of length $$$m$$$, $$$q$$$ is called $$$p$$$- good if for every $$$i$$$ ($$$1 \\leq i \\leq m$$$), there exist indices $$$l$$$ and $$$r$$$ such that: $$$1 \\leq l \\leq i \\leq r \\leq m$$$, and $$$p_i$$$ is a mode$$$^\\ddagger$$$ of the string $$$q_l q_{l+1} \\ldots q_{r}$$$. For a pattern $$$p$$$, let $$$f(p)$$$ be the minimum possible number of $$$\\mathtt{1}$$$s in a $$$p$$$-good binary string (of the same length as the pattern). You are given a binary string $$$s$$$ of size $$$n$$$. Find $$$$$$\\sum_{i=1}^{n} \\sum_{j=i}^{n} f(s_i s_{i+1} \\ldots s_j).$$$$$$ In other words, you need to sum the values of $$$f$$$ over all $$$\\frac{n(n+1)}{2}$$$ substrings of $$$s$$$. $$$^\\dagger$$$ A binary pattern is a string that only consists of characters $$$\\mathtt{0}$$$ and $$$\\mathtt{1}$$$. $$$^\\ddagger$$$ Character $$$c$$$ is a mode of string $$$t$$$ of length $$$m$$$ if the number of occurrences of $$$c$$$ in $$$t$$$ is at least $$$\\lceil \\frac{m}{2} \\rceil$$$. For example, $$$\\mathtt{0}$$$ is a mode of $$$\\mathtt{010}$$$, $$$\\mathtt{1}$$$ is not a mode of $$$\\mathtt{010}$$$, and both $$$\\mathtt{0}$$$ and $$$\\mathtt{1}$$$ are modes of $$$\\mathtt{011010}$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 500$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the length of the binary string $$$s$$$. The second line of each test case contains a binary string $$$s$$$ of length $$$n$$$ consisting of only characters $$$\\mathtt{0}$$$ and $$$\\mathtt{1}$$$. It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$10^4$$$.",
+  "output_specification": "For each test case, output the sum of values of $$$f$$$ over all substrings of $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n1\n2\n10\n5\n00000\n20\n11110110000000111111",
+      "output": "1\n2\n0\n346"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

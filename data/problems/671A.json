@@ -1,0 +1,41 @@
+{
+  "id": "671A",
+  "source": "problemset",
+  "contest_id": 671,
+  "problem_index": "A",
+  "name": "Recycling Bottles",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "geometry",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 4428,
+  "problem_url": "https://codeforces.com/problemset/problem/671/A",
+  "editorial_url": "https://codeforces.com/blog/entry/44821",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It was recycling day in Kekoland. To celebrate it Adil and Bera went to Central Perk where they can take bottles from the ground and put them into a recycling bin. We can think Central Perk as coordinate plane. There are n bottles on the ground, the i -th bottle is located at position ( x i , y i ) . Both Adil and Bera can carry only one bottle at once each. For both Adil and Bera the process looks as follows: Choose to stop or to continue to collect bottles. If the choice was to continue then choose some bottle and walk towards it. Pick this bottle and walk to the recycling bin. Go to step 1 . Adil and Bera may move independently. They are allowed to pick bottles simultaneously, all bottles may be picked by any of the two, it's allowed that one of them stays still while the other one continues to pick bottles. They want to organize the process such that the total distance they walk (the sum of distance walked by Adil and distance walked by Bera) is minimum possible. Of course, at the end all bottles should lie in the recycling bin.",
+  "input_specification": "First line of the input contains six integers a x , a y , b x , b y , t x and t y ( 0 ≤ a x , a y , b x , b y , t x , t y ≤ 10 9 ) — initial positions of Adil, Bera and recycling bin respectively. The second line contains a single integer n ( 1 ≤ n ≤ 100 000 ) — the number of bottles on the ground. Then follow n lines, each of them contains two integers x i and y i ( 0 ≤ x i , y i ≤ 10 9 ) — position of the i -th bottle. It's guaranteed that positions of Adil, Bera, recycling bin and all bottles are distinct.",
+  "output_specification": "Print one real number — the minimum possible total distance Adil and Bera need to walk in order to put all bottles into recycling bin. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "3 1 1 2 0 0\n3\n1 1\n2 1\n2 3",
+      "output": "11.084259940083"
+    },
+    {
+      "input": "5 0 4 2 2 0\n5\n5 2\n3 0\n5 5\n3 5\n3 3",
+      "output": "33.121375178000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

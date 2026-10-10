@@ -1,0 +1,40 @@
+{
+  "id": "487C",
+  "source": "problemset",
+  "contest_id": 487,
+  "problem_index": "C",
+  "name": "Prefix Product Sequence",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3185,
+  "problem_url": "https://codeforces.com/problemset/problem/487/C",
+  "editorial_url": "https://codeforces.com/blog/entry/14832",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a sequence [ a 1 , a 2 , ... , a n ] . Define its prefix product sequence . Now given n , find a permutation of [1, 2, ..., n ] , such that its prefix product sequence is a permutation of [0, 1, ..., n - 1] .",
+  "input_specification": "The only input line contains an integer n ( 1 ≤ n ≤ 10 5 ).",
+  "output_specification": "In the first output line, print \" YES \" if such sequence exists, or print \" NO \" if no such sequence exists. If any solution exists, you should output n more lines. i -th line contains only an integer a i . The elements of the sequence should be different positive integers no larger than n . If there are multiple solutions, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "7",
+      "output": "YES\n1\n4\n3\n6\n5\n2\n7"
+    },
+    {
+      "input": "6",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

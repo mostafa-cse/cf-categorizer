@@ -1,0 +1,42 @@
+{
+  "id": "285D",
+  "source": "problemset",
+  "contest_id": 285,
+  "problem_index": "D",
+  "name": "Permutation Sum",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "implementation",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 1709,
+  "problem_url": "https://codeforces.com/problemset/problem/285/D",
+  "editorial_url": "https://codeforces.com/blog/entry/7093",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Permutation p is an ordered set of integers p 1 , p 2 ,  ..., p n , consisting of n distinct positive integers, each of them doesn't exceed n . We'll denote the i -th element of permutation p as p i . We'll call number n the size or the length of permutation p 1 , p 2 ,  ..., p n . Petya decided to introduce the sum operation on the set of permutations of length n . Let's assume that we are given two permutations of length n : a 1 , a 2 , ..., a n and b 1 , b 2 , ..., b n . Petya calls the sum of permutations a and b such permutation c of length n , where c i = (( a i - 1 + b i - 1) mod n ) + 1 (1 ≤ i ≤ n ) . Operation means taking the remainder after dividing number x by number y . Obviously, not for all permutations a and b exists permutation c that is sum of a and b . That's why Petya got sad and asked you to do the following: given n , count the number of such pairs of permutations a and b of length n , that exists permutation c that is sum of a and b . The pair of permutations x , y ( x ≠ y ) and the pair of permutations y , x are considered distinct pairs. As the answer can be rather large, print the remainder after dividing it by 1000000007 ( 10 9 + 7 ).",
+  "input_specification": "The single line contains integer n (1 ≤ n ≤ 16) .",
+  "output_specification": "In the single line print a single non-negative integer — the number of such pairs of permutations a and b , that exists permutation c that is sum of a and b , modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "18"
+    },
+    {
+      "input": "5",
+      "output": "1800"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

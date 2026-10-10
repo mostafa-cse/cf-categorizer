@@ -1,0 +1,38 @@
+{
+  "id": "351E",
+  "source": "problemset",
+  "contest_id": 351,
+  "problem_index": "E",
+  "name": "Jeff and Permutation",
+  "rating": 2200,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 1859,
+  "problem_url": "https://codeforces.com/problemset/problem/351/E",
+  "editorial_url": "https://codeforces.com/blog/entry/9070",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Jeff's friends know full well that the boy likes to get sequences and arrays for his birthday. Thus, Jeff got sequence p 1 , p 2 , ..., p n for his birthday. Jeff hates inversions in sequences. An inversion in sequence a 1 , a 2 , ..., a n is a pair of indexes i , j (1 ≤ i < j ≤ n ) , such that an inequality a i > a j holds. Jeff can multiply some numbers of the sequence p by -1. At that, he wants the number of inversions in the sequence to be minimum. Help Jeff and find the minimum number of inversions he manages to get.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 2000) . The next line contains n integers — sequence p 1 , p 2 , ... , p n (| p i | ≤ 10 5 ) . The numbers are separated by spaces.",
+  "output_specification": "In a single line print the answer to the problem — the minimum number of inversions Jeff can get.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 1",
+      "output": "0"
+    },
+    {
+      "input": "9\n-2 0 -1 0 -1 2 1 0 -1",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

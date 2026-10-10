@@ -1,0 +1,36 @@
+{
+  "id": "2149F",
+  "source": "problemset",
+  "contest_id": 2149,
+  "problem_index": "F",
+  "name": "Nezuko in the Clearing",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 5125,
+  "problem_url": "https://codeforces.com/problemset/problem/2149/F",
+  "editorial_url": "https://codeforces.com/blog/__rose",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Nezuko suddenly woke up on the number line at point $$$0$$$ and has $$$h$$$ health points. She wants to reach point $$$d$$$. In one turn, she can do exactly one of two things: rest in the shade and increase her current health by $$$1$$$; move from her current position $$$x$$$ to $$$x + 1$$$. Each movement decreases Nezuko's health; if the movement is the $$$j$$$-th consecutive movement, her health will decrease by $$$j$$$ points. If as a result of a move Nezuko's health drops to $$$0$$$ or below, she cannot make that move. For example, if Nezuko initially had $$$7$$$ health points and $$$d=4$$$, her moves could look like this: Move from $$$0$$$ to $$$1$$$ and decrease health by $$$1$$$. Now she is at point $$$1$$$ with $$$6$$$ health points. Move from $$$1$$$ to $$$2$$$ and decrease health by $$$2$$$. Now she is at point $$$2$$$ with $$$4$$$ health points. Move from $$$2$$$ to $$$3$$$ and decrease health by $$$3$$$. Now she is at point $$$3$$$ with $$$1$$$ health point. Rest and restore $$$1$$$ health point. Now she is at point $$$3$$$ with $$$2$$$ health points. Move from $$$3$$$ to $$$4$$$ and decrease health by $$$1$$$. Now she is at point $$$4$$$ with $$$1$$$ health point. Find the minimum number of turns required for her to reach point $$$d$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The following describes the test cases. The first line of each test case contains two integers $$$h$$$ and $$$d$$$ $$$(1\\le h,d \\le 10^9)$$$ — the number of health points and the destination point, respectively.",
+  "output_specification": "For each test case, output one number — the minimum number of turns required for Nezuko to reach point $$$d$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 2\n1 1\n5 3\n2 4\n10 7",
+      "output": "3\n2\n4\n7\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

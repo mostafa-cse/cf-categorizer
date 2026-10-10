@@ -1,0 +1,44 @@
+{
+  "id": "567C",
+  "source": "problemset",
+  "contest_id": 567,
+  "problem_index": "C",
+  "name": "Geometric Progression",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 10630,
+  "problem_url": "https://codeforces.com/problemset/problem/567/C",
+  "editorial_url": "https://codeforces.com/blog/entry/19604",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp loves geometric progressions very much. Since he was only three years old, he loves only the progressions of length three. He also has a favorite integer k and a sequence a , consisting of n integers. He wants to know how many subsequences of length three can be selected from a , so that they form a geometric progression with common ratio k . A subsequence of length three is a combination of three such indexes i 1 , i 2 , i 3 , that 1 ≤ i 1 < i 2 < i 3 ≤ n . That is, a subsequence of length three are such groups of three elements that are not necessarily consecutive in the sequence, but their indexes are strictly increasing. A geometric progression with common ratio k is a sequence of numbers of the form b · k 0 , b · k 1 , ..., b · k r - 1 . Polycarp is only three years old, so he can not calculate this number himself. Help him to do it.",
+  "input_specification": "The first line of the input contains two integers, n and k ( 1 ≤ n , k ≤ 2·10 5 ), showing how many numbers Polycarp's sequence has and his favorite number. The second line contains n integers a 1 , a 2 , ..., a n ( - 10 9 ≤ a i ≤ 10 9 ) — elements of the sequence.",
+  "output_specification": "Output a single number — the number of ways to choose a subsequence of length three, such that it forms a geometric progression with a common ratio k .",
+  "sample_testcases": [
+    {
+      "input": "5 2\n1 1 2 2 4",
+      "output": "4"
+    },
+    {
+      "input": "3 1\n1 1 1",
+      "output": "1"
+    },
+    {
+      "input": "10 3\n1 2 6 2 3 6 9 18 3 9",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

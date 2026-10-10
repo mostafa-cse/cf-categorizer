@@ -1,0 +1,46 @@
+{
+  "id": "475E",
+  "source": "problemset",
+  "contest_id": 475,
+  "problem_index": "E",
+  "name": "Strongly Connected City 2",
+  "rating": 2700,
+  "tags": [
+    "dfs and similar"
+  ],
+  "solved_count": 726,
+  "problem_url": "https://codeforces.com/problemset/problem/475/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14168",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Imagine a city with n junctions and m streets. Junctions are numbered from 1 to n . In order to increase the traffic flow, mayor of the city has decided to make each street one-way. This means in the street between junctions u and v , the traffic moves only from u to v or only from v to u . The problem is to direct the traffic flow of streets in a way that maximizes the number of pairs ( u , v ) where 1 ≤ u , v ≤ n and it is possible to reach junction v from u by passing the streets in their specified direction. Your task is to find out maximal possible number of such pairs.",
+  "input_specification": "The first line of input contains integers n and m , ( ), denoting the number of junctions and streets of the city. Each of the following m lines contains two integers u and v , ( u ≠ v ), denoting endpoints of a street in the city. Between every two junctions there will be at most one street. It is guaranteed that before mayor decision (when all streets were two-way) it was possible to reach each junction from any other junction.",
+  "output_specification": "Print the maximal number of pairs ( u , v ) such that that it is possible to reach junction v from u after directing the streets.",
+  "sample_testcases": [
+    {
+      "input": "5 4\n1 2\n1 3\n1 4\n1 5",
+      "output": "13"
+    },
+    {
+      "input": "4 5\n1 2\n2 3\n3 4\n4 1\n1 3",
+      "output": "16"
+    },
+    {
+      "input": "2 1\n1 2",
+      "output": "3"
+    },
+    {
+      "input": "6 7\n1 2\n2 3\n1 3\n1 4\n4 5\n5 6\n6 4",
+      "output": "27"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

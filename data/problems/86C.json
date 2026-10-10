@@ -1,0 +1,40 @@
+{
+  "id": "86C",
+  "source": "problemset",
+  "contest_id": 86,
+  "problem_index": "C",
+  "name": "Genetic engineering",
+  "rating": 2500,
+  "tags": [
+    "dp",
+    "string suffix structures",
+    "trees"
+  ],
+  "solved_count": 992,
+  "problem_url": "https://codeforces.com/problemset/problem/86/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2028",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "\"Multidimensional spaces are completely out of style these days, unlike genetics problems\" — thought physicist Woll and changed his subject of study to bioinformatics. Analysing results of sequencing he faced the following problem concerning DNA sequences. We will further think of a DNA sequence as an arbitrary string of uppercase letters \" A \", \" C \", \" G \" and \" T \" (of course, this is a simplified interpretation). Let w be a long DNA sequence and s 1 , s 2 , ..., s m — collection of short DNA sequences. Let us say that the collection filters w iff w can be covered with the sequences from the collection. Certainly, substrings corresponding to the different positions of the string may intersect or even cover each other. More formally: denote by | w | the length of w , let symbols of w be numbered from 1 to | w | . Then for each position i in w there exist pair of indices l , r ( 1 ≤ l ≤ i ≤ r ≤ | w | ) such that the substring w [ l ... r ] equals one of the elements s 1 , s 2 , ..., s m of the collection. Woll wants to calculate the number of DNA sequences of a given length filtered by a given collection, but he doesn't know how to deal with it. Help him! Your task is to find the number of different DNA sequences of length n filtered by the collection { s i } . Answer may appear very large, so output it modulo 1000000009 .",
+  "input_specification": "First line contains two integer numbers n and m ( 1 ≤ n ≤ 1000, 1 ≤ m ≤ 10 ) — the length of the string and the number of sequences in the collection correspondently. Next m lines contain the collection sequences s i , one per line. Each s i is a nonempty string of length not greater than 10 . All the strings consist of uppercase letters \" A \", \" C \", \" G \", \" T \". The collection may contain identical strings.",
+  "output_specification": "Output should contain a single integer — the number of strings filtered by the collection modulo 1000000009 ( 10 9 + 9 ).",
+  "sample_testcases": [
+    {
+      "input": "2 1\nA",
+      "output": "1"
+    },
+    {
+      "input": "6 2\nCAT\nTACT",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

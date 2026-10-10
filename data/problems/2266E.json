@@ -1,0 +1,37 @@
+{
+  "id": "2266E",
+  "source": "problemset",
+  "contest_id": 2266,
+  "problem_index": "E",
+  "name": "Prime Destruction",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 7000,
+  "problem_url": "https://codeforces.com/problemset/problem/2266/E",
+  "editorial_url": "https://codeforces.com/blog/entry/156984",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a multiset $$$a$$$ consisting of $$$n$$$ positive integers. You may perform the following operation any number of times (possibly zero): Choose an integer $$$x \\gt 1$$$ from the multiset and a prime divisor $$$p$$$ of $$$x$$$. Remove one occurrence of $$$x$$$ from the multiset and add $$$p$$$ copies of $$$\\frac{x}{p}$$$. You are also given an integer $$$k$$$ ($$$1 \\le k \\le n$$$). Let $$$f(k)$$$ be the minimum number of operations required, starting from the original multiset, until every integer in the multiset is at most $$$k$$$. Find $$$f(k)$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 2 \\cdot 10^5$$$) — the initial size of the multiset and the given integer, respectively. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the elements of the multiset. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer $$$f(k)$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n1\n6 2\n6 6 4 3 2 1\n8 1\n8 6 4 3 2 1 8 6\n12 3\n12 10 9 8 7 6 5 4 3 2 1 12\n10 9\n10 9 8 7 6 5 4 3 2 1\n5 5\n5 4 3 2 1",
+      "output": "0\n4\n25\n15\n1\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:24",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

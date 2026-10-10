@@ -1,0 +1,40 @@
+{
+  "id": "309C",
+  "source": "problemset",
+  "contest_id": 309,
+  "problem_index": "C",
+  "name": "Memory for Arrays",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "greedy"
+  ],
+  "solved_count": 1522,
+  "problem_url": "https://codeforces.com/problemset/problem/309/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7749",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You get to work and turn on the computer. You start coding and give little thought to the RAM role in the whole process. In this problem your task is to solve one of the problems you encounter in your computer routine. We'll consider the RAM as a sequence of cells that can contain data. Some cells already contain some data, some are empty. The empty cells form the so-called memory clusters . Thus, a memory cluster is a sequence of some consecutive empty memory cells. You have exactly n memory clusters, the i -th cluster consists of a i cells. You need to find memory for m arrays in your program. The j -th array takes 2 b j consecutive memory cells. There possibly isn't enough memory for all m arrays, so your task is to determine what maximum number of arrays can be located in the available memory clusters. Of course, the arrays cannot be divided between the memory clusters. Also, no cell can belong to two arrays.",
+  "input_specification": "The first line of the input contains two integers n and m ( 1 ≤ n , m ≤ 10 6 ). The next line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ). The next line contains m integers b 1 , b 2 , ..., b m ( 1 ≤ 2 b i ≤ 10 9 ).",
+  "output_specification": "Print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n8 4 3 2 2\n3 2 2",
+      "output": "2"
+    },
+    {
+      "input": "10 6\n1 1 1 1 1 1 1 1 1 1\n0 0 0 0 0 0",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

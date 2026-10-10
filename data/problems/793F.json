@@ -1,0 +1,40 @@
+{
+  "id": "793F",
+  "source": "problemset",
+  "contest_id": 793,
+  "problem_index": "F",
+  "name": "Julia the snail",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 909,
+  "problem_url": "https://codeforces.com/problemset/problem/793/F",
+  "editorial_url": "https://codeforces.com/blog/entry/51685",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "After hard work Igor decided to have some rest. He decided to have a snail. He bought an aquarium with a slippery tree trunk in the center, and put a snail named Julia into the aquarium. Igor noticed that sometimes Julia wants to climb onto the trunk, but can't do it because the trunk is too slippery. To help the snail Igor put some ropes on the tree, fixing the lower end of the i -th rope on the trunk on the height l i above the ground, and the higher end on the height r i above the ground. For some reason no two ropes share the same position of the higher end, i.e. all r i are distinct. Now Julia can move down at any place of the trunk, and also move up from the lower end of some rope to its higher end. Igor is proud of his work, and sometimes think about possible movements of the snail. Namely, he is interested in the following questions: «Suppose the snail is on the trunk at height x now. What is the highest position on the trunk the snail can get on if it would never be lower than x or higher than y ?» Please note that Julia can't move from a rope to the trunk before it reaches the higher end of the rope, and Igor is interested in the highest position on the tree trunk . Igor is interested in many questions, and not always can answer them. Help him, write a program that answers these questions.",
+  "input_specification": "The first line contains single integer n ( 1  ≤ n ≤  100000 ) — the height of the trunk. The second line contains single integer m ( 1  ≤ m ≤  100000 ) — the number of ropes. The next m lines contain information about the ropes. The i -th of these lines contains two integers l i and r i ( 1  ≤ l i ≤ r i ≤ n ) — the heights on which the lower and the higher ends of the i -th rope are fixed, respectively. It is guaranteed that all r i are distinct. The next line contains single integer q ( 1  ≤ q ≤  100000 ) — the number of questions. The next q lines contain information about the questions. Each of these lines contain two integers x and y ( 1  ≤ x ≤ y ≤ n ), where x is the height where Julia starts (and the height Julia can't get lower than), and y is the height Julia can't get higher than.",
+  "output_specification": "For each question print the maximum reachable for Julia height.",
+  "sample_testcases": [
+    {
+      "input": "8\n4\n1 2\n3 4\n2 5\n6 7\n5\n1 2\n1 4\n1 6\n2 7\n6 8",
+      "output": "2\n2\n5\n5\n7"
+    },
+    {
+      "input": "10\n10\n3 7\n1 4\n1 6\n5 5\n1 1\n3 9\n7 8\n1 2\n3 3\n7 10\n10\n2 4\n1 7\n3 4\n3 5\n2 8\n2 5\n5 5\n3 5\n7 7\n3 10",
+      "output": "2\n7\n3\n3\n2\n2\n5\n3\n7\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

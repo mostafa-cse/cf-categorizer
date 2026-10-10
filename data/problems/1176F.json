@@ -1,0 +1,36 @@
+{
+  "id": "1176F",
+  "source": "problemset",
+  "contest_id": 1176,
+  "problem_index": "F",
+  "name": "Destroy it!",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 2473,
+  "problem_url": "https://codeforces.com/problemset/problem/1176/F",
+  "editorial_url": "https://codeforces.com/blog/entry/67598",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing a computer card game called Splay the Sire. Currently you are struggling to defeat the final boss of the game. The boss battle consists of $$$n$$$ turns. During each turn, you will get several cards. Each card has two parameters: its cost $$$c_i$$$ and damage $$$d_i$$$. You may play some of your cards during each turn in some sequence (you choose the cards and the exact order they are played), as long as the total cost of the cards you play during the turn does not exceed $$$3$$$ . After playing some (possibly zero) cards, you end your turn, and all cards you didn't play are discarded . Note that you can use each card at most once . Your character has also found an artifact that boosts the damage of some of your actions: every $$$10$$$-th card you play deals double damage. What is the maximum possible damage you can deal during $$$n$$$ turns?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of turns. Then $$$n$$$ blocks of input follow, the $$$i$$$-th block representing the cards you get during the $$$i$$$-th turn. Each block begins with a line containing one integer $$$k_i$$$ ($$$1 \\le k_i \\le 2 \\cdot 10^5$$$) — the number of cards you get during $$$i$$$-th turn. Then $$$k_i$$$ lines follow, each containing two integers $$$c_j$$$ and $$$d_j$$$ ($$$1 \\le c_j \\le 3$$$, $$$1 \\le d_j \\le 10^9$$$) — the parameters of the corresponding card. It is guaranteed that $$$\\sum \\limits_{i = 1}^{n} k_i \\le 2 \\cdot 10^5$$$.",
+  "output_specification": "Print one integer — the maximum damage you may deal.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n1 6\n1 7\n1 5\n2\n1 4\n1 3\n3\n1 10\n3 5\n2 3\n3\n1 15\n2 4\n1 10\n1\n1 100",
+      "output": "263"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

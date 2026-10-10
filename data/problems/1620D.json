@@ -1,0 +1,36 @@
+{
+  "id": "1620D",
+  "source": "problemset",
+  "contest_id": 1620,
+  "problem_index": "D",
+  "name": "Exact Change",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 4928,
+  "problem_url": "https://codeforces.com/problemset/problem/1620/D",
+  "editorial_url": "https://codeforces.com/blog/entry/98061",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day, early in the morning, you decided to buy yourself a bag of chips in the nearby store. The store has chips of $$$n$$$ different flavors. A bag of the $$$i$$$-th flavor costs $$$a_i$$$ burles. The store may run out of some flavors, so you'll decide which one to buy after arriving there. But there are two major flaws in this plan: you have only coins of $$$1$$$, $$$2$$$ and $$$3$$$ burles; since it's morning, the store will ask you to pay in exact change, i. e. if you choose the $$$i$$$-th flavor, you'll have to pay exactly $$$a_i$$$ burles. Coins are heavy, so you'd like to take the least possible number of coins in total. That's why you are wondering: what is the minimum total number of coins you should take with you, so you can buy a bag of chips of any flavor in exact change?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains the single integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the number of flavors in the store. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the cost of one bag of each flavor.",
+  "output_specification": "For each test case, print one integer — the minimum number of coins you need to buy one bag of any flavor you'll choose in exact change.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n1337\n3\n10 8 10\n5\n1 2 3 4 5\n3\n7 77 777",
+      "output": "446\n4\n3\n260"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:46",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

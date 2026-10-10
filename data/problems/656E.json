@@ -1,0 +1,38 @@
+{
+  "id": "656E",
+  "source": "problemset",
+  "contest_id": 656,
+  "problem_index": "E",
+  "name": "Out of Controls",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 783,
+  "problem_url": "https://codeforces.com/problemset/problem/656/E",
+  "editorial_url": "https://codeforces.com/blog/entry/44141",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given a complete undirected graph. For each pair of vertices you are given the length of the edge that connects them. Find the shortest paths between each pair of vertices in the graph and return the length of the longest of them.",
+  "input_specification": "The first line of the input contains a single integer N ( 3 ≤ N ≤ 10 ). The following N lines each contain N space-separated integers. j th integer in i th line a ij is the length of the edge that connects vertices i and j . a ij = a ji , a ii = 0 , 1 ≤ a ij ≤ 100 for i ≠ j .",
+  "output_specification": "Output the maximum length of the shortest path between any pair of vertices in the graph.",
+  "sample_testcases": [
+    {
+      "input": "3\n0 1 1\n1 0 4\n1 4 0",
+      "output": "2"
+    },
+    {
+      "input": "4\n0 1 2 3\n1 0 4 5\n2 4 0 6\n3 5 6 0",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

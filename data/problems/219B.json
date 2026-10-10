@@ -1,0 +1,38 @@
+{
+  "id": "219B",
+  "source": "problemset",
+  "contest_id": 219,
+  "problem_index": "B",
+  "name": "Special Offer! Super Price 999 Bourles!",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 6210,
+  "problem_url": "https://codeforces.com/problemset/problem/219/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5160",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus is an amateur businessman. Recently he was surprised to find out that the market for paper scissors is completely free! Without further ado, Polycarpus decided to start producing and selling such scissors. Polycaprus calculated that the optimal celling price for such scissors would be p bourles. However, he read somewhere that customers are attracted by prices that say something like \"Special Offer! Super price 999 bourles!\". So Polycarpus decided to lower the price a little if it leads to the desired effect. Polycarpus agrees to lower the price by no more than d bourles so that the number of nines at the end of the resulting price is maximum. If there are several ways to do it, he chooses the maximum possible price. Note, Polycarpus counts only the trailing nines in a price.",
+  "input_specification": "The first line contains two integers p and d ( 1 ≤ p ≤ 10 18 ; 0 ≤ d < p ) — the initial price of scissors and the maximum possible price reduction. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d specifier.",
+  "output_specification": "Print the required price — the maximum price that ends with the largest number of nines and that is less than p by no more than d . The required number shouldn't have leading zeroes.",
+  "sample_testcases": [
+    {
+      "input": "1029 102",
+      "output": "999"
+    },
+    {
+      "input": "27191 17",
+      "output": "27189"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:11",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

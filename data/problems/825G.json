@@ -1,0 +1,36 @@
+{
+  "id": "825G",
+  "source": "problemset",
+  "contest_id": 825,
+  "problem_index": "G",
+  "name": "Tree Queries",
+  "rating": 2500,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1560,
+  "problem_url": "https://codeforces.com/problemset/problem/825/G",
+  "editorial_url": "https://codeforces.com/blog/entry/53334",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree consisting of n vertices (numbered from 1 to n ). Initially all vertices are white. You have to process q queries of two different types: 1 x — change the color of vertex x to black. It is guaranteed that the first query will be of this type. 2 x — for the vertex x , find the minimum index y such that the vertex with index y belongs to the simple path from x to some black vertex (a simple path never visits any vertex more than once). For each query of type 2 print the answer to it. Note that the queries are given in modified way .",
+  "input_specification": "The first line contains two numbers n and q ( 3 ≤ n , q ≤ 10 6 ). Then n - 1 lines follow, each line containing two numbers x i and y i ( 1 ≤ x i < y i ≤ n ) and representing the edge between vertices x i and y i . It is guaranteed that these edges form a tree. Then q lines follow. Each line contains two integers t i and z i , where t i is the type of i th query, and z i can be used to restore x i for this query in this way: you have to keep track of the answer to the last query of type 2 (let's call this answer last , and initially last = 0 ); then x i = ( z i + last ) mod n + 1 . It is guaranteed that the first query is of type 1 , and there is at least one query of type 2 .",
+  "output_specification": "For each query of type 2 output the answer to it.",
+  "sample_testcases": [
+    {
+      "input": "4 6\n1 2\n2 3\n3 4\n1 2\n1 2\n2 2\n1 3\n2 2\n2 2",
+      "output": "3\n2\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

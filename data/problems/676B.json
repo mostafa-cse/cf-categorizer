@@ -1,0 +1,39 @@
+{
+  "id": "676B",
+  "source": "problemset",
+  "contest_id": 676,
+  "problem_index": "B",
+  "name": "Pyramid of Glasses",
+  "rating": 1500,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 5878,
+  "problem_url": "https://codeforces.com/problemset/problem/676/B",
+  "editorial_url": "https://codeforces.com/blog/entry/45018",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Mary has just graduated from one well-known University and is now attending celebration party. Students like to dream of a beautiful life, so they used champagne glasses to construct a small pyramid. The height of the pyramid is n . The top level consists of only 1 glass, that stands on 2 glasses on the second level (counting from the top), then 3 glasses on the third level and so on.The bottom level consists of n glasses. Vlad has seen in the movies many times how the champagne beautifully flows from top levels to bottom ones, filling all the glasses simultaneously. So he took a bottle and started to pour it in the glass located at the top of the pyramid. Each second, Vlad pours to the top glass the amount of champagne equal to the size of exactly one glass. If the glass is already full, but there is some champagne flowing in it, then it pours over the edge of the glass and is equally distributed over two glasses standing under. If the overflowed glass is at the bottom level, then the champagne pours on the table. For the purpose of this problem we consider that champagne is distributed among pyramid glasses immediately. Vlad is interested in the number of completely full glasses if he stops pouring champagne in t seconds. Pictures below illustrate the pyramid consisting of three levels.",
+  "input_specification": "The only line of the input contains two integers n and t ( 1 ≤ n ≤ 10, 0 ≤ t ≤ 10 000 ) — the height of the pyramid and the number of seconds Vlad will be pouring champagne from the bottle.",
+  "output_specification": "Print the single integer — the number of completely full glasses after t seconds.",
+  "sample_testcases": [
+    {
+      "input": "3 5",
+      "output": "4"
+    },
+    {
+      "input": "4 8",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

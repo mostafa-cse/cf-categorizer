@@ -1,0 +1,40 @@
+{
+  "id": "24D",
+  "source": "problemset",
+  "contest_id": 24,
+  "problem_index": "D",
+  "name": "Broken robot",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 2892,
+  "problem_url": "https://codeforces.com/problemset/problem/24/D",
+  "editorial_url": "https://codeforces.com/blog/entry/557",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You received as a gift a very clever robot walking on a rectangular board. Unfortunately, you understood that it is broken and behaves rather strangely (randomly). The board consists of N rows and M columns of cells. The robot is initially at some cell on the i -th row and the j -th column. Then at every step the robot could go to some another cell. The aim is to go to the bottommost ( N -th) row. The robot can stay at it's current cell, move to the left, move to the right, or move to the cell below the current. If the robot is in the leftmost column it cannot move to the left, and if it is in the rightmost column it cannot move to the right. At every step all possible moves are equally probable. Return the expected number of step to reach the bottommost row.",
+  "input_specification": "On the first line you will be given two space separated integers N and M ( 1 ≤ N , M ≤ 1000 ). On the second line you will be given another two space separated integers i and j ( 1 ≤ i ≤ N , 1 ≤ j ≤ M ) — the number of the initial row and the number of the initial column. Note that, (1, 1) is the upper left corner of the board and ( N , M ) is the bottom right corner.",
+  "output_specification": "Output the expected number of steps on a line of itself with at least 4 digits after the decimal point.",
+  "sample_testcases": [
+    {
+      "input": "10 10\n10 4",
+      "output": "0.0000000000"
+    },
+    {
+      "input": "10 14\n5 14",
+      "output": "18.0038068653"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

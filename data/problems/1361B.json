@@ -1,0 +1,37 @@
+{
+  "id": "1361B",
+  "source": "problemset",
+  "contest_id": 1361,
+  "problem_index": "B",
+  "name": "Johnny and Grandmaster",
+  "rating": 1900,
+  "tags": [
+    "greedy",
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 3921,
+  "problem_url": "https://codeforces.com/problemset/problem/1361/B",
+  "editorial_url": "https://codeforces.com/blog/entry/78355",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Johnny has just found the new, great tutorial: \" How to become a grandmaster? \". The tutorial tells many strange and unexpected for Johnny things, such as you have to be patient or that very important is solving many harder and harder problems. The boy has found an online judge with tasks divided by topics they cover. He has picked $$$p^{k_i}$$$ problems from $$$i$$$-th category ($$$p$$$ is his favorite number). He wants to solve them in two weeks (the patience condition is too hard for Johnny, so for simplicity, he looks only at easy tasks, which can be solved in such a period). Now our future grandmaster has to decide which topics to cover first and which the second week. Help him assign topics in such a way, that workload is balanced. Formally, given $$$n$$$ numbers $$$p^{k_i}$$$, the boy wants to divide them into two disjoint sets, minimizing the absolute difference between sums of numbers in each set. Find the minimal absolute difference. Output the result modulo $$$10^{9}+7$$$.",
+  "input_specification": "Input consists of multiple test cases. The first line contains one integer $$$t$$$ $$$(1 \\leq t \\leq 10^5)$$$ — the number of test cases. Each test case is described as follows: The first line contains two integers $$$n$$$ and $$$p$$$ $$$(1 \\leq n, p \\leq 10^6)$$$. The second line contains $$$n$$$ integers $$$k_i$$$ $$$(0 \\leq k_i \\leq 10^6)$$$. The sum of $$$n$$$ over all test cases doesn't exceed $$$10^6$$$.",
+  "output_specification": "Output one integer — the reminder of division the answer by $$$1\\,000\\,000\\,007$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 2\n2 3 4 4 3\n3 1\n2 10 1000\n4 5\n0 1 1 100\n1 8\n89",
+      "output": "4\n1\n146981438\n747093407"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "33B",
+  "source": "problemset",
+  "contest_id": 33,
+  "problem_index": "B",
+  "name": "String Problem",
+  "rating": 1800,
+  "tags": [
+    "shortest paths"
+  ],
+  "solved_count": 6185,
+  "problem_url": "https://codeforces.com/problemset/problem/33/B",
+  "editorial_url": "https://codeforces.com/blog/entry/731",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Boy Valera likes strings. And even more he likes them, when they are identical. That's why in his spare time Valera plays the following game. He takes any two strings, consisting of lower case Latin letters, and tries to make them identical. According to the game rules, with each move Valera can change one arbitrary character A i in one of the strings into arbitrary character B i , but he has to pay for every move a particular sum of money, equal to W i . He is allowed to make as many moves as he needs. Since Valera is a very economical boy and never wastes his money, he asked you, an experienced programmer, to help him answer the question: what minimum amount of money should Valera have to get identical strings.",
+  "input_specification": "The first input line contains two initial non-empty strings s and t , consisting of lower case Latin letters. The length of each string doesn't exceed 10 5 . The following line contains integer n ( 0 ≤ n ≤ 500 ) — amount of possible changings. Then follow n lines, each containing characters A i and B i (lower case Latin letters) and integer W i ( 0 ≤ W i ≤ 100 ), saying that it's allowed to change character A i into character B i in any of the strings and spend sum of money W i .",
+  "output_specification": "If the answer exists, output the answer to the problem, and the resulting string. Otherwise output -1 in the only line. If the answer is not unique, output any.",
+  "sample_testcases": [
+    {
+      "input": "uayd\nuxxd\n3\na x 8\nx y 13\nd c 3",
+      "output": "21\nuxyd"
+    },
+    {
+      "input": "a\nb\n3\na b 2\na b 3\nb a 5",
+      "output": "2\nb"
+    },
+    {
+      "input": "abc\nab\n6\na b 4\na b 7\nb a 8\nc b 11\nc a 3\na c 0",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

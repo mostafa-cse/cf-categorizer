@@ -1,0 +1,37 @@
+{
+  "id": "2232C2",
+  "source": "problemset",
+  "contest_id": 2232,
+  "problem_index": "C2",
+  "name": "Seating Arrangement (Hard Version)",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 9165,
+  "problem_url": "https://codeforces.com/problemset/problem/2232/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/154128",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the Hard version of the problem. The difference between the versions is that in this version, the constraints on $$$n$$$, $$$x$$$, $$$s$$$, $$$t$$$ are larger. You can hack only if you solved all versions of this problem. Alice's friends have come to the party, and now they are lining up to enter the party. There are $$$x$$$ tables at the party with $$$s$$$ seats each. Each seat can only hold one person. Each friend has one of these three following personalities: Introverts ( I ) who have to sit at an empty table Extroverts ( E ) who have to sit at a non-empty table Ambiverts ( A ) who can sit at any table. Initially, every seat is empty. However, because Alice was eating cakes, her friends had already formed a line, which Alice cannot change their order. For each person in the line, Alice has to assign them a table or kick them out of the party. Each person is seated before the next person is assigned a table. Wanting to have a lot of fun at the party, Alice needs to seat as many people as she can at the party. Help her find the maximum number of friends she can have at the party. Note that once a friend is seated, they are not allowed to move even if they are not seated according to their personality anymore.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$x$$$, and $$$s$$$ ($$$1 \\le n,x,s \\le 2\\cdot 10^5$$$) – the number of Alice's friends, the number of tables, and the number of seats per table. The second line contains a string $$$u$$$ of length $$$n$$$ consisting only of the letters A , E , and I , representing an ambivert, extrovert, and introvert respectively. It is guaranteed that the sum of $$$n$$$ for all test cases is at most $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output an integer: the maximum number of people seated.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 2 2\nEIAIE\n20 5 5\nAEIEEEEIEAAEIEEEEIEA\n8 2 4\nAAAAAIEE\n8 4 2\nAIEAEAAI\n8 3 3\nAIEAEAAI\n4 2 2\nIAEE",
+      "output": "4\n20\n7\n7\n7\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:52",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

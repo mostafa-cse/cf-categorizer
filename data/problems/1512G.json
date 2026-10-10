@@ -1,0 +1,37 @@
+{
+  "id": "1512G",
+  "source": "problemset",
+  "contest_id": 1512,
+  "problem_index": "G",
+  "name": "Short Task",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 9792,
+  "problem_url": "https://codeforces.com/problemset/problem/1512/G",
+  "editorial_url": "https://codeforces.com/blog/entry/89535",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let us denote by $$$d(n)$$$ the sum of all divisors of the number $$$n$$$, i.e. $$$d(n) = \\sum\\limits_{k | n} k$$$. For example, $$$d(1) = 1$$$, $$$d(4) = 1+2+4=7$$$, $$$d(6) = 1+2+3+6=12$$$. For a given number $$$c$$$, find the minimum $$$n$$$ such that $$$d(n) = c$$$.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$). Then $$$t$$$ test cases follow. Each test case is characterized by one integer $$$c$$$ ($$$1 \\le c \\le 10^7$$$).",
+  "output_specification": "For each test case, output: \" -1 \" if there is no such $$$n$$$ that $$$d(n) = c$$$; $$$n$$$, otherwise.",
+  "sample_testcases": [
+    {
+      "input": "12\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n39\n691",
+      "output": "1\n-1\n2\n3\n-1\n5\n4\n7\n-1\n-1\n18\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "886F",
+  "source": "problemset",
+  "contest_id": 886,
+  "problem_index": "F",
+  "name": "Symmetric Projections",
+  "rating": 2900,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 313,
+  "problem_url": "https://codeforces.com/problemset/problem/886/F",
+  "editorial_url": "https://codeforces.com/blog/entry/55734",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of n points on the plane. A line containing the origin is called good, if projection of the given set to this line forms a symmetric multiset of points. Find the total number of good lines. Multiset is a set where equal elements are allowed. Multiset is called symmetric, if there is a point P on the plane such that the multiset is centrally symmetric in respect of point P .",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 2000 ) — the number of points in the set. Each of the next n lines contains two integers x i and y i ( - 10 6 ≤ x i , y i ≤  10 6 ) — the coordinates of the points. It is guaranteed that no two points coincide.",
+  "output_specification": "If there are infinitely many good lines, print -1 . Otherwise, print single integer — the number of good lines.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n2 1\n3 3",
+      "output": "3"
+    },
+    {
+      "input": "2\n4 3\n1 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

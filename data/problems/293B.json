@@ -1,0 +1,47 @@
+{
+  "id": "293B",
+  "source": "problemset",
+  "contest_id": 293,
+  "problem_index": "B",
+  "name": "Distinct Paths",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "combinatorics"
+  ],
+  "solved_count": 1017,
+  "problem_url": "https://codeforces.com/problemset/problem/293/B",
+  "editorial_url": "https://codeforces.com/blog/entry/7516",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a rectangular n × m -cell board. Some cells are already painted some of k colors. You need to paint each uncolored cell one of the k colors so that any path from the upper left square to the lower right one doesn't contain any two cells of the same color. The path can go only along side-adjacent cells and can only go down or right. Print the number of possible paintings modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains three integers n , m , k (1 ≤ n , m ≤ 1000, 1 ≤ k ≤ 10) . The next n lines contain m integers each — the board. The first of them contains m uppermost cells of the board from the left to the right and the second one contains m cells from the second uppermost row and so on. If a number in a line equals 0, then the corresponding cell isn't painted. Otherwise, this number represents the initial color of the board cell — an integer from 1 to k . Consider all colors numbered from 1 to k in some manner.",
+  "output_specification": "Print the number of possible paintings modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "2 2 4\n0 0\n0 0",
+      "output": "48"
+    },
+    {
+      "input": "2 2 4\n1 2\n2 1",
+      "output": "0"
+    },
+    {
+      "input": "5 6 10\n0 0 0 0 0 0\n0 0 0 0 0 0\n0 0 0 0 0 0\n0 0 0 0 0 0\n0 0 0 0 0 0",
+      "output": "3628800"
+    },
+    {
+      "input": "2 6 10\n1 2 3 4 5 6\n0 0 0 0 0 0",
+      "output": "4096"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:38",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

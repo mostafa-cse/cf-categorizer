@@ -1,0 +1,46 @@
+{
+  "id": "138A",
+  "source": "problemset",
+  "contest_id": 138,
+  "problem_index": "A",
+  "name": "Literature Lesson",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2626,
+  "problem_url": "https://codeforces.com/problemset/problem/138/A",
+  "editorial_url": "https://codeforces.com/blog/entry/3462",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vera adores poems. All the poems Vera knows are divided into quatrains (groups of four lines) and in each quatrain some lines contain rhymes. Let's consider that all lines in the poems consist of lowercase Latin letters (without spaces). Letters \" a \", \" e \", \" i \", \" o \", \" u \" are considered vowels. Two lines rhyme if their suffixes that start from the k -th vowels (counting from the end) match. If a line has less than k vowels, then such line can't rhyme with any other line. For example, if k = 1 , lines commit and hermit rhyme (the corresponding suffixes equal it ), and if k = 2 , they do not rhyme ( ommit ≠ ermit ). Today on a literature lesson Vera learned that quatrains can contain four different schemes of rhymes, namely the following ones (the same letters stand for rhyming lines): Clerihew ( aabb ); Alternating ( abab ); Enclosed ( abba ). If all lines of a quatrain pairwise rhyme, then the quatrain can belong to any rhyme scheme (this situation is represented by aaaa ). If all quatrains of a poem belong to the same rhyme scheme, then we can assume that the whole poem belongs to this rhyme scheme. If in each quatrain all lines pairwise rhyme, then the rhyme scheme of the poem is aaaa . Let us note that it doesn't matter whether lines from different quatrains rhyme with each other or not. In other words, it is possible that different quatrains aren't connected by a rhyme. Vera got a long poem as a home task. The girl has to analyse it and find the poem rhyme scheme. Help Vera cope with the task.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 2500 , 1 ≤ k ≤ 5 ) — the number of quatrains in the poem and the vowel's number, correspondingly. Next 4 n lines contain the poem. Each line is not empty and only consists of small Latin letters. The total length of the lines does not exceed 10 4 . If we assume that the lines are numbered starting from 1, then the first quatrain contains lines number 1 , 2 , 3 , 4 ; the second one contains lines number 5 , 6 , 7 , 8 ; and so on.",
+  "output_specification": "Print the rhyme scheme of the poem as \" aabb \", \" abab \", \" abba \", \" aaaa \"; or \" NO \" if the poem does not belong to any of the above mentioned schemes.",
+  "sample_testcases": [
+    {
+      "input": "1 1\nday\nmay\nsun\nfun",
+      "output": "aabb"
+    },
+    {
+      "input": "1 1\nday\nmay\ngray\nway",
+      "output": "aaaa"
+    },
+    {
+      "input": "2 1\na\na\na\na\na\na\ne\ne",
+      "output": "aabb"
+    },
+    {
+      "input": "2 1\nday\nmay\nsun\nfun\ntest\nhill\nfest\nthrill",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

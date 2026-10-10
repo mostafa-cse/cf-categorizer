@@ -1,0 +1,38 @@
+{
+  "id": "73C",
+  "source": "problemset",
+  "contest_id": 73,
+  "problem_index": "C",
+  "name": "LionAge II",
+  "rating": 1800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 2536,
+  "problem_url": "https://codeforces.com/problemset/problem/73/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1700",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya plays the LionAge II. He was bored of playing with a stupid computer, so he installed this popular MMORPG, to fight with his friends. Vasya came up with the name of his character — non-empty string s , consisting of a lowercase Latin letters. However, in order not to put up a front of friends, Vasya has decided to change no more than k letters of the character name so that the new name sounded as good as possible. Euphony of the line is defined as follows: for each pair of adjacent letters x and y ( x immediately precedes y ) the bonus c ( x , y ) is added to the result. Your task is to determine what the greatest Euphony can be obtained by changing at most k letters in the name of the Vasya's character.",
+  "input_specification": "The first line contains character's name s and an integer number k ( 0 ≤ k ≤ 100 ). The length of the nonempty string s does not exceed 100 . The second line contains an integer number n ( 0 ≤ n ≤ 676 ) — amount of pairs of letters, giving bonus to the euphony. The next n lines contain description of these pairs « x y c », which means that sequence xy gives bonus c ( x , y — lowercase Latin letters, - 1000 ≤ c ≤ 1000) . It is guaranteed that no pair x y mentioned twice in the input data.",
+  "output_specification": "Output the only number — maximum possible euphony оf the new character's name.",
+  "sample_testcases": [
+    {
+      "input": "winner 4\n4\ns e 7\no s 8\nl o 13\no o 8",
+      "output": "36"
+    },
+    {
+      "input": "abcdef 1\n5\na b -10\nb c 5\nc d 5\nd e 5\ne f 5",
+      "output": "20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

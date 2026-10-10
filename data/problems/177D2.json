@@ -1,0 +1,38 @@
+{
+  "id": "177D2",
+  "source": "problemset",
+  "contest_id": 177,
+  "problem_index": "D2",
+  "name": "Encrypting Messages",
+  "rating": 1500,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 2879,
+  "problem_url": "https://codeforces.com/problemset/problem/177/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/4375",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Smart Beaver from ABBYY invented a new message encryption method and now wants to check its performance. Checking it manually is long and tiresome, so he decided to ask the ABBYY Cup contestants for help. A message is a sequence of n integers a 1 , a 2 , ..., a n . Encryption uses a key which is a sequence of m integers b 1 , b 2 , ..., b m ( m ≤ n ). All numbers from the message and from the key belong to the interval from 0 to c - 1 , inclusive, and all the calculations are performed modulo c . Encryption is performed in n - m + 1 steps. On the first step we add to each number a 1 , a 2 , ..., a m a corresponding number b 1 , b 2 , ..., b m . On the second step we add to each number a 2 , a 3 , ..., a m + 1 (changed on the previous step) a corresponding number b 1 , b 2 , ..., b m . And so on: on step number i we add to each number a i , a i + 1 , ..., a i + m - 1 a corresponding number b 1 , b 2 , ..., b m . The result of the encryption is the sequence a 1 , a 2 , ..., a n after n - m + 1 steps. Help the Beaver to write a program that will encrypt messages in the described manner.",
+  "input_specification": "The first input line contains three integers n , m and c , separated by single spaces. The second input line contains n integers a i ( 0 ≤ a i < c ), separated by single spaces — the original message. The third input line contains m integers b i ( 0 ≤ b i < c ), separated by single spaces — the encryption key. The input limitations for getting 30 points are: 1 ≤ m ≤ n ≤ 10 3 1 ≤ c ≤ 10 3 The input limitations for getting 100 points are: 1 ≤ m ≤ n ≤ 10 5 1 ≤ c ≤ 10 3",
+  "output_specification": "Print n space-separated integers — the result of encrypting the original message.",
+  "sample_testcases": [
+    {
+      "input": "4 3 2\n1 1 1 1\n1 1 1",
+      "output": "0 1 1 0"
+    },
+    {
+      "input": "3 1 5\n1 2 3\n4",
+      "output": "0 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:31",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

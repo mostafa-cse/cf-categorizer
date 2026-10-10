@@ -1,0 +1,39 @@
+{
+  "id": "870F",
+  "source": "problemset",
+  "contest_id": 870,
+  "problem_index": "F",
+  "name": "Paths",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "number theory"
+  ],
+  "solved_count": 748,
+  "problem_url": "https://codeforces.com/problemset/problem/870/F",
+  "editorial_url": "https://codeforces.com/blog/entry/55200",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a positive integer n . Let's build a graph on vertices 1, 2, ..., n in such a way that there is an edge between vertices u and v if and only if . Let d ( u , v ) be the shortest distance between u and v , or 0 if there is no path between them. Compute the sum of values d ( u , v ) over all 1 ≤ u < v ≤ n . The gcd (greatest common divisor) of two positive integers is the maximum positive integer that divides both of the integers.",
+  "input_specification": "Single integer n ( 1 ≤ n ≤ 10 7 ).",
+  "output_specification": "Print the sum of d ( u , v ) over all 1 ≤ u < v ≤ n .",
+  "sample_testcases": [
+    {
+      "input": "6",
+      "output": "8"
+    },
+    {
+      "input": "10",
+      "output": "44"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:47",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

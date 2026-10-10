@@ -1,0 +1,38 @@
+{
+  "id": "1067C",
+  "source": "problemset",
+  "contest_id": 1067,
+  "problem_index": "C",
+  "name": "Knights",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 727,
+  "problem_url": "https://codeforces.com/problemset/problem/1067/C",
+  "editorial_url": "https://codeforces.com/blog/entry/62688",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Ivan places knights on infinite chessboard. Initially there are $$$n$$$ knights. If there is free cell which is under attack of at least $$$4$$$ knights then he places new knight in this cell. Ivan repeats this until there are no such free cells. One can prove that this process is finite. One can also prove that position in the end does not depend on the order in which new knights are placed. Ivan asked you to find initial placement of exactly $$$n$$$ knights such that in the end there will be at least $$$\\lfloor \\frac{n^{2}}{10} \\rfloor$$$ knights.",
+  "input_specification": "The only line of input contains one integer $$$n$$$ ($$$1 \\le n \\le 10^{3}$$$) — number of knights in the initial placement.",
+  "output_specification": "Print $$$n$$$ lines. Each line should contain $$$2$$$ numbers $$$x_{i}$$$ and $$$y_{i}$$$ ($$$-10^{9} \\le x_{i}, \\,\\, y_{i} \\le 10^{9}$$$) — coordinates of $$$i$$$-th knight. For all $$$i \\ne j$$$, $$$(x_{i}, \\,\\, y_{i}) \\ne (x_{j}, \\,\\, y_{j})$$$ should hold. In other words, all knights should be in different cells. It is guaranteed that the solution exists.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "1 1\n3 1\n1 5\n4 4"
+    },
+    {
+      "input": "7",
+      "output": "2 1\n1 2\n4 1\n5 2\n2 6\n5 7\n6 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:06",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

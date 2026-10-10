@@ -1,0 +1,39 @@
+{
+  "id": "1984D",
+  "source": "problemset",
+  "contest_id": 1984,
+  "problem_index": "D",
+  "name": "''a'' String Problem",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "hashing",
+    "implementation",
+    "math",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 4016,
+  "problem_url": "https://codeforces.com/problemset/problem/1984/D",
+  "editorial_url": "https://codeforces.com/blog/entry/130252",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ consisting of lowercase Latin characters. Count the number of nonempty strings $$$t \\neq$$$ \"$$$\\texttt{a}$$$\" such that it is possible to partition$$$^{\\dagger}$$$ $$$s$$$ into some substrings satisfying the following conditions: each substring either equals $$$t$$$ or \"$$$\\texttt{a}$$$\", and at least one substring equals $$$t$$$. $$$^{\\dagger}$$$ A partition of a string $$$s$$$ is an ordered sequence of some $$$k$$$ strings $$$t_1, t_2, \\ldots, t_k$$$ (called substrings ) such that $$$t_1 + t_2 + \\ldots + t_k = s$$$, where $$$+$$$ represents the concatenation operation.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The only line of each test case contains a string $$$s$$$ consisting of lowercase Latin characters ($$$2 \\leq |s| \\leq 2 \\cdot 10^5$$$). The sum of $$$|s|$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the number of nonempty strings $$$t \\neq$$$ \"$$$\\texttt{a}$$$\" that satisfy all constraints.",
+  "sample_testcases": [
+    {
+      "input": "8\naaaaa\nbaba\ncabacb\naaabaaa\nbitset\nab\nabbaaaabbb\nyearnineteeneightyfour",
+      "output": "4\n4\n1\n16\n1\n2\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:05",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1806E",
+  "source": "problemset",
+  "contest_id": 1806,
+  "problem_index": "E",
+  "name": "Tree Master",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "trees"
+  ],
+  "solved_count": 3589,
+  "problem_url": "https://codeforces.com/problemset/problem/1806/E",
+  "editorial_url": "https://codeforces.com/blog/entry/114048",
+  "time_limit": "3 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given a tree with $$$n$$$ weighted vertices labeled from $$$1$$$ to $$$n$$$ rooted at vertex $$$1$$$. The parent of vertex $$$i$$$ is $$$p_i$$$ and the weight of vertex $$$i$$$ is $$$a_i$$$. For convenience, define $$$p_1=0$$$. For two vertices $$$x$$$ and $$$y$$$ of the same depth$$$^\\dagger$$$ , define $$$f(x,y)$$$ as follows: Initialize $$$\\mathrm{ans}=0$$$. While both $$$x$$$ and $$$y$$$ are not $$$0$$$: $$$\\mathrm{ans}\\leftarrow \\mathrm{ans}+a_x\\cdot a_y$$$; $$$x\\leftarrow p_x$$$; $$$y\\leftarrow p_y$$$. $$$f(x,y)$$$ is the value of $$$\\mathrm{ans}$$$. You will process $$$q$$$ queries. In the $$$i$$$-th query, you are given two integers $$$x_i$$$ and $$$y_i$$$ and you need to calculate $$$f(x_i,y_i)$$$. $$$^\\dagger$$$ The depth of vertex $$$v$$$ is the number of edges on the unique simple path from the root of the tree to vertex $$$v$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$2 \\le n \\le 10^5$$$; $$$1 \\le q \\le 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^5$$$). The third line contains $$$n-1$$$ integers $$$p_2, \\ldots, p_n$$$ ($$$1 \\le p_i \\lt i$$$). Each of the next $$$q$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1\\le x_i,y_i\\le n$$$). It is guaranteed that $$$x_i$$$ and $$$y_i$$$ are of the same depth.",
+  "output_specification": "Output $$$q$$$ lines, the $$$i$$$-th line contains a single integer, the value of $$$f(x_i,y_i)$$$.",
+  "sample_testcases": [
+    {
+      "input": "6 2\n1 5 2 3 1 1\n1 2 3 3 2\n4 5\n6 6",
+      "output": "33\n27"
+    },
+    {
+      "input": "14 8\n3 2 5 3 1 4 2 2 2 5 5 5 2 4\n1 2 3 1 1 4 7 3 3 1 5 3 8\n4 4\n4 10\n13 10\n3 12\n13 9\n3 12\n9 10\n11 5",
+      "output": "47\n53\n48\n36\n42\n36\n48\n14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

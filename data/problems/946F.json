@@ -1,0 +1,40 @@
+{
+  "id": "946F",
+  "source": "problemset",
+  "contest_id": 946,
+  "problem_index": "F",
+  "name": "Fibonacci String Subsequences",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 681,
+  "problem_url": "https://codeforces.com/problemset/problem/946/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58210",
+  "time_limit": "3.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a binary string s (each character of this string is either 0 or 1 ). Let's denote the cost of string t as the number of occurences of s in t . For example, if s is 11 and t is 111011 , then the cost of t is 3 . Let's also denote the Fibonacci strings sequence as follows: F (0) is 0 ; F (1) is 1 ; F ( i ) = F ( i - 1) + F ( i - 2) if i > 1 , where + means the concatenation of two strings. Your task is to calculate the sum of costs of all subsequences of the string F ( x ) . Since answer may be large, calculate it modulo 10 9 + 7 .",
+  "input_specification": "The first line contains two integers n and x ( 1 ≤ n ≤ 100 , 0 ≤ x ≤ 100 ) — the length of s and the index of a Fibonacci string you are interested in, respectively. The second line contains s — a string consisting of n characters. Each of these characters is either 0 or 1 .",
+  "output_specification": "Print the only integer — the sum of costs of all subsequences of the string F ( x ) , taken modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2 4\n11",
+      "output": "14"
+    },
+    {
+      "input": "10 100\n1010101010",
+      "output": "553403224"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

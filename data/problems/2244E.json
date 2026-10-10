@@ -1,0 +1,40 @@
+{
+  "id": "2244E",
+  "source": "problemset",
+  "contest_id": 2244,
+  "problem_index": "E",
+  "name": "Masha and the Garland",
+  "rating": 1400,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "implementation",
+    "math",
+    "number theory",
+    "strings"
+  ],
+  "solved_count": 9448,
+  "problem_url": "https://codeforces.com/problemset/problem/2244/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155197",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Masha has a New Year garland consisting of $$$n$$$ bulbs. Each bulb can be either off or on. The state of the garland is given by a binary string $$$s$$$ of length $$$n$$$, where ' 0 ' denotes an off bulb and ' 1 ' denotes an on bulb. Masha considers the garland beautiful if the states of adjacent bulbs strictly alternate. That is, there are no two adjacent bulbs that are both on or both off. For example, the garlands ' 01010 ' and ' 1010 ' are beautiful, while ' 0110 ' and ' 000 ' are not. Yura can apply the following operation to the garland: choose a subsegment and flip the state of all bulbs in it, that is, turn all on bulbs off and all off bulbs on. Masha invites him to play the following game $$$q$$$ times: she chooses a segment from the $$$l$$$-th to the $$$r$$$-th bulb inclusive, and Yura must make this segment beautiful using at most $$$k$$$ operations. However, Yura is not sure whether this is always possible, so he asks you to determine for each game whether he can make the chosen segment beautiful using no more than $$$k$$$ operations. Note that the games are independent, and the garland itself is not actually modified.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the length of the garland and the number of games. The second line contains a binary string $$$s$$$ of length $$$n$$$, consisting only of characters ' 0 ' and ' 1 '. The next $$$q$$$ lines each contain three integers $$$l$$$, $$$r$$$, and $$$k$$$ ($$$1 \\le l \\le r \\le n$$$, $$$0 \\le k \\le n$$$) — the boundaries of the segment and the maximum allowed number of operations. It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ over all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each game, output \" YES \" if the segment can be made beautiful using at most $$$k$$$ operations, and \" NO \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2\n5 5\n00110\n1 5 1\n1 5 2\n2 4 1\n1 2 0\n3 4 0\n4 2\n1010\n1 4 0\n2 3 1",
+      "output": "YES\nYES\nYES\nNO\nNO\nYES\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

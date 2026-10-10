@@ -1,0 +1,36 @@
+{
+  "id": "2041C",
+  "source": "problemset",
+  "contest_id": 2041,
+  "problem_index": "C",
+  "name": "Cube",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "dfs and similar",
+    "dp"
+  ],
+  "solved_count": 2147,
+  "problem_url": "https://codeforces.com/problemset/problem/2041/C",
+  "editorial_url": "https://codeforces.com//drive.google.com/file/d/1F0X7s1CmjkX80tkT5_JJA50HVZB-zlAb/view",
+  "time_limit": "3 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given an $$$n\\times n\\times n$$$ big three-dimensional cube that contains $$$n^3$$$ numbers. You have to choose $$$n$$$ of those numbers so that their sum is as small as possible. It is, however, forbidden to choose two numbers that are located in the same plane. That is, if we identify the positions in the cube by three Cartesian coordinates, then choosing two numbers from positions $$$(x,y,z)$$$ and $$$(x',y',z')$$$ is forbidden if $$$x=x'$$$, $$$y=y'$$$, or $$$z=z'$$$.",
+  "input_specification": "The input consists of the number $$$n$$$ followed by $$$n^3$$$ numbers in the cube. The numbers are presented as $$$n$$$ two-dimensional matrices, one for each layer of the cube. More precisely, there will be $$$n^2$$$ lines follow, each having $$$n$$$ numbers. For each $$$x, y, z$$$ ($$$1\\le x, y, z\\le n$$$), the number at the position $$$(x, y, z)$$$ is listed as the $$$z$$$-th number in the $$$((x-1)\\times n+y)$$$-th line. $$$2 \\leq n \\leq 12$$$ All numbers in the cube are integers between $$$0$$$ and $$$2\\times 10^7$$$.",
+  "output_specification": "The output consists of a single number. It is the minimum sum of $$$n$$$ numbers chosen from the cube according to the above rules.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3\n4 5 6\n7 8 9\n1 1 1\n2 2 2\n3 3 3\n4 3 0\n2 1 4\n9 8 9",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

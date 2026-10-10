@@ -1,0 +1,42 @@
+{
+  "id": "699B",
+  "source": "problemset",
+  "contest_id": 699,
+  "problem_index": "B",
+  "name": "One Bomb",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 8023,
+  "problem_url": "https://codeforces.com/problemset/problem/699/B",
+  "editorial_url": "https://codeforces.com/blog/entry/46148",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a description of a depot. It is a rectangular checkered field of n × m size. Each cell in a field can be empty (\" . \") or it can be occupied by a wall (\" * \"). You have one bomb. If you lay the bomb at the cell ( x , y ) , then after triggering it will wipe out all walls in the row x and all walls in the column y . You are to determine if it is possible to wipe out all walls in the depot by placing and triggering exactly one bomb . The bomb can be laid both in an empty cell or in a cell occupied by a wall.",
+  "input_specification": "The first line contains two positive integers n and m ( 1 ≤ n , m ≤ 1000 ) — the number of rows and columns in the depot field. The next n lines contain m symbols \" . \" and \" * \" each — the description of the field. j -th symbol in i -th of them stands for cell ( i , j ) . If the symbol is equal to \" . \", then the corresponding cell is empty, otherwise it equals \" * \" and the corresponding cell is occupied by a wall.",
+  "output_specification": "If it is impossible to wipe out all walls by placing and triggering exactly one bomb, then print \" NO \" in the first line (without quotes). Otherwise print \" YES \" (without quotes) in the first line and two integers in the second line — the coordinates of the cell at which the bomb should be laid. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n.*..\n....\n.*..",
+      "output": "YES\n1 2"
+    },
+    {
+      "input": "3 3\n..*\n.*.\n*..",
+      "output": "NO"
+    },
+    {
+      "input": "6 5\n..*..\n..*..\n*****\n..*..\n..*..\n..*..",
+      "output": "YES\n3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:27",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

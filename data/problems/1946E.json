@@ -1,0 +1,37 @@
+{
+  "id": "1946E",
+  "source": "problemset",
+  "contest_id": 1946,
+  "problem_index": "E",
+  "name": "Girl Permutation",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3332,
+  "problem_url": "https://codeforces.com/problemset/problem/1946/E",
+  "editorial_url": "https://codeforces.com/blog/entry/127439",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Some permutation of length $$$n$$$ is guessed. You are given the indices of its prefix maximums and suffix maximums. Recall that a permutation of length $$$k$$$ is an array of size $$$k$$$ such that each integer from $$$1$$$ to $$$k$$$ occurs exactly once. Prefix maximums are the elements that are the maximum on the prefix ending at that element. More formally, the element $$$a_i$$$ is a prefix maximum if $$$a_i \\gt a_j$$$ for every $$$j \\lt i$$$. Similarly, suffix maximums are defined, the element $$$a_i$$$ is a suffix maximum if $$$a_i \\gt a_j$$$ for every $$$j \\gt i$$$. You need to output the number of different permutations that could have been guessed. As this number can be very large, output the answer modulo $$$10^9 + 7$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then follows the description of the test cases. The first line of each test case contains three integers $$$n, m_1$$$ and $$$m_2$$$ ($$$1 \\le m_1, m_2 \\le n \\le 2 \\cdot 10^5$$$) — the length of the permutation, the number of prefix maximums, and the number of suffix maximums, respectively. The second line of each test case contains $$$m_1$$$ integers $$$p_1 \\lt p_2 \\lt \\ldots \\lt p_{m_1}$$$ ($$$1 \\le p_i \\le n$$$) — the indices of the prefix maximums in increasing order. The third line of each test case contains $$$m_2$$$ integers $$$s_1 \\lt s_2 \\lt \\ldots \\lt s_{m_2}$$$ ($$$1 \\le s_i \\le n$$$) — the indices of the suffix maximums in increasing order. It is guaranteed that the sum of the values of $$$n$$$ for all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer on a separate line — the number of suitable permutations modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1 1\n1\n1\n4 2 3\n1 2\n2 3 4\n3 3 1\n1 2 3\n3\n5 3 4\n1 2 3\n2 3 4 5\n20 5 4\n1 2 3 4 12\n12 13 18 20\n6 2 3\n1 3\n3 4 6",
+      "output": "1\n3\n1\n0\n317580808\n10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:23",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

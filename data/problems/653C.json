@@ -1,0 +1,47 @@
+{
+  "id": "653C",
+  "source": "problemset",
+  "contest_id": 653,
+  "problem_index": "C",
+  "name": "Bear and Up-Down",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 1788,
+  "problem_url": "https://codeforces.com/problemset/problem/653/C",
+  "editorial_url": "https://codeforces.com/blog/entry/43886",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The life goes up and down, just like nice sequences. Sequence t 1 , t 2 , ..., t n is called nice if the following two conditions are satisfied: t i < t i + 1 for each odd i < n ; t i > t i + 1 for each even i < n . For example, sequences (2, 8) , (1, 5, 1) and (2, 5, 1, 100, 99, 120) are nice, while (1, 1) , (1, 2, 3) and (2, 5, 3, 2) are not. Bear Limak has a sequence of positive integers t 1 , t 2 , ..., t n . This sequence is not nice now and Limak wants to fix it by a single swap. He is going to choose two indices i < j and swap elements t i and t j in order to get a nice sequence. Count the number of ways to do so. Two ways are considered different if indices of elements chosen for a swap are different.",
+  "input_specification": "The first line of the input contains one integer n ( 2 ≤ n ≤ 150 000 ) — the length of the sequence. The second line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 150 000 ) — the initial sequence. It's guaranteed that the given sequence is not nice.",
+  "output_specification": "Print the number of ways to swap two elements exactly once in order to get a nice sequence.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 8 4 7 7",
+      "output": "2"
+    },
+    {
+      "input": "4\n200 150 100 50",
+      "output": "1"
+    },
+    {
+      "input": "10\n3 2 1 4 1 4 1 4 1 4",
+      "output": "8"
+    },
+    {
+      "input": "9\n1 2 3 4 5 6 7 8 9",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

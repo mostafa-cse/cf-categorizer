@@ -1,0 +1,38 @@
+{
+  "id": "46G",
+  "source": "problemset",
+  "contest_id": 46,
+  "problem_index": "G",
+  "name": "Emperor's Problem",
+  "rating": 2500,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 173,
+  "problem_url": "https://codeforces.com/problemset/problem/46/G",
+  "editorial_url": "https://codeforces.com/blog/entry/916",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It happened at the times of the Great Berland Empire. Once the Emperor dreamt that the Messenger from the gods ordered to build a temple whose base would be a convex polygon with n angles. Next morning the Emperor gave the command to build a temple whose base was a regular polygon with n angles. The temple was built but soon the Empire was shaken with disasters and crop failures. After an earthquake destroyed the temple, the Emperor understood that he somehow caused the wrath of gods to fall on his people. He ordered to bring the wise man. When the wise man appeared, the Emperor retold the dream to him and asked \"Oh the wisest among the wisest, tell me how could I have infuriated the Gods?\". \"My Lord,\" the wise man answered. \"As far as I can judge, the gods are angry because you were too haste to fulfill their order and didn't listen to the end of the message\". Indeed, on the following night the Messenger appeared again. He reproached the Emperor for having chosen an imperfect shape for the temple. \"But what shape can be more perfect than a regular polygon!?\" cried the Emperor in his dream. To that the Messenger gave a complete and thorough reply. All the vertices of the polygon should be positioned in the lattice points. All the lengths of its sides should be different. From the possible range of such polygons a polygon which maximum side is minimal possible must be chosen. You are an obedient architect who is going to make the temple's plan. Note that the polygon should be simple (having a border without self-intersections and overlapping) and convex, however, it is acceptable for three consecutive vertices to lie on the same line.",
+  "input_specification": "The first line contains the single number n ( 3 ≤ n ≤ 10000 ).",
+  "output_specification": "Print \"YES\" (without quotes) in the first line if it is possible to build a polygon possessing the needed qualities. In the next n lines print integer coordinates of the polygon vertices in the order in which they would be passed counter clockwise. The absolute value of the coordinates shouldn't exceed 10 9 . No two vertices can coincide. It is permitted to print any of the possible solutions. Print \"NO\" if to build the polygon is impossible.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "YES\n0 0\n1 0\n0 2"
+    },
+    {
+      "input": "3",
+      "output": "YES\n0 1\n-1 0\n-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:30",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

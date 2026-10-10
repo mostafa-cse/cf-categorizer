@@ -1,0 +1,39 @@
+{
+  "id": "1991D",
+  "source": "problemset",
+  "contest_id": 1991,
+  "problem_index": "D",
+  "name": "Prime XOR Coloring",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "graphs",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 8136,
+  "problem_url": "https://codeforces.com/problemset/problem/1991/D",
+  "editorial_url": "https://codeforces.com/blog/entry/132021",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected graph with $$$n$$$ vertices, numbered from $$$1$$$ to $$$n$$$. There is an edge between vertices $$$u$$$ and $$$v$$$ if and only if $$$u \\oplus v$$$ is a prime number , where $$$\\oplus$$$ denotes the bitwise XOR operator . Color all vertices of the graph using the minimum number of colors, such that no two vertices directly connected by an edge have the same color.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 500$$$). The description of test cases follows. The only line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the graph. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output two lines. The first line should contain a single integer $$$k$$$ ($$$1 \\le k \\le n$$$) — the minimum number of colors required. The second line should contain $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le k$$$) — the color of each vertex. If there are multiple solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n1\n2\n3\n4\n5\n6",
+      "output": "1\n1\n2\n1 2\n2\n1 2 2\n3\n1 2 2 3\n3\n1 2 2 3 3\n4\n1 2 2 3 3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:58",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

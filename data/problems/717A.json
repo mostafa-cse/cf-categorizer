@@ -1,0 +1,36 @@
+{
+  "id": "717A",
+  "source": "problemset",
+  "contest_id": 717,
+  "problem_index": "A",
+  "name": "Festival Organization",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 512,
+  "problem_url": "https://codeforces.com/problemset/problem/717/A",
+  "editorial_url": "https://codeforces.com/blog/entry/47058",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The Prodiggers are quite a cool band and for this reason, they have been the surprise guest at the ENTER festival for the past 80 years. At the beginning of their careers, they weren’t so successful, so they had to spend time digging channels to earn money; hence the name. Anyway, they like to tour a lot and have surprising amounts of energy to do extremely long tours. However, they hate spending two consecutive days without having a concert, so they would like to avoid it. A tour is defined by a sequence of concerts and days-off. You need to count in how many ways The Prodiggers can select k different tours of the same length between l and r . For example if k = 2 , l = 1 and r = 2 , if we define concert day as {1} and day-off as {0}, here are all possible tours: {0}, {1}, {00}, {01}, {10}, {11}. But tour 00 can not be selected because it has 2 days-off in a row. Now, we need to count in how many ways we can select k = 2 tours of the same length in range [1;2] . Here they are: {0,1}; {01,10}; {01,11}; {10,11}. Since their schedule is quite busy, they want you to tell them in how many ways can do that, modulo 1 000 000 007 ( 10 9 + 7 ).",
+  "input_specification": "The first line of the input contains three integers k , l and r ( 1 ≤ k ≤ 200 , 1 ≤ l ≤ r ≤ 10 18 ).",
+  "output_specification": "Output a single number: the number of ways to select k different tours of the same length, modulo 1 000 000 007 .",
+  "sample_testcases": [
+    {
+      "input": "1 1 2",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:25",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

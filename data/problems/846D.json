@@ -1,0 +1,39 @@
+{
+  "id": "846D",
+  "source": "problemset",
+  "contest_id": 846,
+  "problem_index": "D",
+  "name": "Monitor",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 2891,
+  "problem_url": "https://codeforces.com/problemset/problem/846/D",
+  "editorial_url": "https://codeforces.com/blog/entry/54357",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recently Luba bought a monitor. Monitor is a rectangular matrix of size n × m . But then she started to notice that some pixels cease to work properly. Luba thinks that the monitor will become broken the first moment when it contains a square k × k consisting entirely of broken pixels. She knows that q pixels are already broken, and for each of them she knows the moment when it stopped working. Help Luba to determine when the monitor became broken (or tell that it's still not broken even after all q pixels stopped working).",
+  "input_specification": "The first line contains four integer numbers n , m , k , q (1 ≤ n , m ≤ 500, 1 ≤ k ≤ min ( n , m ), 0 ≤ q ≤ n · m ) — the length and width of the monitor, the size of a rectangle such that the monitor is broken if there is a broken rectangle with this size, and the number of broken pixels. Each of next q lines contain three integer numbers x i , y i , t i (1 ≤ x i ≤ n , 1 ≤ y i ≤ m , 0 ≤ t ≤ 10 9 ) — coordinates of i -th broken pixel (its row and column in matrix) and the moment it stopped working. Each pixel is listed at most once. We consider that pixel is already broken at moment t i .",
+  "output_specification": "Print one number — the minimum moment the monitor became broken, or \"-1\" if it's still not broken after these q pixels stopped working.",
+  "sample_testcases": [
+    {
+      "input": "2 3 2 5\n2 1 8\n2 2 8\n1 2 1\n1 3 4\n2 3 2",
+      "output": "8"
+    },
+    {
+      "input": "3 3 2 5\n1 2 2\n2 2 1\n2 3 5\n3 2 10\n2 1 100",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

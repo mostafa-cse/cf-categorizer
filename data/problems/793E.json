@@ -1,0 +1,45 @@
+{
+  "id": "793E",
+  "source": "problemset",
+  "contest_id": 793,
+  "problem_index": "E",
+  "name": "Problem of offices",
+  "rating": 2900,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 338,
+  "problem_url": "https://codeforces.com/problemset/problem/793/E",
+  "editorial_url": "https://codeforces.com/blog/entry/51685",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Earlier, when there was no Internet, each bank had a lot of offices all around Bankopolis, and it caused a lot of problems. Namely, each day the bank had to collect cash from all the offices. Once Oleg the bank client heard a dialogue of two cash collectors. Each day they traveled through all the departments and offices of the bank following the same route every day. The collectors started from the central department and moved between some departments or between some department and some office using special roads. Finally, they returned to the central department. The total number of departments and offices was n , the total number of roads was n - 1 . In other words, the special roads system was a rooted tree in which the root was the central department, the leaves were offices, the internal vertices were departments. The collectors always followed the same route in which the number of roads was minimum possible, that is 2 n - 2 . One of the collectors said that the number of offices they visited between their visits to offices a and then b (in the given order) is equal to the number of offices they visited between their visits to offices b and then a (in this order). The other collector said that the number of offices they visited between their visits to offices c and then d (in this order) is equal to the number of offices they visited between their visits to offices d and then c (in this order). The interesting part in this talk was that the shortest path (using special roads only) between any pair of offices among a , b , c and d passed through the central department . Given the special roads map and the indexes of offices a , b , c and d , determine if the situation described by the collectors was possible, or not.",
+  "input_specification": "The first line contains single integer n ( 5 ≤ n ≤ 5000 ) — the total number of offices and departments. The departments and offices are numbered from 1 to n , the central office has index 1 . The second line contains four integers a , b , c and d ( 2 ≤ a , b , c , d ≤ n ) — the indexes of the departments mentioned in collector's dialogue. It is guaranteed that these indexes are offices (i.e. leaves of the tree), not departments. It is guaranteed that the shortest path between any pair of these offices passes through the central department. On the third line n - 1 integers follow: p 2 , p 3 , ..., p n ( 1 ≤ p i < i ), where p i denotes that there is a special road between the i -th office or department and the p i -th department. Please note the joint enumeration of departments and offices. It is guaranteed that the given graph is a tree. The offices are the leaves, the departments are the internal vertices.",
+  "output_specification": "If the situation described by the cash collectors was possible, print \" YES \". Otherwise, print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "5\n2 3 4 5\n1 1 1 1",
+      "output": "YES"
+    },
+    {
+      "input": "10\n3 8 9 10\n1 2 2 2 2 2 1 1 1",
+      "output": "NO"
+    },
+    {
+      "input": "13\n13 12 9 7\n1 1 1 1 5 5 2 2 2 3 3 4",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

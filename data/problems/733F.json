@@ -1,0 +1,41 @@
+{
+  "id": "733F",
+  "source": "problemset",
+  "contest_id": 733,
+  "problem_index": "F",
+  "name": "Drivers Dissatisfaction",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1427,
+  "problem_url": "https://codeforces.com/problemset/problem/733/F",
+  "editorial_url": "https://codeforces.com/blog/entry/48133",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In one kingdom there are n cities and m two-way roads. Each road connects a pair of cities, and for each road we know the level of drivers dissatisfaction — the value w i . For each road we know the value c i — how many lamziks we should spend to reduce the level of dissatisfaction with this road by one. Thus, to reduce the dissatisfaction with the i -th road by k , we should spend k · c i lamziks. And it is allowed for the dissatisfaction to become zero or even negative . In accordance with the king's order, we need to choose n - 1 roads and make them the main roads . An important condition must hold: it should be possible to travel from any city to any other by the main roads . The road ministry has a budget of S lamziks for the reform. The ministry is going to spend this budget for repair of some roads (to reduce the dissatisfaction with them), and then to choose the n - 1 main roads . Help to spend the budget in such a way and then to choose the main roads so that the total dissatisfaction with the main roads will be as small as possible. The dissatisfaction with some roads can become negative. It is not necessary to spend whole budget S . It is guaranteed that it is possible to travel from any city to any other using existing roads. Each road in the kingdom is a two-way road.",
+  "input_specification": "The first line contains two integers n and m ( 2 ≤ n ≤ 2·10 5 , n - 1 ≤ m ≤ 2·10 5 ) — the number of cities and the number of roads in the kingdom, respectively. The second line contains m integers w 1 , w 2 , ..., w m ( 1 ≤ w i ≤ 10 9 ), where w i is the drivers dissatisfaction with the i -th road. The third line contains m integers c 1 , c 2 , ..., c m ( 1 ≤ c i ≤ 10 9 ), where c i is the cost (in lamziks) of reducing the dissatisfaction with the i -th road by one. The next m lines contain the description of the roads. The i -th of this lines contain a pair of integers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ) which mean that the i -th road connects cities a i and b i . All roads are two-way oriented so it is possible to move by the i -th road from a i to b i , and vice versa. It is allowed that a pair of cities is connected by more than one road. The last line contains one integer S ( 0 ≤ S ≤ 10 9 ) — the number of lamziks which we can spend for reforms.",
+  "output_specification": "In the first line print K — the minimum possible total dissatisfaction with main roads . In each of the next n - 1 lines print two integers x , v x , which mean that the road x is among main roads and the road x , after the reform, has the level of dissatisfaction v x . Consider that roads are numbered from 1 to m in the order as they are given in the input data. The edges can be printed in arbitrary order. If there are several answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6 9\n1 3 1 1 3 1 2 2 2\n4 1 4 2 2 5 3 1 6\n1 2\n1 3\n2 3\n2 4\n2 5\n3 5\n3 6\n4 5\n5 6\n7",
+      "output": "0\n1 1\n3 1\n6 1\n7 2\n8 -5"
+    },
+    {
+      "input": "3 3\n9 5 1\n7 7 2\n2 1\n3 1\n3 2\n2",
+      "output": "5\n3 0\n2 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

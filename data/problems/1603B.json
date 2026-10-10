@@ -1,0 +1,36 @@
+{
+  "id": "1603B",
+  "source": "problemset",
+  "contest_id": 1603,
+  "problem_index": "B",
+  "name": "Moderate Modular Mode",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 15332,
+  "problem_url": "https://codeforces.com/problemset/problem/1603/B",
+  "editorial_url": "https://codeforces.com/blog/entry/96460",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "YouKn0wWho has two even integers $$$x$$$ and $$$y$$$. Help him to find an integer $$$n$$$ such that $$$1 \\le n \\le 2 \\cdot 10^{18}$$$ and $$$n \\bmod x = y \\bmod n$$$. Here, $$$a \\bmod b$$$ denotes the remainder of $$$a$$$ after division by $$$b$$$. If there are multiple such integers, output any. It can be shown that such an integer always exists under the given constraints.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$)  — the number of test cases. The first and only line of each test case contains two integers $$$x$$$ and $$$y$$$ ($$$2 \\le x, y \\le 10^9$$$, both are even ).",
+  "output_specification": "For each test case, print a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^{18}$$$) that satisfies the condition mentioned in the statement. If there are multiple such integers, output any. It can be shown that such an integer always exists under the given constraints.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 8\n4 2\n420 420\n69420 42068",
+      "output": "4\n10\n420\n9969128"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:52",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

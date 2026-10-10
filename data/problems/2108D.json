@@ -1,0 +1,37 @@
+{
+  "id": "2108D",
+  "source": "problemset",
+  "contest_id": 2108,
+  "problem_index": "D",
+  "name": "Needle in a Numstack",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 2499,
+  "problem_url": "https://codeforces.com/problemset/problem/2108/D",
+  "editorial_url": "https://codeforces.com/blog/entry/142512",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. You found the numbers $$$k$$$ and $$$n$$$ in the attic, but lost two arrays $$$A$$$ and $$$B$$$. You remember that: $$$|A| + |B| = n$$$, the total length of the arrays is $$$n$$$. $$$|A| \\geq k$$$ and $$$|B| \\geq k$$$, the length of each array is at least $$$k$$$. The arrays consist only of numbers from $$$1$$$ to $$$k$$$. If you take any $$$k$$$ consecutive elements from array $$$A$$$, they will all be different. Also, if you take any $$$k$$$ consecutive elements from array $$$B$$$, they will all be different. Fortunately, a kind spirit that settled in the attic found these arrays and concatenated them into an array $$$C$$$ of length $$$n$$$. That is, the elements of array $$$A$$$ were first written into array $$$C$$$, followed by the elements of array $$$B$$$. You can ask the kind spirit up to $$$250$$$ questions. Each question contains an index $$$i$$$ ($$$1 \\leq i \\leq n$$$). In response, you will receive the $$$i$$$-th element of the concatenated array $$$C$$$. You need to find the lengths of arrays $$$A$$$ and $$$B$$$, or report that it is impossible to determine them uniquely.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 300$$$). The description of the test cases follows. The only line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq k \\leq 50$$$, $$$2 k \\leq n \\leq 10^{6}$$$). Note that the sum of $$$n$$$ across test cases is not limited .",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "6\n5 2\n\n1\n\n2\n\n2\n\n18 4\n\n2\n\n4\n\n1\n\n1\n\n4\n\n3 1\n\n10 5\n\n9 3\n\n3\n\n3\n\n2\n\n12 4\n\n1\n\n3\n\n1\n\n3\n\n1\n\n3",
+      "output": "? 1\n\n? 2\n\n? 3\n\n! 2 3\n\n? 9\n\n? 13\n\n? 10\n\n? 14\n\n? 6\n\n! 9 9\n\n! -1\n\n! 5 5\n\n? 3\n\n? 6\n\n? 9\n\n! 6 3\n\n? 1\n\n? 2\n\n? 5\n\n? 6\n\n? 9\n\n? 10\n\n! -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:23",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

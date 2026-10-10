@@ -1,0 +1,38 @@
+{
+  "id": "1926F",
+  "source": "problemset",
+  "contest_id": 1926,
+  "problem_index": "F",
+  "name": "Vlad and Avoiding X",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 2183,
+  "problem_url": "https://codeforces.com/problemset/problem/1926/F",
+  "editorial_url": "https://codeforces.com/blog/entry/126132",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vladislav has a grid of size $$$7 \\times 7$$$, where each cell is colored black or white. In one operation, he can choose any cell and change its color (black $$$\\leftrightarrow$$$ white). Find the minimum number of operations required to ensure that there are no black cells with four diagonal neighbors also being black. The left image shows that initially there are two black cells violating the condition. By flipping one cell, the grid will work.",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 200$$$) — the number of test cases. Then follows the description of the test cases. Each test case consists of $$$7$$$ lines, each containing $$$7$$$ characters. Each of these characters is either $$$\\texttt{W}$$$ or $$$\\texttt{B}$$$, denoting a white or black cell, respectively.",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations required to ensure that there are no black cells with all four diagonal neighbors also being black.",
+  "sample_testcases": [
+    {
+      "input": "4\nWWWWWWW\nWWWWBBB\nWWWWWBW\nWWBBBBB\nWWWBWWW\nWWBBBWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWBBBBBW\nWBBBBBW\nWBBBBBW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWWWWWWW\nWBBBBBW\nBBBBBBB\nBBBBBBB\nWWWWWWW\nBBBBBBB\nBBBBBBB\nBBBBBBB",
+      "output": "1\n2\n0\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

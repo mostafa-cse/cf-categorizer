@@ -1,0 +1,38 @@
+{
+  "id": "702D",
+  "source": "problemset",
+  "contest_id": 702,
+  "problem_index": "D",
+  "name": "Road to Post Office",
+  "rating": 1900,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 3805,
+  "problem_url": "https://codeforces.com/problemset/problem/702/D",
+  "editorial_url": "https://codeforces.com/blog/entry/46319",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasiliy has a car and he wants to get from home to the post office. The distance which he needs to pass equals to d kilometers. Vasiliy's car is not new — it breaks after driven every k kilometers and Vasiliy needs t seconds to repair it. After repairing his car Vasiliy can drive again (but after k kilometers it will break again, and so on). In the beginning of the trip the car is just from repair station. To drive one kilometer on car Vasiliy spends a seconds, to walk one kilometer on foot he needs b seconds ( a < b ). Your task is to find minimal time after which Vasiliy will be able to reach the post office. Consider that in every moment of time Vasiliy can left his car and start to go on foot.",
+  "input_specification": "The first line contains 5 positive integers d , k , a , b , t ( 1 ≤ d ≤ 10 12 ; 1 ≤ k , a , b , t ≤ 10 6 ; a < b ), where: d — the distance from home to the post office; k — the distance, which car is able to drive before breaking; a — the time, which Vasiliy spends to drive 1 kilometer on his car; b — the time, which Vasiliy spends to walk 1 kilometer on foot; t — the time, which Vasiliy spends to repair his car.",
+  "output_specification": "Print the minimal time after which Vasiliy will be able to reach the post office.",
+  "sample_testcases": [
+    {
+      "input": "5 2 1 4 10",
+      "output": "14"
+    },
+    {
+      "input": "5 2 1 4 5",
+      "output": "13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:27",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

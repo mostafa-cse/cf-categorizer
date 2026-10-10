@@ -1,0 +1,38 @@
+{
+  "id": "2190C",
+  "source": "problemset",
+  "contest_id": 2190,
+  "problem_index": "C",
+  "name": "Comparable Permutations",
+  "rating": 2300,
+  "tags": [
+    "greedy",
+    "implementation",
+    "interactive",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 1405,
+  "problem_url": "https://codeforces.com/problemset/problem/2190/C",
+  "editorial_url": "https://codeforces.com/blog/entry/150256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. For a permutation$$$^{\\text{∗}}$$$ $$$g = (g_1, g_2, \\ldots, g_m)$$$, define its reverse as $$$\\operatorname{rev}(g) = (g_m, g_{m-1}, \\ldots, g_1)$$$. There is a hidden permutation $$$p$$$ of size $$$n$$$. Your task is to find the lexicographically smallest$$$^{\\text{†}}$$$ permutation $$$q$$$ of size $$$n$$$ such that $$$q \\gt p$$$ and $$$\\operatorname{rev}(q) \\gt \\operatorname{rev}(p)$$$. However, you do not need to output $$$q$$$ itself. Instead, you must output a permutation $$$r$$$ of size $$$n$$$ such that $$$q_i = p_{r_i}$$$ for all $$$1 \\le i \\le n$$$. If no such $$$q$$$ exists, report that instead. To find the answer, you can ask at most $$$3n$$$ queries of the form $$$\\texttt{? } i \\; j$$$ ($$$1 \\le i, j \\le n$$$). The interactor responds with $$$1$$$ if $$$p_i \\lt p_j$$$ and $$$0$$$ otherwise. The interactor is not adaptive , which means that the permutation $$$p$$$ is fixed throughout the interaction. $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array). $$$^{\\text{†}}$$$ An array $$$x$$$ is lexicographically smaller than array $$$y$$$ (so $$$x \\lt y$$$) if and only if one of the following holds: $$$x$$$ is a prefix of $$$y$$$, but $$$x \\ne y$$$; or Let $$$i$$$ be the first position where $$$x_i \\neq y_i$$$ (if it exists), then $$$x_i \\lt y_i$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^4$$$) — the size of the hidden permutation $$$p$$$. The hidden permutation $$$p$$$ is fixed for the test case and does not change during the interaction. In other words, the interactor is not adaptive . It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^4$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n\n1\n\n4\n\n1\n\n0\n\n1\n\n0\n\n9",
+      "output": "? 2 1\n\n! 1 2 4 5 3\n\n? 2 3\n\n? 1 3\n\n? 1 4\n\n? 2 2\n\n! -1\n\n! 1 2 3 6 7 4 5 8 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:37",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1294F",
+  "source": "problemset",
+  "contest_id": 1294,
+  "problem_index": "F",
+  "name": "Three Paths on a Tree",
+  "rating": 2000,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 7383,
+  "problem_url": "https://codeforces.com/problemset/problem/1294/F",
+  "editorial_url": "https://codeforces.com/blog/entry/73274",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an unweighted tree with $$$n$$$ vertices. Recall that a tree is a connected undirected graph without cycles. Your task is to choose three distinct vertices $$$a, b, c$$$ on this tree such that the number of edges which belong to at least one of the simple paths between $$$a$$$ and $$$b$$$, $$$b$$$ and $$$c$$$, or $$$a$$$ and $$$c$$$ is the maximum possible. See the notes section for a better understanding. The simple path is the path that visits each vertex at most once.",
+  "input_specification": "The first line contains one integer number $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. Next $$$n - 1$$$ lines describe the edges of the tree in form $$$a_i, b_i$$$ ($$$1 \\le a_i$$$, $$$b_i \\le n$$$, $$$a_i \\ne b_i$$$). It is guaranteed that given graph is a tree.",
+  "output_specification": "In the first line print one integer $$$res$$$ — the maximum number of edges which belong to at least one of the simple paths between $$$a$$$ and $$$b$$$, $$$b$$$ and $$$c$$$, or $$$a$$$ and $$$c$$$. In the second line print three integers $$$a, b, c$$$ such that $$$1 \\le a, b, c \\le n$$$ and $$$a \\ne, b \\ne c, a \\ne c$$$. If there are several answers, you can print any.",
+  "sample_testcases": [
+    {
+      "input": "8\n1 2\n2 3\n3 4\n4 5\n4 6\n3 7\n3 8",
+      "output": "5\n1 8 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

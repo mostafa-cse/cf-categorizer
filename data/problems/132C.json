@@ -1,0 +1,38 @@
+{
+  "id": "132C",
+  "source": "problemset",
+  "contest_id": 132,
+  "problem_index": "C",
+  "name": "Logo Turtle",
+  "rating": 1800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 2692,
+  "problem_url": "https://codeforces.com/problemset/problem/132/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3302",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A lot of people associate Logo programming language with turtle graphics. In this case the turtle moves along the straight line and accepts commands \" T \" (\"turn around\") and \" F \" (\"move 1 unit forward\"). You are given a list of commands that will be given to the turtle. You have to change exactly n commands from the list (one command can be changed several times). How far from the starting point can the turtle move after it follows all the commands of the modified list?",
+  "input_specification": "The first line of input contains a string commands — the original list of commands. The string commands contains between 1 and 100 characters, inclusive, and contains only characters \" T \" and \" F \". The second line contains an integer n ( 1 ≤ n ≤ 50 ) — the number of commands you have to change in the list.",
+  "output_specification": "Output the maximum distance from the starting point to the ending point of the turtle's path. The ending point of the turtle's path is turtle's coordinate after it follows all the commands of the modified list.",
+  "sample_testcases": [
+    {
+      "input": "FT\n1",
+      "output": "2"
+    },
+    {
+      "input": "FFFTFFF\n2",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

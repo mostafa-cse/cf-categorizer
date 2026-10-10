@@ -1,0 +1,39 @@
+{
+  "id": "923B",
+  "source": "problemset",
+  "contest_id": 923,
+  "problem_index": "B",
+  "name": "Producing Snow",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 7850,
+  "problem_url": "https://codeforces.com/problemset/problem/923/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58286",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice likes snow a lot! Unfortunately, this year's winter is already over, and she can't expect to have any more of it. Bob has thus bought her a gift — a large snow maker. He plans to make some amount of snow every day. On day i he will make a pile of snow of volume V i and put it in her garden. Each day, every pile will shrink a little due to melting. More precisely, when the temperature on a given day is T i , each pile will reduce its volume by T i . If this would reduce the volume of a pile to or below zero, it disappears forever. All snow piles are independent of each other. Note that the pile made on day i already loses part of its volume on the same day. In an extreme case, this may mean that there are no piles left at the end of a particular day. You are given the initial pile sizes and the temperature on each day. Determine the total volume of snow melted on each day.",
+  "input_specification": "The first line contains a single integer N ( 1 ≤ N ≤ 10 5 ) — the number of days. The second line contains N integers V 1 , V 2 , ..., V N ( 0 ≤ V i ≤ 10 9 ), where V i is the initial size of a snow pile made on the day i . The third line contains N integers T 1 , T 2 , ..., T N ( 0 ≤ T i ≤ 10 9 ), where T i is the temperature on the day i .",
+  "output_specification": "Output a single line with N integers, where the i -th integer represents the total volume of snow melted on day i .",
+  "sample_testcases": [
+    {
+      "input": "3\n10 10 5\n5 7 2",
+      "output": "5 12 4"
+    },
+    {
+      "input": "5\n30 25 20 15 10\n9 10 12 4 13",
+      "output": "9 20 35 11 25"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:36",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

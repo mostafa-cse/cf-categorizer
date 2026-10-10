@@ -1,0 +1,44 @@
+{
+  "id": "581C",
+  "source": "problemset",
+  "contest_id": 581,
+  "problem_index": "C",
+  "name": "Developing Skills",
+  "rating": 1400,
+  "tags": [
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 7692,
+  "problem_url": "https://codeforces.com/problemset/problem/581/C",
+  "editorial_url": "https://codeforces.com/blog/entry/20508",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Petya loves computer games. Finally a game that he's been waiting for so long came out! The main character of this game has n different skills, each of which is characterized by an integer a i from 0 to 100. The higher the number a i is, the higher is the i -th skill of the character. The total rating of the character is calculated as the sum of the values ​​of for all i from 1 to n . The expression ⌊ x ⌋ denotes the result of rounding the number x down to the nearest integer. At the beginning of the game Petya got k improvement units as a bonus that he can use to increase the skills of his character and his total rating. One improvement unit can increase any skill of Petya's character by exactly one. For example, if a 4 = 46 , after using one imporvement unit to this skill, it becomes equal to 47. A hero's skill cannot rise higher more than 100. Thus, it is permissible that some of the units will remain unused. Your task is to determine the optimal way of using the improvement units so as to maximize the overall rating of the character. It is not necessary to use all the improvement units.",
+  "input_specification": "The first line of the input contains two positive integers n and k ( 1 ≤ n ≤ 10 5 , 0 ≤ k ≤ 10 7 ) — the number of skills of the character and the number of units of improvements at Petya's disposal. The second line of the input contains a sequence of n integers a i ( 0 ≤ a i ≤ 100 ), where a i characterizes the level of the i -th skill of the character.",
+  "output_specification": "The first line of the output should contain a single non-negative integer — the maximum total rating of the character that Petya can get using k or less improvement units.",
+  "sample_testcases": [
+    {
+      "input": "2 4\n7 9",
+      "output": "2"
+    },
+    {
+      "input": "3 8\n17 15 19",
+      "output": "5"
+    },
+    {
+      "input": "2 2\n99 100",
+      "output": "20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

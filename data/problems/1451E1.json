@@ -1,0 +1,37 @@
+{
+  "id": "1451E1",
+  "source": "problemset",
+  "contest_id": 1451,
+  "problem_index": "E1",
+  "name": "Bitwise Queries (Easy Version)",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 5648,
+  "problem_url": "https://codeforces.com/problemset/problem/1451/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/84885",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between the easy and hard versions is the constraints on the number of queries. This is an interactive problem. Ridbit has a hidden array $$$a$$$ of $$$n$$$ integers which he wants Ashish to guess. Note that $$$n$$$ is a power of two . Ashish is allowed to ask three different types of queries. They are of the form AND $$$i$$$ $$$j$$$: ask for the bitwise AND of elements $$$a_i$$$ and $$$a_j$$$ $$$(1 \\leq i, j \\le n$$$, $$$i \\neq j)$$$ OR $$$i$$$ $$$j$$$: ask for the bitwise OR of elements $$$a_i$$$ and $$$a_j$$$ $$$(1 \\leq i, j \\le n$$$, $$$i \\neq j)$$$ XOR $$$i$$$ $$$j$$$: ask for the bitwise XOR of elements $$$a_i$$$ and $$$a_j$$$ $$$(1 \\leq i, j \\le n$$$, $$$i \\neq j)$$$ Can you help Ashish guess the elements of the array? In this version, each element takes a value in the range $$$[0, n-1]$$$ (inclusive) and Ashish can ask no more than $$$n+2$$$ queries.",
+  "input_specification": "The first line of input contains one integer $$$n$$$ $$$(4 \\le n \\le 2^{16})$$$ — the length of the array. It is guaranteed that $$$n$$$ is a power of two .",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4\n\n0\n\n2\n\n3",
+      "output": "OR 1 2\n\nOR 2 3\n\nXOR 2 4\n\n! 0 0 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:27",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

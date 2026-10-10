@@ -1,0 +1,47 @@
+{
+  "id": "1154C",
+  "source": "problemset",
+  "contest_id": 1154,
+  "problem_index": "C",
+  "name": "Gourmet Cat",
+  "rating": 1400,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 11683,
+  "problem_url": "https://codeforces.com/problemset/problem/1154/C",
+  "editorial_url": "https://codeforces.com/blog/entry/66586",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has a cat and his cat is a real gourmet! Dependent on a day of the week he eats certain type of food: on Mondays, Thursdays and Sundays he eats fish food ; on Tuesdays and Saturdays he eats rabbit stew ; on other days of week he eats chicken stake . Polycarp plans to go on a trip and already packed his backpack. His backpack contains: $$$a$$$ daily rations of fish food ; $$$b$$$ daily rations of rabbit stew ; $$$c$$$ daily rations of chicken stakes . Polycarp has to choose such day of the week to start his trip that his cat can eat without additional food purchases as long as possible. Print the maximum number of days the cat can eat in a trip without additional food purchases, if Polycarp chooses the day of the week to start his trip optimally.",
+  "input_specification": "The first line of the input contains three positive integers $$$a$$$, $$$b$$$ and $$$c$$$ ($$$1 \\le a, b, c \\le 7\\cdot10^8$$$) — the number of daily rations of fish food , rabbit stew and chicken stakes in Polycarps backpack correspondingly.",
+  "output_specification": "Print the maximum number of days the cat can eat in a trip without additional food purchases, if Polycarp chooses the day of the week to start his trip optimally.",
+  "sample_testcases": [
+    {
+      "input": "2 1 1",
+      "output": "4"
+    },
+    {
+      "input": "3 2 2",
+      "output": "7"
+    },
+    {
+      "input": "1 100 1",
+      "output": "3"
+    },
+    {
+      "input": "30 20 10",
+      "output": "39"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

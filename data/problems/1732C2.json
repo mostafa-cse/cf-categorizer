@@ -1,0 +1,39 @@
+{
+  "id": "1732C2",
+  "source": "problemset",
+  "contest_id": 1732,
+  "problem_index": "C2",
+  "name": "Sheikh (Hard Version)",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "greedy",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 3196,
+  "problem_url": "https://codeforces.com/problemset/problem/1732/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/108327",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The only difference is that in this version $$$q = n$$$. You are given an array of integers $$$a_1, a_2, \\ldots, a_n$$$. The cost of a subsegment of the array $$$[l, r]$$$, $$$1 \\leq l \\leq r \\leq n$$$, is the value $$$f(l, r) = \\operatorname{sum}(l, r) - \\operatorname{xor}(l, r)$$$, where $$$\\operatorname{sum}(l, r) = a_l + a_{l+1} + \\ldots + a_r$$$, and $$$\\operatorname{xor}(l, r) = a_l \\oplus a_{l+1} \\oplus \\ldots \\oplus a_r$$$ ($$$\\oplus$$$ stands for bitwise XOR ). You will have $$$q$$$ queries. Each query is given by a pair of numbers $$$L_i$$$, $$$R_i$$$, where $$$1 \\leq L_i \\leq R_i \\leq n$$$. You need to find the subsegment $$$[l, r]$$$, $$$L_i \\leq l \\leq r \\leq R_i$$$, with maximum value $$$f(l, r)$$$. If there are several answers, then among them you need to find a subsegment with the minimum length, that is, the minimum value of $$$r - l + 1$$$.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\leq n \\leq 10^5$$$, $$$q = n$$$) — the length of the array and the number of queries. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 10^9$$$) — array elements. $$$i$$$-th of the next $$$q$$$ lines of each test case contains two integers $$$L_i$$$ and $$$R_i$$$ ($$$1 \\leq L_i \\leq R_i \\leq n$$$) — the boundaries in which we need to find the segment. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. It is guaranteed that $$$L_1 = 1$$$ and $$$R_1 = n$$$.",
+  "output_specification": "For each test case print $$$q$$$ pairs of numbers $$$L_i \\leq l \\leq r \\leq R_i$$$ such that the value $$$f(l, r)$$$ is maximum and among such the length $$$r - l + 1$$$ is minimum. If there are several correct answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n0\n1 1\n2 2\n5 10\n1 2\n2 2\n3 3\n0 2 4\n1 3\n1 2\n2 3\n4 4\n0 12 8 3\n1 4\n1 3\n2 4\n2 3\n5 5\n21 32 32 32 10\n1 5\n1 4\n1 3\n2 5\n3 5\n7 7\n0 1 0 1 0 1 0\n1 7\n3 6\n2 5\n1 4\n4 7\n2 6\n2 7",
+      "output": "1 1\n1 1\n2 2\n1 1\n1 1\n2 2\n2 3\n2 3\n2 3\n2 3\n2 3\n2 3\n2 3\n2 3\n3 4\n2 4\n4 6\n2 4\n2 4\n4 6\n2 4\n2 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

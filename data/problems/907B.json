@@ -1,0 +1,42 @@
+{
+  "id": "907B",
+  "source": "problemset",
+  "contest_id": 907,
+  "problem_index": "B",
+  "name": "Tic-Tac-Toe",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 4422,
+  "problem_url": "https://codeforces.com/problemset/problem/907/B",
+  "editorial_url": "https://codeforces.com/blog/entry/56601",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Two bears are playing tic-tac-toe via mail. It's boring for them to play usual tic-tac-toe game, so they are a playing modified version of this game. Here are its rules. The game is played on the following field. Players are making moves by turns. At first move a player can put his chip in any cell of any small field. For following moves, there are some restrictions: if during last move the opposite player put his chip to cell with coordinates ( x l , y l ) in some small field, the next move should be done in one of the cells of the small field with coordinates ( x l , y l ) . For example, if in the first move a player puts his chip to lower left cell of central field, then the second player on his next move should put his chip into some cell of lower left field (pay attention to the first test case). If there are no free cells in the required field, the player can put his chip to any empty cell on any field. You are given current state of the game and coordinates of cell in which the last move was done. You should find all cells in which the current player can put his chip. A hare works as a postman in the forest, he likes to foul bears. Sometimes he changes the game field a bit, so the current state of the game could be unreachable. However, after his changes the cell where the last move was done is not empty. You don't need to find if the state is unreachable or not, just output possible next moves according to the rules.",
+  "input_specification": "First 11 lines contains descriptions of table with 9 rows and 9 columns which are divided into 9 small fields by spaces and empty lines. Each small field is described by 9 characters without spaces and empty lines. character \" x \" (ASCII-code 120) means that the cell is occupied with chip of the first player, character \" o \" (ASCII-code 111) denotes a field occupied with chip of the second player, character \".\" (ASCII-code 46) describes empty cell. The line after the table contains two integers x and y ( 1 ≤ x , y ≤ 9 ). They describe coordinates of the cell in table where the last move was done. Rows in the table are numbered from up to down and columns are numbered from left to right. It's guaranteed that cell where the last move was done is filled with \" x \" or \" o \". Also, it's guaranteed that there is at least one empty cell. It's not guaranteed that current state of game is reachable.",
+  "output_specification": "Output the field in same format with characters \" ! \" (ASCII-code 33) on positions where the current player can put his chip. All other cells should not be modified.",
+  "sample_testcases": [
+    {
+      "input": "... ... ...\n... ... ...\n... ... ...\n... ... ...\n... ... ...\n... x.. ...\n... ... ...\n... ... ...\n... ... ...\n6 4",
+      "output": "... ... ...\n... ... ...\n... ... ...\n... ... ...\n... ... ...\n... x.. ...\n!!! ... ...\n!!! ... ...\n!!! ... ..."
+    },
+    {
+      "input": "xoo x.. x..\nooo ... ...\nooo ... ...\nx.. x.. x..\n... ... ...\n... ... ...\nx.. x.. x..\n... ... ...\n... ... ...\n7 4",
+      "output": "xoo x!! x!!\nooo !!! !!!\nooo !!! !!!\nx!! x!! x!!\n!!! !!! !!!\n!!! !!! !!!\nx!! x!! x!!\n!!! !!! !!!\n!!! !!! !!!"
+    },
+    {
+      "input": "o.. ... ...\n... ... ...\n... ... ...\n... xxx ...\n... xox ...\n... ooo ...\n... ... ...\n... ... ...\n... ... ...\n5 5",
+      "output": "o!! !!! !!!\n!!! !!! !!!\n!!! !!! !!!\n!!! xxx !!!\n!!! xox !!!\n!!! ooo !!!\n!!! !!! !!!\n!!! !!! !!!\n!!! !!! !!!"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

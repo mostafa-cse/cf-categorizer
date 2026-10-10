@@ -1,0 +1,48 @@
+{
+  "id": "1157D",
+  "source": "problemset",
+  "contest_id": 1157,
+  "problem_index": "D",
+  "name": "N Problems During K Days",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 4047,
+  "problem_url": "https://codeforces.com/problemset/problem/1157/D",
+  "editorial_url": "https://codeforces.com/blog/entry/66737",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has to solve exactly $$$n$$$ problems to improve his programming skill before an important programming competition. But this competition will be held very soon, most precisely, it will start in $$$k$$$ days. It means that Polycarp has exactly $$$k$$$ days for training! Polycarp doesn't want to procrastinate, so he wants to solve at least one problem during each of $$$k$$$ days. He also doesn't want to overwork, so if he solves $$$x$$$ problems during some day, he should solve no more than $$$2x$$$ problems during the next day. And, at last, he wants to improve his skill, so if he solves $$$x$$$ problems during some day, he should solve at least $$$x+1$$$ problem during the next day. More formally: let $$$[a_1, a_2, \\dots, a_k]$$$ be the array of numbers of problems solved by Polycarp. The $$$i$$$-th element of this array is the number of problems Polycarp solves during the $$$i$$$-th day of his training. Then the following conditions must be satisfied: sum of all $$$a_i$$$ for $$$i$$$ from $$$1$$$ to $$$k$$$ should be $$$n$$$; $$$a_i$$$ should be greater than zero for each $$$i$$$ from $$$1$$$ to $$$k$$$; the condition $$$a_i \\lt a_{i + 1} \\le 2 a_i$$$ should be satisfied for each $$$i$$$ from $$$1$$$ to $$$k-1$$$. Your problem is to find any array $$$a$$$ of length $$$k$$$ satisfying the conditions above or say that it is impossible to do it.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^9, 1 \\le k \\le 10^5$$$) — the number of problems Polycarp wants to solve and the number of days Polycarp wants to train.",
+  "output_specification": "If it is impossible to find any array $$$a$$$ of length $$$k$$$ satisfying Polycarp's rules of training, print \" NO \" in the first line. Otherwise print \" YES \" in the first line, then print $$$k$$$ integers $$$a_1, a_2, \\dots, a_k$$$ in the second line, where $$$a_i$$$ should be the number of problems Polycarp should solve during the $$$i$$$-th day. If there are multiple answers, you can print any.",
+  "sample_testcases": [
+    {
+      "input": "26 6",
+      "output": "YES\n1 2 4 5 6 8"
+    },
+    {
+      "input": "8 3",
+      "output": "NO"
+    },
+    {
+      "input": "1 1",
+      "output": "YES\n1"
+    },
+    {
+      "input": "9 4",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

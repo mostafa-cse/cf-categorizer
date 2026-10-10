@@ -1,0 +1,38 @@
+{
+  "id": "850F",
+  "source": "problemset",
+  "contest_id": 850,
+  "problem_index": "F",
+  "name": "Rainbow Balls",
+  "rating": 2800,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 906,
+  "problem_url": "https://codeforces.com/problemset/problem/850/F",
+  "editorial_url": "https://codeforces.com/blog/entry/54317",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a bag of balls of n different colors. You have a i balls of the i -th color. While there are at least two different colored balls in the bag, perform the following steps: Take out two random balls without replacement one by one. These balls might be the same color. Color the second ball to the color of the first ball. You are not allowed to switch the order of the balls in this step. Place both balls back in the bag. All these actions take exactly one second. Let M = 10 9 + 7 . It can be proven that the expected amount of time needed before you stop can be represented as a rational number , where P and Q are coprime integers and where Q is not divisible by M . Return the value .",
+  "input_specification": "The first line of input will contain a single integer n ( 1 ≤ n ≤ 2 500 ) — the number of colors. The next line of input will contain n space separated integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 5 ) — the number of balls of each color.",
+  "output_specification": "Print a single integer, the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "2\n1 1",
+      "output": "1"
+    },
+    {
+      "input": "3\n1 2 3",
+      "output": "750000026"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Math",
+  "subtopic": "Probabilities and Expected Values",
+  "subsubtopic": "393. Probabilities and Expected Values",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Probabilities and Expected Values paradigm under the Math framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

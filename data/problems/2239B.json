@@ -1,0 +1,37 @@
+{
+  "id": "2239B",
+  "source": "problemset",
+  "contest_id": 2239,
+  "problem_index": "B",
+  "name": "Decidophobia",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 7561,
+  "problem_url": "https://codeforces.com/problemset/problem/2239/B",
+  "editorial_url": "https://codeforces.com/blog/entry/154788",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ people attending a round-table party, numbered $$$1, 2, 3, \\ldots, n$$$ in clockwise order. You have prepared some gifts to distribute among them. Each person $$$i$$$ has a weight $$$a_i$$$ and a common field of view $$$d$$$. The field of view for person $$$i$$$ consists of the $$$d$$$ people sitting clockwise and the $$$d$$$ people sitting counter-clockwise from them (a total of $$$2d$$$ people excluding person $$$i$$$). The happiness gained by person $$$i$$$ is determined by the following rules: If person $$$i$$$ receives a gift, and there are $$$x$$$ people within their field of view who did not receive a gift, they gain $$$x \\cdot a_i$$$ happiness. If person $$$i$$$ does not receive a gift, and there are $$$x$$$ people within their field of view who received a gift, they incur $$$-x \\cdot a_i$$$ happiness. You want to maximize the total happiness of all $$$n$$$ people combined. Find this maximum value.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$d$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le d \\lt \\frac{n}{2}$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^8$$$), where $$$a_i$$$ is the weight of the $$$i$$$-th person. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer representing the maximum total happiness.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 1\n1 2 3\n5 1\n1 4 5 2 6\n6 2\n1 1 4 5 1 4\n10 2\n230 24 3 42 432 234 934 2389 333 444\n3 1\n100000000 100000000 100000000",
+      "output": "3\n15\n26\n8590\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

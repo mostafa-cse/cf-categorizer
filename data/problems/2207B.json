@@ -1,0 +1,36 @@
+{
+  "id": "2207B",
+  "source": "problemset",
+  "contest_id": 2207,
+  "problem_index": "B",
+  "name": "One Night At Freddy's",
+  "rating": 1600,
+  "tags": [
+    "games",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 6860,
+  "problem_url": "https://codeforces.com/problemset/problem/2207/B",
+  "editorial_url": "https://codeforces.com/blog/entry/151886",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Five Nights at Freddy's 1 Song — The Living Tombstone Let $$$n, m, \\ell$$$ be positive integers. You have made the unfortunate decision to work as a night guard at Freddy Fazbear's Pizzeria, where there are $$$m$$$ animatronics numbered $$$1, \\ldots, m$$$ waiting to jumpscare you. The night consists of $$$\\ell$$$ seconds, numbered $$$1, \\ldots, \\ell$$$. The $$$j$$$-th of the $$$m$$$ animatronics has a danger level $$$d_j$$$, and initially $$$d_1 = \\ldots = d_m = 0$$$. Every second, the danger level of exactly one animatronic will increase by $$$1$$$, and throughout the night, you are able to observe all values of $$$d_j$$$ at the current time. For example, if $$$m = 2$$$, one possible list of danger levels after $$$5$$$ seconds is $$$[d_1, d_2] = [2, 3]$$$. You are not defenseless, however. At each of the $$$n$$$ fixed times $$$a_i$$$ ($$$1 \\leq a_1 \\lt \\ldots \\lt a_n \\leq \\ell$$$), you can shine your flashlight on exactly one animatronic $$$j_i$$$ of your choice. This occurs immediately after the $$$a_i$$$-th second and sets its danger level back to zero, i.e. $$$d_{j_i} := 0$$$. Note that this choice is made independently for each flashlight use $$$a_i$$$. Continuing the example from before, if $$$a_1 = 5$$$ and you choose to flash the second animatronic at that time, the danger levels after $$$5$$$ seconds will be $$$[d_1, d_2] = [2, 0]$$$. Let the overall danger be the maximum danger across all animatronics, i.e. $$$\\max_{1 \\leq j \\leq m} d_j$$$. You will lose if the overall danger at the end of the night (after $$$\\ell$$$ seconds) is greater than $$$x$$$. Find the minimum value of $$$x$$$ such that regardless of the actions of the animatronics, you can guarantee that overall danger will be less than or equal $$$x$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$\\ell$$$ ($$$1 \\leq n, m, \\ell \\leq 2 \\cdot 10^5, n \\leq \\ell, 1 \\leq m \\cdot \\ell \\leq 2 \\cdot 10^5$$$) — the number of flashlight actions, animatronics, and the length of the night, respectively. The next line contains $$$n$$$ integers $$$a_i$$$ ($$$1 \\leq a_1 \\lt \\ldots \\lt a_n \\leq \\ell$$$) — the times at which you get to shine your flashlight. It is guaranteed that the sum of $$$m \\cdot \\ell$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum $$$x$$$ such that you can guarantee that your final danger level is at most $$$x$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n1 2 10\n10\n5 1 32\n1 4 9 16 25\n2 3 40\n13 37\n2 2 7\n6 7\n8 5 60\n3 17 20 28 36 44 45 50\n6 7 1987\n6 7 66 77 666 777\n1 1 1\n1",
+      "output": "5\n7\n19\n1\n19\n1477\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

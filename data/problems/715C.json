@@ -1,0 +1,41 @@
+{
+  "id": "715C",
+  "source": "problemset",
+  "contest_id": 715,
+  "problem_index": "C",
+  "name": "Digit Tree",
+  "rating": 2700,
+  "tags": [
+    "dfs and similar",
+    "divide and conquer",
+    "dsu",
+    "trees"
+  ],
+  "solved_count": 2858,
+  "problem_url": "https://codeforces.com/problemset/problem/715/C",
+  "editorial_url": "https://codeforces.com/blog/entry/47169",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "ZS the Coder has a large tree. It can be represented as an undirected connected graph of n vertices numbered from 0 to n - 1 and n - 1 edges between them. There is a single nonzero digit written on each edge. One day, ZS the Coder was bored and decided to investigate some properties of the tree. He chose a positive integer M , which is coprime to 10 , i.e. . ZS consider an ordered pair of distinct vertices ( u , v ) interesting when if he would follow the shortest path from vertex u to vertex v and write down all the digits he encounters on his path in the same order, he will get a decimal representaion of an integer divisible by M . Formally, ZS consider an ordered pair of distinct vertices ( u , v ) interesting if the following states true: Let a 1 = u , a 2 , ..., a k = v be the sequence of vertices on the shortest path from u to v in the order of encountering them; Let d i ( 1 ≤ i < k ) be the digit written on the edge between vertices a i and a i + 1 ; The integer is divisible by M . Help ZS the Coder find the number of interesting pairs!",
+  "input_specification": "The first line of the input contains two integers, n and M ( 2 ≤ n ≤ 100 000 , 1 ≤ M ≤ 10 9 , ) — the number of vertices and the number ZS has chosen respectively. The next n - 1 lines contain three integers each. i -th of them contains u i , v i and w i , denoting an edge between vertices u i and v i with digit w i written on it ( 0 ≤ u i , v i < n ,  1 ≤ w i ≤ 9 ).",
+  "output_specification": "Print a single integer — the number of interesting (by ZS the Coder's consideration) pairs.",
+  "sample_testcases": [
+    {
+      "input": "6 7\n0 1 2\n4 2 4\n2 0 1\n3 0 9\n2 5 7",
+      "output": "7"
+    },
+    {
+      "input": "5 11\n1 2 3\n2 0 3\n3 0 3\n4 3 3",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:25",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

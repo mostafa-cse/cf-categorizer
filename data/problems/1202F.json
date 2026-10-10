@@ -1,0 +1,40 @@
+{
+  "id": "1202F",
+  "source": "problemset",
+  "contest_id": 1202,
+  "problem_index": "F",
+  "name": "You Are Given Some Letters...",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 668,
+  "problem_url": "https://codeforces.com/problemset/problem/1202/F",
+  "editorial_url": "https://codeforces.com/blog/entry/68972",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$a$$$ uppercase Latin letters 'A' and $$$b$$$ letters 'B'. The period of the string is the smallest such positive integer $$$k$$$ that $$$s_i = s_{i~mod~k}$$$ ($$$0$$$-indexed) for each $$$i$$$. Note that this implies that $$$k$$$ won't always divide $$$a+b = |s|$$$. For example, the period of string \"ABAABAA\" is $$$3$$$, the period of \"AAAA\" is $$$1$$$, and the period of \"AABBB\" is $$$5$$$. Find the number of different periods over all possible strings with $$$a$$$ letters 'A' and $$$b$$$ letters 'B'.",
+  "input_specification": "The first line contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le 10^9$$$) — the number of letters 'A' and 'B', respectively.",
+  "output_specification": "Print the number of different periods over all possible strings with $$$a$$$ letters 'A' and $$$b$$$ letters 'B'.",
+  "sample_testcases": [
+    {
+      "input": "2 4",
+      "output": "4"
+    },
+    {
+      "input": "5 3",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:32",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

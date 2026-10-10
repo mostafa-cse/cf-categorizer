@@ -1,0 +1,41 @@
+{
+  "id": "280C",
+  "source": "problemset",
+  "contest_id": 280,
+  "problem_index": "C",
+  "name": "Game on Tree",
+  "rating": 2200,
+  "tags": [
+    "implementation",
+    "math",
+    "probabilities",
+    "trees"
+  ],
+  "solved_count": 5686,
+  "problem_url": "https://codeforces.com/problemset/problem/280/C",
+  "editorial_url": "https://codeforces.com/blog/entry/6939",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Momiji has got a rooted tree, consisting of n nodes. The tree nodes are numbered by integers from 1 to n . The root has number 1 . Momiji decided to play a game on this tree. The game consists of several steps. On each step, Momiji chooses one of the remaining tree nodes (let's denote it by v ) and removes all the subtree nodes with the root in node v from the tree. Node v gets deleted as well. The game finishes when the tree has no nodes left. In other words, the game finishes after the step that chooses the node number 1 . Each time Momiji chooses a new node uniformly among all the remaining nodes. Your task is to find the expectation of the number of steps in the described game.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 10 5 ) — the number of nodes in the tree. The next n - 1 lines contain the tree edges. The i -th line contains integers a i , b i (1 ≤ a i , b i ≤ n ; a i ≠ b i ) — the numbers of the nodes that are connected by the i -th edge. It is guaranteed that the given graph is a tree.",
+  "output_specification": "Print a single real number — the expectation of the number of steps in the described game. The answer will be considered correct if the absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "1.50000000000000000000"
+    },
+    {
+      "input": "3\n1 2\n1 3",
+      "output": "2.00000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

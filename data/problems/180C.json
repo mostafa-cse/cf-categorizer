@@ -1,0 +1,42 @@
+{
+  "id": "180C",
+  "source": "problemset",
+  "contest_id": 180,
+  "problem_index": "C",
+  "name": "Letter",
+  "rating": 1400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 8817,
+  "problem_url": "https://codeforces.com/problemset/problem/180/C",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Patrick has just finished writing a message to his sweetheart Stacey when he noticed that the message didn't look fancy. Patrick was nervous while writing the message, so some of the letters there were lowercase and some of them were uppercase. Patrick believes that a message is fancy if any uppercase letter stands to the left of any lowercase one. In other words, this rule describes the strings where first go zero or more uppercase letters, and then — zero or more lowercase letters. To make the message fancy, Patrick can erase some letter and add the same letter in the same place in the opposite case (that is, he can replace an uppercase letter with the lowercase one and vice versa). Patrick got interested in the following question: what minimum number of actions do we need to make a message fancy? Changing a letter's case in the message counts as one action. Patrick cannot perform any other actions.",
+  "input_specification": "The only line of the input contains a non-empty string consisting of uppercase and lowercase letters. The string's length does not exceed 10 5 .",
+  "output_specification": "Print a single number — the least number of actions needed to make the message fancy .",
+  "sample_testcases": [
+    {
+      "input": "PRuvetSTAaYA",
+      "output": "5"
+    },
+    {
+      "input": "OYPROSTIYAOPECHATALSYAPRIVETSTASYA",
+      "output": "0"
+    },
+    {
+      "input": "helloworld",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

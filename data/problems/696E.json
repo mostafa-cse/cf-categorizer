@@ -1,0 +1,36 @@
+{
+  "id": "696E",
+  "source": "problemset",
+  "contest_id": 696,
+  "problem_index": "E",
+  "name": "...Wait for it...",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "dsu",
+    "trees"
+  ],
+  "solved_count": 776,
+  "problem_url": "https://codeforces.com/problemset/problem/696/E",
+  "editorial_url": "https://codeforces.com/blog/entry/46031",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Barney is searching for his dream girl. He lives in NYC. NYC has n junctions numbered from 1 to n and n - 1 roads connecting them. We will consider the NYC as a rooted tree with root being junction 1 . m girls live in NYC, i -th of them lives along junction c i and her weight initially equals i pounds. Barney consider a girl x to be better than a girl y if and only if: girl x has weight strictly less than girl y or girl x and girl y have equal weights and index of girl x living junction index is strictly less than girl y living junction index, i.e. c x < c y . Thus for any two girls one of them is always better than another one. For the next q days, one event happens each day. There are two types of events: Barney goes from junction v to junction u . As a result he picks at most k best girls he still have not invited from junctions on his way and invites them to his house to test if one of them is his dream girl. If there are less than k not invited girls on his path, he invites all of them. Girls living along junctions in subtree of junction v (including v itself) put on some weight. As result, their weights increase by k pounds. Your task is for each event of first type tell Barney the indices of girls he will invite to his home in this event.",
+  "input_specification": "The first line of input contains three integers n , m and q ( 1 ≤ n , m , q ≤ 10 5 ) — the number of junctions in NYC, the number of girls living in NYC and the number of events respectively. The next n - 1 lines describes the roads. Each line contains two integers v and u ( 1 ≤ v , u ≤ n , v ≠ u ) meaning that there is a road connecting junctions v and u . The next line contains m integers c 1 , c 2 , ..., c m ( 1 ≤ c i ≤ n ) — the girl's living junctions. The next q lines describe the events in chronological order. Each line starts with an integer t ( 1 ≤ t ≤ 2 ) — type of the event . If t = 1 then the line describes event of first type three integers v , u and k ( 1 ≤ v , u , k ≤ n ) follow — the endpoints of Barney's path and the number of girls that he will invite at most. Otherwise the line describes event of second type and two integers v and k ( 1 ≤ v ≤ n , 1 ≤ k ≤ 10 9 ) follow — the root of the subtree and value by which all the girls' weights in the subtree should increase.",
+  "output_specification": "For each event of the first type, print number t and then t integers g 1 , g 2 , ..., g t in one line, meaning that in this event Barney will invite t girls whose indices are g 1 , ..., g t in the order from the best to the worst according to Barney's considerations.",
+  "sample_testcases": [
+    {
+      "input": "5 7 11\n3 5\n2 3\n4 3\n1 4\n4 1 4 5 4 1 4\n2 4 3\n1 2 1 2\n1 4 2 1\n2 2 10\n2 1 10\n1 2 4 1\n1 2 3 4\n2 5 2\n2 4 9\n1 3 5 2\n1 1 2 3",
+      "output": "2 2 1\n1 3\n1 5\n0\n1 4\n2 6 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

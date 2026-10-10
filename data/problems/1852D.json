@@ -1,0 +1,36 @@
+{
+  "id": "1852D",
+  "source": "problemset",
+  "contest_id": 1852,
+  "problem_index": "D",
+  "name": "Miriany and Matchstick",
+  "rating": 2800,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 681,
+  "problem_url": "https://codeforces.com/problemset/problem/1852/D",
+  "editorial_url": "https://codeforces.com/blog/entry/116940",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Miriany's matchstick is a $$$2 \\times n$$$ grid that needs to be filled with characters A or B . He has already filled in the first row of the grid and would like you to fill in the second row. You must do so in a way such that the number of adjacent pairs of cells with different characters $$$^\\dagger$$$ is equal to $$$k$$$. If it is impossible, report so. $$$^\\dagger$$$ An adjacent pair of cells with different characters is a pair of cells $$$(r_1, c_1)$$$ and $$$(r_2, c_2)$$$ ($$$1 \\le r_1, r_2 \\le 2$$$, $$$1 \\le c_1, c_2 \\le n$$$) such that $$$|r_1 - r_2| + |c_1 - c_2| = 1$$$ and the characters in $$$(r_1, c_1)$$$ and $$$(r_2, c_2)$$$ are different.",
+  "input_specification": "The first line consists of an integer $$$t$$$, the number of test cases ($$$1 \\leq t \\leq 1000$$$). The description of the test cases follows. The first line of each test case has two integers, $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5, 0 \\leq k \\leq 3 \\cdot n$$$) – the number of columns of the matchstick, and the number of adjacent pairs of cells with different characters required. The following line contains string $$$s$$$ of $$$n$$$ characters ($$$s_i$$$ is either A or B ) – Miriany's top row of the matchstick. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if there is no way to fill the second row with the number of adjacent pairs of cells with different characters equals $$$k$$$, output \" NO \". Otherwise, output \" YES \". Then, print $$$n$$$ characters that a valid bottom row for Miriany's matchstick consists of. If there are several answers, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n10 1\nABBAAABBAA\n4 5\nAAAA\n9 17\nBAAABBAAB\n4 9\nABAB",
+      "output": "NO\nYES\nBABB\nYES\nABABAABAB\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "582B",
+  "source": "problemset",
+  "contest_id": 582,
+  "problem_index": "B",
+  "name": "Once Again...",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 3719,
+  "problem_url": "https://codeforces.com/problemset/problem/582/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20692",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array of positive integers a 1 , a 2 , ..., a n × T of length n × T . We know that for any i > n it is true that a i = a i - n . Find the length of the longest non-decreasing sequence of the given array.",
+  "input_specification": "The first line contains two space-separated integers: n , T ( 1 ≤ n ≤ 100 , 1 ≤ T ≤ 10 7 ). The second line contains n space-separated integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 300 ).",
+  "output_specification": "Print a single number — the length of a sought sequence.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n3 1 4 2",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "1748E",
+  "source": "problemset",
+  "contest_id": 1748,
+  "problem_index": "E",
+  "name": "Yet Another Array Counting Problem",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "flows",
+    "math",
+    "trees"
+  ],
+  "solved_count": 2972,
+  "problem_url": "https://codeforces.com/problemset/problem/1748/E",
+  "editorial_url": "https://codeforces.com/blog/entry/108319",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "The position of the leftmost maximum on the segment $$$[l; r]$$$ of array $$$x = [x_1, x_2, \\ldots, x_n]$$$ is the smallest integer $$$i$$$ such that $$$l \\le i \\le r$$$ and $$$x_i = \\max(x_l, x_{l+1}, \\ldots, x_r)$$$. You are given an array $$$a = [a_1, a_2, \\ldots, a_n]$$$ of length $$$n$$$. Find the number of integer arrays $$$b = [b_1, b_2, \\ldots, b_n]$$$ of length $$$n$$$ that satisfy the following conditions: $$$1 \\le b_i \\le m$$$ for all $$$1 \\le i \\le n$$$; for all pairs of integers $$$1 \\le l \\le r \\le n$$$, the position of the leftmost maximum on the segment $$$[l; r]$$$ of the array $$$b$$$ is equal to the position of the leftmost maximum on the segment $$$[l; r]$$$ of the array $$$a$$$. Since the answer might be very large, print its remainder modulo $$$10^9+7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n,m \\le 2 \\cdot 10^5$$$, $$$n \\cdot m \\le 10^6$$$). The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\le a_i \\le m$$$) — the array $$$a$$$. It is guaranteed that the sum of $$$n \\cdot m$$$ over all test cases doesn't exceed $$$10^6$$$.",
+  "output_specification": "For each test case print one integer — the number of arrays $$$b$$$ that satisfy the conditions from the statement, modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n1 3 2\n4 2\n2 2 2 2\n6 9\n6 9 6 9 6 9\n9 100\n10 40 20 20 100 60 80 60 60",
+      "output": "8\n5\n11880\n351025663"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:14",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

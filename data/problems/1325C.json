@@ -1,0 +1,41 @@
+{
+  "id": "1325C",
+  "source": "problemset",
+  "contest_id": 1325,
+  "problem_index": "C",
+  "name": "Ehab and Path-etic MEXs",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 18340,
+  "problem_url": "https://codeforces.com/problemset/problem/1325/C",
+  "editorial_url": "https://codeforces.com/blog/entry/74235",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree consisting of $$$n$$$ nodes. You want to write some labels on the tree's edges such that the following conditions hold: Every label is an integer between $$$0$$$ and $$$n-2$$$ inclusive. All the written labels are distinct. The largest value among $$$MEX(u,v)$$$ over all pairs of nodes $$$(u,v)$$$ is as small as possible. Here, $$$MEX(u,v)$$$ denotes the smallest non-negative integer that isn't written on any edge on the unique simple path from node $$$u$$$ to node $$$v$$$.",
+  "input_specification": "The first line contains the integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — the number of nodes in the tree. Each of the next $$$n-1$$$ lines contains two space-separated integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$) that mean there's an edge between nodes $$$u$$$ and $$$v$$$. It's guaranteed that the given graph is a tree.",
+  "output_specification": "Output $$$n-1$$$ integers. The $$$i^{th}$$$ of them will be the number written on the $$$i^{th}$$$ edge (in the input order).",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n1 3",
+      "output": "0\n1"
+    },
+    {
+      "input": "6\n1 2\n1 3\n2 4\n2 5\n5 6",
+      "output": "0\n3\n2\n4\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

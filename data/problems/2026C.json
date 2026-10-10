@@ -1,0 +1,39 @@
+{
+  "id": "2026C",
+  "source": "problemset",
+  "contest_id": 2026,
+  "problem_index": "C",
+  "name": "Action Figures",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 13123,
+  "problem_url": "https://codeforces.com/problemset/problem/2026/C",
+  "editorial_url": "https://codeforces.com/blog/entry/135680",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a shop that sells action figures near Monocarp's house. A new set of action figures will be released shortly; this set contains $$$n$$$ figures, the $$$i$$$-th figure costs $$$i$$$ coins and is available for purchase from day $$$i$$$ to day $$$n$$$. For each of the $$$n$$$ days, Monocarp knows whether he can visit the shop. Every time Monocarp visits the shop, he can buy any number of action figures which are sold in the shop (of course, he cannot buy an action figure that is not yet available for purchase). If Monocarp buys at least two figures during the same day, he gets a discount equal to the cost of the most expensive figure he buys (in other words, he gets the most expensive of the figures he buys for free). Monocarp wants to buy exactly one $$$1$$$-st figure, one $$$2$$$-nd figure, ..., one $$$n$$$-th figure from the set. He cannot buy the same figure twice. What is the minimum amount of money he has to spend?",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of two lines: the first line contains one integer $$$n$$$ ($$$1 \\le n \\le 4 \\cdot 10^5$$$) — the number of figures in the set (and the number of days); the second line contains a string $$$s$$$ ($$$|s| = n$$$, each $$$s_i$$$ is either 0 or 1 ). If Monocarp can visit the shop on the $$$i$$$-th day, then $$$s_i$$$ is 1 ; otherwise, $$$s_i$$$ is 0 . Additional constraints on the input: in each test case, $$$s_n$$$ is 1 , so Monocarp is always able to buy all figures during the $$$n$$$-th day; the sum of $$$n$$$ over all test cases does not exceed $$$4 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print one integer — the minimum amount of money Monocarp has to spend.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n1\n6\n101101\n7\n1110001\n5\n11111",
+      "output": "1\n8\n18\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

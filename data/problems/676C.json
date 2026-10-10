@@ -1,0 +1,41 @@
+{
+  "id": "676C",
+  "source": "problemset",
+  "contest_id": 676,
+  "problem_index": "C",
+  "name": "Vasya and String",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "dp",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 24014,
+  "problem_url": "https://codeforces.com/problemset/problem/676/C",
+  "editorial_url": "https://codeforces.com/blog/entry/45018",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "High school student Vasya got a string of length n as a birthday present. This string consists of letters ' a ' and ' b ' only. Vasya denotes beauty of the string as the maximum length of a substring (consecutive subsequence) consisting of equal letters. Vasya can change no more than k characters of the original string. What is the maximum beauty of the string he can achieve?",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n ≤ 100 000, 0 ≤ k ≤ n ) — the length of the string and the maximum number of characters to change. The second line contains the string, consisting of letters ' a ' and ' b ' only.",
+  "output_specification": "Print the only integer — the maximum beauty of the string Vasya can achieve by changing no more than k characters.",
+  "sample_testcases": [
+    {
+      "input": "4 2\nabba",
+      "output": "4"
+    },
+    {
+      "input": "8 1\naabaabaa",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

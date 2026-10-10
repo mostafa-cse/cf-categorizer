@@ -1,0 +1,39 @@
+{
+  "id": "607A",
+  "source": "problemset",
+  "contest_id": 607,
+  "problem_index": "A",
+  "name": "Chain Reaction",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "dp"
+  ],
+  "solved_count": 11233,
+  "problem_url": "https://codeforces.com/problemset/problem/607/A",
+  "editorial_url": "https://codeforces.com/blog/entry/22256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n beacons located at distinct positions on a number line. The i -th beacon has position a i and power level b i . When the i -th beacon is activated, it destroys all beacons to its left (direction of decreasing coordinates) within distance b i inclusive. The beacon itself is not destroyed however. Saitama will activate the beacons one at a time from right to left. If a beacon is destroyed, it cannot be activated. Saitama wants Genos to add a beacon strictly to the right of all the existing beacons, with any position and any power level, such that the least possible number of beacons are destroyed. Note that Genos's placement of the beacon means it will be the first beacon activated. Help Genos by finding the minimum number of beacons that could be destroyed.",
+  "input_specification": "The first line of input contains a single integer n ( 1 ≤ n ≤ 100 000 ) — the initial number of beacons. The i -th of next n lines contains two integers a i and b i ( 0 ≤ a i ≤ 1 000 000 , 1 ≤ b i ≤ 1 000 000 ) — the position and power level of the i -th beacon respectively. No two beacons will have the same position, so a i ≠ a j if i ≠ j .",
+  "output_specification": "Print a single integer — the minimum number of beacons that could be destroyed if exactly one beacon is added.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 9\n3 1\n6 1\n7 4",
+      "output": "1"
+    },
+    {
+      "input": "7\n1 1\n2 1\n3 1\n4 1\n5 1\n6 1\n7 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

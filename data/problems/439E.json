@@ -1,0 +1,36 @@
+{
+  "id": "439E",
+  "source": "problemset",
+  "contest_id": 439,
+  "problem_index": "E",
+  "name": "Devu and Birthday Celebration",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1942,
+  "problem_url": "https://codeforces.com/problemset/problem/439/E",
+  "editorial_url": "https://codeforces.com/blog/entry/12545",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Today is Devu's birthday. For celebrating the occasion, he bought n sweets from the nearby market. He has invited his f friends. He would like to distribute the sweets among them. As he is a nice guy and the occasion is great, he doesn't want any friend to be sad, so he would ensure to give at least one sweet to each friend. He wants to celebrate it in a unique style, so he would like to ensure following condition for the distribution of sweets. Assume that he has distributed n sweets to his friends such that i th friend is given a i sweets. He wants to make sure that there should not be any positive integer x > 1 , which divides every a i . Please find the number of ways he can distribute sweets to his friends in the required way. Note that the order of distribution is important, for example [1, 2] and [2, 1] are distinct distributions. As the answer could be very large, output answer modulo 1000000007 (10 9 + 7) . To make the problem more interesting, you are given q queries . Each query contains an n , f pair. For each query please output the required number of ways modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains an integer q representing the number of queries (1 ≤ q ≤ 10 5 ) . Each of the next q lines contains two space space-separated integers n , f (1 ≤ f ≤ n ≤ 10 5 ) .",
+  "output_specification": "For each query, output a single integer in a line corresponding to the answer of each query.",
+  "sample_testcases": [
+    {
+      "input": "5\n6 2\n7 2\n6 3\n6 4\n7 4",
+      "output": "2\n6\n9\n10\n20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

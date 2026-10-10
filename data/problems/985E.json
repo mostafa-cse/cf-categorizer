@@ -1,0 +1,46 @@
+{
+  "id": "985E",
+  "source": "problemset",
+  "contest_id": 985,
+  "problem_index": "E",
+  "name": "Pencils and Boxes",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 4335,
+  "problem_url": "https://codeforces.com/problemset/problem/985/E",
+  "editorial_url": "https://codeforces.com/blog/entry/59623",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mishka received a gift of multicolored pencils for his birthday! Unfortunately he lives in a monochrome world, where everything is of the same color and only saturation differs. This pack can be represented as a sequence a 1 , a 2 , ..., a n of n integer numbers — saturation of the color of each pencil. Now Mishka wants to put all the mess in the pack in order. He has an infinite number of empty boxes to do this. He would like to fill some boxes in such a way that: Each pencil belongs to exactly one box; Each non-empty box has at least k pencils in it; If pencils i and j belong to the same box, then | a i - a j | ≤ d , where | x | means absolute value of x . Note that the opposite is optional, there can be pencils i and j such that | a i - a j | ≤ d and they belong to different boxes. Help Mishka to determine if it's possible to distribute all the pencils into boxes. Print \" YES \" if there exists such a distribution. Otherwise print \" NO \".",
+  "input_specification": "The first line contains three integer numbers n , k and d ( 1 ≤ k ≤ n ≤ 5·10 5 , 0 ≤ d ≤ 10 9 ) — the number of pencils, minimal size of any non-empty box and maximal difference in saturation between any pair of pencils in the same box, respectively. The second line contains n integer numbers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) — saturation of color of each pencil.",
+  "output_specification": "Print \" YES \" if it's possible to distribute all the pencils into boxes and satisfy all the conditions. Otherwise print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "6 3 10\n7 2 7 7 4 2",
+      "output": "YES"
+    },
+    {
+      "input": "6 2 3\n4 5 3 13 4 10",
+      "output": "YES"
+    },
+    {
+      "input": "3 2 5\n10 16 22",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:22",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

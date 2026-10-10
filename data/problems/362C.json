@@ -1,0 +1,41 @@
+{
+  "id": "362C",
+  "source": "problemset",
+  "contest_id": 362,
+  "problem_index": "C",
+  "name": "Insertion Sort",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "dp",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2077,
+  "problem_url": "https://codeforces.com/problemset/problem/362/C",
+  "editorial_url": "https://codeforces.com/blog/entry/9584",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Petya is a beginner programmer. He has already mastered the basics of the C++ language and moved on to learning algorithms. The first algorithm he encountered was insertion sort. Petya has already written the code that implements this algorithm and sorts the given integer zero-indexed array a of size n in the non-decreasing order. for (int i = 1; i < n; i = i + 1) { int j = i; while (j > 0 && a[j] < a[j - 1]) { swap(a[j], a[j - 1]); // swap elements a[j] and a[j - 1] j = j - 1; } } Petya uses this algorithm only for sorting of arrays that are permutations of numbers from 0 to n - 1 . He has already chosen the permutation he wants to sort but he first decided to swap some two of its elements. Petya wants to choose these elements in such a way that the number of times the sorting executes function swap , was minimum. Help Petya find out the number of ways in which he can make the swap and fulfill this requirement. It is guaranteed that it's always possible to swap two elements of the input permutation in such a way that the number of swap function calls decreases.",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 5000 ) — the length of the permutation. The second line contains n different integers from 0 to n - 1 , inclusive — the actual permutation.",
+  "output_specification": "Print two integers: the minimum number of times the swap function is executed and the number of such pairs ( i , j ) that swapping the elements of the input permutation with indexes i and j leads to the minimum number of the executions.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 0 3 1 2",
+      "output": "3 2"
+    },
+    {
+      "input": "5\n1 2 3 4 0",
+      "output": "3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

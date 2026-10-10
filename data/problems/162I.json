@@ -1,0 +1,38 @@
+{
+  "id": "162I",
+  "source": "problemset",
+  "contest_id": 162,
+  "problem_index": "I",
+  "name": "Truncatable primes",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 97,
+  "problem_url": "https://codeforces.com/problemset/problem/162/I",
+  "editorial_url": "https://codeforces.com/blog/entry/4139",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A truncatable prime is a prime number which contains no zeros in decimal notation and all its suffixes are primes. 1 is considered to be not a prime. You are given a positive integer n . Figure out whether it is a truncatable prime.",
+  "input_specification": "The only line of input contains an integer n ( 2 ≤ n ≤ 10 7 ).",
+  "output_specification": "Output \"YES\" if n is a truncatable prime. Output \"NO\" otherwise. Quotes for clarity only.",
+  "sample_testcases": [
+    {
+      "input": "19",
+      "output": "NO"
+    },
+    {
+      "input": "9137",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

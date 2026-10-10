@@ -1,0 +1,38 @@
+{
+  "id": "2178G",
+  "source": "problemset",
+  "contest_id": 2178,
+  "problem_index": "G",
+  "name": "deCH OR Dations",
+  "rating": 2800,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "dp",
+    "hashing",
+    "probabilities"
+  ],
+  "solved_count": 657,
+  "problem_url": "https://codeforces.com/problemset/problem/2178/G",
+  "editorial_url": "https://codeforces.com/blog/entry/149548",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Due to supply chain issues in the North Pole (allegedly caused by a lazy elf), Santa is planning to give out hand-drawn circles as presents this Christmas. Please help him decorate them! There are $$$2n$$$ equally spaced points around the circle, labeled $$$1,2,\\ldots,2n$$$ in clockwise order. Santa has chosen $$$n$$$ chords with distinct endpoints, where chord $$$i$$$ connects the points $$$a_i$$$ and $$$b_i$$$. He draws these chords onto the circle one by one, in order. After Santa has drawn the first $$$\\ell$$$ chords, consider any non-empty subset $$$S$$$ of the $$$\\ell$$$ chords and let $$$1\\leq c_1 \\lt c_2 \\lt \\cdots \\lt c_{|S|}\\leq \\ell$$$ be their indices. $$$S$$$ is defined to be a chain if and only if chord $$$c_k$$$ intersects chord $$$c_{k+1}$$$ for all $$$1\\leq k \\lt |S|$$$. Note that $$$S$$$ is always a chain if $$$|S|=1$$$. Santa does not want any chord to be the odd one out. Therefore, he considers the chords to be tight-knit if and only if every chord appears in an even number of chains , taken over all chains that are subsets of the first $$$\\ell$$$ chords. For each $$$\\ell$$$ from $$$1$$$ to $$$n$$$, help Santa determine whether his chords are tight-knit .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2\\le n\\le 5\\cdot 10^5$$$) — the number of chords. Then $$$n$$$ lines follow, the $$$i$$$-th line containing two integers $$$a_i$$$ and $$$b_i$$$ ($$$1\\le a_i \\lt b_i\\le 2n$$$) — the endpoints of the $$$i$$$-th chord. It is guaranteed that all endpoints are distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a string of length $$$n$$$ — the $$$\\ell$$$-th character should be $$$\\texttt{1}$$$ if the first $$$\\ell$$$ chords are tight-knit and $$$\\texttt{0}$$$ otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n1 6\n2 3\n4 5\n4\n1 7\n3 8\n4 6\n2 5\n5\n1 6\n4 9\n2 7\n5 10\n3 8",
+      "output": "000\n0100\n01111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

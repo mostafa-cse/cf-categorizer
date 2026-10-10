@@ -1,0 +1,45 @@
+{
+  "id": "830D",
+  "source": "problemset",
+  "contest_id": 830,
+  "problem_index": "D",
+  "name": "Singer House",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1054,
+  "problem_url": "https://codeforces.com/problemset/problem/830/D",
+  "editorial_url": "https://codeforces.com/blog/entry/53302",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "It is known that passages in Singer house are complex and intertwined. Let's define a Singer k -house as a graph built by the following process: take complete binary tree of height k and add edges from each vertex to all its successors, if they are not yet present. Singer 4 -house Count the number of non-empty paths in Singer k -house which do not pass the same vertex twice. Two paths are distinct if the sets or the orders of visited vertices are different. Since the answer can be large, output it modulo 10 9 + 7 .",
+  "input_specification": "The only line contains single integer k ( 1 ≤ k ≤ 400 ).",
+  "output_specification": "Print single integer — the answer for the task modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "9"
+    },
+    {
+      "input": "3",
+      "output": "245"
+    },
+    {
+      "input": "20",
+      "output": "550384565"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

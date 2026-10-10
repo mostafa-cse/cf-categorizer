@@ -1,0 +1,43 @@
+{
+  "id": "632C",
+  "source": "problemset",
+  "contest_id": 632,
+  "problem_index": "C",
+  "name": "The Smallest String Concatenation",
+  "rating": 1700,
+  "tags": [
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 11199,
+  "problem_url": "https://codeforces.com/problemset/problem/632/C",
+  "editorial_url": "https://codeforces.com/blog/entry/43493",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You're given a list of n strings a 1 , a 2 , ..., a n . You'd like to concatenate them together in some order such that the resulting string would be lexicographically smallest. Given the list of strings, output the lexicographically smallest concatenation.",
+  "input_specification": "The first line contains integer n — the number of strings ( 1 ≤ n ≤ 5·10 4 ). Each of the next n lines contains one string a i ( 1 ≤ | a i | ≤ 50 ) consisting of only lowercase English letters. The sum of string lengths will not exceed 5·10 4 .",
+  "output_specification": "Print the only string a — the lexicographically smallest string concatenation.",
+  "sample_testcases": [
+    {
+      "input": "4\nabba\nabacaba\nbcd\ner",
+      "output": "abacabaabbabcder"
+    },
+    {
+      "input": "5\nx\nxx\nxxa\nxxaa\nxxaaa",
+      "output": "xxaaaxxaaxxaxxx"
+    },
+    {
+      "input": "3\nc\ncb\ncba",
+      "output": "cbacbc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

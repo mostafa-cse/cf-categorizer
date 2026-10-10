@@ -1,0 +1,39 @@
+{
+  "id": "901B",
+  "source": "problemset",
+  "contest_id": 901,
+  "problem_index": "B",
+  "name": "GCD of Polynomials",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 1654,
+  "problem_url": "https://codeforces.com/problemset/problem/901/B",
+  "editorial_url": "https://codeforces.com/blog/entry/56478",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Suppose you have two polynomials and . Then polynomial can be uniquely represented in the following way: This can be done using long division . Here, denotes the degree of polynomial P ( x ) . is called the remainder of division of polynomial by polynomial , it is also denoted as . Since there is a way to divide polynomials with remainder, we can define Euclid's algorithm of finding the greatest common divisor of two polynomials. The algorithm takes two polynomials . If the polynomial is zero, the result is , otherwise the result is the value the algorithm returns for pair . On each step the degree of the second argument decreases, so the algorithm works in finite number of steps. But how large that number could be? You are to answer this question. You are given an integer n . You have to build two polynomials with degrees not greater than n , such that their coefficients are integers not exceeding 1 by their absolute value, the leading coefficients (ones with the greatest power of x ) are equal to one, and the described Euclid's algorithm performs exactly n steps finding their greatest common divisor. Moreover, the degree of the first polynomial should be greater than the degree of the second. By a step of the algorithm we mean the transition from pair to pair .",
+  "input_specification": "You are given a single integer n ( 1 ≤ n ≤ 150 ) — the number of steps of the algorithm you need to reach.",
+  "output_specification": "Print two polynomials in the following format. In the first line print a single integer m ( 0 ≤ m ≤ n ) — the degree of the polynomial. In the second line print m + 1 integers between - 1 and 1 — the coefficients of the polynomial, from constant to leading. The degree of the first polynomial should be greater than the degree of the second polynomial, the leading coefficients should be equal to 1 . Euclid's algorithm should perform exactly n steps when called using these polynomials. If there is no answer for the given n , print -1 . If there are multiple answer, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "1\n0 1\n0\n1"
+    },
+    {
+      "input": "2",
+      "output": "2\n-1 0 1\n1\n0 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:39",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

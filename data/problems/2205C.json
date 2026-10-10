@@ -1,0 +1,35 @@
+{
+  "id": "2205C",
+  "source": "problemset",
+  "contest_id": 2205,
+  "problem_index": "C",
+  "name": "Simons and Posting Blogs",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 9038,
+  "problem_url": "https://codeforces.com/problemset/problem/2205/C",
+  "editorial_url": "https://codeforces.com/blog/entry/151310",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This life is like a TV show; we're swept along as the plotlines go. — SHUN, TRAP There are $$$n$$$ blogs. The $$$i$$$-th blog mentioned $$$l_i$$$ users in order as an array $$$a_i=[a_{i,1},a_{i,2},\\ldots,a_{i,l_i}]$$$. You are going to post all $$$n$$$ blogs. Let us maintain a sequence $$$Q$$$ that describes the list of users you have recently mentioned. You need to perform the following operation exactly $$$n$$$ times: Choose an unposted blog $$$i$$$ ($$$1\\le i\\le n$$$), then post it. This will cause the following operations for each $$$1\\le j\\le l_i$$$ in order: If $$$a_{i,j}$$$ already exists in $$$Q$$$, then move $$$a_{i,j}$$$ to the beginning of $$$Q$$$. Otherwise, insert $$$a_{i,j}$$$ at the beginning of $$$Q$$$. Find the lexicographically smallest$$$^{\\text{∗}}$$$ $$$Q$$$ after all $$$n$$$ operations. $$$^{\\text{∗}}$$$An array $$$x$$$ is lexicographically smaller than an array $$$y$$$ if and only if one of the following holds: $$$x$$$ is a prefix of $$$y$$$, but $$$x \\ne y$$$; or in the first position where $$$x$$$ and $$$y$$$ differ, the array $$$x$$$ has a smaller element than the corresponding element in $$$y$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line contains a single integer $$$n$$$ ($$$1\\le n\\le 3000$$$) — the number of blogs. Then $$$n$$$ lines follow, the $$$i$$$-th line starting with an integer $$$l_i$$$ ($$$1\\le l_i\\le 3000$$$), describing the number of users mentioned in the $$$i$$$-th blog, which is followed by $$$l_i$$$ integers $$$a_{i,1},a_{i,2},\\ldots,a_{i,l_i}$$$ ($$$1\\le a_{i,j}\\le 10^6$$$) — the list of users mentioned in the $$$i$$$-th blog. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3000$$$. Denote $$$\\sum\\limits_{i=1}^n l_i$$$ as $$$L$$$. It is guaranteed that the sum of $$$L$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "Denote $$$m$$$ as the number of users mentioned in at least one blog. For each test case, output $$$m$$$ integers $$$Q_1,Q_2,\\ldots,Q_m$$$ — the lexicographically smallest $$$Q$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3\n5 1 2 3 4 6\n3 2 5 1\n4 1 9 2 3\n2\n2 1 6\n1 6\n1\n3 6 1 1\n5\n4 2 3 3 4\n5 1 2 4 3 1\n2 4 1\n3 3 3 1\n5 4 3 2 2 2\n5\n4 2 3 1 4\n5 2 5 5 6 5\n5 3 4 7 5 5\n8 3 6 4 3 1 1 5 4\n2 1 1",
+      "output": "1 5 2 3 9 6 4\n6 1\n1 6\n1 3 2 4\n1 4 3 2 5 6 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1276D",
+  "source": "problemset",
+  "contest_id": 1276,
+  "problem_index": "D",
+  "name": "Tree Elimination",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 787,
+  "problem_url": "https://codeforces.com/problemset/problem/1276/D",
+  "editorial_url": "https://codeforces.com/blog/entry/72239",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Vasya has a tree with $$$n$$$ vertices numbered from $$$1$$$ to $$$n$$$, and $$$n - 1$$$ edges numbered from $$$1$$$ to $$$n - 1$$$. Initially each vertex contains a token with the number of the vertex written on it. Vasya plays a game. He considers all edges of the tree by increasing of their indices. For every edge he acts as follows: If both endpoints of the edge contain a token, remove a token from one of the endpoints and write down its number. Otherwise, do nothing. The result of the game is the sequence of numbers Vasya has written down. Note that there may be many possible resulting sequences depending on the choice of endpoints when tokens are removed. Vasya has played for such a long time that he thinks he exhausted all possible resulting sequences he can obtain. He wants you to verify him by computing the number of distinct sequences modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of vertices of the tree. The next $$$n - 1$$$ lines describe edges of the tree. The $$$i$$$-th of these lines contains two integers $$$u_i, v_i$$$ ($$$1 \\leq u_i, v_i \\leq n$$$) — endpoints of the edge with index $$$i$$$. It is guaranteed that the given graph is indeed a tree.",
+  "output_specification": "Print a single integer — the number of distinct sequences modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n1 3\n1 4\n1 5",
+      "output": "5"
+    },
+    {
+      "input": "7\n7 2\n7 6\n1 2\n7 5\n4 7\n3 5",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

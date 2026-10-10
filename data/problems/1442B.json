@@ -1,0 +1,38 @@
+{
+  "id": "1442B",
+  "source": "problemset",
+  "contest_id": 1442,
+  "problem_index": "B",
+  "name": "Identify the Operations",
+  "rating": 1800,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "dsu",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 5528,
+  "problem_url": "https://codeforces.com/problemset/problem/1442/B",
+  "editorial_url": "https://codeforces.com/blog/entry/84298",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "We start with a permutation $$$a_1, a_2, \\ldots, a_n$$$ and with an empty array $$$b$$$. We apply the following operation $$$k$$$ times. On the $$$i$$$-th iteration, we select an index $$$t_i$$$ ($$$1 \\le t_i \\le n-i+1$$$), remove $$$a_{t_i}$$$ from the array, and append one of the numbers $$$a_{t_i-1}$$$ or $$$a_{t_i+1}$$$ (if $$$t_i-1$$$ or $$$t_i+1$$$ are within the array bounds) to the right end of the array $$$b$$$. Then we move elements $$$a_{t_i+1}, \\ldots, a_n$$$ to the left in order to fill in the empty space. You are given the initial permutation $$$a_1, a_2, \\ldots, a_n$$$ and the resulting array $$$b_1, b_2, \\ldots, b_k$$$. All elements of an array $$$b$$$ are distinct . Calculate the number of possible sequences of indices $$$t_1, t_2, \\ldots, t_k$$$ modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 100\\,000$$$), denoting the number of test cases, followed by a description of the test cases. The first line of each test case contains two integers $$$n, k$$$ ($$$1 \\le k \\lt n \\le 200\\,000$$$): sizes of arrays $$$a$$$ and $$$b$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$): elements of $$$a$$$. All elements of $$$a$$$ are distinct . The third line of each test case contains $$$k$$$ integers $$$b_1, b_2, \\ldots, b_k$$$ ($$$1 \\le b_i \\le n$$$): elements of $$$b$$$. All elements of $$$b$$$ are distinct . The sum of all $$$n$$$ among all test cases is guaranteed to not exceed $$$200\\,000$$$.",
+  "output_specification": "For each test case print one integer: the number of possible sequences modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 3\n1 2 3 4 5\n3 2 5\n4 3\n4 3 2 1\n4 3 1\n7 4\n1 4 7 3 6 2 5\n3 2 4 5",
+      "output": "2\n0\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

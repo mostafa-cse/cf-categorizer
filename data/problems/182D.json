@@ -1,0 +1,42 @@
+{
+  "id": "182D",
+  "source": "problemset",
+  "contest_id": 182,
+  "problem_index": "D",
+  "name": "Common Divisors",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "hashing",
+    "implementation",
+    "math",
+    "strings"
+  ],
+  "solved_count": 9534,
+  "problem_url": "https://codeforces.com/problemset/problem/182/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4408",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has recently learned at school what a number's divisor is and decided to determine a string's divisor. Here is what he came up with. String a is the divisor of string b if and only if there exists a positive integer x such that if we write out string a consecutively x times, we get string b . For example, string \" abab \" has two divisors — \" ab \" and \" abab \". Now Vasya wants to write a program that calculates the number of common divisors of two strings. Please help him.",
+  "input_specification": "The first input line contains a non-empty string s 1 . The second input line contains a non-empty string s 2 . Lengths of strings s 1 and s 2 are positive and do not exceed 10 5 . The strings only consist of lowercase Latin letters.",
+  "output_specification": "Print the number of common divisors of strings s 1 and s 2 .",
+  "sample_testcases": [
+    {
+      "input": "abcdabcd\nabcdabcdabcdabcd",
+      "output": "2"
+    },
+    {
+      "input": "aaa\naa",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:27",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

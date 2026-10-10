@@ -1,0 +1,36 @@
+{
+  "id": "198E",
+  "source": "problemset",
+  "contest_id": 198,
+  "problem_index": "E",
+  "name": "Gripping Story",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "sortings"
+  ],
+  "solved_count": 596,
+  "problem_url": "https://codeforces.com/problemset/problem/198/E",
+  "editorial_url": "https://codeforces.com/blog/entry/4764",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "One day Qwerty the Ranger witnessed two transport ships collide with each other. As a result, all contents of their cargo holds scattered around the space. And now Qwerty wants to pick as many lost items as possible to sell them later. The thing is, both ships had lots of new gravitational grippers, transported to sale. A gripper is a device that can be installed on a spaceship and than draw items in space to itself (\"grip\") and transport them to the ship's cargo hold. Overall the crashed ships lost n gravitational grippers: the i -th gripper is located at a point with coordinates ( x i , y i ) . Each gripper has two features — p i (the power) and r i (the action radius) and can grip any items with mass of no more than p i at distance no more than r i . A gripper itself is an item, too and it has its mass of m i . Qwerty's ship is located at point ( x , y ) and has an old magnetic gripper installed, its characteristics are p and r . There are no other grippers in the ship's cargo holds. Find the largest number of grippers Qwerty can get hold of. As he picks the items, he can arbitrarily install any gripper in the cargo hold of the ship, including the gripper he has just picked. At any moment of time the ship can have only one active gripper installed. We consider all items and the Qwerty's ship immobile when the ranger picks the items, except for when the gripper moves an item — then the item moves to the cargo holds and the ship still remains immobile. We can assume that the ship's cargo holds have enough room for all grippers. Qwerty can use any gripper he finds or the initial gripper an arbitrary number of times.",
+  "input_specification": "The first line contains five integers x , y , p , r and n ( - 10 9 ≤ x , y ≤ 10 9 , 1 ≤ p , r ≤ 10 9 , 1 ≤ n ≤ 250000 ) — the ship's initial position, the initial gripper's features and the number of grippers that got into the space during the collision. Next n lines contain the grippers' descriptions: the i -th line contains five integers x i , y i , m i , p i , r i ( - 10 9 ≤ x i , y i ≤ 10 9 , 1 ≤ m i , p i , r i ≤ 10 9 ) — the i -th gripper's coordinates and features. It is guaranteed that all grippers are located at different points. No gripper is located at the same point with Qwerty's ship.",
+  "output_specification": "Print a single number — the maximum number of grippers Qwerty can draw to his ship. You do not need to count the initial old magnet gripper.",
+  "sample_testcases": [
+    {
+      "input": "0 0 5 10 5\n5 4 7 11 5\n-7 1 4 7 8\n0 2 13 5 6\n2 -3 9 3 4\n13 5 1 9 9",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

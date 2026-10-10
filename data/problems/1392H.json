@@ -1,0 +1,45 @@
+{
+  "id": "1392H",
+  "source": "problemset",
+  "contest_id": 1392,
+  "problem_index": "H",
+  "name": "ZS Shuffles Cards",
+  "rating": 3000,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1239,
+  "problem_url": "https://codeforces.com/problemset/problem/1392/H",
+  "editorial_url": "https://codeforces.com/blog/entry/81565",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "zscoder has a deck of $$$n+m$$$ custom-made cards, which consists of $$$n$$$ cards labelled from $$$1$$$ to $$$n$$$ and $$$m$$$ jokers. Since zscoder is lonely, he wants to play a game with himself using those cards. Initially, the deck is shuffled uniformly randomly and placed on the table. zscoder has a set $$$S$$$ which is initially empty. Every second, zscoder draws the top card from the deck. If the card has a number $$$x$$$ written on it, zscoder removes the card and adds $$$x$$$ to the set $$$S$$$. If the card drawn is a joker, zscoder places all the cards back into the deck and reshuffles (uniformly randomly) the $$$n+m$$$ cards to form a new deck (hence the new deck now contains all cards from $$$1$$$ to $$$n$$$ and the $$$m$$$ jokers). Then, if $$$S$$$ currently contains all the elements from $$$1$$$ to $$$n$$$, the game ends. Shuffling the deck doesn't take time at all. What is the expected number of seconds before the game ends? We can show that the answer can be written in the form $$$\\frac{P}{Q}$$$ where $$$P, Q$$$ are relatively prime integers and $$$Q \\neq 0 \\bmod 998244353$$$. Output the value of $$$(P \\cdot Q^{-1})$$$ modulo $$$998244353$$$.",
+  "input_specification": "The only line of the input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^{6}$$$).",
+  "output_specification": "Output a single integer, the value of $$$(P \\cdot Q^{-1})$$$ modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 1",
+      "output": "5"
+    },
+    {
+      "input": "3 2",
+      "output": "332748127"
+    },
+    {
+      "input": "14 9",
+      "output": "969862773"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

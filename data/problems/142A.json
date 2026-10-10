@@ -1,0 +1,43 @@
+{
+  "id": "142A",
+  "source": "problemset",
+  "contest_id": 142,
+  "problem_index": "A",
+  "name": "Help Farmer",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "math"
+  ],
+  "solved_count": 2877,
+  "problem_url": "https://codeforces.com/problemset/problem/142/A",
+  "editorial_url": "https://codeforces.com/blog/entry/3651",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Once upon a time in the Kingdom of Far Far Away lived Sam the Farmer. Sam had a cow named Dawn and he was deeply attached to her. Sam would spend the whole summer stocking hay to feed Dawn in winter. Sam scythed hay and put it into haystack. As Sam was a bright farmer, he tried to make the process of storing hay simpler and more convenient to use. He collected the hay into cubical hay blocks of the same size. Then he stored the blocks in his barn. After a summer spent in hard toil Sam stored A · B · C hay blocks and stored them in a barn as a rectangular parallelepiped A layers high. Each layer had B rows and each row had C blocks. At the end of the autumn Sam came into the barn to admire one more time the hay he'd been stacking during this hard summer. Unfortunately, Sam was horrified to see that the hay blocks had been carelessly scattered around the barn. The place was a complete mess. As it turned out, thieves had sneaked into the barn. They completely dissembled and took away a layer of blocks from the parallelepiped's front, back, top and sides. As a result, the barn only had a parallelepiped containing ( A - 1) × ( B - 2) × ( C - 2) hay blocks. To hide the evidence of the crime, the thieves had dissembled the parallelepiped into single 1 × 1 × 1 blocks and scattered them around the barn. After the theft Sam counted n hay blocks in the barn but he forgot numbers A , B и C . Given number n , find the minimally possible and maximally possible number of stolen hay blocks.",
+  "input_specification": "The only line contains integer n from the problem's statement ( 1 ≤ n ≤ 10 9 ).",
+  "output_specification": "Print space-separated minimum and maximum number of hay blocks that could have been stolen by the thieves. Note that the answer to the problem can be large enough, so you must use the 64-bit integer type for calculations. Please, do not use the %lld specificator to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d specificator.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "28 41"
+    },
+    {
+      "input": "7",
+      "output": "47 65"
+    },
+    {
+      "input": "12",
+      "output": "48 105"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

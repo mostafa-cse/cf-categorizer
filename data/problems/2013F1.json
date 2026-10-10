@@ -1,0 +1,41 @@
+{
+  "id": "2013F1",
+  "source": "problemset",
+  "contest_id": 2013,
+  "problem_index": "F1",
+  "name": "Game in Tree (Easy Version)",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "games",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 692,
+  "problem_url": "https://codeforces.com/problemset/problem/2013/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/134298",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. In this version, $$$\\mathbf{u = v}$$$. You can make hacks only if both versions of the problem are solved. Alice and Bob are playing a fun game on a tree. This game is played on a tree with $$$n$$$ vertices, numbered from $$$1$$$ to $$$n$$$. Recall that a tree with $$$n$$$ vertices is an undirected connected graph with $$$n - 1$$$ edges. Alice and Bob take turns, with Alice going first. Each player starts at some vertex. On their turn, a player must move from the current vertex to a neighboring vertex that has not yet been visited by anyone. The first player who cannot make a move loses. You are given two vertices $$$u$$$ and $$$v$$$. Represent the simple path from vertex $$$u$$$ to $$$v$$$ as an array $$$p_1, p_2, p_3, \\ldots, p_m$$$, where $$$p_1 = u$$$, $$$p_m = v$$$, and there is an edge between $$$p_i$$$ and $$$p_{i + 1}$$$ for all $$$i$$$ ($$$1 \\le i \\lt m$$$). You need to determine the winner of the game if Alice starts at vertex $$$1$$$ and Bob starts at vertex $$$p_j$$$ for each $$$j$$$ (where $$$1 \\le j \\le m$$$).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. Each of the following $$$n - 1$$$ lines contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le n$$$), denoting an undirected edge between vertices $$$a$$$ and $$$b$$$. It is guaranteed that these edges form a tree. The last line of each test case contains two integers $$$u$$$ and $$$v$$$ ($$$2 \\le u, v \\le n$$$, $$$\\mathbf{u = v}$$$). It is guaranteed that the path from $$$u$$$ to $$$v$$$ does not pass through vertex $$$1$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$m$$$ lines. In the $$$i$$$-th line, print the winner of the game if Alice starts at vertex $$$1$$$ and Bob starts at vertex $$$p_i$$$. Print \" Alice \" (without quotes) if Alice wins, or \" Bob \" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n1 2\n2 3\n2 2\n3\n1 2\n2 3\n3 3\n6\n1 2\n1 3\n2 4\n2 5\n1 6\n4 4",
+      "output": "Bob\nAlice\nAlice"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "1641D",
+  "source": "problemset",
+  "contest_id": 1641,
+  "problem_index": "D",
+  "name": "Two Arrays",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "combinatorics",
+    "greedy",
+    "hashing",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 1572,
+  "problem_url": "https://codeforces.com/problemset/problem/1641/D",
+  "editorial_url": "https://codeforces.com/blog/entry/100249",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Sam changed his school and on the first biology lesson he got a very interesting task about genes. You are given $$$n$$$ arrays, the $$$i$$$-th of them contains $$$m$$$ different integers — $$$a_{i,1}, a_{i,2},\\ldots,a_{i,m}$$$. Also you are given an array of integers $$$w$$$ of length $$$n$$$. Find the minimum value of $$$w_i + w_j$$$ among all pairs of integers $$$(i, j)$$$ ($$$1 \\le i, j \\le n$$$), such that the numbers $$$a_{i,1}, a_{i,2},\\ldots,a_{i,m}, a_{j,1}, a_{j,2},\\ldots,a_{j,m}$$$ are distinct.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$m$$$ ($$$2 \\leq n \\leq 10^5$$$, $$$1 \\le m \\le 5$$$). The $$$i$$$-th of the next $$$n$$$ lines starts with $$$m$$$ distinct integers $$$a_{i,1}, a_{i,2}, \\ldots, a_{i,m}$$$ and then $$$w_i$$$ follows ($$$1\\leq a_{i,j} \\leq 10^9$$$, $$$1 \\leq w_{i} \\leq 10^9$$$).",
+  "output_specification": "Print a single number — the answer to the problem. If there are no suitable pairs $$$(i, j)$$$, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n1 2 5\n4 3 1\n2 3 2\n4 5 3",
+      "output": "5"
+    },
+    {
+      "input": "4 3\n1 2 3 5\n2 3 4 2\n3 4 5 3\n1 3 10 10",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

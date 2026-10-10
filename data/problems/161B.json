@@ -1,0 +1,40 @@
+{
+  "id": "161B",
+  "source": "problemset",
+  "contest_id": 161,
+  "problem_index": "B",
+  "name": "Discounts",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 2105,
+  "problem_url": "https://codeforces.com/problemset/problem/161/B",
+  "editorial_url": "https://codeforces.com/blog/entry/4097",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day Polycarpus stopped by a supermarket on his way home. It turns out that the supermarket is having a special offer for stools. The offer is as follows: if a customer's shopping cart contains at least one stool, the customer gets a 50% discount on the cheapest item in the cart (that is, it becomes two times cheaper). If there are several items with the same minimum price, the discount is available for only one of them! Polycarpus has k carts, and he wants to buy up all stools and pencils from the supermarket. Help him distribute the stools and the pencils among the shopping carts, so that the items' total price (including the discounts) is the least possible. Polycarpus must use all k carts to purchase the items, no shopping cart can remain empty. Each shopping cart can contain an arbitrary number of stools and/or pencils.",
+  "input_specification": "The first input line contains two integers n and k ( 1 ≤ k ≤ n ≤ 10 3 ) — the number of items in the supermarket and the number of carts, correspondingly. Next n lines describe the items as \" c i t i \" (without the quotes), where c i ( 1 ≤ c i ≤ 10 9 ) is an integer denoting the price of the i -th item, t i ( 1 ≤ t i ≤ 2 ) is an integer representing the type of item i ( 1 for a stool and 2 for a pencil). The numbers in the lines are separated by single spaces.",
+  "output_specification": "In the first line print a single real number with exactly one decimal place — the minimum total price of the items, including the discounts. In the following k lines print the descriptions of the items in the carts. In the i -th line print the description of the i -th cart as \" t b 1 b 2 ... b t \" (without the quotes), where t is the number of items in the i -th cart, and the sequence b 1 , b 2 , ..., b t ( 1 ≤ b j ≤ n ) gives the indices of items to put in this cart in the optimal distribution. All indices of items in all carts should be pairwise different, each item must belong to exactly one cart. You can print the items in carts and the carts themselves in any order. The items are numbered from 1 to n in the order in which they are specified in the input. If there are multiple optimal distributions, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n2 1\n3 2\n3 1",
+      "output": "5.5\n2 1 2\n1 3"
+    },
+    {
+      "input": "4 3\n4 1\n1 2\n2 2\n3 2",
+      "output": "8.0\n1 1\n2 4 2\n1 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

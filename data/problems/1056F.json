@@ -1,0 +1,36 @@
+{
+  "id": "1056F",
+  "source": "problemset",
+  "contest_id": 1056,
+  "problem_index": "F",
+  "name": "Write The Contest",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "dp",
+    "math"
+  ],
+  "solved_count": 748,
+  "problem_url": "https://codeforces.com/problemset/problem/1056/F",
+  "editorial_url": "https://codeforces.com/blog/entry/63461",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp, Arkady's friend, prepares to the programming competition and decides to write a contest. The contest consists of $$$n$$$ problems and lasts for $$$T$$$ minutes. Each of the problems is defined by two positive integers $$$a_i$$$ and $$$p_i$$$ — its difficulty and the score awarded by its solution. Polycarp's experience suggests that his skill level is defined with positive real value $$$s$$$, and initially $$$s=1.0$$$. To solve the $$$i$$$-th problem Polycarp needs $$$a_i/s$$$ minutes. Polycarp loves to watch series, and before solving each of the problems he will definitely watch one episode. After Polycarp watches an episode, his skill decreases by $$$10\\%$$$, that is skill level $$$s$$$ decreases to $$$0.9s$$$. Each episode takes exactly $$$10$$$ minutes to watch. When Polycarp decides to solve some problem, he firstly has to watch one episode, and only then he starts solving the problem without breaks for $$$a_i/s$$$ minutes, where $$$s$$$ is his current skill level. In calculation of $$$a_i/s$$$ no rounding is performed, only division of integer value $$$a_i$$$ by real value $$$s$$$ happens. Also, Polycarp can train for some time. If he trains for $$$t$$$ minutes, he increases his skill by $$$C \\cdot t$$$, where $$$C$$$ is some given positive real constant. Polycarp can train only before solving any problem (and before watching series). Duration of the training can be arbitrary real value. Polycarp is interested: what is the largest score he can get in the contest? It is allowed to solve problems in any order, while training is only allowed before solving the first problem .",
+  "input_specification": "The first line contains one integer $$$tc$$$ ($$$1 \\le tc \\le 20$$$) — the number of test cases. Then $$$tc$$$ test cases follow. The first line of each test contains one integer $$$n$$$ ($$$1 \\le n \\le 100$$$) — the number of problems in the contest. The second line of the test contains two real values $$$C, T$$$ ($$$0 \\lt C \\lt 10$$$, $$$0 \\le T \\le 2 \\cdot 10^5$$$), where $$$C$$$ defines the efficiency of the training and $$$T$$$ is the duration of the contest in minutes. Value $$$C, T$$$ are given exactly with three digits after the decimal point. Each of the next $$$n$$$ lines of the test contain characteristics of the corresponding problem: two integers $$$a_i, p_i$$$ ($$$1 \\le a_i \\le 10^4$$$, $$$1 \\le p_i \\le 10$$$) — the difficulty and the score of the problem. It is guaranteed that the value of $$$T$$$ is such that changing it by the $$$0.001$$$ in any direction will not change the test answer. Please note that in hacks you can only use $$$tc = 1$$$.",
+  "output_specification": "Print $$$tc$$$ integers — the maximum possible score in each test case.",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n1.000 31.000\n12 3\n20 6\n30 1\n5 1\n3\n1.000 30.000\n1 10\n10 10\n20 8",
+      "output": "7\n20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

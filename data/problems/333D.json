@@ -1,0 +1,42 @@
+{
+  "id": "333D",
+  "source": "problemset",
+  "contest_id": 333,
+  "problem_index": "D",
+  "name": "Characteristics of Rectangles",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 2296,
+  "problem_url": "https://codeforces.com/problemset/problem/333/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8418",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerald found a table consisting of n rows and m columns. As a prominent expert on rectangular tables, he immediately counted the table's properties, that is, the minimum of the numbers in the corners of the table (minimum of four numbers). However, he did not like the final value — it seemed to be too small. And to make this value larger, he decided to crop the table a little: delete some columns on the left and some on the right, as well as some rows from the top and some from the bottom. Find what the maximum property of the table can be after such cropping. Note that the table should have at least two rows and at least two columns left in the end. The number of cropped rows or columns from each of the four sides can be zero.",
+  "input_specification": "The first line contains two space-separated integers n and m ( 2 ≤ n , m ≤ 1000 ). The following n lines describe the table. The i -th of these lines lists the space-separated integers a i , 1 , a i , 2 , ..., a i , m (0 ≤ a i , j ≤ 10 9 ) — the m numbers standing in the i -th row of the table.",
+  "output_specification": "Print the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n1 2\n3 4",
+      "output": "1"
+    },
+    {
+      "input": "3 3\n1 0 0\n0 1 1\n1 0 0",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:21",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

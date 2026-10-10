@@ -1,0 +1,40 @@
+{
+  "id": "484D",
+  "source": "problemset",
+  "contest_id": 484,
+  "problem_index": "D",
+  "name": "Kindergarten",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3158,
+  "problem_url": "https://codeforces.com/problemset/problem/484/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14592",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In a kindergarten, the children are being divided into groups. The teacher put the children in a line and associated each child with his or her integer charisma value. Each child should go to exactly one group. Each group should be a nonempty segment of consecutive children of a line. A group's sociability is the maximum difference of charisma of two children in the group (in particular, if the group consists of one child, its sociability equals a zero). The teacher wants to divide the children into some number of groups in such way that the total sociability of the groups is maximum. Help him find this value.",
+  "input_specification": "The first line contains integer n — the number of children in the line ( 1 ≤ n ≤ 10 6 ). The second line contains n integers a i — the charisma of the i -th child ( - 10 9 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Print the maximum possible total sociability of all groups.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 1 2",
+      "output": "3"
+    },
+    {
+      "input": "3\n3 3 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

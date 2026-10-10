@@ -1,0 +1,43 @@
+{
+  "id": "500B",
+  "source": "problemset",
+  "contest_id": 500,
+  "problem_index": "B",
+  "name": "New Year Permutation",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 9798,
+  "problem_url": "https://codeforces.com/problemset/problem/500/B",
+  "editorial_url": "https://codeforces.com/blog/entry/15513",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "User ainta has a permutation p 1 , p 2 , ..., p n . As the New Year is coming, he wants to make his permutation as pretty as possible. Permutation a 1 , a 2 , ..., a n is prettier than permutation b 1 , b 2 , ..., b n , if and only if there exists an integer k ( 1 ≤ k ≤ n ) where a 1 = b 1 , a 2 = b 2 , ..., a k - 1 = b k - 1 and a k < b k all holds. As known, permutation p is so sensitive that it could be only modified by swapping two distinct elements. But swapping two elements is harder than you think. Given an n × n binary matrix A , user ainta can swap the values of p i and p j ( 1 ≤ i , j ≤ n , i ≠ j ) if and only if A i , j = 1 . Given the permutation p and the matrix A , user ainta wants to know the prettiest permutation that he can obtain.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 300 ) — the size of the permutation p . The second line contains n space-separated integers p 1 , p 2 , ..., p n — the permutation p that user ainta has. Each integer between 1 and n occurs exactly once in the given permutation. Next n lines describe the matrix A . The i -th line contains n characters ' 0 ' or ' 1 ' and describes the i -th row of A . The j -th character of the i -th line A i , j is the element on the intersection of the i -th row and the j -th column of A. It is guaranteed that, for all integers i , j where 1 ≤ i < j ≤ n , A i , j = A j , i holds. Also, for all integers i where 1 ≤ i ≤ n , A i , i = 0 holds.",
+  "output_specification": "In the first and only line, print n space-separated integers, describing the prettiest permutation that can be obtained.",
+  "sample_testcases": [
+    {
+      "input": "7\n5 2 4 3 6 7 1\n0001001\n0000000\n0000010\n1000001\n0000000\n0010000\n1001000",
+      "output": "1 2 4 3 6 7 5"
+    },
+    {
+      "input": "5\n4 2 1 5 3\n00100\n00011\n10010\n01101\n01010",
+      "output": "1 2 3 4 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

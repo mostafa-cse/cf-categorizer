@@ -1,0 +1,39 @@
+{
+  "id": "267C",
+  "source": "problemset",
+  "contest_id": 267,
+  "problem_index": "C",
+  "name": "Berland Traffic",
+  "rating": 2700,
+  "tags": [
+    "math",
+    "matrices"
+  ],
+  "solved_count": 297,
+  "problem_url": "https://codeforces.com/problemset/problem/267/C",
+  "editorial_url": "https://codeforces.com/blog/entry/6389",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Berland traffic is very different from traffic in other countries. The capital of Berland consists of n junctions and m roads. Each road connects a pair of junctions. There can be multiple roads between a pair of junctions. For each road we know its capacity: value c i is the maximum number of cars that can drive along a road in any direction per a unit of time. For each road, the cars can drive along it in one of two direction. That it, the cars can't simultaneously move in both directions. A road's traffic is the number of cars that goes along it per a unit of time. For road ( a i , b i ) this value is negative, if the traffic moves from b i to a i . A road's traffic can be a non-integer number. The capital has two special junctions — the entrance to the city (junction 1) and the exit from the city (junction n ). For all other junctions it is true that the traffic is not lost there. That is, for all junctions except for 1 and n the incoming traffic sum equals the outgoing traffic sum. Traffic has an unusual peculiarity in the capital of Berland — for any pair of junctions ( x , y ) the sum of traffics along any path from x to y doesn't change depending on the choice of the path. Such sum includes traffic along all roads on the path (possible with the \"minus\" sign, if the traffic along the road is directed against the direction of the road on the path from x to y ). Your task is to find the largest traffic that can pass trough the city per one unit of time as well as the corresponding traffic for each road.",
+  "input_specification": "The first line contains a positive integer n — the number of junctions ( 2 ≤ n ≤ 100 ). The second line contains integer m ( 1 ≤ m ≤ 5000 ) — the number of roads. Next m lines contain the roads' descriptions. Each road contains a group of three numbers a i , b i , c i , where a i , b i are the numbers of junctions, connected by the given road, and c i ( 1 ≤ a i , b i ≤ n ; a i ≠ b i ; 0 ≤ c i ≤ 10000 ) is the largest permissible traffic along this road.",
+  "output_specification": "In the first line print the required largest traffic across the city. Then print m lines, on each line print the speed, at which the traffic moves along the corresponding road. If the direction doesn't match the order of the junctions, given in the input, then print the traffic with the minus sign. Print the numbers with accuracy of at least five digits after the decimal point. If there are many optimal solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "2\n3\n1 2 2\n1 2 4\n2 1 1000",
+      "output": "6.00000\n2.00000\n2.00000\n-2.00000"
+    },
+    {
+      "input": "7\n11\n1 2 7\n1 2 7\n1 3 7\n1 4 7\n2 3 7\n2 5 7\n3 6 7\n4 7 7\n5 4 7\n5 6 7\n6 7 7",
+      "output": "13.00000\n2.00000\n2.00000\n3.00000\n6.00000\n1.00000\n3.00000\n4.00000\n7.00000\n1.00000\n2.00000\n6.00000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

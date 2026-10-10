@@ -1,0 +1,44 @@
+{
+  "id": "1175E",
+  "source": "problemset",
+  "contest_id": 1175,
+  "problem_index": "E",
+  "name": "Minimal Segment Cover",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "divide and conquer",
+    "dp",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 4879,
+  "problem_url": "https://codeforces.com/problemset/problem/1175/E",
+  "editorial_url": "https://codeforces.com/blog/entry/67484",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ intervals in form $$$[l; r]$$$ on a number line. You are also given $$$m$$$ queries in form $$$[x; y]$$$. What is the minimal number of intervals you have to take so that every point ( not necessarily integer ) from $$$x$$$ to $$$y$$$ is covered by at least one of them? If you can't choose intervals so that every point from $$$x$$$ to $$$y$$$ is covered, then print -1 for that query.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 2 \\cdot 10^5$$$) — the number of intervals and the number of queries, respectively. Each of the next $$$n$$$ lines contains two integer numbers $$$l_i$$$ and $$$r_i$$$ ($$$0 \\le l_i \\lt r_i \\le 5 \\cdot 10^5$$$) — the given intervals. Each of the next $$$m$$$ lines contains two integer numbers $$$x_i$$$ and $$$y_i$$$ ($$$0 \\le x_i \\lt y_i \\le 5 \\cdot 10^5$$$) — the queries.",
+  "output_specification": "Print $$$m$$$ integer numbers. The $$$i$$$-th number should be the answer to the $$$i$$$-th query: either the minimal number of intervals you have to take so that every point ( not necessarily integer ) from $$$x_i$$$ to $$$y_i$$$ is covered by at least one of them or -1 if you can't choose intervals so that every point from $$$x_i$$$ to $$$y_i$$$ is covered.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 3\n2 4\n1 3\n1 4\n3 4",
+      "output": "1\n2\n1"
+    },
+    {
+      "input": "3 4\n1 3\n1 3\n4 5\n1 2\n1 3\n1 4\n1 5",
+      "output": "1\n1\n-1\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

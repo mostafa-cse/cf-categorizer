@@ -1,0 +1,43 @@
+{
+  "id": "611F",
+  "source": "problemset",
+  "contest_id": 611,
+  "problem_index": "F",
+  "name": "New Year and Cleaning",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "implementation"
+  ],
+  "solved_count": 565,
+  "problem_url": "https://codeforces.com/problemset/problem/611/F",
+  "editorial_url": "https://codeforces.com/blog/entry/22441",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Limak is a little polar bear. His parents told him to clean a house before the New Year's Eve. Their house is a rectangular grid with h rows and w columns. Each cell is an empty square. He is a little bear and thus he can't clean a house by himself. Instead, he is going to use a cleaning robot. A cleaning robot has a built-in pattern of n moves, defined by a string of the length n . A single move (character) moves a robot to one of four adjacent cells. Each character is one of the following four: ' U ' (up), ' D ' (down), ' L ' (left), ' R ' (right). One move takes one minute. A cleaning robot must be placed and started in some cell. Then it repeats its pattern of moves till it hits a wall (one of four borders of a house). After hitting a wall it can be placed and used again. Limak isn't sure if placing a cleaning robot in one cell will be enough. Thus, he is going to start it w · h times, one time in each cell. Maybe some cells will be cleaned more than once but who cares? Limak asks you one question. How much time will it take to clean a house? Find and print the number of minutes modulo 10 9 + 7 . It's also possible that a cleaning robot will never stop — then print \" -1 \" (without the quotes) instead. Placing and starting a robot takes no time, however, you must count a move when robot hits a wall. Take a look into samples for further clarification.",
+  "input_specification": "The first line contains three integers n , h and w ( 1 ≤ n , h , w ≤ 500 000 ) — the length of the pattern, the number of rows and the number of columns, respectively. The second line contains a string of length n — the pattern of n moves. Each character is one of uppercase letters ' U ', ' D ', ' L ' or ' R '.",
+  "output_specification": "Print one line with the answer. If a cleaning robot will never stop, print \" -1 \" (without the quotes). Otherwise, print the number of minutes it will take to clean a house modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "1 10 2\nR",
+      "output": "30"
+    },
+    {
+      "input": "3 4 6\nRUL",
+      "output": "134"
+    },
+    {
+      "input": "4 1 500000\nRLRL",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

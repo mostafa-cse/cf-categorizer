@@ -1,0 +1,56 @@
+{
+  "id": "1671E",
+  "source": "problemset",
+  "contest_id": 1671,
+  "problem_index": "E",
+  "name": "Preorder",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "divide and conquer",
+    "dp",
+    "dsu",
+    "hashing",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 3407,
+  "problem_url": "https://codeforces.com/problemset/problem/1671/E",
+  "editorial_url": "https://codeforces.com/blog/entry/102181",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a rooted tree of $$$2^n - 1$$$ vertices. Every vertex of this tree has either $$$0$$$ children, or $$$2$$$ children. All leaves of this tree have the same distance from the root, and for every non-leaf vertex, one of its children is the left one, and the other child is the right one. Formally, you are given a perfect binary tree . The vertices of the tree are numbered in the following order: the root has index $$$1$$$; if a vertex has index $$$x$$$, then its left child has index $$$2x$$$, and its right child has index $$$2x+1$$$. Every vertex of the tree has a letter written on it, either A or B . Let's define the character on the vertex $$$x$$$ as $$$s_x$$$. Let the preorder string of some vertex $$$x$$$ be defined in the following way: if the vertex $$$x$$$ is a leaf, then the preorder string of $$$x$$$ be consisting of only one character $$$s_x$$$; otherwise, the preorder string of $$$x$$$ is $$$s_x + f(l_x) + f(r_x)$$$, where $$$+$$$ operator defines concatenation of strings, $$$f(l_x)$$$ is the preorder string of the left child of $$$x$$$, and $$$f(r_x)$$$ is the preorder string of the right child of $$$x$$$. The preorder string of the tree is the preorder string of its root. Now, for the problem itself... You have to calculate the number of different strings that can be obtained as the preorder string of the given tree, if you are allowed to perform the following operation any number of times before constructing the preorder string of the tree: choose any non-leaf vertex $$$x$$$, and swap its children (so, the left child becomes the right one, and vice versa).",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 18$$$). The second line contains a sequence of $$$2^n-1$$$ characters $$$s_1, s_2, \\dots, s_{2^n-1}$$$. Each character is either A or B . The characters are not separated by spaces or anything else.",
+  "output_specification": "Print one integer — the number of different strings that can be obtained as the preorder string of the given tree, if you can apply any number of operations described in the statement. Since it can be very large, print it modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\nBAAAAAAAABBABAB",
+      "output": "16"
+    },
+    {
+      "input": "2\nBAA",
+      "output": "1"
+    },
+    {
+      "input": "2\nABA",
+      "output": "2"
+    },
+    {
+      "input": "2\nAAB",
+      "output": "2"
+    },
+    {
+      "input": "2\nAAA",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

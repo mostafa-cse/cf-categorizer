@@ -1,0 +1,37 @@
+{
+  "id": "1617D2",
+  "source": "problemset",
+  "contest_id": 1617,
+  "problem_index": "D2",
+  "name": "Too Many Impostors (hard version)",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 2135,
+  "problem_url": "https://codeforces.com/problemset/problem/1617/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/97920",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. The only difference between the easy and hard version is the limit on number of questions. There are $$$n$$$ players labelled from $$$1$$$ to $$$n$$$. It is guaranteed that $$$n$$$ is a multiple of $$$3$$$. Among them, there are $$$k$$$ impostors and $$$n-k$$$ crewmates. The number of impostors, $$$k$$$, is not given to you. It is guaranteed that $$$\\frac{n}{3} \\lt k \\lt \\frac{2n}{3}$$$. In each question, you can choose three distinct integers $$$a$$$, $$$b$$$, $$$c$$$ ($$$1 \\le a, b, c \\le n$$$) and ask: \"Among the players labelled $$$a$$$, $$$b$$$ and $$$c$$$, are there more impostors or more crewmates?\" You will be given the integer $$$0$$$ if there are more impostors than crewmates, and $$$1$$$ otherwise. Find the number of impostors $$$k$$$ and the indices of players that are impostors after asking at most $$$n+6$$$ questions. The jury is adaptive , which means the indices of impostors may not be fixed beforehand and can depend on your questions. It is guaranteed that there is at least one set of impostors which fulfills the constraints and the answers to your questions at any time.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). Description of the test cases follows. The first and only line of each test case contains a single integer $$$n$$$ ($$$6 \\le n \\lt 10^4$$$, $$$n$$$ is a multiple of $$$3$$$) — the number of players. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^4$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n6\n\n0\n\n1\n\n9\n\n1",
+      "output": "? 1 2 3\n\n? 3 4 5\n\n! 3 4 1 2\n\n? 7 1 9\n\n! 4 2 3 6 8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

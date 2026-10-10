@@ -1,0 +1,40 @@
+{
+  "id": "535C",
+  "source": "problemset",
+  "contest_id": 535,
+  "problem_index": "C",
+  "name": "Tavas and Karafs",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 4017,
+  "problem_url": "https://codeforces.com/problemset/problem/535/C",
+  "editorial_url": "https://codeforces.com/blog/entry/17401",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Karafs is some kind of vegetable in shape of an 1 × h rectangle. Tavaspolis people love Karafs and they use Karafs in almost any kind of food. Tavas, himself, is crazy about Karafs. Each Karafs has a positive integer height. Tavas has an infinite 1-based sequence of Karafses. The height of the i -th Karafs is s i = A + ( i - 1) × B . For a given m , let's define an m -bite operation as decreasing the height of at most m distinct not eaten Karafses by 1. Karafs is considered as eaten when its height becomes zero. Now SaDDas asks you n queries. In each query he gives you numbers l , t and m and you should find the largest number r such that l ≤ r and sequence s l , s l + 1 , ..., s r can be eaten by performing m -bite no more than t times or print -1 if there is no such number r .",
+  "input_specification": "The first line of input contains three integers A , B and n ( 1 ≤ A , B ≤ 10 6 , 1 ≤ n ≤ 10 5 ). Next n lines contain information about queries. i -th line contains integers l , t , m ( 1 ≤ l , t , m ≤ 10 6 ) for i -th query.",
+  "output_specification": "For each query, print its answer in a single line.",
+  "sample_testcases": [
+    {
+      "input": "2 1 4\n1 5 3\n3 3 10\n7 10 2\n6 4 8",
+      "output": "4\n-1\n8\n-1"
+    },
+    {
+      "input": "1 5 2\n1 5 10\n2 7 4",
+      "output": "1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:07",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

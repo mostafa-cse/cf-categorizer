@@ -1,0 +1,47 @@
+{
+  "id": "698F",
+  "source": "problemset",
+  "contest_id": 698,
+  "problem_index": "F",
+  "name": "Coprime Permutation",
+  "rating": 3000,
+  "tags": [
+    "combinatorics",
+    "number theory"
+  ],
+  "solved_count": 582,
+  "problem_url": "https://codeforces.com/problemset/problem/698/F",
+  "editorial_url": "https://codeforces.com/blog/entry/46148",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Two positive integers are coprime if and only if they don't have a common divisor greater than 1 . Some bear doesn't want to tell Radewoosh how to solve some algorithmic problem. So, Radewoosh is going to break into that bear's safe with solutions. To pass through the door, he must enter a permutation of numbers 1 through n . The door opens if and only if an entered permutation p 1 , p 2 , ..., p n satisfies: In other words, two different elements are coprime if and only if their indices are coprime. Some elements of a permutation may be already fixed. In how many ways can Radewoosh fill the remaining gaps so that the door will open? Print the answer modulo 10 9 + 7 .",
+  "input_specification": "The first line of the input contains one integer n ( 2 ≤ n ≤ 1 000 000 ). The second line contains n integers p 1 , p 2 , ..., p n ( 0 ≤ p i ≤ n ) where p i = 0 means a gap to fill, and p i ≥ 1 means a fixed number. It's guaranteed that if i ≠ j and p i , p j ≥ 1 then p i ≠ p j .",
+  "output_specification": "Print the number of ways to fill the gaps modulo 10 9 + 7 (i.e. modulo 1000000007 ).",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0 0 0",
+      "output": "4"
+    },
+    {
+      "input": "5\n0 0 1 2 0",
+      "output": "2"
+    },
+    {
+      "input": "6\n0 0 1 2 0 0",
+      "output": "0"
+    },
+    {
+      "input": "5\n5 3 4 2 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:29",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

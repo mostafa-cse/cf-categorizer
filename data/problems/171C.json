@@ -1,0 +1,35 @@
+{
+  "id": "171C",
+  "source": "problemset",
+  "contest_id": 171,
+  "problem_index": "C",
+  "name": "A Piece of Cake",
+  "rating": 2000,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 1254,
+  "problem_url": "https://codeforces.com/problemset/problem/171/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4255",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "How to make a cake you'll never eat. Ingredients. 2 carrots 0 calories 100 g chocolate spread 1 pack of flour 1 egg Method. Put calories into the mixing bowl. Take carrots from refrigerator. Chop carrots. Take chocolate spread from refrigerator. Put chocolate spread into the mixing bowl. Combine pack of flour into the mixing bowl. Fold chocolate spread into the mixing bowl. Add chocolate spread into the mixing bowl. Put pack of flour into the mixing bowl. Add egg into the mixing bowl. Fold pack of flour into the mixing bowl. Chop carrots until choped. Pour contents of the mixing bowl into the baking dish. Serves 1.",
+  "input_specification": "The only line of input contains a sequence of integers a 0 , a 1 , ... ( 1 ≤ a 0 ≤ 100 , 0 ≤ a i ≤ 1000 for i ≥ 1 ).",
+  "output_specification": "Output a single integer.",
+  "sample_testcases": [
+    {
+      "input": "4 1 2 3 4",
+      "output": "30"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

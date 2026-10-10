@@ -1,0 +1,43 @@
+{
+  "id": "440D",
+  "source": "problemset",
+  "contest_id": 440,
+  "problem_index": "D",
+  "name": "Berland Federalization",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 1039,
+  "problem_url": "https://codeforces.com/problemset/problem/440/D",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Recently, Berland faces federalization requests more and more often. The proponents propose to divide the country into separate states. Moreover, they demand that there is a state which includes exactly k towns. Currently, Berland has n towns, some pairs of them are connected by bilateral roads. Berland has only n - 1 roads. You can reach any city from the capital, that is, the road network forms a tree . The Ministry of Roads fears that after the reform those roads that will connect the towns of different states will bring a lot of trouble. Your task is to come up with a plan to divide the country into states such that: each state is connected, i.e. for each state it is possible to get from any town to any other using its roads (that is, the roads that connect the state towns), there is a state that consisted of exactly k cities, the number of roads that connect different states is minimum.",
+  "input_specification": "The first line contains integers n , k ( 1 ≤ k ≤ n ≤ 400 ). Then follow n - 1 lines, each of them describes a road in Berland. The roads are given as pairs of integers x i , y i ( 1 ≤ x i , y i ≤ n ; x i ≠ y i ) — the numbers of towns connected by the road. Assume that the towns are numbered from 1 to n .",
+  "output_specification": "The the first line print the required minimum number of \"problem\" roads t . Then print a sequence of t integers — their indices in the found division. The roads are numbered starting from 1 in the order they follow in the input. If there are multiple possible solutions, print any of them. If the solution shows that there are no \"problem\" roads at all, print a single integer 0 and either leave the second line empty or do not print it at all.",
+  "sample_testcases": [
+    {
+      "input": "5 2\n1 2\n2 3\n3 4\n4 5",
+      "output": "1\n2"
+    },
+    {
+      "input": "5 3\n1 2\n1 3\n1 4\n1 5",
+      "output": "2\n3 4"
+    },
+    {
+      "input": "1 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

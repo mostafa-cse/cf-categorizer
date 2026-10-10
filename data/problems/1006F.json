@@ -1,0 +1,45 @@
+{
+  "id": "1006F",
+  "source": "problemset",
+  "contest_id": 1006,
+  "problem_index": "F",
+  "name": "Xor-Paths",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 7497,
+  "problem_url": "https://codeforces.com/problemset/problem/1006/F",
+  "editorial_url": "https://codeforces.com/blog/entry/60672",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a rectangular grid of size $$$n \\times m$$$. Each cell has a number written on it; the number on the cell ($$$i, j$$$) is $$$a_{i, j}$$$. Your task is to calculate the number of paths from the upper-left cell ($$$1, 1$$$) to the bottom-right cell ($$$n, m$$$) meeting the following constraints: You can move to the right or to the bottom only. Formally, from the cell ($$$i, j$$$) you may move to the cell ($$$i, j + 1$$$) or to the cell ($$$i + 1, j$$$). The target cell can't be outside of the grid. The xor of all the numbers on the path from the cell ($$$1, 1$$$) to the cell ($$$n, m$$$) must be equal to $$$k$$$ ( xor operation is the bitwise exclusive OR, it is represented as ' ^ ' in Java or C++ and \" xor \" in Pascal). Find the number of such paths in the given grid.",
+  "input_specification": "The first line of the input contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1 \\le n, m \\le 20$$$, $$$0 \\le k \\le 10^{18}$$$) — the height and the width of the grid, and the number $$$k$$$. The next $$$n$$$ lines contain $$$m$$$ integers each, the $$$j$$$-th element in the $$$i$$$-th line is $$$a_{i, j}$$$ ($$$0 \\le a_{i, j} \\le 10^{18}$$$).",
+  "output_specification": "Print one integer — the number of paths from ($$$1, 1$$$) to ($$$n, m$$$) with xor sum equal to $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3 11\n2 1 5\n7 10 0\n12 6 4",
+      "output": "3"
+    },
+    {
+      "input": "3 4 2\n1 3 3 3\n0 3 3 2\n3 0 1 1",
+      "output": "5"
+    },
+    {
+      "input": "3 4 1000000000000000000\n1 3 3 3\n0 3 3 2\n3 0 1 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

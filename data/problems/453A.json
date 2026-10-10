@@ -1,0 +1,42 @@
+{
+  "id": "453A",
+  "source": "problemset",
+  "contest_id": 453,
+  "problem_index": "A",
+  "name": "Little Pony and Expected Maximum",
+  "rating": 1600,
+  "tags": [
+    "probabilities"
+  ],
+  "solved_count": 13281,
+  "problem_url": "https://codeforces.com/problemset/problem/453/A",
+  "editorial_url": "https://codeforces.com/blog/entry/13190",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Twilight Sparkle was playing Ludo with her friends Rainbow Dash, Apple Jack and Flutter Shy. But she kept losing. Having returned to the castle, Twilight Sparkle became interested in the dice that were used in the game. The dice has m faces: the first face of the dice contains a dot, the second one contains two dots, and so on, the m -th face contains m dots. Twilight Sparkle is sure that when the dice is tossed, each face appears with probability . Also she knows that each toss is independent from others. Help her to calculate the expected maximum number of dots she could get after tossing the dice n times.",
+  "input_specification": "A single line contains two integers m and n ( 1 ≤ m , n ≤ 10 5 ).",
+  "output_specification": "Output a single real number corresponding to the expected maximum. The answer will be considered correct if its relative or absolute error doesn't exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "6 1",
+      "output": "3.500000000000"
+    },
+    {
+      "input": "6 3",
+      "output": "4.958333333333"
+    },
+    {
+      "input": "2 2",
+      "output": "1.750000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2127F",
+  "source": "problemset",
+  "contest_id": 2127,
+  "problem_index": "F",
+  "name": "Hamed and AghaBalaSar",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 3018,
+  "problem_url": "https://codeforces.com/problemset/problem/2127/F",
+  "editorial_url": "https://codeforces.com/blog/entry/145357",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Hamid wrote $$$3014$$$ lines of code for the a+b problem and gave $$$10$$$ lines of it to Hamed; then the following problem came to Hamed's mind. You are given two integers $$$n$$$ and $$$m$$$. An array $$$a_1,a_2,\\ldots,a_n$$$ is called snake if and only if all of the following conditions hold: All elements in $$$a$$$ are integers between $$$0$$$ and $$$m$$$; $$$a_1 + a_2 + \\cdots + a_n = m$$$; $$$a_n=\\max\\left([a_1, a_2, \\ldots, a_n]\\right)$$$. We define $$$f(a)$$$ as in the following pseudocode: function f(array a): pos := 1 res := 0 let nxt[x] be an array such that nxt[x] is the smallest index y such that y > x and a[y] > a[x], or undefined if no such y exists while pos < n: if a[pos] < a[n]: res += a[nxt[pos]] - a[pos] pos := nxt[pos] else: pos += 1 return res Find the sum of $$$f(a)$$$ over all snake arrays $$$a_1,a_2,\\ldots,a_n$$$, modulo $$$10^9+7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$, $$$0 \\leq m \\leq 2 \\cdot 10^5$$$) — the length of a snake array and the sum of all elements in a snake array. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the sum of $$$f(a)$$$ over all snake arrays $$$a_1,a_2,\\ldots,a_n$$$, modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "8\n2 5\n3 4\n4 6\n5 10\n6 23\n100 100\n142857 33333\n200000 0",
+      "output": "9\n14\n76\n985\n142112\n771227753\n865580631\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

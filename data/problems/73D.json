@@ -1,0 +1,44 @@
+{
+  "id": "73D",
+  "source": "problemset",
+  "contest_id": 73,
+  "problem_index": "D",
+  "name": "FreeDiv",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 789,
+  "problem_url": "https://codeforces.com/problemset/problem/73/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1700",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya plays FreeDiv. In this game he manages a huge state, which has n cities and m two-way roads between them. Unfortunately, not from every city you can reach any other one moving along these roads. Therefore Vasya decided to divide the state into provinces so that in every province, one could reach from every city all the cities of the province, but there are no roads between provinces. Unlike other turn-based strategies, in FreeDiv a player has the opportunity to build tunnels between cities. The tunnels are two-way roads along which one can move armies undetected by the enemy. However, no more than one tunnel can be connected to each city. As for Vasya, he wants to build a network of tunnels so that any pair of cities in his state were reachable by some path consisting of roads and a tunnels. But at that no more than k tunnels are connected to each province (otherwise, the province will be difficult to keep in case other provinces are captured by enemy armies). Vasya discovered that maybe he will not be able to build such a network for the current condition of the state. Maybe he'll have first to build several roads between cities in different provinces to merge the provinces. Your task is to determine the minimum number of roads Vasya needs to build so that it was possible to build the required network of tunnels in the resulting state.",
+  "input_specification": "The first line contains three integers n , m and k ( 1 ≤ n , k ≤ 10 6 , 0 ≤ m ≤ 10 6 ). Each of the next m lines contains two integers. They are the numbers of cities connected by a corresponding road. No road connects city to itself and there is at most one road between each pair of cities.",
+  "output_specification": "Print a single number, the minimum number of additional roads.",
+  "sample_testcases": [
+    {
+      "input": "3 3 2\n1 2\n2 3\n3 1",
+      "output": "0"
+    },
+    {
+      "input": "4 2 2\n1 2\n3 4",
+      "output": "0"
+    },
+    {
+      "input": "4 0 2",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

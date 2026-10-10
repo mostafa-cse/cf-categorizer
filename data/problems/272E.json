@@ -1,0 +1,44 @@
+{
+  "id": "272E",
+  "source": "problemset",
+  "contest_id": 272,
+  "problem_index": "E",
+  "name": "Dima and Horses",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "graphs"
+  ],
+  "solved_count": 1359,
+  "problem_url": "https://codeforces.com/problemset/problem/272/E",
+  "editorial_url": "https://codeforces.com/blog/entry/6625",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Dima came to the horse land. There are n horses living in the land. Each horse in the horse land has several enemies (enmity is a symmetric relationship). The horse land isn't very hostile, so the number of enemies of each horse is at most 3. Right now the horse land is going through an election campaign. So the horses trusted Dima to split them into two parts. At that the horses want the following condition to hold: a horse shouldn't have more than one enemy in its party. Help Dima split the horses into parties. Note that one of the parties can turn out to be empty.",
+  "input_specification": "The first line contains two integers n , m — the number of horses in the horse land and the number of enemy pairs. Next m lines define the enemy pairs. The i -th line contains integers a i , b i (1 ≤ a i , b i ≤ n ; a i ≠ b i ) , which mean that horse a i is the enemy of horse b i . Consider the horses indexed in some way from 1 to n . It is guaranteed that each horse has at most three enemies. No pair of enemies occurs more than once in the input.",
+  "output_specification": "Print a line, consisting of n characters: the i -th character of the line must equal \" 0 \", if the horse number i needs to go to the first party, otherwise this character should equal \" 1 \". If there isn't a way to divide the horses as required, print -1 .",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n3 2\n3 1",
+      "output": "100"
+    },
+    {
+      "input": "2 1\n2 1",
+      "output": "00"
+    },
+    {
+      "input": "10 6\n1 2\n1 3\n1 4\n2 3\n2 4\n3 4",
+      "output": "0110000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

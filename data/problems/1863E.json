@@ -1,0 +1,41 @@
+{
+  "id": "1863E",
+  "source": "problemset",
+  "contest_id": 1863,
+  "problem_index": "E",
+  "name": "Speedrun",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "greedy",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 3325,
+  "problem_url": "https://codeforces.com/problemset/problem/1863/E",
+  "editorial_url": "https://codeforces.com/blog/entry/119902",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing a video game. The game has $$$n$$$ quests that need to be completed. However, the $$$j$$$-th quest can only be completed at the beginning of hour $$$h_j$$$ of a game day. The game day is $$$k$$$ hours long. The hours of each game day are numbered $$$0, 1, \\ldots, k - 1$$$. After the first day ends, a new one starts, and so on. Also, there are dependencies between the quests, that is, for some pairs $$$(a_i, b_i)$$$ the $$$b_i$$$-th quest can only be completed after the $$$a_i$$$-th quest. It is guaranteed that there are no circular dependencies , as otherwise the game would be unbeatable and nobody would play it. You are skilled enough to complete any number of quests in a negligible amount of time (i. e. you can complete any number of quests at the beginning of the same hour, even if there are dependencies between them). You want to complete all quests as fast as possible. To do this, you can complete the quests in any valid order. The completion time is equal to the difference between the time of completing the last quest and the time of completing the first quest in this order. Find the least amount of time you need to complete the game.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1\\le t\\le 100\\,000$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1\\le n\\le 200\\,000$$$, $$$0\\le m\\le 200\\,000$$$, $$$1\\le k\\le 10^9$$$) — the number of quests, the number of dependencies between them, and the number of hours in a game day, respectively. The next line contains $$$n$$$ integers $$$h_1, h_2, \\ldots, h_n$$$ ($$$0\\le h_i \\lt k$$$). The next $$$m$$$ lines describe the dependencies. The $$$i$$$-th of these lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1\\le a_i \\lt b_i\\le n$$$) meaning that quest $$$b_i$$$ can only be completed after quest $$$a_i$$$. It is guaranteed that all dependencies are pairwise distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$200\\,000$$$. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$200\\,000$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum completion time.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 4 24\n12 16 18 12\n1 2\n1 3\n2 4\n3 4\n4 3 10\n2 6 5 9\n1 4\n2 4\n3 4\n2 1 10\n5 5\n1 2\n5 0 1000\n8 800 555 35 35\n5 0 10\n3 2 5 4 7\n3 2 5\n4 3 2\n1 2\n2 3",
+      "output": "24\n7\n0\n480\n5\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

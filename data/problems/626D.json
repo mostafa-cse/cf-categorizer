@@ -1,0 +1,41 @@
+{
+  "id": "626D",
+  "source": "problemset",
+  "contest_id": 626,
+  "problem_index": "D",
+  "name": "Jerry's Protest",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "probabilities"
+  ],
+  "solved_count": 3288,
+  "problem_url": "https://codeforces.com/problemset/problem/626/D",
+  "editorial_url": "https://codeforces.com/blog/entry/23522",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andrew and Jerry are playing a game with Harry as the scorekeeper. The game consists of three rounds. In each round, Andrew and Jerry draw randomly without replacement from a jar containing n balls, each labeled with a distinct positive integer. Without looking, they hand their balls to Harry, who awards the point to the player with the larger number and returns the balls to the jar. The winner of the game is the one who wins at least two of the three rounds. Andrew wins rounds 1 and 2 while Jerry wins round 3, so Andrew wins the game. However, Jerry is unhappy with this system, claiming that he will often lose the match despite having the higher overall total. What is the probability that the sum of the three balls Jerry drew is strictly higher than the sum of the three balls Andrew drew?",
+  "input_specification": "The first line of input contains a single integer n ( 2 ≤ n ≤ 2000 ) — the number of balls in the jar. The second line contains n integers a i ( 1 ≤ a i ≤ 5000 ) — the number written on the i th ball. It is guaranteed that no two balls have the same number.",
+  "output_specification": "Print a single real value — the probability that Jerry has a higher total, given that Andrew wins the first two rounds and Jerry wins the third. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct, if .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "0.0000000000"
+    },
+    {
+      "input": "3\n1 2 10",
+      "output": "0.0740740741"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

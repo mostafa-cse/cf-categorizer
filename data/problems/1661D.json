@@ -1,0 +1,47 @@
+{
+  "id": "1661D",
+  "source": "problemset",
+  "contest_id": 1661,
+  "problem_index": "D",
+  "name": "Progressions Covering",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 5556,
+  "problem_url": "https://codeforces.com/problemset/problem/1661/D",
+  "editorial_url": "https://codeforces.com/blog/entry/101790",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays: an array $$$a$$$ consisting of $$$n$$$ zeros and an array $$$b$$$ consisting of $$$n$$$ integers. You can apply the following operation to the array $$$a$$$ an arbitrary number of times: choose some subsegment of $$$a$$$ of length $$$k$$$ and add the arithmetic progression $$$1, 2, \\ldots, k$$$ to this subsegment — i. e. add $$$1$$$ to the first element of the subsegment, $$$2$$$ to the second element, and so on. The chosen subsegment should be inside the borders of the array $$$a$$$ (i.e., if the left border of the chosen subsegment is $$$l$$$, then the condition $$$1 \\le l \\le l + k - 1 \\le n$$$ should be satisfied). Note that the progression added is always $$$1, 2, \\ldots, k$$$ but not the $$$k, k - 1, \\ldots, 1$$$ or anything else (i.e., the leftmost element of the subsegment always increases by $$$1$$$, the second element always increases by $$$2$$$ and so on). Your task is to find the minimum possible number of operations required to satisfy the condition $$$a_i \\ge b_i$$$ for each $$$i$$$ from $$$1$$$ to $$$n$$$. Note that the condition $$$a_i \\ge b_i$$$ should be satisfied for all elements at once.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 3 \\cdot 10^5$$$) — the number of elements in both arrays and the length of the subsegment, respectively. The second line of the input contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 10^{12}$$$), where $$$b_i$$$ is the $$$i$$$-th element of the array $$$b$$$.",
+  "output_specification": "Print one integer — the minimum possible number of operations required to satisfy the condition $$$a_i \\ge b_i$$$ for each $$$i$$$ from $$$1$$$ to $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n5 4 6",
+      "output": "5"
+    },
+    {
+      "input": "6 3\n1 2 3 2 2 3",
+      "output": "3"
+    },
+    {
+      "input": "6 3\n1 2 4 1 2 3",
+      "output": "3"
+    },
+    {
+      "input": "7 3\n50 17 81 25 42 39 96",
+      "output": "92"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

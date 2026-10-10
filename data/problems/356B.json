@@ -1,0 +1,43 @@
+{
+  "id": "356B",
+  "source": "problemset",
+  "contest_id": 356,
+  "problem_index": "B",
+  "name": "Xenia and Hamming",
+  "rating": 1900,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2124,
+  "problem_url": "https://codeforces.com/problemset/problem/356/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9210",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Xenia is an amateur programmer. Today on the IT lesson she learned about the Hamming distance. The Hamming distance between two strings s = s 1 s 2 ... s n and t = t 1 t 2 ... t n of equal length n is value . Record [ s i ≠ t i ] is the Iverson notation and represents the following: if s i ≠ t i , it is one, otherwise — zero. Now Xenia wants to calculate the Hamming distance between two long strings a and b . The first string a is the concatenation of n copies of string x , that is, . The second string b is the concatenation of m copies of string y . Help Xenia, calculate the required Hamming distance, given n , x , m , y .",
+  "input_specification": "The first line contains two integers n and m (1 ≤ n , m ≤ 10 12 ) . The second line contains a non-empty string x . The third line contains a non-empty string y . Both strings consist of at most 10 6 lowercase English letters. It is guaranteed that strings a and b that you obtain from the input have the same length.",
+  "output_specification": "Print a single integer — the required Hamming distance. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "100 10\na\naaaaaaaaaa",
+      "output": "0"
+    },
+    {
+      "input": "1 1\nabacaba\nabzczzz",
+      "output": "4"
+    },
+    {
+      "input": "2 3\nrzr\naz",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "1728E",
+  "source": "problemset",
+  "contest_id": 1728,
+  "problem_index": "E",
+  "name": "Red-Black Pepper",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2110,
+  "problem_url": "https://codeforces.com/problemset/problem/1728/E",
+  "editorial_url": "https://codeforces.com/blog/entry/106805",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp is going to host a party for his friends. He prepared $$$n$$$ dishes and is about to serve them. First, he has to add some powdered pepper to each of them — otherwise, the dishes will be pretty tasteless. The $$$i$$$-th dish has two values $$$a_i$$$ and $$$b_i$$$ — its tastiness with red pepper added or black pepper added, respectively. Monocarp won't add both peppers to any dish, won't add any pepper multiple times, and won't leave any dish without the pepper added. Before adding the pepper, Monocarp should first purchase the said pepper in some shop. There are $$$m$$$ shops in his local area. The $$$j$$$-th of them has packages of red pepper sufficient for $$$x_j$$$ servings and packages of black pepper sufficient for $$$y_j$$$ servings. Monocarp goes to exactly one shop, purchases multiple (possibly, zero) packages of each pepper in such a way that each dish will get the pepper added once, and no pepper is left . More formally, if he purchases $$$x$$$ red pepper packages and $$$y$$$ black pepper packages, then $$$x$$$ and $$$y$$$ should be non-negative and $$$x \\cdot x_j + y \\cdot y_j$$$ should be equal to $$$n$$$. For each shop, determine the maximum total tastiness of the dishes after Monocarp buys pepper packages only in this shop and adds the pepper to the dishes. If it's impossible to purchase the packages in the said way, print -1 .",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the number of dishes. The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 10^9$$$) — the tastiness of the $$$i$$$-th dish with red pepper added or black pepper added, respectively. The next line contains a single integer $$$m$$$ ($$$1 \\le m \\le 3 \\cdot 10^5$$$) — the number of shops. The $$$j$$$-th of the next $$$m$$$ lines contains two integers $$$x_j$$$ and $$$y_j$$$ ($$$1 \\le x_j, y_j \\le n$$$) — the number of servings the red and the black pepper packages are sufficient for in the $$$j$$$-th shop, respectively.",
+  "output_specification": "Print $$$m$$$ integers. For each shop, print the maximum total tastiness of the dishes after Monocarp buys pepper packages only in this shop and adds the pepper to the dishes. If it's impossible to purchase the packages so that each dish will get the pepper added once and no pepper is left, print -1 .",
+  "sample_testcases": [
+    {
+      "input": "3\n5 10\n100 50\n2 2\n4\n2 3\n1 1\n3 2\n2 2",
+      "output": "62\n112\n107\n-1"
+    },
+    {
+      "input": "10\n3 1\n2 3\n1 1\n2 1\n6 3\n1 4\n4 3\n1 3\n5 3\n5 4\n10\n8 10\n9 3\n1 4\n2 5\n8 3\n3 5\n1 6\n7 2\n6 7\n3 1",
+      "output": "26\n-1\n36\n30\n-1\n26\n34\n26\n-1\n36"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

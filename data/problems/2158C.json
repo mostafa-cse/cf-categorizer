@@ -1,0 +1,36 @@
+{
+  "id": "2158C",
+  "source": "problemset",
+  "contest_id": 2158,
+  "problem_index": "C",
+  "name": "Annoying Game",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "games",
+    "greedy"
+  ],
+  "solved_count": 12190,
+  "problem_url": "https://codeforces.com/problemset/problem/2158/C",
+  "editorial_url": "https://codeforces.com/blog/entry/148782",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integer arrays $$$a$$$ and $$$b$$$, both of length $$$n$$$, and a total number of turns $$$k$$$. Alice and Bob play a game by taking turns modifying array $$$a$$$. Alice goes first. The game lasts for exactly $$$k$$$ turns. On their turn, a player must choose an index $$$i$$$ ($$$1 \\leq i \\leq n$$$) and perform one of the following operations: Add: Increase $$$a_i$$$ by $$$b_i$$$, i.e., set $$$a_i := a_i + b_i$$$. Subtract: Decrease $$$a_i$$$ by $$$b_i$$$, i.e., set $$$a_i := a_i - b_i$$$. After the $$$k$$$-th turn is complete, the final score is calculated as the maximum non-empty subarray sum of the modified array $$$a$$$. Alice's goal is to maximize the final score, while Bob's goal is to minimize the final score. Assuming both players play optimally to achieve their respective goals, determine the final score. The maximum non-empty subarray sum of $$$a$$$ is defined as $$$\\max_{1 \\leq i \\leq j \\leq n} S(i, j)$$$, where $$$S(i, j) = a_i + a_{i+1} + \\cdots + a_j$$$. Note that empty subarrays are not considered.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2\\cdot 10^5$$$, $$$1 \\le k \\le 2\\cdot 10^5$$$) — the length of the arrays and the total number of turns. The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_{n}$$$ ($$$-10^9 \\le a_i \\le 10^9$$$) — the elements of array $$$a$$$. The third line contains $$$n$$$ integers $$$b_1,b_2,\\ldots,b_{n}$$$ ($$$0 \\le b_i \\le 10^9$$$) — the elements of array $$$b$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the final score after $$$k$$$ turns, assuming both players play optimally.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 200000\n3 -1 9 -5 4\n0 0 0 0 0\n4 5\n10 10 10 10\n1 1 1 1\n3 1\n2 -7 3\n1 11 3\n3 2\n2 -7 3\n1 11 3\n1 1\n-3\n2",
+      "output": "11\n41\n9\n3\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

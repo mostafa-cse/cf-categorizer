@@ -1,0 +1,37 @@
+{
+  "id": "1452B",
+  "source": "problemset",
+  "contest_id": 1452,
+  "problem_index": "B",
+  "name": "Toy Blocks",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 15664,
+  "problem_url": "https://codeforces.com/problemset/problem/1452/B",
+  "editorial_url": "https://codeforces.com/blog/entry/84847",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are asked to watch your nephew who likes to play with toy blocks in a strange way. He has $$$n$$$ boxes and the $$$i$$$-th box has $$$a_i$$$ blocks. His game consists of two steps: he chooses an arbitrary box $$$i$$$; he tries to move all blocks from the $$$i$$$-th box to other boxes. If he can make the same number of blocks in each of $$$n - 1$$$ other boxes then he will be happy, otherwise, will be sad. Note that your nephew can only move the blocks from the chosen box to the other boxes; he cannot move blocks from the other boxes. You don't want to make your nephew sad, so you decided to put several extra blocks into some boxes in such a way that no matter which box $$$i$$$ he chooses he won't be sad. What is the minimum number of extra blocks you need to put?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains the integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — the number of boxes. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the number of blocks in each box. It's guaranteed that the sum of $$$n$$$ over test cases doesn't exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum number of blocks you need to put. It can be proved that the answer always exists, i. e. the number of blocks is finite.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n3 2 2\n4\n2 2 3 2\n3\n0 3 0",
+      "output": "1\n0\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:27",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

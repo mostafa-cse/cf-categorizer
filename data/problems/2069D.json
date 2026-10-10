@@ -1,0 +1,38 @@
+{
+  "id": "2069D",
+  "source": "problemset",
+  "contest_id": 2069,
+  "problem_index": "D",
+  "name": "Palindrome Shuffle",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "greedy",
+    "hashing",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 7321,
+  "problem_url": "https://codeforces.com/problemset/problem/2069/D",
+  "editorial_url": "https://codeforces.com/blog/entry/139774",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ consisting of lowercase Latin letters. You can perform the following operation with the string $$$s$$$: choose a contiguous substring (possibly empty) of $$$s$$$ and shuffle it (reorder the characters in the substring as you wish). Recall that a palindrome is a string that reads the same way from the first character to the last and from the last character to the first. For example, the strings a , bab , acca , bcabcbacb are palindromes, but the strings ab , abbbaa , cccb are not. Your task is to determine the minimum possible length of the substring on which the aforementioned operation must be performed in order to convert the given string $$$s$$$ into a palindrome.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The only line of each test case contains a string $$$s$$$ ($$$2 \\le |s| \\le 2 \\cdot 10^5$$$), consisting of lowercase Latin letters. Additional constraints on the input: the string $$$s$$$ has an even length; the string $$$s$$$ can always be converted to a palindrome; the sum of lengths of $$$s$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single integer — the minimum possible length of the substring on which the aforementioned operation must be performed in order to convert the given string $$$s$$$ into a palindrome.",
+  "sample_testcases": [
+    {
+      "input": "4\nbaba\ncc\nddaa\nacbacddacbca",
+      "output": "2\n0\n3\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:33",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

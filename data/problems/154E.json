@@ -1,0 +1,42 @@
+{
+  "id": "154E",
+  "source": "problemset",
+  "contest_id": 154,
+  "problem_index": "E",
+  "name": "Martian Colony",
+  "rating": 3000,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 124,
+  "problem_url": "https://codeforces.com/problemset/problem/154/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3969",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The first ship with the Earth settlers landed on Mars. The colonists managed to build n necessary structures on the surface of the planet (which can be regarded as a plane, and the construction can be regarded as points on it). But one day the scanners recorded suspicious activity on the outskirts of the colony. It was decided to use the protective force field generating system to protect the colony against possible trouble. The system works as follows: the surface contains a number of generators of the field (they can also be considered as points). The active range of each generator is a circle of radius r centered at the location of the generator (the boundary of the circle is also included in the range). After the system is activated, it stretches the protective force field only over the part of the surface, which is within the area of all generators' activity . That is, the protected part is the intersection of the generators' active ranges. The number of generators available to the colonists is not limited, but the system of field generation consumes a lot of energy. More precisely, the energy consumption does not depend on the number of generators, but it is directly proportional to the area , which is protected by the field. Also, it is necessary that all the existing buildings are located within the protected area. Determine the smallest possible area of the protected part of the surface containing all the buildings.",
+  "input_specification": "The first line contains two integers n and r ( 1 ≤ n ≤ 10 5 , 1 ≤ r ≤ 50000 ) — the number of buildings and the active ranges of the generators, correspondingly. Next n lines contains the buildings' coordinates. The i + 1 -th ( 1 ≤ i ≤ n ) line contains two real numbers with at most three digits after the decimal point x i and y i ( | x i |, | y i | ≤ 50000 ) — coordinates of the i -th building. It is guaranteed that no two buildings are located at the same point, and no two different buildings are located closer than 1 . It is guaranteed that there exists a circle with radius r that contains all the buildings.",
+  "output_specification": "Print the single real number — the minimum area of the protected part containing all the buildings. The answer is accepted if absolute or relative error doesn't exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "3 5\n0.00 0.000\n0.0 8.00\n6 8.00",
+      "output": "78.5398163397"
+    },
+    {
+      "input": "4 1000\n0.0 0.0\n0 2.00\n2.00 2\n2.0 0.00",
+      "output": "4.0026666140"
+    },
+    {
+      "input": "4 5\n3.00 0.0\n-3 0.00\n0.000 1\n0.0 -1.00",
+      "output": "8.1750554397"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

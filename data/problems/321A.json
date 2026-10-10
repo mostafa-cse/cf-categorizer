@@ -1,0 +1,48 @@
+{
+  "id": "321A",
+  "source": "problemset",
+  "contest_id": 321,
+  "problem_index": "A",
+  "name": "Ciel and Robot",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 3941,
+  "problem_url": "https://codeforces.com/problemset/problem/321/A",
+  "editorial_url": "https://codeforces.com/blog/entry/8192",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel has a robot on a 2D plane. Initially it is located in (0, 0). Fox Ciel code a command to it. The command was represented by string s . Each character of s is one move operation. There are four move operations at all: ' U ': go up, (x, y) → (x, y+1); ' D ': go down, (x, y) → (x, y-1); ' L ': go left, (x, y) → (x-1, y); ' R ': go right, (x, y) → (x+1, y). The robot will do the operations in s from left to right, and repeat it infinite times. Help Fox Ciel to determine if after some steps the robot will located in ( a , b ) .",
+  "input_specification": "The first line contains two integers a and b , ( - 10 9 ≤ a , b ≤ 10 9 ). The second line contains a string s ( 1 ≤ | s | ≤ 100 , s only contains characters ' U ', ' D ', ' L ', ' R ') — the command.",
+  "output_specification": "Print \" Yes \" if the robot will be located at ( a , b ) , and \" No \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2 2\nRU",
+      "output": "Yes"
+    },
+    {
+      "input": "1 2\nRU",
+      "output": "No"
+    },
+    {
+      "input": "-1 1000000000\nLRRLU",
+      "output": "Yes"
+    },
+    {
+      "input": "0 0\nD",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

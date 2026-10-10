@@ -1,0 +1,36 @@
+{
+  "id": "1901C",
+  "source": "problemset",
+  "contest_id": 1901,
+  "problem_index": "C",
+  "name": "Add, Divide and Floor",
+  "rating": 1400,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 14720,
+  "problem_url": "https://codeforces.com/problemset/problem/1901/C",
+  "editorial_url": "https://codeforces.com/blog/entry/122645",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer array $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$). In one operation, you can choose an integer $$$x$$$ ($$$0 \\le x \\le 10^{18}$$$) and replace $$$a_i$$$ with $$$\\lfloor \\frac{a_i + x}{2} \\rfloor$$$ ($$$\\lfloor y \\rfloor$$$ denotes rounding $$$y$$$ down to the nearest integer) for all $$$i$$$ from $$$1$$$ to $$$n$$$. Pay attention to the fact that all elements of the array are affected on each operation. Print the smallest number of operations required to make all elements of the array equal. If the number of operations is less than or equal to $$$n$$$, then print the chosen $$$x$$$ for each operation. If there are multiple answers, print any of them.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$). The sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print the smallest number of operations required to make all elements of the array equal. If the number of operations is less than or equal to $$$n$$$, then print the chosen $$$x$$$ for each operation in the next line. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n10\n2\n4 6\n6\n2 1 2 1 2 1\n2\n0 32",
+      "output": "0\n2\n2 5\n1\n1\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:40",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

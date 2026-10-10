@@ -1,0 +1,43 @@
+{
+  "id": "611G",
+  "source": "problemset",
+  "contest_id": 611,
+  "problem_index": "G",
+  "name": "New Year and Cake",
+  "rating": 2900,
+  "tags": [
+    "geometry",
+    "two pointers"
+  ],
+  "solved_count": 501,
+  "problem_url": "https://codeforces.com/problemset/problem/611/G",
+  "editorial_url": "https://codeforces.com/blog/entry/22441",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Limak is a little polar bear. According to some old traditions, his bear family prepared a New Year cake. And Limak likes cakes. As you may know, a New Year cake is a strictly convex polygon with n vertices. Parents won't allow Limak to eat more than half of a cake because he would get sick. After some thinking they decided to cut a cake along one of n ·( n - 3) / 2 diagonals. Then Limak will get a non-greater piece. Limak understands rules but he won't be happy if the second piece happens to be much bigger. Limak's disappointment will be equal to the difference between pieces' areas, multiplied by two. It can be proved that it will be integer for the given constraints. There are n ·( n - 3) / 2 possible scenarios. Consider them all and find the sum of values of Limak's disappointment, modulo 10 9 + 7 .",
+  "input_specification": "The first line of the input contains a single integer n ( 4 ≤ n ≤ 500 000 ) — the number of vertices in the polygon denoting the cake. Each of the next n lines contains two integers x i and y i ( | x i |, | y i | ≤ 10 9 ) — coordinates of the i -th point. It's guaranteed that all points are distinct, polygon is strictly convex and points are given in the clockwise order.",
+  "output_specification": "Print the sum of values of Limak's disappointment over all possible scenarios modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "5\n2 4\n2 7\n5 7\n5 4\n3 -2",
+      "output": "90"
+    },
+    {
+      "input": "4\n-1000000000 -5000000\n0 1234567\n1 1\n-5 -100000000",
+      "output": "525185196"
+    },
+    {
+      "input": "8\n-10 0\n-6 6\n0 10\n6 6\n10 0\n6 -6\n0 -10\n-6 -6",
+      "output": "5216"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

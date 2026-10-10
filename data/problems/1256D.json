@@ -1,0 +1,34 @@
+{
+  "id": "1256D",
+  "source": "problemset",
+  "contest_id": 1256,
+  "problem_index": "D",
+  "name": "Binary String Minimizing",
+  "rating": 1500,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 12917,
+  "problem_url": "https://codeforces.com/problemset/problem/1256/D",
+  "editorial_url": "https://codeforces.com/blog/entry/71184",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a binary string of length $$$n$$$ (i. e. a string consisting of $$$n$$$ characters ' 0 ' and ' 1 '). In one move you can swap two adjacent characters of the string. What is the lexicographically minimum possible string you can obtain from the given one if you can perform no more than $$$k$$$ moves? It is possible that you do not perform any moves at all. Note that you can swap the same pair of adjacent characters with indices $$$i$$$ and $$$i+1$$$ arbitrary (possibly, zero) number of times. Each such swap is considered a separate move. You have to answer $$$q$$$ independent test cases.",
+  "input_specification": "The first line of the input contains one integer $$$q$$$ ($$$1 \\le q \\le 10^4$$$) — the number of test cases. The first line of the test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^6, 1 \\le k \\le n^2$$$) — the length of the string and the number of moves you can perform. The second line of the test case contains one string consisting of $$$n$$$ characters ' 0 ' and ' 1 '. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$ ($$$\\sum n \\le 10^6$$$).",
+  "output_specification": "For each test case, print the answer on it: the lexicographically minimum possible string of length $$$n$$$ you can obtain from the given one if you can perform no more than $$$k$$$ moves.",
+  "sample_testcases": [
+    {
+      "input": "3\n8 5\n11011010\n7 9\n1111100\n7 11\n1111100",
+      "output": "01011110\n0101111\n0011111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:16",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

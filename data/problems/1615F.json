@@ -1,0 +1,36 @@
+{
+  "id": "1615F",
+  "source": "problemset",
+  "contest_id": 1615,
+  "problem_index": "F",
+  "name": "LEGOndary Grandmaster",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1212,
+  "problem_url": "https://codeforces.com/problemset/problem/1615/F",
+  "editorial_url": "https://codeforces.com/blog/entry/98253",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "After getting bored by playing with crayons, you decided to switch to Legos! Today, you're working with a long strip, with height $$$1$$$ and length $$$n$$$, some positions of which are occupied by $$$1$$$ by $$$1$$$ Lego pieces. In one second, you can either remove two adjacent Lego pieces from the strip (if both are present), or add two Lego pieces to adjacent positions (if both are absent). You can only add or remove Lego's at two adjacent positions at the same time, as otherwise your chubby fingers run into precision issues. You want to know exactly how much time you'll spend playing with Legos. You value efficiency, so given some starting state and some ending state, you'll always spend the least number of seconds to transform the starting state into the ending state. If it's impossible to transform the starting state into the ending state, you just skip it (so you spend $$$0$$$ seconds). The issue is that, for some positions, you don't remember whether there were Legos there or not (in either the starting state, the ending state, or both). Over all pairs of (starting state, ending state) that are consistent with your memory, find the total amount of time it will take to transform the starting state to the ending state. Print this value modulo $$$1\\,000\\,000\\,007$$$ ($$$10^9 + 7$$$).",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. Then $$$t$$$ cases follow. The first line of each test case contains one integer $$$n$$$ ($$$2 \\leq n \\leq 2000$$$) — the size of the Lego strip. The second line of each test case contains a string $$$s$$$ of length $$$n$$$, consisting of the characters 0 , 1 , and ? — your memory of the starting state: 1 represents a position that definitely has a Lego piece, 0 represents a position that definitely does not have a Lego piece, and ? represents a position that you don't remember. The third line of each test case contains a string $$$t$$$ of length $$$n$$$, consisting of the characters 0 , 1 , and ? — your memory of the ending state. It follows a similar format to the starting state. It's guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2000$$$.",
+  "output_specification": "For each test case, output a single integer — the answer to the problem modulo $$$1\\,000\\,000\\,007$$$ ($$$10^9 + 7$$$).",
+  "sample_testcases": [
+    {
+      "input": "6\n2\n00\n11\n3\n???\n???\n3\n??1\n0?0\n4\n??0?\n??11\n5\n?????\n0??1?\n10\n?01??01?1?\n??100?1???",
+      "output": "1\n16\n1\n14\n101\n1674"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

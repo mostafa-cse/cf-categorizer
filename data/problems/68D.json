@@ -1,0 +1,38 @@
+{
+  "id": "68D",
+  "source": "problemset",
+  "contest_id": 68,
+  "problem_index": "D",
+  "name": "Half-decay tree",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 541,
+  "problem_url": "https://codeforces.com/problemset/problem/68/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1539",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recently Petya has become keen on physics. Anna V., his teacher noticed Petya's interest and gave him a fascinating physical puzzle — a half-decay tree. A half-decay tree is a complete binary tree with the height h . The height of a tree is the length of the path (in edges) from the root to a leaf in the tree. While studying the tree Petya can add electrons to vertices or induce random decay with synchrophasotron. Random decay is a process during which the edges of some path from the root to the random leaf of the tree are deleted. All the leaves are equiprobable. As the half-decay tree is the school property, Petya will return back the deleted edges into the tree after each decay. After being desintegrated, the tree decomposes into connected components. Charge of each component is the total quantity of electrons placed in vertices of the component. Potential of desintegerated tree is the maximum from the charges of its connected components. Each time before inducing random decay Petya is curious about the mathematical expectation of potential of the tree after being desintegrated.",
+  "input_specification": "First line will contain two integers h and q ( 1 ≤ h ≤ 30, 1 ≤ q ≤ 10 5 ). Next q lines will contain a query of one of two types: add v e Petya adds e electrons to vertex number v ( 1 ≤ v ≤ 2 h + 1 - 1, 0 ≤ e ≤ 10 4 ). v and e are integers. The vertices of the tree are numbered in the following way: the root is numbered with 1, the children of the vertex with number x are numbered with 2 x and 2 x + 1 . decay Petya induces tree decay.",
+  "output_specification": "For each query decay solution you should output the mathematical expectation of potential of the tree after being desintegrated. The absolute or relative error in the answer should not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "1 4\nadd 1 3\nadd 2 10\nadd 3 11\ndecay",
+      "output": "13.50000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

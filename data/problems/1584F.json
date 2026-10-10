@@ -1,0 +1,38 @@
+{
+  "id": "1584F",
+  "source": "problemset",
+  "contest_id": 1584,
+  "problem_index": "F",
+  "name": "Strange LCS",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "graphs",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 1211,
+  "problem_url": "https://codeforces.com/problemset/problem/1584/F",
+  "editorial_url": "https://codeforces.com/blog/entry/96953",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ strings $$$s_1, s_2, \\ldots, s_n$$$, each consisting of lowercase and uppercase English letters. In addition, it's guaranteed that each character occurs in each string at most twice . Find the longest common subsequence of these strings. A string $$$t$$$ is a subsequence of a string $$$s$$$ if $$$t$$$ can be obtained from $$$s$$$ by deletion of several (possibly, zero or all) symbols.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 5$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 10$$$) — the number of strings. Each of the next $$$n$$$ lines contains the corresponding string $$$s_i$$$. Each $$$s_i$$$ is non-empty, consists only of uppercase and lowercase English letters, and no character appears more than twice in each string.",
+  "output_specification": "For each test case print the answer in two lines: In the first line print the length of the longest common subsequence. In the second line print the longest common subsequence. If there are multiple such subsequences, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n2\nABC\nCBA\n2\nbacab\ndefed\n3\nabcde\naBcDe\nace\n2\ncodeforces\ntechnocup",
+      "output": "1\nA\n0\n\n3\nace\n3\ncoc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

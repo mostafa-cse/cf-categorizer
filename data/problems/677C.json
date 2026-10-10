@@ -1,0 +1,45 @@
+{
+  "id": "677C",
+  "source": "problemset",
+  "contest_id": 677,
+  "problem_index": "C",
+  "name": "Vanya and Label",
+  "rating": 1500,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 7094,
+  "problem_url": "https://codeforces.com/problemset/problem/677/C",
+  "editorial_url": "https://codeforces.com/blog/entry/45181",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "While walking down the street Vanya saw a label \"Hide&Seek\". Because he is a programmer, he used & as a bitwise AND for these two words represented as a integers in base 64 and got new word. Now Vanya thinks of some string s and wants to know the number of pairs of words of length | s | (length of s ), such that their bitwise AND is equal to s . As this number can be large, output it modulo 10 9 + 7 . To represent the string as a number in numeral system with base 64 Vanya uses the following rules: digits from ' 0 ' to ' 9 ' correspond to integers from 0 to 9 ; letters from ' A ' to ' Z ' correspond to integers from 10 to 35 ; letters from ' a ' to ' z ' correspond to integers from 36 to 61 ; letter ' - ' correspond to integer 62 ; letter ' _ ' correspond to integer 63 .",
+  "input_specification": "The only line of the input contains a single word s ( 1 ≤ | s | ≤ 100 000 ), consisting of digits, lowercase and uppercase English letters, characters ' - ' and ' _ '.",
+  "output_specification": "Print a single integer — the number of possible pairs of words, such that their bitwise AND is equal to string s modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "z",
+      "output": "3"
+    },
+    {
+      "input": "V_V",
+      "output": "9"
+    },
+    {
+      "input": "Codeforces",
+      "output": "130653412"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

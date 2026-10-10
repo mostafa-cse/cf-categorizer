@@ -1,0 +1,35 @@
+{
+  "id": "838C",
+  "source": "problemset",
+  "contest_id": 838,
+  "problem_index": "C",
+  "name": "Future Failure",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 453,
+  "problem_url": "https://codeforces.com/problemset/problem/838/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53736",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing a game with a string of characters, with Alice going first. The string consists n characters, each of which is one of the first k letters of the alphabet. On a player’s turn, they can either arbitrarily permute the characters in the words, or delete exactly one character in the word (if there is at least one character). In addition, their resulting word cannot have appeared before throughout the entire game. The player unable to make a valid move loses the game. Given n , k , p , find the number of words with exactly n characters consisting of the first k letters of the alphabet such that Alice will win if both Alice and Bob play optimally. Return this number modulo the prime number p .",
+  "input_specification": "The first line of input will contain three integers n , k , p ( 1 ≤ n ≤ 250 000 , 1 ≤ k ≤ 26 , 10 8 ≤ p ≤ 10 9 + 100 , p will be prime).",
+  "output_specification": "Print a single integer, the number of winning words for Alice, modulo p .",
+  "sample_testcases": [
+    {
+      "input": "4 2 100000007",
+      "output": "14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

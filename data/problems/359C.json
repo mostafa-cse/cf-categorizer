@@ -1,0 +1,47 @@
+{
+  "id": "359C",
+  "source": "problemset",
+  "contest_id": 359,
+  "problem_index": "C",
+  "name": "Prime Number",
+  "rating": 1900,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3648,
+  "problem_url": "https://codeforces.com/problemset/problem/359/C",
+  "editorial_url": "https://codeforces.com/blog/entry/9425",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Simon has a prime number x and an array of non-negative integers a 1 , a 2 , ..., a n . Simon loves fractions very much. Today he wrote out number on a piece of paper. After Simon led all fractions to a common denominator and summed them up, he got a fraction: , where number t equals x a 1 + a 2 + ... + a n . Now Simon wants to reduce the resulting fraction. Help him, find the greatest common divisor of numbers s and t . As GCD can be rather large, print it as a remainder after dividing it by number 1000000007 ( 10 9 + 7 ).",
+  "input_specification": "The first line contains two positive integers n and x ( 1 ≤ n ≤ 10 5 , 2 ≤ x ≤ 10 9 ) — the size of the array and the prime number. The second line contains n space-separated integers a 1 , a 2 , ..., a n ( 0 ≤ a 1 ≤ a 2 ≤ ... ≤ a n ≤ 10 9 ).",
+  "output_specification": "Print a single number — the answer to the problem modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "2 2\n2 2",
+      "output": "8"
+    },
+    {
+      "input": "3 3\n1 2 3",
+      "output": "27"
+    },
+    {
+      "input": "2 2\n29 29",
+      "output": "73741817"
+    },
+    {
+      "input": "4 5\n0 0 0 0",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

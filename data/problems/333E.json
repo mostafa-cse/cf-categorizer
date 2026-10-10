@@ -1,0 +1,42 @@
+{
+  "id": "333E",
+  "source": "problemset",
+  "contest_id": 333,
+  "problem_index": "E",
+  "name": "Summer Earnings",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "brute force",
+    "geometry",
+    "sortings"
+  ],
+  "solved_count": 1317,
+  "problem_url": "https://codeforces.com/problemset/problem/333/E",
+  "editorial_url": "https://codeforces.com/blog/entry/8418",
+  "time_limit": "9 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Many schoolchildren look for a job for the summer, and one day, when Gerald was still a schoolboy, he also decided to work in the summer. But as Gerald was quite an unusual schoolboy, he found quite unusual work. A certain Company agreed to pay him a certain sum of money if he draws them three identical circles on a plane. The circles must not interfere with each other (but they may touch each other). He can choose the centers of the circles only from the n options granted by the Company. He is free to choose the radius of the circles himself (all three radiuses must be equal), but please note that the larger the radius is, the more he gets paid. Help Gerald earn as much as possible.",
+  "input_specification": "The first line contains a single integer n — the number of centers ( 3 ≤ n ≤ 3000 ). The following n lines each contain two integers x i , y i ( - 10 4 ≤ x i , y i ≤ 10 4 ) — the coordinates of potential circle centers, provided by the Company. All given points are distinct.",
+  "output_specification": "Print a single real number — maximum possible radius of circles. The answer will be accepted if its relative or absolute error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3\n0 1\n1 0\n1 1",
+      "output": "0.50000000000000000000"
+    },
+    {
+      "input": "7\n2 -3\n-2 -3\n3 0\n-3 -1\n1 -2\n2 -2\n-1 0",
+      "output": "1.58113883008418980000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:21",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

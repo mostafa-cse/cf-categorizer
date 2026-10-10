@@ -1,0 +1,39 @@
+{
+  "id": "1632E1",
+  "source": "problemset",
+  "contest_id": 1632,
+  "problem_index": "E1",
+  "name": "Distance Tree (easy version)",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "shortest paths",
+    "trees"
+  ],
+  "solved_count": 1396,
+  "problem_url": "https://codeforces.com/problemset/problem/1632/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/99442",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This version of the problem differs from the next one only in the constraint on $$$n$$$ . A tree is a connected undirected graph without cycles. A weighted tree has a weight assigned to each edge. The distance between two vertices is the minimum sum of weights on the path connecting them. You are given a weighted tree with $$$n$$$ vertices, each edge has a weight of $$$1$$$. Denote $$$d(v)$$$ as the distance between vertex $$$1$$$ and vertex $$$v$$$. Let $$$f(x)$$$ be the minimum possible value of $$$\\max\\limits_{1 \\leq v \\leq n} \\ {d(v)}$$$ if you can temporarily add an edge with weight $$$x$$$ between any two vertices $$$a$$$ and $$$b$$$ $$$(1 \\le a, b \\le n)$$$. Note that after this operation, the graph is no longer a tree. For each integer $$$x$$$ from $$$1$$$ to $$$n$$$, find $$$f(x)$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 3000$$$). Each of the next $$$n−1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$) indicating that there is an edge between vertices $$$u$$$ and $$$v$$$. It is guaranteed that the given edges form a tree. It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$3000$$$.",
+  "output_specification": "For each test case, print $$$n$$$ integers in a single line, $$$x$$$-th of which is equal to $$$f(x)$$$ for all $$$x$$$ from $$$1$$$ to $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n1 2\n2 3\n1 4\n2\n1 2\n7\n1 2\n1 3\n3 4\n3 5\n3 6\n5 7",
+      "output": "1 2 2 2 \n1 1 \n2 2 3 3 3 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

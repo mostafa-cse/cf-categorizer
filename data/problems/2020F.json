@@ -1,0 +1,36 @@
+{
+  "id": "2020F",
+  "source": "problemset",
+  "contest_id": 2020,
+  "problem_index": "F",
+  "name": "Count Leaves",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 276,
+  "problem_url": "https://codeforces.com/problemset/problem/2020/F",
+  "editorial_url": "https://codeforces.com/blog/entry/134516",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$n$$$ and $$$d$$$ be positive integers. We build the the divisor tree $$$T_{n,d}$$$ as follows: The root of the tree is a node marked with number $$$n$$$. This is the $$$0$$$-th layer of the tree. For each $$$i$$$ from $$$0$$$ to $$$d - 1$$$, for each vertex of the $$$i$$$-th layer, do the following. If the current vertex is marked with $$$x$$$, create its children and mark them with all possible distinct divisors$$$^\\dagger$$$ of $$$x$$$. These children will be in the $$$(i+1)$$$-st layer. The vertices on the $$$d$$$-th layer are the leaves of the tree. For example, $$$T_{6,2}$$$ (the divisor tree for $$$n = 6$$$ and $$$d = 2$$$) looks like this: Define $$$f(n,d)$$$ as the number of leaves in $$$T_{n,d}$$$. Given integers $$$n$$$, $$$k$$$, and $$$d$$$, please compute $$$\\sum\\limits_{i=1}^{n} f(i^k,d)$$$, modulo $$$10^9+7$$$. $$$^\\dagger$$$ In this problem, we say that an integer $$$y$$$ is a divisor of $$$x$$$ if $$$y \\ge 1$$$ and there exists an integer $$$z$$$ such that $$$x = y \\cdot z$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains three integers $$$n$$$, $$$k$$$, and $$$d$$$ ($$$1 \\le n \\le 10^9$$$, $$$1 \\le k,d \\le 10^5$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^9$$$.",
+  "output_specification": "For each test case, output $$$\\sum\\limits_{i=1}^{n} f(i^k,d)$$$, modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 1 1\n1 3 3\n10 1 2",
+      "output": "14\n1\n53"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

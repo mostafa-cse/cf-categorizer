@@ -1,0 +1,37 @@
+{
+  "id": "2182D",
+  "source": "problemset",
+  "contest_id": 2182,
+  "problem_index": "D",
+  "name": "Christmas Tree Decoration",
+  "rating": 1600,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 9748,
+  "problem_url": "https://codeforces.com/problemset/problem/2182/D",
+  "editorial_url": "https://codeforces.com/blog/entry/149733",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "A group of $$$n$$$ people decided to decorate the Christmas tree. They have $$$(n+1)$$$ boxes of decorations, numbered from $$$0$$$ to $$$n$$$. Initially, the $$$i$$$-th box contains $$$a_i$$$ decorations. We say that a permutation $$$p$$$ of size $$$n$$$ (an array of size $$$n$$$ where each number from $$$1$$$ to $$$n$$$ appears exactly once) is fair if it is possible to hang all the decorations on the tree using the following process: person $$$p_1$$$ takes a decoration either from box $$$0$$$ or from box $$$p_1$$$, and hangs it on the tree; person $$$p_2$$$ takes a decoration either from box $$$0$$$ or from box $$$p_2$$$, and hangs it on the tree; and so on; after person $$$p_n$$$, person $$$p_1$$$ follows, and the process repeats until all the decoration are on the tree. During this process, there should never be a situation where person $$$i$$$ needs to hang a decoration, but both box $$$0$$$ and box $$$i$$$ are empty. If such a situation cannot be avoided, the permutation is not fair. However, if the people can choose from which box to take a decoration during each step in such a way that this situation does not arise, then the permutation is fair. Your task is to calculate the number of fair permutations. Since the answer may be large, output it modulo $$$998244353$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 5000$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 50$$$). The second line contains $$$(n+1)$$$ integers $$$a_0, a_1, \\dots, a_n$$$ ($$$0 \\le a_i \\le 10^6$$$).",
+  "output_specification": "For each test case, print a single integer — the number of fair permutations, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n1 2 1 0\n3\n1 0 2 0\n1\n2 5\n4\n6 1 4 2 1",
+      "output": "2\n0\n1\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

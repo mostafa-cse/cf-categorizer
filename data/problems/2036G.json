@@ -1,0 +1,39 @@
+{
+  "id": "2036G",
+  "source": "problemset",
+  "contest_id": 2036,
+  "problem_index": "G",
+  "name": "Library of Magic",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "divide and conquer",
+    "interactive",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1897,
+  "problem_url": "https://codeforces.com/problemset/problem/2036/G",
+  "editorial_url": "https://codeforces.com/blog/entry/135849",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. The Department of Supernatural Phenomena at the Oxenfurt Academy has opened the Library of Magic, which contains the works of the greatest sorcerers of Redania — $$$n$$$ ($$$3 \\leq n \\leq 10^{18}$$$) types of books, numbered from $$$1$$$ to $$$n$$$. Each book's type number is indicated on its spine. Moreover, each type of book is stored in the library in exactly two copies! And you have been appointed as the librarian. One night, you wake up to a strange noise and see a creature leaving the building through a window. Three thick tomes of different colors were sticking out of the mysterious thief's backpack. Before you start searching for them, you decide to compute the numbers $$$a$$$, $$$b$$$, and $$$c$$$ written on the spines of these books. All three numbers are distinct . So, you have an unordered set of tomes, which includes one tome with each of the pairwise distinct numbers $$$a$$$, $$$b$$$, and $$$c$$$, and two tomes for all numbers from $$$1$$$ to $$$n$$$, except for $$$a$$$, $$$b$$$, and $$$c$$$. You want to find these values $$$a$$$, $$$b$$$, and $$$c$$$. Since you are not working in a simple library, but in the Library of Magic, you can only use one spell in the form of a query to check the presence of books in their place: \" xor l r \" — Bitwise XOR query with parameters $$$l$$$ and $$$r$$$. Let $$$k$$$ be the number of such tomes in the library whose numbers are greater than or equal to $$$l$$$ and less than or equal to $$$r$$$. You will receive the result of the computation $$$v_1 \\oplus v_2 \\oplus ... \\oplus v_k$$$, where $$$v_1 ... v_k$$$ are the numbers on the spines of these tomes, and $$$\\oplus$$$ denotes the operation of bitwise exclusive OR . Since your magical abilities as a librarian are severely limited, you can make no more than $$$150$$$ queries.",
+  "input_specification": "The first line of input contains an integer $$$t$$$ ($$$1 \\le t \\le 300$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\leq n \\leq 10^{18}$$$) — the number of types of tomes.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n6\n\n0\n\n2\n\n3\n\n5\n\n3",
+      "output": "xor 1 1\n\nxor 2 2\n\nxor 3 3\n\nxor 4 6\n\nans 2 3 5\n\nans 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:46",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

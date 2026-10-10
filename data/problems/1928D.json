@@ -1,0 +1,38 @@
+{
+  "id": "1928D",
+  "source": "problemset",
+  "contest_id": 1928,
+  "problem_index": "D",
+  "name": "Lonely Mountain Dungeons",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 5325,
+  "problem_url": "https://codeforces.com/problemset/problem/1928/D",
+  "editorial_url": "https://codeforces.com/blog/entry/125740",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Once, the people, elves, dwarves, and other inhabitants of Middle-earth gathered to reclaim the treasures stolen from them by Smaug. In the name of this great goal, they rallied around the powerful elf Timothy and began to plan the overthrow of the ruler of the Lonely Mountain. The army of Middle-earth inhabitants will consist of several squads. It is known that each pair of creatures of the same race , which are in different squads, adds $$$b$$$ units to the total strength of the army. But since it will be difficult for Timothy to lead an army consisting of a large number of squads, the total strength of an army consisting of $$$k$$$ squads is reduced by $$$(k - 1) \\cdot x$$$ units. Note that the army always consists of at least one squad . It is known that there are $$$n$$$ races in Middle-earth, and the number of creatures of the $$$i$$$-th race is equal to $$$c_i$$$. Help the inhabitants of Middle-earth determine the maximum strength of the army they can assemble.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$b$$$, and $$$x$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le b \\le 10^6, 0 \\le x \\le 10^9$$$) — the number of races and the constants $$$b$$$ and $$$x$$$ described above. The second line of each test case contains $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le 2 \\cdot 10^5$$$) — the number of creatures of each of the $$$n$$$ races. It is guaranteed that the sum of the values $$$c_1 + c_2 + \\ldots + c_n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum strength of the army that the inhabitants of Middle-earth can assemble.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 1 0\n1 2 3\n3 5 10\n2 5 3\n4 3 3\n3 2 1 2\n4 1 0\n4 1 4 2\n4 1 10\n4 1 4 2",
+      "output": "4\n40\n9\n13\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:29",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

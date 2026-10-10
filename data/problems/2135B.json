@@ -1,0 +1,36 @@
+{
+  "id": "2135B",
+  "source": "problemset",
+  "contest_id": 2135,
+  "problem_index": "B",
+  "name": "For the Champion",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 9490,
+  "problem_url": "https://codeforces.com/problemset/problem/2135/B",
+  "editorial_url": "https://codeforces.com/blog/entry/145796",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. The RiOI team is hosting a robot championship! This time, your robot is teleported into an infinite 2D plane with the Cartesian coordinate system on it. There are $$$n$$$ anchor points on the plane, and the coordinates of the $$$i$$$-th anchor point are $$$(x_i, y_i)$$$ ($$$-10^9\\le x_i,y_i\\le 10^9$$$). These are given to your robot by the jury as soon as it is teleported into the plane. However, your robot doesn't know its initial coordinates at first. To test the IQ of your robot, the RiOI team has come up with an interesting game. Your robot needs to find out the initial coordinates $$$(X, Y)$$$ ($$$-10^9\\le X, Y\\le 10^9$$$) by making the following moves. In one move, assuming that its current coordinates are $$$(a,b)$$$, your robot can choose a non-negative integer $$$k$$$ ($$$0\\le k\\le 10^9$$$) and do one of the following four types of operations: Move up by $$$k$$$ units, i.e., your robot will move to $$$(a,b+k)$$$; Move down by $$$k$$$ units, i.e., your robot will move to $$$(a,b-k)$$$; Move left by $$$k$$$ units, i.e., your robot will move to $$$(a-k,b)$$$; Move right by $$$k$$$ units, i.e., your robot will move to $$$(a+k,b)$$$. After each move, the jury will give the minimum Manhattan Distance between the current coordinates of your robot and any anchor point. More formally, assuming that the coordinates of your robot are $$$(c,d)$$$ after the move, the jury will output $$$$$$ \\min_{1\\le i\\le n}\\left ( \\left|x_i-c\\right|+\\left|y_i-d\\right|\\right ). $$$$$$ To win the prize, you must prove that your robot has a high IQ. So you have to write a program for your robot to find its initial coordinates $$$(X, Y)$$$ in no more than $$$10$$$ moves.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1\\le n\\le 100$$$) — the number of anchor points. Then $$$n$$$ lines follow, the $$$i$$$-th line contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$-10^9\\le x_i,y_i\\le 10^9$$$) — the coordinates of the $$$i$$$-th anchor point. It is guaranteed that the coordinates of the anchor points are pairwise distinct.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n1\n0 0\n\n100\n\n1\n\n4\n1 1\n2 2\n3 3\n-1 -1\n\n1\n\n2\n\n0",
+      "output": "? D 99\n\n? L 101\n\n! 100 99\n\n\n\n\n\n? L 0\n\n? U 1\n\n? R 2\n\n! -1 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

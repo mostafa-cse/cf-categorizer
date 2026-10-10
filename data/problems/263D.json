@@ -1,0 +1,39 @@
+{
+  "id": "263D",
+  "source": "problemset",
+  "contest_id": 263,
+  "problem_index": "D",
+  "name": "Cycle in Graph",
+  "rating": 1800,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 4659,
+  "problem_url": "https://codeforces.com/problemset/problem/263/D",
+  "editorial_url": "https://codeforces.com/blog/entry/6419",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You've got a undirected graph G , consisting of n nodes. We will consider the nodes of the graph indexed by integers from 1 to n . We know that each node of graph G is connected by edges with at least k other nodes of this graph. Your task is to find in the given graph a simple cycle of length of at least k + 1 . A simple cycle of length d ( d > 1) in graph G is a sequence of distinct graph nodes v 1 , v 2 , ..., v d such, that nodes v 1 and v d are connected by an edge of the graph, also for any integer i (1 ≤ i < d ) nodes v i and v i + 1 are connected by an edge of the graph.",
+  "input_specification": "The first line contains three integers n , m , k (3 ≤ n , m ≤ 10 5 ; 2 ≤ k ≤ n - 1) — the number of the nodes of the graph, the number of the graph's edges and the lower limit on the degree of the graph node. Next m lines contain pairs of integers. The i -th line contains integers a i , b i (1 ≤ a i , b i ≤ n ; a i ≠ b i ) — the indexes of the graph nodes that are connected by the i -th edge. It is guaranteed that the given graph doesn't contain any multiple edges or self-loops. It is guaranteed that each node of the graph is connected by the edges with at least k other nodes of the graph.",
+  "output_specification": "In the first line print integer r ( r ≥ k + 1) — the length of the found cycle. In the next line print r distinct integers v 1 , v 2 , ..., v r (1 ≤ v i ≤ n ) — the found simple cycle. It is guaranteed that the answer exists. If there are multiple correct answers, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 3 2\n1 2\n2 3\n3 1",
+      "output": "3\n1 2 3"
+    },
+    {
+      "input": "4 6 3\n4 3\n1 2\n1 3\n1 4\n2 3\n2 4",
+      "output": "4\n3 4 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "142. Topological Sorting",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute in-degrees of all DAG vertices. Process vertices with in-degree 0 using a queue to establish a valid linear ordering in O(V + E) time."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "477D",
+  "source": "problemset",
+  "contest_id": 477,
+  "problem_index": "D",
+  "name": "Dreamoon and Binary",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 626,
+  "problem_url": "https://codeforces.com/problemset/problem/477/D",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Dreamoon saw a large integer x written on the ground and wants to print its binary form out. Dreamoon has accomplished the part of turning x into its binary format. Now he is going to print it in the following manner. He has an integer n = 0 and can only perform the following two operations in any order for unlimited times each: Print n in binary form without leading zeros, each print will append to the right of previous prints. Increase n by 1. Let's define an ideal sequence as a sequence of operations that can successfully print binary representation of x without leading zeros and ends with a print operation (i.e. operation 1). Dreamoon wants to know how many different ideal sequences are there and the length (in operations) of the shortest ideal sequence. The answers might be large so please print them modulo 1000000007 ( 10 9 + 7 ). Let's define the string representation of an ideal sequence as a string of '1' and '2' where the i -th character in the string matches the i -th operation performed. Two ideal sequences are called different if their string representations are different.",
+  "input_specification": "The single line of the input contains a binary integer representing x ( 1 ≤ x < 2 5000 ) without leading zeros.",
+  "output_specification": "The first line of the output should contain an integer representing the number of different ideal sequences modulo 1000000007 ( 10 9 + 7 ). The second line of the output contains an integer representing the minimal length of an ideal sequence modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "101",
+      "output": "1\n6"
+    },
+    {
+      "input": "11010",
+      "output": "3\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

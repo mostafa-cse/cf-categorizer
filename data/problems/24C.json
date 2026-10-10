@@ -1,0 +1,40 @@
+{
+  "id": "24C",
+  "source": "problemset",
+  "contest_id": 24,
+  "problem_index": "C",
+  "name": "Sequence of points",
+  "rating": 1800,
+  "tags": [
+    "geometry",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1488,
+  "problem_url": "https://codeforces.com/problemset/problem/24/C",
+  "editorial_url": "https://codeforces.com/blog/entry/557",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given the following points with integer coordinates on the plane: M 0 , A 0 , A 1 , ..., A n - 1 , where n is odd number. Now we define the following infinite sequence of points M i : M i is symmetric to M i - 1 according (for every natural number i ). Here point B is symmetric to A according M , if M is the center of the line segment AB . Given index j find the point M j .",
+  "input_specification": "On the first line you will be given an integer n ( 1 ≤ n ≤ 10 5 ), which will be odd, and j ( 1 ≤ j ≤ 10 18 ), where j is the index of the desired point. The next line contains two space separated integers, the coordinates of M 0 . After that n lines follow, where the i -th line contain the space separated integer coordinates of the point A i - 1 . The absolute values of all input coordinates will not be greater then 1000 .",
+  "output_specification": "On a single line output the coordinates of M j , space separated.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n0 0\n1 1\n2 3\n-5 3",
+      "output": "14 0"
+    },
+    {
+      "input": "3 1\n5 5\n1000 1000\n-1000 1000\n3 100",
+      "output": "1995 1995"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

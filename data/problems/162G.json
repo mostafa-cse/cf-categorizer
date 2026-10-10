@@ -1,0 +1,38 @@
+{
+  "id": "162G",
+  "source": "problemset",
+  "contest_id": 162,
+  "problem_index": "G",
+  "name": "Non-decimal sum",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 90,
+  "problem_url": "https://codeforces.com/problemset/problem/162/G",
+  "editorial_url": "https://codeforces.com/blog/entry/4139",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array of integers written in base radix . Calculate their sum and output it written in the same base.",
+  "input_specification": "The first line of the input contains an integer n ( 1 ≤ n ≤ 10 ) — the size of the array. The second line contains an integer radix ( 2 ≤ radix ≤ 36 ) — the base of the numeral system used. Next n lines contain the elements of the array, one per line. Each element is a non-negative integer written in radix -based notation, possibly with leading zeros, which contains between 1 and 5 digits, inclusive. The digits of the notation will be 0, 1, ..., 9, A, B, ..., Z in the given order.",
+  "output_specification": "Output the sum of array elements in radix -based notation. Use the same format as in the input.",
+  "sample_testcases": [
+    {
+      "input": "3\n16\nF0\n20B\n004",
+      "output": "2FF"
+    },
+    {
+      "input": "2\n10\n12\n34",
+      "output": "46"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

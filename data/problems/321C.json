@@ -1,0 +1,42 @@
+{
+  "id": "321C",
+  "source": "problemset",
+  "contest_id": 321,
+  "problem_index": "C",
+  "name": "Ciel the Commander",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "divide and conquer",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 10063,
+  "problem_url": "https://codeforces.com/problemset/problem/321/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8192",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Now Fox Ciel becomes a commander of Tree Land. Tree Land, like its name said, has n cities connected by n - 1 undirected roads, and for any two cities there always exists a path between them. Fox Ciel needs to assign an officer to each city. Each officer has a rank — a letter from ' A ' to ' Z '. So there will be 26 different ranks, and ' A ' is the topmost, so ' Z ' is the bottommost. There are enough officers of each rank. But there is a special rule must obey: if x and y are two distinct cities and their officers have the same rank, then on the simple path between x and y there must be a city z that has an officer with higher rank. The rule guarantee that a communications between same rank officers will be monitored by higher rank officer. Help Ciel to make a valid plan, and if it's impossible, output \" Impossible! \".",
+  "input_specification": "The first line contains an integer n ( 2 ≤ n ≤ 10 5 ) — the number of cities in Tree Land. Each of the following n - 1 lines contains two integers a and b ( 1 ≤ a , b ≤ n , a ≠ b ) — they mean that there will be an undirected road between a and b . Consider all the cities are numbered from 1 to n . It guaranteed that the given graph will be a tree.",
+  "output_specification": "If there is a valid plane, output n space-separated characters in a line — i -th character is the rank of officer in the city with number i . Otherwise output \" Impossible! \".",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2\n1 3\n1 4",
+      "output": "A B B B"
+    },
+    {
+      "input": "10\n1 2\n2 3\n3 4\n4 5\n5 6\n6 7\n7 8\n8 9\n9 10",
+      "output": "D C B A D C B D C D"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "2002F1",
+  "source": "problemset",
+  "contest_id": 2002,
+  "problem_index": "F1",
+  "name": "Court Blue (Easy Version)",
+  "rating": 2600,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1035,
+  "problem_url": "https://codeforces.com/problemset/problem/2002/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/132569",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the easy version of the problem. In this version, $$$n=m$$$ and the time limit is lower. You can make hacks only if both versions of the problem are solved. In the court of the Blue King, Lelle and Flamm are having a performance match. The match consists of several rounds. In each round, either Lelle or Flamm wins. Let $$$W_L$$$ and $$$W_F$$$ denote the number of wins of Lelle and Flamm, respectively. The Blue King considers a match to be successful if and only if: after every round, $$$\\gcd(W_L,W_F)\\le 1$$$; at the end of the match, $$$W_L\\le n, W_F\\le m$$$. Note that $$$\\gcd(0,x)=\\gcd(x,0)=x$$$ for every non-negative integer $$$x$$$. Lelle and Flamm can decide to stop the match whenever they want, and the final score of the performance is $$$l \\cdot W_L + f \\cdot W_F$$$. Please help Lelle and Flamm coordinate their wins and losses such that the performance is successful , and the total score of the performance is maximized.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\leq t \\leq 10^3$$$) — the number of test cases. The only line of each test case contains four integers $$$n$$$, $$$m$$$, $$$l$$$, $$$f$$$ ($$$2\\leq n\\leq m \\leq 2\\cdot 10^7$$$, $$$1\\leq l,f \\leq 10^9$$$, $$$\\bf{n=m}$$$): $$$n$$$, $$$m$$$ gives the upper bound on the number of Lelle and Flamm's wins, $$$l$$$ and $$$f$$$ determine the final score of the performance. Unusual additional constraint : it is guaranteed that, for each test, there are no pairs of test cases with the same pair of $$$n$$$, $$$m$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum total score of a successful performance.",
+  "sample_testcases": [
+    {
+      "input": "8\n3 3 2 5\n4 4 1 4\n6 6 2 2\n7 7 2 3\n9 9 9 1\n2 2 1 4\n5 5 1 4\n8 8 6 7",
+      "output": "19\n17\n18\n33\n86\n9\n24\n86"
+    },
+    {
+      "input": "1\n20000000 20000000 1341 331",
+      "output": "33439999007"
+    },
+    {
+      "input": "2\n1984 1984 19 84\n9982 9982 44 35",
+      "output": "204143\n788403"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

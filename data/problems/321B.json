@@ -1,0 +1,44 @@
+{
+  "id": "321B",
+  "source": "problemset",
+  "contest_id": 321,
+  "problem_index": "B",
+  "name": "Ciel and Duel",
+  "rating": 1900,
+  "tags": [
+    "dp",
+    "flows",
+    "greedy"
+  ],
+  "solved_count": 4018,
+  "problem_url": "https://codeforces.com/problemset/problem/321/B",
+  "editorial_url": "https://codeforces.com/blog/entry/8192",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel is playing a card game with her friend Jiro. Jiro has n cards, each one has two attributes: position (Attack or Defense) and strength . Fox Ciel has m cards, each one has these two attributes too. It's known that position of all Ciel's cards is Attack. Now is Ciel's battle phase, Ciel can do the following operation many times: Choose one of her cards X . This card mustn't be chosen before. If Jiro has no alive cards at that moment, he gets the damage equal to ( X 's strength). Otherwise, Ciel needs to choose one Jiro's alive card Y , then: If Y 's position is Attack, then ( X 's strength) ≥ ( Y 's strength) must hold. After this attack, card Y dies, and Jiro gets the damage equal to ( X 's strength) - ( Y 's strength). If Y 's position is Defense, then ( X 's strength) > ( Y 's strength) must hold. After this attack, card Y dies, but Jiro gets no damage. Ciel can end her battle phase at any moment (so, she can use not all her cards). Help the Fox to calculate the maximal sum of damage Jiro can get.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 100 ) — the number of cards Jiro and Ciel have. Each of the next n lines contains a string position and an integer strength (0 ≤ strength ≤ 8000) — the position and strength of Jiro's current card. Position is the string \" ATK \" for attack, and the string \" DEF \" for defense. Each of the next m lines contains an integer strength ( 0 ≤ strength ≤ 8000 ) — the strength of Ciel's current card.",
+  "output_specification": "Output an integer: the maximal damage Jiro can get.",
+  "sample_testcases": [
+    {
+      "input": "2 3\nATK 2000\nDEF 1700\n2500\n2500\n2500",
+      "output": "3000"
+    },
+    {
+      "input": "3 4\nATK 10\nATK 100\nATK 1000\n1\n11\n101\n1001",
+      "output": "992"
+    },
+    {
+      "input": "2 4\nDEF 0\nATK 0\n0\n0\n1\n1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

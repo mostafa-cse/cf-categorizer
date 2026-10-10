@@ -1,0 +1,42 @@
+{
+  "id": "1609D",
+  "source": "problemset",
+  "contest_id": 1609,
+  "problem_index": "D",
+  "name": "Social Network",
+  "rating": 1600,
+  "tags": [
+    "dsu",
+    "graphs",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 8740,
+  "problem_url": "https://codeforces.com/problemset/problem/1609/D",
+  "editorial_url": "https://codeforces.com/blog/entry/97350",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "William arrived at a conference dedicated to cryptocurrencies. Networking, meeting new people, and using friends' connections are essential to stay up to date with the latest news from the world of cryptocurrencies. The conference has $$$n$$$ participants, who are initially unfamiliar with each other. William can introduce any two people, $$$a$$$ and $$$b$$$, who were not familiar before, to each other. William has $$$d$$$ conditions, $$$i$$$'th of which requires person $$$x_i$$$ to have a connection to person $$$y_i$$$. Formally, two people $$$x$$$ and $$$y$$$ have a connection if there is such a chain $$$p_1=x, p_2, p_3, \\dots, p_k=y$$$ for which for all $$$i$$$ from $$$1$$$ to $$$k - 1$$$ it's true that two people with numbers $$$p_i$$$ and $$$p_{i + 1}$$$ know each other. For every $$$i$$$ ($$$1 \\le i \\le d$$$) William wants you to calculate the maximal number of acquaintances one person can have, assuming that William satisfied all conditions from $$$1$$$ and up to and including $$$i$$$ and performed exactly $$$i$$$ introductions. The conditions are being checked after William performed $$$i$$$ introductions. The answer for each $$$i$$$ must be calculated independently. It means that when you compute an answer for $$$i$$$, you should assume that no two people have been introduced to each other yet.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$d$$$ ($$$2 \\le n \\le 10^3, 1 \\le d \\le n - 1$$$), the number of people, and number of conditions, respectively. Each of the next $$$d$$$ lines each contain two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i, y_i \\le n, x_i \\neq y_i$$$), the numbers of people which must have a connection according to condition $$$i$$$.",
+  "output_specification": "Output $$$d$$$ integers. $$$i$$$th number must equal the number of acquaintances the person with the maximal possible acquaintances will have, if William performed $$$i$$$ introductions and satisfied the first $$$i$$$ conditions.",
+  "sample_testcases": [
+    {
+      "input": "7 6\n1 2\n3 4\n2 4\n7 6\n6 5\n1 7",
+      "output": "1\n1\n3\n3\n3\n6"
+    },
+    {
+      "input": "10 8\n1 2\n2 3\n3 4\n1 4\n6 7\n8 9\n8 10\n1 4",
+      "output": "1\n2\n3\n4\n5\n5\n6\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:50",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,34 @@
+{
+  "id": "177G1",
+  "source": "problemset",
+  "contest_id": 177,
+  "problem_index": "G1",
+  "name": "Fibonacci Strings",
+  "rating": 2400,
+  "tags": [
+    "strings"
+  ],
+  "solved_count": 253,
+  "problem_url": "https://codeforces.com/problemset/problem/177/G1",
+  "editorial_url": "https://codeforces.com/blog/entry/4375",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Fibonacci strings are defined as follows: f 1 = « a » f 2 = « b » f n = f n - 1 f n - 2 , n > 2 Thus, the first five Fibonacci strings are: \" a \", \" b \", \" ba \", \" bab \", \" babba \". You are given a Fibonacci string and m strings s i . For each string s i , find the number of times it occurs in the given Fibonacci string as a substring.",
+  "input_specification": "The first line contains two space-separated integers k and m — the number of a Fibonacci string and the number of queries, correspondingly. Next m lines contain strings s i that correspond to the queries. It is guaranteed that strings s i aren't empty and consist only of characters \" a \" and \" b \". The input limitations for getting 30 points are: 1 ≤ k ≤ 3000 1 ≤ m ≤ 3000 The total length of strings s i doesn't exceed 3000 The input limitations for getting 100 points are: 1 ≤ k ≤ 10 18 1 ≤ m ≤ 10 4 The total length of strings s i doesn't exceed 10 5 Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin , cout streams or the %I64d specifier.",
+  "output_specification": "For each string s i print the number of times it occurs in the given Fibonacci string as a substring. Since the numbers can be large enough, print them modulo 1000000007 (10 9 + 7) . Print the answers for the strings in the order in which they are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "6 5\na\nb\nab\nba\naba",
+      "output": "3\n5\n3\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:31",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "855B",
+  "source": "problemset",
+  "contest_id": 855,
+  "problem_index": "B",
+  "name": "Marvolo Gaunt's Ring",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 10090,
+  "problem_url": "https://codeforces.com/problemset/problem/855/B",
+  "editorial_url": "https://codeforces.com/blog/entry/54750",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Professor Dumbledore is helping Harry destroy the Horcruxes. He went to Gaunt Shack as he suspected a Horcrux to be present there. He saw Marvolo Gaunt's Ring and identified it as a Horcrux. Although he destroyed it, he is still affected by its curse. Professor Snape is helping Dumbledore remove the curse. For this, he wants to give Dumbledore exactly x drops of the potion he made. Value of x is calculated as maximum of p · a i + q · a j + r · a k for given p , q , r and array a 1 , a 2 , ... a n such that 1 ≤ i ≤ j ≤ k ≤ n . Help Snape find the value of x . Do note that the value of x may be negative.",
+  "input_specification": "First line of input contains 4 integers n , p , q , r ( - 10 9 ≤ p , q , r ≤ 10 9 , 1 ≤ n ≤ 10 5 ). Next line of input contains n space separated integers a 1 , a 2 , ... a n ( - 10 9 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Output a single integer the maximum value of p · a i + q · a j + r · a k that can be obtained provided 1 ≤ i ≤ j ≤ k ≤ n .",
+  "sample_testcases": [
+    {
+      "input": "5 1 2 3\n1 2 3 4 5",
+      "output": "30"
+    },
+    {
+      "input": "5 1 2 -3\n-1 -2 -3 -4 -5",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

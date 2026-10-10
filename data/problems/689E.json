@@ -1,0 +1,46 @@
+{
+  "id": "689E",
+  "source": "problemset",
+  "contest_id": 689,
+  "problem_index": "E",
+  "name": "Mike and Geometry Problem",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "dp",
+    "geometry",
+    "implementation"
+  ],
+  "solved_count": 2361,
+  "problem_url": "https://codeforces.com/problemset/problem/689/E",
+  "editorial_url": "https://codeforces.com/blog/entry/45912",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Mike wants to prepare for IMO but he doesn't know geometry, so his teacher gave him an interesting geometry problem. Let's define f ([ l , r ]) = r - l + 1 to be the number of integer points in the segment [ l , r ] with l ≤ r (say that ). You are given two integers n and k and n closed intervals [ l i , r i ] on OX axis and you have to find: In other words, you should find the sum of the number of integer points in the intersection of any k of the segments. As the answer may be very large, output it modulo 1000000007 ( 10 9 + 7 ). Mike can't solve this problem so he needs your help. You will help him, won't you?",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ k ≤ n ≤ 200 000 ) — the number of segments and the number of segments in intersection groups respectively. Then n lines follow, the i -th line contains two integers l i , r i ( - 10 9 ≤ l i ≤ r i ≤ 10 9 ) , describing i -th segment bounds.",
+  "output_specification": "Print one integer number — the answer to Mike's problem modulo 1000000007 ( 10 9 + 7 ) in the only line.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2\n1 3\n2 3",
+      "output": "5"
+    },
+    {
+      "input": "3 3\n1 3\n1 3\n1 3",
+      "output": "3"
+    },
+    {
+      "input": "3 1\n1 2\n2 3\n3 4",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2060E",
+  "source": "problemset",
+  "contest_id": 2060,
+  "problem_index": "E",
+  "name": "Graph Composition",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 13187,
+  "problem_url": "https://codeforces.com/problemset/problem/2060/E",
+  "editorial_url": "https://codeforces.com/blog/entry/138342",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two simple undirected graphs $$$F$$$ and $$$G$$$ with $$$n$$$ vertices. $$$F$$$ has $$$m_1$$$ edges while $$$G$$$ has $$$m_2$$$ edges. You may perform one of the following two types of operations any number of times: Select two integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u,v \\leq n$$$) such that there is an edge between $$$u$$$ and $$$v$$$ in $$$F$$$. Then, remove that edge from $$$F$$$. Select two integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u,v \\leq n$$$) such that there is no edge between $$$u$$$ and $$$v$$$ in $$$F$$$. Then, add an edge between $$$u$$$ and $$$v$$$ in $$$F$$$. Determine the minimum number of operations required such that for all integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u,v \\leq n$$$), there is a path from $$$u$$$ to $$$v$$$ in $$$F$$$ if and only if there is a path from $$$u$$$ to $$$v$$$ in $$$G$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of independent test cases. The first line of each test case contains three integers $$$n$$$, $$$m_1$$$, and $$$m_2$$$ ($$$1 \\leq n \\leq 2\\cdot 10^5$$$, $$$0 \\leq m_1,m_2 \\leq 2\\cdot 10^5$$$) — the number of vertices, the number of edges in $$$F$$$, and the number of edges in $$$G$$$. The following $$$m_1$$$ lines each contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u, v\\leq n$$$) — there is an edge between $$$u$$$ and $$$v$$$ in $$$F$$$. It is guaranteed that there are no repeated edges or self loops. The following $$$m_2$$$ lines each contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\leq u,v\\leq n$$$) — there is an edge between $$$u$$$ and $$$v$$$ in $$$G$$$. It is guaranteed that there are no repeated edges or self loops. It is guaranteed that the sum of $$$n$$$, the sum of $$$m_1$$$, and the sum of $$$m_2$$$ over all test cases do not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer denoting the minimum operations required on a new line.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 2 1\n1 2\n2 3\n1 3\n2 1 1\n1 2\n1 2\n3 2 0\n3 2\n1 2\n1 0 0\n3 3 1\n1 2\n1 3\n2 3\n1 2",
+      "output": "3\n0\n2\n0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:36",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

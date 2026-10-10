@@ -1,0 +1,41 @@
+{
+  "id": "1548D1",
+  "source": "problemset",
+  "contest_id": 1548,
+  "problem_index": "D1",
+  "name": "Gregor and the Odd Cows (Easy)",
+  "rating": 2300,
+  "tags": [
+    "bitmasks",
+    "geometry",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1653,
+  "problem_url": "https://codeforces.com/problemset/problem/1548/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/93586",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference from the hard version is that in this version all coordinates are even . There are $$$n$$$ fence-posts at distinct coordinates on a plane. It is guaranteed that no three fence posts lie on the same line. There are an infinite number of cows on the plane, one at every point with integer coordinates. Gregor is a member of the Illuminati, and wants to build a triangular fence, connecting $$$3$$$ distinct existing fence posts. A cow strictly inside the fence is said to be enclosed . If there are an odd number of enclosed cows and the area of the fence is an integer , the fence is said to be interesting . Find the number of interesting fences.",
+  "input_specification": "The first line contains the integer $$$n$$$ ($$$3 \\le n \\le 6000$$$), the number of fence posts which Gregor can choose to form the vertices of a fence. Each of the next $$$n$$$ line contains two integers $$$x$$$ and $$$y$$$ ($$$0 \\le x,y \\le 10^7$$$, $$$x$$$ and $$$y$$$ are even ), where $$$(x,y)$$$ is the coordinate of a fence post. All fence posts lie at distinct coordinates. No three fence posts are on the same line.",
+  "output_specification": "Print a single integer, the number of interesting fences. Two fences are considered different if they are constructed with a different set of three fence posts.",
+  "sample_testcases": [
+    {
+      "input": "3\n0 0\n2 0\n0 4",
+      "output": "1"
+    },
+    {
+      "input": "5\n0 0\n2 16\n30 14\n4 6\n2 10",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

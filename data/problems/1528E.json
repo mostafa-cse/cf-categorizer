@@ -1,0 +1,44 @@
+{
+  "id": "1528E",
+  "source": "problemset",
+  "contest_id": 1528,
+  "problem_index": "E",
+  "name": "Mashtali and Hagh Trees",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 650,
+  "problem_url": "https://codeforces.com/problemset/problem/1528/E",
+  "editorial_url": "https://codeforces.com/blog/entry/91058",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Today is Mashtali's birthday! He received a Hagh tree from Haj Davood as his birthday present! A directed tree is called a Hagh tree iff: The length of the longest directed path in it is exactly $$$n$$$. Every vertex has at most three edges attached to it independent of their orientation. Let's call vertices $$$u$$$ and $$$v$$$ friends if one of them has a directed path to the other. For every pair of vertices $$$u$$$ and $$$v$$$ that are not friends, there should exist a vertex $$$w$$$ that is friends with both $$$u$$$ and $$$v$$$ (a mutual friend). After opening his gift, Mashtali found out that the labels on the vertices were gone. Immediately, he asked himself: how many different unlabeled Hagh trees are there? That is, how many possible trees could he have received as his birthday present? At the first glance, the number of such trees seemed to be infinite since there was no limit on the number of vertices; but then he solved the problem and proved that there's a finite number of unlabeled Hagh trees! Amazed by this fact, he shared the task with you so that you could enjoy solving it as well. Since the answer can be rather large he asked you to find the number of different unlabeled Hagh trees modulo $$$998244353$$$. Here two trees are considered different, if they are not isomorphic: if there is no way to map nodes of one tree to the second tree, so that edges are mapped to edges preserving the orientation. Some examples for $$$n = 2$$$: Directed trees $$$D$$$ and $$$E$$$ are Hagh. $$$C$$$ is not Hagh because it has a vertex with $$$4$$$ edges attached to it. $$$A$$$ and $$$B$$$ are not Hagh because their longest directed paths are not equal to $$$n$$$. Also in $$$B$$$ the leftmost and rightmost vertices are not friends neither do they have a mutual friend.",
+  "input_specification": "The first line of input contains a single integer $$$n$$$ $$$(1 \\le n \\le 10^6)$$$.",
+  "output_specification": "Print a single integer, the answer to Mashtali's task modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "5"
+    },
+    {
+      "input": "2",
+      "output": "31"
+    },
+    {
+      "input": "344031",
+      "output": "272040628"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1858D",
+  "source": "problemset",
+  "contest_id": 1858,
+  "problem_index": "D",
+  "name": "Trees and Segments",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 3315,
+  "problem_url": "https://codeforces.com/problemset/problem/1858/D",
+  "editorial_url": "https://codeforces.com/blog/entry/119398",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The teachers of the Summer Informatics School decided to plant $$$n$$$ trees in a row, and it was decided to plant only oaks and firs. To do this, they made a plan, which can be represented as a binary string $$$s$$$ of length $$$n$$$. If $$$s_i = 0$$$, then the $$$i$$$-th tree in the row should be an oak, and if $$$s_i = 1$$$, then the $$$i$$$-th tree in the row should be a fir. The day of tree planting is tomorrow, and the day after tomorrow an inspector will come to the School. The inspector loves nature very much, and he will evaluate the beauty of the row as follows: First, he will calculate $$$l_0$$$ as the maximum number of consecutive oaks in the row (the maximum substring consisting of zeros in the plan $$$s$$$). If there are no oaks in the row, then $$$l_0 = 0$$$. Then, he will calculate $$$l_1$$$ as the maximum number of consecutive firs in the row (the maximum substring consisting of ones in the plan $$$s$$$). If there are no firs in the row, then $$$l_1 = 0$$$. Finally, he will calculate the beauty of the row as $$$a \\cdot l_0 + l_1$$$ for some $$$a$$$ — the inspector's favourite number. The teachers know the value of the parameter $$$a$$$, but for security reasons they cannot tell it to you. They only told you that $$$a$$$ is an integer from $$$1$$$ to $$$n$$$. Since the trees have not yet been planted, the teachers decided to change the type of no more than $$$k$$$ trees to the opposite (i.e., change $$$s_i$$$ from $$$0$$$ to $$$1$$$ or from $$$1$$$ to $$$0$$$ in the plan) in order to maximize the beauty of the row of trees according to the inspector. For each integer $$$j$$$ from $$$1$$$ to $$$n$$$ answer the following question independently : What is the maximum beauty of the row of trees that the teachers can achieve by changing the type of no more than $$$k$$$ trees if the inspector's favourite number $$$a$$$ is equal to $$$j$$$?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 3000$$$, $$$0 \\le k \\le n$$$) — the number of trees in the row and the maximum number of changes. The second line contains a string $$$s$$$ of length $$$n$$$, consisting of zeros and ones — the plan description. It is guaranteed that the sum of all $$$n$$$ values for all test cases does not exceed $$$3000$$$.",
+  "output_specification": "For each test case, print $$$n$$$ integers, the $$$j$$$-th ($$$1 \\le j \\le n$$$) of which is the maximum beauty of the row of trees after no more than $$$k$$$ changes if $$$a = j$$$ is used to calculate the beauty.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 0\n111\n4 1\n0110\n5 0\n10000\n6 2\n101101\n7 1\n0001101",
+      "output": "3 3 3 \n4 5 7 9 \n5 9 13 17 21 \n6 9 13 17 21 25 \n7 10 13 17 21 25 29"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

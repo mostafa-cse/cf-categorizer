@@ -1,0 +1,34 @@
+{
+  "id": "665B",
+  "source": "problemset",
+  "contest_id": 665,
+  "problem_index": "B",
+  "name": "Shopping",
+  "rating": 1400,
+  "tags": [
+    "brute force"
+  ],
+  "solved_count": 3936,
+  "problem_url": "https://codeforces.com/problemset/problem/665/B",
+  "editorial_url": "https://codeforces.com/blog/entry/44466",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Ayush is a cashier at the shopping center. Recently his department has started a '' click and collect \" service which allows users to shop online. The store contains k items. n customers have already used the above service. Each user paid for m items. Let a ij denote the j -th item in the i -th person's order. Due to the space limitations all the items are arranged in one single row. When Ayush receives the i -th order he will find one by one all the items a ij ( 1 ≤ j ≤ m ) in the row. Let pos ( x ) denote the position of the item x in the row at the moment of its collection. Then Ayush takes time equal to pos ( a i 1 ) + pos ( a i 2 ) + ... + pos ( a im ) for the i -th customer. When Ayush accesses the x -th element he keeps a new stock in the front of the row and takes away the x -th element. Thus the values are updating. Your task is to calculate the total time it takes for Ayush to process all the orders. You can assume that the market has endless stock.",
+  "input_specification": "The first line contains three integers n , m and k ( 1 ≤ n , k ≤ 100, 1 ≤ m ≤ k ) — the number of users, the number of items each user wants to buy and the total number of items at the market. The next line contains k distinct integers p l ( 1 ≤ p l ≤ k ) denoting the initial positions of the items in the store. The items are numbered with integers from 1 to k . Each of the next n lines contains m distinct integers a ij ( 1 ≤ a ij ≤ k ) — the order of the i -th person.",
+  "output_specification": "Print the only integer t — the total time needed for Ayush to process all the orders.",
+  "sample_testcases": [
+    {
+      "input": "2 2 5\n3 4 1 2 5\n1 5\n3 1",
+      "output": "14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

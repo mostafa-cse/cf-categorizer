@@ -1,0 +1,43 @@
+{
+  "id": "628F",
+  "source": "problemset",
+  "contest_id": 628,
+  "problem_index": "F",
+  "name": "Bear and Fair Set",
+  "rating": 2500,
+  "tags": [
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 1070,
+  "problem_url": "https://codeforces.com/problemset/problem/628/F",
+  "editorial_url": "https://codeforces.com/blog/entry/43203",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Limak is a grizzly bear. He is big and dreadful. You were chilling in the forest when you suddenly met him. It's very unfortunate for you. He will eat all your cookies unless you can demonstrate your mathematical skills. To test you, Limak is going to give you a puzzle to solve. It's a well-known fact that Limak, as every bear, owns a set of numbers. You know some information about the set: The elements of the set are distinct positive integers. The number of elements in the set is n . The number n is divisible by 5 . All elements are between 1 and b , inclusive: bears don't know numbers greater than b . For each r in {0, 1, 2, 3, 4} , the set contains exactly elements that give remainder r when divided by 5 . (That is, there are elements divisible by 5 , elements of the form 5 k + 1 , elements of the form 5 k + 2 , and so on.) Limak smiles mysteriously and gives you q hints about his set. The i -th hint is the following sentence: \"If you only look at elements that are between 1 and upTo i , inclusive, you will find exactly quantity i such elements in my set.\" In a moment Limak will tell you the actual puzzle, but something doesn't seem right... That smile was very strange. You start to think about a possible reason. Maybe Limak cheated you? Or is he a fair grizzly bear? Given n , b , q and hints, check whether Limak can be fair, i.e. there exists at least one set satisfying the given conditions. If it's possible then print '' fair \". Otherwise, print '' unfair \".",
+  "input_specification": "The first line contains three integers n , b and q ( 5 ≤ n ≤ b ≤ 10 4 , 1 ≤ q ≤ 10 4 , n divisible by 5 ) — the size of the set, the upper limit for numbers in the set and the number of hints. The next q lines describe the hints. The i -th of them contains two integers upTo i and quantity i ( 1 ≤ upTo i ≤ b , 0 ≤ quantity i ≤ n ).",
+  "output_specification": "Print '' fair \" if there exists at least one set that has all the required properties and matches all the given hints. Otherwise, print '' unfair \".",
+  "sample_testcases": [
+    {
+      "input": "10 20 1\n10 10",
+      "output": "fair"
+    },
+    {
+      "input": "10 20 3\n15 10\n5 0\n10 5",
+      "output": "fair"
+    },
+    {
+      "input": "10 20 2\n15 3\n20 10",
+      "output": "unfair"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

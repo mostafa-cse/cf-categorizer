@@ -1,0 +1,40 @@
+{
+  "id": "234G",
+  "source": "problemset",
+  "contest_id": 234,
+  "problem_index": "G",
+  "name": "Practice",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "divide and conquer",
+    "implementation"
+  ],
+  "solved_count": 1608,
+  "problem_url": "https://codeforces.com/problemset/problem/234/G",
+  "editorial_url": "https://codeforces.com/blog/entry/5531",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little time is left before Berland annual football championship. Therefore the coach of team \"Losewille Rangers\" decided to resume the practice, that were indefinitely interrupted for uncertain reasons. Overall there are n players in \"Losewille Rangers\". Each player on the team has a number — a unique integer from 1 to n . To prepare for the championship, the coach Mr. Floppe decided to spend some number of practices. Mr. Floppe spent some long nights of his holiday planning how to conduct the practices. He came to a very complex practice system. Each practice consists of one game, all n players of the team take part in the game. The players are sorted into two teams in some way. In this case, the teams may have different numbers of players, but each team must have at least one player. The coach wants to be sure that after the series of the practice sessions each pair of players had at least one practice, when they played in different teams. As the players' energy is limited, the coach wants to achieve the goal in the least number of practices. Help him to schedule the practices.",
+  "input_specification": "A single input line contains integer n ( 2 ≤ n ≤ 1000 ).",
+  "output_specification": "In the first line print m — the minimum number of practices the coach will have to schedule. Then print the descriptions of the practices in m lines. In the i -th of those lines print f i — the number of players in the first team during the i -th practice ( 1 ≤ f i < n ), and f i numbers from 1 to n — the numbers of players in the first team. The rest of the players will play in the second team during this practice. Separate numbers on a line with spaces. Print the numbers of the players in any order. If there are multiple optimal solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "1\n1 1"
+    },
+    {
+      "input": "3",
+      "output": "2\n2 1 2\n1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

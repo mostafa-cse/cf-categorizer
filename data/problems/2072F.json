@@ -1,0 +1,40 @@
+{
+  "id": "2072F",
+  "source": "problemset",
+  "contest_id": 2072,
+  "problem_index": "F",
+  "name": "Goodbye, Banker Life",
+  "rating": 1700,
+  "tags": [
+    "2-sat",
+    "bitmasks",
+    "combinatorics",
+    "constructive algorithms",
+    "fft",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 8839,
+  "problem_url": "https://codeforces.com/problemset/problem/2072/F",
+  "editorial_url": "https://codeforces.com/blog/entry/140039",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monsters are approaching the city, and to protect it, Akito must create a protective field around the city. As everyone knows, protective fields come in various levels. Akito has chosen the field of level $$$n$$$. To construct the field, a special phrase is required, which is the $$$n$$$-th row of the Great Magical Triangle, represented as a two-dimensional array. We will call this array $$$T$$$. The triangle is defined as follows: In the $$$i$$$-th row, there are $$$i$$$ integers. The single integer in the first row is $$$k$$$. Let the $$$j$$$-th element of the $$$i$$$-th row be denoted as $$$T_{i,j}$$$. Then $$$$$$T_{i,j} = \\begin{cases} T_{i-1,j-1} \\oplus T_{i-1,j}, &\\textrm{if } 1 \\lt j \\lt i \\\\ T_{i-1,j}, &\\textrm{if } j = 1 \\\\ T_{i-1,j-1}, &\\textrm{if } j = i \\end{cases}$$$$$$ where $$$a \\oplus b$$$ is the bitwise exclusive \"OR\" ( XOR ) of the integers $$$a$$$ and $$$b$$$. Help Akito find the integers in the $$$n$$$-th row of the infinite triangle before the monsters reach the city.",
+  "input_specification": "The first line contains the integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. In the only line of each test case, there are two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^6,\\ 1 \\le k \\lt 2^{31}$$$) — the row index that Akito needs and the integer in the first row of the Great Magical Triangle, respectively. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output $$$n$$$ integers — the elements of the $$$n$$$-th row of the Great Magical Triangle.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 5\n2 10\n3 16\n9 1\n1 52",
+      "output": "5\n10 10\n16 0 16\n1 0 0 0 0 0 0 0 1\n52"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:33",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "238B",
+  "source": "problemset",
+  "contest_id": 238,
+  "problem_index": "B",
+  "name": "Boring Partition",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 1431,
+  "problem_url": "https://codeforces.com/problemset/problem/238/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5765",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This problem is the most boring one you've ever seen. Given a sequence of integers a 1 , a 2 , ..., a n and a non-negative integer h , our goal is to partition the sequence into two subsequences (not necessarily consist of continuous elements). Each element of the original sequence should be contained in exactly one of the result subsequences. Note, that one of the result subsequences can be empty. Let's define function f ( a i , a j ) on pairs of distinct elements (that is i ≠ j ) in the original sequence. If a i and a j are in the same subsequence in the current partition then f ( a i , a j ) = a i + a j otherwise f ( a i , a j ) = a i + a j + h . Consider all possible values of the function f for some partition. We'll call the goodness of this partiotion the difference between the maximum value of function f and the minimum value of function f . Your task is to find a partition of the given sequence a that have the minimal possible goodness among all possible partitions.",
+  "input_specification": "The first line of input contains integers n and h (2 ≤ n ≤ 10 5 , 0 ≤ h ≤ 10 8 ) . In the second line there is a list of n space-separated integers representing a 1 , a 2 , ..., a n (0 ≤ a i ≤ 10 8 ) .",
+  "output_specification": "The first line of output should contain the required minimum goodness. The second line describes the optimal partition. You should print n whitespace-separated integers in the second line. The i -th integer is 1 if a i is in the first subsequence otherwise it should be 2 . If there are several possible correct answers you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2 3",
+      "output": "1\n1 2 2"
+    },
+    {
+      "input": "5 10\n0 1 0 2 1",
+      "output": "3\n2 2 2 2 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1400E",
+  "source": "problemset",
+  "contest_id": 1400,
+  "problem_index": "E",
+  "name": "Clear the Multiset",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 6772,
+  "problem_url": "https://codeforces.com/problemset/problem/1400/E",
+  "editorial_url": "https://codeforces.com/blog/entry/81916",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a multiset containing several integers. Initially, it contains $$$a_1$$$ elements equal to $$$1$$$, $$$a_2$$$ elements equal to $$$2$$$, ..., $$$a_n$$$ elements equal to $$$n$$$. You may apply two types of operations: choose two integers $$$l$$$ and $$$r$$$ ($$$l \\le r$$$), then remove one occurrence of $$$l$$$, one occurrence of $$$l + 1$$$, ..., one occurrence of $$$r$$$ from the multiset. This operation can be applied only if each number from $$$l$$$ to $$$r$$$ occurs at least once in the multiset; choose two integers $$$i$$$ and $$$x$$$ ($$$x \\ge 1$$$), then remove $$$x$$$ occurrences of $$$i$$$ from the multiset. This operation can be applied only if the multiset contains at least $$$x$$$ occurrences of $$$i$$$. What is the minimum number of operations required to delete all elements from the multiset?",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 5000$$$). The second line contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, ..., $$$a_n$$$ ($$$0 \\le a_i \\le 10^9$$$).",
+  "output_specification": "Print one integer — the minimum number of operations required to delete all elements from the multiset.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 4 1 1",
+      "output": "2"
+    },
+    {
+      "input": "5\n1 0 1 0 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

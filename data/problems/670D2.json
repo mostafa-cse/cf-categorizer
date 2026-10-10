@@ -1,0 +1,47 @@
+{
+  "id": "670D2",
+  "source": "problemset",
+  "contest_id": 670,
+  "problem_index": "D2",
+  "name": "Magic Powder - 2",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "implementation"
+  ],
+  "solved_count": 21171,
+  "problem_url": "https://codeforces.com/problemset/problem/670/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/44715",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This problem is given in two versions that differ only by constraints. If you can solve this problem in large constraints, then you can just write a single solution to the both versions. If you find the problem too difficult in large constraints, you can write solution to the simplified version only. Waking up in the morning, Apollinaria decided to bake cookies. To bake one cookie, she needs $$$n$$$ ingredients, and for each ingredient she knows the value $$$a_i$$$ — how many grams of this ingredient one needs to bake a cookie. To prepare one cookie Apollinaria needs to use all $$$n$$$ ingredients. Apollinaria has $$$b_i$$$ gram of the $$$i$$$-th ingredient. Also she has $$$k$$$ grams of a magic powder. Each gram of magic powder can be turned to exactly $$$1$$$ gram of any of the $$$n$$$ ingredients and can be used for baking cookies. Your task is to determine the maximum number of cookies, which Apollinaria is able to bake using the ingredients that she has and the magic powder.",
+  "input_specification": "The first line contains two positive integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 100\\,000, 1 \\le k \\le 10^9$$$) — the number of ingredients and the number of grams of the magic powder. The second line contains the sequence $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$), where the $$$i$$$-th number is equal to the number of grams of the $$$i$$$-th ingredient, needed to bake one cookie. The third line contains the sequence $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_i \\le 10^9$$$), where the $$$i$$$-th number is equal to the number of grams of the $$$i$$$-th ingredient, which Apollinaria has.",
+  "output_specification": "Print the maximum number of cookies, which Apollinaria will be able to bake using the ingredients that she has and the magic powder.",
+  "sample_testcases": [
+    {
+      "input": "1 1000000000\n1\n1000000000",
+      "output": "2000000000"
+    },
+    {
+      "input": "10 1\n1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000 1000000000\n1 1 1 1 1 1 1 1 1 1",
+      "output": "0"
+    },
+    {
+      "input": "3 1\n2 1 4\n11 3 16",
+      "output": "4"
+    },
+    {
+      "input": "4 3\n4 3 5 6\n11 12 14 20",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

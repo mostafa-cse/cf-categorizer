@@ -1,0 +1,46 @@
+{
+  "id": "1111E",
+  "source": "problemset",
+  "contest_id": 1111,
+  "problem_index": "E",
+  "name": "Tree",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1197,
+  "problem_url": "https://codeforces.com/problemset/problem/1111/E",
+  "editorial_url": "https://codeforces.com/blog/entry/64989",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree with $$$n$$$ nodes and $$$q$$$ queries. Every query starts with three integers $$$k$$$, $$$m$$$ and $$$r$$$, followed by $$$k$$$ nodes of the tree $$$a_1, a_2, \\ldots, a_k$$$. To answer a query, assume that the tree is rooted at $$$r$$$. We want to divide the $$$k$$$ given nodes into at most $$$m$$$ groups such that the following conditions are met: Each node should be in exactly one group and each group should have at least one node. In any group, there should be no two distinct nodes such that one node is an ancestor (direct or indirect) of the other. You need to output the number of ways modulo $$$10^{9}+7$$$ for every query.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 10^{5}$$$) — the number of vertices in the tree and the number of queries, respectively. Each of the next $$$n-1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n, u \\ne v$$$), denoting an edge connecting vertex $$$u$$$ and vertex $$$v$$$. It is guaranteed that the given graph is a tree. Each of the next $$$q$$$ lines starts with three integers $$$k$$$, $$$m$$$ and $$$r$$$ ($$$1 \\le k, r \\le n$$$, $$$1 \\le m \\le min(300,k)$$$) — the number of nodes, the maximum number of groups and the root of the tree for the current query, respectively. They are followed by $$$k$$$ distinct integers $$$a_1, a_2, \\ldots, a_k$$$ ($$$1 \\le a_i \\le n$$$), denoting the nodes of the current query. It is guaranteed that the sum of $$$k$$$ over all queries does not exceed $$$10^{5}$$$.",
+  "output_specification": "Print $$$q$$$ lines, where the $$$i$$$-th line contains the answer to the $$$i$$$-th query.",
+  "sample_testcases": [
+    {
+      "input": "7 2\n5 4\n2 6\n5 3\n1 2\n7 5\n4 6\n3 3 2 7 4 3\n3 1 4 6 2 1",
+      "output": "2\n0"
+    },
+    {
+      "input": "7 2\n4 7\n2 5\n4 1\n5 1\n5 6\n4 3\n3 3 2 7 1 4\n2 1 6 3 2",
+      "output": "1\n1"
+    },
+    {
+      "input": "5 2\n3 5\n4 5\n4 2\n1 4\n2 2 3 1 2\n2 2 4 5 4",
+      "output": "2\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

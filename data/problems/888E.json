@@ -1,0 +1,40 @@
+{
+  "id": "888E",
+  "source": "problemset",
+  "contest_id": 888,
+  "problem_index": "E",
+  "name": "Maximum Subsequence",
+  "rating": 1800,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 10112,
+  "problem_url": "https://codeforces.com/problemset/problem/888/E",
+  "editorial_url": "https://codeforces.com/blog/entry/55701",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array a consisting of n integers, and additionally an integer m . You have to choose some sequence of indices b 1 , b 2 , ..., b k ( 1 ≤ b 1 < b 2 < ... < b k ≤ n ) in such a way that the value of is maximized. Chosen sequence can be empty. Print the maximum possible value of .",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n ≤ 35 , 1 ≤ m ≤ 10 9 ). The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Print the maximum possible value of .",
+  "sample_testcases": [
+    {
+      "input": "4 4\n5 2 4 1",
+      "output": "3"
+    },
+    {
+      "input": "3 20\n199 41 299",
+      "output": "19"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

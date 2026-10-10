@@ -1,0 +1,40 @@
+{
+  "id": "1117D",
+  "source": "problemset",
+  "contest_id": 1117,
+  "problem_index": "D",
+  "name": "Magic Gems",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 5766,
+  "problem_url": "https://codeforces.com/problemset/problem/1117/D",
+  "editorial_url": "https://codeforces.com/blog/entry/65365",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Reziba has many magic gems. Each magic gem can be split into $$$M$$$ normal gems. The amount of space each magic (and normal) gem takes is $$$1$$$ unit. A normal gem cannot be split. Reziba wants to choose a set of magic gems and split some of them, so the total space occupied by the resulting set of gems is $$$N$$$ units. If a magic gem is chosen and split, it takes $$$M$$$ units of space (since it is split into $$$M$$$ gems); if a magic gem is not split, it takes $$$1$$$ unit. How many different configurations of the resulting set of gems can Reziba have, such that the total amount of space taken is $$$N$$$ units? Print the answer modulo $$$1000000007$$$ ($$$10^9+7$$$). Two configurations are considered different if the number of magic gems Reziba takes to form them differs, or the indices of gems Reziba has to split differ.",
+  "input_specification": "The input contains a single line consisting of $$$2$$$ integers $$$N$$$ and $$$M$$$ ($$$1 \\le N \\le 10^{18}$$$, $$$2 \\le M \\le 100$$$).",
+  "output_specification": "Print one integer, the total number of configurations of the resulting set of gems, given that the total amount of space taken is $$$N$$$ units. Print the answer modulo $$$1000000007$$$ ($$$10^9+7$$$).",
+  "sample_testcases": [
+    {
+      "input": "4 2",
+      "output": "5"
+    },
+    {
+      "input": "3 2",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

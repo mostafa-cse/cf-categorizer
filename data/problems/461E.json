@@ -1,0 +1,40 @@
+{
+  "id": "461E",
+  "source": "problemset",
+  "contest_id": 461,
+  "problem_index": "E",
+  "name": "Appleman and a Game",
+  "rating": 3000,
+  "tags": [
+    "binary search",
+    "shortest paths",
+    "strings"
+  ],
+  "solved_count": 756,
+  "problem_url": "https://codeforces.com/problemset/problem/461/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13568",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Appleman and Toastman like games. Today they play a game with strings with the following rules. Firstly Toastman tells Appleman two strings s and t both consisting only of letters ' A ', ' B ', ' C ', ' D '. Then Appleman must build string s as quickly as possible. Initially he has empty string, and in one second he can append to end of the current string any contiguous substring of t . Now, Toastman and Appleman are beginning to play the game. Toastman has already told string t to Appleman, but he hasn't come up with string s yet. Toastman only thinks, that he should choose string s consisting of n characters. Of course, he wants to find the worst string for Appleman (such string, that Appleman will spend as much time as possible during the game). Tell Toastman, how much time will Appleman spend during the game if Toastman finds the worst string for him. You can assume that Appleman plays optimally, therefore he builds any string s in minimal possible time.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 18 ). The second line contains string t ( 1 ≤ | t | ≤ 10 5 ). String t consists of only letters ' A ', ' B ', ' C ', ' D '. Each letter appears at least once in string t .",
+  "output_specification": "Print a single integer — the largest possible time Appleman needs.",
+  "sample_testcases": [
+    {
+      "input": "5\nABCCAD",
+      "output": "5"
+    },
+    {
+      "input": "5\nAAABACADBABBBCBDCACBCCCDDDBDCDD",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

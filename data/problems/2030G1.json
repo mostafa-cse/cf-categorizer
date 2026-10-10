@@ -1,0 +1,36 @@
+{
+  "id": "2030G1",
+  "source": "problemset",
+  "contest_id": 2030,
+  "problem_index": "G1",
+  "name": "The Destruction of the Universe (Easy Version)",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 306,
+  "problem_url": "https://codeforces.com/problemset/problem/2030/G1",
+  "editorial_url": "https://codeforces.com/blog/entry/135218",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the easy version of the problem. In this version, $$$n \\leq 5000$$$. You can only make hacks if both versions of the problem are solved. Orangutans are powerful beings—so powerful that they only need $$$1$$$ unit of time to destroy every vulnerable planet in the universe! There are $$$n$$$ planets in the universe. Each planet has an interval of vulnerability $$$[l, r]$$$, during which it will be exposed to destruction by orangutans. Orangutans can also expand the interval of vulnerability of any planet by $$$1$$$ unit. Specifically, suppose the expansion is performed on planet $$$p$$$ with interval of vulnerability $$$[l_p, r_p]$$$. Then, the resulting interval of vulnerability may be either $$$[l_p - 1, r_p]$$$ or $$$[l_p, r_p + 1]$$$. Given a set of planets, orangutans can destroy all planets if the intervals of vulnerability of all planets in the set intersect at least one common point. Let the score of such a set denote the minimum number of expansions that must be performed. Orangutans are interested in the sum of scores of all non-empty subsets of the planets in the universe. As the answer can be large, output it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\leq n \\leq 5000$$$) — the number of planets in the universe. The following $$$n$$$ lines contain two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\leq l_i \\leq r_i \\leq n$$$) — the initial interval of vulnerability of the $$$i$$$-th planet. It is guaranteed that the sum of $$$n$$$ does not exceed $$$5000$$$ over all test cases.",
+  "output_specification": "For each test case, output an integer — the sum of scores to destroy all non-empty subsets of the planets in the universe, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n1 1\n2 3\n3 3\n4\n1 4\n2 3\n2 4\n1 1\n5\n1 2\n2 3\n3 4\n4 5\n1 5",
+      "output": "5\n6\n24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

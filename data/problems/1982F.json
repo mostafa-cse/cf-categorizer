@@ -1,0 +1,36 @@
+{
+  "id": "1982F",
+  "source": "problemset",
+  "contest_id": 1982,
+  "problem_index": "F",
+  "name": "Sorting Problem Again",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "sortings"
+  ],
+  "solved_count": 1396,
+  "problem_url": "https://codeforces.com/problemset/problem/1982/F",
+  "editorial_url": "https://codeforces.com/blog/entry/130839",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array $$$a$$$ of $$$n$$$ elements. There are also $$$q$$$ modifications of the array. Before the first modification and after each modification, you would like to know the following: What is the minimum length subarray that needs to be sorted in non-decreasing order in order for the array $$$a$$$ to be completely sorted in non-decreasing order? More formally, you want to select a subarray of the array $$$(l, r)$$$ with the minimum value of $$$r - l + 1$$$. After that, you will sort the elements $$$a_{l}, a_{l + 1}, \\ldots, a_{r}$$$ and want the condition $$$a_{i} \\le a_{i + 1}$$$ to hold for all $$$1 \\le i \\lt n$$$. If the array is already sorted in non-decreasing order, then $$$l$$$ and $$$r$$$ should be considered as equal to $$$-1$$$. Note that finding such $$$(l, r)$$$ does not change the array in any way. The modifications themselves take the form: assign $$$a_{pos} = x$$$ for given $$$pos$$$ and $$$x$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10$$$) — the number of test cases. Then follows the description of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 5 \\cdot 10^{5}$$$). The second line of each test case contains $$$n$$$ integers $$$a_{i}$$$ ($$$0 \\le |a_{i}| \\le 10^{9}$$$) — the initial elements of the array $$$a$$$. The third line of each test case contains a number $$$q$$$ ($$$0 \\le q \\le 5 \\cdot 10^{5}$$$) — the number of modifications to the array. The following $$$q$$$ lines of each test case contain two integers $$$pos_{i}$$$ ($$$1 \\le pos_{i} \\le n$$$) and $$$val_{i}$$$ ($$$0 \\le |val_{i}| \\le 10^{9}$$$) — this means that for the $$$i$$$-th modification, $$$a_{pos_{i}}$$$ is assigned the value $$$val_{i}$$$. It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ for all test cases does not exceed $$$5 \\cdot 10^{5}$$$.",
+  "output_specification": "For each test case, output $$$q + 1$$$ lines. Each line should contain $$$2$$$ integers $$$l, r$$$ — the boundaries of the minimum subarray, such that sorting it will make the array $$$a$$$ completely sorted. If $$$a$$$ is already sorted, then output $$$l = -1$$$, $$$r = -1$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n2 2 3 4 5\n3\n2 1\n4 1\n1 1\n5\n1 2 3 4 5\n9\n1 4\n2 3\n5 2\n3 1\n1 1\n5 1\n4 1\n3 1\n2 1",
+      "output": "-1 -1\n1 2\n1 4\n3 4\n-1 -1\n1 3\n1 3\n1 5\n1 5\n2 5\n2 5\n2 5\n2 5\n-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:05",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "25E",
+  "source": "problemset",
+  "contest_id": 25,
+  "problem_index": "E",
+  "name": "Test",
+  "rating": 2200,
+  "tags": [
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 3532,
+  "problem_url": "https://codeforces.com/problemset/problem/25/E",
+  "editorial_url": "https://codeforces.com/blog/entry/594",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Sometimes it is hard to prepare tests for programming problems. Now Bob is preparing tests to new problem about strings — input data to his problem is one string. Bob has 3 wrong solutions to this problem. The first gives the wrong answer if the input data contains the substring s 1 , the second enters an infinite loop if the input data contains the substring s 2 , and the third requires too much memory if the input data contains the substring s 3 . Bob wants these solutions to fail single test. What is the minimal length of test, which couldn't be passed by all three Bob's solutions?",
+  "input_specification": "There are exactly 3 lines in the input data. The i -th line contains string s i . All the strings are non-empty, consists of lowercase Latin letters, the length of each string doesn't exceed 10 5 .",
+  "output_specification": "Output one number — what is minimal length of the string, containing s 1 , s 2 and s 3 as substrings.",
+  "sample_testcases": [
+    {
+      "input": "ab\nbc\ncd",
+      "output": "4"
+    },
+    {
+      "input": "abacaba\nabaaba\nx",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

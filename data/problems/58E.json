@@ -1,0 +1,42 @@
+{
+  "id": "58E",
+  "source": "problemset",
+  "contest_id": 58,
+  "problem_index": "E",
+  "name": "Expression",
+  "rating": 2400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 487,
+  "problem_url": "https://codeforces.com/problemset/problem/58/E",
+  "editorial_url": "https://codeforces.com/blog/entry/1771",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day Vasya was solving arithmetical problems. He wrote down an expression a + b = c in his notebook. When the teacher checked Vasya's work it turned out that Vasya had solved the problem incorrectly. Now Vasya tries to find excuses. He says that he simply forgot to write down several digits in numbers a , b and c , but he can't remember what numbers they actually were. Help Vasya, find such numbers x , y and z , with which the following conditions are met: x + y = z , from the expression x + y = z several digits can be erased in such a way that the result will be a + b = c , the expression x + y = z should have the minimal length.",
+  "input_specification": "The first and only input line contains the expression a + b = c ( 1 ≤ a , b , c ≤ 10 6 , a , b and c don't contain leading zeroes) which is the expression Vasya wrote down.",
+  "output_specification": "Print the correct expression x + y = z ( x , y and z are non-negative numbers without leading zeroes). The expression a + b = c must be met in x + y = z as a subsequence. The printed solution should have the minimal possible number of characters. If there are several such solutions, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "2+4=5",
+      "output": "21+4=25"
+    },
+    {
+      "input": "1+1=3",
+      "output": "1+31=32"
+    },
+    {
+      "input": "1+1=2",
+      "output": "1+1=2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

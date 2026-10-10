@@ -1,0 +1,38 @@
+{
+  "id": "2123E",
+  "source": "problemset",
+  "contest_id": 2123,
+  "problem_index": "E",
+  "name": "MEX Count",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 15617,
+  "problem_url": "https://codeforces.com/problemset/problem/2123/E",
+  "editorial_url": "https://codeforces.com/blog/entry/144363",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Define the $$$\\mathrm{MEX}$$$ (minimum excluded value) of an array to be the smallest nonnegative integer not present in the array. For example, $$$\\mathrm{MEX}([2, 2, 1]) = 0$$$ because $$$0$$$ is not in the array. $$$\\mathrm{MEX}([3, 1, 0, 1]) = 2$$$ because $$$0$$$ and $$$1$$$ are in the array but $$$2$$$ is not. $$$\\mathrm{MEX}([0, 3, 1, 2]) = 4$$$ because $$$0$$$, $$$1$$$, $$$2$$$, and $$$3$$$ are in the array but $$$4$$$ is not. You are given an array $$$a$$$ of size $$$n$$$ of nonnegative integers. For all $$$k$$$ ($$$0\\leq k \\leq n$$$), count the number of possible values of $$$\\mathrm{MEX}(a)$$$ after removing exactly $$$k$$$ values from $$$a$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\leq t\\leq 10^4$$$)  — the number of test cases. The first line of each test case contains one integer $$$n$$$ ($$$1\\leq n\\leq 2\\cdot 10^5$$$) — the size of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers, $$$a_1,a_2,\\dots,a_n$$$ ($$$0\\leq a_i\\leq n$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing $$$n+1$$$ integers — the number of possible values of $$$\\mathrm{MEX}(a)$$$ after removing exactly $$$k$$$ values, for $$$k=0,1,\\dots,n$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n5\n1 0 0 1 2\n6\n3 2 0 4 5 1\n6\n1 2 0 1 3 2\n4\n0 3 4 1\n5\n0 0 0 0 0",
+      "output": "1 2 4 3 2 1\n1 6 5 4 3 2 1\n1 3 5 4 3 2 1\n1 3 3 2 1\n1 1 1 1 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

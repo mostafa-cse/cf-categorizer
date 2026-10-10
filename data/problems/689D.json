@@ -1,0 +1,39 @@
+{
+  "id": "689D",
+  "source": "problemset",
+  "contest_id": 689,
+  "problem_index": "D",
+  "name": "Friends and Subsequences",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 4435,
+  "problem_url": "https://codeforces.com/problemset/problem/689/D",
+  "editorial_url": "https://codeforces.com/blog/entry/45912",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Mike and !Mike are old childhood rivals, they are opposite in everything they do, except programming. Today they have a problem they cannot solve on their own, but together (with you) — who knows? Every one of them has an integer sequences a and b of length n . Being given a query of the form of pair of integers ( l , r ) , Mike can instantly tell the value of while !Mike can instantly tell the value of . Now suppose a robot (you!) asks them all possible different queries of pairs of integers ( l , r ) (1 ≤ l ≤ r ≤ n ) (so he will make exactly n ( n + 1) / 2 queries) and counts how many times their answers coincide, thus for how many pairs is satisfied. How many occasions will the robot count?",
+  "input_specification": "The first line contains only integer n ( 1 ≤ n ≤ 200 000 ). The second line contains n integer numbers a 1 , a 2 , ..., a n ( - 10 9 ≤ a i ≤ 10 9 ) — the sequence a . The third line contains n integer numbers b 1 , b 2 , ..., b n ( - 10 9 ≤ b i ≤ 10 9 ) — the sequence b .",
+  "output_specification": "Print the only integer number — the number of occasions the robot will count, thus for how many pairs is satisfied.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 2 3 2 1 4\n6 7 1 2 3 2",
+      "output": "2"
+    },
+    {
+      "input": "3\n3 3 3\n1 1 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

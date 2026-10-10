@@ -1,0 +1,43 @@
+{
+  "id": "261A",
+  "source": "problemset",
+  "contest_id": 261,
+  "problem_index": "A",
+  "name": "Maxim and Discounts",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 5680,
+  "problem_url": "https://codeforces.com/problemset/problem/261/A",
+  "editorial_url": "https://codeforces.com/blog/entry/6398",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Maxim always goes to the supermarket on Sundays. Today the supermarket has a special offer of discount systems. There are m types of discounts. We assume that the discounts are indexed from 1 to m . To use the discount number i , the customer takes a special basket, where he puts exactly q i items he buys. Under the terms of the discount system, in addition to the items in the cart the customer can receive at most two items from the supermarket for free. The number of the \"free items\" (0, 1 or 2) to give is selected by the customer. The only condition imposed on the selected \"free items\" is as follows: each of them mustn't be more expensive than the cheapest item out of the q i items in the cart. Maxim now needs to buy n items in the shop. Count the minimum sum of money that Maxim needs to buy them, if he use the discount system optimally well. Please assume that the supermarket has enough carts for any actions. Maxim can use the same discount multiple times. Of course, Maxim can buy items without any discounts.",
+  "input_specification": "The first line contains integer m (1 ≤ m ≤ 10 5 ) — the number of discount types. The second line contains m integers: q 1 , q 2 , ..., q m (1 ≤ q i ≤ 10 5 ) . The third line contains integer n (1 ≤ n ≤ 10 5 ) — the number of items Maxim needs. The fourth line contains n integers: a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 4 ) — the items' prices. The numbers in the lines are separated by single spaces.",
+  "output_specification": "In a single line print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "1\n2\n4\n50 50 100 100",
+      "output": "200"
+    },
+    {
+      "input": "2\n2 3\n5\n50 50 50 50 50",
+      "output": "150"
+    },
+    {
+      "input": "1\n1\n7\n1 1 1 1 1 1 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:52",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

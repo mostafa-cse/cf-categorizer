@@ -1,0 +1,52 @@
+{
+  "id": "1408D",
+  "source": "problemset",
+  "contest_id": 1408,
+  "problem_index": "D",
+  "name": "Searchlights",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "implementation",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 4769,
+  "problem_url": "https://codeforces.com/problemset/problem/1408/D",
+  "editorial_url": "https://codeforces.com/blog/entry/83233",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ robbers at coordinates $$$(a_1, b_1)$$$, $$$(a_2, b_2)$$$, ..., $$$(a_n, b_n)$$$ and $$$m$$$ searchlight at coordinates $$$(c_1, d_1)$$$, $$$(c_2, d_2)$$$, ..., $$$(c_m, d_m)$$$. In one move you can move each robber to the right (increase $$$a_i$$$ of each robber by one) or move each robber up (increase $$$b_i$$$ of each robber by one). Note that you should either increase all $$$a_i$$$ or all $$$b_i$$$, you can't increase $$$a_i$$$ for some points and $$$b_i$$$ for some other points. Searchlight $$$j$$$ can see a robber $$$i$$$ if $$$a_i \\leq c_j$$$ and $$$b_i \\leq d_j$$$. A configuration of robbers is safe if no searchlight can see a robber (i.e. if there is no pair $$$i,j$$$ such that searchlight $$$j$$$ can see a robber $$$i$$$). What is the minimum number of moves you need to perform to reach a safe configuration?",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 2000$$$): the number of robbers and the number of searchlight. Each of the next $$$n$$$ lines contains two integers $$$a_i$$$, $$$b_i$$$ ($$$0 \\leq a_i, b_i \\leq 10^6$$$), coordinates of robbers. Each of the next $$$m$$$ lines contains two integers $$$c_i$$$, $$$d_i$$$ ($$$0 \\leq c_i, d_i \\leq 10^6$$$), coordinates of searchlights.",
+  "output_specification": "Print one integer: the minimum number of moves you need to perform to reach a safe configuration.",
+  "sample_testcases": [
+    {
+      "input": "1 1\n0 0\n2 3",
+      "output": "3"
+    },
+    {
+      "input": "2 3\n1 6\n6 1\n10 1\n1 10\n7 7",
+      "output": "4"
+    },
+    {
+      "input": "1 2\n0 0\n0 0\n0 0",
+      "output": "1"
+    },
+    {
+      "input": "7 3\n0 8\n3 8\n2 7\n0 10\n5 5\n7 0\n3 5\n6 6\n3 11\n11 5",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

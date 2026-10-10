@@ -1,0 +1,41 @@
+{
+  "id": "1500A",
+  "source": "problemset",
+  "contest_id": 1500,
+  "problem_index": "A",
+  "name": "Going Home",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "hashing",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 9741,
+  "problem_url": "https://codeforces.com/problemset/problem/1500/A",
+  "editorial_url": "https://codeforces.com/blog/entry/88591",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "It was the third month of remote learning, Nastya got sick of staying at dormitory, so she decided to return to her hometown. In order to make her trip more entertaining, one of Nastya's friend presented her an integer array $$$a$$$. Several hours after starting her journey home Nastya remembered about the present. To entertain herself she decided to check, are there four different indices $$$x, y, z, w$$$ such that $$$a_x + a_y = a_z + a_w$$$. Her train has already arrived the destination, but she still hasn't found the answer. Can you help her unravel the mystery?",
+  "input_specification": "The first line contains the single integer $$$n$$$ ($$$4 \\leq n \\leq 200\\,000$$$) — the size of the array. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\leq a_i \\leq 2.5 \\cdot 10^6$$$).",
+  "output_specification": "Print \" YES \" if there are such four indices, and \" NO \" otherwise. If such indices exist, print these indices $$$x$$$, $$$y$$$, $$$z$$$ and $$$w$$$ ($$$1 \\le x, y, z, w \\le n$$$). If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "6\n2 1 5 2 7 4",
+      "output": "YES\n2 3 1 6"
+    },
+    {
+      "input": "5\n1 3 1 9 20",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:13",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

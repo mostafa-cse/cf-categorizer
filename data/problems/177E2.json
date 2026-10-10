@@ -1,0 +1,34 @@
+{
+  "id": "177E2",
+  "source": "problemset",
+  "contest_id": 177,
+  "problem_index": "E2",
+  "name": "Space Voyage",
+  "rating": 1900,
+  "tags": [
+    "binary search"
+  ],
+  "solved_count": 507,
+  "problem_url": "https://codeforces.com/problemset/problem/177/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/4375",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Smart Beaver from ABBYY plans a space travel on an ultramodern spaceship. During the voyage he plans to visit n planets. For planet i a i is the maximum number of suitcases that an alien tourist is allowed to bring to the planet, and b i is the number of citizens on the planet. The Smart Beaver is going to bring some presents from ABBYY to the planets he will be visiting. The presents are packed in suitcases, x presents in each. The Beaver will take to the ship exactly a 1 + ... + a n suitcases. As the Beaver lands on the i -th planet, he takes a i suitcases and goes out. On the first day on the planet the Beaver takes a walk and gets to know the citizens. On the second and all subsequent days the Beaver gives presents to the citizens — each of the b i citizens gets one present per day. The Beaver leaves the planet in the evening of the day when the number of presents left is strictly less than the number of citizens (i.e. as soon as he won't be able to give away the proper number of presents the next day). He leaves the remaining presents at the hotel. The Beaver is going to spend exactly c days traveling. The time spent on flights between the planets is considered to be zero. In how many ways can one choose the positive integer x so that the planned voyage will take exactly c days?",
+  "input_specification": "The first input line contains space-separated integers n and c — the number of planets that the Beaver is going to visit and the number of days he is going to spend traveling, correspondingly. The next n lines contain pairs of space-separated integers a i , b i ( 1 ≤ i ≤ n ) — the number of suitcases he can bring to the i -th planet and the number of citizens of the i -th planet, correspondingly. The input limitations for getting 30 points are: 1 ≤ n ≤ 100 1 ≤ a i ≤ 100 1 ≤ b i ≤ 100 1 ≤ c ≤ 100 The input limitations for getting 100 points are: 1 ≤ n ≤ 10 4 0 ≤ a i ≤ 10 9 1 ≤ b i ≤ 10 9 1 ≤ c ≤ 10 9 Due to possible overflow, it is recommended to use the 64-bit arithmetic. In some solutions even the 64-bit arithmetic can overflow. So be careful in calculations!",
+  "output_specification": "Print a single number k — the number of ways to choose x so as to travel for exactly c days. If there are infinitely many possible values of x , print -1. Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "2 5\n1 5\n2 4",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:31",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

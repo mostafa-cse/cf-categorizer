@@ -1,0 +1,38 @@
+{
+  "id": "1994G",
+  "source": "problemset",
+  "contest_id": 1994,
+  "problem_index": "G",
+  "name": "Minecraft",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 1722,
+  "problem_url": "https://codeforces.com/problemset/problem/1994/G",
+  "editorial_url": "https://codeforces.com/blog/entry/131666",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "After winning another Bed Wars game, Masha and Olya wanted to relax and decided to play a new game. Masha gives Olya an array $$$a$$$ of length $$$n$$$ and a number $$$s$$$. Now Olya's task is to find a non-negative number $$$x$$$ such that $$$\\displaystyle\\sum_{i=1}^{n} a_i \\oplus x = s$$$. But she is very tired after a tight round, so please help her with this. But this task seemed too simple to them, so they decided to make the numbers larger (up to $$$2^k$$$) and provide you with their binary representation.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Then follows the description of the test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k, n \\cdot k \\le 2 \\cdot 10^6$$$) — the length of the array $$$a$$$ and the length of the binary representation of all numbers. The second line contains a string of length $$$k$$$, consisting of zeros and ones — the binary representation of the number $$$s$$$, starting from the most significant bits. The next $$$n$$$ lines also contain strings of length $$$k$$$, consisting of zeros and ones, the $$$i$$$-th of these strings contains the binary representation of the number $$$a_i$$$, starting from the most significant bits. It is guaranteed that the sum of the values $$$n \\cdot k$$$ for all test cases does not exceed $$$2 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, output a string of length $$$k$$$ on a separate line, consisting of zeros or ones — the binary representation of any suitable number $$$x$$$ ($$$x \\ge 0$$$), starting from the most significant bits, or $$$-1$$$ if such $$$x$$$ does not exist.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 5\n01011\n01110\n00110\n01100\n01111\n2 8\n00101001\n10111111\n10011110\n5 4\n0101\n0010\n0000\n0000\n0010\n0011\n6 5\n00011\n10110\n11001\n01010\n11100\n10011\n10000",
+      "output": "01110\n10011010\n0010\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:58",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

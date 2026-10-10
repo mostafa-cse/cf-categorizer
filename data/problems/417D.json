@@ -1,0 +1,45 @@
+{
+  "id": "417D",
+  "source": "problemset",
+  "contest_id": 417,
+  "problem_index": "D",
+  "name": "Cunning Gena",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 3057,
+  "problem_url": "https://codeforces.com/problemset/problem/417/D",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A boy named Gena really wants to get to the \"Russian Code Cup\" finals, or at least get a t-shirt. But the offered problems are too complex, so he made an arrangement with his n friends that they will solve the problems for him. The participants are offered m problems on the contest. For each friend, Gena knows what problems he can solve. But Gena's friends won't agree to help Gena for nothing: the i -th friend asks Gena x i rubles for his help in solving all the problems he can. Also, the friend agreed to write a code for Gena only if Gena's computer is connected to at least k i monitors, each monitor costs b rubles. Gena is careful with money, so he wants to spend as little money as possible to solve all the problems. Help Gena, tell him how to spend the smallest possible amount of money. Initially, there's no monitors connected to Gena's computer.",
+  "input_specification": "The first line contains three integers n , m and b ( 1 ≤ n ≤ 100 ; 1 ≤ m ≤ 20 ; 1 ≤ b ≤ 10 9 ) — the number of Gena's friends, the number of problems and the cost of a single monitor. The following 2 n lines describe the friends. Lines number 2 i and (2 i + 1) contain the information about the i -th friend. The 2 i -th line contains three integers x i , k i and m i ( 1 ≤ x i ≤ 10 9 ; 1 ≤ k i ≤ 10 9 ; 1 ≤ m i ≤ m ) — the desired amount of money, monitors and the number of problems the friend can solve. The (2 i + 1) -th line contains m i distinct positive integers — the numbers of problems that the i -th friend can solve. The problems are numbered from 1 to m .",
+  "output_specification": "Print the minimum amount of money Gena needs to spend to solve all the problems. Or print -1, if this cannot be achieved.",
+  "sample_testcases": [
+    {
+      "input": "2 2 1\n100 1 1\n2\n100 2 1\n1",
+      "output": "202"
+    },
+    {
+      "input": "3 2 5\n100 1 1\n1\n100 1 1\n2\n200 1 2\n1 2",
+      "output": "205"
+    },
+    {
+      "input": "1 2 1\n1 1 1\n1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:43",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

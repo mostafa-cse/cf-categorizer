@@ -1,0 +1,51 @@
+{
+  "id": "1118D2",
+  "source": "problemset",
+  "contest_id": 1118,
+  "problem_index": "D2",
+  "name": "Coffee and Coursework (Hard Version)",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "greedy"
+  ],
+  "solved_count": 7014,
+  "problem_url": "https://codeforces.com/problemset/problem/1118/D2",
+  "editorial_url": "https://codeforces.com/blog/entry/65396",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between easy and hard versions is the constraints . Polycarp has to write a coursework. The coursework consists of $$$m$$$ pages. Polycarp also has $$$n$$$ cups of coffee. The coffee in the $$$i$$$-th cup Polycarp has $$$a_i$$$ caffeine in it. Polycarp can drink some cups of coffee (each one no more than once). He can drink cups in any order . Polycarp drinks each cup instantly and completely (i.e. he cannot split any cup into several days). Surely, courseworks are not being written in a single day (in a perfect world of Berland, at least). Let's consider some day of Polycarp's work. Consider Polycarp drinks $$$k$$$ cups of coffee during this day and caffeine dosages of cups Polycarp drink during this day are $$$a_{i_1}, a_{i_2}, \\dots, a_{i_k}$$$. Then the first cup he drinks gives him energy to write $$$a_{i_1}$$$ pages of coursework, the second cup gives him energy to write $$$max(0, a_{i_2} - 1)$$$ pages, the third cup gives him energy to write $$$max(0, a_{i_3} - 2)$$$ pages, ..., the $$$k$$$-th cup gives him energy to write $$$max(0, a_{i_k} - k + 1)$$$ pages. If Polycarp doesn't drink coffee during some day, he cannot write coursework at all that day. Polycarp has to finish his coursework as soon as possible (spend the minimum number of days to do it). Your task is to find out this number of days or say that it is impossible.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le m \\le 10^9$$$) — the number of cups of coffee and the number of pages in the coursework. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$), where $$$a_i$$$ is the caffeine dosage of coffee in the $$$i$$$-th cup.",
+  "output_specification": "If it is impossible to write the coursework, print -1 . Otherwise print the minimum number of days Polycarp needs to do it.",
+  "sample_testcases": [
+    {
+      "input": "5 8\n2 3 1 1 2",
+      "output": "4"
+    },
+    {
+      "input": "7 10\n1 3 4 2 1 4 2",
+      "output": "2"
+    },
+    {
+      "input": "5 15\n5 5 5 5 5",
+      "output": "1"
+    },
+    {
+      "input": "5 16\n5 5 5 5 5",
+      "output": "2"
+    },
+    {
+      "input": "5 26\n5 5 5 5 5",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:51",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

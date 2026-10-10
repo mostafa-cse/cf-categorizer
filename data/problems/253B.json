@@ -1,0 +1,41 @@
+{
+  "id": "253B",
+  "source": "problemset",
+  "contest_id": 253,
+  "problem_index": "B",
+  "name": "Physics Practical",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "dp",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 12599,
+  "problem_url": "https://codeforces.com/problemset/problem/253/B",
+  "editorial_url": "https://codeforces.com/blog/entry/6073",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One day Vasya was on a physics practical, performing the task on measuring the capacitance. He followed the teacher's advice and did as much as n measurements, and recorded the results in the notebook. After that he was about to show the results to the teacher, but he remembered that at the last lesson, the teacher had made his friend Petya redo the experiment because the largest and the smallest results differed by more than two times. Vasya is lazy, and he does not want to redo the experiment. He wants to do the task and go home play computer games. So he decided to cheat: before Vasya shows the measurements to the teacher, he will erase some of them, so as to make the largest and the smallest results of the remaining measurements differ in no more than two times. In other words, if the remaining measurements have the smallest result x , and the largest result y , then the inequality y ≤ 2· x must fulfill. Of course, to avoid the teacher's suspicion, Vasya wants to remove as few measurement results as possible from his notes. Help Vasya, find what minimum number of measurement results he will have to erase from his notes so that the largest and the smallest of the remaining results of the measurements differed in no more than two times.",
+  "input_specification": "The first line contains integer n ( 2 ≤ n ≤ 10 5 ) — the number of measurements Vasya made. The second line contains n integers c 1 , c 2 , ..., c n ( 1 ≤ c i ≤ 5000 ) — the results of the measurements. The numbers on the second line are separated by single spaces.",
+  "output_specification": "Print a single integer — the minimum number of results Vasya will have to remove.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 5 3 8 3 7",
+      "output": "2"
+    },
+    {
+      "input": "4\n4 3 2 4",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:55",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

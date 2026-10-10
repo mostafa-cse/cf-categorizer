@@ -1,0 +1,44 @@
+{
+  "id": "819B",
+  "source": "problemset",
+  "contest_id": 819,
+  "problem_index": "B",
+  "name": "Mister B and PR Shifts",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1807,
+  "problem_url": "https://codeforces.com/problemset/problem/819/B",
+  "editorial_url": "https://codeforces.com/blog/entry/52946",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Some time ago Mister B detected a strange signal from the space, which he started to study. After some transformation the signal turned out to be a permutation p of length n or its cyclic shift. For the further investigation Mister B need some basis, that's why he decided to choose cyclic shift of this permutation which has the minimum possible deviation. Let's define the deviation of a permutation p as . Find a cyclic shift of permutation p with minimum possible deviation. If there are multiple solutions, print any of them. Let's denote id k ( 0 ≤ k < n ) of a cyclic shift of permutation p as the number of right shifts needed to reach this shift, for example: k = 0 : shift p 1 , p 2 , ... p n , k = 1 : shift p n , p 1 , ... p n - 1 , ..., k = n - 1 : shift p 2 , p 3 , ... p n , p 1 .",
+  "input_specification": "First line contains single integer n ( 2 ≤ n ≤ 10 6 ) — the length of the permutation. The second line contains n space-separated integers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ n ) — the elements of the permutation. It is guaranteed that all elements are distinct.",
+  "output_specification": "Print two integers: the minimum deviation of cyclic shifts of permutation p and the id of such shift. If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "0 0"
+    },
+    {
+      "input": "3\n2 3 1",
+      "output": "0 1"
+    },
+    {
+      "input": "3\n3 2 1",
+      "output": "2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

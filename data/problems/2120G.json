@@ -1,0 +1,36 @@
+{
+  "id": "2120G",
+  "source": "problemset",
+  "contest_id": 2120,
+  "problem_index": "G",
+  "name": "Eulerian Line Graph",
+  "rating": 3000,
+  "tags": [
+    "graphs",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 119,
+  "problem_url": "https://codeforces.com/problemset/problem/2120/G",
+  "editorial_url": "https://codeforces.com/blog/entry/144048",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Aryan loves graph theory more than anything. Well, no, he likes to flex his research paper on line graphs to everyone more. To start a conversation with you, he decides to give you a problem on line graphs. In the mathematical discipline of graph theory, the line graph of a simple undirected graph $$$G$$$ is another simple undirected graph $$$L(G)$$$ that represents the adjacency between every two edges in $$$G$$$. Precisely speaking, for an undirected graph $$$G$$$ without self-loops or multiple edges, its line graph $$$L(G)$$$ is a graph such that Each vertex of $$$L(G)$$$ represents an edge of $$$G$$$. Two vertices of $$$L(G)$$$ are adjacent if and only if their corresponding edges share a common endpoint in $$$G$$$. Also, $$$L^0(G)=G$$$ and $$$L^k(G)=L(L^{k-1}(G))$$$ for $$$k\\geq 1$$$. An Euler trail is a sequence of edges that visits every edge of the graph exactly once. This trail can be either a path (starting and ending at different vertices) or a cycle (starting and ending at the same vertex). Vertices may be revisited during the trail, but each edge must be used exactly once. Aryan gives you a simple connected graph $$$G$$$ with $$$n$$$ vertices and $$$m$$$ edges and an integer $$$k$$$, and it is guaranteed that $$$G$$$ has an Euler trail and it is not a path graph$$$^{\\text{∗}}$$$. He asks you to determine if $$$L^k(G)$$$ has an Euler trail. $$$^{\\text{∗}}$$$A path graph is a tree where every vertex is connected to atmost two other vertices.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three space-separated integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$5 \\le n \\le 2 \\cdot 10^5$$$, $$$n-1 \\le m \\le \\min(\\frac{n\\cdot(n-1)}{2} ,2 \\cdot 10^5)$$$, $$$1 \\le k \\le 2 \\cdot 10^5$$$). The next $$$m$$$ lines of each test case contain two space-separated integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\neq v$$$), denoting that an edge connects vertices $$$u$$$ and $$$v$$$. It is guaranteed that the sum of $$$n$$$ and $$$m$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print \" YES \" if $$$L^k(G)$$$ has an Euler trail; otherwise, \" NO \". You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 5 2\n1 2\n2 3\n3 4\n4 5\n5 1\n5 6 1\n1 2\n2 3\n3 4\n4 5\n5 1\n1 3\n10 11 3\n1 2\n2 3\n3 4\n4 5\n4 6\n4 7\n5 7\n6 7\n7 8\n8 9\n9 10\n7 8 2\n1 3\n2 3\n1 4\n4 5\n2 5\n1 6\n6 7\n2 7",
+      "output": "YES\nNO\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:22",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

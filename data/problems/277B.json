@@ -1,0 +1,47 @@
+{
+  "id": "277B",
+  "source": "problemset",
+  "contest_id": 277,
+  "problem_index": "B",
+  "name": "Set of Points",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "geometry"
+  ],
+  "solved_count": 864,
+  "problem_url": "https://codeforces.com/problemset/problem/277/B",
+  "editorial_url": "https://codeforces.com/blog/entry/6815",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Convexity of a set of points on the plane is the size of the largest subset of points that form a convex polygon. Your task is to build a set of n points with the convexity of exactly m . Your set of points should not contain three points that lie on a straight line.",
+  "input_specification": "The single line contains two integers n and m ( 3 ≤ m ≤ 100, m ≤ n ≤ 2 m ).",
+  "output_specification": "If there is no solution, print \" -1 \". Otherwise, print n pairs of integers — the coordinates of points of any set with the convexity of m . The coordinates shouldn't exceed 10 8 in their absolute value.",
+  "sample_testcases": [
+    {
+      "input": "4 3",
+      "output": "0 0\n3 0\n0 3\n1 1"
+    },
+    {
+      "input": "6 3",
+      "output": "-1"
+    },
+    {
+      "input": "6 6",
+      "output": "10 0\n-10 0\n10 1\n9 1\n9 -1\n0 -2"
+    },
+    {
+      "input": "7 4",
+      "output": "176166 6377\n709276 539564\n654734 174109\n910147 434207\n790497 366519\n606663 21061\n859328 886001"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:48",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

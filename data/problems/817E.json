@@ -1,0 +1,36 @@
+{
+  "id": "817E",
+  "source": "problemset",
+  "contest_id": 817,
+  "problem_index": "E",
+  "name": "Choosing The Commander",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "data structures",
+    "trees"
+  ],
+  "solved_count": 4070,
+  "problem_url": "https://codeforces.com/problemset/problem/817/E",
+  "editorial_url": "https://codeforces.com/blog/entry/52638",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "As you might remember from the previous round, Vova is currently playing a strategic game known as Rage of Empires. Vova managed to build a large army, but forgot about the main person in the army - the commander. So he tries to hire a commander, and he wants to choose the person who will be respected by warriors. Each warrior is represented by his personality — an integer number p i . Each commander has two characteristics — his personality p j and leadership l j (both are integer numbers). Warrior i respects commander j only if ( is the bitwise excluding OR of x and y ). Initially Vova's army is empty. There are three different types of events that can happen with the army: 1 p i — one warrior with personality p i joins Vova's army; 2 p i — one warrior with personality p i leaves Vova's army; 3 p i l i — Vova tries to hire a commander with personality p i and leadership l i . For each event of the third type Vova wants to know how many warriors (counting only those who joined the army and haven't left yet) respect the commander he tries to hire.",
+  "input_specification": "The first line contains one integer q ( 1 ≤ q ≤ 100000 ) — the number of events. Then q lines follow. Each line describes the event: 1 p i ( 1 ≤ p i ≤ 10 8 ) — one warrior with personality p i joins Vova's army; 2 p i ( 1 ≤ p i ≤ 10 8 ) — one warrior with personality p i leaves Vova's army (it is guaranteed that there is at least one such warrior in Vova's army by this moment); 3 p i l i ( 1 ≤ p i , l i ≤ 10 8 ) — Vova tries to hire a commander with personality p i and leadership l i . There is at least one event of this type.",
+  "output_specification": "For each event of the third type print one integer — the number of warriors who respect the commander Vova tries to hire in the event.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 3\n1 4\n3 6 3\n2 4\n3 6 3",
+      "output": "1\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "621E",
+  "source": "problemset",
+  "contest_id": 621,
+  "problem_index": "E",
+  "name": "Wet Shark and Blocks",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 3412,
+  "problem_url": "https://codeforces.com/problemset/problem/621/E",
+  "editorial_url": "https://codeforces.com/blog/entry/23196",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are b blocks of digits. Each one consisting of the same n digits, which are given to you in the input. Wet Shark must choose exactly one digit from each block and concatenate all of those digits together to form one large integer. For example, if he chooses digit 1 from the first block and digit 2 from the second block, he gets the integer 12 . Wet Shark then takes this number modulo x . Please, tell him how many ways he can choose one digit from each block so that he gets exactly k as the final result. As this number may be too large, print it modulo 10 9 + 7 . Note, that the number of ways to choose some digit in the block is equal to the number of it's occurrences. For example, there are 3 ways to choose digit 5 from block 3 5 6 7 8 9 5 1 1 1 1 5 .",
+  "input_specification": "The first line of the input contains four space-separated integers, n , b , k and x ( 2 ≤ n ≤ 50 000, 1 ≤ b ≤ 10 9 , 0 ≤ k < x ≤ 100, x ≥ 2 ) — the number of digits in one block, the number of blocks, interesting remainder modulo x and modulo x itself. The next line contains n space separated integers a i ( 1 ≤ a i ≤ 9 ), that give the digits contained in each block.",
+  "output_specification": "Print the number of ways to pick exactly one digit from each blocks, such that the resulting integer equals k modulo x .",
+  "sample_testcases": [
+    {
+      "input": "12 1 5 10\n3 5 6 7 8 9 5 1 1 1 1 5",
+      "output": "3"
+    },
+    {
+      "input": "3 2 1 2\n6 2 2",
+      "output": "0"
+    },
+    {
+      "input": "3 2 1 2\n3 1 2",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "802M3",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "M3",
+  "name": "April Fools' Problem (hard)",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "flows"
+  ],
+  "solved_count": 1337,
+  "problem_url": "https://codeforces.com/problemset/problem/802/M3",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "10 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The plans for HC 2 are rather far-fetched: we are just over 500 000 days away from HC 2 3387, for example, and accordingly we are planning to have a couple hundred thousand problems in that edition (we hope that programming contests will become wildly more popular). The marmots need to get to work, and they could use a good plan...",
+  "input_specification": "Same as the medium version, but the limits have changed: 1 ≤ k ≤ n ≤ 500 000 .",
+  "output_specification": "Same as the medium version.",
+  "sample_testcases": [
+    {
+      "input": "8 4\n3 8 7 9 9 4 6 8\n2 5 9 4 3 8 9 1",
+      "output": "32"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

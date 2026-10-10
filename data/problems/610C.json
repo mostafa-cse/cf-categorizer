@@ -1,0 +1,34 @@
+{
+  "id": "610C",
+  "source": "problemset",
+  "contest_id": 610,
+  "problem_index": "C",
+  "name": "Harmony Analysis",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 2999,
+  "problem_url": "https://codeforces.com/problemset/problem/610/C",
+  "editorial_url": "https://codeforces.com/blog/entry/22341",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The semester is already ending, so Danil made an effort and decided to visit a lesson on harmony analysis to know how does the professor look like, at least. Danil was very bored on this lesson until the teacher gave the group a simple task: find 4 vectors in 4 -dimensional space, such that every coordinate of every vector is 1 or - 1 and any two vectors are orthogonal. Just as a reminder, two vectors in n -dimensional space are considered to be orthogonal if and only if their scalar product is equal to zero, that is: . Danil quickly managed to come up with the solution for this problem and the teacher noticed that the problem can be solved in a more general case for 2 k vectors in 2 k -dimensinoal space. When Danil came home, he quickly came up with the solution for this problem. Can you cope with it?",
+  "input_specification": "The only line of the input contains a single integer k ( 0 ≤ k ≤ 9 ).",
+  "output_specification": "Print 2 k lines consisting of 2 k characters each. The j -th character of the i -th line must be equal to ' * ' if the j -th coordinate of the i -th vector is equal to - 1 , and must be equal to ' + ' if it's equal to + 1 . It's guaranteed that the answer always exists. If there are many correct answers, print any.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "++**\n+*+*\n++++\n+**+"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

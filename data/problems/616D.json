@@ -1,0 +1,44 @@
+{
+  "id": "616D",
+  "source": "problemset",
+  "contest_id": 616,
+  "problem_index": "D",
+  "name": "Longest k-Good Segment",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "two pointers"
+  ],
+  "solved_count": 13451,
+  "problem_url": "https://codeforces.com/problemset/problem/616/D",
+  "editorial_url": "https://codeforces.com/blog/entry/22712",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The array a with n integers is given. Let's call the sequence of one or more consecutive elements in a segment . Also let's call the segment k - good if it contains no more than k different values. Find any longest k -good segment. As the input/output can reach huge size it is recommended to use fast input/output methods: for example, prefer to use scanf/printf instead of cin/cout in C++, prefer to use BufferedReader/PrintWriter instead of Scanner/System.out in Java .",
+  "input_specification": "The first line contains two integers n , k ( 1 ≤ k ≤ n ≤ 5·10 5 ) — the number of elements in a and the parameter k . The second line contains n integers a i ( 0 ≤ a i ≤ 10 6 ) — the elements of the array a .",
+  "output_specification": "Print two integers l , r ( 1 ≤ l ≤ r ≤ n ) — the index of the left and the index of the right ends of some k -good longest segment. If there are several longest segments you can print any of them. The elements in a are numbered from 1 to n from left to right.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n1 2 3 4 5",
+      "output": "1 5"
+    },
+    {
+      "input": "9 3\n6 5 1 2 3 2 1 4 5",
+      "output": "3 7"
+    },
+    {
+      "input": "3 1\n1 2 3",
+      "output": "1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

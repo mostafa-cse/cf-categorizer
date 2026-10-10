@@ -1,0 +1,44 @@
+{
+  "id": "1175B",
+  "source": "problemset",
+  "contest_id": 1175,
+  "problem_index": "B",
+  "name": "Catch Overflow!",
+  "rating": 1600,
+  "tags": [
+    "data structures",
+    "expression parsing",
+    "implementation"
+  ],
+  "solved_count": 12989,
+  "problem_url": "https://codeforces.com/problemset/problem/1175/B",
+  "editorial_url": "https://codeforces.com/blog/entry/67484",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a function $$$f$$$ written in some basic language. The function accepts an integer value, which is immediately written into some variable $$$x$$$. $$$x$$$ is an integer variable and can be assigned values from $$$0$$$ to $$$2^{32}-1$$$. The function contains three types of commands: for $$$n$$$ — for loop; end — every command between \"for $$$n$$$\" and corresponding \"end\" is executed $$$n$$$ times; add — adds 1 to $$$x$$$. After the execution of these commands, value of $$$x$$$ is returned. Every \"for $$$n$$$\" is matched with \"end\", thus the function is guaranteed to be valid. \"for $$$n$$$\" can be immediately followed by \"end\".\"add\" command can be outside of any for loops. Notice that \"add\" commands might overflow the value of $$$x$$$! It means that the value of $$$x$$$ becomes greater than $$$2^{32}-1$$$ after some \"add\" command. Now you run $$$f(0)$$$ and wonder if the resulting value of $$$x$$$ is correct or some overflow made it incorrect. If overflow happened then output \"OVERFLOW!!!\", otherwise print the resulting value of $$$x$$$.",
+  "input_specification": "The first line contains a single integer $$$l$$$ ($$$1 \\le l \\le 10^5$$$) — the number of lines in the function. Each of the next $$$l$$$ lines contains a single command of one of three types: for $$$n$$$ ($$$1 \\le n \\le 100$$$) — for loop; end — every command between \"for $$$n$$$\" and corresponding \"end\" is executed $$$n$$$ times; add — adds 1 to $$$x$$$.",
+  "output_specification": "If overflow happened during execution of $$$f(0)$$$, then output \"OVERFLOW!!!\", otherwise print the resulting value of $$$x$$$.",
+  "sample_testcases": [
+    {
+      "input": "9\nadd\nfor 43\nend\nfor 10\nfor 15\nadd\nend\nadd\nend",
+      "output": "161"
+    },
+    {
+      "input": "2\nfor 62\nend",
+      "output": "0"
+    },
+    {
+      "input": "11\nfor 100\nfor 100\nfor 100\nfor 100\nfor 100\nadd\nend\nend\nend\nend\nend",
+      "output": "OVERFLOW!!!"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

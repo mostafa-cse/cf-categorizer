@@ -1,0 +1,36 @@
+{
+  "id": "784E",
+  "source": "problemset",
+  "contest_id": 784,
+  "problem_index": "E",
+  "name": "Twisted Circuit",
+  "rating": 2000,
+  "tags": [
+    "*special",
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 2065,
+  "problem_url": "https://codeforces.com/problemset/problem/784/E",
+  "editorial_url": "https://codeforces.com/blog/entry/51351",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "",
+  "input_specification": "The input consists of four lines, each line containing a single digit 0 or 1.",
+  "output_specification": "Output a single digit, 0 or 1.",
+  "sample_testcases": [
+    {
+      "input": "0\n1\n1\n0",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

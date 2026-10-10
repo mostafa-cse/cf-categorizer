@@ -1,0 +1,36 @@
+{
+  "id": "1907E",
+  "source": "problemset",
+  "contest_id": 1907,
+  "problem_index": "E",
+  "name": "Good Triples",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "number theory"
+  ],
+  "solved_count": 17330,
+  "problem_url": "https://codeforces.com/problemset/problem/1907/E",
+  "editorial_url": "https://codeforces.com/blog/entry/123012",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a non-negative integer number $$$n$$$ ($$$n \\ge 0$$$). Let's say a triple of non-negative integers $$$(a, b, c)$$$ is good if $$$a + b + c = n$$$, and $$$digsum(a) + digsum(b) + digsum(c) = digsum(n)$$$, where $$$digsum(x)$$$ is the sum of digits of number $$$x$$$. For example, if $$$n = 26$$$, then the pair $$$(4, 12, 10)$$$ is good, because $$$4 + 12 + 10 = 26$$$, and $$$(4) + (1 + 2) + (1 + 0) = (2 + 6)$$$. Your task is to find the number of good triples for the given number $$$n$$$. The order of the numbers in a triple matters. For example, the triples $$$(4, 12, 10)$$$ and $$$(10, 12, 4)$$$ are two different triples.",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Descriptions of test cases follow. The first and only line of the test case contains one integer $$$n$$$ ($$$0 \\le n \\le 10^7$$$).",
+  "output_specification": "For each test case output one integer, the number of good triples for the given integer $$$n$$$. Order of integers in a triple matters.",
+  "sample_testcases": [
+    {
+      "input": "12\n11\n0\n1\n2\n3\n4\n5\n3141\n999\n2718\n9999999\n10000000",
+      "output": "9\n1\n3\n6\n10\n15\n21\n1350\n166375\n29160\n1522435234375\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

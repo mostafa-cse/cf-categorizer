@@ -1,0 +1,38 @@
+{
+  "id": "2238F",
+  "source": "problemset",
+  "contest_id": 2238,
+  "problem_index": "F",
+  "name": "Infinite Work",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "graphs",
+    "greedy",
+    "math",
+    "trees"
+  ],
+  "solved_count": 504,
+  "problem_url": "https://codeforces.com/problemset/problem/2238/F",
+  "editorial_url": "https://codeforces.com/blog/entry/154829",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "More monkeys! — Exponential Idle You are in charge of a large scientific project studying an unusual function. To carry it out, you hired $$$10^{10^{100}}$$$ students and numbered them with natural numbers from $$$1$$$ to $$$10^{10^{100}}$$$. The students form a hierarchy: Student $$$1$$$ is the main one. For any $$$i \\geq 2$$$, the direct supervisor of student $$$i$$$ is student $$$\\left\\lfloor \\frac{i}{2} \\right\\rfloor$$$. The direct subordinates of student $$$i$$$ are students $$$2i$$$ and $$$2i+1$$$ (if these numbers do not exceed $$$10^{10^{100}}$$$). Subordination is transitive: if $$$a$$$ is subordinate to $$$b$$$, and $$$b$$$ is subordinate to $$$c$$$, then $$$a$$$ is subordinate to $$$c$$$. Initially, all students are working. There are $$$n$$$ days left until the project is completed. Each day consists of two stages: Hiring. Each working student $$$i$$$ hires all the non-working students who are directly subordinate to him: If student $$$2i$$$ is not working and $$$2i \\leq 10^{10^{100}}$$$, he starts working. If student $$$2i + 1$$$ is not working and $$$2i + 1 \\leq 10^{10^{100}}$$$, he starts working. Newly hired students cannot hire anyone on the same day. Firing. You may choose any set of working students and directly fire each of them. If student $$$i$$$ is directly fired, then all of his subordinates are automatically fired as well. Such firings are called indirect . Student $$$1$$$ cannot be fired. Additional restriction: Each student may be fired (directly or indirectly) at most once. If a previously fired student is hired again, it is forbidden to perform a firing that would cause this student to be fired again. Below (showing only the first $$$15$$$ students) are examples of how to choose students for direct firing on each day so that after $$$2$$$ days exactly $$$5$$$ students remain. The number at the top corresponds to the student number, edges show subordination. Students who are working and have not been fired are marked green, students who have been fired are marked white, and students who were previously fired but have been rehired are marked red. Day $$$1$$$, before firing. All students are hired. Day $$$1$$$, after firing. Students $$$2$$$, $$$6$$$, $$$7$$$ are fired. Day $$$2$$$, before firing. Students $$$2$$$, $$$6$$$, $$$7$$$ are hired. Note that during the firing stage, student $$$3$$$ cannot be directly fired, as this would lead to firing students $$$6$$$ and $$$7$$$, who have already been fired before this moment. Your goal is to make it so that exactly $$$n$$$ days later there are exactly $$$k$$$ working students left in the project. At the same time, you need to minimize the total number of direct firings over the whole period. Find the number of ways to choose the students for direct firing on each day so that the final number of working students is $$$k$$$, and the total number of direct firings is minimal possible. Output the answer modulo $$$10^9 + 7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^9$$$, $$$1 \\le k \\le 2 \\cdot 10^5$$$) — the number of days and the required final number of active students.",
+  "output_specification": "For each test case, output one integer — the number of possible ways to choose firings on each day so that after $$$n$$$ days exactly $$$k$$$ students remain, under the condition that the total number of firings is minimal possible.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n2 5\n3 4\n1 5\n20 14\n1000000000 20",
+      "output": "1\n2\n2\n42\n120\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:52",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

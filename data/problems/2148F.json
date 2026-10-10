@@ -1,0 +1,36 @@
+{
+  "id": "2148F",
+  "source": "problemset",
+  "contest_id": 2148,
+  "problem_index": "F",
+  "name": "Gravity Falls",
+  "rating": 1800,
+  "tags": [
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 7088,
+  "problem_url": "https://codeforces.com/problemset/problem/2148/F",
+  "editorial_url": "https://codeforces.com/blog/entry/146112",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Farmer John has $$$n$$$ arrays $$$a_1, a_2, \\ldots, a_n$$$ that may have different lengths. He will stack the arrays on top of each other, resulting in a grid with $$$n$$$ rows. The arrays are left-aligned and can be stacked in any order he desires. Then, gravity will take place. Any cell that is not on the bottom row and does not have an element beneath it will fall down a row. This process will be repeated until there are no cells that satisfy the aforementioned constraint. Over all possible ways FJ can stack the arrays, output the lexicographically minimum bottom row after gravity takes place.",
+  "input_specification": "The first line contains $$$t$$$ ($$$1 \\leq t \\leq 1000$$$)  — the number of test cases. The first line of each test case contains $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$). For the following $$$n$$$ lines, the first integer $$$k_i$$$ ($$$1 \\leq k \\leq 2 \\cdot 10^5$$$) denotes the length of $$$a_i$$$. Then, $$$k_i$$$ space-separated integers $$$a_{i_1}, a_{i_2}, \\ldots, a_{i_{k_i}}$$$ follow ($$$1 \\leq a_{i_j} \\leq 2 \\cdot 10^5$$$). It is guaranteed that the sum of $$$n$$$ and the sum of all $$$k_i$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the lexicographically minimum bottom row on a new line.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\n3 5 2 7\n2\n2 2 9\n3 3 1 4\n3\n1 5\n2 5 1\n2 5 2\n3\n3 4 4 9\n7 7 6 5 4 3 2 1\n4 2 4 5 1",
+      "output": "5 2 7 \n2 9 4 \n5 1 \n2 4 5 1 3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

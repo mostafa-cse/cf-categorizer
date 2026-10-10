@@ -1,0 +1,36 @@
+{
+  "id": "1637D",
+  "source": "problemset",
+  "contest_id": 1637,
+  "problem_index": "D",
+  "name": "Yet Another Minimization Problem",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 9214,
+  "problem_url": "https://codeforces.com/problemset/problem/1637/D",
+  "editorial_url": "https://codeforces.com/blog/entry/99883",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$, both of length $$$n$$$. You can perform the following operation any number of times (possibly zero): select an index $$$i$$$ ($$$1 \\leq i \\leq n$$$) and swap $$$a_i$$$ and $$$b_i$$$. Let's define the cost of the array $$$a$$$ as $$$\\sum_{i=1}^{n} \\sum_{j=i + 1}^{n} (a_i + a_j)^2$$$. Similarly, the cost of the array $$$b$$$ is $$$\\sum_{i=1}^{n} \\sum_{j=i + 1}^{n} (b_i + b_j)^2$$$. Your task is to minimize the total cost of two arrays.",
+  "input_specification": "Each test case consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 40$$$) — the number of test cases. The following is a description of the input data sets. The first line of each test case contains an integer $$$n$$$ ($$$1 \\leq n \\leq 100$$$) — the length of both arrays. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\leq a_i \\leq 100$$$) — elements of the first array. The third line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\leq b_i \\leq 100$$$) — elements of the second array. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$100$$$.",
+  "output_specification": "For each test case, print the minimum possible total cost.",
+  "sample_testcases": [
+    {
+      "input": "3\n1\n3\n6\n4\n3 6 6 6\n2 7 4 1\n4\n6 7 2 4\n2 5 3 5",
+      "output": "0\n987\n914"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

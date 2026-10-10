@@ -1,0 +1,45 @@
+{
+  "id": "997A",
+  "source": "problemset",
+  "contest_id": 997,
+  "problem_index": "A",
+  "name": "Convert to Ones",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 8715,
+  "problem_url": "https://codeforces.com/problemset/problem/997/A",
+  "editorial_url": "https://codeforces.com/blog/entry/60357",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You've got a string $$$a_1, a_2, \\dots, a_n$$$, consisting of zeros and ones. Let's call a sequence of consecutive elements $$$a_i, a_{i + 1}, \\ldots, a_j$$$ ($$$1\\leq i\\leq j\\leq n$$$) a substring of string $$$a$$$. You can apply the following operations any number of times: Choose some substring of string $$$a$$$ (for example, you can choose entire string) and reverse it, paying $$$x$$$ coins for it (for example, « 01 011 01 » $$$\\to$$$ « 01 110 01 »); Choose some substring of string $$$a$$$ (for example, you can choose entire string or just one symbol) and replace each symbol to the opposite one (zeros are replaced by ones, and ones — by zeros), paying $$$y$$$ coins for it (for example, « 01 011 01 » $$$\\to$$$ « 01 100 01 »). You can apply these operations in any order. It is allowed to apply the operations multiple times to the same substring. What is the minimum number of coins you need to spend to get a string consisting only of ones?",
+  "input_specification": "The first line of input contains integers $$$n$$$, $$$x$$$ and $$$y$$$ ($$$1 \\leq n \\leq 300\\,000, 0 \\leq x, y \\leq 10^9$$$) — length of the string, cost of the first operation (substring reverse) and cost of the second operation (inverting all elements of substring). The second line contains the string $$$a$$$ of length $$$n$$$, consisting of zeros and ones.",
+  "output_specification": "Print a single integer — the minimum total cost of operations you need to spend to get a string consisting only of ones. Print $$$0$$$, if you do not need to perform any operations.",
+  "sample_testcases": [
+    {
+      "input": "5 1 10\n01000",
+      "output": "11"
+    },
+    {
+      "input": "5 10 1\n01000",
+      "output": "2"
+    },
+    {
+      "input": "7 2 3\n1111111",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

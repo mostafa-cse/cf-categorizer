@@ -1,0 +1,42 @@
+{
+  "id": "118D",
+  "source": "problemset",
+  "contest_id": 118,
+  "problem_index": "D",
+  "name": "Caesar's Legions",
+  "rating": 1700,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 21583,
+  "problem_url": "https://codeforces.com/problemset/problem/118/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2826",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gaius Julius Caesar, a famous general, loved to line up his soldiers. Overall the army had n 1 footmen and n 2 horsemen. Caesar thought that an arrangement is not beautiful if somewhere in the line there are strictly more that k 1 footmen standing successively one after another, or there are strictly more than k 2 horsemen standing successively one after another. Find the number of beautiful arrangements of the soldiers. Note that all n 1 + n 2 warriors should be present at each arrangement. All footmen are considered indistinguishable among themselves. Similarly, all horsemen are considered indistinguishable among themselves.",
+  "input_specification": "The only line contains four space-separated integers n 1 , n 2 , k 1 , k 2 ( 1 ≤ n 1 , n 2 ≤ 100, 1 ≤ k 1 , k 2 ≤ 10 ) which represent how many footmen and horsemen there are and the largest acceptable number of footmen and horsemen standing in succession, correspondingly.",
+  "output_specification": "Print the number of beautiful arrangements of the army modulo 100000000 (10 8 ) . That is, print the number of such ways to line up the soldiers, that no more than k 1 footmen stand successively, and no more than k 2 horsemen stand successively.",
+  "sample_testcases": [
+    {
+      "input": "2 1 1 10",
+      "output": "1"
+    },
+    {
+      "input": "2 3 1 2",
+      "output": "5"
+    },
+    {
+      "input": "2 4 1 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

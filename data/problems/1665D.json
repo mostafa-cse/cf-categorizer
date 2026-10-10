@@ -1,0 +1,40 @@
+{
+  "id": "1665D",
+  "source": "problemset",
+  "contest_id": 1665,
+  "problem_index": "D",
+  "name": "GCD Guess",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "chinese remainder theorem",
+    "constructive algorithms",
+    "games",
+    "interactive",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 4844,
+  "problem_url": "https://codeforces.com/problemset/problem/1665/D",
+  "editorial_url": "https://codeforces.com/blog/entry/101663",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. There is a positive integer $$$1 \\le x \\le 10^9$$$ that you have to guess. In one query you can choose two positive integers $$$a \\neq b$$$. As an answer to this query you will get $$$\\gcd(x + a, x + b)$$$, where $$$\\gcd(n, m)$$$ is the greatest common divisor of the numbers $$$n$$$ and $$$m$$$. To guess one hidden number $$$x$$$ you are allowed to make no more than $$$30$$$ queries.",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) denoting the number of test cases. The integer $$$x$$$ that you have to guess satisfies the constraints: ($$$1 \\le x \\le 10^9$$$).",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n\n1\n\n8\n\n\n1",
+      "output": "? 1 2\n\n? 12 4\n\n! 4\n? 2000000000 1999999999\n\n! 1000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Number Theory",
+  "subtopic": "Modular Arithmetic",
+  "subsubtopic": "267. Chinese Remainder Theorem (CRT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Chinese Remainder Theorem (CRT) paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

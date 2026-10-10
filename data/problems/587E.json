@@ -1,0 +1,34 @@
+{
+  "id": "587E",
+  "source": "problemset",
+  "contest_id": 587,
+  "problem_index": "E",
+  "name": "Duff as a Queen",
+  "rating": 2900,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 1072,
+  "problem_url": "https://codeforces.com/problemset/problem/587/E",
+  "editorial_url": "https://codeforces.com/blog/entry/20971",
+  "time_limit": "7 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Duff is the queen of her country, Andarz Gu. She's a competitive programming fan. That's why, when he saw her minister, Malek, free, she gave her a sequence consisting of n non-negative integers, a 1 , a 2 , ..., a n and asked him to perform q queries for her on this sequence. There are two types of queries: given numbers l , r and k , Malek should perform for each l ≤ i ≤ r ( , bitwise exclusive OR of numbers a and b ). given numbers l and r Malek should tell her the score of sequence a l , a l + 1 , ... , a r . Score of a sequence b 1 , ..., b k is the number of its different Kheshtaks. A non-negative integer w is a Kheshtak of this sequence if and only if there exists a subsequence of b , let's denote it as b i 1 , b i 2 , ... , b i x (possibly empty) such that ( 1 ≤ i 1 < i 2 < ... < i x ≤ k ). If this subsequence is empty, then w = 0 . Unlike Duff, Malek is not a programmer. That's why he asked for your help. Please help him perform these queries.",
+  "input_specification": "The first line of input contains two integers, n and q ( 1 ≤ n ≤ 2 × 10 5 and 1 ≤ q ≤ 4 × 10 4 ). The second line of input contains n integers, a 1 , a 2 , ..., a n separated by spaces ( 0 ≤ a i ≤ 10 9 for each 1 ≤ i ≤ n ). The next q lines contain the queries. Each line starts with an integer t ( 1 ≤ t ≤ 2 ), type of the corresponding query. If t = 1 , then there are three more integers in that line, l , r and k . Otherwise there are two more integers, l and r . ( 1 ≤ l ≤ r ≤ n and 0 ≤ k ≤ 10 9 )",
+  "output_specification": "Print the answer of each query of the second type in one line.",
+  "sample_testcases": [
+    {
+      "input": "5 5\n1 2 3 4 2\n2 1 5\n1 2 2 8\n2 1 5\n1 1 3 10\n2 2 2",
+      "output": "8\n16\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

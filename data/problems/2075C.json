@@ -1,0 +1,36 @@
+{
+  "id": "2075C",
+  "source": "problemset",
+  "contest_id": 2075,
+  "problem_index": "C",
+  "name": "Two Colors",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 15006,
+  "problem_url": "https://codeforces.com/problemset/problem/2075/C",
+  "editorial_url": "https://codeforces.com/blog/entry/140781",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp has installed a new fence at his summer house. The fence consists of $$$n$$$ planks of the same size arranged in a row. Monocarp decided that he would paint his fence according to the following rules: each plank of the fence will be painted in exactly one color; the number of different colors that the planks will be painted in is exactly two; the planks of the fence that are painted in the same color must form a continuous sequence, meaning that for all pairs of planks painted in the same color, there will be no planks painted in a different color between them. Monocarp has $$$m$$$ different paints, and the paint of the $$$i$$$-th color is sufficient to paint no more than $$$a_i$$$ planks of the fence. Monocarp will not buy any additional paints. Your task is to determine the number of different ways to paint the fence that satisfy all of Monocarp's described wishes. Two ways to paint are considered different if there exists a plank that is painted in different colors in these two ways.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n, m \\le 2 \\cdot 10^5$$$) — the number of planks in the fence and the number of different colors of paint that Monocarp has. The second line contains $$$m$$$ integers $$$a_1, a_2, \\dots, a_m$$$ ($$$1 \\le a_i \\le n$$$), where $$$a_i$$$ is the maximum number of planks that can be painted with the paint of color $$$i$$$. The sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$. The sum of $$$m$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the number of different ways to paint the fence that satisfy all of Monocarp's described wishes.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 2\n2 4\n5 2\n3 4\n12 3\n5 9 8",
+      "output": "4\n6\n22"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

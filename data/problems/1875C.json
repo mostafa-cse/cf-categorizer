@@ -1,0 +1,37 @@
+{
+  "id": "1875C",
+  "source": "problemset",
+  "contest_id": 1875,
+  "problem_index": "C",
+  "name": "Jellyfish and Green Apple",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 14213,
+  "problem_url": "https://codeforces.com/problemset/problem/1875/C",
+  "editorial_url": "https://codeforces.com/blog/entry/120943",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Jellyfish has $$$n$$$ green apple pieces. Each green apple piece weighs $$$1~\\text{kg}$$$. Jellyfish wants to divide these green apple pieces equally among $$$m$$$ people. Jellyfish has a magic knife. Each time Jellyfish can choose one piece of green apple and divide it into two smaller pieces, with each piece having half the weight of the original piece. Jellyfish wants to know the minimum number of operations needed such that she can divide the green apple pieces such that the total weight of apple pieces received by each person is the same.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 2 \\cdot 10^4$$$). The description of the test cases follows. The first and only line of each test case contains two integers, $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 10^9$$$) — the number of the green apple pieces initially and the number of the people.",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations required to divide all the green apples equally among the $$$m$$$ people. If this cannot be achieved using a finite number of operations, output $$$-1$$$ instead.",
+  "sample_testcases": [
+    {
+      "input": "4\n10 5\n1 5\n10 4\n3 4",
+      "output": "0\n-1\n2\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:44",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

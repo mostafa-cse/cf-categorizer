@@ -1,0 +1,39 @@
+{
+  "id": "611C",
+  "source": "problemset",
+  "contest_id": 611,
+  "problem_index": "C",
+  "name": "New Year and Domino",
+  "rating": 1500,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 9277,
+  "problem_url": "https://codeforces.com/problemset/problem/611/C",
+  "editorial_url": "https://codeforces.com/blog/entry/22441",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "They say \" years are like dominoes, tumbling one after the other \". But would a year fit into a grid? I don't think so. Limak is a little polar bear who loves to play. He has recently got a rectangular grid with h rows and w columns. Each cell is a square, either empty (denoted by ' . ') or forbidden (denoted by ' # '). Rows are numbered 1 through h from top to bottom. Columns are numbered 1 through w from left to right. Also, Limak has a single domino. He wants to put it somewhere in a grid. A domino will occupy exactly two adjacent cells, located either in one row or in one column. Both adjacent cells must be empty and must be inside a grid. Limak needs more fun and thus he is going to consider some queries. In each query he chooses some rectangle and wonders, how many way are there to put a single domino inside of the chosen rectangle?",
+  "input_specification": "The first line of the input contains two integers h and w ( 1 ≤ h , w ≤ 500 ) – the number of rows and the number of columns, respectively. The next h lines describe a grid. Each line contains a string of the length w . Each character is either ' . ' or ' # ' — denoting an empty or forbidden cell, respectively. The next line contains a single integer q ( 1 ≤ q ≤ 100 000 ) — the number of queries. Each of the next q lines contains four integers r 1 i , c 1 i , r 2 i , c 2 i ( 1 ≤ r 1 i ≤ r 2 i ≤ h , 1 ≤ c 1 i ≤ c 2 i ≤ w ) — the i -th query. Numbers r 1 i and c 1 i denote the row and the column (respectively) of the upper left cell of the rectangle. Numbers r 2 i and c 2 i denote the row and the column (respectively) of the bottom right cell of the rectangle.",
+  "output_specification": "Print q integers, i -th should be equal to the number of ways to put a single domino inside the i -th rectangle.",
+  "sample_testcases": [
+    {
+      "input": "5 8\n....#..#\n.#......\n##.#....\n##..#.##\n........\n4\n1 1 2 3\n4 1 4 1\n1 2 4 5\n2 5 5 8",
+      "output": "4\n0\n10\n15"
+    },
+    {
+      "input": "7 39\n.......................................\n.###..###..#..###.....###..###..#..###.\n...#..#.#..#..#.........#..#.#..#..#...\n.###..#.#..#..###.....###..#.#..#..###.\n.#....#.#..#....#.....#....#.#..#..#.#.\n.###..###..#..###.....###..###..#..###.\n.......................................\n6\n1 1 3 20\n2 10 6 30\n2 10 7 30\n2 2 7 7\n1 7 7 7\n1 8 7 8",
+      "output": "53\n89\n120\n23\n0\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

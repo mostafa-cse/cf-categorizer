@@ -1,0 +1,42 @@
+{
+  "id": "920C",
+  "source": "problemset",
+  "contest_id": 920,
+  "problem_index": "C",
+  "name": "Swap Adjacent Elements",
+  "rating": 1400,
+  "tags": [
+    "dfs and similar",
+    "greedy",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 10144,
+  "problem_url": "https://codeforces.com/problemset/problem/920/C",
+  "editorial_url": "https://codeforces.com/blog/entry/57478",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array a consisting of n integers. Each integer from 1 to n appears exactly once in this array. For some indices i ( 1 ≤ i ≤ n - 1 ) it is possible to swap i -th element with ( i + 1) -th, for other indices it is not possible. You may perform any number of swapping operations any order. There is no limit on the number of times you swap i -th element with ( i + 1) -th (if the position is not forbidden). Can you make this array sorted in ascending order performing some sequence of swapping operations?",
+  "input_specification": "The first line contains one integer n ( 2 ≤ n ≤ 200000 ) — the number of elements in the array. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 200000 ) — the elements of the array. Each integer from 1 to n appears exactly once. The third line contains a string of n - 1 characters, each character is either 0 or 1 . If i -th character is 1 , then you can swap i -th element with ( i + 1) -th any number of times, otherwise it is forbidden to swap i -th element with ( i + 1) -th.",
+  "output_specification": "If it is possible to sort the array in ascending order using any sequence of swaps you are allowed to make, print YES . Otherwise, print NO .",
+  "sample_testcases": [
+    {
+      "input": "6\n1 2 5 3 4 6\n01110",
+      "output": "YES"
+    },
+    {
+      "input": "6\n1 2 5 3 4 6\n01010",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:36",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

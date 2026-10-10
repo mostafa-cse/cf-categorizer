@@ -1,0 +1,44 @@
+{
+  "id": "501E",
+  "source": "problemset",
+  "contest_id": 501,
+  "problem_index": "E",
+  "name": "Misha and Palindrome Degree",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "implementation"
+  ],
+  "solved_count": 990,
+  "problem_url": "https://codeforces.com/problemset/problem/501/E",
+  "editorial_url": "https://codeforces.com/blog/entry/15743",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Misha has an array of n integers indexed by integers from 1 to n . Let's define palindrome degree of array a as the number of such index pairs ( l , r )(1 ≤ l ≤ r ≤ n ) , that the elements from the l -th to the r -th one inclusive can be rearranged in such a way that the whole array will be a palindrome. In other words, pair ( l , r ) should meet the condition that after some rearranging of numbers on positions from l to r , inclusive (it is allowed not to rearrange the numbers at all), for any 1 ≤ i ≤ n following condition holds: a [ i ] = a [ n - i + 1] . Your task is to find the palindrome degree of Misha's array.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 10 5 ). The second line contains n positive integers a [ i ] ( 1 ≤ a [ i ] ≤ n ), separated by spaces — the elements of Misha's array.",
+  "output_specification": "In a single line print the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 2",
+      "output": "6"
+    },
+    {
+      "input": "6\n3 6 5 3 3 5",
+      "output": "0"
+    },
+    {
+      "input": "5\n5 5 2 5 2",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

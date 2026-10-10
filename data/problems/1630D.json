@@ -1,0 +1,37 @@
+{
+  "id": "1630D",
+  "source": "problemset",
+  "contest_id": 1630,
+  "problem_index": "D",
+  "name": "Flipping Range",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "number theory"
+  ],
+  "solved_count": 2129,
+  "problem_url": "https://codeforces.com/problemset/problem/1630/D",
+  "editorial_url": "https://codeforces.com/blog/entry/99384",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of $$$n$$$ integers and a set $$$B$$$ of $$$m$$$ positive integers such that $$$1 \\leq b_i \\leq \\lfloor \\frac{n}{2} \\rfloor$$$ for $$$1\\le i\\le m$$$, where $$$b_i$$$ is the $$$i$$$-th element of $$$B$$$. You can make the following operation on $$$a$$$: Select some $$$x$$$ such that $$$x$$$ appears in $$$B$$$. Select an interval from array $$$a$$$ of size $$$x$$$ and multiply by $$$-1$$$ every element in the interval. Formally, select $$$l$$$ and $$$r$$$ such that $$$1\\leq l\\leq r \\leq n$$$ and $$$r-l+1=x$$$, then assign $$$a_i:=-a_i$$$ for every $$$i$$$ such that $$$l\\leq i\\leq r$$$. Consider the following example, let $$$a=[0,6,-2,1,-4,5]$$$ and $$$B=\\{1,2\\}$$$: $$$[0,6,-2,-1,4,5]$$$ is obtained after choosing size $$$2$$$ and $$$l=4$$$, $$$r=5$$$. $$$[0,6,2,-1,4,5]$$$ is obtained after choosing size $$$1$$$ and $$$l=3$$$, $$$r=3$$$. Find the maximum $$$\\sum\\limits_{i=1}^n {a_i}$$$ you can get after applying such operation any number of times (possibly zero).",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2\\leq n \\leq 10^6$$$, $$$1 \\leq m \\leq \\lfloor \\frac{n}{2} \\rfloor$$$) — the number of elements of $$$a$$$ and $$$B$$$ respectively. The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$-10^9\\leq a_i \\leq 10^9$$$). The third line of each test case contains $$$m$$$ distinct positive integers $$$b_1,b_2,\\ldots,b_m$$$ ($$$1 \\leq b_i \\leq \\lfloor \\frac{n}{2} \\rfloor$$$) — the elements in the set $$$B$$$. It's guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case print a single integer — the maximum possible sum of all $$$a_i$$$ after applying such operation any number of times.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 2\n0 6 -2 1 -4 5\n1 2\n7 1\n1 -1 1 -1 1 -1 1\n2\n5 1\n-1000000000 -1000000000 -1000000000 -1000000000 -1000000000\n1",
+      "output": "18\n5\n5000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

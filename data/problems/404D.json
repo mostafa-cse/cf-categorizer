@@ -1,0 +1,47 @@
+{
+  "id": "404D",
+  "source": "problemset",
+  "contest_id": 404,
+  "problem_index": "D",
+  "name": "Minesweeper 1D",
+  "rating": 1900,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 2511,
+  "problem_url": "https://codeforces.com/problemset/problem/404/D",
+  "editorial_url": "https://codeforces.com/blog/entry/11095",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Game \"Minesweeper 1D\" is played on a line of squares, the line's height is 1 square, the line's width is n squares. Some of the squares contain bombs. If a square doesn't contain a bomb, then it contains a number from 0 to 2 — the total number of bombs in adjacent squares. For example, the correct field to play looks like that: 001*2***101* . The cells that are marked with \" * \" contain bombs. Note that on the correct field the numbers represent the number of bombs in adjacent cells. For example, field 2* is not correct, because cell with value 2 must have two adjacent cells with bombs. Valera wants to make a correct field to play \"Minesweeper 1D\". He has already painted a squared field with width of n cells, put several bombs on the field and wrote numbers into some cells. Now he wonders how many ways to fill the remaining cells with bombs and numbers are there if we should get a correct field in the end.",
+  "input_specification": "The first line contains sequence of characters without spaces s 1 s 2 ... s n (1 ≤ n ≤ 10 6 ) , containing only characters \" * \", \" ? \" and digits \" 0 \", \" 1 \" or \" 2 \". If character s i equals \" * \", then the i -th cell of the field contains a bomb. If character s i equals \" ? \", then Valera hasn't yet decided what to put in the i -th cell. Character s i , that is equal to a digit, represents the digit written in the i -th square.",
+  "output_specification": "Print a single integer — the number of ways Valera can fill the empty cells and get a correct field. As the answer can be rather large, print it modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "?01???",
+      "output": "4"
+    },
+    {
+      "input": "?",
+      "output": "2"
+    },
+    {
+      "input": "**12",
+      "output": "0"
+    },
+    {
+      "input": "1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

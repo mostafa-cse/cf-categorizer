@@ -1,0 +1,38 @@
+{
+  "id": "2033G",
+  "source": "problemset",
+  "contest_id": 2033,
+  "problem_index": "G",
+  "name": "Sakurako and Chefir",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 2102,
+  "problem_url": "https://codeforces.com/problemset/problem/2033/G",
+  "editorial_url": "https://codeforces.com/blog/entry/135520",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a tree with $$$n$$$ vertices rooted at vertex $$$1$$$. While walking through it with her cat Chefir, Sakurako got distracted, and Chefir ran away. To help Sakurako, Kosuke recorded his $$$q$$$ guesses. In the $$$i$$$-th guess, he assumes that Chefir got lost at vertex $$$v_i$$$ and had $$$k_i$$$ stamina . Also, for each guess, Kosuke assumes that Chefir could move along the edges an arbitrary number of times: from vertex $$$a$$$ to vertex $$$b$$$, if $$$a$$$ is an ancestor $$$^{\\text{∗}}$$$ of $$$b$$$, the stamina will not change; from vertex $$$a$$$ to vertex $$$b$$$, if $$$a$$$ is not an ancestor of $$$b$$$, then Chefir's stamina decreases by $$$1$$$. If Chefir's stamina is $$$0$$$, he cannot make a move of the second type. For each assumption, your task is to find the distance to the farthest vertex that Chefir could reach from vertex $$$v_i$$$, having $$$k_i$$$ stamina . $$$^{\\text{∗}}$$$Vertex $$$a$$$ is an ancestor of vertex $$$b$$$ if the shortest path from $$$b$$$ to the root passes through $$$a$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. Each test case is described as follows: The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. The next $$$n-1$$$ lines contain the edges of the tree. It is guaranteed that the given edges form a tree. The next line consists of a single integer $$$q$$$ $$$(1\\le q\\le 2 \\cdot 10^5)$$$, which denotes the number of guesses made by Kosuke. The next $$$q$$$ lines describe the guesses made by Kosuke, with two integers $$$v_i$$$, $$$k_i$$$ $$$(1\\le v_i \\le n, 0 \\le k_i\\le n)$$$. It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ across all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case and for each guess, output the maximum distance to the farthest vertex that Chefir could reach from the starting point $$$v_i$$$ having $$$k_i$$$ stamina .",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 2\n2 3\n3 4\n3 5\n3\n5 1\n3 1\n2 0\n9\n8 1\n1 7\n1 4\n7 3\n4 9\n3 2\n1 5\n3 6\n7\n6 0\n2 3\n6 2\n8 2\n2 4\n9 2\n6 3\n6\n2 1\n2 5\n2 4\n5 6\n4 3\n3\n3 1\n1 3\n6 5",
+      "output": "2 1 2 \n0 5 2 4 5 5 5 \n1 3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

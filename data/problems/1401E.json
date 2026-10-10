@@ -1,0 +1,37 @@
+{
+  "id": "1401E",
+  "source": "problemset",
+  "contest_id": 1401,
+  "problem_index": "E",
+  "name": "Divide Square",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "geometry",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 2703,
+  "problem_url": "https://codeforces.com/problemset/problem/1401/E",
+  "editorial_url": "https://codeforces.com/blog/entry/81700",
+  "time_limit": "2 seconds",
+  "memory_limit": "384 megabytes",
+  "description": "There is a square of size $$$10^6 \\times 10^6$$$ on the coordinate plane with four points $$$(0, 0)$$$, $$$(0, 10^6)$$$, $$$(10^6, 0)$$$, and $$$(10^6, 10^6)$$$ as its vertices. You are going to draw segments on the plane. All segments are either horizontal or vertical and intersect with at least one side of the square . Now you are wondering how many pieces this square divides into after drawing all segments. Write a program calculating the number of pieces of the square.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$0 \\le n, m \\le 10^5$$$) — the number of horizontal segments and the number of vertical segments. The next $$$n$$$ lines contain descriptions of the horizontal segments. The $$$i$$$-th line contains three integers $$$y_i$$$, $$$lx_i$$$ and $$$rx_i$$$ ($$$0 \\lt y_i \\lt 10^6$$$; $$$0 \\le lx_i \\lt rx_i \\le 10^6$$$), which means the segment connects $$$(lx_i, y_i)$$$ and $$$(rx_i, y_i)$$$. The next $$$m$$$ lines contain descriptions of the vertical segments. The $$$i$$$-th line contains three integers $$$x_i$$$, $$$ly_i$$$ and $$$ry_i$$$ ($$$0 \\lt x_i \\lt 10^6$$$; $$$0 \\le ly_i \\lt ry_i \\le 10^6$$$), which means the segment connects $$$(x_i, ly_i)$$$ and $$$(x_i, ry_i)$$$. It's guaranteed that there are no two segments on the same line , and each segment intersects with at least one of square's sides.",
+  "output_specification": "Print the number of pieces the square is divided into after drawing all the segments.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n2 3 1000000\n4 0 4\n3 0 1000000\n4 0 1\n2 0 5\n3 1 1000000",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:37",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

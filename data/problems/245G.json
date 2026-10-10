@@ -1,0 +1,39 @@
+{
+  "id": "245G",
+  "source": "problemset",
+  "contest_id": 245,
+  "problem_index": "G",
+  "name": "Suggested Friends",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "graphs"
+  ],
+  "solved_count": 569,
+  "problem_url": "https://codeforces.com/problemset/problem/245/G",
+  "editorial_url": "https://codeforces.com/blog/entry/5921",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus works as a programmer in a start-up social network. His boss gave his a task to develop a mechanism for determining suggested friends. Polycarpus thought much about the task and came to the folowing conclusion. Let's say that all friendship relationships in a social network are given as m username pairs a i , b i ( a i ≠ b i ) . Each pair a i , b i means that users a i and b i are friends. Friendship is symmetric, that is, if a i is friends with b i , then b i is also friends with a i . User y is a suggested friend for user x , if the following conditions are met: x ≠ y ; x and y aren't friends; among all network users who meet the first two conditions, user y has most of all common friends with user x . User z is a common friend of user x and user y ( z ≠ x , z ≠ y ) , if x and z are friends, and y and z are also friends. Your task is to help Polycarpus to implement a mechanism for determining suggested friends.",
+  "input_specification": "The first line contains a single integer m (1 ≤ m ≤ 5000) — the number of pairs of friends in the social network. Next m lines contain pairs of names of the users who are friends with each other. The i -th line contains two space-separated names a i and b i ( a i ≠ b i ) . The users' names are non-empty and consist of at most 20 uppercase and lowercase English letters. It is guaranteed that each pair of friends occurs only once in the input. For example, the input can't contain x , y and y , x at the same time. It is guaranteed that distinct users have distinct names. It is guaranteed that each social network user has at least one friend. The last thing guarantees that each username occurs at least once in the input.",
+  "output_specification": "In the first line print a single integer n — the number of network users. In next n lines print the number of suggested friends for each user. In the i -th line print the name of the user c i and the number of his suggested friends d i after a space. You can print information about the users in any order.",
+  "sample_testcases": [
+    {
+      "input": "5\nMike Gerald\nKate Mike\nKate Tank\nGerald Tank\nGerald David",
+      "output": "5\nMike 1\nGerald 1\nKate 1\nTank 1\nDavid 2"
+    },
+    {
+      "input": "4\nvalera vanya\nvalera edik\npasha valera\nigor valera",
+      "output": "5\nvalera 0\nvanya 3\nedik 3\npasha 3\nigor 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

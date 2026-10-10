@@ -1,0 +1,37 @@
+{
+  "id": "1673C",
+  "source": "problemset",
+  "contest_id": 1673,
+  "problem_index": "C",
+  "name": "Palindrome Basis",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 19670,
+  "problem_url": "https://codeforces.com/problemset/problem/1673/C",
+  "editorial_url": "https://codeforces.com/blog/entry/102389",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a positive integer $$$n$$$. Let's call some positive integer $$$a$$$ without leading zeroes palindromic if it remains the same after reversing the order of its digits. Find the number of distinct ways to express $$$n$$$ as a sum of positive palindromic integers. Two ways are considered different if the frequency of at least one palindromic integer is different in them. For example, $$$5=4+1$$$ and $$$5=3+1+1$$$ are considered different but $$$5=3+1+1$$$ and $$$5=1+3+1$$$ are considered the same. Formally, you need to find the number of distinct multisets of positive palindromic integers the sum of which is equal to $$$n$$$. Since the answer can be quite large, print it modulo $$$10^9+7$$$.",
+  "input_specification": "The first line of input contains a single integer $$$t$$$ ($$$1\\leq t\\leq 10^4$$$) denoting the number of testcases. Each testcase contains a single line of input containing a single integer $$$n$$$ ($$$1\\leq n\\leq 4\\cdot 10^4$$$) — the required sum of palindromic integers.",
+  "output_specification": "For each testcase, print a single integer denoting the required answer modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n12",
+      "output": "7\n74"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

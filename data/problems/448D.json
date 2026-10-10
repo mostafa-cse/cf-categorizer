@@ -1,0 +1,43 @@
+{
+  "id": "448D",
+  "source": "problemset",
+  "contest_id": 448,
+  "problem_index": "D",
+  "name": "Multiplication Table",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force"
+  ],
+  "solved_count": 17524,
+  "problem_url": "https://codeforces.com/problemset/problem/448/D",
+  "editorial_url": "https://codeforces.com/blog/entry/13042",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Bizon the Champion isn't just charming, he also is very smart. While some of us were learning the multiplication table, Bizon the Champion had fun in his own manner. Bizon the Champion painted an n × m multiplication table, where the element on the intersection of the i -th row and j -th column equals i · j (the rows and columns of the table are numbered starting from 1). Then he was asked: what number in the table is the k -th largest number? Bizon the Champion always answered correctly and immediately. Can you repeat his success? Consider the given multiplication table. If you write out all n · m numbers from the table in the non-decreasing order, then the k -th number you write out is called the k -th largest number.",
+  "input_specification": "The single line contains integers n , m and k (1 ≤ n , m ≤ 5·10 5 ; 1 ≤ k ≤ n · m ) .",
+  "output_specification": "Print the k -th largest number in a n × m multiplication table.",
+  "sample_testcases": [
+    {
+      "input": "2 2 2",
+      "output": "2"
+    },
+    {
+      "input": "2 3 4",
+      "output": "3"
+    },
+    {
+      "input": "1 10 5",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

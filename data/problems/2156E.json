@@ -1,0 +1,40 @@
+{
+  "id": "2156E",
+  "source": "problemset",
+  "contest_id": 2156,
+  "problem_index": "E",
+  "name": "Best Time to Buy and Sell Stock",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "games",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 1025,
+  "problem_url": "https://codeforces.com/problemset/problem/2156/E",
+  "editorial_url": "https://codeforces.com/blog/entry/147761",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The beauty of an array $$$b$$$ of length $$$m$$$ (with $$$m \\ge 2$$$) is defined as the largest value of $$$b_j - b_i$$$ over all pairs of indices $$$i$$$ and $$$j$$$ such that $$$1\\le i \\lt j\\le m$$$. More formally, it is equal to $$$\\max\\limits_{1\\le i \\lt j\\le m} (b_j - b_i)$$$. Note that the beauty might be negative if the array is strictly decreasing. Hao and Alex play a turn-based game on an array $$$a$$$ of length $$$n$$$. Initially, all elements of the array are unlocked. The players take turns alternately, with Hao going first . On Hao's turn, he selects one unlocked element from array $$$a$$$ and removes it. On Alex's turn, he selects one unlocked element from array $$$a$$$ and locks it (so it can no longer be removed by Hao). The game continues until all elements of $$$a$$$ are either locked or removed. It can be proven that the game lasts exactly $$$n$$$ turns, and exactly $$$\\left\\lfloor \\frac{n}{2} \\right\\rfloor$$$ elements will remain locked in array $$$a$$$ at the end. Hao wants to minimize the beauty of the final array of locked elements, while Alex wants to maximize it. Determine the beauty of the final array if both players play optimally.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$4\\le n\\le 10^5$$$) — the size of the array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single integer representing the beauty of the final array if both Hao and Alex play optimally.",
+  "sample_testcases": [
+    {
+      "input": "6\n5\n5 1 2 3 4\n4\n3 1 2 1\n10\n7 1 3 5 8 2 8 3 5 1\n6\n1 1 4 5 1 4\n9\n9 9 8 2 4 4 3 5 3\n4\n1000000000 1 2 3",
+      "output": "1\n-2\n5\n3\n1\n-999999998"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

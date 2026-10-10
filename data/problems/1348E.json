@@ -1,0 +1,49 @@
+{
+  "id": "1348E",
+  "source": "problemset",
+  "contest_id": 1348,
+  "problem_index": "E",
+  "name": "Phoenix and Berries",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2547,
+  "problem_url": "https://codeforces.com/problemset/problem/1348/E",
+  "editorial_url": "https://codeforces.com/blog/entry/76555",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Phoenix is picking berries in his backyard. There are $$$n$$$ shrubs, and each shrub has $$$a_i$$$ red berries and $$$b_i$$$ blue berries. Each basket can contain $$$k$$$ berries. But, Phoenix has decided that each basket may only contain berries from the same shrub or berries of the same color (red or blue). In other words, all berries in a basket must be from the same shrub or/and have the same color. For example, if there are two shrubs with $$$5$$$ red and $$$2$$$ blue berries in the first shrub and $$$2$$$ red and $$$1$$$ blue berries in the second shrub then Phoenix can fill $$$2$$$ baskets of capacity $$$4$$$ completely: the first basket will contain $$$3$$$ red and $$$1$$$ blue berries from the first shrub; the second basket will contain the $$$2$$$ remaining red berries from the first shrub and $$$2$$$ red berries from the second shrub. Help Phoenix determine the maximum number of baskets he can fill completely !",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$ 1\\le n, k \\le 500$$$) — the number of shrubs and the basket capacity, respectively. The $$$i$$$-th of the next $$$n$$$ lines contain two integers $$$a_i$$$ and $$$b_i$$$ ($$$0 \\le a_i, b_i \\le 10^9$$$) — the number of red and blue berries in the $$$i$$$-th shrub, respectively.",
+  "output_specification": "Output one integer — the maximum number of baskets that Phoenix can fill completely.",
+  "sample_testcases": [
+    {
+      "input": "2 4\n5 2\n2 1",
+      "output": "2"
+    },
+    {
+      "input": "1 5\n2 3",
+      "output": "1"
+    },
+    {
+      "input": "2 5\n2 1\n1 3",
+      "output": "0"
+    },
+    {
+      "input": "1 2\n1000000000 1",
+      "output": "500000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

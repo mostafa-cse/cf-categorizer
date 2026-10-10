@@ -1,0 +1,46 @@
+{
+  "id": "435B",
+  "source": "problemset",
+  "contest_id": 435,
+  "problem_index": "B",
+  "name": "Pasha Maximizes",
+  "rating": 1400,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 7696,
+  "problem_url": "https://codeforces.com/problemset/problem/435/B",
+  "editorial_url": "https://codeforces.com/blog/entry/12479",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Pasha has a positive integer a without leading zeroes. Today he decided that the number is too small and he should make it larger. Unfortunately, the only operation Pasha can do is to swap two adjacent decimal digits of the integer. Help Pasha count the maximum number he can get if he has the time to make at most k swaps.",
+  "input_specification": "The single line contains two integers a and k (1 ≤ a ≤ 10 18 ; 0 ≤ k ≤ 100) .",
+  "output_specification": "Print the maximum number that Pasha can get if he makes at most k swaps.",
+  "sample_testcases": [
+    {
+      "input": "1990 1",
+      "output": "9190"
+    },
+    {
+      "input": "300 0",
+      "output": "300"
+    },
+    {
+      "input": "1034 2",
+      "output": "3104"
+    },
+    {
+      "input": "9090000078001234 6",
+      "output": "9907000008001234"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

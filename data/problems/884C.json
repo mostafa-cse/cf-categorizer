@@ -1,0 +1,40 @@
+{
+  "id": "884C",
+  "source": "problemset",
+  "contest_id": 884,
+  "problem_index": "C",
+  "name": "Bertown Subway",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 5259,
+  "problem_url": "https://codeforces.com/problemset/problem/884/C",
+  "editorial_url": "https://codeforces.com/blog/entry/55470",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The construction of subway in Bertown is almost finished! The President of Berland will visit this city soon to look at the new subway himself. There are n stations in the subway. It was built according to the Bertown Transport Law : For each station i there exists exactly one train that goes from this station. Its destination station is p i , possibly p i = i ; For each station i there exists exactly one station j such that p j = i . The President will consider the convenience of subway after visiting it. The convenience is the number of ordered pairs ( x , y ) such that person can start at station x and, after taking some subway trains (possibly zero), arrive at station y ( 1 ≤ x , y ≤ n ). The mayor of Bertown thinks that if the subway is not convenient enough, then the President might consider installing a new mayor (and, of course, the current mayor doesn't want it to happen). Before President visits the city mayor has enough time to rebuild some paths of subway, thus changing the values of p i for not more than two subway stations . Of course, breaking the Bertown Transport Law is really bad, so the subway must be built according to the Law even after changes. The mayor wants to do these changes in such a way that the convenience of the subway is maximized. Help him to calculate the maximum possible convenience he can get!",
+  "input_specification": "The first line contains one integer number n ( 1 ≤ n ≤ 100000 ) — the number of stations. The second line contains n integer numbers p 1 , p 2 , ..., p n ( 1 ≤ p i ≤ n ) — the current structure of the subway. All these numbers are distinct.",
+  "output_specification": "Print one number — the maximum possible value of convenience .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 1 3",
+      "output": "9"
+    },
+    {
+      "input": "5\n1 5 4 3 2",
+      "output": "17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

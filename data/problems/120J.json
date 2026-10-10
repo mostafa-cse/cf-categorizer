@@ -1,0 +1,40 @@
+{
+  "id": "120J",
+  "source": "problemset",
+  "contest_id": 120,
+  "problem_index": "J",
+  "name": "Minimum Sum",
+  "rating": 1900,
+  "tags": [
+    "divide and conquer",
+    "geometry",
+    "sortings"
+  ],
+  "solved_count": 1067,
+  "problem_url": "https://codeforces.com/problemset/problem/120/J",
+  "editorial_url": "https://codeforces.com/blog/entry/2892",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of n vectors on a plane. For each vector you are allowed to multiply any of its coordinates by -1 . Thus, each vector v i = ( x i , y i ) can be transformed into one of the following four vectors: v i 1 = ( x i , y i ) , v i 2 = ( - x i , y i ) , v i 3 = ( x i ,  - y i ) , v i 4 = ( - x i ,  - y i ) . You should find two vectors from the set and determine which of their coordinates should be multiplied by -1 so that the absolute value of the sum of the resulting vectors was minimally possible. More formally, you should choose two vectors v i , v j ( 1 ≤ i , j ≤ n , i ≠ j ) and two numbers k 1 , k 2 ( 1 ≤ k 1 , k 2 ≤ 4 ), so that the value of the expression | v i k 1 + v j k 2 | were minimum.",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 10 5 ). Then n lines contain vectors as pairs of integers \" x i y i \" ( - 10000 ≤ x i , y i ≤ 10000 ), one pair per line.",
+  "output_specification": "Print on the first line four space-separated numbers \" i k 1 j k 2 \" — the answer to the problem. If there are several variants the absolute value of whose sums is minimum, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n-7 -3\n9 0\n-8 6\n7 -8\n4 -5",
+      "output": "3 2 4 2"
+    },
+    {
+      "input": "5\n3 2\n-4 7\n-6 0\n-8 4\n5 1",
+      "output": "3 4 5 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1916E",
+  "source": "problemset",
+  "contest_id": 1916,
+  "problem_index": "E",
+  "name": "Happy Life in University",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 2907,
+  "problem_url": "https://codeforces.com/problemset/problem/1916/E",
+  "editorial_url": "https://codeforces.com/blog/entry/124138",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Egor and his friend Arseniy are finishing school this year and will soon enter university. And since they are very responsible guys, they have started preparing for admission already. First of all, they decided to take care of where they will live for the long four years of study, and after visiting the university's website, they found out that the university dormitory can be represented as a root tree with $$$n$$$ vertices with the root at vertex $$$1$$$. In the tree, each vertex represents a recreation with some type of activity $$$a_i$$$. The friends need to choose $$$2$$$ recreations (not necessarily different) in which they will settle. The guys are convinced that the more the value of the following function $$$f(u, v) = diff(u, lca(u, v)) \\cdot diff(v, lca(u, v))$$$, the more fun their life will be. Help Egor and Arseniy and find the maximum value of $$$f(u, v)$$$ among all pairs of recreations! $$$^{\\dagger} diff(u, v)$$$ — the number of different activities listed on the simple path from vertex $$$u$$$ to vertex $$$v$$$. $$$^{\\dagger} lca(u, v)$$$ — a vertex $$$p$$$ such that it is at the maximum distance from the root and is a parent of both vertex $$$u$$$ and vertex $$$v$$$.",
+  "input_specification": "Each test consists of several test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. Then follows the description of the test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^{5}$$$). The second line of each test case contains $$${n - 1}$$$ integers $$$p_2, p_3, \\ldots,p_n$$$ ($$$1 \\le p_i \\le i - 1$$$), where $$$p_i$$$ — the parent of vertex $$$i$$$. The third line of each test case contains $$${n}$$$ integers $$$a_1, a_2, \\ldots,a_n$$$ ($$$1 \\le a_i \\le n$$$), where $$$a_i$$$ — the number of the activity located at vertex $$$i$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the maximum value of $$$f(u, v)$$$ for all pairs of recreations $$$(u, v)$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n2\n1\n1 2\n7\n1 1 2 2 3 3\n6 5 2 3 6 5 6\n13\n1 1 1 2 2 2 3 3 4 5 6 6\n2 2 2 1 4 9 7 2 5 2 1 11 2\n12\n1 1 1 2 2 3 4 4 7 7 6\n11 2 1 11 12 8 5 8 8 5 11 7",
+      "output": "2\n9\n9\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "2163D1",
+  "source": "problemset",
+  "contest_id": 2163,
+  "problem_index": "D1",
+  "name": "Diadrash (Easy Version)",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "brute force",
+    "divide and conquer",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 2886,
+  "problem_url": "https://codeforces.com/problemset/problem/2163/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/148239",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the Easy version of the problem. The difference between the versions is that in this version, you can make at most $$$\\max(300, \\lceil\\frac{n}{2}\\rceil+2)$$$ queries. You can hack only if you solved all versions of this problem. This problem is interactive. There is a permutation$$$^{\\text{∗}}$$$ $$$p$$$ of the integers from $$$0$$$ to $$$n-1$$$ hidden from you. Additionally, you are given $$$q$$$ ranges $$$[l_1, r_1], [l_2, r_2], \\ldots, [l_q, r_q]$$$ where $$$1 \\le l_i \\le r_i \\le n$$$. You need to discover the maximum $$$\\operatorname{MEX}$$$ among the values of $$$p$$$ in the $$$q$$$ ranges that are given to you in the input. Formally, you must discover the value of $$$\\max _{i=1}^q {\\operatorname{MEX}([p_{l_i}, p_{l_i+1}, \\ldots, p_{r_i}])}$$$$$$^{\\text{†}}$$$. To do this, you may make at most $$$\\max(300, \\lceil\\frac{n}{2}\\rceil+2)$$$ queries of the following form: Choose any two integers $$$1 \\le l \\le r \\le n$$$ and you will receive the value $$$\\operatorname{MEX}([p_{l}, p_{l+1}, \\ldots, p_{r}])$$$. $$$^{\\text{∗}}$$$A permutation of the integers from $$$0$$$ to $$$n-1$$$ is a sequence of $$$n$$$ elements where every integer from $$$0$$$ to $$$n-1$$$ appears exactly once. For example, the sequence $$$[0, 3, 1, 2]$$$ is a permutation, but the sequence $$$[0, 0, 2, 1]$$$ is not. $$$^{\\text{†}}$$$The $$$\\operatorname{MEX}$$$ of a sequence is defined as the smallest non-negative integer that does not appear in that sequence. For example, $$$\\operatorname{MEX}([0, 0, 1, 3]) = 2$$$ and $$$\\operatorname{MEX}([1, 2, 2]) = 0.$$$",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first line of each test case contains exactly two integers $$$n$$$ and $$$q$$$ ($$$4 \\le n \\le 10^4$$$, $$$1 \\le q \\le 3 \\cdot 10^5$$$) — the size of the permutation and the number of ranges, respectively. The $$$i$$$-th of the next $$$q$$$ lines contains two integers $$$l_i, r_i$$$ ($$$1 \\le l_i \\le r_i \\le n$$$). It is guaranteed that the sum of $$$n$$$ and $$$q$$$ do not exceed $$$10^4$$$ and $$$3 \\cdot 10^5$$$ respectively over all test cases. Additional Constraint: it is guaranteed that no range is repeated in the same test case.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n4 3\n1 2\n2 4\n1 3\n\n2\n\n0\n\n1\n\n4\n\n6 6\n1 2\n2 4\n3 3\n4 6\n5 5\n6 6\n\n6\n\n1\n\n2\n\n4 4\n1 1\n2 2\n3 3\n4 4",
+      "output": "? 1 3\n\n? 4 4\n\n? 1 1\n\n? 1 4\n\n! 2\n\n\n\n\n\n\n\n? 1 6\n\n? 3 3\n\n? 2 4\n\n! 2\n\n\n\n\n\n! 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:45",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

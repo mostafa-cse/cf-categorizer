@@ -1,0 +1,40 @@
+{
+  "id": "1228E",
+  "source": "problemset",
+  "contest_id": 1228,
+  "problem_index": "E",
+  "name": "Another Filling the Grid",
+  "rating": 2300,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 3784,
+  "problem_url": "https://codeforces.com/problemset/problem/1228/E",
+  "editorial_url": "https://codeforces.com/blog/entry/70162",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have $$$n \\times n$$$ square grid and an integer $$$k$$$. Put an integer in each cell while satisfying the conditions below. All numbers in the grid should be between $$$1$$$ and $$$k$$$ inclusive. Minimum number of the $$$i$$$-th row is $$$1$$$ ($$$1 \\le i \\le n$$$). Minimum number of the $$$j$$$-th column is $$$1$$$ ($$$1 \\le j \\le n$$$). Find the number of ways to put integers in the grid. Since the answer can be very large, find the answer modulo $$$(10^{9} + 7)$$$. These are the examples of valid and invalid grid when $$$n=k=2$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 250$$$, $$$1 \\le k \\le 10^{9}$$$).",
+  "output_specification": "Print the answer modulo $$$(10^{9} + 7)$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "7"
+    },
+    {
+      "input": "123 456789",
+      "output": "689974806"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

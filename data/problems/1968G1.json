@@ -1,0 +1,39 @@
+{
+  "id": "1968G1",
+  "source": "problemset",
+  "contest_id": 1968,
+  "problem_index": "G1",
+  "name": "Division + LCP (easy version)",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "hashing",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 5570,
+  "problem_url": "https://codeforces.com/problemset/problem/1968/G1",
+  "editorial_url": "https://codeforces.com/blog/entry/129096",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. In this version $$$l=r$$$. You are given a string $$$s$$$. For a fixed $$$k$$$, consider a division of $$$s$$$ into exactly $$$k$$$ continuous substrings $$$w_1,\\dots,w_k$$$. Let $$$f_k$$$ be the maximal possible $$$LCP(w_1,\\dots,w_k)$$$ among all divisions. $$$LCP(w_1,\\dots,w_m)$$$ is the length of the Longest Common Prefix of the strings $$$w_1,\\dots,w_m$$$. For example, if $$$s=abababcab$$$ and $$$k=4$$$, a possible division is $$$\\color{red}{ab}\\color{blue}{ab}\\color{orange}{abc}\\color{green}{ab}$$$. The $$$LCP(\\color{red}{ab},\\color{blue}{ab},\\color{orange}{abc},\\color{green}{ab})$$$ is $$$2$$$, since $$$ab$$$ is the Longest Common Prefix of those four strings. Note that each substring consists of a continuous segment of characters and each character belongs to exactly one substring. Your task is to find $$$f_l,f_{l+1},\\dots,f_r$$$. In this version $$$l=r$$$ .",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$, $$$l$$$, $$$r$$$ ($$$1 \\le l = r \\le n \\le 2 \\cdot 10^5$$$) — the length of the string and the given range. The second line of each test case contains string $$$s$$$ of length $$$n$$$, all characters are lowercase English letters. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$r-l+1$$$ values: $$$f_l,\\dots,f_r$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n3 3 3\naba\n3 3 3\naaa\n7 2 2\nabacaba\n9 4 4\nabababcab\n10 1 1\ncodeforces\n9 3 3\nabafababa\n5 3 3\nzpozp",
+      "output": "0\n1\n3\n2\n10\n2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

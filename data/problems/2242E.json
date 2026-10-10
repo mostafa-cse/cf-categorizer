@@ -1,0 +1,40 @@
+{
+  "id": "2242E",
+  "source": "problemset",
+  "contest_id": 2242,
+  "problem_index": "E",
+  "name": "Product of Closures",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1643,
+  "problem_url": "https://codeforces.com/problemset/problem/2242/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155047",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let the closure of a positive integer $$$x \\gt 0$$$ be the following infinite binary string $$$C(x)$$$: Write $$$x$$$ in binary form without leading zeros; Concatenate the obtained string with itself infinitely many times and call the result $$$C(x)$$$. For example, $$$C(1)$$$ $$$=$$$ 11111... , $$$C(4)$$$ $$$=$$$ 10010010010010... , $$$C(9)$$$ $$$=$$$ 100110011001... . Let the product of two closures $$$C(x) \\mathop{\\&} C(y)$$$ be the infinite binary string obtained by the bitwise binary AND of the strings $$$C(x)$$$ and $$$C(y)$$$. For example, for $$$C(4) \\mathop{\\&} C(9)$$$ we get $$$$$$ \\begin{array}{r} \\begin{array}{r} C(4)\\\\ C(9)\\\\ \\end{array} \\mathop{\\&} \\begin{array}{r} 100100100100100100...\\\\ 100110011001100110...\\\\ \\end{array} \\\\ \\hline \\begin{array}{r} 100100000000100100... \\end{array} \\end{array} $$$$$$ You are given three integers $$$l$$$, $$$r$$$, and $$$n$$$. Among all numbers in the segment $$$[l, r]$$$, find two integers $$$x$$$ and $$$y$$$ ($$$l \\le x \\lt y \\le r$$$) such that $$$C(x) \\mathop{\\&} C(y)$$$ is lexicographically smallest , and print the first $$$n$$$ binary symbols of this product.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The only line of each test case contains three integers $$$l$$$, $$$r$$$, and $$$n$$$ ($$$1 \\le l \\lt r \\lt 2^{30}$$$; $$$1 \\le n \\le 1000$$$) — the range of possible values and the length of the answer.",
+  "output_specification": "For each test case, print one binary string of length $$$n$$$ — the first $$$n$$$ symbols of the lexicographically smallest product of closures.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 4 10\n1073741822 1073741823 35\n10 20 15",
+      "output": "1000001000\n11111111111111111111111111111011111\n100000000010000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

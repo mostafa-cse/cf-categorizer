@@ -1,0 +1,40 @@
+{
+  "id": "1181E2",
+  "source": "problemset",
+  "contest_id": 1181,
+  "problem_index": "E2",
+  "name": "A Story of One Country (Hard)",
+  "rating": 3000,
+  "tags": [
+    "brute force",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 549,
+  "problem_url": "https://codeforces.com/problemset/problem/1181/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/67727",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This problem differs from the previous problem only in constraints. Petya decided to visit Byteland during the summer holidays. It turned out that the history of this country is quite unusual. Initially, there were $$$n$$$ different countries on the land that is now Berland. Each country had its own territory that was represented as a rectangle on the map. The sides of the rectangle were parallel to the axes, and the corners were located at points with integer coordinates. Territories of no two countries intersected, but it was possible that some territories touched each other. As time passed, sometimes two countries merged into one. It only happened if the union of their territories was also a rectangle. In the end only one country remained — Byteland. Initially, each country had a rectangular castle inside its territory. Its sides were parallel to the axes and its corners had integer coordinates. Some castles might touch the border of the corresponding country and sides or other castles. Miraculously, after all the unions the castles are still intact. Unfortunately, their locations are the only information we have to restore the initial territories of the countries. The possible formation of Byteland. The castles are shown in blue. Petya wonders why no information about the initial countries remained. He suspected that the whole story is a fake. You were recommended to him as a smart person. Please check whether or not there exists a possible set of initial territories that could make the story true.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 100\\,000$$$) — the number of countries and castles. Each of the next $$$n$$$ lines contains four integers $$$a_i, b_i, c_i, d_i$$$ ($$$0 \\leq a_i \\lt c_i \\leq 10^9$$$, $$$0 \\leq b_i \\lt d_i \\leq 10^9$$$) — the coordinates of the $$$i$$$-th castle, where $$$(a_i, b_i)$$$ are the coordinates of the lower left corner and $$$(c_i, d_i)$$$ are the coordinates of the upper right corner. It is guaranteed that no two castles intersect, however, they may touch.",
+  "output_specification": "If there exists a possible set of territories that satisfies the story, print \" YES \", otherwise print \" NO \". You can print each letter in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0 1 2\n0 2 1 3\n1 0 2 1\n1 1 2 3",
+      "output": "YES"
+    },
+    {
+      "input": "4\n0 0 2 1\n1 2 3 3\n2 0 3 2\n0 1 1 3",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:38",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

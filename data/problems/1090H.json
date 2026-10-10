@@ -1,0 +1,29 @@
+{
+  "id": "1090H",
+  "source": "problemset",
+  "contest_id": 1090,
+  "problem_index": "H",
+  "name": "Linearization",
+  "rating": 2900,
+  "tags": [
+    "graphs"
+  ],
+  "solved_count": 116,
+  "problem_url": "https://codeforces.com/problemset/problem/1090/H",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/1090/H]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

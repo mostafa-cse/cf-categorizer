@@ -1,0 +1,42 @@
+{
+  "id": "420E",
+  "source": "problemset",
+  "contest_id": 420,
+  "problem_index": "E",
+  "name": "Playing the ball",
+  "rating": 2600,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 330,
+  "problem_url": "https://codeforces.com/problemset/problem/420/E",
+  "editorial_url": "https://codeforces.com/blog/entry/11871",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A coder cannot sit and code all day. Sometimes it is a good idea to rise from the desk, have a rest, have small talk with colleagues and even play. The coders of the F company have their favorite ball game. Let's imagine the game on the plane with a cartesian coordinate system. The point (0, 0) contains the player who chooses an arbitrary direction and throws a ball in that direction. The ball hits the plane at distance d from the player's original position and continues flying in the same direction. After the ball hits the plane for the first time, it flies on and hits the plane again at distance 2· d from the player's original position and so on (it continue flying in the chosen direction and hitting the plane after each d units). All coders in the F company are strong, so the ball flies infinitely far away. The plane has n circles painted on it. If a ball hits the plane and hits a circle that is painted on the plane (including its border), then the player gets one point. The ball can hit multiple circles at once and get one point for each of them (if the ball hits some circle x times during the move, the player also gets x points). Count the maximum number of points a player can get if he throws a ball in the arbitrary direction. Note that the direction may have real cooridinates.",
+  "input_specification": "The first line contains two space-separated integers — n и d (1 ≤ n ≤ 2·10 4 ; 5 ≤ d ≤ 10) . Next n lines contain the circles' description. The i -th line contains three space-separated integers x i , y i , r i ( - 10000 ≤ x i , y i ≤ 10000; 1 ≤ r ≤ 50) , where ( x i , y i , r i ) are the coordinates of the center and the radius of the circle, correspondingly. The point (0, 0) is not inside or on the border of some circle.",
+  "output_specification": "Print a single integer — the maximum number of points you can get.",
+  "sample_testcases": [
+    {
+      "input": "2 5\n1 1 1\n5 0 1",
+      "output": "1"
+    },
+    {
+      "input": "2 5\n4 0 3\n5 3 1",
+      "output": "2"
+    },
+    {
+      "input": "1 10\n20 0 10",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:39",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

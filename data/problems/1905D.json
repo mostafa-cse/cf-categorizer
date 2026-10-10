@@ -1,0 +1,37 @@
+{
+  "id": "1905D",
+  "source": "problemset",
+  "contest_id": 1905,
+  "problem_index": "D",
+  "name": "Cyclic MEX",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "implementation",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 4820,
+  "problem_url": "https://codeforces.com/problemset/problem/1905/D",
+  "editorial_url": "https://codeforces.com/blog/entry/123384",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "For an array $$$a$$$, define its cost as $$$\\sum_{i=1}^{n} \\operatorname{mex} ^\\dagger ([a_1,a_2,\\ldots,a_i])$$$. You are given a permutation$$$^\\ddagger$$$ $$$p$$$ of the set $$$\\{0,1,2,\\ldots,n-1\\}$$$. Find the maximum cost across all cyclic shifts of $$$p$$$. $$$^\\dagger\\operatorname{mex}([b_1,b_2,\\ldots,b_m])$$$ is the smallest non-negative integer $$$x$$$ such that $$$x$$$ does not occur among $$$b_1,b_2,\\ldots,b_m$$$. $$$^\\ddagger$$$A permutation of the set $$$\\{0,1,2,...,n-1\\}$$$ is an array consisting of $$$n$$$ distinct integers from $$$0$$$ to $$$n-1$$$ in arbitrary order. For example, $$$[1,2,0,4,3]$$$ is a permutation, but $$$[0,1,1]$$$ is not a permutation ($$$1$$$ appears twice in the array), and $$$[0,2,3]$$$ is also not a permutation ($$$n=3$$$ but there is $$$3$$$ in the array).",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — the length of the permutation $$$p$$$. The second line of each test case contain $$$n$$$ distinct integers $$$p_1, p_2, \\ldots, p_n$$$ ($$$0 \\le p_i \\lt n$$$) — the elements of the permutation $$$p$$$. It is guaranteed that sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum cost across all cyclic shifts of $$$p$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n6\n5 4 3 2 1 0\n3\n2 1 0\n8\n2 3 6 7 0 1 4 5\n1\n0",
+      "output": "15\n5\n31\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

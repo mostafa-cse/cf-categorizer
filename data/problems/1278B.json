@@ -1,0 +1,35 @@
+{
+  "id": "1278B",
+  "source": "problemset",
+  "contest_id": 1278,
+  "problem_index": "B",
+  "name": "A and B",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 14415,
+  "problem_url": "https://codeforces.com/problemset/problem/1278/B",
+  "editorial_url": "https://codeforces.com/blog/entry/72330",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$a$$$ and $$$b$$$. You can perform a sequence of operations: during the first operation you choose one of these numbers and increase it by $$$1$$$; during the second operation you choose one of these numbers and increase it by $$$2$$$, and so on. You choose the number of these operations yourself. For example, if $$$a = 1$$$ and $$$b = 3$$$, you can perform the following sequence of three operations: add $$$1$$$ to $$$a$$$, then $$$a = 2$$$ and $$$b = 3$$$; add $$$2$$$ to $$$b$$$, then $$$a = 2$$$ and $$$b = 5$$$; add $$$3$$$ to $$$a$$$, then $$$a = 5$$$ and $$$b = 5$$$. Calculate the minimum number of operations required to make $$$a$$$ and $$$b$$$ equal.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The only line of each test case contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le 10^9$$$).",
+  "output_specification": "For each test case print one integer — the minimum numbers of operations required to make $$$a$$$ and $$$b$$$ equal.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 3\n11 11\n30 20",
+      "output": "3\n0\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:10",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

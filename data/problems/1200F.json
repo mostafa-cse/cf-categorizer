@@ -1,0 +1,45 @@
+{
+  "id": "1200F",
+  "source": "problemset",
+  "contest_id": 1200,
+  "problem_index": "F",
+  "name": "Graph Traveler",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1254,
+  "problem_url": "https://codeforces.com/problemset/problem/1200/F",
+  "editorial_url": "https://codeforces.com/blog/entry/69035",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Gildong is experimenting with an interesting machine Graph Traveler . In Graph Traveler, there is a directed graph consisting of $$$n$$$ vertices numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th vertex has $$$m_i$$$ outgoing edges that are labeled as $$$e_i[0]$$$, $$$e_i[1]$$$, $$$\\ldots$$$, $$$e_i[m_i-1]$$$, each representing the destination vertex of the edge. The graph can have multiple edges and self-loops. The $$$i$$$-th vertex also has an integer $$$k_i$$$ written on itself. A travel on this graph works as follows. Gildong chooses a vertex to start from, and an integer to start with. Set the variable $$$c$$$ to this integer. After arriving at the vertex $$$i$$$, or when Gildong begins the travel at some vertex $$$i$$$, add $$$k_i$$$ to $$$c$$$. The next vertex is $$$e_i[x]$$$ where $$$x$$$ is an integer $$$0 \\le x \\le m_i-1$$$ satisfying $$$x \\equiv c \\pmod {m_i}$$$. Go to the next vertex and go back to step 2. It's obvious that a travel never ends, since the 2nd and the 3rd step will be repeated endlessly. For example, assume that Gildong starts at vertex $$$1$$$ with $$$c = 5$$$, and $$$m_1 = 2$$$, $$$e_1[0] = 1$$$, $$$e_1[1] = 2$$$, $$$k_1 = -3$$$. Right after he starts at vertex $$$1$$$, $$$c$$$ becomes $$$2$$$. Since the only integer $$$x$$$ ($$$0 \\le x \\le 1$$$) where $$$x \\equiv c \\pmod {m_i}$$$ is $$$0$$$, Gildong goes to vertex $$$e_1[0] = 1$$$. After arriving at vertex $$$1$$$ again, $$$c$$$ becomes $$$-1$$$. The only integer $$$x$$$ satisfying the conditions is $$$1$$$, so he goes to vertex $$$e_1[1] = 2$$$, and so on. Since Gildong is quite inquisitive, he's going to ask you $$$q$$$ queries. He wants to know how many distinct vertices will be visited infinitely many times , if he starts the travel from a certain vertex with a certain value of $$$c$$$. Note that you should not count the vertices that will be visited only finite times.",
+  "input_specification": "The first line of the input contains an integer $$$n$$$ ($$$1 \\le n \\le 1000$$$), the number of vertices in the graph. The second line contains $$$n$$$ integers. The $$$i$$$-th integer is $$$k_i$$$ ($$$-10^9 \\le k_i \\le 10^9$$$), the integer written on the $$$i$$$-th vertex. Next $$$2 \\cdot n$$$ lines describe the edges of each vertex. The $$$(2 \\cdot i + 1)$$$-st line contains an integer $$$m_i$$$ ($$$1 \\le m_i \\le 10$$$), the number of outgoing edges of the $$$i$$$-th vertex. The $$$(2 \\cdot i + 2)$$$-nd line contains $$$m_i$$$ integers $$$e_i[0]$$$, $$$e_i[1]$$$, $$$\\ldots$$$, $$$e_i[m_i-1]$$$, each having an integer value between $$$1$$$ and $$$n$$$, inclusive. Next line contains an integer $$$q$$$ ($$$1 \\le q \\le 10^5$$$), the number of queries Gildong wants to ask. Next $$$q$$$ lines contains two integers $$$x$$$ and $$$y$$$ ($$$1 \\le x \\le n$$$, $$$-10^9 \\le y \\le 10^9$$$) each, which mean that the start vertex is $$$x$$$ and the starting value of $$$c$$$ is $$$y$$$.",
+  "output_specification": "For each query, print the number of distinct vertices that will be visited infinitely many times , if Gildong starts at vertex $$$x$$$ with starting integer $$$y$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0 0 0\n2\n2 3\n1\n2\n3\n2 4 1\n4\n3 1 2 1\n6\n1 0\n2 0\n3 -1\n4 -2\n1 1\n1 5",
+      "output": "1\n1\n2\n1\n3\n2"
+    },
+    {
+      "input": "4\n4 -5 -3 -1\n2\n2 3\n1\n2\n3\n2 4 1\n4\n3 1 2 1\n6\n1 0\n2 0\n3 -1\n4 -2\n1 1\n1 5",
+      "output": "1\n1\n1\n3\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:32",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

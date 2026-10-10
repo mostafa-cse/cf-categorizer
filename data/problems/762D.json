@@ -1,0 +1,40 @@
+{
+  "id": "762D",
+  "source": "problemset",
+  "contest_id": 762,
+  "problem_index": "D",
+  "name": "Maximum path",
+  "rating": 2300,
+  "tags": [
+    "dp",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 1899,
+  "problem_url": "https://codeforces.com/problemset/problem/762/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50010",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a rectangular table 3 × n . Each cell contains an integer. You can move from one cell to another if they share a side. Find such path from the upper left cell to the bottom right cell of the table that doesn't visit any of the cells twice, and the sum of numbers written in the cells of this path is maximum possible.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 5 )  — the number of columns in the table. Next three lines contain n integers each  — the description of the table. The j -th number in the i -th line corresponds to the cell a ij ( - 10 9 ≤ a ij ≤ 10 9 ) of the table.",
+  "output_specification": "Output the maximum sum of numbers on a path from the upper left cell to the bottom right cell of the table, that doesn't visit any of the cells twice.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1 1\n1 -1 1\n1 1 1",
+      "output": "7"
+    },
+    {
+      "input": "5\n10 10 10 -1 -1\n-1 10 10 10 10\n-1 10 10 10 10",
+      "output": "110"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

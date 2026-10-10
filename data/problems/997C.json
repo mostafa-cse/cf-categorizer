@@ -1,0 +1,43 @@
+{
+  "id": "997C",
+  "source": "problemset",
+  "contest_id": 997,
+  "problem_index": "C",
+  "name": "Sky Full of Stars",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 2501,
+  "problem_url": "https://codeforces.com/problemset/problem/997/C",
+  "editorial_url": "https://codeforces.com/blog/entry/60357",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "On one of the planets of Solar system, in Atmosphere University, many students are fans of bingo game. It is well known that one month on this planet consists of $$$n^2$$$ days, so calendars, represented as square matrix $$$n$$$ by $$$n$$$ are extremely popular. Weather conditions are even more unusual. Due to the unique composition of the atmosphere, when interacting with sunlight, every day sky takes one of three colors: blue, green or red. To play the bingo, you need to observe the sky for one month — after each day, its cell is painted with the color of the sky in that day, that is, blue, green or red. At the end of the month, students examine the calendar. If at least one row or column contains only cells of one color, that month is called lucky. Let's call two colorings of calendar different, if at least one cell has different colors in them. It is easy to see that there are $$$3^{n \\cdot n}$$$ different colorings. How much of them are lucky? Since this number can be quite large, print it modulo $$$998244353$$$.",
+  "input_specification": "The first and only line of input contains a single integer $$$n$$$ ($$$1 \\le n \\le 1000\\,000$$$) — the number of rows and columns in the calendar.",
+  "output_specification": "Print one number — number of lucky colorings of the calendar modulo $$$998244353$$$",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "3"
+    },
+    {
+      "input": "2",
+      "output": "63"
+    },
+    {
+      "input": "3",
+      "output": "9933"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

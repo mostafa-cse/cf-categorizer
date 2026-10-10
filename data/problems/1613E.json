@@ -1,0 +1,35 @@
+{
+  "id": "1613E",
+  "source": "problemset",
+  "contest_id": 1613,
+  "problem_index": "E",
+  "name": "Crazy Robot",
+  "rating": 2000,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 6086,
+  "problem_url": "https://codeforces.com/problemset/problem/1613/E",
+  "editorial_url": "https://codeforces.com/blog/entry/97467",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There is a grid, consisting of $$$n$$$ rows and $$$m$$$ columns. Each cell of the grid is either free or blocked. One of the free cells contains a lab. All the cells beyond the borders of the grid are also blocked. A crazy robot has escaped from this lab. It is currently in some free cell of the grid. You can send one of the following commands to the robot: \"move right\", \"move down\", \"move left\" or \"move up\". Each command means moving to a neighbouring cell in the corresponding direction. However, as the robot is crazy, it will do anything except following the command. Upon receiving a command, it will choose a direction such that it differs from the one in command and the cell in that direction is not blocked. If there is such a direction, then it will move to a neighbouring cell in that direction. Otherwise, it will do nothing. We want to get the robot to the lab to get it fixed. For each free cell, determine if the robot can be forced to reach the lab starting in this cell. That is, after each step of the robot a command can be sent to a robot such that no matter what different directions the robot chooses, it will end up in a lab.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of testcases. The first line of each testcase contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 10^6$$$; $$$n \\cdot m \\le 10^6$$$) — the number of rows and the number of columns in the grid. The $$$i$$$-th of the next $$$n$$$ lines provides a description of the $$$i$$$-th row of the grid. It consists of $$$m$$$ elements of one of three types: '.' — the cell is free; '#' — the cell is blocked; 'L' — the cell contains a lab. The grid contains exactly one lab. The sum of $$$n \\cdot m$$$ over all testcases doesn't exceed $$$10^6$$$.",
+  "output_specification": "For each testcase find the free cells that the robot can be forced to reach the lab from. Given the grid, replace the free cells (marked with a dot) with a plus sign ('+') for the cells that the robot can be forced to reach the lab from. Print the resulting grid.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n...\n.L.\n...\n4 5\n#....\n..##L\n...#.\n.....\n1 1\nL\n1 9\n....L..#.",
+      "output": "...\n.L.\n...\n#++++\n..##L\n...#+\n...++\nL\n++++L++#."
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "743C",
+  "source": "problemset",
+  "contest_id": 743,
+  "problem_index": "C",
+  "name": "Vladik and fractions",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 13674,
+  "problem_url": "https://codeforces.com/problemset/problem/743/C",
+  "editorial_url": "https://codeforces.com/blog/entry/49049",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vladik and Chloe decided to determine who of them is better at math. Vladik claimed that for any positive integer n he can represent fraction as a sum of three distinct positive fractions in form . Help Vladik with that, i.e for a given n find three distinct positive integers x , y and z such that . Because Chloe can't check Vladik's answer if the numbers are large, he asks you to print numbers not exceeding 10 9 . If there is no such answer, print -1 .",
+  "input_specification": "The single line contains single integer n ( 1 ≤ n ≤ 10 4 ).",
+  "output_specification": "If the answer exists, print 3 distinct numbers x , y and z ( 1 ≤ x , y , z ≤ 10 9 , x ≠ y , x ≠ z , y ≠ z ). Otherwise print -1 . If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "2 7 42"
+    },
+    {
+      "input": "7",
+      "output": "7 8 56"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

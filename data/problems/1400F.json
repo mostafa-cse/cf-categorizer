@@ -1,0 +1,50 @@
+{
+  "id": "1400F",
+  "source": "problemset",
+  "contest_id": 1400,
+  "problem_index": "F",
+  "name": "x-prime Substrings",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "dp",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 1317,
+  "problem_url": "https://codeforces.com/problemset/problem/1400/F",
+  "editorial_url": "https://codeforces.com/blog/entry/81916",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer value $$$x$$$ and a string $$$s$$$ consisting of digits from $$$1$$$ to $$$9$$$ inclusive. A substring of a string is a contiguous subsequence of that string. Let $$$f(l, r)$$$ be the sum of digits of a substring $$$s[l..r]$$$. Let's call substring $$$s[l_1..r_1]$$$ $$$x$$$-prime if $$$f(l_1, r_1) = x$$$; there are no values $$$l_2, r_2$$$ such that $$$l_1 \\le l_2 \\le r_2 \\le r_1$$$; $$$f(l_2, r_2) \\neq x$$$; $$$x$$$ is divisible by $$$f(l_2, r_2)$$$. You are allowed to erase some characters from the string. If you erase a character, the two resulting parts of the string are concatenated without changing their order. What is the minimum number of characters you should erase from the string so that there are no $$$x$$$-prime substrings in it? If there are no $$$x$$$-prime substrings in the given string $$$s$$$, then print $$$0$$$.",
+  "input_specification": "The first line contains a string $$$s$$$ ($$$1 \\le |s| \\le 1000$$$). $$$s$$$ contains only digits from $$$1$$$ to $$$9$$$ inclusive. The second line contains an integer $$$x$$$ ($$$1 \\le x \\le 20$$$).",
+  "output_specification": "Print a single integer — the minimum number of characters you should erase from the string so that there are no $$$x$$$-prime substrings in it. If there are no $$$x$$$-prime substrings in the given string $$$s$$$, then print $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "116285317\n8",
+      "output": "2"
+    },
+    {
+      "input": "314159265359\n1",
+      "output": "2"
+    },
+    {
+      "input": "13\n13",
+      "output": "0"
+    },
+    {
+      "input": "3434343434\n7",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1105D",
+  "source": "problemset",
+  "contest_id": 1105,
+  "problem_index": "D",
+  "name": "Kilani and the Game",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "implementation",
+    "shortest paths"
+  ],
+  "solved_count": 4495,
+  "problem_url": "https://codeforces.com/problemset/problem/1105/D",
+  "editorial_url": "https://codeforces.com/blog/entry/64664",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kilani is playing a game with his friends. This game can be represented as a grid of size $$$n \\times m$$$, where each cell is either empty or blocked, and every player has one or more castles in some cells (there are no two castles in one cell). The game is played in rounds. In each round players expand turn by turn: firstly, the first player expands, then the second player expands and so on. The expansion happens as follows: for each castle the player owns now, he tries to expand into the empty cells nearby. The player $$$i$$$ can expand from a cell with his castle to the empty cell if it's possible to reach it in at most $$$s_i$$$ (where $$$s_i$$$ is player's expansion speed) moves to the left, up, right or down without going through blocked cells or cells occupied by some other player's castle. The player examines the set of cells he can expand to and builds a castle in each of them at once. The turned is passed to the next player after that. The game ends when no player can make a move. You are given the game field and speed of the expansion for each player. Kilani wants to know for each player how many cells he will control (have a castle their) after the game ends.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$ and $$$p$$$ ($$$1 \\le n, m \\le 1000$$$, $$$1 \\le p \\le 9$$$) — the size of the grid and the number of players. The second line contains $$$p$$$ integers $$$s_i$$$ ($$$1 \\le s \\le 10^9$$$) — the speed of the expansion for every player. The following $$$n$$$ lines describe the game grid. Each of them consists of $$$m$$$ symbols, where ' . ' denotes an empty cell, ' # ' denotes a blocked cell and digit $$$x$$$ ($$$1 \\le x \\le p$$$) denotes the castle owned by player $$$x$$$. It is guaranteed, that each player has at least one castle on the grid.",
+  "output_specification": "Print $$$p$$$ integers — the number of cells controlled by each player after the game ends.",
+  "sample_testcases": [
+    {
+      "input": "3 3 2\n1 1\n1..\n...\n..2",
+      "output": "6 3"
+    },
+    {
+      "input": "3 4 4\n1 1 1 1\n....\n#...\n1234",
+      "output": "1 4 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:55",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "388D",
+  "source": "problemset",
+  "contest_id": 388,
+  "problem_index": "D",
+  "name": "Fox and Perfect Sets",
+  "rating": 2700,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 526,
+  "problem_url": "https://codeforces.com/problemset/problem/388/D",
+  "editorial_url": "https://codeforces.com/blog/entry/10629",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel studies number theory. She thinks a non-empty set S contains non-negative integers is perfect if and only if for any ( a can be equal to b ), . Where operation xor means exclusive or operation ( http://en.wikipedia.org/wiki/Exclusive_or ). Please calculate the number of perfect sets consisting of integers not greater than k . The answer can be very large, so print it modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains an integer k ( 0 ≤ k ≤ 10 9 ).",
+  "output_specification": "Print a single integer — the number of required sets modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "2"
+    },
+    {
+      "input": "2",
+      "output": "3"
+    },
+    {
+      "input": "3",
+      "output": "5"
+    },
+    {
+      "input": "4",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:51",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "76C",
+  "source": "problemset",
+  "contest_id": 76,
+  "problem_index": "C",
+  "name": "Mutation",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "math"
+  ],
+  "solved_count": 393,
+  "problem_url": "https://codeforces.com/problemset/problem/76/C",
+  "editorial_url": "https://codeforces.com/blog/entry/1712",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Scientists of planet Olympia are conducting an experiment in mutation of primitive organisms. Genome of organism from this planet can be represented as a string of the first K capital English letters. For each pair of types of genes they assigned a i , j — a risk of disease occurence in the organism provided that genes of these types are adjacent in the genome, where i — the 1-based index of the first gene and j — the index of the second gene. The gene 'A' has index 1, 'B' has index 2 and so on. For example, a 3, 2 stands for the risk of 'CB' fragment. Risk of disease occurence in the organism is equal to the sum of risks for each pair of adjacent genes in the genome. Scientists have already obtained a base organism. Some new organisms can be obtained by mutation of this organism. Mutation involves removal of all genes of some particular types. Such removal increases the total risk of disease occurence additionally. For each type of genes scientists determined t i — the increasement of the total risk of disease occurence provided by removal of all genes having type with index i . For example, t 4 stands for the value of additional total risk increasement in case of removing all the 'D' genes. Scientists want to find a number of different organisms that can be obtained from the given one which have the total risk of disease occurence not greater than T . They can use only the process of mutation described above. Two organisms are considered different if strings representing their genomes are different. Genome should contain at least one gene.",
+  "input_specification": "The first line of the input contains three integer numbers N ( 1 ≤ N ≤ 200 000 ) — length of the genome of base organism, K ( 1 ≤ K ≤ 22 ) — the maximal index of gene type in the genome and T ( 1 ≤ T ≤ 2·10 9 ) — maximal allowable risk of disease occurence. The second line contains the genome of the given organism. It is a string of the first K capital English letters having length N . The third line contains K numbers t 1 , t 2 , ..., t K , where t i is additional risk value of disease occurence provided by removing of all genes of the i -th type. The following K lines contain the elements of the given matrix a i , j . The i -th line contains K numbers. The j -th number of the i -th line stands for a risk of disease occurence for the pair of genes, first of which corresponds to the i -th letter and second of which corresponds to the j -th letter. The given matrix is not necessarily symmetrical. All the numbers in the input are integer, non-negative and all of them except T are not greater than 10 9 . It is guaranteed that the maximal possible risk of organism that can be obtained from the given organism is strictly smaller than 2 31 .",
+  "output_specification": "Output the number of organisms that can be obtained from the base one and which have the total risk of disease occurence not greater than T .",
+  "sample_testcases": [
+    {
+      "input": "5 3 13\nBACAC\n4 1 2\n1 2 3\n2 3 4\n3 4 10",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

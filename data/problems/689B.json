@@ -1,0 +1,45 @@
+{
+  "id": "689B",
+  "source": "problemset",
+  "contest_id": 689,
+  "problem_index": "B",
+  "name": "Mike and Shortcuts",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "greedy",
+    "shortest paths"
+  ],
+  "solved_count": 6774,
+  "problem_url": "https://codeforces.com/problemset/problem/689/B",
+  "editorial_url": "https://codeforces.com/blog/entry/45912",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recently, Mike was very busy with studying for exams and contests. Now he is going to chill a bit by doing some sight seeing in the city. City consists of n intersections numbered from 1 to n . Mike starts walking from his house located at the intersection number 1 and goes along some sequence of intersections. Walking from intersection number i to intersection j requires | i - j | units of energy. The total energy spent by Mike to visit a sequence of intersections p 1 = 1, p 2 , ..., p k is equal to units of energy. Of course, walking would be boring if there were no shortcuts. A shortcut is a special path that allows Mike walking from one intersection to another requiring only 1 unit of energy. There are exactly n shortcuts in Mike's city, the i th of them allows walking from intersection i to intersection a i ( i ≤ a i ≤ a i + 1 ) (but not in the opposite direction), thus there is exactly one shortcut starting at each intersection. Formally, if Mike chooses a sequence p 1 = 1, p 2 , ..., p k then for each 1 ≤ i < k satisfying p i + 1 = a p i and a p i ≠ p i Mike will spend only 1 unit of energy instead of | p i - p i + 1 | walking from the intersection p i to intersection p i + 1 . For example, if Mike chooses a sequence p 1 = 1, p 2 = a p 1 , p 3 = a p 2 , ..., p k = a p k - 1 , he spends exactly k - 1 units of total energy walking around them. Before going on his adventure, Mike asks you to find the minimum amount of energy required to reach each of the intersections from his home. Formally, for each 1 ≤ i ≤ n Mike is interested in finding minimum possible total energy of some sequence p 1 = 1, p 2 , ..., p k = i .",
+  "input_specification": "The first line contains an integer n (1 ≤ n ≤ 200 000) — the number of Mike's city intersection. The second line contains n integers a 1 , a 2 , ..., a n ( i ≤ a i ≤ n , , describing shortcuts of Mike's city, allowing to walk from intersection i to intersection a i using only 1 unit of energy. Please note that the shortcuts don't allow walking in opposite directions (from a i to i ).",
+  "output_specification": "In the only line print n integers m 1 , m 2 , ..., m n , where m i denotes the least amount of total energy required to walk from intersection 1 to intersection i .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 3",
+      "output": "0 1 2"
+    },
+    {
+      "input": "5\n1 2 3 4 5",
+      "output": "0 1 2 3 4"
+    },
+    {
+      "input": "7\n4 4 4 4 7 7 7",
+      "output": "0 1 2 1 2 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

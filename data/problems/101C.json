@@ -1,0 +1,43 @@
+{
+  "id": "101C",
+  "source": "problemset",
+  "contest_id": 101,
+  "problem_index": "C",
+  "name": "Vectors",
+  "rating": 2000,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 855,
+  "problem_url": "https://codeforces.com/problemset/problem/101/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2393",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "At a geometry lesson Gerald was given a task: to get vector B out of vector A . Besides, the teacher permitted him to perform the following operations with vector А : Turn the vector by 90 degrees clockwise. Add to the vector a certain vector C . Operations could be performed in any order any number of times. Can Gerald cope with the task?",
+  "input_specification": "The first line contains integers x 1 и y 1 — the coordinates of the vector A ( - 10 8 ≤ x 1 , y 1 ≤ 10 8 ). The second and the third line contain in the similar manner vectors B and C (their coordinates are integers; their absolute value does not exceed 10 8 ).",
+  "output_specification": "Print \" YES \" (without the quotes) if it is possible to get vector B using the given operations. Otherwise print \" NO \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "0 0\n1 1\n0 1",
+      "output": "YES"
+    },
+    {
+      "input": "0 0\n1 1\n1 1",
+      "output": "YES"
+    },
+    {
+      "input": "0 0\n1 1\n2 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

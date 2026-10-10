@@ -1,0 +1,45 @@
+{
+  "id": "444D",
+  "source": "problemset",
+  "contest_id": 444,
+  "problem_index": "D",
+  "name": "DZY Loves Strings",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "hashing",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 910,
+  "problem_url": "https://codeforces.com/problemset/problem/444/D",
+  "editorial_url": "https://codeforces.com/blog/entry/12959",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "DZY loves strings, and he enjoys collecting them. In China, many people like to use strings containing their names' initials, for example: xyz , jcvb , dzy , dyh . Once DZY found a lucky string s . A lot of pairs of good friends came to DZY when they heard about the news. The first member of the i -th pair has name a i , the second one has name b i . Each pair wondered if there is a substring of the lucky string containing both of their names. If so, they want to find the one with minimum length, which can give them good luck and make their friendship last forever. Please help DZY for each pair find the minimum length of the substring of s that contains both a i and b i , or point out that such substring doesn't exist. A substring of s is a string s l s l + 1 ... s r for some integers l , r (1 ≤ l ≤ r ≤ | s |) . The length of such the substring is ( r - l + 1) . A string p contains some another string q if there is a substring of p equal to q .",
+  "input_specification": "The first line contains a string s (1 ≤ | s | ≤ 50000) . The second line contains a non-negative integer q (0 ≤ q ≤ 100000) — the number of pairs. Each of the next q lines describes a pair, the line contains two space-separated strings a i and b i (1 ≤ | a i |, | b i | ≤ 4) . It is guaranteed that all the strings only consist of lowercase English letters.",
+  "output_specification": "For each pair, print a line containing a single integer — the minimum length of the required substring. If there is no such substring, output -1 .",
+  "sample_testcases": [
+    {
+      "input": "xudyhduxyz\n3\nxyz xyz\ndyh xyz\ndzy xyz",
+      "output": "3\n8\n-1"
+    },
+    {
+      "input": "abcabd\n3\na c\nab abc\nab d",
+      "output": "2\n3\n3"
+    },
+    {
+      "input": "baabcabaaa\n2\nabca baa\naa aba",
+      "output": "6\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "1091F",
+  "source": "problemset",
+  "contest_id": 1091,
+  "problem_index": "F",
+  "name": "New Year and the Mallard Expedition",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 942,
+  "problem_url": "https://codeforces.com/problemset/problem/1091/F",
+  "editorial_url": "https://codeforces.com/blog/entry/64196",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Bob is a duck. He wants to get to Alice's nest, so that those two can duck! Duck is the ultimate animal! (Image courtesy of See Bang) The journey can be represented as a straight line, consisting of $$$n$$$ segments. Bob is located to the left of the first segment, while Alice's nest is on the right of the last segment. Each segment has a length in meters, and also terrain type: grass, water or lava. Bob has three movement types: swimming, walking and flying. He can switch between them or change his direction at any point in time (even when he is located at a non-integer coordinate), and doing so doesn't require any extra time. Bob can swim only on the water, walk only on the grass and fly over any terrain. Flying one meter takes $$$1$$$ second, swimming one meter takes $$$3$$$ seconds, and finally walking one meter takes $$$5$$$ seconds. Bob has a finite amount of energy, called stamina. Swimming and walking is relaxing for him, so he gains $$$1$$$ stamina for every meter he walks or swims. On the other hand, flying is quite tiring, and he spends $$$1$$$ stamina for every meter flown. Staying in place does not influence his stamina at all. Of course, his stamina can never become negative. Initially, his stamina is zero. What is the shortest possible time in which he can reach Alice's nest?",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 10^5$$$) — the number of segments of terrain. The second line contains $$$n$$$ integers $$$l_1, l_2, \\dots, l_n$$$ ($$$1 \\leq l_i \\leq 10^{12}$$$). The $$$l_i$$$ represents the length of the $$$i$$$-th terrain segment in meters. The third line contains a string $$$s$$$ consisting of $$$n$$$ characters \" G \", \" W \", \" L \", representing G rass, W ater and L ava, respectively. It is guaranteed that the first segment is not Lava.",
+  "output_specification": "Output a single integer $$$t$$$ — the minimum time Bob needs to reach Alice.",
+  "sample_testcases": [
+    {
+      "input": "1\n10\nG",
+      "output": "30"
+    },
+    {
+      "input": "2\n10 10\nWL",
+      "output": "40"
+    },
+    {
+      "input": "2\n1 2\nWL",
+      "output": "8"
+    },
+    {
+      "input": "3\n10 10 10\nGLW",
+      "output": "80"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:57",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1369D",
+  "source": "problemset",
+  "contest_id": 1369,
+  "problem_index": "D",
+  "name": "TediousLee",
+  "rating": 1900,
+  "tags": [
+    "dp",
+    "graphs",
+    "greedy",
+    "math",
+    "trees"
+  ],
+  "solved_count": 9352,
+  "problem_url": "https://codeforces.com/problemset/problem/1369/D",
+  "editorial_url": "https://codeforces.com/blog/entry/79235",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lee tried so hard to make a good div.2 D problem to balance his recent contest, but it still doesn't feel good at all. Lee invented it so tediously slow that he managed to develop a phobia about div.2 D problem setting instead. And now he is hiding behind the bushes... Let's define a Rooted Dead Bush (RDB) of level $$$n$$$ as a rooted tree constructed as described below. A rooted dead bush of level $$$1$$$ is a single vertex. To construct an RDB of level $$$i$$$ we, at first, construct an RDB of level $$$i-1$$$, then for each vertex $$$u$$$: if $$$u$$$ has no children then we will add a single child to it; if $$$u$$$ has one child then we will add two children to it; if $$$u$$$ has more than one child, then we will skip it. Rooted Dead Bushes of level $$$1$$$, $$$2$$$ and $$$3$$$. Let's define a claw as a rooted tree with four vertices: one root vertex (called also as center) with three children. It looks like a claw: The center of the claw is the vertex with label $$$1$$$. Lee has a Rooted Dead Bush of level $$$n$$$. Initially, all vertices of his RDB are green. In one move, he can choose a claw in his RDB, if all vertices in the claw are green and all vertices of the claw are children of its center, then he colors the claw's vertices in yellow. He'd like to know the maximum number of yellow vertices he can achieve. Since the answer might be very large, print it modulo $$$10^9+7$$$.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Next $$$t$$$ lines contain test cases — one per line. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^6$$$) — the level of Lee's RDB.",
+  "output_specification": "For each test case, print a single integer — the maximum number of yellow vertices Lee can make modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n1\n2\n3\n4\n5\n100\n2000000",
+      "output": "0\n0\n4\n4\n12\n990998587\n804665184"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

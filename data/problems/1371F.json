@@ -1,0 +1,36 @@
+{
+  "id": "1371F",
+  "source": "problemset",
+  "contest_id": 1371,
+  "problem_index": "F",
+  "name": "Raging Thunder",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "implementation"
+  ],
+  "solved_count": 762,
+  "problem_url": "https://codeforces.com/problemset/problem/1371/F",
+  "editorial_url": "https://codeforces.com/blog/entry/79624",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are a warrior fighting against the machine god Thor. Thor challenge you to solve the following problem: There are $$$n$$$ conveyors arranged in a line numbered with integers from $$$1$$$ to $$$n$$$ from left to right. Each conveyor has a symbol \" < \" or \" > \". The initial state of the conveyor $$$i$$$ is equal to the $$$i$$$-th character of the string $$$s$$$. There are $$$n+1$$$ holes numbered with integers from $$$0$$$ to $$$n$$$. The hole $$$0$$$ is on the left side of the conveyor $$$1$$$, and for all $$$i \\geq 1$$$ the hole $$$i$$$ is on the right side of the conveyor $$$i$$$. When a ball is on the conveyor $$$i$$$, the ball moves by the next rules: If the symbol \" < \" is on the conveyor $$$i$$$, then: If $$$i=1$$$, the ball falls into the hole $$$0$$$. If the symbol \" < \" is on the conveyor $$$i-1$$$, the ball moves to the conveyor $$$i-1$$$. If the symbol \" > \" is on the conveyor $$$i-1$$$, the ball falls into the hole $$$i-1$$$. If the symbol \" > \" is on the conveyor $$$i$$$, then: If $$$i=n$$$, the ball falls into the hole $$$n$$$. If the symbol \" > \" is on the conveyor $$$i+1$$$, the ball moves to the conveyor $$$i+1$$$. If the symbol \" < \" is on the conveyor $$$i+1$$$, the ball falls into the hole $$$i$$$. You should answer next $$$q$$$ queries, each query is defined by the pair of integers $$$l, r$$$ ($$$1 \\leq l \\leq r \\leq n$$$): First, for all conveyors $$$l,l+1,...,r$$$, the symbol \" < \" changes to \" > \" and vice versa. These changes remain for the next queries. After that, put one ball on each conveyor $$$l,l+1,...,r$$$. Then, each ball falls into some hole. Find the maximum number of balls in one hole. After the query all balls disappear and don't considered in the next queries.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$q$$$ ($$$1 \\le n \\le 5 \\times 10^5 , 1 \\le q \\le 10^5$$$). The second line contains a string $$$s$$$ of length $$$n$$$. It consists of characters \" < \" and \" > \". Next $$$q$$$ lines contain the descriptions of the queries, $$$i$$$-th of them contains two integers $$$l$$$, $$$r$$$ $$$(1 \\le l \\le r \\le n)$$$, describing the $$$i$$$-th query.",
+  "output_specification": "Print $$$q$$$ lines, in the $$$i$$$-th of them print the answer to the $$$i$$$-th query.",
+  "sample_testcases": [
+    {
+      "input": "5 6\n><>><\n2 4\n3 5\n1 5\n1 3\n2 4\n1 5",
+      "output": "3\n3\n5\n3\n2\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:47",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

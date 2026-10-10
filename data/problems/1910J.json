@@ -1,0 +1,42 @@
+{
+  "id": "1910J",
+  "source": "problemset",
+  "contest_id": 1910,
+  "problem_index": "J",
+  "name": "Two Colors",
+  "rating": 2900,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 61,
+  "problem_url": "https://codeforces.com/problemset/problem/1910/J",
+  "editorial_url": "https://codeforces.com/blog/entry/123261",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a tree consisting of $$$n$$$ vertices. Some vertices of the tree are red, all other vertices are blue. Each edge of the tree has a positive weight. Let's define $$$d(x, y)$$$ as the distance between the vertices $$$x$$$ and $$$y$$$, i. e. the sum of weights of edges belonging to the simple path between $$$x$$$ and $$$y$$$. For each vertex, you have to choose an integer $$$v_i$$$. These integers should meet the following constraint: for every blue vertex $$$b$$$ and every red vertex $$$r$$$, $$$d(b, r) \\ge v_b + v_r$$$. You have to maximize the value of $$$\\sum \\limits_{i=1}^{n} v_i$$$. Note that the values of $$$v_i$$$ are not necessarily positive .",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$c_1, c_2, \\dots, c_n$$$ ($$$0 \\le c_i \\le 1$$$). If the $$$i$$$-th vertex is red, $$$c_i = 1$$$, otherwise $$$c_i = 0$$$. Then $$$n-1$$$ lines follow. Each line contains three integers $$$x_i$$$, $$$y_i$$$ and $$$w_i$$$ ($$$1 \\le x_i, y_i \\le n$$$; $$$1 \\le w_i \\le 10^6$$$; $$$x_i \\ne y_i$$$) denoting an edge between the vertices $$$x_i$$$ and $$$y_i$$$ which has weight $$$w_i$$$. These edges form a tree.",
+  "output_specification": "If the value of $$$\\sum \\limits_{i=1}^{n} v_i$$$ can be as big as possible, print Infinity . Otherwise, print one integer — the maximum possible value of $$$\\sum \\limits_{i=1}^{n} v_i$$$ you can get.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 0 0\n3 4 50\n3 2 100\n2 1 100",
+      "output": "350"
+    },
+    {
+      "input": "6\n0 1 0 1 0 1\n1 2 1\n1 4 1\n1 6 1\n6 5 100\n6 3 100",
+      "output": "203"
+    },
+    {
+      "input": "3\n1 1 1\n1 2 100\n2 3 100",
+      "output": "Infinity"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

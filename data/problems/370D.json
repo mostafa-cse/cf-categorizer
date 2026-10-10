@@ -1,0 +1,49 @@
+{
+  "id": "370D",
+  "source": "problemset",
+  "contest_id": 370,
+  "problem_index": "D",
+  "name": "Broken Monitor",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 730,
+  "problem_url": "https://codeforces.com/problemset/problem/370/D",
+  "editorial_url": "https://codeforces.com/blog/entry/9866",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Innocentius has a problem — his computer monitor has broken. Now some of the pixels are \"dead\", that is, they are always black. As consequence, Innocentius can't play the usual computer games. He is recently playing the following game with his younger brother Polycarpus. Innocentius is touch-typing a program that paints a white square one-pixel wide frame on the black screen. As the monitor is broken, some pixels that should be white remain black. Polycarpus should look at what the program displayed on the screen and guess the position and size of the frame Innocentius has painted. Polycarpus doesn't like the game but Innocentius persuaded brother to play as \"the game is good for the imagination and attention\". Help Polycarpus, automatize his part in the gaming process. Write the code that finds such possible square frame that: the frame's width is 1 pixel, the frame doesn't go beyond the borders of the screen, all white pixels of the monitor are located on the frame, of all frames that satisfy the previous three conditions, the required frame must have the smallest size. Formally, a square frame is represented by such pixels of the solid square, that are on the square's border, that is, are not fully surrounded by the other pixels of the square. For example, if the frame's size is d = 3 , then it consists of 8 pixels, if its size is d = 2 , then it contains 4 pixels and if d = 1 , then the frame is reduced to a single pixel.",
+  "input_specification": "The first line contains the resolution of the monitor as a pair of integers n , m ( 1 ≤ n , m ≤ 2000 ). The next n lines contain exactly m characters each — the state of the monitor pixels at the moment of the game. Character \" . \" (period, ASCII code 46) corresponds to the black pixel, and character \" w \" (lowercase English letter w ) corresponds to the white pixel. It is guaranteed that at least one pixel of the monitor is white.",
+  "output_specification": "Print the monitor screen. Represent the sought frame by characters \" + \" (the \"plus\" character). The pixels that has become white during the game mustn't be changed. Print them as \" w \". If there are multiple possible ways to position the frame of the minimum size, print any of them. If the required frame doesn't exist, then print a single line containing number -1 .",
+  "sample_testcases": [
+    {
+      "input": "4 8\n..w..w..\n........\n........\n..w..w..",
+      "output": "..w++w..\n..+..+..\n..+..+..\n..w++w.."
+    },
+    {
+      "input": "5 6\n......\n.w....\n......\n..w...\n......",
+      "output": "......\n+w+...\n+.+...\n++w...\n......"
+    },
+    {
+      "input": "2 4\n....\n.w..",
+      "output": "....\n.w.."
+    },
+    {
+      "input": "2 6\nw..w.w\n...w..",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:59",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

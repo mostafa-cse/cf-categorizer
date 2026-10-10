@@ -1,0 +1,47 @@
+{
+  "id": "552E",
+  "source": "problemset",
+  "contest_id": 552,
+  "problem_index": "E",
+  "name": "Vanya and Brackets",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "dp",
+    "expression parsing",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 1789,
+  "problem_url": "https://codeforces.com/problemset/problem/552/E",
+  "editorial_url": "https://codeforces.com/blog/entry/18696",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vanya is doing his maths homework. He has an expression of form , where x 1 , x 2 , ..., x n are digits from 1 to 9 , and sign represents either a plus ' + ' or the multiplication sign '*' . Vanya needs to add one pair of brackets in this expression so that to maximize the value of the resulting expression.",
+  "input_specification": "The first line contains expression s ( 1 ≤ | s | ≤ 5001 , | s | is odd), its odd positions only contain digits from 1 to 9 , and even positions only contain signs + and * . The number of signs * doesn't exceed 15.",
+  "output_specification": "In the first line print the maximum possible value of an expression.",
+  "sample_testcases": [
+    {
+      "input": "3+5*7+8*4",
+      "output": "303"
+    },
+    {
+      "input": "2+3*5",
+      "output": "25"
+    },
+    {
+      "input": "3*4*5",
+      "output": "60"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

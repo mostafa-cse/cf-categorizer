@@ -1,0 +1,40 @@
+{
+  "id": "788C",
+  "source": "problemset",
+  "contest_id": 788,
+  "problem_index": "C",
+  "name": "The Great Mixing",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 2709,
+  "problem_url": "https://codeforces.com/problemset/problem/788/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51312",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sasha and Kolya decided to get drunk with Coke, again. This time they have k types of Coke. i -th type is characterised by its carbon dioxide concentration . Today, on the party in honour of Sergiy of Vancouver they decided to prepare a glass of Coke with carbon dioxide concentration . The drink should also be tasty, so the glass can contain only integer number of liters of each Coke type (some types can be not presented in the glass). Also, they want to minimize the total volume of Coke in the glass. Carbon dioxide concentration is defined as the volume of carbone dioxide in the Coke divided by the total volume of Coke. When you mix two Cokes, the volume of carbon dioxide sums up, and the total volume of Coke sums up as well. Help them, find the minimal natural number of liters needed to create a glass with carbon dioxide concentration . Assume that the friends have unlimited amount of each Coke type.",
+  "input_specification": "The first line contains two integers n , k ( 0 ≤ n ≤ 1000 , 1 ≤ k ≤ 10 6 ) — carbon dioxide concentration the friends want and the number of Coke types. The second line contains k integers a 1 , a 2 , ..., a k ( 0 ≤ a i ≤ 1000 ) — carbon dioxide concentration of each type of Coke. Some Coke types can have same concentration.",
+  "output_specification": "Print the minimal natural number of liter needed to prepare a glass with carbon dioxide concentration , or -1 if it is impossible.",
+  "sample_testcases": [
+    {
+      "input": "400 4\n100 300 450 500",
+      "output": "2"
+    },
+    {
+      "input": "50 2\n100 25",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

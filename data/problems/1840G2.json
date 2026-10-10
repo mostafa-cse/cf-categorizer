@@ -1,0 +1,38 @@
+{
+  "id": "1840G2",
+  "source": "problemset",
+  "contest_id": 1840,
+  "problem_index": "G2",
+  "name": "In Search of Truth (Hard Version)",
+  "rating": 2500,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "math",
+    "meet-in-the-middle",
+    "probabilities"
+  ],
+  "solved_count": 1235,
+  "problem_url": "https://codeforces.com/problemset/problem/1840/G2",
+  "editorial_url": "https://codeforces.com/blog/entry/117060",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between easy and hard versions is the maximum number of queries. In this version, you are allowed to ask at most $$$1000$$$ queries. This is an interactive problem. You are playing a game. The circle is divided into $$$n$$$ sectors, sectors are numbered from $$$1$$$ to $$$n$$$ in some order. You are in the adjacent room and do not know either the number of sectors or their numbers. There is also an arrow that initially points to some sector. Initially, the host tells you the number of the sector to which the arrow points. After that, you can ask the host to move the arrow $$$k$$$ sectors counterclockwise or clockwise at most $$$1000$$$ times. And each time you are told the number of the sector to which the arrow points. Your task is to determine the integer $$$n$$$ — the number of sectors in at most $$$1000$$$ queries. It is guaranteed that $$$1 \\le n \\le 10^6$$$.",
+  "input_specification": "The input consists of a single integer $$$x$$$ ($$$1 \\le x \\le n$$$) — the number of the initial sector.",
+  "output_specification": "After you determine the integer $$$n$$$ — the number of sectors, you should output \"! n\" ($$$1 \\le n \\le 10^6$$$). After that the program should immediately terminate. Note that, printing the answer does not count as a query. It is guaranteed that the integer $$$n$$$ and the numbers of the sectors are fixed initially and will not be changed by the jury program depending on the queries.",
+  "sample_testcases": [
+    {
+      "input": "1\n\n5\n\n6\n\n7\n\n2\n\n10\n\n9\n\n8\n\n4\n\n3\n\n1",
+      "output": "+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n+ 1\n\n! 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:51",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

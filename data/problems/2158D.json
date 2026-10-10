@@ -1,0 +1,39 @@
+{
+  "id": "2158D",
+  "source": "problemset",
+  "contest_id": 2158,
+  "problem_index": "D",
+  "name": "Palindrome Flipping",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "graphs",
+    "implementation",
+    "shortest paths",
+    "strings"
+  ],
+  "solved_count": 3559,
+  "problem_url": "https://codeforces.com/problemset/problem/2158/D",
+  "editorial_url": "https://codeforces.com/blog/entry/148782",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two binary strings $$$s$$$ and $$$t$$$, each of the same length $$$n$$$. You are allowed to perform the following operation: Pick indices $$$l$$$, $$$r$$$ ($$$1 \\le \\color{red}{l \\lt r} \\le n$$$) such that substring $$$s_{l,r}$$$ is a palindrome and flip all bits in substring $$$s_{l,r}$$$. The goal is to finally make $$$s$$$ equal to $$$t$$$, performing any of the above operations at most $$$2n$$$ times (possibly none). A substring $$$s_{l,r}$$$ of a string $$$s$$$ is the contiguous sequence of characters starting from index $$$l$$$ and ending at index $$$r$$$ (both inclusive), where $$$1 \\leq l \\lt r \\leq |s|$$$. Here $$$|s|$$$ denotes the length of the string $$$s$$$. A string is a palindrome if it reads the same forwards and backwards. For example, the strings 101 and 00 are palindromes, while 10 is not. Flipping all bits in a substring means changing each 0 to 1 and each 1 to 0 in that substring. For example, flipping the substring 101 results in 010 .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$T$$$ ($$$1 \\le T \\le 5\\cdot 10^3$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$4 \\le n \\le 100$$$) — the length of the strings $$$s$$$ and $$$t$$$. The next two lines of each test case contain the binary strings $$$s$$$ and $$$t$$$, respectively. It is guaranteed that the sum of $$$n^2$$$ over all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "output_specification": "For each test case, if it is impossible to achieve the goal, print $$$-1$$$. Otherwise, the first line should contain an integer $$$k$$$ ($$$0 \\leq k \\leq 2n$$$) — the number of operations. For each of the next $$$k$$$ lines, print two integers $$$l, r$$$ ($$$1 \\leq l \\lt r \\leq n$$$) — the indices you choose in each operation. Note that $$$s_{l,r}$$$ must be a palindrome at this stage.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n01011\n10000\n7\n1010101\n0101010\n4\n0010\n0010",
+      "output": "2\n1 3\n3 5\n1\n1 7\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1245F",
+  "source": "problemset",
+  "contest_id": 1245,
+  "problem_index": "F",
+  "name": "Daniel and Spring Cleaning",
+  "rating": 2300,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 2466,
+  "problem_url": "https://codeforces.com/problemset/problem/1245/F",
+  "editorial_url": "https://codeforces.com/blog/entry/71080",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While doing some spring cleaning, Daniel found an old calculator that he loves so much. However, it seems like it is broken. When he tries to compute $$$1 + 3$$$ using the calculator, he gets $$$2$$$ instead of $$$4$$$. But when he tries computing $$$1 + 4$$$, he gets the correct answer, $$$5$$$. Puzzled by this mystery, he opened up his calculator and found the answer to the riddle: the full adders became half adders! So, when he tries to compute the sum $$$a + b$$$ using the calculator, he instead gets the xorsum $$$a \\oplus b$$$ (read the definition by the link: https://en.wikipedia.org/wiki/Exclusive_or ). As he saw earlier, the calculator sometimes gives the correct answer. And so, he wonders, given integers $$$l$$$ and $$$r$$$, how many pairs of integers $$$(a, b)$$$ satisfy the following conditions: $$$$$$a + b = a \\oplus b$$$$$$ $$$$$$l \\leq a \\leq r$$$$$$ $$$$$$l \\leq b \\leq r$$$$$$ However, Daniel the Barman is going to the bar and will return in two hours. He tells you to solve the problem before he returns, or else you will have to enjoy being blocked.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of testcases. Then, $$$t$$$ lines follow, each containing two space-separated integers $$$l$$$ and $$$r$$$ ($$$0 \\le l \\le r \\le 10^9$$$).",
+  "output_specification": "Print $$$t$$$ integers, the $$$i$$$-th integer should be the answer to the $$$i$$$-th testcase.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 4\n323 323\n1 1000000",
+      "output": "8\n0\n3439863766"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:20",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

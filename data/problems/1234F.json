@@ -1,0 +1,47 @@
+{
+  "id": "1234F",
+  "source": "problemset",
+  "contest_id": 1234,
+  "problem_index": "F",
+  "name": "Yet Another Substring Reverse",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "dp"
+  ],
+  "solved_count": 3255,
+  "problem_url": "https://codeforces.com/problemset/problem/1234/F",
+  "editorial_url": "https://codeforces.com/blog/entry/70233",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ consisting only of first $$$20$$$ lowercase Latin letters (' a ', ' b ', ..., ' t '). Recall that the substring $$$s[l; r]$$$ of the string $$$s$$$ is the string $$$s_l s_{l + 1} \\dots s_r$$$. For example, the substrings of \" codeforces \" are \" code \", \" force \", \" f \", \" for \", but not \" coder \" and \" top \". You can perform the following operation no more than once : choose some substring $$$s[l; r]$$$ and reverse it (i.e. the string $$$s_l s_{l + 1} \\dots s_r$$$ becomes $$$s_r s_{r - 1} \\dots s_l$$$). Your goal is to maximize the length of the maximum substring of $$$s$$$ consisting of distinct (i.e. unique) characters. The string consists of distinct characters if no character in this string appears more than once. For example, strings \" abcde \", \" arctg \" and \" minecraft \" consist of distinct characters but strings \" codeforces \", \" abacaba \" do not consist of distinct characters.",
+  "input_specification": "The only line of the input contains one string $$$s$$$ consisting of no more than $$$10^6$$$ characters ' a ', ' b ', ..., ' t ' (first $$$20$$$ lowercase Latin letters).",
+  "output_specification": "Print one integer — the maximum possible length of the maximum substring of $$$s$$$ consisting of distinct characters after reversing no more than one its substring.",
+  "sample_testcases": [
+    {
+      "input": "abacaba",
+      "output": "3"
+    },
+    {
+      "input": "abcdecdf",
+      "output": "6"
+    },
+    {
+      "input": "aabbcc",
+      "output": "3"
+    },
+    {
+      "input": "abcdeefc",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

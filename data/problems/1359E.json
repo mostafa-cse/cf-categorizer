@@ -1,0 +1,52 @@
+{
+  "id": "1359E",
+  "source": "problemset",
+  "contest_id": 1359,
+  "problem_index": "E",
+  "name": "Modular Stability",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 6944,
+  "problem_url": "https://codeforces.com/problemset/problem/1359/E",
+  "editorial_url": "https://codeforces.com/blog/entry/78116",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "We define $$$x \\bmod y$$$ as the remainder of division of $$$x$$$ by $$$y$$$ ($$$\\%$$$ operator in C++ or Java, mod operator in Pascal). Let's call an array of positive integers $$$[a_1, a_2, \\dots, a_k]$$$ stable if for every permutation $$$p$$$ of integers from $$$1$$$ to $$$k$$$, and for every non-negative integer $$$x$$$, the following condition is met: $$$ (((x \\bmod a_1) \\bmod a_2) \\dots \\bmod a_{k - 1}) \\bmod a_k = (((x \\bmod a_{p_1}) \\bmod a_{p_2}) \\dots \\bmod a_{p_{k - 1}}) \\bmod a_{p_k} $$$ That is, for each non-negative integer $$$x$$$, the value of $$$(((x \\bmod a_1) \\bmod a_2) \\dots \\bmod a_{k - 1}) \\bmod a_k$$$ does not change if we reorder the elements of the array $$$a$$$. For two given integers $$$n$$$ and $$$k$$$, calculate the number of stable arrays $$$[a_1, a_2, \\dots, a_k]$$$ such that $$$1 \\le a_1 \\lt a_2 \\lt \\dots \\lt a_k \\le n$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 5 \\cdot 10^5$$$).",
+  "output_specification": "Print one integer — the number of stable arrays $$$[a_1, a_2, \\dots, a_k]$$$ such that $$$1 \\le a_1 \\lt a_2 \\lt \\dots \\lt a_k \\le n$$$. Since the answer may be large, print it modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "7 3",
+      "output": "16"
+    },
+    {
+      "input": "3 7",
+      "output": "0"
+    },
+    {
+      "input": "1337 42",
+      "output": "95147305"
+    },
+    {
+      "input": "1 1",
+      "output": "1"
+    },
+    {
+      "input": "500000 1",
+      "output": "500000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:51",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

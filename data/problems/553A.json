@@ -1,0 +1,40 @@
+{
+  "id": "553A",
+  "source": "problemset",
+  "contest_id": 553,
+  "problem_index": "A",
+  "name": "Kyoya and Colored Balls",
+  "rating": 1500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 10296,
+  "problem_url": "https://codeforces.com/problemset/problem/553/A",
+  "editorial_url": "https://codeforces.com/blog/entry/18842",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Kyoya Ootori has a bag with n colored balls that are colored with k different colors. The colors are labeled from 1 to k . Balls of the same color are indistinguishable. He draws balls from the bag one by one until the bag is empty. He noticed that he drew the last ball of color i before drawing the last ball of color i + 1 for all i from 1 to k - 1 . Now he wonders how many different ways this can happen.",
+  "input_specification": "The first line of input will have one integer k ( 1 ≤ k ≤ 1000 ) the number of colors. Then, k lines will follow. The i -th line will contain c i , the number of balls of the i -th color ( 1 ≤ c i ≤ 1000 ). The total number of balls doesn't exceed 1000.",
+  "output_specification": "A single integer, the number of ways that Kyoya can draw the balls from the bag as described in the statement, modulo 1 000 000 007 .",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n2\n1",
+      "output": "3"
+    },
+    {
+      "input": "4\n1\n2\n3\n4",
+      "output": "1680"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

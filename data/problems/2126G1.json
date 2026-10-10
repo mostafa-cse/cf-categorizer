@@ -1,0 +1,38 @@
+{
+  "id": "2126G1",
+  "source": "problemset",
+  "contest_id": 2126,
+  "problem_index": "G1",
+  "name": "Big Wins! (easy version)",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "dsu",
+    "two pointers"
+  ],
+  "solved_count": 2614,
+  "problem_url": "https://codeforces.com/problemset/problem/2126/G1",
+  "editorial_url": "https://codeforces.com/blog/entry/144845",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The difference between the versions is that in this version $$$a_i \\leq \\min(n,100)$$$. You are given an array of $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$. Your task is to find a subarray $$$a[l, r]$$$ (a continuous sequence of elements $$$a_l, a_{l + 1}, \\dots, a_r$$$) for which the value of the expression $$$\\text{med}(a[l, r]) - \\min(a[l, r])$$$ is maximized. Here: $$$\\text{med}$$$ — the median of the subarray, which is the element at position $$$\\left\\lceil \\frac{k + 1}{2} \\right\\rceil$$$ after sorting the subarray, where $$$k$$$ is its length; $$$\\min$$$ — the minimum element of this subarray. For example, consider the array $$$a=[1, 4, 1, 5, 3, 3]$$$ and choose the subarray $$$a[2, 5] = [4, 1, 5, 3]$$$. In sorted form, it looks like $$$[1, 3, 4, 5]$$$. $$$\\text{med}(a[2, 5]) = 4$$$, since $$$\\left\\lceil \\frac{4 + 1}{2} \\right\\rceil = $$$ the third element in the sorted subarray is $$$4$$$; $$$\\min(a[2, 5]) = 1$$$, since the minimum element is $$$1$$$. In this example, the value $$$\\text{med} - \\min = 4 - 1 = 3$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains one integer $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$) — the length of the array. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\leq a_i \\leq \\min(n, 100)$$$) — the elements of the array. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum possible value of $$$\\text{med} - \\min$$$ among all subarrays of the array.",
+  "sample_testcases": [
+    {
+      "input": "5\n5\n3 2 5 3 1\n4\n4 1 1 3\n7\n6 1 3 4 6 2 7\n4\n4 2 3 1\n5\n1 2 3 4 5",
+      "output": "3\n3\n5\n2\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:20",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

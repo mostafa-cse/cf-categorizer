@@ -1,0 +1,43 @@
+{
+  "id": "5C",
+  "source": "problemset",
+  "contest_id": 5,
+  "problem_index": "C",
+  "name": "Longest Regular Bracket Sequence",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "dp",
+    "greedy",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 19437,
+  "problem_url": "https://codeforces.com/problemset/problem/5/C",
+  "editorial_url": "https://codeforces.com/blog/entry/213",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is yet another problem dealing with regular bracket sequences. We should remind you that a bracket sequence is called regular, if by inserting « + » and « 1 » into it we can get a correct mathematical expression. For example, sequences « (())() », « () » and « (()(())) » are regular, while « )( », « (() » and « (()))( » are not. You are given a string of « ( » and « ) » characters. You are to find its longest substring that is a regular bracket sequence. You are to find the number of such substrings as well.",
+  "input_specification": "The first line of the input file contains a non-empty string, consisting of « ( » and « ) » characters. Its length does not exceed 10 6 .",
+  "output_specification": "Print the length of the longest substring that is a regular bracket sequence, and the number of such substrings. If there are no such substrings, write the only line containing \" 0 1 \".",
+  "sample_testcases": [
+    {
+      "input": ")((())))(()())",
+      "output": "6 2"
+    },
+    {
+      "input": "))(",
+      "output": "0 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:54",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1473F",
+  "source": "problemset",
+  "contest_id": 1473,
+  "problem_index": "F",
+  "name": "Strange Set",
+  "rating": 2700,
+  "tags": [
+    "flows",
+    "math"
+  ],
+  "solved_count": 1268,
+  "problem_url": "https://codeforces.com/problemset/problem/1473/F",
+  "editorial_url": "https://codeforces.com/blog/entry/86827",
+  "time_limit": "4 seconds",
+  "memory_limit": "32 megabytes",
+  "description": "Note that the memory limit is unusual. You are given an integer $$$n$$$ and two sequences $$$a_1, a_2, \\dots, a_n$$$ and $$$b_1, b_2, \\dots, b_n$$$. Let's call a set of integers $$$S$$$ such that $$$S \\subseteq \\{1, 2, 3, \\dots, n\\}$$$ strange , if, for every element $$$i$$$ of $$$S$$$, the following condition is met: for every $$$j \\in [1, i - 1]$$$, if $$$a_j$$$ divides $$$a_i$$$, then $$$j$$$ is also included in $$$S$$$. An empty set is always strange . The cost of the set $$$S$$$ is $$$\\sum\\limits_{i \\in S} b_i$$$. You have to calculate the maximum possible cost of a strange set.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 100$$$). The third line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$-10^5 \\le b_i \\le 10^5$$$).",
+  "output_specification": "Print one integer — the maximum cost of a strange set.",
+  "sample_testcases": [
+    {
+      "input": "9\n4 7 3 4 5 6 7 8 13\n-2 3 -19 5 -6 7 -8 9 1",
+      "output": "16"
+    },
+    {
+      "input": "2\n42 42\n-37 13",
+      "output": "0"
+    },
+    {
+      "input": "2\n42 42\n13 -37",
+      "output": "13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:21",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "216. Min Cost Max Flow (MCMF)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Model constraint matching as minimum-cost flow. Augment along the shortest augmenting path using SPFA or Dijkstra with Johnson's potentials."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "17C",
+  "source": "problemset",
+  "contest_id": 17,
+  "problem_index": "C",
+  "name": "Balance",
+  "rating": 2500,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1093,
+  "problem_url": "https://codeforces.com/problemset/problem/17/C",
+  "editorial_url": "https://codeforces.com/blog/entry/451",
+  "time_limit": "3 seconds",
+  "memory_limit": "128 megabytes",
+  "description": "Nick likes strings very much, he likes to rotate them, sort them, rearrange characters within a string... Once he wrote a random string of characters a , b , c on a piece of paper and began to perform the following operations: to take two adjacent characters and replace the second character with the first one, to take two adjacent characters and replace the first character with the second one To understand these actions better, let's take a look at a string « abc ». All of the following strings can be obtained by performing one of the described operations on « abc »: « bbc », « abb », « acc ». Let's denote the frequency of a character for each of the characters a , b and c as the number of occurrences of this character in the string. For example, for string « abc »: | a | = 1, | b | = 1, | c | = 1, and for string « bbc »: | a | = 0, | b | = 2, | c | = 1. While performing the described operations, Nick sometimes got balanced strings . Let's say that a string is balanced, if the frequencies of each character differ by at most 1. That is - 1 ≤ | a | - | b | ≤ 1 , - 1 ≤ | a | - | c | ≤ 1 и - 1 ≤ | b | - | c | ≤ 1 . Would you help Nick find the number of different balanced strings that can be obtained by performing the operations described above, perhaps multiple times, on the given string s . This number should be calculated modulo 51123987 .",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 150 ) — the length of the given string s . Next line contains the given string s . The initial string can be balanced as well, in this case it should be counted too. The given string s consists only of characters a , b and c .",
+  "output_specification": "Output the only number — the number of different balanced strings that can be obtained by performing the described operations, perhaps multiple times, on the given string s , modulo 51123987 .",
+  "sample_testcases": [
+    {
+      "input": "4\nabca",
+      "output": "7"
+    },
+    {
+      "input": "4\nabbc",
+      "output": "3"
+    },
+    {
+      "input": "2\nab",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

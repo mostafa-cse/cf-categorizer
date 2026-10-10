@@ -1,0 +1,38 @@
+{
+  "id": "457B",
+  "source": "problemset",
+  "contest_id": 457,
+  "problem_index": "B",
+  "name": "Distributed Join",
+  "rating": 1900,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 1221,
+  "problem_url": "https://codeforces.com/problemset/problem/457/B",
+  "editorial_url": "https://codeforces.com/blog/entry/13855",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Piegirl was asked to implement two table join operation for distributed database system, minimizing the network traffic. Suppose she wants to join two tables, A and B . Each of them has certain number of rows which are distributed on different number of partitions. Table A is distributed on the first cluster consisting of m partitions. Partition with index i has a i rows from A . Similarly, second cluster containing table B has n partitions, i -th one having b i rows from B . In one network operation she can copy one row from any partition to any other partition. At the end, for each row from A and each row from B there should be a partition that has both rows. Determine the minimal number of network operations to achieve this.",
+  "input_specification": "First line contains two integer numbers, m and n ( 1 ≤ m , n ≤ 10 5 ). Second line contains description of the first cluster with m space separated integers, a i (1 ≤ a i ≤ 10 9 ) . Similarly, third line describes second cluster with n space separated integers, b i (1 ≤ b i ≤ 10 9 ) .",
+  "output_specification": "Print one integer — minimal number of copy operations.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n2 6\n3 100",
+      "output": "11"
+    },
+    {
+      "input": "2 3\n10 10\n1 1 1",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

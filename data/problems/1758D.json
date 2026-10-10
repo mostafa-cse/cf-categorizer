@@ -1,0 +1,38 @@
+{
+  "id": "1758D",
+  "source": "problemset",
+  "contest_id": 1758,
+  "problem_index": "D",
+  "name": "Range = √Sum",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "brute force",
+    "constructive algorithms",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 8829,
+  "problem_url": "https://codeforces.com/problemset/problem/1758/D",
+  "editorial_url": "https://codeforces.com/blog/entry/109438",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$. Find a sequence of $$$n$$$ distinct integers $$$a_1, a_2, \\dots, a_n$$$ such that $$$1 \\leq a_i \\leq 10^9$$$ for all $$$i$$$ and $$$$$$\\max(a_1, a_2, \\dots, a_n) - \\min(a_1, a_2, \\dots, a_n)= \\sqrt{a_1 + a_2 + \\dots + a_n}.$$$$$$ It can be proven that there exists a sequence of distinct integers that satisfies all the conditions above.",
+  "input_specification": "The first line of input contains $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first and only line of each test case contains one integer $$$n$$$ ($$$2 \\leq n \\leq 3 \\cdot 10^5$$$) — the length of the sequence you have to find. The sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$n$$$ space-separated distinct integers $$$a_1, a_2, \\dots, a_n$$$ satisfying the conditions in the statement. If there are several possible answers, you can output any of them. Please remember that your integers must be distinct !",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n5\n4",
+      "output": "3 1\n20 29 18 26 28\n25 21 23 31"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:13",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

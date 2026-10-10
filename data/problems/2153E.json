@@ -1,0 +1,36 @@
+{
+  "id": "2153E",
+  "source": "problemset",
+  "contest_id": 2153,
+  "problem_index": "E",
+  "name": "Zero Trailing Factorial",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1061,
+  "problem_url": "https://codeforces.com/problemset/problem/2153/E",
+  "editorial_url": "https://codeforces.com/blog/entry/147264",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "For all positive integers $$$x\\ge 1$$$ and $$$k\\ge 2$$$, let $$$v_k(x!)$$$ denote the number of trailing zeros in the base-$$$k$$$ representation of $$$x! = x\\cdot (x-1)\\cdot \\ldots \\cdot 1$$$. Formally, $$$v_k(x!)$$$ is defined as the largest integer $$$i$$$ such that $$$k^i$$$ divides $$$x!$$$. For a prime number $$$p$$$, we can calculate $$$v_p(x!) = \\sum\\limits_{j=1}^\\infty \\left\\lfloor \\frac{x}{p^j}\\right\\rfloor$$$$$$^{\\text{∗}}$$$. If $$$k$$$ is not prime, write its prime factorization as $$$k = \\prod p_i^{e_i}$$$, where $$$p_i$$$ are distinct prime factors and $$$e_i$$$ are their corresponding exponents. Then, $$$$$$v_k(x!) = \\min\\limits_i \\left\\lfloor \\frac{v_{p_i}(x!)}{e_i}\\right\\rfloor.$$$$$$ For any two positive integers $$$a$$$ and $$$b$$$, and any integer $$$k\\ge 2$$$, the weight of the pair $$$(a, b)$$$ with respect to $$$k$$$, denoted by $$$w_k(a, b)$$$, is defined as $$$$$$w_k(a, b) = \\begin{cases}\\min(v_k(a!), v_k(b!)) & \\text{if }v_k(a!)\\neq v_k(b!)\\text{;}\\\\10^{100} & \\text{otherwise.}\\end{cases}$$$$$$ Next, define $$$f_m(a, b)$$$ as the minimum weight of the pair $$$(a, b)$$$ with respect to $$$k$$$, taken over all integers $$$k$$$ with $$$2\\le k\\le m$$$: $$$$$$f_m(a, b)=\\min\\limits_{2\\le k\\le m}w_k(a, b).$$$$$$ You are given two integers $$$n$$$ and $$$m$$$. Your task is to compute the sum of $$$f_m(x, n)$$$ over all positive integers $$$x$$$ less than $$$n$$$: $$$$$$\\sum_{1\\le x\\le n - 1} f_m(x, n).$$$$$$ It can be shown that under the given constraints, the result is strictly less than $$$10^{100}$$$. $$$^{\\text{∗}}$$$$$$\\lfloor y\\rfloor$$$ denotes the floor of $$$y$$$, which is the greatest integer less than or equal to $$$y$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first and only line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2\\le n\\le m\\le 10^7$$$) — the parameters of the function. Note that there are no constraints on the sum of $$$n, m$$$ over all test cases.",
+  "output_specification": "For each test case, output a single integer representing $$$\\sum\\limits_{1\\le x\\le n - 1} f_m(x, n)$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 5\n6 7\n6 10\n36 68\n10000000 10000000",
+      "output": "0\n1\n0\n13\n279933"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

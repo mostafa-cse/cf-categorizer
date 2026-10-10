@@ -1,0 +1,36 @@
+{
+  "id": "1478C",
+  "source": "problemset",
+  "contest_id": 1478,
+  "problem_index": "C",
+  "name": "Nezzar and Symmetric Array",
+  "rating": 1700,
+  "tags": [
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 10812,
+  "problem_url": "https://codeforces.com/problemset/problem/1478/C",
+  "editorial_url": "https://codeforces.com/blog/entry/87294",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Long time ago there was a symmetric array $$$a_1,a_2,\\ldots,a_{2n}$$$ consisting of $$$2n$$$ distinct integers . Array $$$a_1,a_2,\\ldots,a_{2n}$$$ is called symmetric if for each integer $$$1 \\le i \\le 2n$$$, there exists an integer $$$1 \\le j \\le 2n$$$ such that $$$a_i = -a_j$$$. For each integer $$$1 \\le i \\le 2n$$$, Nezzar wrote down an integer $$$d_i$$$ equal to the sum of absolute differences from $$$a_i$$$ to all integers in $$$a$$$, i. e. $$$d_i = \\sum_{j = 1}^{2n} {|a_i - a_j|}$$$. Now a million years has passed and Nezzar can barely remember the array $$$d$$$ and totally forget $$$a$$$. Nezzar wonders if there exists any symmetric array $$$a$$$ consisting of $$$2n$$$ distinct integers that generates the array $$$d$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$). The second line of each test case contains $$$2n$$$ integers $$$d_1, d_2, \\ldots, d_{2n}$$$ ($$$0 \\le d_i \\le 10^{12}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, print \" YES \" in a single line if there exists a possible array $$$a$$$. Otherwise, print \" NO \". You can print letters in any case (upper or lower).",
+  "sample_testcases": [
+    {
+      "input": "6\n2\n8 12 8 12\n2\n7 7 9 11\n2\n7 11 7 11\n1\n1 1\n4\n40 56 48 40 80 56 80 48\n6\n240 154 210 162 174 154 186 240 174 186 162 210",
+      "output": "YES\nNO\nNO\nNO\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:19",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

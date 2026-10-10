@@ -1,0 +1,38 @@
+{
+  "id": "1439C",
+  "source": "problemset",
+  "contest_id": 1439,
+  "problem_index": "C",
+  "name": "Greedy Shopping",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 2396,
+  "problem_url": "https://codeforces.com/problemset/problem/1439/C",
+  "editorial_url": "https://codeforces.com/blog/entry/84731",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a_1, a_2, \\ldots, a_n$$$ of integers. This array is non-increasing . Let's consider a line with $$$n$$$ shops. The shops are numbered with integers from $$$1$$$ to $$$n$$$ from left to right. The cost of a meal in the $$$i$$$-th shop is equal to $$$a_i$$$. You should process $$$q$$$ queries of two types: 1 x y : for each shop $$$1 \\leq i \\leq x$$$ set $$$a_{i} = max(a_{i}, y)$$$. 2 x y : let's consider a hungry man with $$$y$$$ money. He visits the shops from $$$x$$$-th shop to $$$n$$$-th and if he can buy a meal in the current shop he buys one item of it. Find how many meals he will purchase. The man can buy a meal in the shop $$$i$$$ if he has at least $$$a_i$$$ money, and after it his money decreases by $$$a_i$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$q$$$ ($$$1 \\leq n, q \\leq 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$a_{1},a_{2}, \\ldots, a_{n}$$$ $$$(1 \\leq a_{i} \\leq 10^9)$$$ — the costs of the meals. It is guaranteed, that $$$a_1 \\geq a_2 \\geq \\ldots \\geq a_n$$$. Each of the next $$$q$$$ lines contains three integers $$$t$$$, $$$x$$$, $$$y$$$ ($$$1 \\leq t \\leq 2$$$, $$$1\\leq x \\leq n$$$, $$$1 \\leq y \\leq 10^9$$$), each describing the next query. It is guaranteed that there exists at least one query of type $$$2$$$.",
+  "output_specification": "For each query of type $$$2$$$ output the answer on the new line.",
+  "sample_testcases": [
+    {
+      "input": "10 6\n10 10 10 6 6 5 5 5 3 1\n2 3 50\n2 4 10\n1 3 10\n2 2 36\n1 4 7\n2 2 17",
+      "output": "8\n3\n6\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

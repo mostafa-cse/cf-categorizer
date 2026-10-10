@@ -1,0 +1,36 @@
+{
+  "id": "2187D",
+  "source": "problemset",
+  "contest_id": 2187,
+  "problem_index": "D",
+  "name": "Cool Problem",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "math"
+  ],
+  "solved_count": 738,
+  "problem_url": "https://codeforces.com/problemset/problem/2187/D",
+  "editorial_url": "https://codeforces.com/blog/entry/150649",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are two integer constants $$$x$$$ and $$$y$$$. For a binary$$$^{\\text{∗}}$$$ string $$$r$$$ of length $$$n$$$, we define its generating array as an array $$$c=[c_0,c_1,\\ldots,c_n]$$$ such that $$$c_0=0$$$, and for each $$$1 \\le i \\le n$$$: If $$$r_i=\\mathtt{0}$$$, then $$$c_i=x+c_{i-1}$$$; If $$$r_i=\\mathtt{1}$$$, then $$$c_i=y-c_{i-1}$$$. Additionally, we define $$$f(r)=\\sum\\limits_{i=1}^n c_i$$$. You are given an incomplete binary string $$$s$$$ of length $$$n$$$, where some characters in it are missing, represented by $$$\\mathtt{?}$$$. An integer $$$k$$$ is called cool if and only if there exists a way to replace each $$$\\mathtt{?}$$$ in $$$s$$$ with either $$$\\mathtt{0}$$$ or $$$\\mathtt{1}$$$, such that $$$f(s)=k$$$. Your task is to calculate the sum of all cool integers, modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$A binary string is a string where each character is either $$$\\mathtt{0}$$$ or $$$\\mathtt{1}$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$x$$$, and $$$y$$$ ($$$1 \\le n \\le 10^5$$$, $$$1 \\le x,y \\le 10^6$$$) — the length of $$$s$$$ and the given constants. The second line contains the incomplete binary string $$$s$$$ of length $$$n$$$ ($$$s_i \\in \\{\\mathtt{0}, \\mathtt{1}, \\mathtt{?}\\}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the sum of all cool integers modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1 2\n0\n1 1 2\n?\n3 7 5\n?0?\n7 114514 191981\n?1?????",
+      "output": "1\n3\n100\n8039591"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

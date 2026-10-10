@@ -1,0 +1,39 @@
+{
+  "id": "64F",
+  "source": "problemset",
+  "contest_id": 64,
+  "problem_index": "F",
+  "name": "Domain",
+  "rating": 2000,
+  "tags": [
+    "*special",
+    "expression parsing"
+  ],
+  "solved_count": 196,
+  "problem_url": "https://codeforces.com/problemset/problem/64/F",
+  "editorial_url": "https://codeforces.com/blog/entry/1316",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "This problem doesn't contain real-world specifications about domains, just use the problem statement as a formal document to solve the problem. The given string s is a domain name if it contains the characters \" a \"-\" z \", \" 0 \"-\" 9 \" and dots. No two dots shoud follow one after another (consecutive). The dots split the given string s into the parts, the last (most right) part should have the length 2 or 3. Domain can't start or end with a dot. You are given the string s , check if it is domain name.",
+  "input_specification": "The only line of the input contains given string s . The string may contain any characters with ASCII codes from 33 to 127, inclusive. The string length is between 1 and 100, inclusive.",
+  "output_specification": "Print \" YES \" if the given string s is a domain name, or print \" NO \" if it is not.",
+  "sample_testcases": [
+    {
+      "input": "codeforces.com",
+      "output": "YES"
+    },
+    {
+      "input": "mail.v-kontakte.ru",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

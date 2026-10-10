@@ -1,0 +1,44 @@
+{
+  "id": "573D",
+  "source": "problemset",
+  "contest_id": 573,
+  "problem_index": "D",
+  "name": "Bear and Cavalry",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 901,
+  "problem_url": "https://codeforces.com/problemset/problem/573/D",
+  "editorial_url": "https://codeforces.com/blog/entry/20040",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Would you want to fight against bears riding horses? Me neither. Limak is a grizzly bear. He is general of the dreadful army of Bearland. The most important part of an army is cavalry of course. Cavalry of Bearland consists of n warriors and n horses. i -th warrior has strength w i and i -th horse has strength h i . Warrior together with his horse is called a unit. Strength of a unit is equal to multiplied strengths of warrior and horse. Total strength of cavalry is equal to sum of strengths of all n units. Good assignment of warriors and horses makes cavalry truly powerful. Initially, i -th warrior has i -th horse. You are given q queries. In each query two warriors swap their horses with each other. General Limak must be ready for every possible situation. What if warriors weren't allowed to ride their own horses? After each query find the maximum possible strength of cavalry if we consider assignments of all warriors to all horses that no warrior is assigned to his own horse (it can be proven that for n ≥ 2 there is always at least one correct assignment). Note that we can't leave a warrior without a horse.",
+  "input_specification": "The first line contains two space-separated integers, n and q ( 2 ≤ n ≤ 30 000 , 1 ≤ q ≤ 10 000 ). The second line contains n space-separated integers, w 1 , w 2 , ..., w n ( 1 ≤ w i ≤ 10 6 ) — strengths of warriors. The third line contains n space-separated integers, h 1 , h 2 , ..., h n ( 1 ≤ h i ≤ 10 6 ) — strengths of horses. Next q lines describe queries. i -th of them contains two space-separated integers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ), indices of warriors who swap their horses with each other.",
+  "output_specification": "Print q lines with answers to queries. In i -th line print the maximum possible strength of cavalry after first i queries.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n1 10 100 1000\n3 7 2 5\n2 4\n2 4",
+      "output": "5732\n7532"
+    },
+    {
+      "input": "3 3\n7 11 5\n3 2 1\n1 2\n1 3\n2 3",
+      "output": "44\n48\n52"
+    },
+    {
+      "input": "7 4\n1 2 4 8 16 32 64\n87 40 77 29 50 11 18\n1 5\n2 7\n6 2\n5 6",
+      "output": "9315\n9308\n9315\n9315"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

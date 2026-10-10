@@ -1,0 +1,45 @@
+{
+  "id": "441E",
+  "source": "problemset",
+  "contest_id": 441,
+  "problem_index": "E",
+  "name": "Valera and Number",
+  "rating": 2400,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 853,
+  "problem_url": "https://codeforces.com/problemset/problem/441/E",
+  "editorial_url": "https://codeforces.com/blog/entry/12615",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Valera is a coder. Recently he wrote a funny program. The pseudo code for this program is given below: //input: integers x, k, p a = x; for(step = 1; step <= k; step = step + 1){ rnd = [random integer from 1 to 100]; if(rnd <= p) a = a * 2; else a = a + 1; } s = 0; while(remainder after dividing a by 2 equals 0){ a = a / 2; s = s + 1; } Now Valera wonders: given the values x , k and p , what is the expected value of the resulting number s ?",
+  "input_specification": "The first line of the input contains three integers x , k , p ( 1 ≤ x ≤ 10 9 ; 1 ≤ k ≤ 200; 0 ≤ p ≤ 100 ).",
+  "output_specification": "Print the required expected value. Your answer will be considered correct if the absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "1 1 50",
+      "output": "1.0000000000000"
+    },
+    {
+      "input": "5 3 0",
+      "output": "3.0000000000000"
+    },
+    {
+      "input": "5 3 25",
+      "output": "1.9218750000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

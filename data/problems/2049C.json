@@ -1,0 +1,37 @@
+{
+  "id": "2049C",
+  "source": "problemset",
+  "contest_id": 2049,
+  "problem_index": "C",
+  "name": "MEX Cycle",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 14114,
+  "problem_url": "https://codeforces.com/problemset/problem/2049/C",
+  "editorial_url": "https://codeforces.com/blog/entry/137273",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Evirir the dragon has many friends. They have 3 friends! That is one more than the average dragon. You are given integers $$$n$$$, $$$x$$$, and $$$y$$$. There are $$$n$$$ dragons sitting in a circle. The dragons are numbered $$$1, 2, \\ldots, n$$$. For each $$$i$$$ ($$$1 \\le i \\le n$$$), dragon $$$i$$$ is friends with dragon $$$i - 1$$$ and $$$i + 1$$$, where dragon $$$0$$$ is defined to be dragon $$$n$$$ and dragon $$$n + 1$$$ is defined to be dragon $$$1$$$. Additionally, dragons $$$x$$$ and $$$y$$$ are friends with each other (if they are already friends, this changes nothing). Note that all friendships are mutual. Output $$$n$$$ non-negative integers $$$a_1, a_2, \\ldots, a_n$$$ such that for each dragon $$$i$$$ ($$$1 \\le i \\le n$$$), the following holds: Let $$$f_1, f_2, \\ldots, f_k$$$ be the friends of dragon $$$i$$$. Then $$$a_i = \\operatorname{mex}(a_{f_1}, a_{f_2}, \\ldots, a_{f_k})$$$.$$$^{\\text{∗}}$$$ $$$^{\\text{∗}}$$$The minimum excluded (MEX) of a collection of integers $$$c_1, c_2, \\ldots, c_m$$$ is defined as the smallest non-negative integer $$$t$$$ which does not occur in the collection $$$c$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first and only line of each test case contains three integers $$$n$$$, $$$x$$$, $$$y$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le x \\lt y \\le n$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$n$$$ space-separated non-negative integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) on a line that satisfy the condition in the statement. If there are multiple solutions, print any of them. It can be proven that under the problem constraints, a solution with $$$0 \\le a_i \\le 10^9$$$ always exists.",
+  "sample_testcases": [
+    {
+      "input": "7\n5 1 3\n4 2 4\n6 3 5\n7 3 6\n3 2 3\n5 1 5\n6 2 5",
+      "output": "0 2 1 0 1\n1 2 1 0\n1 2 0 1 2 0\n0 1 2 0 1 0 1\n2 0 1\n1 0 2 1 0\n0 1 2 0 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:39",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

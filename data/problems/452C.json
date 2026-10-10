@@ -1,0 +1,44 @@
+{
+  "id": "452C",
+  "source": "problemset",
+  "contest_id": 452,
+  "problem_index": "C",
+  "name": "Magic Trick",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 1854,
+  "problem_url": "https://codeforces.com/problemset/problem/452/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13855",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alex enjoys performing magic tricks. He has a trick that requires a deck of n cards. He has m identical decks of n different cards each, which have been mixed together. When Alex wishes to perform the trick, he grabs n cards at random and performs the trick with those. The resulting deck looks like a normal deck, but may have duplicates of some cards. The trick itself is performed as follows: first Alex allows you to choose a random card from the deck. You memorize the card and put it back in the deck. Then Alex shuffles the deck, and pulls out a card. If the card matches the one you memorized, the trick is successful. You don't think Alex is a very good magician, and that he just pulls a card randomly from the deck. Determine the probability of the trick being successful if this is the case.",
+  "input_specification": "First line of the input consists of two integers n and m ( 1 ≤ n , m ≤ 1000 ), separated by space — number of cards in each deck, and number of decks.",
+  "output_specification": "On the only line of the output print one floating point number – probability of Alex successfully performing the trick. Relative or absolute error of your answer should not be higher than 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "0.6666666666666666"
+    },
+    {
+      "input": "4 4",
+      "output": "0.4000000000000000"
+    },
+    {
+      "input": "1 2",
+      "output": "1.0000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "1208F",
+  "source": "problemset",
+  "contest_id": 1208,
+  "problem_index": "F",
+  "name": "Bits And Pieces",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "dfs and similar",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3695,
+  "problem_url": "https://codeforces.com/problemset/problem/1208/F",
+  "editorial_url": "https://codeforces.com/blog/entry/69357",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of $$$n$$$ integers. You need to find the maximum value of $$$a_{i} | ( a_{j} \\& a_{k} )$$$ over all triplets $$$(i,j,k)$$$ such that $$$i \\lt j \\lt k$$$. Here $$$\\&$$$ denotes the bitwise AND operation , and $$$|$$$ denotes the bitwise OR operation .",
+  "input_specification": "The first line of input contains the integer $$$n$$$ ($$$3 \\le n \\le 10^{6}$$$), the size of the array $$$a$$$. Next line contains $$$n$$$ space separated integers $$$a_1$$$, $$$a_2$$$, ..., $$$a_n$$$ ($$$0 \\le a_{i} \\le 2 \\cdot 10^{6}$$$), representing the elements of the array $$$a$$$.",
+  "output_specification": "Output a single integer, the maximum value of the expression given in the statement.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 4 6",
+      "output": "6"
+    },
+    {
+      "input": "4\n2 8 4 7",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

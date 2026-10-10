@@ -1,0 +1,42 @@
+{
+  "id": "42B",
+  "source": "problemset",
+  "contest_id": 42,
+  "problem_index": "B",
+  "name": "Game of chess unfinished",
+  "rating": 1700,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 1212,
+  "problem_url": "https://codeforces.com/problemset/problem/42/B",
+  "editorial_url": "https://codeforces.com/blog/entry/884",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Once Volodya was at the museum and saw a regular chessboard as a museum piece. And there were only four chess pieces on it: two white rooks, a white king and a black king. \"Aha, blacks certainly didn't win!\", — Volodya said and was right for sure. And your task is to say whether whites had won or not. Pieces on the chessboard are guaranteed to represent a correct position (every piece occupies one cell, no two pieces occupy the same cell and kings cannot take each other). Thus, your task is only to decide whether whites mate blacks. We would remind you that it means that the black king can be taken by one of the opponent's pieces at the moment and also it cannot move to an unbeaten position. A rook moves vertically or horizontally by any number of free cells (assuming there are no other pieces on its path), a king — to the adjacent cells (either by corner or by side). Certainly, pieces cannot leave the board. The black king might be able to take opponent's rooks at his turn (see sample 3).",
+  "input_specification": "The input contains 4 space-separated piece positions: positions of the two rooks, the white king and the black king. Each position on 8 × 8 chessboard is denoted by two symbols — ( 'a' - 'h' ) and ( '1' - '8' ) — which stand for horizontal and vertical coordinates of the cell occupied by the piece. It is guaranteed, that no two pieces occupy the same cell, and kings cannot take each other.",
+  "output_specification": "Output should contain one word: \"CHECKMATE\" if whites mate blacks, and \"OTHER\" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "a6 b4 c8 a8",
+      "output": "CHECKMATE"
+    },
+    {
+      "input": "a6 c4 b6 b8",
+      "output": "OTHER"
+    },
+    {
+      "input": "a2 b1 a3 a1",
+      "output": "OTHER"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

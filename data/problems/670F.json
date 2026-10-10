@@ -1,0 +1,40 @@
+{
+  "id": "670F",
+  "source": "problemset",
+  "contest_id": 670,
+  "problem_index": "F",
+  "name": "Restore a Number",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "strings"
+  ],
+  "solved_count": 947,
+  "problem_url": "https://codeforces.com/problemset/problem/670/F",
+  "editorial_url": "https://codeforces.com/blog/entry/44715",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya decided to pass a very large integer n to Kate. First, he wrote that number as a string, then he appended to the right integer k — the number of digits in n . Magically, all the numbers were shuffled in arbitrary order while this note was passed to Kate. The only thing that Vasya remembers, is a non-empty substring of n (a substring of n is a sequence of consecutive digits of the number n ). Vasya knows that there may be more than one way to restore the number n . Your task is to find the smallest possible initial integer n . Note that decimal representation of number n contained no leading zeroes, except the case the integer n was equal to zero itself (in this case a single digit 0 was used).",
+  "input_specification": "The first line of the input contains the string received by Kate. The number of digits in this string does not exceed 1 000 000 . The second line contains the substring of n which Vasya remembers. This string can contain leading zeroes. It is guaranteed that the input data is correct, and the answer always exists.",
+  "output_specification": "Print the smalles integer n which Vasya could pass to Kate.",
+  "sample_testcases": [
+    {
+      "input": "003512\n021",
+      "output": "30021"
+    },
+    {
+      "input": "199966633300\n63",
+      "output": "3036366999"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

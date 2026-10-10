@@ -1,0 +1,41 @@
+{
+  "id": "2206I",
+  "source": "problemset",
+  "contest_id": 2206,
+  "problem_index": "I",
+  "name": "Growth Factor",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 247,
+  "problem_url": "https://codeforces.com/problemset/problem/2206/I",
+  "editorial_url": "https://codeforces.com/contest/2206/attachments/download/36244/analysis.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given an integer $$$n$$$ and a sequence of integers $$$a_1, a_2, \\ldots, a_n$$$. Your task is to determine the number of integer sequences $$$(b_1, b_2, \\ldots, b_n)$$$ such that the following conditions are satisfied: $$$1 \\leq b_i \\leq a_i$$$ for each $$$i$$$ ($$$1 \\le i \\le n$$$). $$$b_i$$$ is a factor of $$$b_{i+1}$$$ for each $$$i$$$ ($$$1 \\le i \\le n-1$$$). Two sequences are considered different if they differ in at least one position. Since the number of such sequences may be large, compute the answer modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line of input contains a single integer $$$n$$$ ($$$1 \\le n \\le 200\\,000$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 200\\,000$$$).",
+  "output_specification": "Output the number of distinct sequences satisfying the conditions, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 4",
+      "output": "6"
+    },
+    {
+      "input": "6\n265 9801 192168 200000 192018 199809",
+      "output": "16555779"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

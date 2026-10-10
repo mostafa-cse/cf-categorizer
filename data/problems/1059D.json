@@ -1,0 +1,44 @@
+{
+  "id": "1059D",
+  "source": "problemset",
+  "contest_id": 1059,
+  "problem_index": "D",
+  "name": "Nature Reserve",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "geometry",
+    "ternary search"
+  ],
+  "solved_count": 3086,
+  "problem_url": "https://codeforces.com/problemset/problem/1059/D",
+  "editorial_url": "https://codeforces.com/blog/entry/62238",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a forest that we model as a plane and live $$$n$$$ rare animals. Animal number $$$i$$$ has its lair in the point $$$(x_{i}, y_{i})$$$. In order to protect them, a decision to build a nature reserve has been made. The reserve must have a form of a circle containing all lairs. There is also a straight river flowing through the forest. All animals drink from this river, therefore it must have at least one common point with the reserve. On the other hand, ships constantly sail along the river, so the reserve must not have more than one common point with the river. For convenience, scientists have made a transformation of coordinates so that the river is defined by $$$y = 0$$$. Check whether it is possible to build a reserve, and if possible, find the minimum possible radius of such a reserve.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of animals. Each of the next $$$n$$$ lines contains two integers $$$x_{i}$$$, $$$y_{i}$$$ ($$$-10^7 \\le x_{i}, y_{i} \\le 10^7$$$) — the coordinates of the $$$i$$$-th animal's lair. It is guaranteed that $$$y_{i} \\neq 0$$$. No two lairs coincide.",
+  "output_specification": "If the reserve cannot be built, print $$$-1$$$. Otherwise print the minimum radius. Your answer will be accepted if absolute or relative error does not exceed $$$10^{-6}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer is considered correct if $$$\\frac{|a - b|}{\\max{(1, |b|)}} \\le 10^{-6}$$$.",
+  "sample_testcases": [
+    {
+      "input": "1\n0 1",
+      "output": "0.5"
+    },
+    {
+      "input": "3\n0 1\n0 2\n0 -3",
+      "output": "-1"
+    },
+    {
+      "input": "2\n0 1\n1 1",
+      "output": "0.625"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

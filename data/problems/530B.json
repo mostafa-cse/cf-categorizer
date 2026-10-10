@@ -1,0 +1,38 @@
+{
+  "id": "530B",
+  "source": "problemset",
+  "contest_id": 530,
+  "problem_index": "B",
+  "name": "String inside out",
+  "rating": 1600,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 558,
+  "problem_url": "https://codeforces.com/problemset/problem/530/B",
+  "editorial_url": "https://codeforces.com/blog/entry/17177",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string S of even length s 1 .. s 2 n . Perform the following manipulations: divide it into two halves s 1 .. s n and s n + 1 .. s 2 n reverse each of them s n .. s 1 and s 2 n .. s n + 1 concatenate the resulting strings into s n .. s 1 s 2 n .. s n + 1 Output the result of these manipulations.",
+  "input_specification": "The only line of the input contains a string of lowercase Latin letters. The length of the string is between 2 and 20, inclusive, and it is even.",
+  "output_specification": "Output the string which is the result of the described manipulations.",
+  "sample_testcases": [
+    {
+      "input": "codeforces",
+      "output": "fedocsecro"
+    },
+    {
+      "input": "qwertyasdfgh",
+      "output": "ytrewqhgfdsa"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

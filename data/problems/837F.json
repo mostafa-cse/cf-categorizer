@@ -1,0 +1,46 @@
+{
+  "id": "837F",
+  "source": "problemset",
+  "contest_id": 837,
+  "problem_index": "F",
+  "name": "Prefix Sums",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "brute force",
+    "combinatorics",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 1106,
+  "problem_url": "https://codeforces.com/problemset/problem/837/F",
+  "editorial_url": "https://codeforces.com/blog/entry/53662",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Consider the function p ( x ) , where x is an array of m integers, which returns an array y consisting of m + 1 integers such that y i is equal to the sum of first i elements of array x ( 0 ≤ i ≤ m ). You have an infinite sequence of arrays A 0 , A 1 , A 2 ... , where A 0 is given in the input, and for each i ≥ 1 A i = p ( A i - 1 ) . Also you have a positive integer k . You have to find minimum possible i such that A i contains a number which is larger or equal than k .",
+  "input_specification": "The first line contains two integers n and k ( 2 ≤ n ≤ 200000 , 1 ≤ k ≤ 10 18 ). n is the size of array A 0 . The second line contains n integers A 0 0 , A 0 1 ... A 0 n - 1 — the elements of A 0 ( 0 ≤ A 0 i ≤ 10 9 ). At least two elements of A 0 are positive.",
+  "output_specification": "Print the minimum i such that A i contains a number which is larger or equal than k .",
+  "sample_testcases": [
+    {
+      "input": "2 2\n1 1",
+      "output": "1"
+    },
+    {
+      "input": "3 6\n1 1 1",
+      "output": "2"
+    },
+    {
+      "input": "3 1\n1 0 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "492D",
+  "source": "problemset",
+  "contest_id": 492,
+  "problem_index": "D",
+  "name": "Vanya and Computer Game",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 3344,
+  "problem_url": "https://codeforces.com/problemset/problem/492/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14945",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vanya and his friend Vova play a computer game where they need to destroy n monsters to pass a level. Vanya's character performs attack with frequency x hits per second and Vova's character performs attack with frequency y hits per second. Each character spends fixed time to raise a weapon and then he hits (the time to raise the weapon is 1 / x seconds for the first character and 1 / y seconds for the second one). The i -th monster dies after he receives a i hits. Vanya and Vova wonder who makes the last hit on each monster. If Vanya and Vova make the last hit at the same time, we assume that both of them have made the last hit.",
+  "input_specification": "The first line contains three integers n , x , y ( 1 ≤ n ≤ 10 5 , 1 ≤ x , y ≤ 10 6 ) — the number of monsters, the frequency of Vanya's and Vova's attack, correspondingly. Next n lines contain integers a i ( 1 ≤ a i ≤ 10 9 ) — the number of hits needed do destroy the i -th monster.",
+  "output_specification": "Print n lines. In the i -th line print word \" Vanya \", if the last hit on the i -th monster was performed by Vanya, \" Vova \", if Vova performed the last hit, or \" Both \", if both boys performed it at the same time.",
+  "sample_testcases": [
+    {
+      "input": "4 3 2\n1\n2\n3\n4",
+      "output": "Vanya\nVova\nVanya\nBoth"
+    },
+    {
+      "input": "2 1 1\n1\n2",
+      "output": "Both\nBoth"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

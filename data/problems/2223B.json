@@ -1,0 +1,39 @@
+{
+  "id": "2223B",
+  "source": "problemset",
+  "contest_id": 2223,
+  "problem_index": "B",
+  "name": "Zhily and Barknights",
+  "rating": 1600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 4106,
+  "problem_url": "https://codeforces.com/problemset/problem/2223/B",
+  "editorial_url": "https://codeforces.com/blog/entry/153567",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Zhily developed a game called Barknights, and she is preparing to release a major update on March $$$25$$$. Specifically, she plans to add a Module to each Operator in the game, multiplying their power level by the Module's power. After the update is released, the famous game streamer Jily will evaluate the Operators' power levels and rank them in a tier list. Whenever an earlier-released Operator is ranked higher than a later-released Operator, it will cause a wave of drama. Unfortunately, Zhily accidentally knocked over a hot water kettle and broke her computer, which caused all the Modules to be randomly rearranged. Now Zhily wants to know the expected number of waves of drama that will be generated, but since she has to move on to the next problem, she has entrusted this task to you. You are given two arrays $$$a$$$ and $$$b$$$ of $$$n$$$ positive integers. Let $$$b'$$$ be a permutation of array $$$b$$$ chosen uniformly at random among all $$$n!$$$ possible permutations. Define $$$ c_i = a_i \\cdot b'_i$$$ for $$$1\\le i \\le n$$$. Find the expected number of inversions$$$^{\\text{∗}}$$$ of array $$$c$$$. $$$^{\\text{∗}}$$$An inversion in array $$$c$$$ is a pair of indices $$$(i, j)$$$ such that $$$1 \\le i \\lt j \\le n$$$ and $$$c_i \\gt c_j$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$) — the length of the arrays $$$a$$$ and $$$b$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the array $$$a$$$. The third line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le 10^9$$$) — the array $$$b$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2000$$$.",
+  "output_specification": "For each test case, output the expected number of inversions in $$$c$$$ modulo $$$998\\,244\\,353$$$. Formally, let $$$M = 998\\,244\\,353$$$. It can be shown that the exact answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 14 5 1 4\n1 1 1 1 1\n3\n3 2 5\n3 2 5\n10\n10 72 65 43 73 23 78 13 49 99\n31 90 45 19 44 18 59 31 48 29",
+      "output": "5\n665496236\n820778710"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:29",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

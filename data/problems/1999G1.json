@@ -1,0 +1,35 @@
+{
+  "id": "1999G1",
+  "source": "problemset",
+  "contest_id": 1999,
+  "problem_index": "G1",
+  "name": "Ruler (easy version)",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "interactive"
+  ],
+  "solved_count": 15308,
+  "problem_url": "https://codeforces.com/problemset/problem/1999/G1",
+  "editorial_url": "https://codeforces.com/blog/entry/132383",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference between the two versions is that in this version, you can make at most $$$\\mathbf{10}$$$ queries . This is an interactive problem. If you are unsure how interactive problems work, then it is recommended to read the guide for participants . We have a secret ruler that is missing one number $$$x$$$ ($$$2 \\leq x \\leq 999$$$). When you measure an object of length $$$y$$$, the ruler reports the following values: If $$$y \\lt x$$$, the ruler (correctly) measures the object as having length $$$y$$$. If $$$y \\geq x$$$, the ruler incorrectly measures the object as having length $$$y+1$$$. The ruler above is missing the number $$$4$$$, so it correctly measures the first segment as length $$$3$$$ but incorrectly measures the second segment as length $$$6$$$ even though it is actually $$$5$$$. You need to find the value of $$$x$$$. To do that, you can make queries of the following form: $$$\\texttt{?}~a~b$$$ — in response, we will measure the side lengths of an $$$a \\times b$$$ rectangle with our ruler and multiply the results, reporting the measured area of the rectangle back to you. For example, if $$$x=4$$$ and you query a $$$3 \\times 5$$$ rectangle, we will measure its side lengths as $$$3 \\times 6$$$ and report $$$18$$$ back to you. Find the value of $$$x$$$. You can ask at most $$$\\mathbf{10}$$$ queries.",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n\n18\n\n25\n\n\n9999",
+      "output": "? 3 5\n\n? 4 4\n\n! 4\n? 99 100\n\n! 100"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:55",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

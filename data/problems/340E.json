@@ -1,0 +1,35 @@
+{
+  "id": "340E",
+  "source": "problemset",
+  "contest_id": 340,
+  "problem_index": "E",
+  "name": "Iahub and Permutations",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 2869,
+  "problem_url": "https://codeforces.com/problemset/problem/340/E",
+  "editorial_url": "https://codeforces.com/blog/entry/8755",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Iahub is so happy about inventing bubble sort graphs that he's staying all day long at the office and writing permutations. Iahubina is angry that she is no more important for Iahub. When Iahub goes away, Iahubina comes to his office and sabotage his research work. The girl finds an important permutation for the research. The permutation contains n distinct integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ n ) . She replaces some of permutation elements with -1 value as a revenge. When Iahub finds out his important permutation is broken, he tries to recover it. The only thing he remembers about the permutation is it didn't have any fixed point. A fixed point for a permutation is an element a k which has value equal to k ( a k = k ) . Your job is to proof to Iahub that trying to recover it is not a good idea. Output the number of permutations which could be originally Iahub's important permutation, modulo 1000000007 ( 10 9 + 7 ).",
+  "input_specification": "The first line contains integer n ( 2 ≤ n ≤ 2000 ). On the second line, there are n integers, representing Iahub's important permutation after Iahubina replaces some values with -1. It's guaranteed that there are no fixed points in the given permutation. Also, the given sequence contains at least two numbers -1 and each positive number occurs in the sequence at most once. It's guaranteed that there is at least one suitable permutation.",
+  "output_specification": "Output a single integer, the number of ways Iahub could recover his permutation, modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "5\n-1 -1 4 3 -1",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

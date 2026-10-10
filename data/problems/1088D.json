@@ -1,0 +1,37 @@
+{
+  "id": "1088D",
+  "source": "problemset",
+  "contest_id": 1088,
+  "problem_index": "D",
+  "name": "Ehab and another another xor problem",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 3258,
+  "problem_url": "https://codeforces.com/problemset/problem/1088/D",
+  "editorial_url": "https://codeforces.com/blog/entry/63656",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem! Ehab plays a game with Laggy. Ehab has 2 hidden integers $$$(a,b)$$$. Laggy can ask a pair of integers $$$(c,d)$$$ and Ehab will reply with: 1 if $$$a \\oplus c \\gt b \\oplus d$$$. 0 if $$$a \\oplus c=b \\oplus d$$$. -1 if $$$a \\oplus c \\lt b \\oplus d$$$. Operation $$$a \\oplus b$$$ is the bitwise-xor operation of two numbers $$$a$$$ and $$$b$$$. Laggy should guess $$$(a,b)$$$ with at most 62 questions . You'll play this game. You're Laggy and the interactor is Ehab. It's guaranteed that $$$0 \\le a,b \\lt 2^{30}$$$.",
+  "input_specification": "See the interaction section.",
+  "output_specification": "To print the answer, print \"! a b\" (without quotes). Don't forget to flush the output after printing the answer .",
+  "sample_testcases": [
+    {
+      "input": "1\n-1\n0",
+      "output": "? 2 1\n? 1 2\n? 2 0\n! 3 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

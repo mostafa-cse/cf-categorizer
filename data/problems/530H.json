@@ -1,0 +1,39 @@
+{
+  "id": "530H",
+  "source": "problemset",
+  "contest_id": 530,
+  "problem_index": "H",
+  "name": "Points in triangle",
+  "rating": 2100,
+  "tags": [
+    "*special",
+    "geometry"
+  ],
+  "solved_count": 131,
+  "problem_url": "https://codeforces.com/problemset/problem/530/H",
+  "editorial_url": "https://codeforces.com/blog/entry/17177",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of points on a plane with positive integer coordinates. Find a triangle of minimum area with vertices in points (0, 0) , ( A , 0) and (0, B ) ( A and B are unknown positive integers) that contains all the given points inside it (points on the edges count towards being inside).",
+  "input_specification": "The first line of the input contains an integer N ( 1 ≤ N ≤ 100 ) — the number of points. The following N lines contain pairs of numbers X and Y ( 1 ≤ X , Y ≤ 100 ) - the coordinates of the points. All points are distinct.",
+  "output_specification": "Output one floating-point number — the minimal area of the triangle. The answer is considered to be correct if its absolute or relative error does not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 1\n1 3",
+      "output": "6.0"
+    },
+    {
+      "input": "2\n2 1\n1 2",
+      "output": "4.5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

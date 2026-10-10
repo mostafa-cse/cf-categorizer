@@ -1,0 +1,39 @@
+{
+  "id": "615B",
+  "source": "problemset",
+  "contest_id": 615,
+  "problem_index": "B",
+  "name": "Longtail Hedgehog",
+  "rating": 1600,
+  "tags": [
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 5903,
+  "problem_url": "https://codeforces.com/problemset/problem/615/B",
+  "editorial_url": "https://codeforces.com/blog/entry/22658",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This Christmas Santa gave Masha a magic picture and a pencil. The picture consists of n points connected by m segments (they might cross in any way, that doesn't matter). No two segments connect the same pair of points, and no segment connects the point to itself. Masha wants to color some segments in order paint a hedgehog. In Mashas mind every hedgehog consists of a tail and some spines. She wants to paint the tail that satisfies the following conditions: Only segments already presented on the picture can be painted; The tail should be continuous, i.e. consists of some sequence of points, such that every two neighbouring points are connected by a colored segment; The numbers of points from the beginning of the tail to the end should strictly increase. Masha defines the length of the tail as the number of points in it. Also, she wants to paint some spines. To do so, Masha will paint all the segments, such that one of their ends is the endpoint of the tail. Masha defines the beauty of a hedgehog as the length of the tail multiplied by the number of spines. Masha wants to color the most beautiful hedgehog. Help her calculate what result she may hope to get. Note that according to Masha's definition of a hedgehog, one segment may simultaneously serve as a spine and a part of the tail (she is a little girl after all). Take a look at the picture for further clarifications.",
+  "input_specification": "First line of the input contains two integers n and m ( 2 ≤ n ≤ 100 000 , 1 ≤ m ≤ 200 000 ) — the number of points and the number segments on the picture respectively. Then follow m lines, each containing two integers u i and v i ( 1 ≤ u i , v i ≤ n , u i ≠ v i ) — the numbers of points connected by corresponding segment. It's guaranteed that no two segments connect the same pair of points.",
+  "output_specification": "Print the maximum possible value of the hedgehog's beauty.",
+  "sample_testcases": [
+    {
+      "input": "8 6\n4 5\n3 5\n2 5\n1 2\n2 8\n6 7",
+      "output": "9"
+    },
+    {
+      "input": "4 6\n1 2\n1 3\n1 4\n2 3\n2 4\n3 4",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

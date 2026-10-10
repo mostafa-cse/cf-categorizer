@@ -1,0 +1,41 @@
+{
+  "id": "2104E",
+  "source": "problemset",
+  "contest_id": 2104,
+  "problem_index": "E",
+  "name": "Unpleasant Strings",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 8494,
+  "problem_url": "https://codeforces.com/problemset/problem/2104/E",
+  "editorial_url": "https://codeforces.com/blog/entry/142472",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's call a letter allowed if it is a lowercase letter and is one of the first $$$k$$$ letters of the Latin alphabet. You are given a string $$$s$$$ of length $$$n$$$, consisting only of allowed letters. Let's call a string $$$t$$$ pleasant if $$$t$$$ is a subsequence of $$$s$$$. You are given $$$q$$$ strings $$$t_1, t_2, \\dots, t_q$$$. All of them consist only of allowed letters. For each string $$$t_i$$$, calculate the minimum number of allowed letters you need to append to it on the right so that it stops being pleasant. A sequence $$$t$$$ is a subsequence of a sequence $$$s$$$ if $$$t$$$ can be obtained from $$$s$$$ by the deletion of several (possibly, zero or all) element from arbitrary positions.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^6$$$; $$$1 \\le k \\le 26$$$) — the length of the string $$$s$$$ and the number of allowed letters. The second line contains the string $$$s$$$, consisting of $$$n$$$ lowercase Latin letters. Each character of the string is one of the first $$$k$$$ letters of the Latin alphabet. The third line contains one integer $$$q$$$ ($$$1 \\le q \\le 2 \\cdot 10^5$$$) — the number of queries. The next $$$q$$$ lines contain queries: one query per line. The $$$i$$$-th line contains the string $$$t_i$$$, consisting only of allowed letters. Additional constraint on input: the total length of all $$$t_i$$$ does not exceed $$$10^6$$$.",
+  "output_specification": "For each query, output one integer — the minimum number of allowed letters that need to be appended to the string on the right so that it stops being pleasant.",
+  "sample_testcases": [
+    {
+      "input": "7 3\nabacaba\n3\ncc\nbcb\nb",
+      "output": "0\n1\n2"
+    },
+    {
+      "input": "5 1\naaaaa\n6\na\naa\naaa\naaaa\naaaaa\naaaaaa",
+      "output": "5\n4\n3\n2\n1\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:25",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

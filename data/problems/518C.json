@@ -1,0 +1,40 @@
+{
+  "id": "518C",
+  "source": "problemset",
+  "contest_id": 518,
+  "problem_index": "C",
+  "name": "Anya and Smartphone",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 6436,
+  "problem_url": "https://codeforces.com/problemset/problem/518/C",
+  "editorial_url": "https://codeforces.com/blog/entry/16598",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Anya has bought a new smartphone that uses Berdroid operating system. The smartphone menu has exactly n applications, each application has its own icon. The icons are located on different screens, one screen contains k icons. The icons from the first to the k -th one are located on the first screen, from the ( k + 1) -th to the 2 k -th ones are on the second screen and so on (the last screen may be partially empty). Initially the smartphone menu is showing the screen number 1 . To launch the application with the icon located on the screen t , Anya needs to make the following gestures: first she scrolls to the required screen number t , by making t - 1 gestures (if the icon is on the screen t ), and then make another gesture — press the icon of the required application exactly once to launch it. After the application is launched, the menu returns to the first screen. That is, to launch the next application you need to scroll through the menu again starting from the screen number 1 . All applications are numbered from 1 to n . We know a certain order in which the icons of the applications are located in the menu at the beginning, but it changes as long as you use the operating system. Berdroid is intelligent system, so it changes the order of the icons by moving the more frequently used icons to the beginning of the list. Formally, right after an application is launched, Berdroid swaps the application icon and the icon of a preceding application (that is, the icon of an application on the position that is smaller by one in the order of menu). The preceding icon may possibly be located on the adjacent screen. The only exception is when the icon of the launched application already occupies the first place, in this case the icon arrangement doesn't change. Anya has planned the order in which she will launch applications. How many gestures should Anya make to launch the applications in the planned order? Note that one application may be launched multiple times.",
+  "input_specification": "The first line of the input contains three numbers n , m , k ( 1 ≤ n , m , k ≤ 10 5 ) — the number of applications that Anya has on her smartphone, the number of applications that will be launched and the number of icons that are located on the same screen. The next line contains n integers, permutation a 1 , a 2 , ..., a n — the initial order of icons from left to right in the menu (from the first to the last one), a i —  is the id of the application, whose icon goes i -th in the menu. Each integer from 1 to n occurs exactly once among a i . The third line contains m integers b 1 , b 2 , ..., b m (1 ≤ b i ≤ n ) — the ids of the launched applications in the planned order. One application may be launched multiple times.",
+  "output_specification": "Print a single number — the number of gestures that Anya needs to make to launch all the applications in the desired order.",
+  "sample_testcases": [
+    {
+      "input": "8 3 3\n1 2 3 4 5 6 7 8\n7 8 1",
+      "output": "7"
+    },
+    {
+      "input": "5 4 2\n3 1 5 2 4\n4 4 4 4",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

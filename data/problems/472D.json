@@ -1,0 +1,53 @@
+{
+  "id": "472D",
+  "source": "problemset",
+  "contest_id": 472,
+  "problem_index": "D",
+  "name": "Design Tutorial: Inverse the Problem",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "shortest paths",
+    "trees"
+  ],
+  "solved_count": 6893,
+  "problem_url": "https://codeforces.com/problemset/problem/472/D",
+  "editorial_url": "https://codeforces.com/blog/entry/14028",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is an easy way to obtain a new task from an old one called \"Inverse the problem\": we give an output of the original task, and ask to generate an input, such that solution to the original problem will produce the output we provided. The hard task of Topcoder Open 2014 Round 2C, InverseRMQ, is a good example. Now let's create a task this way. We will use the task: you are given a tree, please calculate the distance between any pair of its nodes. Yes, it is very easy, but the inverse version is a bit harder: you are given an n × n distance matrix. Determine if it is the distance matrix of a weighted tree (all weights must be positive integers).",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 2000 ) — the number of nodes in that graph. Then next n lines each contains n integers d i , j ( 0 ≤ d i , j ≤ 10 9 ) — the distance between node i and node j .",
+  "output_specification": "If there exists such a tree, output \" YES \", otherwise output \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "3\n0 2 7\n2 0 9\n7 9 0",
+      "output": "YES"
+    },
+    {
+      "input": "3\n1 2 7\n2 0 9\n7 9 0",
+      "output": "NO"
+    },
+    {
+      "input": "3\n0 2 2\n7 0 9\n7 9 0",
+      "output": "NO"
+    },
+    {
+      "input": "3\n0 1 1\n1 0 1\n1 1 0",
+      "output": "NO"
+    },
+    {
+      "input": "2\n0 0\n0 0",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:21",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

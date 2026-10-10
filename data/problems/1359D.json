@@ -1,0 +1,45 @@
+{
+  "id": "1359D",
+  "source": "problemset",
+  "contest_id": 1359,
+  "problem_index": "D",
+  "name": "Yet Another Yet Another Task",
+  "rating": 2000,
+  "tags": [
+    "data structures",
+    "dp",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 11077,
+  "problem_url": "https://codeforces.com/problemset/problem/1359/D",
+  "editorial_url": "https://codeforces.com/blog/entry/78116",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Alice and Bob are playing yet another card game. This time the rules are the following. There are $$$n$$$ cards lying in a row in front of them. The $$$i$$$-th card has value $$$a_i$$$. First, Alice chooses a non-empty consecutive segment of cards $$$[l; r]$$$ ($$$l \\le r$$$). After that Bob removes a single card $$$j$$$ from that segment $$$(l \\le j \\le r)$$$. The score of the game is the total value of the remaining cards on the segment $$$(a_l + a_{l + 1} + \\dots + a_{j - 1} + a_{j + 1} + \\dots + a_{r - 1} + a_r)$$$. In particular, if Alice chooses a segment with just one element, then the score after Bob removes the only card is $$$0$$$. Alice wants to make the score as big as possible. Bob takes such a card that the score is as small as possible. What segment should Alice choose so that the score is maximum possible? Output the maximum score.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of cards. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$-30 \\le a_i \\le 30$$$) — the values on the cards.",
+  "output_specification": "Print a single integer — the final score of the game.",
+  "sample_testcases": [
+    {
+      "input": "5\n5 -2 10 -1 4",
+      "output": "6"
+    },
+    {
+      "input": "8\n5 2 5 3 -30 -30 6 9",
+      "output": "10"
+    },
+    {
+      "input": "3\n-10 6 -15",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

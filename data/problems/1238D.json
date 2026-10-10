@@ -1,0 +1,45 @@
+{
+  "id": "1238D",
+  "source": "problemset",
+  "contest_id": 1238,
+  "problem_index": "D",
+  "name": "AB-string",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "dp",
+    "strings"
+  ],
+  "solved_count": 6581,
+  "problem_url": "https://codeforces.com/problemset/problem/1238/D",
+  "editorial_url": "https://codeforces.com/blog/entry/70450",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The string $$$t_1t_2 \\dots t_k$$$ is good if each letter of this string belongs to at least one palindrome of length greater than 1 . A palindrome is a string that reads the same backward as forward. For example, the strings A , BAB , ABBA , BAABBBAAB are palindromes, but the strings AB , ABBBAA , BBBA are not. Here are some examples of good strings: $$$t$$$ = AABBB (letters $$$t_1$$$, $$$t_2$$$ belong to palindrome $$$t_1 \\dots t_2$$$ and letters $$$t_3$$$, $$$t_4$$$, $$$t_5$$$ belong to palindrome $$$t_3 \\dots t_5$$$); $$$t$$$ = ABAA (letters $$$t_1$$$, $$$t_2$$$, $$$t_3$$$ belong to palindrome $$$t_1 \\dots t_3$$$ and letter $$$t_4$$$ belongs to palindrome $$$t_3 \\dots t_4$$$); $$$t$$$ = AAAAA (all letters belong to palindrome $$$t_1 \\dots t_5$$$); You are given a string $$$s$$$ of length $$$n$$$, consisting of only letters A and B . You have to calculate the number of good substrings of string $$$s$$$.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the length of the string $$$s$$$. The second line contains the string $$$s$$$, consisting of letters A and B .",
+  "output_specification": "Print one integer — the number of good substrings of string $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\nAABBB",
+      "output": "6"
+    },
+    {
+      "input": "3\nAAA",
+      "output": "3"
+    },
+    {
+      "input": "7\nAAABABB",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

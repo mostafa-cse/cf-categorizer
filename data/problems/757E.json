@@ -1,0 +1,37 @@
+{
+  "id": "757E",
+  "source": "problemset",
+  "contest_id": 757,
+  "problem_index": "E",
+  "name": "Bash Plays with Functions",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "number theory"
+  ],
+  "solved_count": 1648,
+  "problem_url": "https://codeforces.com/problemset/problem/757/E",
+  "editorial_url": "https://codeforces.com/blog/entry/49743",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bash got tired on his journey to become the greatest Pokemon master. So he decides to take a break and play with functions. Bash defines a function f 0 ( n ) , which denotes the number of ways of factoring n into two factors p and q such that gcd ( p , q ) = 1 . In other words, f 0 ( n ) is the number of ordered pairs of positive integers ( p , q ) such that p · q = n and gcd ( p , q ) = 1 . But Bash felt that it was too easy to calculate this function. So he defined a series of functions, where f r + 1 is defined as: Where ( u , v ) is any ordered pair of positive integers, they need not to be co-prime. Now Bash wants to know the value of f r ( n ) for different r and n . Since the value could be huge, he would like to know the value modulo 10 9 + 7 . Help him!",
+  "input_specification": "The first line contains an integer q ( 1 ≤ q ≤ 10 6 ) — the number of values Bash wants to know. Each of the next q lines contain two integers r and n ( 0 ≤ r ≤ 10 6 , 1 ≤ n ≤ 10 6 ), which denote Bash wants to know the value f r ( n ) .",
+  "output_specification": "Print q integers. For each pair of r and n given, print f r ( n ) modulo 10 9 + 7 on a separate line.",
+  "sample_testcases": [
+    {
+      "input": "5\n0 30\n1 25\n3 65\n2 5\n4 48",
+      "output": "8\n5\n25\n4\n630"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

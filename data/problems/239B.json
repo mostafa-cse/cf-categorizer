@@ -1,0 +1,35 @@
+{
+  "id": "239B",
+  "source": "problemset",
+  "contest_id": 239,
+  "problem_index": "B",
+  "name": "Easy Tape Programming",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 1500,
+  "problem_url": "https://codeforces.com/problemset/problem/239/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5765",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a programming language in which every program is a non-empty sequence of \" < \" and \" > \" signs and digits. Let's explain how the interpreter of this programming language works. A program is interpreted using movement of instruction pointer (IP) which consists of two parts. Current character pointer (CP); Direction pointer (DP) which can point left or right; Initially CP points to the leftmost character of the sequence and DP points to the right. We repeat the following steps until the first moment that CP points to somewhere outside the sequence. If CP is pointing to a digit the interpreter prints that digit then CP moves one step according to the direction of DP. After that the value of the printed digit in the sequence decreases by one. If the printed digit was 0 then it cannot be decreased therefore it's erased from the sequence and the length of the sequence decreases by one. If CP is pointing to \" < \" or \" > \" then the direction of DP changes to \"left\" or \"right\" correspondingly. Then CP moves one step according to DP. If the new character that CP is pointing to is \" < \" or \" > \" then the previous character will be erased from the sequence. If at any moment the CP goes outside of the sequence the execution is terminated. It's obvious the every program in this language terminates after some steps. We have a sequence s 1 , s 2 , ..., s n of \" < \", \" > \" and digits. You should answer q queries. Each query gives you l and r and asks how many of each digit will be printed if we run the sequence s l , s l + 1 , ..., s r as an independent program in this language.",
+  "input_specification": "The first line of input contains two integers n and q (1 ≤ n , q ≤ 100) — represents the length of the sequence s and the number of queries. The second line contains s , a sequence of \" < \", \" > \" and digits ( 0..9 ) written from left to right. Note, that the characters of s are not separated with spaces. The next q lines each contains two integers l i and r i (1 ≤ l i ≤ r i ≤ n ) — the i -th query.",
+  "output_specification": "For each query print 10 space separated integers: x 0 , x 1 , ..., x 9 where x i equals the number of times the interpreter prints i while running the corresponding program. Print answers to the queries in the order they are given in input.",
+  "sample_testcases": [
+    {
+      "input": "7 4\n1>3>22<\n1 3\n4 7\n7 7\n1 7",
+      "output": "0 1 0 1 0 0 0 0 0 0\n2 2 2 0 0 0 0 0 0 0\n0 0 0 0 0 0 0 0 0 0\n2 3 2 1 0 0 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1801C",
+  "source": "problemset",
+  "contest_id": 1801,
+  "problem_index": "C",
+  "name": "Music Festival",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 4233,
+  "problem_url": "https://codeforces.com/problemset/problem/1801/C",
+  "editorial_url": "https://codeforces.com/blog/entry/113857",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "The boy Vitya loves to listen to music very much. He knows that $$$n$$$ albums are due to be released this Friday, $$$i$$$-th of which contains $$$k_i$$$ tracks. Of course, Vitya has already listened to all the tracks, and knows that in the $$$i$$$-th album, the coolness of the $$$j$$$-th track is equal to $$$a_{i,j}$$$. Vitya has a friend Masha, whom he really wants to invite to the festival, where his favorite bands perform. However, in order for a friend to agree, she must first evaluate the released novelties. Vitya knows that if Masha listens to a track that was cooler than all the previous ones, she will get 1 unit of impression. Unfortunately, albums can only be listened to in their entirety, without changing the songs in them in places. Help Vitya find such an order of albums so that Masha's impression turns out to be as much as possible, and she definitely went to the festival with him.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer t ($$$1 \\le t \\le 200\\,000$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 200\\,000$$$) — number of albums. The album descriptions follow. Each album description consists of two lines: The first line contains a single integer $$$k_i$$$ ($$$1 \\le k_i \\le 200\\,000$$$) — the number of tracks in the $$$i$$$th album. The following line contains $$$k_i$$$ integers $$$a_{i, 1},\\ a_{i, 2},\\ a_{i, 3},\\ \\ldots,\\ a_{i, k_i}$$$ ($$$1 \\le a_{i,j} \\le 200\\,000$$$) — the coolness of the tracks in the $$$i$$$ album. Denote for $$$\\sum k_i$$$ the sum of all $$$k_i$$$. It is guaranteed that $$$\\sum k_i \\le 200\\,000$$$.",
+  "output_specification": "For each test case print the singular number  — the maximum impression that Masha can get.",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n5\n4 9 4 6 8\n1\n7\n2\n8 6\n1\n1\n4\n2\n3 4\n2\n1 8\n2\n2 8\n2\n7 9",
+      "output": "4\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

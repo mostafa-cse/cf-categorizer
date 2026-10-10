@@ -1,0 +1,35 @@
+{
+  "id": "1873G",
+  "source": "problemset",
+  "contest_id": 1873,
+  "problem_index": "G",
+  "name": "ABBC or BACB",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 17537,
+  "problem_url": "https://codeforces.com/problemset/problem/1873/G",
+  "editorial_url": "https://codeforces.com/blog/entry/120634",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ made up of characters $$$\\texttt{A}$$$ and $$$\\texttt{B}$$$. Initially you have no coins. You can perform two types of operations: Pick a substring$$$^\\dagger$$$ $$$\\texttt{AB}$$$, change it to $$$\\texttt{BC}$$$, and get a coin. Pick a substring$$$^\\dagger$$$ $$$\\texttt{BA}$$$, change it to $$$\\texttt{CB}$$$, and get a coin. What is the most number of coins you can obtain? $$$^\\dagger$$$ A substring of length $$$2$$$ is a sequence of two adjacent characters of a string.",
+  "input_specification": "The input consists of multiple test cases. The first line of the input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$) — the number of test cases. The only line of each test case contains the string $$$s$$$ ($$$1 \\leq |s| \\leq 2 \\cdot 10^5$$$). All characters of $$$s$$$ are either $$$\\texttt{A}$$$ or $$$\\texttt{B}$$$. The sum of the lengths of $$$s$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum number of coins you can obtain.",
+  "sample_testcases": [
+    {
+      "input": "8\nABBA\nABA\nBAABA\nABB\nAAAAAAB\nBABA\nB\nAAA",
+      "output": "2\n1\n3\n1\n6\n2\n0\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:46",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

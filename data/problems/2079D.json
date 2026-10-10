@@ -1,0 +1,30 @@
+{
+  "id": "2079D",
+  "source": "problemset",
+  "contest_id": 2079,
+  "problem_index": "D",
+  "name": "Cute Subsequences",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "sortings"
+  ],
+  "solved_count": 724,
+  "problem_url": "https://codeforces.com/problemset/problem/2079/D",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": "[Problem statement is a PDF document available at: https://codeforces.com/problemset/problem/2079/D]",
+  "input_specification": "Refer to PDF problem statement",
+  "output_specification": "Refer to PDF problem statement",
+  "sample_testcases": [],
+  "statement_status": "pdf_attachment",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

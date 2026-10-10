@@ -1,0 +1,41 @@
+{
+  "id": "303C",
+  "source": "problemset",
+  "contest_id": 303,
+  "problem_index": "C",
+  "name": "Minimum Modular",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "graphs",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 990,
+  "problem_url": "https://codeforces.com/problemset/problem/303/C",
+  "editorial_url": "https://codeforces.com/blog/entry/7641",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have been given n distinct integers a 1 , a 2 , ..., a n . You can remove at most k of them. Find the minimum modular m ( m > 0) , so that for every pair of the remaining integers ( a i , a j ) , the following unequality holds: .",
+  "input_specification": "The first line contains two integers n and k ( 1  ≤ n ≤ 5000, 0 ≤ k ≤ 4 ), which we have mentioned above. The second line contains n distinct integers a 1 , a 2 , ..., a n (0 ≤ a i ≤ 10 6 ) .",
+  "output_specification": "Print a single positive integer — the minimum m .",
+  "sample_testcases": [
+    {
+      "input": "7 0\n0 2 3 6 7 12 18",
+      "output": "13"
+    },
+    {
+      "input": "7 1\n0 2 3 6 7 12 18",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:34",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

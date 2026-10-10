@@ -1,0 +1,38 @@
+{
+  "id": "11C",
+  "source": "problemset",
+  "contest_id": 11,
+  "problem_index": "C",
+  "name": "How Many Squares?",
+  "rating": 2200,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 755,
+  "problem_url": "https://codeforces.com/problemset/problem/11/C",
+  "editorial_url": "https://codeforces.com/blog/entry/331",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given a 0-1 rectangular matrix. What is the number of squares in it? A square is a solid square frame (border) with linewidth equal to 1. A square should be at least 2 × 2 . We are only interested in two types of squares: squares with each side parallel to a side of the matrix; squares with each side parallel to a diagonal of the matrix. For example the following matrix contains only one square of the first type: 0000000 0111100 0100100 0100100 0111100 The following matrix contains only one square of the second type: 0000000 0010000 0101000 0010000 0000000 Regardless of type, a square must contain at least one 1 and can't touch (by side or corner) any foreign 1 . Of course, the lengths of the sides of each square should be equal. How many squares are in the given matrix?",
+  "input_specification": "The first line contains integer t ( 1 ≤ t ≤ 10000 ), where t is the number of test cases in the input. Then test cases follow. Each case starts with a line containing integers n and m ( 2 ≤ n , m ≤ 250 ), where n is the number of rows and m is the number of columns. The following n lines contain m characters each ( 0 or 1 ). The total number of characters in all test cases doesn't exceed 10 6 for any input file.",
+  "output_specification": "You should output exactly t lines, with the answer to the i -th test case on the i -th line.",
+  "sample_testcases": [
+    {
+      "input": "2\n8 8\n00010001\n00101000\n01000100\n10000010\n01000100\n00101000\n11010011\n11000011\n10 10\n1111111000\n1000001000\n1011001000\n1011001010\n1000001101\n1001001010\n1010101000\n1001001000\n1000001000\n1111111000",
+      "output": "1\n2"
+    },
+    {
+      "input": "1\n12 11\n11111111111\n10000000001\n10111111101\n10100000101\n10101100101\n10101100101\n10100000101\n10100000101\n10111111101\n10000000001\n11111111111\n00000000000",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

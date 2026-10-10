@@ -1,0 +1,36 @@
+{
+  "id": "1699D",
+  "source": "problemset",
+  "contest_id": 1699,
+  "problem_index": "D",
+  "name": "Almost Triple Deletions",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3662,
+  "problem_url": "https://codeforces.com/problemset/problem/1699/D",
+  "editorial_url": "https://codeforces.com/blog/entry/108560",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$ and an array $$$a_1,a_2,\\ldots,a_n$$$. In one operation, you can choose an index $$$i$$$ ($$$1 \\le i \\lt n$$$) for which $$$a_i \\neq a_{i+1}$$$ and delete both $$$a_i$$$ and $$$a_{i+1}$$$ from the array. After deleting $$$a_i$$$ and $$$a_{i+1}$$$, the remaining parts of the array are concatenated. For example, if $$$a=[1,4,3,3,6,2]$$$, then after performing an operation with $$$i=2$$$, the resulting array will be $$$[1,3,6,2]$$$. What is the maximum possible length of an array of equal elements obtainable from $$$a$$$ by performing several (perhaps none) of the aforementioned operations?",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The following lines contain the descriptions of the test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 5000$$$) — the length of array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$1 \\le a_i \\le n$$$) — the elements of array $$$a$$$. It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$10\\,000$$$.",
+  "output_specification": "For each testcase, print a single integer, the maximum possible length of an array of equal elements obtainable from $$$a$$$ by performing a sequence of operations.",
+  "sample_testcases": [
+    {
+      "input": "5\n7\n1 2 3 2 1 3 3\n1\n1\n6\n1 1 1 2 2 2\n8\n1 1 2 2 3 3 1 1\n12\n1 5 2 3 3 3 4 4 4 4 3 3",
+      "output": "3\n1\n0\n4\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "1419E",
+  "source": "problemset",
+  "contest_id": 1419,
+  "problem_index": "E",
+  "name": "Decryption",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3565,
+  "problem_url": "https://codeforces.com/problemset/problem/1419/E",
+  "editorial_url": "https://codeforces.com/blog/entry/82817",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "An agent called Cypher is decrypting a message, that contains a composite number $$$n$$$. All divisors of $$$n$$$, which are greater than $$$1$$$, are placed in a circle. Cypher can choose the initial order of numbers in the circle. In one move Cypher can choose two adjacent numbers in a circle and insert their least common multiple between them. He can do that move as many times as needed. A message is decrypted, if every two adjacent numbers are not coprime. Note that for such constraints it's always possible to decrypt the message. Find the minimal number of moves that Cypher should do to decrypt the message, and show the initial order of numbers in the circle for that.",
+  "input_specification": "The first line contains an integer $$$t$$$ $$$(1 \\le t \\le 100)$$$ — the number of test cases. Next $$$t$$$ lines describe each test case. In a single line of each test case description, there is a single composite number $$$n$$$ $$$(4 \\le n \\le 10^9)$$$ — the number from the message. It's guaranteed that the total number of divisors of $$$n$$$ for all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case in the first line output the initial order of divisors, which are greater than $$$1$$$, in the circle. In the second line output, the minimal number of moves needed to decrypt the message. If there are different possible orders with a correct answer, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n6\n4\n30",
+      "output": "2 3 6 \n1\n2 4 \n0\n2 30 6 3 15 5 10 \n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:35",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

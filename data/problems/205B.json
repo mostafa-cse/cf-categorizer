@@ -1,0 +1,43 @@
+{
+  "id": "205B",
+  "source": "problemset",
+  "contest_id": 205,
+  "problem_index": "B",
+  "name": "Little Elephant and Sorting",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "greedy"
+  ],
+  "solved_count": 6548,
+  "problem_url": "https://codeforces.com/problemset/problem/205/B",
+  "editorial_url": "https://codeforces.com/blog/entry/4849",
+  "time_limit": "0.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Little Elephant loves sortings. He has an array a consisting of n integers. Let's number the array elements from 1 to n , then the i -th element will be denoted as a i . The Little Elephant can make one move to choose an arbitrary pair of integers l and r (1 ≤ l ≤ r ≤ n ) and increase a i by 1 for all i such that l ≤ i ≤ r . Help the Little Elephant find the minimum number of moves he needs to convert array a to an arbitrary array sorted in the non-decreasing order. Array a , consisting of n elements, is sorted in the non-decreasing order if for any i (1 ≤ i < n ) a i ≤ a i + 1 holds.",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 10 5 ) — the size of array a . The next line contains n integers, separated by single spaces — array a (1 ≤ a i ≤ 10 9 ) . The array elements are listed in the line in the order of their index's increasing.",
+  "output_specification": "In a single line print a single integer — the answer to the problem. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "0"
+    },
+    {
+      "input": "3\n3 2 1",
+      "output": "2"
+    },
+    {
+      "input": "4\n7 4 1 47",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:21",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

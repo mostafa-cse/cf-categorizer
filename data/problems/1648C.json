@@ -1,0 +1,44 @@
+{
+  "id": "1648C",
+  "source": "problemset",
+  "contest_id": 1648,
+  "problem_index": "C",
+  "name": "Tyler and Strings",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 3398,
+  "problem_url": "https://codeforces.com/problemset/problem/1648/C",
+  "editorial_url": "https://codeforces.com/blog/entry/100592",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "While looking at the kitchen fridge, the little boy Tyler noticed magnets with symbols, that can be aligned into a string $$$s$$$. Tyler likes strings, and especially those that are lexicographically smaller than another string, $$$t$$$. After playing with magnets on the fridge, he is wondering, how many distinct strings can be composed out of letters of string $$$s$$$ by rearranging them, so that the resulting string is lexicographically smaller than the string $$$t$$$? Tyler is too young, so he can't answer this question. The alphabet Tyler uses is very large, so for your convenience he has already replaced the same letters in $$$s$$$ and $$$t$$$ to the same integers, keeping that different letters have been replaced to different integers. We call a string $$$x$$$ lexicographically smaller than a string $$$y$$$ if one of the followings conditions is fulfilled: There exists such position of symbol $$$m$$$ that is presented in both strings, so that before $$$m$$$-th symbol the strings are equal, and the $$$m$$$-th symbol of string $$$x$$$ is smaller than $$$m$$$-th symbol of string $$$y$$$. String $$$x$$$ is the prefix of string $$$y$$$ and $$$x \\neq y$$$. Because the answer can be too large, print it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 200\\,000$$$) — the lengths of strings $$$s$$$ and $$$t$$$ respectively. The second line contains $$$n$$$ integers $$$s_1, s_2, s_3, \\ldots, s_n$$$ ($$$1 \\le s_i \\le 200\\,000$$$) — letters of the string $$$s$$$. The third line contains $$$m$$$ integers $$$t_1, t_2, t_3, \\ldots, t_m$$$ ($$$1 \\le t_i \\le 200\\,000$$$) — letters of the string $$$t$$$.",
+  "output_specification": "Print a single number — the number of strings lexicographically smaller than $$$t$$$ that can be obtained by rearranging the letters in $$$s$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 4\n1 2 2\n2 1 2 1",
+      "output": "2"
+    },
+    {
+      "input": "4 4\n1 2 3 4\n4 3 2 1",
+      "output": "23"
+    },
+    {
+      "input": "4 3\n1 1 1 2\n1 1 2",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:40",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

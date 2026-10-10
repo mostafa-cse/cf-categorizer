@@ -1,0 +1,39 @@
+{
+  "id": "333C",
+  "source": "problemset",
+  "contest_id": 333,
+  "problem_index": "C",
+  "name": "Lucky Tickets",
+  "rating": 2700,
+  "tags": [
+    "brute force",
+    "constructive algorithms"
+  ],
+  "solved_count": 443,
+  "problem_url": "https://codeforces.com/problemset/problem/333/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8418",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerald has a friend, Pollard. Pollard is interested in lucky tickets (ticket is a sequence of digits). At first he thought that a ticket is lucky if between some its digits we can add arithmetic signs and brackets so that the result obtained by the arithmetic expression was number 100. But he quickly analyzed all such tickets and moved on to a more general question. Now he explores k -lucky tickets. Pollard sais that a ticket is k -lucky if we can add arithmetic operation signs between its digits to the left or right of them (i.e., \"+\", \"-\", \" × \") and brackets so as to obtain the correct arithmetic expression whose value would equal k . For example, ticket \"224201016\" is 1000-lucky as ( - 2 - (2 + 4)) × (2 + 0) + 1016 = 1000 . Pollard was so carried away by the lucky tickets that he signed up for a seminar on lucky tickets and, as far as Gerald knows, Pollard will attend it daily at 7 pm in some famous institute and will commute to it in the same tram for m days. In this tram tickets have eight digits. And Gerald wants to make a surprise for Pollard: each day Pollard will receive a tram k -lucky ticket. The conductor has already agreed to give Pollard certain tickets during all these m days and he only wants Gerald to tell him what kind of tickets to give out. In this regard, help Gerald pick exactly m distinct k -lucky tickets.",
+  "input_specification": "The single line contains two integers k and m ( 0 ≤ k ≤ 10 4 , 1 ≤ m ≤ 3·10 5 ).",
+  "output_specification": "Print m lines. Each line must contain exactly 8 digits — the k -winning ticket. The tickets may begin with 0, all tickets must be distinct. If there are more than m distinct k -lucky tickets, print any m of them. It is guaranteed that at least m distinct k -lucky tickets exist. The tickets can be printed in any order.",
+  "sample_testcases": [
+    {
+      "input": "0 3",
+      "output": "00000000\n00000001\n00000002"
+    },
+    {
+      "input": "7 4",
+      "output": "00000007\n00000016\n00000017\n00000018"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:21",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

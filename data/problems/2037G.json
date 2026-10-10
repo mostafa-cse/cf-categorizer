@@ -1,0 +1,51 @@
+{
+  "id": "2037G",
+  "source": "problemset",
+  "contest_id": 2037,
+  "problem_index": "G",
+  "name": "Natlan Exploring",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "data structures",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3981,
+  "problem_url": "https://codeforces.com/problemset/problem/2037/G",
+  "editorial_url": "https://codeforces.com/blog/entry/136334",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are exploring the stunning region of Natlan! This region consists of $$$n$$$ cities, and each city is rated with an attractiveness $$$a_i$$$. A directed edge exists from City $$$i$$$ to City $$$j$$$ if and only if $$$i \\lt j$$$ and $$$\\gcd(a_i,a_j)\\neq 1$$$, where $$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$. Starting from City $$$1$$$, your task is to determine the total number of distinct paths you can take to reach City $$$n$$$, modulo $$$998\\,244\\,353$$$. Two paths are different if and only if the set of cities visited is different.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of cities. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$2 \\leq a_i \\leq 10^6$$$) — the attractiveness of each city.",
+  "output_specification": "Output the total number of distinct paths you can take to reach City $$$n$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2 6 3 4 6",
+      "output": "5"
+    },
+    {
+      "input": "5\n4 196 2662 2197 121",
+      "output": "2"
+    },
+    {
+      "input": "7\n3 6 8 9 11 12 20",
+      "output": "7"
+    },
+    {
+      "input": "2\n2 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

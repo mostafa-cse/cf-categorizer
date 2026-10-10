@@ -1,0 +1,49 @@
+{
+  "id": "1622F",
+  "source": "problemset",
+  "contest_id": 1622,
+  "problem_index": "F",
+  "name": "Quadratic Set",
+  "rating": 2900,
+  "tags": [
+    "constructive algorithms",
+    "hashing",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1002,
+  "problem_url": "https://codeforces.com/problemset/problem/1622/F",
+  "editorial_url": "https://codeforces.com/blog/entry/98453",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call a set of positive integers $$$a_1, a_2, \\dots, a_k$$$ quadratic if the product of the factorials of its elements is a square of an integer, i. e. $$$\\prod\\limits_{i=1}^{k} a_i! = m^2$$$, for some integer $$$m$$$. You are given a positive integer $$$n$$$. Your task is to find a quadratic subset of a set $$$1, 2, \\dots, n$$$ of maximum size. If there are multiple answers, print any of them.",
+  "input_specification": "A single line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$).",
+  "output_specification": "In the first line, print a single integer — the size of the maximum subset. In the second line, print the subset itself in an arbitrary order.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "1\n1"
+    },
+    {
+      "input": "4",
+      "output": "3\n1 3 4"
+    },
+    {
+      "input": "7",
+      "output": "4\n1 4 5 6"
+    },
+    {
+      "input": "9",
+      "output": "7\n1 2 4 5 6 7 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:46",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

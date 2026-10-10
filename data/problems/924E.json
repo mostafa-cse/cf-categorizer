@@ -1,0 +1,39 @@
+{
+  "id": "924E",
+  "source": "problemset",
+  "contest_id": 924,
+  "problem_index": "E",
+  "name": "Wardrobe",
+  "rating": 2700,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 599,
+  "problem_url": "https://codeforces.com/problemset/problem/924/E",
+  "editorial_url": "https://codeforces.com/blog/entry/58544",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Olya wants to buy a custom wardrobe. It should have n boxes with heights a 1 , a 2 , ..., a n , stacked one on another in some order. In other words, we can represent each box as a vertical segment of length a i , and all these segments should form a single segment from 0 to without any overlaps. Some of the boxes are important (in this case b i = 1 ), others are not (then b i = 0 ). Olya defines the convenience of the wardrobe as the number of important boxes such that their bottom edge is located between the heights l and r , inclusive. You are given information about heights of the boxes and their importance. Compute the maximum possible convenience of the wardrobe if you can reorder the boxes arbitrarily.",
+  "input_specification": "The first line contains three integers n , l and r ( 1 ≤ n ≤ 10 000 , 0 ≤ l ≤ r ≤ 10 000 ) — the number of boxes, the lowest and the highest heights for a bottom edge of an important box to be counted in convenience. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 000 ) — the heights of the boxes. It is guaranteed that the sum of height of all boxes (i. e. the height of the wardrobe) does not exceed 10 000 : Olya is not very tall and will not be able to reach any higher. The second line contains n integers b 1 , b 2 , ..., b n ( 0 ≤ b i ≤ 1 ), where b i equals 1 if the i -th box is important, and 0 otherwise.",
+  "output_specification": "Print a single integer — the maximum possible convenience of the wardrobe.",
+  "sample_testcases": [
+    {
+      "input": "5 3 6\n3 2 5 1 2\n1 1 0 1 0",
+      "output": "2"
+    },
+    {
+      "input": "2 2 5\n3 6\n1 1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

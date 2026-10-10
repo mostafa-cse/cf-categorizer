@@ -1,0 +1,47 @@
+{
+  "id": "898E",
+  "source": "problemset",
+  "contest_id": 898,
+  "problem_index": "E",
+  "name": "Squares and not squares",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 4916,
+  "problem_url": "https://codeforces.com/problemset/problem/898/E",
+  "editorial_url": "https://codeforces.com/blog/entry/56381",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Ann and Borya have n piles with candies and n is even number. There are a i candies in pile with number i . Ann likes numbers which are square of some integer and Borya doesn't like numbers which are square of any integer. During one move guys can select some pile with candies and add one candy to it (this candy is new and doesn't belong to any other pile) or remove one candy (if there is at least one candy in this pile). Find out minimal number of moves that is required to make exactly n / 2 piles contain number of candies that is a square of some integer and exactly n / 2 piles contain number of candies that is not a square of any integer.",
+  "input_specification": "First line contains one even integer n ( 2 ≤ n ≤ 200 000 ) — number of piles with candies. Second line contains sequence of integers a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 10 9 ) — amounts of candies in each pile.",
+  "output_specification": "Output minimal number of steps required to make exactly n / 2 piles contain number of candies that is a square of some integer and exactly n / 2 piles contain number of candies that is not a square of any integer. If condition is already satisfied output 0 .",
+  "sample_testcases": [
+    {
+      "input": "4\n12 14 30 4",
+      "output": "2"
+    },
+    {
+      "input": "6\n0 0 0 0 0 0",
+      "output": "6"
+    },
+    {
+      "input": "6\n120 110 23 34 25 45",
+      "output": "3"
+    },
+    {
+      "input": "10\n121 56 78 81 45 100 1 0 54 78",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:42",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

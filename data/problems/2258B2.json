@@ -1,0 +1,37 @@
+{
+  "id": "2258B2",
+  "source": "problemset",
+  "contest_id": 2258,
+  "problem_index": "B2",
+  "name": "Carrot Chopdown (Hard Version)",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 5162,
+  "problem_url": "https://codeforces.com/problemset/problem/2258/B2",
+  "editorial_url": "https://codeforces.com/blog/entry/156316",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The difference between the versions is that in this version, you need to solve the problem for different values of $$$k$$$. You can hack only if you solved all versions of this problem. Alp loves carrots. Since he hasn't eaten lunch yet, he wants to buy a carrot salad to eat outside. However, he has a weird obsession: all the carrots must be the exact same length; otherwise, the salad doesn't look aesthetically pleasing to him. Since he is in the middle of the street and doesn't have a knife, he can't cut the carrots himself. You need to divide all the carrots using your machine and sell them to Alp. You are given $$$n$$$ delicious carrots with sizes $$$a_1, a_2, \\ldots, a_n$$$. You are also given a cutting machine, which works as follows. For each operation, you choose a set of carrots (you can choose chopped carrots again) and a positive integer $$$x$$$ (not necessarily the same for each operation) . After that, consider every chosen carrot, let its length be $$$l$$$. If $$$l \\le x$$$, this carrot is unaffected; otherwise, it is divided into two carrots of sizes $$$x$$$ and $$$l-x$$$. We'll sell some of the final carrots to an interesting guy who wants them all to be the same length. We are asking you to determine the maximum number of carrots we can sell after using this machine exactly $$$k$$$ times. Solve the problem for each $$$k = 1, 2, \\ldots, m$$$ independently .",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains $$$n$$$ and $$$m$$$ ($$$1 \\le n,m \\le 2 \\cdot 10^5$$$), denoting the number of carrots and the maximum possible length of a carrot. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le m$$$), denoting the initial carrot sizes. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$ and the sum of $$$m$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$m$$$ integers — the answer for each $$$k=1, 2, \\ldots, m$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 4\n1 2 3 4 4\n5 8\n1 1 8 8 8\n1 8\n6\n7 9\n1 7 5 1 7 5 3\n4 1\n1 1 1 1\n3 5\n3 1 5",
+      "output": "6 14 14 14\n6 12 26 26 26 26 26 26\n2 3 6 6 6 6 6 6\n7 17 29 29 29 29 29 29 29\n4\n3 7 9 9 9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

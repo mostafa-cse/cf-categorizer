@@ -1,0 +1,39 @@
+{
+  "id": "1696E",
+  "source": "problemset",
+  "contest_id": 1696,
+  "problem_index": "E",
+  "name": "Placing Jinas",
+  "rating": 2000,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 5073,
+  "problem_url": "https://codeforces.com/problemset/problem/1696/E",
+  "editorial_url": "https://codeforces.com/blog/entry/103479",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "We say an infinite sequence $$$a_{0}, a_{1}, a_2, \\ldots$$$ is non-increasing if and only if for all $$$i\\ge 0$$$, $$$a_i \\ge a_{i+1}$$$. There is an infinite right and down grid. The upper-left cell has coordinates $$$(0,0)$$$. Rows are numbered $$$0$$$ to infinity from top to bottom, columns are numbered from $$$0$$$ to infinity from left to right. There is also a non-increasing infinite sequence $$$a_{0}, a_{1}, a_2, \\ldots$$$. You are given $$$a_0$$$, $$$a_1$$$, $$$\\ldots$$$, $$$a_n$$$; for all $$$i \\gt n$$$, $$$a_i=0$$$. For every pair of $$$x$$$, $$$y$$$, the cell with coordinates $$$(x,y)$$$ (which is located at the intersection of $$$x$$$-th row and $$$y$$$-th column) is white if $$$y \\lt a_x$$$ and black otherwise. Initially there is one doll named Jina on $$$(0,0)$$$. You can do the following operation. Select one doll on $$$(x,y)$$$. Remove it and place a doll on $$$(x,y+1)$$$ and place a doll on $$$(x+1,y)$$$. Note that multiple dolls can be present at a cell at the same time; in one operation, you remove only one. Your goal is to make all white cells contain $$$0$$$ dolls. What's the minimum number of operations needed to achieve the goal? Print the answer modulo $$$10^9+7$$$.",
+  "input_specification": "The first line of input contains one integer $$$n$$$ ($$$1\\le n\\le 2\\cdot 10^5$$$). The second line of input contains $$$n+1$$$ integers $$$a_0,a_1,\\ldots,a_n$$$ ($$$0\\le a_i\\le 2\\cdot 10^5$$$). It is guaranteed that the sequence $$$a$$$ is non-increasing .",
+  "output_specification": "Print one integer — the answer to the problem, modulo $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 2 0",
+      "output": "5"
+    },
+    {
+      "input": "10\n12 11 8 8 6 6 6 5 3 2 1",
+      "output": "2596"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:28",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

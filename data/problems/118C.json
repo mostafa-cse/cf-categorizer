@@ -1,0 +1,45 @@
+{
+  "id": "118C",
+  "source": "problemset",
+  "contest_id": 118,
+  "problem_index": "C",
+  "name": "Fancy Number",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "greedy",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 3053,
+  "problem_url": "https://codeforces.com/problemset/problem/118/C",
+  "editorial_url": "https://codeforces.com/blog/entry/2826",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A car number in Berland consists of exactly n digits. A number is called beautiful if it has at least k equal digits. Vasya wants to change the digits in his car's number so that the number became beautiful. To replace one of n digits Vasya has to pay the sum of money, equal to the absolute difference between the old digit and the new one. Help Vasya: find the minimum sum of money he should pay to make the number of his car beautiful. You should also find the resulting beautiful number. If there are several such numbers, then print the lexicographically minimum one.",
+  "input_specification": "The first line contains two space-separated integers n and k ( 2 ≤ n ≤ 10 4 , 2 ≤ k ≤ n ) which represent how many digits the number has and how many equal digits a beautiful number should have. The second line consists of n digits. It describes the old number of Vasya's car. It is guaranteed that the number contains no spaces and only contains digits.",
+  "output_specification": "On the first line print the minimum sum of money Vasya needs to change the number. On the second line print the car's new number. If there are several solutions, print the lexicographically minimum one.",
+  "sample_testcases": [
+    {
+      "input": "6 5\n898196",
+      "output": "4\n888188"
+    },
+    {
+      "input": "3 2\n533",
+      "output": "0\n533"
+    },
+    {
+      "input": "10 6\n0001112223",
+      "output": "3\n0000002223"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

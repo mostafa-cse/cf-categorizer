@@ -1,0 +1,38 @@
+{
+  "id": "2215B",
+  "source": "problemset",
+  "contest_id": 2215,
+  "problem_index": "B",
+  "name": "RReeppeettiittiioonn",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1384,
+  "problem_url": "https://codeforces.com/problemset/problem/2215/B",
+  "editorial_url": "https://codeforces.com/blog/entry/152930",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "As a girl born on November 11th (or 11/11), SS loves repetition. For example, her favorite English word is b ookkee per, her favorite letter is W (double-u, double vé, or whatever you call it), her favorite animals are the cat (ki tt en!) and the ra bb it (bu nn y!), her favorite programming language is C ++ , her favorite parser is LL (1), her favorite optimization algorithm is branch and bound ( BB ), her favorite unit is millimeter ( mm ), her favorite game is LLLL , and her favorite winning hand in Mahjong is Seven Pairs. She plans to release her new songs \"Silent-night Satellite\" and \"Siesta Stella\" soon, so she wants to select a \"pre tt y\" number to decorate the cover of her new songs. SS observes this world from a higher perspective, which means she considers an integer concurrently in all standard positional numeral systems, starting from the binary numeral system. SS then calls a positive integer $$$n$$$ $$$(b, p)$$$ -tidy (with $$$b,p\\ge 2$$$) if and only if: In base-$$$b$$$ representation, $$$n$$$ is represented as $$$\\overline{d_{k\\cdot p-1} d_{k\\cdot p-2}\\ldots d_1 d_0}$$$ for some positive integer $$$k$$$ and integers $$$0\\le d_i \\lt b$$$, such that for each $$$0\\le i \\lt k$$$, $$$d_{i\\cdot p}=d_{i\\cdot p+1}=\\cdots=d_{(i+1)\\cdot p-1}$$$. For example, $$$2233$$$ and $$$3355$$$ are $$$(10,2)$$$ -tidy , $$$1111$$$ is both $$$(10,2)$$$ -tidy and $$$(10,4)$$$ -tidy , and $$$6\\,737\\,151=(66\\textrm{CCFF})_{16}$$$ is $$$(16,2)$$$ -tidy . Furthermore, SS defines the tidiness of a positive integer $$$n$$$ as the number of ordered pairs $$$(b, p)$$$ such that $$$n$$$ is $$$(b, p)$$$ -tidy . SS has given you an integer $$$n$$$. Your task is to determine the tidiness of $$$n$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$1\\le n\\le 10^{12}$$$) — the integer SS has given you. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^{12}$$$.",
+  "output_specification": "For each test case, output a single integer — the tidiness of $$$n$$$.",
+  "sample_testcases": [
+    {
+      "input": "10\n1\n2\n115\n1111\n2233\n3355\n191970\n6737151\n102934760424\n618111100000",
+      "output": "0\n0\n2\n4\n5\n5\n24\n9\n17\n144"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:31",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

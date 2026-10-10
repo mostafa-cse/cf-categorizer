@@ -1,0 +1,48 @@
+{
+  "id": "1528B",
+  "source": "problemset",
+  "contest_id": 1528,
+  "problem_index": "B",
+  "name": "Kavi on Pairing Duty",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 11143,
+  "problem_url": "https://codeforces.com/problemset/problem/1528/B",
+  "editorial_url": "https://codeforces.com/blog/entry/91058",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Kavi has $$$2n$$$ points lying on the $$$OX$$$ axis, $$$i$$$-th of which is located at $$$x = i$$$. Kavi considers all ways to split these $$$2n$$$ points into $$$n$$$ pairs. Among those, he is interested in good pairings, which are defined as follows: Consider $$$n$$$ segments with ends at the points in correspondent pairs. The pairing is called good, if for every $$$2$$$ different segments $$$A$$$ and $$$B$$$ among those, at least one of the following holds: One of the segments $$$A$$$ and $$$B$$$ lies completely inside the other. $$$A$$$ and $$$B$$$ have the same length. Consider the following example: $$$A$$$ is a good pairing since the red segment lies completely inside the blue segment. $$$B$$$ is a good pairing since the red and the blue segment have the same length. $$$C$$$ is not a good pairing since none of the red or blue segments lies inside the other, neither do they have the same size. Kavi is interested in the number of good pairings, so he wants you to find it for him. As the result can be large, find this number modulo $$$998244353$$$. Two pairings are called different, if some two points are in one pair in some pairing and in different pairs in another.",
+  "input_specification": "The single line of the input contains a single integer $$$n$$$ $$$(1\\le n \\le 10^6)$$$.",
+  "output_specification": "Print the number of good pairings modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "1"
+    },
+    {
+      "input": "2",
+      "output": "3"
+    },
+    {
+      "input": "3",
+      "output": "6"
+    },
+    {
+      "input": "100",
+      "output": "688750769"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:07",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

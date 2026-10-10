@@ -1,0 +1,39 @@
+{
+  "id": "489F",
+  "source": "problemset",
+  "contest_id": 489,
+  "problem_index": "F",
+  "name": "Special Matrices",
+  "rating": 2100,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1993,
+  "problem_url": "https://codeforces.com/problemset/problem/489/F",
+  "editorial_url": "https://codeforces.com/blog/entry/14741",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "An n × n square matrix is special , if: it is binary, that is, each cell contains either a 0, or a 1; the number of ones in each row and column equals 2. You are given n and the first m rows of the matrix. Print the number of special n × n matrices, such that the first m rows coincide with the given ones. As the required value can be rather large, print the remainder after dividing the value by the given number mod .",
+  "input_specification": "The first line of the input contains three integers n , m , mod ( 2 ≤ n ≤ 500 , 0 ≤ m ≤ n , 2 ≤ mod ≤ 10 9 ). Then m lines follow, each of them contains n characters — the first rows of the required special matrices. Each of these lines contains exactly two characters ' 1 ', the rest characters are ' 0 '. Each column of the given m × n table contains at most two numbers one.",
+  "output_specification": "Print the remainder after dividing the required value by number mod .",
+  "sample_testcases": [
+    {
+      "input": "3 1 1000\n011",
+      "output": "2"
+    },
+    {
+      "input": "4 4 100500\n0110\n1010\n0101\n1001",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

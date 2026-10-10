@@ -1,0 +1,37 @@
+{
+  "id": "1827B2",
+  "source": "problemset",
+  "contest_id": 1827,
+  "problem_index": "B2",
+  "name": "Range Sorting (Hard Version)",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 2428,
+  "problem_url": "https://codeforces.com/problemset/problem/1827/B2",
+  "editorial_url": "https://codeforces.com/blog/entry/116109",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between this problem and the easy version is the constraints on $$$t$$$ and $$$n$$$. You are given an array $$$a$$$, consisting of $$$n$$$ distinct integers $$$a_1, a_2, \\ldots, a_n$$$. Define the beauty of an array $$$p_1, p_2, \\ldots p_k$$$ as the minimum amount of time needed to sort this array using an arbitrary number of range-sort operations. In each range-sort operation, you will do the following: Choose two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\lt r \\le k$$$). Sort the subarray $$$p_l, p_{l + 1}, \\ldots, p_r$$$ in $$$r - l$$$ seconds. Please calculate the sum of beauty over all subarrays of array $$$a$$$. A subarray of an array is defined as a sequence of consecutive elements of the array.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the length of the array $$$a$$$. The second line of each test case consists of $$$n$$$ integers $$$a_1,a_2,\\ldots, a_n$$$ ($$$1\\le a_i\\le 10^9$$$). It is guaranteed that all elements of $$$a$$$ are pairwise distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the sum of beauty over all subarrays of array $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n6 4\n3\n3 10 6\n4\n4 8 7 2\n5\n9 8 2 4 6\n12\n2 6 13 3 15 5 10 8 16 9 11 18",
+      "output": "1\n2\n8\n16\n232"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

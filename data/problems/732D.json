@@ -1,0 +1,44 @@
+{
+  "id": "732D",
+  "source": "problemset",
+  "contest_id": 732,
+  "problem_index": "D",
+  "name": "Exams",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 6043,
+  "problem_url": "https://codeforces.com/problemset/problem/732/D",
+  "editorial_url": "https://codeforces.com/blog/entry/47890",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasiliy has an exam period which will continue for n days. He has to pass exams on m subjects. Subjects are numbered from 1 to m . About every day we know exam for which one of m subjects can be passed on that day. Perhaps, some day you can't pass any exam. It is not allowed to pass more than one exam on any day. On each day Vasiliy can either pass the exam of that day (it takes the whole day) or prepare all day for some exam or have a rest. About each subject Vasiliy know a number a i — the number of days he should prepare to pass the exam number i . Vasiliy can switch subjects while preparing for exams, it is not necessary to prepare continuously during a i days for the exam number i . He can mix the order of preparation for exams in any way. Your task is to determine the minimum number of days in which Vasiliy can pass all exams, or determine that it is impossible. Each exam should be passed exactly one time.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n , m ≤ 10 5 ) — the number of days in the exam period and the number of subjects. The second line contains n integers d 1 , d 2 , ..., d n ( 0 ≤ d i ≤ m ), where d i is the number of subject, the exam of which can be passed on the day number i . If d i equals 0, it is not allowed to pass any exams on the day number i . The third line contains m positive integers a 1 , a 2 , ..., a m ( 1 ≤ a i ≤ 10 5 ), where a i is the number of days that are needed to prepare before passing the exam on the subject i .",
+  "output_specification": "Print one integer — the minimum number of days in which Vasiliy can pass all exams. If it is impossible, print -1 .",
+  "sample_testcases": [
+    {
+      "input": "7 2\n0 1 0 2 1 0 2\n2 1",
+      "output": "5"
+    },
+    {
+      "input": "10 3\n0 0 1 2 3 0 2 0 1 2\n1 1 4",
+      "output": "9"
+    },
+    {
+      "input": "5 1\n1 1 1 1 1\n5",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

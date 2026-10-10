@@ -1,0 +1,36 @@
+{
+  "id": "2196B",
+  "source": "problemset",
+  "contest_id": 2196,
+  "problem_index": "B",
+  "name": "Another Problem about Beautiful Pairs",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 9743,
+  "problem_url": "https://codeforces.com/problemset/problem/2196/B",
+  "editorial_url": "https://codeforces.com/blog/entry/151052",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the array $$$a$$$, we call a pair of indices $$$i$$$, $$$j$$$ beautiful if the following condition holds: $$$a_{i} \\cdot a_{j} = j - i$$$. Count the number of beautiful pairs in the array $$$a$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^{5}$$$). The second line of each test case contains $$$n$$$ integers $$$a_{i}$$$ ($$$1 \\le a_{i} \\le 10^{9}$$$). Additional constraints on the input: The sum of $$$n$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n1 1 2 100 4\n6\n2 2 1 1 2 2\n10\n1 1 2 3 4 1 1 7 3 9\n2\n1000000000 1000000000",
+      "output": "3\n7\n10\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:37",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

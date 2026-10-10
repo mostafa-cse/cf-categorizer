@@ -1,0 +1,38 @@
+{
+  "id": "10E",
+  "source": "problemset",
+  "contest_id": 10,
+  "problem_index": "E",
+  "name": "Greedy Change",
+  "rating": 2600,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 977,
+  "problem_url": "https://codeforces.com/problemset/problem/10/E",
+  "editorial_url": "https://codeforces.com/blog/entry/298",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Billy investigates the question of applying greedy algorithm to different spheres of life. At the moment he is studying the application of greedy algorithm to the problem about change. There is an amount of n coins of different face values, and the coins of each value are not limited in number. The task is to collect the sum x with the minimum amount of coins. Greedy algorithm with each its step takes the coin of the highest face value, not exceeding x . Obviously, if among the coins' face values exists the face value 1, any sum x can be collected with the help of greedy algorithm. However, greedy algorithm does not always give the optimal representation of the sum, i.e. the representation with the minimum amount of coins. For example, if there are face values {1, 3, 4} and it is asked to collect the sum 6 , greedy algorithm will represent the sum as 4 + 1 + 1 , while the optimal representation is 3 + 3 , containing one coin less. By the given set of face values find out if there exist such a sum x that greedy algorithm will collect in a non-optimal way. If such a sum exists, find out the smallest of these sums.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 400 ) — the amount of the coins' face values. The second line contains n integers a i ( 1 ≤ a i ≤ 10 9 ), describing the face values. It is guaranteed that a 1 > a 2 > ... > a n and a n = 1 .",
+  "output_specification": "If greedy algorithm collects any sum in an optimal way, output -1. Otherwise output the smallest sum that greedy algorithm collects in a non-optimal way.",
+  "sample_testcases": [
+    {
+      "input": "5\n25 10 5 2 1",
+      "output": "-1"
+    },
+    {
+      "input": "3\n4 3 1",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

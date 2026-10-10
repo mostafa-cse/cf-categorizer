@@ -1,0 +1,39 @@
+{
+  "id": "141D",
+  "source": "problemset",
+  "contest_id": 141,
+  "problem_index": "D",
+  "name": "Take-off Ramps",
+  "rating": 2300,
+  "tags": [
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 1289,
+  "problem_url": "https://codeforces.com/problemset/problem/141/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3571",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya participates in a ski race along the X axis. The start is at point 0 , and the finish is at L , that is, at a distance L meters from the start in the positive direction of the axis. Vasya has been training so hard that he can run one meter in exactly one second. Besides, there are n take-off ramps on the track, each ramp is characterized by four numbers: x i represents the ramp's coordinate d i represents from how many meters Vasya will land if he goes down this ramp t i represents the flight time in seconds p i is the number, indicating for how many meters Vasya should gather speed to get ready and fly off the ramp. As Vasya gathers speed, he should ski on the snow (that is, he should not be flying), but his speed still equals one meter per second. Vasya is allowed to move in any direction on the X axis, but he is prohibited to cross the start line, that is go to the negative semiaxis. Vasya himself chooses which take-off ramps he will use and in what order, that is, he is not obliged to take off from all the ramps he encounters. Specifically, Vasya can skip the ramp. It is guaranteed that x i + d i ≤ L , that is, Vasya cannot cross the finish line in flight. Vasya can jump from the ramp only in the positive direction of X axis. More formally, when using the i -th ramp, Vasya starts gathering speed at point x i - p i , jumps at point x i , and lands at point x i + d i . He cannot use the ramp in opposite direction. Your task is to find the minimum time that Vasya will spend to cover the distance.",
+  "input_specification": "The first line contains two integers n and L ( 0 ≤ n ≤ 10 5 , 1 ≤ L ≤ 10 9 ). Then n lines contain the descriptions of the ramps, each description is on a single line. Each description is a group of four non-negative integers x i , d i , t i , p i ( 0 ≤ x i ≤ L , 1 ≤ d i , t i , p i ≤ 10 9 , x i + d i ≤ L ).",
+  "output_specification": "Print in the first line the minimum time in seconds Vasya needs to complete the track. Print in the second line k — the number of take-off ramps that Vasya needs to use, and print on the third line of output k numbers the number the take-off ramps Vasya used in the order in which he used them. Print each number exactly once, separate the numbers with a space. The ramps are numbered starting from 1 in the order in which they are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "2 20\n5 10 5 5\n4 16 1 7",
+      "output": "15\n1\n1"
+    },
+    {
+      "input": "2 20\n9 8 12 6\n15 5 1 1",
+      "output": "16\n1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

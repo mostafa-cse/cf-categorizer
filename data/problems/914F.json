@@ -1,0 +1,42 @@
+{
+  "id": "914F",
+  "source": "problemset",
+  "contest_id": 914,
+  "problem_index": "F",
+  "name": "Substrings in a String",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 2674,
+  "problem_url": "https://codeforces.com/problemset/problem/914/F",
+  "editorial_url": "https://codeforces.com/blog/entry/57250",
+  "time_limit": "6 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a string s , process q queries, each having one of the following forms: 1 i c — Change the i -th character in the string to c . 2 l r y — Consider the substring of s starting at position l and ending at position r . Output the number of times y occurs as a substring in it.",
+  "input_specification": "The first line of the input contains the string s ( 1 ≤ | s | ≤ 10 5 ) of lowercase English letters. The second line contains an integer q ( 1 ≤ q ≤ 10 5 )  — the number of queries to process. The next q lines describe the queries and may have one of the following forms: 1 i c ( 1 ≤ i ≤ | s | ) 2 l r y ( 1 ≤ l ≤ r ≤ | s | ) c is a lowercase English letter and y is a non-empty string consisting of only lowercase English letters. The sum of | y | over all queries of second type is at most 10 5 . It is guaranteed that there is at least one query of second type. All strings are 1 -indexed. | s | is the length of the string s .",
+  "output_specification": "For each query of type 2 , output the required answer in a separate line.",
+  "sample_testcases": [
+    {
+      "input": "ababababa\n3\n2 1 7 aba\n1 5 c\n2 1 7 aba",
+      "output": "3\n1"
+    },
+    {
+      "input": "abcdcbc\n5\n2 1 7 bc\n1 4 b\n2 4 7 bc\n1 2 a\n2 1 4 aa",
+      "output": "2\n2\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

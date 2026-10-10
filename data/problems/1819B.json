@@ -1,0 +1,38 @@
+{
+  "id": "1819B",
+  "source": "problemset",
+  "contest_id": 1819,
+  "problem_index": "B",
+  "name": "The Butcher",
+  "rating": 1900,
+  "tags": [
+    "geometry",
+    "greedy",
+    "implementation",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 4386,
+  "problem_url": "https://codeforces.com/problemset/problem/1819/B",
+  "editorial_url": "https://codeforces.com/blog/entry/115133",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Anton plays his favorite game \"Defense of The Ancients 2\" for his favorite hero — The Butcher. Now he wants to make his own dinner. To do this he will take a rectangle of height $$$h$$$ and width $$$w$$$, then make a vertical or horizontal cut so that both resulting parts have integer sides. After that, he will put one of the parts in the box and cut the other again, and so on. More formally, a rectangle of size $$$h \\times w$$$ can be cut into two parts of sizes $$$x \\times w$$$ and $$$(h - x) \\times w$$$, where $$$x$$$ is an integer from $$$1$$$ to $$$(h - 1)$$$, or into two parts of sizes $$$h \\times y$$$ and $$$h \\times (w - y)$$$, where $$$y$$$ is an integer from $$$1$$$ to $$$(w - 1)$$$. He will repeat this operation $$$n - 1$$$ times, and then put the remaining rectangle into the box too. Thus, the box will contain $$$n$$$ rectangles, of which $$$n - 1$$$ rectangles were put in the box as a result of the cuts, and the $$$n$$$-th rectangle is the one that the Butcher has left after all $$$n - 1$$$ cuts. Unfortunately, Butcher forgot the numbers $$$h$$$ and $$$w$$$, but he still has $$$n$$$ rectangles mixed in random order. Note that Butcher didn't rotate the rectangles , but only shuffled them. Now he wants to know all possible pairs $$$(h, w)$$$ from which this set of rectangles can be obtained. And you have to help him do it! It is guaranteed that there exists at least one pair $$$(h, w)$$$ from which this set of rectangles can be obtained.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of rectangles obtained. The $$$i$$$-th of the next $$$n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 10^6$$$) — the height and width of the $$$i$$$-th rectangle. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, on the first line output a single integer $$$m$$$ — the number of pairs $$$(h, w)$$$ denoting the sizes of rectangles from which the given rectangles can be obtained. Two rectangles are considered different if they have different heights or widths. On each of the following $$$m$$$ lines print output integers $$$h_i$$$ and $$$w_i$$$ — the height and width of the rectangle from which the given rectangles can be obtained. You can output the rectangles in any order.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n1 2\n3 5\n1 3\n3\n1 1\n1 1\n1 1\n1\n10 10\n4\n3 2\n5 5\n2 2\n8 7",
+      "output": "1\n4 5\n2\n1 3\n3 1\n1\n10 10\n1\n13 7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:57",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

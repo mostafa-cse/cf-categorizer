@@ -1,0 +1,52 @@
+{
+  "id": "1550F",
+  "source": "problemset",
+  "contest_id": 1550,
+  "problem_index": "F",
+  "name": "Jumping Around",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "dsu",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 983,
+  "problem_url": "https://codeforces.com/problemset/problem/1550/F",
+  "editorial_url": "https://codeforces.com/blog/entry/92864",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is an infinite pond that can be represented with a number line. There are $$$n$$$ rocks in the pond, numbered from $$$1$$$ to $$$n$$$. The $$$i$$$-th rock is located at an integer coordinate $$$a_i$$$. The coordinates of the rocks are pairwise distinct. The rocks are numbered in the increasing order of the coordinate, so $$$a_1 \\lt a_2 \\lt \\dots \\lt a_n$$$. A robot frog sits on the rock number $$$s$$$. The frog is programmable. It has a base jumping distance parameter $$$d$$$. There also is a setting for the jumping distance range. If the jumping distance range is set to some integer $$$k$$$, then the frog can jump from some rock to any rock at a distance from $$$d - k$$$ to $$$d + k$$$ inclusive in any direction. The distance between two rocks is an absolute difference between their coordinates. You are assigned a task to implement a feature for the frog. Given two integers $$$i$$$ and $$$k$$$ determine if the frog can reach a rock number $$$i$$$ from a rock number $$$s$$$ performing a sequence of jumps with the jumping distance range set to $$$k$$$. The sequence can be arbitrarily long or empty. You will be given $$$q$$$ testcases for that feature, the $$$j$$$-th testcase consists of two integers $$$i$$$ and $$$k$$$. Print \" Yes \" if the $$$i$$$-th rock is reachable and \" No \" otherwise. You can output \" YES \" and \" NO \" in any case (for example, strings \" yEs \", \" yes \", \" Yes \" and ' YES \"' will be recognized as a positive answer).",
+  "input_specification": "The first line contains four integers $$$n$$$, $$$q$$$, $$$s$$$ and $$$d$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$; $$$1 \\le s \\le n$$$; $$$1 \\le d \\le 10^6$$$) — the number of rocks, the number of testcases, the starting rock and the base jumping distance parameter. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$) — the coordinates of the rocks. The coordinates of the rocks are pairwise distinct. The rocks are numbered in the increasing order of distance from the land, so $$$a_1 \\lt a_2 \\lt \\dots \\lt a_n$$$. Each of the next $$$q$$$ lines contains two integers $$$i$$$ and $$$k$$$ ($$$1 \\le i \\le n$$$; $$$1 \\le k \\le 10^6$$$) — the parameters to the testcase.",
+  "output_specification": "For each of the testcases print an answer. If there is a sequence of jumps from a rock number $$$s$$$ to a rock number $$$i$$$ with the jumping distance range set to $$$k$$$, then print \" Yes \". Otherwise, print \" No \".",
+  "sample_testcases": [
+    {
+      "input": "7 4 4 5\n1 5 10 13 20 22 28\n4 1\n7 2\n7 3\n3 2",
+      "output": "Yes\nNo\nYes\nYes"
+    },
+    {
+      "input": "10 8 6 11\n1 2 4 7 8 9 11 13 19 20\n2 13\n5 8\n8 1\n6 15\n1 15\n2 7\n7 6\n8 9",
+      "output": "Yes\nYes\nNo\nYes\nYes\nYes\nYes\nYes"
+    },
+    {
+      "input": "6 9 6 6\n1 2 4 9 18 19\n2 17\n1 18\n5 4\n2 11\n5 17\n6 8\n4 3\n3 3\n6 6",
+      "output": "Yes\nYes\nYes\nYes\nYes\nYes\nNo\nNo\nYes"
+    },
+    {
+      "input": "4 1 1 10\n1 8 10 19\n2 1",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "505C",
+  "source": "problemset",
+  "contest_id": 505,
+  "problem_index": "C",
+  "name": "Mr. Kitayuta, the Treasure Hunter",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 7616,
+  "problem_url": "https://codeforces.com/problemset/problem/505/C",
+  "editorial_url": "https://codeforces.com/blog/entry/15889",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The Shuseki Islands are an archipelago of 30001 small islands in the Yutampo Sea. The islands are evenly spaced along a line, numbered from 0 to 30000 from the west to the east. These islands are known to contain many treasures. There are n gems in the Shuseki Islands in total, and the i -th gem is located on island p i . Mr. Kitayuta has just arrived at island 0 . With his great jumping ability, he will repeatedly perform jumps between islands to the east according to the following process: First, he will jump from island 0 to island d . After that, he will continue jumping according to the following rule. Let l be the length of the previous jump, that is, if his previous jump was from island prev to island cur , let l = cur - prev . He will perform a jump of length l - 1 , l or l + 1 to the east. That is, he will jump to island ( cur + l - 1) , ( cur + l ) or ( cur + l + 1) (if they exist). The length of a jump must be positive, that is, he cannot perform a jump of length 0 when l = 1 . If there is no valid destination, he will stop jumping. Mr. Kitayuta will collect the gems on the islands visited during the process. Find the maximum number of gems that he can collect.",
+  "input_specification": "The first line of the input contains two space-separated integers n and d ( 1 ≤ n , d ≤ 30000 ), denoting the number of the gems in the Shuseki Islands and the length of the Mr. Kitayuta's first jump, respectively. The next n lines describe the location of the gems. The i -th of them ( 1 ≤ i ≤ n ) contains a integer p i ( d ≤ p 1 ≤ p 2 ≤ ... ≤ p n ≤ 30000 ), denoting the number of the island that contains the i -th gem.",
+  "output_specification": "Print the maximum number of gems that Mr. Kitayuta can collect.",
+  "sample_testcases": [
+    {
+      "input": "4 10\n10\n21\n27\n27",
+      "output": "3"
+    },
+    {
+      "input": "8 8\n9\n19\n28\n36\n45\n55\n66\n78",
+      "output": "6"
+    },
+    {
+      "input": "13 7\n8\n8\n9\n16\n17\n17\n18\n21\n23\n24\n24\n26\n30",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:14",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

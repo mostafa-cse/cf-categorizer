@@ -1,0 +1,39 @@
+{
+  "id": "2020C",
+  "source": "problemset",
+  "contest_id": 2020,
+  "problem_index": "C",
+  "name": "Bitwise Balancing",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "hashing",
+    "implementation",
+    "math",
+    "schedules",
+    "ternary search"
+  ],
+  "solved_count": 18978,
+  "problem_url": "https://codeforces.com/problemset/problem/2020/C",
+  "editorial_url": "https://codeforces.com/blog/entry/134516",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given three non-negative integers $$$b$$$, $$$c$$$, and $$$d$$$. Please find a non-negative integer $$$a \\in [0, 2^{61}]$$$ such that $$$(a\\, |\\, b)-(a\\, \\&\\, c)=d$$$, where $$$|$$$ and $$$\\&$$$ denote the bitwise OR operation and the bitwise AND operation , respectively. If such an $$$a$$$ exists, print its value. If there is no solution, print a single integer $$$-1$$$. If there are multiple solutions, print any of them.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. The only line of each test case contains three positive integers $$$b$$$, $$$c$$$, and $$$d$$$ ($$$0 \\le b, c, d \\le 10^{18}$$$).",
+  "output_specification": "For each test case, output the value of $$$a$$$, or $$$-1$$$ if there is no solution. Please note that $$$a$$$ must be non-negative and cannot exceed $$$2^{61}$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 2 2\n4 2 6\n10 2 14",
+      "output": "0\n-1\n12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

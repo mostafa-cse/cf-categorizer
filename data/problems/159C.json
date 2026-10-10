@@ -1,0 +1,42 @@
+{
+  "id": "159C",
+  "source": "problemset",
+  "contest_id": 159,
+  "problem_index": "C",
+  "name": "String Manipulation 1.0",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "binary search",
+    "brute force",
+    "data structures",
+    "strings"
+  ],
+  "solved_count": 3241,
+  "problem_url": "https://codeforces.com/problemset/problem/159/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4089",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One popular website developed an unusual username editing procedure. One can change the username only by deleting some characters from it: to change the current name s , a user can pick number p and character c and delete the p -th occurrence of character c from the name. After the user changed his name, he can't undo the change. For example, one can change name \" arca \" by removing the second occurrence of character \" a \" to get \" arc \". Polycarpus learned that some user initially registered under nickname t , where t is a concatenation of k copies of string s . Also, Polycarpus knows the sequence of this user's name changes. Help Polycarpus figure out the user's final name.",
+  "input_specification": "The first line contains an integer k ( 1 ≤ k ≤ 2000 ). The second line contains a non-empty string s , consisting of lowercase Latin letters, at most 100 characters long. The third line contains an integer n ( 0 ≤ n ≤ 20000 ) — the number of username changes. Each of the next n lines contains the actual changes, one per line. The changes are written as \" p i c i \" (without the quotes), where p i ( 1 ≤ p i ≤ 200000 ) is the number of occurrences of letter c i , c i is a lowercase Latin letter. It is guaranteed that the operations are correct, that is, the letter to be deleted always exists, and after all operations not all letters are deleted from the name. The letters' occurrences are numbered starting from 1.",
+  "output_specification": "Print a single string — the user's final name after all changes are applied to it.",
+  "sample_testcases": [
+    {
+      "input": "2\nbac\n3\n2 a\n1 b\n2 c",
+      "output": "acb"
+    },
+    {
+      "input": "1\nabacaba\n4\n1 a\n1 a\n1 c\n2 b",
+      "output": "baa"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

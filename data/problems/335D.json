@@ -1,0 +1,39 @@
+{
+  "id": "335D",
+  "source": "problemset",
+  "contest_id": 335,
+  "problem_index": "D",
+  "name": "Rectangles and Square",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 372,
+  "problem_url": "https://codeforces.com/problemset/problem/335/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8538",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given n rectangles, labeled 1 through n . The corners of rectangles have integer coordinates and their edges are parallel to the Ox and Oy axes. The rectangles may touch each other, but they do not overlap (that is, there are no points that belong to the interior of more than one rectangle). Your task is to determine if there's a non-empty subset of the rectangles that forms a square. That is, determine if there exists a subset of the rectangles and some square for which every point that belongs to the interior or the border of that square belongs to the interior or the border of at least one of the rectangles in the subset, and every point that belongs to the interior or the border of at least one rectangle in the subset belongs to the interior or the border of that square.",
+  "input_specification": "First line contains a single integer n ( 1 ≤ n ≤ 10 5 ) — the number of rectangles. Each of the next n lines contains a description of a rectangle, with the i -th such line describing the rectangle labeled i . Each rectangle description consists of four integers: x 1 , y 1 , x 2 , y 2 — coordinates of the bottom left and the top right corners ( 0 ≤ x 1 < x 2 ≤ 3000 , 0 ≤ y 1 < y 2 ≤ 3000 ). No two rectangles overlap (that is, there are no points that belong to the interior of more than one rectangle).",
+  "output_specification": "If such a subset exists, print \" YES \" (without quotes) on the first line of the output file, followed by k , the number of rectangles in the subset. On the second line print k numbers — the labels of rectangles in the subset in any order. If more than one such subset exists, print any one. If no such subset exists, print \" NO \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "9\n0 0 1 9\n1 0 9 1\n1 8 9 9\n8 1 9 8\n2 2 3 6\n3 2 7 3\n2 6 7 7\n5 3 7 6\n3 3 5 6",
+      "output": "YES 5\n5 6 7 8 9"
+    },
+    {
+      "input": "4\n0 0 1 9\n1 0 9 1\n1 8 9 9\n8 1 9 8",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

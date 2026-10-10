@@ -1,0 +1,41 @@
+{
+  "id": "734F",
+  "source": "problemset",
+  "contest_id": 734,
+  "problem_index": "F",
+  "name": "Anton and School",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1465,
+  "problem_url": "https://codeforces.com/problemset/problem/734/F",
+  "editorial_url": "https://codeforces.com/blog/entry/48397",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Anton goes to school, his favorite lessons are arraystudying. He usually solves all the tasks pretty fast, but this time the teacher gave him a complicated one: given two arrays b and c of length n , find array a , such that: where a and b means bitwise AND, while a or b means bitwise OR. Usually Anton is good in arraystudying, but this problem is too hard, so Anton asks you to help.",
+  "input_specification": "The first line of the input contains a single integers n ( 1 ≤ n ≤ 200 000 ) — the size of arrays b and c . The second line contains n integers b i ( 0 ≤ b i ≤ 10 9 ) — elements of the array b . Third line contains n integers c i ( 0 ≤ c i ≤ 10 9 ) — elements of the array c .",
+  "output_specification": "If there is no solution, print - 1 . Otherwise, the only line of the output should contain n non-negative integers a i — elements of the array a . If there are multiple possible solutions, you may print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n6 8 4 4\n16 22 10 10",
+      "output": "3 5 1 1"
+    },
+    {
+      "input": "5\n8 25 14 7 16\n19 6 9 4 25",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:18",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

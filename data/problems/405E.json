@@ -1,0 +1,43 @@
+{
+  "id": "405E",
+  "source": "problemset",
+  "contest_id": 405,
+  "problem_index": "E",
+  "name": "Graph Cutting",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 1670,
+  "problem_url": "https://codeforces.com/problemset/problem/405/E",
+  "editorial_url": "https://codeforces.com/blog/entry/11186",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Chris is participating in a graph cutting contest. He's a pro. The time has come to test his skills to the fullest. Chris is given a simple undirected connected graph with n vertices (numbered from 1 to n ) and m edges. The problem is to cut it into edge-distinct paths of length 2. Formally, Chris has to partition all edges of the graph into pairs in such a way that the edges in a single pair are adjacent and each edge must be contained in exactly one pair. For example, the figure shows a way Chris can cut a graph. The first sample test contains the description of this graph. You are given a chance to compete with Chris. Find a way to cut the given graph or determine that it is impossible!",
+  "input_specification": "The first line of input contains two space-separated integers n and m ( 1 ≤ n , m ≤ 10 5 ), the number of vertices and the number of edges in the graph. The next m lines contain the description of the graph's edges. The i -th line contains two space-separated integers a i and b i ( 1 ≤ a i , b i ≤ n ; a i ≠ b i ), the numbers of the vertices connected by the i -th edge. It is guaranteed that the given graph is simple (without self-loops and multi-edges) and connected. Note : since the size of the input and output could be very large, don't use slow output techniques in your language. For example, do not use input and output streams (cin, cout) in C++.",
+  "output_specification": "If it is possible to cut the given graph into edge-distinct paths of length 2, output lines. In the i -th line print three space-separated integers x i , y i and z i , the description of the i -th path. The graph should contain this path, i.e., the graph should contain edges ( x i , y i ) and ( y i , z i ) . Each edge should appear in exactly one path of length 2. If there are multiple solutions, output any of them. If it is impossible to cut the given graph, print \"No solution\" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "8 12\n1 2\n2 3\n3 4\n4 1\n1 3\n2 4\n3 5\n3 6\n5 6\n6 7\n6 8\n7 8",
+      "output": "1 2 4\n1 3 2\n1 4 3\n5 3 6\n5 6 8\n6 7 8"
+    },
+    {
+      "input": "3 3\n1 2\n2 3\n3 1",
+      "output": "No solution"
+    },
+    {
+      "input": "3 2\n1 2\n2 3",
+      "output": "1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

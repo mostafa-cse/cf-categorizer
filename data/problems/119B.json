@@ -1,0 +1,40 @@
+{
+  "id": "119B",
+  "source": "problemset",
+  "contest_id": 119,
+  "problem_index": "B",
+  "name": "Before Exam",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 1152,
+  "problem_url": "https://codeforces.com/problemset/problem/119/B",
+  "editorial_url": "https://codeforces.com/blog/entry/3229",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya is about to take his first university exam in about several minutes. And it's not just some ordinary exam, it's on mathematical analysis. Of course, right now Vasya can only think of one thing: what the result of his talk with the examiner will be... To prepare for the exam, one has to study proofs of n theorems. It is known that there will be k examination cards on the exam and each card contains distinct theorems. Besides, no theorem is mentioned in more than one card (that is, theorems won't be mentioned in any card). During the exam several students may get the same card. We do not know the exact way theorems are distributed by cards, however the students that took the exam before Vasya told him what theorems their cards contained. Vasya evaluates his level of proficiency in the i -th theorem by some number a i . The level of proficiency in some card is the average of the levels of proficiency in the theorems that are included in the card. Now Vasya wants to know the minimally and maximally possible levels of his proficiency in the card he gets on the exam. Vasya wants to determine it by the data he has collected from other students. Unfortunately, Vasya has no time left to do the math and he asked you to help him.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ k ≤ n ≤ 100 ) — the number of theorems and the number of cards correspondingly. The second line contains n integers a i ( 0 ≤ a i ≤ 100 ), the i -th number ( 1 ≤ i ≤ n ) corresponds to Vasya's proficiency in the i -th theorem. The third line contains number q ( 0 ≤ q ≤ 100 ) — the number of people that have taken the exam before Vasya. Each of the following q lines contains the description of a student's card: integers from 1 to n inclusive. They are the numbers of theorems included in the card in the order in which they are enumerated in the input data. The numbers are given in an arbitrary order. It is guaranteed that the given cards are valid (that is, that all theorems in one card are different and that different people get cards that either don't contain the same theorems or coincide up to the theorems' permutation).",
+  "output_specification": "Print two real numbers, representing Vasya's minimum and maximum proficiency in the card he will get on the exam. The absolute or relative error should not exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "7 3\n7 15 0 19 10 5 12\n2\n1 6\n7 4",
+      "output": "5.0000000000 15.5000000000"
+    },
+    {
+      "input": "4 2\n10 8 1 17\n2\n2 3\n3 2",
+      "output": "4.5000000000 13.5000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

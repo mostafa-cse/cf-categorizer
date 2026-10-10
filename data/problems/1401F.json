@@ -1,0 +1,40 @@
+{
+  "id": "1401F",
+  "source": "problemset",
+  "contest_id": 1401,
+  "problem_index": "F",
+  "name": "Reverse and Swap",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures"
+  ],
+  "solved_count": 2030,
+  "problem_url": "https://codeforces.com/problemset/problem/1401/F",
+  "editorial_url": "https://codeforces.com/blog/entry/81700",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of length $$$2^n$$$. You should process $$$q$$$ queries on it. Each query has one of the following $$$4$$$ types: $$$Replace(x, k)$$$ — change $$$a_x$$$ to $$$k$$$; $$$Reverse(k)$$$ — reverse each subarray $$$[(i-1) \\cdot 2^k+1, i \\cdot 2^k]$$$ for all $$$i$$$ ($$$i \\ge 1$$$); $$$Swap(k)$$$ — swap subarrays $$$[(2i-2) \\cdot 2^k+1, (2i-1) \\cdot 2^k]$$$ and $$$[(2i-1) \\cdot 2^k+1, 2i \\cdot 2^k]$$$ for all $$$i$$$ ($$$i \\ge 1$$$); $$$Sum(l, r)$$$ — print the sum of the elements of subarray $$$[l, r]$$$. Write a program that can quickly process given queries.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$q$$$ ($$$0 \\le n \\le 18$$$; $$$1 \\le q \\le 10^5$$$) — the length of array $$$a$$$ and the number of queries. The second line contains $$$2^n$$$ integers $$$a_1, a_2, \\ldots, a_{2^n}$$$ ($$$0 \\le a_i \\le 10^9$$$). Next $$$q$$$ lines contains queries — one per line. Each query has one of $$$4$$$ types: \"$$$1$$$ $$$x$$$ $$$k$$$\" ($$$1 \\le x \\le 2^n$$$; $$$0 \\le k \\le 10^9$$$) — $$$Replace(x, k)$$$; \"$$$2$$$ $$$k$$$\" ($$$0 \\le k \\le n$$$) — $$$Reverse(k)$$$; \"$$$3$$$ $$$k$$$\" ($$$0 \\le k \\lt n$$$) — $$$Swap(k)$$$; \"$$$4$$$ $$$l$$$ $$$r$$$\" ($$$1 \\le l \\le r \\le 2^n$$$) — $$$Sum(l, r)$$$. It is guaranteed that there is at least one $$$Sum$$$ query.",
+  "output_specification": "Print the answer for each $$$Sum$$$ query.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n7 4 9 9\n1 2 8\n3 1\n4 2 4",
+      "output": "24"
+    },
+    {
+      "input": "3 8\n7 0 8 8 7 1 5 2\n4 3 7\n2 1\n3 2\n4 1 6\n2 3\n1 5 16\n4 8 8\n3 0",
+      "output": "29\n22\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:39",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

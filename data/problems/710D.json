@@ -1,0 +1,39 @@
+{
+  "id": "710D",
+  "source": "problemset",
+  "contest_id": 710,
+  "problem_index": "D",
+  "name": "Two Arithmetic Progressions",
+  "rating": 2500,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2032,
+  "problem_url": "https://codeforces.com/problemset/problem/710/D",
+  "editorial_url": "https://codeforces.com/blog/entry/46761",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arithmetic progressions: a 1 k + b 1 and a 2 l + b 2 . Find the number of integers x such that L ≤ x ≤ R and x = a 1 k ' + b 1 = a 2 l ' + b 2 , for some integers k ', l ' ≥ 0 .",
+  "input_specification": "The only line contains six integers a 1 , b 1 , a 2 , b 2 , L , R ( 0 < a 1 , a 2 ≤ 2·10 9 ,  - 2·10 9 ≤ b 1 , b 2 , L , R ≤ 2·10 9 , L ≤ R ).",
+  "output_specification": "Print the desired number of integers x .",
+  "sample_testcases": [
+    {
+      "input": "2 0 3 3 5 21",
+      "output": "3"
+    },
+    {
+      "input": "2 4 3 0 6 17",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:25",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

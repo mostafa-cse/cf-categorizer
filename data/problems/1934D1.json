@@ -1,0 +1,36 @@
+{
+  "id": "1934D1",
+  "source": "problemset",
+  "contest_id": 1934,
+  "problem_index": "D1",
+  "name": "XOR Break --- Solo Version",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "greedy"
+  ],
+  "solved_count": 4315,
+  "problem_url": "https://codeforces.com/problemset/problem/1934/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/126423",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the solo version of the problem. Note that the solution of this problem may or may not share ideas with the solution of the game version. You can solve and get points for both versions independently. You can make hacks only if both versions of the problem are solved. Given an integer variable $$$x$$$ with the initial value of $$$n$$$. A single break operation consists of the following steps: Choose a value $$$y$$$ such that $$$0 \\lt y \\lt x$$$ and $$$0 \\lt (x \\oplus y) \\lt x$$$. Update $$$x$$$ by either setting $$$x = y$$$ or setting $$$x = x \\oplus y$$$. Determine whether it is possible to transform $$$x$$$ into $$$m$$$ using a maximum of $$$63$$$ break operations. If it is, provide the sequence of operations required to achieve $$$x = m$$$. You don't need to minimize the number of operations. Here $$$\\oplus$$$ denotes the bitwise XOR operation .",
+  "input_specification": "The first line contains one positive integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Each test case consists of a single line containing two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq m \\lt n \\leq 10^{18}$$$) — the initial value of $$$x$$$ and the target value of $$$x$$$.",
+  "output_specification": "For each test case, output your answer in the following format. If it is not possible to achieve $$$m$$$ in $$$63$$$ operations, print $$$-1$$$. Otherwise, The first line should contain $$$k$$$ ($$$1 \\leq k \\leq 63$$$) — where $$$k$$$ is the number of operations required. The next line should contain $$$k+1$$$ integers — the sequence where variable $$$x$$$ changes after each break operation. The $$$1$$$-st and $$$k+1$$$-th integers should be $$$n$$$ and $$$m$$$, respectively.",
+  "sample_testcases": [
+    {
+      "input": "3\n7 3\n4 2\n481885160128643072 45035996273704960",
+      "output": "1\n7 3\n-1\n3\n481885160128643072 337769972052787200 49539595901075456 45035996273704960"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:27",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

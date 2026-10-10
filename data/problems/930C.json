@@ -1,0 +1,39 @@
+{
+  "id": "930C",
+  "source": "problemset",
+  "contest_id": 930,
+  "problem_index": "C",
+  "name": "Teodor is not a liar!",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 2408,
+  "problem_url": "https://codeforces.com/problemset/problem/930/C",
+  "editorial_url": "https://codeforces.com/blog/entry/58177",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Young Teodor enjoys drawing. His favourite hobby is drawing segments with integer borders inside his huge [1; m ] segment. One day Teodor noticed that picture he just drawn has one interesting feature: there doesn't exist an integer point, that belongs each of segments in the picture. Having discovered this fact, Teodor decided to share it with Sasha. Sasha knows that Teodor likes to show off so he never trusts him. Teodor wants to prove that he can be trusted sometimes, so he decided to convince Sasha that there is no such integer point in his picture, which belongs to each segment. However Teodor is lazy person and neither wills to tell Sasha all coordinates of segments' ends nor wills to tell him their amount, so he suggested Sasha to ask him series of questions 'Given the integer point x i , how many segments in Fedya's picture contain that point?', promising to tell correct answers for this questions. Both boys are very busy studying and don't have much time, so they ask you to find out how many questions can Sasha ask Teodor, that having only answers on his questions, Sasha can't be sure that Teodor isn't lying to him. Note that Sasha doesn't know amount of segments in Teodor's picture. Sure, Sasha is smart person and never asks about same point twice.",
+  "input_specification": "First line of input contains two integer numbers: n and m ( 1 ≤ n , m ≤ 100 000 ) — amount of segments of Teodor's picture and maximal coordinate of point that Sasha can ask about. i th of next n lines contains two integer numbers l i and r i ( 1 ≤ l i ≤ r i ≤ m ) — left and right ends of i th segment in the picture. Note that that left and right ends of segment can be the same point. It is guaranteed that there is no integer point, that belongs to all segments.",
+  "output_specification": "Single line of output should contain one integer number k – size of largest set ( x i , cnt ( x i )) where all x i are different, 1 ≤ x i ≤ m , and cnt ( x i ) is amount of segments, containing point with coordinate x i , such that one can't be sure that there doesn't exist point, belonging to all of segments in initial picture, if he knows only this set(and doesn't know n ).",
+  "sample_testcases": [
+    {
+      "input": "2 4\n1 2\n3 4",
+      "output": "4"
+    },
+    {
+      "input": "4 6\n1 3\n2 3\n4 6\n5 6",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

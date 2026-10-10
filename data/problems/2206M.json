@@ -1,0 +1,32 @@
+{
+  "id": "2206M",
+  "source": "problemset",
+  "contest_id": 2206,
+  "problem_index": "M",
+  "name": "Deformed Balance",
+  "rating": 2900,
+  "tags": [],
+  "solved_count": 63,
+  "problem_url": "https://codeforces.com/problemset/problem/2206/M",
+  "editorial_url": "https://codeforces.com/contest/2206/attachments/download/36244/analysis.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "In this problem, a concatenation of two strings $$$T$$$ and $$$U$$$ is denoted by $$$T+U$$$. A string consisting only of parentheses (opening parentheses ' ( ' or closing parentheses ' ) ') is balanced if and only if it is one of the following. An empty string. The concatenation of two non-empty balanced strings. The concatenation $$$\\texttt{(} + T + \\texttt{)}$$$, where $$$T$$$ is a balanced string. For example, \" () \" and \" (())() \" are balanced, while \" ()( \" and \" ((() \" are not. A string is deformed if and only if it is one of the following. The string \" ) \". The concatenation $$$T + \\texttt{)} + U$$$, where $$$T$$$ and $$$U$$$ are deformed strings. The concatenation $$$\\texttt{(} + T + \\texttt{(}$$$, where $$$T$$$ is a deformed string. For example, \" ()( \" and \" ))()( \" are deformed, while \" () \" and \" (() \" are not. A string $$$T$$$ has a deformed balance if $$$T$$$ is deformed and the concatenation $$$T + \\texttt{)}$$$ is balanced. For example, the string \" ()( \" has a deformed balance. You are given a string $$$S$$$ of length $$$n$$$ consisting only of parentheses. Under the given input constraints, it can be shown that there exist strings $$$X$$$ and $$$Y$$$ such that the concatenation $$$X + S + Y$$$ has a deformed balance. Determine the minimum possible value of $$$|X| + |Y|$$$ (the sum of the lengths of $$$X$$$ and $$$Y$$$).",
+  "input_specification": "The first line of input contains one integer $$$t$$$ ($$$1 \\le t \\le 10\\,000$$$) representing the number of test cases. After that, $$$t$$$ test cases follow. Each of them is presented as follows. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$). The second line contains a string $$$S$$$ of length $$$n$$$, consisting only of ' ( ' or ' ) '. The sum of $$$n$$$ across all test cases in one input file does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output the minimum possible value of $$$|X|+|Y|$$$ such that the concatenation $$$X + S + Y$$$ has a deformed balance.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n()(\n1\n)\n7\n(())())",
+      "output": "0\n2\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

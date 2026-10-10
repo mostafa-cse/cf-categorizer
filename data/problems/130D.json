@@ -1,0 +1,38 @@
+{
+  "id": "130D",
+  "source": "problemset",
+  "contest_id": 130,
+  "problem_index": "D",
+  "name": "Exponentiation",
+  "rating": 1500,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 434,
+  "problem_url": "https://codeforces.com/problemset/problem/130/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3226",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given integers a , b and c . Calculate a b modulo c .",
+  "input_specification": "Input data contains numbers a , b and c , one number per line. Each number is an integer between 1 and 100 , inclusive.",
+  "output_specification": "Output a b mod c .",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n40",
+      "output": "32"
+    },
+    {
+      "input": "2\n5\n26",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "555E",
+  "source": "problemset",
+  "contest_id": 555,
+  "problem_index": "E",
+  "name": "Case of Computer Network",
+  "rating": 2800,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 3241,
+  "problem_url": "https://codeforces.com/problemset/problem/555/E",
+  "editorial_url": "https://codeforces.com/blog/entry/18919",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andrewid the Android is a galaxy-known detective. Now he is preparing a defense against a possible attack by hackers on a major computer network. In this network are n vertices, some pairs of vertices are connected by m undirected channels. It is planned to transfer q important messages via this network, the i -th of which must be sent from vertex s i to vertex d i via one or more channels, perhaps through some intermediate vertices. To protect against attacks a special algorithm was developed. Unfortunately it can be applied only to the network containing directed channels. Therefore, as new channels can't be created, it was decided for each of the existing undirected channels to enable them to transmit data only in one of the two directions. Your task is to determine whether it is possible so to choose the direction for each channel so that each of the q messages could be successfully transmitted.",
+  "input_specification": "The first line contains three integers n , m and q ( 1 ≤ n , m , q ≤ 2·10 5 ) — the number of nodes, channels and important messages. Next m lines contain two integers each, v i and u i ( 1 ≤ v i , u i ≤ n , v i ≠ u i ), that means that between nodes v i and u i is a channel. Between a pair of nodes can exist more than one channel. Next q lines contain two integers s i and d i ( 1 ≤ s i , d i ≤ n , s i ≠ d i ) — the numbers of the nodes of the source and destination of the corresponding message. It is not guaranteed that in it initially possible to transmit all the messages.",
+  "output_specification": "If a solution exists, print on a single line \" Yes \" (without the quotes). Otherwise, print \" No \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "4 4 2\n1 2\n1 3\n2 3\n3 4\n1 3\n4 2",
+      "output": "Yes"
+    },
+    {
+      "input": "3 2 2\n1 2\n3 2\n1 3\n2 1",
+      "output": "No"
+    },
+    {
+      "input": "3 3 2\n1 2\n1 2\n3 2\n1 3\n2 1",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:03",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

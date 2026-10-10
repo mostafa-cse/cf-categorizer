@@ -1,0 +1,38 @@
+{
+  "id": "1731D",
+  "source": "problemset",
+  "contest_id": 1731,
+  "problem_index": "D",
+  "name": "Valiant's New Map",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "brute force",
+    "data structures",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 8747,
+  "problem_url": "https://codeforces.com/problemset/problem/1731/D",
+  "editorial_url": "https://codeforces.com/blog/entry/110630",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Game studio \"DbZ Games\" wants to introduce another map in their popular game \"Valiant\". This time, the map named \"Panvel\" will be based on the city of Mumbai. Mumbai can be represented as $$$n \\times m$$$ cellular grid. Each cell $$$(i, j)$$$ ($$$1 \\le i \\le n$$$; $$$1 \\le j \\le m$$$) of the grid is occupied by a cuboid building of height $$$a_{i,j}$$$. This time, DbZ Games want to make a map that has perfect vertical gameplay. That's why they want to choose an $$$l \\times l$$$ square inside Mumbai, such that each building inside the square has a height of at least $$$l$$$. Can you help DbZ Games find such a square of the maximum possible size $$$l$$$?",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 1000$$$). Description of the test cases follows. The first line of each test case contains two positive integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le m$$$; $$$1 \\leq n \\cdot m \\leq 10^6$$$). The $$$i$$$-th of next $$$n$$$ lines contains $$$m$$$ integers $$$a_{i,1}, a_{i,2}, \\dots, a_{i,m}$$$ ($$$1 \\leq a_{i,j} \\leq 10^6$$$) — heights of buildings on the $$$i$$$-th row. It's guaranteed that the sum of $$$n \\cdot m$$$ over all test cases doesn't exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print the maximum side length $$$l$$$ of the square DbZ Games can choose.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 2\n2 3\n4 5\n1 3\n1 2 3\n2 3\n4 4 3\n2 1 4\n5 6\n1 9 4 6 5 8\n10 9 5 8 11 6\n24 42 32 8 11 1\n23 1 9 69 13 3\n13 22 60 12 14 17",
+      "output": "2\n1\n1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

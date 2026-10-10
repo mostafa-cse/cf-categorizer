@@ -1,0 +1,39 @@
+{
+  "id": "2027C",
+  "source": "problemset",
+  "contest_id": 2027,
+  "problem_index": "C",
+  "name": "Add Zeros",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 14384,
+  "problem_url": "https://codeforces.com/problemset/problem/2027/C",
+  "editorial_url": "https://codeforces.com/blog/entry/135558",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You're given an array $$$a$$$ initially containing $$$n$$$ integers. In one operation, you must do the following: Choose a position $$$i$$$ such that $$$1 \\lt i \\le |a|$$$ and $$$a_i = |a| + 1 - i$$$, where $$$|a|$$$ is the current size of the array. Append $$$i - 1$$$ zeros onto the end of $$$a$$$. After performing this operation as many times as you want, what is the maximum possible length of the array $$$a$$$?",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains $$$n$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$) — the length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^{12}$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum possible length of $$$a$$$ after performing some sequence of operations.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n2 4 6 2 5\n5\n5 4 4 5 1\n4\n6 8 2 3\n1\n1",
+      "output": "10\n11\n10\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

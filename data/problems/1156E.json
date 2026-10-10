@@ -1,0 +1,41 @@
+{
+  "id": "1156E",
+  "source": "problemset",
+  "contest_id": 1156,
+  "problem_index": "E",
+  "name": "Special Segments of Permutation",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dsu",
+    "two pointers"
+  ],
+  "solved_count": 4367,
+  "problem_url": "https://codeforces.com/problemset/problem/1156/E",
+  "editorial_url": "https://codeforces.com/blog/entry/66827",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a permutation $$$p$$$ of $$$n$$$ integers $$$1$$$, $$$2$$$, ..., $$$n$$$ (a permutation is an array where each element from $$$1$$$ to $$$n$$$ occurs exactly once). Let's call some subsegment $$$p[l, r]$$$ of this permutation special if $$$p_l + p_r = \\max \\limits_{i = l}^{r} p_i$$$. Please calculate the number of special subsegments.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$). The second line contains $$$n$$$ integers $$$p_1$$$, $$$p_2$$$, ..., $$$p_n$$$ ($$$1 \\le p_i \\le n$$$). All these integers are pairwise distinct.",
+  "output_specification": "Print the number of special subsegments of the given permutation.",
+  "sample_testcases": [
+    {
+      "input": "5\n3 4 1 5 2",
+      "output": "2"
+    },
+    {
+      "input": "3\n1 3 2",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:42",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

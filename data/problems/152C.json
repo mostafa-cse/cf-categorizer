@@ -1,0 +1,38 @@
+{
+  "id": "152C",
+  "source": "problemset",
+  "contest_id": 152,
+  "problem_index": "C",
+  "name": "Pocket Book",
+  "rating": 1400,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 11827,
+  "problem_url": "https://codeforces.com/problemset/problem/152/C",
+  "editorial_url": "https://codeforces.com/blog/entry/3926",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day little Vasya found mom's pocket book. The book had n names of her friends and unusually enough, each name was exactly m letters long. Let's number the names from 1 to n in the order in which they are written. As mom wasn't home, Vasya decided to play with names: he chose three integers i , j , k ( 1 ≤ i < j ≤ n , 1 ≤ k ≤ m ), then he took names number i and j and swapped their prefixes of length k . For example, if we take names \" CBDAD \" and \" AABRD \" and swap their prefixes with the length of 3 , the result will be names \" AABAD \" and \" CBDRD \". You wonder how many different names Vasya can write instead of name number 1 , if Vasya is allowed to perform any number of the described actions. As Vasya performs each action, he chooses numbers i , j , k independently from the previous moves and his choice is based entirely on his will. The sought number can be very large, so you should only find it modulo 1000000007 (10 9 + 7) .",
+  "input_specification": "The first input line contains two integers n and m ( 1 ≤ n , m ≤ 100 ) — the number of names and the length of each name, correspondingly. Then n lines contain names, each name consists of exactly m uppercase Latin letters.",
+  "output_specification": "Print the single number — the number of different names that could end up in position number 1 in the pocket book after the applying the procedures described above. Print the number modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "2 3\nAAB\nBAA",
+      "output": "4"
+    },
+    {
+      "input": "4 5\nABABA\nBCGDG\nAAAAA\nYABSA",
+      "output": "216"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:43",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

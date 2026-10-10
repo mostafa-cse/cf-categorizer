@@ -1,0 +1,42 @@
+{
+  "id": "850E",
+  "source": "problemset",
+  "contest_id": 850,
+  "problem_index": "E",
+  "name": "Random Elections",
+  "rating": 2800,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "divide and conquer",
+    "fft",
+    "math"
+  ],
+  "solved_count": 580,
+  "problem_url": "https://codeforces.com/problemset/problem/850/E",
+  "editorial_url": "https://codeforces.com/blog/entry/54317",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "The presidential election is coming in Bearland next year! Everybody is so excited about this! So far, there are three candidates, Alice, Bob, and Charlie. There are n citizens in Bearland. The election result will determine the life of all citizens of Bearland for many years. Because of this great responsibility, each of n citizens will choose one of six orders of preference between Alice, Bob and Charlie uniformly at random, independently from other voters. The government of Bearland has devised a function to help determine the outcome of the election given the voters preferences. More specifically, the function is (takes n boolean numbers and returns a boolean number). The function also obeys the following property: f (1 - x 1 , 1 - x 2 , ..., 1 - x n ) = 1 - f ( x 1 , x 2 , ..., x n ) . Three rounds will be run between each pair of candidates: Alice and Bob, Bob and Charlie, Charlie and Alice. In each round, x i will be equal to 1 , if i -th citizen prefers the first candidate to second in this round, and 0 otherwise. After this, y = f ( x 1 , x 2 , ..., x n ) will be calculated. If y = 1 , the first candidate will be declared as winner in this round. If y = 0 , the second will be the winner, respectively. Define the probability that there is a candidate who won two rounds as p . p ·6 n is always an integer. Print the value of this integer modulo 10 9 + 7 = 1 000 000 007 .",
+  "input_specification": "The first line contains one integer n ( 1 ≤ n ≤ 20 ). The next line contains a string of length 2 n of zeros and ones, representing function f . Let b k ( x ) the k -th bit in binary representation of x , i -th (0-based) digit of this string shows the return value of f ( b 1 ( i ), b 2 ( i ), ..., b n ( i )) . It is guaranteed that f (1 - x 1 , 1 - x 2 , ..., 1 - x n ) = 1 - f ( x 1 , x 2 , ..., x n ) for any values of x 1 , x 2 , ldots , x n .",
+  "output_specification": "Output one integer — answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3\n01010101",
+      "output": "216"
+    },
+    {
+      "input": "3\n01101001",
+      "output": "168"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

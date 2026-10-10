@@ -1,0 +1,40 @@
+{
+  "id": "1725D",
+  "source": "problemset",
+  "contest_id": 1725,
+  "problem_index": "D",
+  "name": "Deducing Sortability",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "math"
+  ],
+  "solved_count": 261,
+  "problem_url": "https://codeforces.com/problemset/problem/1725/D",
+  "editorial_url": "https://codeforces.com/blog/entry/106567",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Let's say Pak Chanek has an array $$$A$$$ consisting of $$$N$$$ positive integers. Pak Chanek will do a number of operations. In each operation, Pak Chanek will do the following: Choose an index $$$p$$$ ($$$1 \\leq p \\leq N$$$). Let $$$c$$$ be the number of operations that have been done on index $$$p$$$ before this operation. Decrease the value of $$$A_p$$$ by $$$2^c$$$. Multiply the value of $$$A_p$$$ by $$$2$$$. After each operation, all elements of $$$A$$$ must be positive integers . An array $$$A$$$ is said to be sortable if and only if Pak Chanek can do zero or more operations so that $$$A_1 \\lt A_2 \\lt A_3 \\lt A_4 \\lt \\ldots \\lt A_N$$$. Pak Chanek must find an array $$$A$$$ that is sortable with length $$$N$$$ such that $$$A_1 + A_2 + A_3 + A_4 + \\ldots + A_N$$$ is the minimum possible. If there are more than one possibilities, Pak Chanek must choose the array that is lexicographically minimum among them. Pak Chanek must solve the following things: Pak Chanek must print the value of $$$A_1 + A_2 + A_3 + A_4 + \\ldots + A_N$$$ for that array. $$$Q$$$ questions will be given. For the $$$i$$$-th question, an integer $$$P_i$$$ is given. Pak Chanek must print the value of $$$A_{P_i}$$$. Help Pak Chanek solve the problem. Note: an array $$$B$$$ of size $$$N$$$ is said to be lexicographically smaller than an array $$$C$$$ that is also of size $$$N$$$ if and only if there exists an index $$$i$$$ such that $$$B_i \\lt C_i$$$ and for each $$$j \\lt i$$$, $$$B_j = C_j$$$.",
+  "input_specification": "The first line contains two integers $$$N$$$ and $$$Q$$$ ($$$1 \\leq N \\leq 10^9$$$, $$$0 \\leq Q \\leq \\min(N, 10^5)$$$) — the required length of array $$$A$$$ and the number of questions. The $$$i$$$-th of the next $$$Q$$$ lines contains a single integer $$$P_i$$$ ($$$1 \\leq P_1 \\lt P_2 \\lt \\ldots \\lt P_Q \\leq N$$$) — the index asked in the $$$i$$$-th question.",
+  "output_specification": "Print $$$Q+1$$$ lines. The $$$1$$$-st line contains an integer representing $$$A_1 + A_2 + A_3 + A_4 + \\ldots + A_N$$$. For each $$$1 \\leq i \\leq Q$$$, the $$$(i+1)$$$-th line contains an integer representing $$$A_{P_i}$$$.",
+  "sample_testcases": [
+    {
+      "input": "6 3\n1\n4\n5",
+      "output": "17\n1\n3\n4"
+    },
+    {
+      "input": "1 0",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

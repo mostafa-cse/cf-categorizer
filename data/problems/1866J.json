@@ -1,0 +1,34 @@
+{
+  "id": "1866J",
+  "source": "problemset",
+  "contest_id": 1866,
+  "problem_index": "J",
+  "name": "Jackets and Packets",
+  "rating": 2800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 454,
+  "problem_url": "https://codeforces.com/problemset/problem/1866/J",
+  "editorial_url": "https://codeforces.com/blog/entry/120025",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Pak Chanek has $$$N$$$ jackets that are stored in a wardrobe. Pak Chanek's wardrobe has enough room for two stacks of jackets, namely the left stack and the right stack. Initially, all $$$N$$$ jackets are in the left stack, while the right stack is empty. Initially, the $$$i$$$-th jacket from the top of the left stack has colour $$$C_i$$$. Pak Chanek wants to pack all of those jackets into some packets, such that the jackets in the same packet has the same colour. However, it is possible for two jackets with the same colour to be in different packets. Pak Chanek can do two kinds of operations: Pak Chanek can pick any number of jackets from the top from one stack as long as the colour is the same, then take those jackets out of the stack and pack them into a packet. This packing operation takes $$$X$$$ minutes, no matter how many jackets are packed. Pak Chanek can move one topmost jacket from one stack to the top of the other stack ( possibly right to left or left to right ). This moving operation takes $$$Y$$$ minutes. Determine the minimum time to pack all jackets!",
+  "input_specification": "The first line contains three integers $$$N$$$, $$$X$$$, and $$$Y$$$ ($$$1 \\leq N \\leq 400$$$; $$$1\\leq X,Y\\leq10^9$$$) — the number of jackets, the time to do a packing operation, and the time to do a movement operation. The second line contains $$$N$$$ integers $$$C_1, C_2, C_3, \\ldots, C_N$$$ ($$$1 \\leq C_i \\leq N$$$) — the colour of each jacket.",
+  "output_specification": "An integer representing the minimum time to pack all jackets.",
+  "sample_testcases": [
+    {
+      "input": "8 7 2\n4 4 2 4 1 2 2 1",
+      "output": "38"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

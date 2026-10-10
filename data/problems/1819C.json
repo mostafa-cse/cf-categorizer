@@ -1,0 +1,46 @@
+{
+  "id": "1819C",
+  "source": "problemset",
+  "contest_id": 1819,
+  "problem_index": "C",
+  "name": "The Fox and the Complete Tree Traversal",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "implementation",
+    "math",
+    "trees"
+  ],
+  "solved_count": 1795,
+  "problem_url": "https://codeforces.com/problemset/problem/1819/C",
+  "editorial_url": "https://codeforces.com/blog/entry/115133",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The fox Yae climbed the tree of the Sacred Sakura. A tree is a connected undirected graph that does not contain cycles. The fox uses her magical powers to move around the tree. Yae can jump from vertex $$$v$$$ to another vertex $$$u$$$ if and only if the distance between these vertices does not exceed $$$2$$$. In other words, in one jump Yae can jump from vertex $$$v$$$ to vertex $$$u$$$ if vertices $$$v$$$ and $$$u$$$ are connected by an edge, or if there exists such vertex $$$w$$$ that vertices $$$v$$$ and $$$w$$$ are connected by an edge, and also vertices $$$u$$$ and $$$w$$$ are connected by an edge. After Yae was able to get the sakura petal, she wondered if there was a cyclic route in the tree $$$v_1, v_2, \\ldots, v_n$$$ such that: the fox can jump from vertex $$$v_i$$$ to vertex $$$v_{i + 1}$$$, the fox can jump from vertex $$$v_n$$$ to vertex $$$v_1$$$, all $$$v_i$$$ are pairwise distinct. Help the fox determine if the required traversal exists.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) —the number of vertices of the tree. Each of the following $$$n - 1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\ne v$$$) — vertices connected by an edge. It is guaranteed that these edges form a tree.",
+  "output_specification": "On the first line, print \" Yes \" (without quotes) if the required route of the tree exists, or \" No \" (without quotes) otherwise. If the required tree traversal exists, on the second line print $$$n$$$ integers of different integers $$$v_1, v_2, \\ldots, v_n$$$ ($$$1 \\le v_i \\le n$$$) — the vertices of the tree in traversal order. If there are several correct traversals, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n1 3\n3 4\n3 5",
+      "output": "Yes\n4 5 1 2 3"
+    },
+    {
+      "input": "3\n1 2\n1 3",
+      "output": "Yes\n1 2 3"
+    },
+    {
+      "input": "15\n1 2\n1 3\n2 4\n2 5\n3 6\n3 7\n4 8\n4 9\n5 10\n5 11\n6 12\n6 13\n7 14\n7 15",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

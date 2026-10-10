@@ -1,0 +1,42 @@
+{
+  "id": "314E",
+  "source": "problemset",
+  "contest_id": 314,
+  "problem_index": "E",
+  "name": "Sereja and Squares",
+  "rating": 2900,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 441,
+  "problem_url": "https://codeforces.com/problemset/problem/314/E",
+  "editorial_url": "https://codeforces.com/blog/entry/7905",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Sereja painted n points on the plane, point number i (1 ≤ i ≤ n ) has coordinates ( i , 0) . Then Sereja marked each point with a small or large English letter. Sereja don't like letter \" x \", so he didn't use it to mark points. Sereja thinks that the points are marked beautifully if the following conditions holds: all points can be divided into pairs so that each point will belong to exactly one pair; in each pair the point with the lesser abscissa will be marked with a small English letter and the point with the larger abscissa will be marked with the same large English letter; if we built a square on each pair, the pair's points will be the square's opposite points and the segment between them will be the square's diagonal, then among the resulting squares there won't be any intersecting or touching ones. Little Petya erased some small and all large letters marking the points. Now Sereja wonders how many ways are there to return the removed letters so that the points were marked beautifully.",
+  "input_specification": "The first line contains integer n the number of points (1 ≤ n ≤ 10 5 ) . The second line contains a sequence consisting of n small English letters and question marks — the sequence of letters, that mark points, in order of increasing x -coordinate of points. Question marks denote the points without letters (Petya erased them). It is guaranteed that the input string doesn't contain letter \" x \".",
+  "output_specification": "In a single line print the answer to the problem modulo 4294967296 . If there is no way to return the removed letters, print number 0 . Please, do not write the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "4\na???",
+      "output": "50"
+    },
+    {
+      "input": "4\nabc?",
+      "output": "0"
+    },
+    {
+      "input": "6\nabc???",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:29",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

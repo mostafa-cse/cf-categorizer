@@ -1,0 +1,40 @@
+{
+  "id": "976C",
+  "source": "problemset",
+  "contest_id": 976,
+  "problem_index": "C",
+  "name": "Nested Segments",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 11784,
+  "problem_url": "https://codeforces.com/problemset/problem/976/C",
+  "editorial_url": "https://codeforces.com/blog/entry/59195",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a sequence a 1 , a 2 , ..., a n of one-dimensional segments numbered 1 through n . Your task is to find two distinct indices i and j such that segment a i lies within segment a j . Segment [ l 1 , r 1 ] lies within segment [ l 2 , r 2 ] iff l 1 ≥ l 2 and r 1 ≤ r 2 . Print indices i and j . If there are multiple answers, print any of them. If no answer exists, print -1 -1 .",
+  "input_specification": "The first line contains one integer n ( 1 ≤ n ≤ 3·10 5 ) — the number of segments. Each of the next n lines contains two integers l i and r i ( 1 ≤ l i ≤ r i ≤ 10 9 ) — the i -th segment.",
+  "output_specification": "Print two distinct indices i and j such that segment a i lies within segment a j . If there are multiple answers, print any of them. If no answer exists, print -1 -1 .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 10\n2 9\n3 9\n2 3\n2 9",
+      "output": "2 1"
+    },
+    {
+      "input": "3\n1 5\n2 6\n6 20",
+      "output": "-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:24",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

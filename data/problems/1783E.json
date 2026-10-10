@@ -1,0 +1,37 @@
+{
+  "id": "1783E",
+  "source": "problemset",
+  "contest_id": 1783,
+  "problem_index": "E",
+  "name": "Game of the Year",
+  "rating": 2300,
+  "tags": [
+    "brute force",
+    "data structures",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2570,
+  "problem_url": "https://codeforces.com/problemset/problem/1783/E",
+  "editorial_url": "https://codeforces.com/blog/entry/111194",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp and Polycarp are playing a computer game. This game features $$$n$$$ bosses for the playing to kill, numbered from $$$1$$$ to $$$n$$$. They will fight each boss the following way: Monocarp makes $$$k$$$ attempts to kill the boss; Polycarp makes $$$k$$$ attempts to kill the boss; Monocarp makes $$$k$$$ attempts to kill the boss; Polycarp makes $$$k$$$ attempts to kill the boss; ... Monocarp kills the $$$i$$$-th boss on his $$$a_i$$$-th attempt. Polycarp kills the $$$i$$$-th boss on his $$$b_i$$$-th attempt. After one of them kills the $$$i$$$-th boss, they move on to the $$$(i+1)$$$-st boss. The attempt counters reset for both of them. Once one of them kills the $$$n$$$-th boss, the game ends. Find all values of $$$k$$$ from $$$1$$$ to $$$n$$$ such that Monocarp kills all bosses .",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of bosses. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the index of attempt Monocarp kills each boss on. The third line contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_i \\le n$$$) — the index of attempt Polycarp kills each boss on. The sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print two lines. The first line should contain a single integer $$$\\mathit{cnt}$$$ — the number of values of $$$k$$$ from $$$1$$$ to $$$n$$$ such that Monocarp kills all bosses . The second line should contain $$$\\mathit{cnt}$$$ distinct integers — the values of $$$k$$$ themselves.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n1 1 1\n2 3 1\n1\n1\n1\n4\n1 4 3 2\n3 3 4 1",
+      "output": "3\n1 2 3 \n1\n1 \n2\n2 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

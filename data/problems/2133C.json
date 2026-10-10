@@ -1,0 +1,35 @@
+{
+  "id": "2133C",
+  "source": "problemset",
+  "contest_id": 2133,
+  "problem_index": "C",
+  "name": "The Nether",
+  "rating": 1400,
+  "tags": [
+    "graphs",
+    "interactive"
+  ],
+  "solved_count": 13534,
+  "problem_url": "https://codeforces.com/problemset/problem/2133/C",
+  "editorial_url": "https://codeforces.com/blog/entry/145785",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Having recently discovered The Nether, Steve has built a network of $$$n$$$ nether portals, each at a different location in his world. Each portal is connected in one direction to some number (possibly zero) of other portals. To avoid getting lost, Steve has carefully built the network of portals so that there is no sequence of jumps through portals that will bring you from a location back to itself; formally, the network forms a directed acyclic graph. Steve refuses to tell you which portals are connected to which, but he will allow you to ask queries. In each query, you give Steve a set of locations $$$S = \\{s_1, s_2, \\ldots, s_k\\}$$$ and a starting location $$$x \\in S$$$. Steve will figure out the longest path starting at $$$x$$$ that only passes through locations in $$$S$$$ and tell you the number of locations in it. (If it is impossible to reach any other location in $$$S$$$ from $$$x$$$, Steve will reply with $$$1$$$.) As you are looking to obtain the achievement \"Hot Tourist Destinations\", you want to find any path that visits as many locations as possible. Steve is feeling particularly generous and will give you $$$2 \\cdot n$$$ queries to find it.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The only line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 500$$$) — the number of locations. It is guaranteed that the sum of $$$n^3$$$ over all test cases does not exceed $$$500^3$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n\n3\n\n3\n\n2\n\n1\n\n\n2\n\n1\n\n1",
+      "output": "? 1 4 1 2 3 4\n\n? 3 3 4 3 2\n\n? 5 2 1 5\n\n? 2 2 2 4\n\n! 4 5 1 4 2\n\n\n? 1 2 1 2\n\n? 2 2 1 2\n\n! 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

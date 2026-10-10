@@ -1,0 +1,52 @@
+{
+  "id": "379D",
+  "source": "problemset",
+  "contest_id": 379,
+  "problem_index": "D",
+  "name": "New Year Letter",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp"
+  ],
+  "solved_count": 1705,
+  "problem_url": "https://codeforces.com/problemset/problem/379/D",
+  "editorial_url": "https://codeforces.com/blog/entry/10171",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Many countries have such a New Year or Christmas tradition as writing a letter to Santa including a wish list for presents. Vasya is an ordinary programmer boy. Like all ordinary boys, he is going to write the letter to Santa on the New Year Eve (we Russians actually expect Santa for the New Year, not for Christmas). Vasya has come up with an algorithm he will follow while writing a letter. First he chooses two strings, s 1 anf s 2 , consisting of uppercase English letters. Then the boy makes string s k , using a recurrent equation s n = s n - 2 + s n - 1 , operation ' + ' means a concatenation (that is, the sequential record) of strings in the given order. Then Vasya writes down string s k on a piece of paper, puts it in the envelope and sends in to Santa. Vasya is absolutely sure that Santa will bring him the best present if the resulting string s k has exactly x occurrences of substring AC (the short-cut reminds him оf accepted problems). Besides, Vasya decided that string s 1 should have length n , and string s 2 should have length m . Vasya hasn't decided anything else. At the moment Vasya's got urgent New Year business, so he asks you to choose two strings for him, s 1 and s 2 in the required manner. Help Vasya.",
+  "input_specification": "The first line contains four integers k , x , n , m (3 ≤ k ≤ 50; 0 ≤ x ≤ 10 9 ; 1 ≤ n , m ≤ 100) .",
+  "output_specification": "In the first line print string s 1 , consisting of n uppercase English letters. In the second line print string s 2 , consisting of m uppercase English letters. If there are multiple valid strings, print any of them. If the required pair of strings doesn't exist, print \" Happy new year! \" without the quotes.",
+  "sample_testcases": [
+    {
+      "input": "3 2 2 2",
+      "output": "AC\nAC"
+    },
+    {
+      "input": "3 3 2 2",
+      "output": "Happy new year!"
+    },
+    {
+      "input": "3 0 2 2",
+      "output": "AA\nAA"
+    },
+    {
+      "input": "4 3 2 1",
+      "output": "Happy new year!"
+    },
+    {
+      "input": "4 2 2 1",
+      "output": "Happy new year!"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "172C",
+  "source": "problemset",
+  "contest_id": 172,
+  "problem_index": "C",
+  "name": "Bus",
+  "rating": 1500,
+  "tags": [
+    "*special",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 1266,
+  "problem_url": "https://codeforces.com/problemset/problem/172/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4262",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There is a bus stop near the university. The lessons are over, and n students come to the stop. The i -th student will appear at the bus stop at time t i (all t i 's are distinct). We shall assume that the stop is located on the coordinate axis Ox , at point x = 0 , and the bus goes along the ray Ox , that is, towards the positive direction of the coordinate axis, and back. The i -th student needs to get to the point with coordinate x i ( x i > 0 ). The bus moves by the following algorithm. Initially it is at point 0. The students consistently come to the stop and get on it. The bus has a seating capacity which is equal to m passengers. At the moment when m students get on the bus, it starts moving in the positive direction of the coordinate axis. Also it starts moving when the last ( n -th) student gets on the bus. The bus is moving at a speed of 1 unit of distance per 1 unit of time, i.e. it covers distance y in time y . Every time the bus passes the point at which at least one student needs to get off, it stops and these students get off the bus. The students need 1 + [ k / 2] units of time to get off the bus, where k is the number of students who leave at this point. Expression [ k / 2] denotes rounded down k / 2 . As soon as the last student leaves the bus, the bus turns around and goes back to the point x = 0 . It doesn't make any stops until it reaches the point. At the given point the bus fills with students once more, and everything is repeated. If students come to the stop when there's no bus, they form a line (queue) and get on the bus in the order in which they came. Any number of students get on the bus in negligible time, you should assume that it doesn't take any time. Any other actions also take no time. The bus has no other passengers apart from the students. Write a program that will determine for each student the time when he got off the bus. The moment a student got off the bus is the moment the bus stopped at the student's destination stop (despite the fact that the group of students need some time to get off).",
+  "input_specification": "The first line contains two space-separated integers n , m ( 1 ≤ n , m ≤ 10 5 ) — the number of students and the number of passengers the bus can transport, correspondingly. Next n lines contain descriptions of the students, one per line. Each line contains a pair of integers t i , x i ( 1 ≤ t i ≤ 10 5 , 1 ≤ x i ≤ 10 4 ). The lines are given in the order of strict increasing of t i . Values of x i can coincide.",
+  "output_specification": "Print n numbers w 1 , w 2 , ..., w n , w i — the moment of time when the i -th student got off the bus. Print the numbers on one line and separate them with single spaces.",
+  "sample_testcases": [
+    {
+      "input": "1 10\n3 5",
+      "output": "8"
+    },
+    {
+      "input": "2 1\n3 5\n4 5",
+      "output": "8 19"
+    },
+    {
+      "input": "5 4\n3 5\n4 5\n5 5\n6 5\n7 1",
+      "output": "11 11 11 11 20"
+    },
+    {
+      "input": "20 4\n28 13\n31 13\n35 6\n36 4\n52 6\n53 4\n83 2\n84 4\n87 1\n93 6\n108 4\n113 6\n116 1\n125 2\n130 2\n136 13\n162 2\n166 4\n184 1\n192 2",
+      "output": "51 51 43 40 93 89 86 89 114 121 118 121 137 139 139 152 195 199 193 195"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:34",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

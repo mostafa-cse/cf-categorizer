@@ -1,0 +1,47 @@
+{
+  "id": "1616H",
+  "source": "problemset",
+  "contest_id": 1616,
+  "problem_index": "H",
+  "name": "Keep XOR Low",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1423,
+  "problem_url": "https://codeforces.com/problemset/problem/1616/H",
+  "editorial_url": "https://codeforces.com/blog/entry/98501",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a_1, a_2, \\ldots, a_n$$$ and an integer $$$x$$$. Find the number of non-empty subsets of indices of this array $$$1 \\leq b_1 \\lt b_2 \\lt \\ldots \\lt b_k \\leq n$$$, such that for all pairs $$$(i, j)$$$ where $$$1 \\leq i \\lt j \\leq k$$$, the inequality $$$a_{b_i} \\oplus a_{b_j} \\leq x$$$ is held. Here, $$$\\oplus$$$ denotes the bitwise XOR operation . As the answer may be very large, output it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$x$$$ ($$$1 \\leq n \\leq 150\\,000$$$, $$$0 \\leq x \\lt 2^{30}$$$). Here, $$$n$$$ is the size of the array. The next line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\lt 2^{30}$$$): the array itself.",
+  "output_specification": "Print one integer: the number of non-empty subsets such that the bitwise XOR of every pair of elements is at most $$$x$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n0 1 2 3",
+      "output": "8"
+    },
+    {
+      "input": "3 6\n4 2 2",
+      "output": "7"
+    },
+    {
+      "input": "4 0\n1 1 2 2",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

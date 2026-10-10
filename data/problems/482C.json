@@ -1,0 +1,44 @@
+{
+  "id": "482C",
+  "source": "problemset",
+  "contest_id": 482,
+  "problem_index": "C",
+  "name": "Game with Strings",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "probabilities"
+  ],
+  "solved_count": 1041,
+  "problem_url": "https://codeforces.com/problemset/problem/482/C",
+  "editorial_url": "https://codeforces.com/blog/entry/14417",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You play the game with your friend. The description of this game is listed below. Your friend creates n distinct strings of the same length m and tells you all the strings. Then he randomly chooses one of them. He chooses strings equiprobably, i.e. the probability of choosing each of the n strings equals . You want to guess which string was chosen by your friend. In order to guess what string your friend has chosen, you are allowed to ask him questions. Each question has the following form: «What character stands on position pos in the string you have chosen?» A string is considered guessed when the answers to the given questions uniquely identify the string. After the string is guessed, you stop asking questions. You do not have a particular strategy, so as each question you equiprobably ask about a position that hasn't been yet mentioned. Your task is to determine the expected number of questions needed to guess the string chosen by your friend.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 50 ) — the number of strings your friend came up with. The next n lines contain the strings that your friend has created. It is guaranteed that all the strings are distinct and only consist of large and small English letters. Besides, the lengths of all strings are the same and are between 1 to 20 inclusive.",
+  "output_specification": "Print the single number — the expected value. Your answer will be considered correct if its absolute or relative error doesn't exceed 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "2\naab\naac",
+      "output": "2.000000000000000"
+    },
+    {
+      "input": "3\naaA\naBa\nCaa",
+      "output": "1.666666666666667"
+    },
+    {
+      "input": "3\naca\nvac\nwqq",
+      "output": "1.000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

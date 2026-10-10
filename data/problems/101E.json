@@ -1,0 +1,43 @@
+{
+  "id": "101E",
+  "source": "problemset",
+  "contest_id": 101,
+  "problem_index": "E",
+  "name": "Candies and Stones",
+  "rating": 2500,
+  "tags": [
+    "divide and conquer",
+    "dp"
+  ],
+  "solved_count": 664,
+  "problem_url": "https://codeforces.com/problemset/problem/101/E",
+  "editorial_url": "https://codeforces.com/blog/entry/2393",
+  "time_limit": "7.5 seconds",
+  "memory_limit": "45 megabytes",
+  "description": "Little Gerald and his coach Mike play an interesting game. At the beginning of the game there is a pile consisting of n candies and a pile consisting of m stones. Gerald and Mike move in turns, Mike goes first. During his move Mike checks how many candies and stones Gerald has eaten. Let Gerald eat a candies and b stones. Then Mike awards Gerald f ( a , b ) prize points. Gerald during his move either eats a candy from the pile of candies or a stone from the pile of stones. As Mike sees that Gerald has eaten everything apart one candy and one stone, he awards points for the last time and the game ends. Gerald is not allowed to eat all the candies, and he is not allowed to eat all the stones too. Tell Gerald how to play to get the largest possible number of points: it is required to find one of the possible optimal playing strategies for Gerald.",
+  "input_specification": "The first line contains three integers n , m , p ( 1 ≤ n , m ≤ 20000 , 1 ≤ p ≤ 10 9 ). The second line contains n integers x 0 , x 1 , ..., x n - 1 ( 0 ≤ x i ≤ 20000 ). The third line contains m integers y 0 , y 1 , ..., y m - 1 ( 0 ≤ y i ≤ 20000 ). The value of f ( a , b ) is calculated as a remainder of the division of the sum x a + y b by number p .",
+  "output_specification": "Print on the first line the only number: the maximal number of points Gerald can earn. Print on the second line a sting consisting of n + m - 2 characters, each of which is either a \" C \" or \" S \", the i -th character should be \" C \" if Gerald's i -th move should be eating a candy and \" S \" if he should eat a stone.",
+  "sample_testcases": [
+    {
+      "input": "2 2 10\n0 0\n0 1",
+      "output": "2\nSC"
+    },
+    {
+      "input": "3 3 10\n0 2 0\n0 0 2",
+      "output": "10\nCSSC"
+    },
+    {
+      "input": "3 3 2\n0 1 1\n1 1 0",
+      "output": "4\nSCSC"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

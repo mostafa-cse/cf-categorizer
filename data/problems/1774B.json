@@ -1,0 +1,36 @@
+{
+  "id": "1774B",
+  "source": "problemset",
+  "contest_id": 1774,
+  "problem_index": "B",
+  "name": "Coloring",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 14249,
+  "problem_url": "https://codeforces.com/problemset/problem/1774/B",
+  "editorial_url": "https://codeforces.com/blog/entry/110184",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Cirno_9baka has a paper tape with $$$n$$$ cells in a row on it. As he thinks that the blank paper tape is too dull, he wants to paint these cells with $$$m$$$ kinds of colors. For some aesthetic reasons, he thinks that the $$$i$$$-th color must be used exactly $$$a_i$$$ times, and for every $$$k$$$ consecutive cells, their colors have to be distinct. Help Cirno_9baka to figure out if there is such a way to paint the cells.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10\\,000$$$)  — the number of test cases. The description of test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$, $$$k$$$ ($$$1 \\leq k \\leq n \\leq 10^9$$$, $$$1 \\leq m \\leq 10^5$$$, $$$m \\leq n$$$). Here $$$n$$$ denotes the number of cells, $$$m$$$ denotes the number of colors, and $$$k$$$ means that for every $$$k$$$ consecutive cells, their colors have to be distinct. The second line of each test case contains $$$m$$$ integers $$$a_1, a_2, \\cdots , a_m$$$ ($$$1 \\leq a_i \\leq n$$$)  — the numbers of times that colors have to be used. It's guaranteed that $$$a_1 + a_2 + \\ldots + a_m = n$$$. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output \"YES\" if there is at least one possible coloring scheme; otherwise, output \"NO\". You may print each letter in any case (for example, \"YES\", \"Yes\", \"yes\", and \"yEs\" will all be recognized as positive answers).",
+  "sample_testcases": [
+    {
+      "input": "2\n12 6 2\n1 1 1 1 1 7\n12 6 2\n2 2 2 2 2 2",
+      "output": "NO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "983B",
+  "source": "problemset",
+  "contest_id": 983,
+  "problem_index": "B",
+  "name": "XOR-pyramid",
+  "rating": 1800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 6527,
+  "problem_url": "https://codeforces.com/problemset/problem/983/B",
+  "editorial_url": "https://codeforces.com/blog/entry/59484",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "For an array $$$b$$$ of length $$$m$$$ we define the function $$$f$$$ as $$$ f(b) = \\begin{cases} b[1] & \\quad \\text{if } m = 1 \\\\ f(b[1] \\oplus b[2],b[2] \\oplus b[3],\\dots,b[m-1] \\oplus b[m]) & \\quad \\text{otherwise,} \\end{cases} $$$ where $$$\\oplus$$$ is bitwise exclusive OR . For example, $$$f(1,2,4,8)=f(1\\oplus2,2\\oplus4,4\\oplus8)=f(3,6,12)=f(3\\oplus6,6\\oplus12)=f(5,10)=f(5\\oplus10)=f(15)=15$$$ You are given an array $$$a$$$ and a few queries. Each query is represented as two integers $$$l$$$ and $$$r$$$. The answer is the maximum value of $$$f$$$ on all continuous subsegments of the array $$$a_l, a_{l+1}, \\ldots, a_r$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 5000$$$) — the length of $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 2^{30}-1$$$) — the elements of the array. The third line contains a single integer $$$q$$$ ($$$1 \\le q \\le 100\\,000$$$) — the number of queries. Each of the next $$$q$$$ lines contains a query represented as two integers $$$l$$$, $$$r$$$ ($$$1 \\le l \\le r \\le n$$$).",
+  "output_specification": "Print $$$q$$$ lines — the answers for the queries.",
+  "sample_testcases": [
+    {
+      "input": "3\n8 4 1\n2\n2 3\n1 2",
+      "output": "5\n12"
+    },
+    {
+      "input": "6\n1 2 4 8 16 32\n4\n1 6\n2 5\n3 4\n1 2",
+      "output": "60\n30\n12\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

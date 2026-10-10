@@ -1,0 +1,48 @@
+{
+  "id": "427D",
+  "source": "problemset",
+  "contest_id": 427,
+  "problem_index": "D",
+  "name": "Match & Catch",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 2786,
+  "problem_url": "https://codeforces.com/problemset/problem/427/D",
+  "editorial_url": "https://codeforces.com/blog/entry/12082",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Police headquarter is monitoring signal on different frequency levels. They have got two suspiciously encoded strings s 1 and s 2 from two different frequencies as signals. They are suspecting that these two strings are from two different criminals and they are planning to do some evil task. Now they are trying to find a common substring of minimum length between these two strings. The substring must occur only once in the first string, and also it must occur only once in the second string. Given two strings s 1 and s 2 consist of lowercase Latin letters, find the smallest (by length) common substring p of both s 1 and s 2 , where p is a unique substring in s 1 and also in s 2 . See notes for formal definition of substring and uniqueness.",
+  "input_specification": "The first line of input contains s 1 and the second line contains s 2 (1 ≤ | s 1 |, | s 2 | ≤ 5000) . Both strings consist of lowercase Latin letters.",
+  "output_specification": "Print the length of the smallest common unique substring of s 1 and s 2 . If there are no common unique substrings of s 1 and s 2 print -1.",
+  "sample_testcases": [
+    {
+      "input": "apple\npepperoni",
+      "output": "2"
+    },
+    {
+      "input": "lover\ndriver",
+      "output": "1"
+    },
+    {
+      "input": "bidhan\nroy",
+      "output": "-1"
+    },
+    {
+      "input": "testsetses\nteeptes",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

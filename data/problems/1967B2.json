@@ -1,0 +1,36 @@
+{
+  "id": "1967B2",
+  "source": "problemset",
+  "contest_id": 1967,
+  "problem_index": "B2",
+  "name": "Reverse Card (Hard Version)",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5034,
+  "problem_url": "https://codeforces.com/problemset/problem/1967/B2",
+  "editorial_url": "https://codeforces.com/blog/entry/129027",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The two versions are different problems. You may want to read both versions. You can make hacks only if both versions are solved. You are given two positive integers $$$n$$$, $$$m$$$. Calculate the number of ordered pairs $$$(a, b)$$$ satisfying the following conditions: $$$1\\le a\\le n$$$, $$$1\\le b\\le m$$$; $$$b \\cdot \\gcd(a,b)$$$ is a multiple of $$$a+b$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1\\le t\\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$, $$$m$$$ ($$$1\\le n,m\\le 2 \\cdot 10^6$$$). It is guaranteed that neither the sum of $$$n$$$ nor the sum of $$$m$$$ over all test cases exceeds $$$2 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, print a single integer: the number of valid pairs.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n2 3\n3 5\n10 8\n100 1233\n1000000 1145141",
+      "output": "0\n1\n1\n6\n423\n5933961"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:18",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

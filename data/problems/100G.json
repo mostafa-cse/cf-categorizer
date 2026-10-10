@@ -1,0 +1,40 @@
+{
+  "id": "100G",
+  "source": "problemset",
+  "contest_id": 100,
+  "problem_index": "G",
+  "name": "Name the album",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 145,
+  "problem_url": "https://codeforces.com/problemset/problem/100/G",
+  "editorial_url": "https://codeforces.com/blog/entry/2359",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "The famous singer, Aryo, is going to publish a new album of his great work! Unfortunately these days, there are many albums, Aryo wants to choose a new name for his album, a name that has not been used or at least has not been used recently. He has a list of all used album names together with the year the albums were published. He also has a list of suitable names for his album. If he finds a suitable name which has not been used before, he'll use it. Otherwise he will use the name which was used as long ago as possible. If two such names are found (that haven't been used or were used at the same year), he uses the name that is alphabetically latest. Help him name his album.",
+  "input_specification": "The first line contains a single integer n ( 0 ≤ n ≤ 10 5 ), the number of used names. The following n lines each contain a string (the album name) and an integer (the year album was published). Album names are made of lowercase Latin letters and contain at most 14 letters. The year is in range [1900, 2011] . The following line contains a single integer m ( 1 ≤ m ≤ 10 4 ), the number of suitable album names. The following m lines each contain a string — a suitable name. It contains at most 14 lowercase Latin letters. All album names and suitable names are non-empty .",
+  "output_specification": "Write a single string. The name of the new album.",
+  "sample_testcases": [
+    {
+      "input": "3\neyesonme 2008\nanewdayhascome 2002\noneheart 2003\n2\noneheart\nbienbien",
+      "output": "bienbien"
+    },
+    {
+      "input": "2\nnasimevasl 2003\nbasetareha 2006\n2\nnasimevasl\nbasetareha",
+      "output": "nasimevasl"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

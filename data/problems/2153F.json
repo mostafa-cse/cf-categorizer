@@ -1,0 +1,38 @@
+{
+  "id": "2153F",
+  "source": "problemset",
+  "contest_id": 2153,
+  "problem_index": "F",
+  "name": "Odd Queries on Odd Array",
+  "rating": 2900,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 348,
+  "problem_url": "https://codeforces.com/problemset/problem/2153/F",
+  "editorial_url": "https://codeforces.com/blog/entry/147264",
+  "time_limit": "10 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "An array $$$b$$$ of length $$$m$$$ is cute if there do not exist four indices $$$1\\le i \\lt j \\lt k \\lt l \\le m$$$ such that $$$b_i\\neq b_j$$$, $$$b_i = b_k$$$ and $$$b_j = b_l$$$. The beauty of an array $$$b$$$ of length $$$m$$$ is defined as the sum of all distinct values that appear an odd number of times in array $$$b$$$. Formally, let $$$\\operatorname{cnt}(b, x)$$$ denote the number of times the value $$$x$$$ appears in array $$$b$$$. Then, the beauty is given by $$$$$$\\sum\\limits_{\\substack{x\\in \\mathbb{Z}\\\\\\operatorname{cnt}(b, x)\\text{ is odd}}}x.$$$$$$ You are given a cute array $$$a$$$ of length $$$n$$$, and you need to answer $$$q$$$ queries online. Each query consists of two integers $$$l$$$ and $$$r$$$ ($$$1\\le l\\le r\\le n$$$), and you must compute the beauty of the subarray $$$a_{l\\ldots r}$$$$$$^{\\text{∗}}$$$. Note that the queries are encoded; each subsequent query can only be decoded after calculating the answer to the preceding query. $$$^{\\text{∗}}$$$The subarray $$$a_{l \\ldots r}$$$ refers to the contiguous segment of the array $$$a$$$ that starts at index $$$l$$$ and ends at index $$$r$$$, i.e., $$$[a_l, a_{l+1}, \\ldots, a_r]$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$1\\le n, q\\le 5\\cdot 10^5$$$) — the length of array $$$a$$$ and the number of queries. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1\\le a_i\\le n$$$) — the elements of the cute array $$$a$$$. The $$$i$$$-th of the next $$$q$$$ lines contains two integers $$$x'_i$$$ and $$$y'_i$$$ ($$$1\\le x'_i, y'_i\\le n$$$) — the endpoints of the queried subarray in an encoded form. Let $$$\\text{ans}_i$$$ be the answer to the $$$i$$$-th query, with $$$\\text{ans}_0 = 0$$$. Then, we calculate $$$x_i = ((x'_i - 1 + \\text{ans}_{i - 1}) \\bmod n) + 1$$$ and $$$y_i = ((y'_i - 1 + \\text{ans}_{i - 1}) \\bmod n) + 1$$$. The endpoints of the $$$i$$$-th queried subarray, $$$l_i$$$ and $$$r_i$$$, are decoded as $$$l_i = \\min(x_i, y_i)$$$ and $$$r_i = \\max(x_i, y_i)$$$. It is guaranteed that the given array $$$a$$$ satisfies the conditions of a cute array. It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ over all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$q$$$ integers representing the answers to each query.",
+  "sample_testcases": [
+    {
+      "input": "3\n11 4\n1 1 2 2 3 3 3 2 2 1 1\n7 10\n5 11\n8 6\n2 8\n6 2\n1 3 2 3 4 3\n1 6\n1 4\n3 6\n3 3 3\n1 1\n1 2\n3 1\n2 2\n2 3\n3 3",
+      "output": "4 5 4 0\n10 6\n3 0 3 3 0 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

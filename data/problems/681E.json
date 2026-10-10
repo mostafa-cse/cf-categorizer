@@ -1,0 +1,39 @@
+{
+  "id": "681E",
+  "source": "problemset",
+  "contest_id": 681,
+  "problem_index": "E",
+  "name": "Runaway to a Shadow",
+  "rating": 2500,
+  "tags": [
+    "geometry",
+    "sortings"
+  ],
+  "solved_count": 559,
+  "problem_url": "https://codeforces.com/problemset/problem/681/E",
+  "editorial_url": "https://codeforces.com/blog/entry/45425",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Dima is living in a dormitory, as well as some cockroaches. At the moment 0 Dima saw a cockroach running on a table and decided to kill it. Dima needs exactly T seconds for aiming, and after that he will precisely strike the cockroach and finish it. To survive the cockroach has to run into a shadow, cast by round plates standing on the table, in T seconds. Shadow casted by any of the plates has the shape of a circle. Shadow circles may intersect, nest or overlap arbitrarily. The cockroach uses the following strategy: first he equiprobably picks a direction to run towards and then runs towards it with the constant speed v . If at some moment t ≤ T it reaches any shadow circle, it immediately stops in the shadow and thus will stay alive. Otherwise the cockroach is killed by the Dima's precise strike. Consider that the Dima's precise strike is instant. Determine the probability of that the cockroach will stay alive.",
+  "input_specification": "In the first line of the input the four integers x 0 , y 0 , v , T ( | x 0 |, | y 0 | ≤ 10 9 , 0 ≤ v , T ≤ 10 9 ) are given — the cockroach initial position on the table in the Cartesian system at the moment 0 , the cockroach's constant speed and the time in seconds Dima needs for aiming respectively. In the next line the only number n ( 1 ≤ n ≤ 100 000 ) is given — the number of shadow circles casted by plates. In the next n lines shadow circle description is given: the i th of them consists of three integers x i , y i , r i ( | x i |, | y i | ≤ 10 9 , 0 ≤ r ≤ 10 9 ) — the i th shadow circle on-table position in the Cartesian system and its radius respectively. Consider that the table is big enough for the cockroach not to run to the table edges and avoid Dima's precise strike.",
+  "output_specification": "Print the only real number p — the probability of that the cockroach will stay alive. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "0 0 1 1\n3\n1 1 1\n-1 -1 1\n-2 2 1",
+      "output": "0.50000000000"
+    },
+    {
+      "input": "0 0 1 0\n1\n1 0 1",
+      "output": "1.00000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

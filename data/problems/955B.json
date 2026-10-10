@@ -1,0 +1,42 @@
+{
+  "id": "955B",
+  "source": "problemset",
+  "contest_id": 955,
+  "problem_index": "B",
+  "name": "Not simply beatiful strings",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 5222,
+  "problem_url": "https://codeforces.com/problemset/problem/955/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58547",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Let's call a string adorable if its letters can be realigned in such a way that they form two consequent groups of equal symbols (note that different groups must contain different symbols). For example, ababa is adorable (you can transform it to aaabb , where the first three letters form a group of a -s and others — a group of b -s), but cccc is not since in each possible consequent partition letters in these two groups coincide. You're given a string s . Check whether it can be split into two non-empty subsequences such that the strings formed by these subsequences are adorable . Here a subsequence is an arbitrary set of indexes of the string.",
+  "input_specification": "The only line contains s (1 ≤ | s | ≤ 10 5 ) consisting of lowercase latin letters.",
+  "output_specification": "Print « Yes » if the string can be split according to the criteria above or « No » otherwise. Each letter can be printed in arbitrary case.",
+  "sample_testcases": [
+    {
+      "input": "ababa",
+      "output": "Yes"
+    },
+    {
+      "input": "zzcxx",
+      "output": "Yes"
+    },
+    {
+      "input": "yeee",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

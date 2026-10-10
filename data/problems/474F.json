@@ -1,0 +1,36 @@
+{
+  "id": "474F",
+  "source": "problemset",
+  "contest_id": 474,
+  "problem_index": "F",
+  "name": "Ant colony",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 12810,
+  "problem_url": "https://codeforces.com/problemset/problem/474/F",
+  "editorial_url": "https://codeforces.com/blog/entry/14136",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Mole is hungry again. He found one ant colony, consisting of n ants, ordered in a row. Each ant i ( 1 ≤ i ≤ n ) has a strength s i . In order to make his dinner more interesting, Mole organizes a version of «Hunger Games» for the ants. He chooses two numbers l and r ( 1 ≤ l ≤ r ≤ n ) and each pair of ants with indices between l and r (inclusively) will fight. When two ants i and j fight, ant i gets one battle point only if s i divides s j (also, ant j gets one battle point only if s j divides s i ). After all fights have been finished, Mole makes the ranking. An ant i , with v i battle points obtained, is going to be freed only if v i = r - l , or in other words only if it took a point in every fight it participated. After that, Mole eats the rest of the ants. Note that there can be many ants freed or even none. In order to choose the best sequence, Mole gives you t segments [ l i , r i ] and asks for each of them how many ants is he going to eat if those ants fight.",
+  "input_specification": "The first line contains one integer n ( 1 ≤ n ≤ 10 5 ), the size of the ant colony. The second line contains n integers s 1 , s 2 , ..., s n ( 1 ≤ s i ≤ 10 9 ), the strengths of the ants. The third line contains one integer t ( 1 ≤ t ≤ 10 5 ), the number of test cases. Each of the next t lines contains two integers l i and r i ( 1 ≤ l i ≤ r i ≤ n ), describing one query.",
+  "output_specification": "Print to the standard output t lines. The i -th line contains number of ants that Mole eats from the segment [ l i , r i ] .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 3 2 4 2\n4\n1 5\n2 5\n3 5\n4 5",
+      "output": "4\n4\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:21",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

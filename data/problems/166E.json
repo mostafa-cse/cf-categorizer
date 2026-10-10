@@ -1,0 +1,40 @@
+{
+  "id": "166E",
+  "source": "problemset",
+  "contest_id": 166,
+  "problem_index": "E",
+  "name": "Tetrahedron",
+  "rating": 1500,
+  "tags": [
+    "dp",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 27024,
+  "problem_url": "https://codeforces.com/problemset/problem/166/E",
+  "editorial_url": "https://codeforces.com/blog/entry/4173",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tetrahedron. Let's mark its vertices with letters A , B , C and D correspondingly. An ant is standing in the vertex D of the tetrahedron. The ant is quite active and he wouldn't stay idle. At each moment of time he makes a step from one vertex to another one along some edge of the tetrahedron. The ant just can't stand on one place. You do not have to do much to solve the problem: your task is to count the number of ways in which the ant can go from the initial vertex D to itself in exactly n steps. In other words, you are asked to find out the number of different cyclic paths with the length of n from vertex D to itself. As the number can be quite large, you should print it modulo 1000000007 ( 10 9 + 7 ).",
+  "input_specification": "The first line contains the only integer n ( 1 ≤ n ≤ 10 7 ) — the required length of the cyclic path.",
+  "output_specification": "Print the only integer — the required number of ways modulo 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "3"
+    },
+    {
+      "input": "4",
+      "output": "21"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:37",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

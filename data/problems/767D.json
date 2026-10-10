@@ -1,0 +1,46 @@
+{
+  "id": "767D",
+  "source": "problemset",
+  "contest_id": 767,
+  "problem_index": "D",
+  "name": "Cartons of milk",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 2464,
+  "problem_url": "https://codeforces.com/problemset/problem/767/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50498",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Olya likes milk very much. She drinks k cartons of milk each day if she has at least k and drinks all of them if she doesn't. But there's an issue — expiration dates. Each carton has a date after which you can't drink it (you still can drink it exactly at the date written on the carton). Due to this, if Olya's fridge contains a carton past its expiry date, she throws it away. Olya hates throwing out cartons, so when she drinks a carton, she chooses the one which expires the fastest. It's easy to understand that this strategy minimizes the amount of cartons thrown out and lets her avoid it if it's even possible. Milk. Best before: 20.02.2017. The main issue Olya has is the one of buying new cartons. Currently, there are n cartons of milk in Olya's fridge, for each one an expiration date is known (how soon does it expire, measured in days). In the shop that Olya visited there are m cartons, and the expiration date is known for each of those cartons as well. Find the maximum number of cartons Olya can buy so that she wouldn't have to throw away any cartons. Assume that Olya drank no cartons today.",
+  "input_specification": "In the first line there are three integers n , m , k ( 1 ≤ n , m ≤ 10 6 , 1 ≤ k ≤ n + m ) — the amount of cartons in Olya's fridge, the amount of cartons in the shop and the number of cartons Olya drinks each day. In the second line there are n integers f 1 , f 2 , ..., f n ( 0 ≤ f i ≤ 10 7 ) — expiration dates of the cartons in Olya's fridge. The expiration date is expressed by the number of days the drinking of this carton can be delayed. For example, a 0 expiration date means it must be drunk today, 1 — no later than tomorrow, etc. In the third line there are m integers s 1 , s 2 , ..., s m ( 0 ≤ s i ≤ 10 7 ) — expiration dates of the cartons in the shop in a similar format.",
+  "output_specification": "If there's no way for Olya to drink the cartons she already has in her fridge, print -1 . Otherwise, in the first line print the maximum number x of cartons which Olya can buy so that she wouldn't have to throw a carton away. The next line should contain exactly x integers — the numbers of the cartons that should be bought (cartons are numbered in an order in which they are written in the input, starting with 1 ). Numbers should not repeat, but can be in arbitrary order. If there are multiple correct answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 6 2\n1 0 1\n2 0 2 0 0 2",
+      "output": "3\n1 2 3"
+    },
+    {
+      "input": "3 1 2\n0 0 0\n1",
+      "output": "-1"
+    },
+    {
+      "input": "2 1 2\n0 1\n0",
+      "output": "1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

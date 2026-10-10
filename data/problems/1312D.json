@@ -1,0 +1,47 @@
+{
+  "id": "1312D",
+  "source": "problemset",
+  "contest_id": 1312,
+  "problem_index": "D",
+  "name": "Count the Arrays",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 10973,
+  "problem_url": "https://codeforces.com/problemset/problem/1312/D",
+  "editorial_url": "https://codeforces.com/blog/entry/74640",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Your task is to calculate the number of arrays such that: each array contains $$$n$$$ elements; each element is an integer from $$$1$$$ to $$$m$$$; for each array, there is exactly one pair of equal elements; for each array $$$a$$$, there exists an index $$$i$$$ such that the array is strictly ascending before the $$$i$$$-th element and strictly descending after it (formally, it means that $$$a_j \\lt a_{j + 1}$$$, if $$$j \\lt i$$$, and $$$a_j \\gt a_{j + 1}$$$, if $$$j \\ge i$$$).",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le m \\le 2 \\cdot 10^5$$$).",
+  "output_specification": "Print one integer — the number of arrays that meet all of the aforementioned conditions, taken modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 4",
+      "output": "6"
+    },
+    {
+      "input": "3 5",
+      "output": "10"
+    },
+    {
+      "input": "42 1337",
+      "output": "806066790"
+    },
+    {
+      "input": "100000 200000",
+      "output": "707899035"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:03",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2268D",
+  "source": "problemset",
+  "contest_id": 2268,
+  "problem_index": "D",
+  "name": "AghaBalaSar and Hamed",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 655,
+  "problem_url": "https://codeforces.com/problemset/problem/2268/D",
+  "editorial_url": "https://codeforces.com/blog/entry/157140",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation$$$^{\\text{∗}}$$$ $$$p$$$ of length $$$n$$$. For each index $$$i$$$, you may move in one step to: any index $$$j \\lt i$$$, or the first index $$$j \\gt i$$$ such that $$$p_j \\gt p_i$$$ (if such an index exists), In other words: You can always move to any position on the left. On the right, you can move only to the nearest position whose value is strictly greater than the current one. For every pair of indices $$$(i,j)$$$, let $$$f(i,j)$$$ be the minimum number of steps needed to move from $$$i$$$ to $$$j$$$. Note that if we cannot reach $$$j$$$ from $$$i$$$, then $$$f(i,j)=0$$$. Your task is to compute: $$$$$$\\sum_{1 \\le i,j \\le n} f(i,j).$$$$$$ $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\leq n \\leq 10^6$$$) — the length of $$$p$$$. The second line of each test case contains $$$n$$$ distinct integers $$$p_1,p_2,\\ldots,p_n$$$ ($$$1\\le p_i\\le n$$$) — the elements of $$$p$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, print a single integer — the value of $$$\\sum\\limits_{1 \\le i,j \\le n} f(i,j)$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n2\n1 2\n2\n2 1\n3\n1 3 2\n3\n1 2 3\n5\n1 3 5 2 4\n7\n6 2 4 3 7 5 1",
+      "output": "2\n1\n4\n7\n15\n38"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:57:34",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

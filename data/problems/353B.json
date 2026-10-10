@@ -1,0 +1,43 @@
+{
+  "id": "353B",
+  "source": "problemset",
+  "contest_id": 353,
+  "problem_index": "B",
+  "name": "Two Heaps",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 2452,
+  "problem_url": "https://codeforces.com/problemset/problem/353/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9145",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Valera has 2· n cubes, each cube contains an integer from 10 to 99 . He arbitrarily chooses n cubes and puts them in the first heap. The remaining cubes form the second heap. Valera decided to play with cubes. During the game he takes a cube from the first heap and writes down the number it has. Then he takes a cube from the second heap and write out its two digits near two digits he had written (to the right of them). In the end he obtained a single fourdigit integer — the first two digits of it is written on the cube from the first heap, and the second two digits of it is written on the second cube from the second heap. Valera knows arithmetic very well. So, he can easily count the number of distinct fourdigit numbers he can get in the game. The other question is: how to split cubes into two heaps so that this number (the number of distinct fourdigit integers Valera can get) will be as large as possible?",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 100) . The second line contains 2· n space-separated integers a i (10 ≤ a i ≤ 99) , denoting the numbers on the cubes.",
+  "output_specification": "In the first line print a single number — the maximum possible number of distinct four-digit numbers Valera can obtain. In the second line print 2· n numbers b i (1 ≤ b i ≤ 2) . The numbers mean: the i -th cube belongs to the b i -th heap in your division. If there are multiple optimal ways to split the cubes into the heaps, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "1\n10 99",
+      "output": "1\n2 1"
+    },
+    {
+      "input": "2\n13 24 13 45",
+      "output": "4\n1 2 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

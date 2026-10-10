@@ -1,0 +1,48 @@
+{
+  "id": "1216F",
+  "source": "problemset",
+  "contest_id": 1216,
+  "problem_index": "F",
+  "name": "Wi-Fi",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3330,
+  "problem_url": "https://codeforces.com/problemset/problem/1216/F",
+  "editorial_url": "https://codeforces.com/blog/entry/69954",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You work as a system administrator in a dormitory, which has $$$n$$$ rooms one after another along a straight hallway. Rooms are numbered from $$$1$$$ to $$$n$$$. You have to connect all $$$n$$$ rooms to the Internet. You can connect each room to the Internet directly, the cost of such connection for the $$$i$$$-th room is $$$i$$$ coins. Some rooms also have a spot for a router. The cost of placing a router in the $$$i$$$-th room is also $$$i$$$ coins. You cannot place a router in a room which does not have a spot for it. When you place a router in the room $$$i$$$, you connect all rooms with the numbers from $$$max(1,~i - k)$$$ to $$$min(n,~i + k)$$$ inclusive to the Internet, where $$$k$$$ is the range of router. The value of $$$k$$$ is the same for all routers. Calculate the minimum total cost of connecting all $$$n$$$ rooms to the Internet. You can assume that the number of rooms which have a spot for a router is not greater than the number of routers you have.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 2 \\cdot 10^5$$$) — the number of rooms and the range of each router. The second line of the input contains one string $$$s$$$ of length $$$n$$$, consisting only of zeros and ones. If the $$$i$$$-th character of the string equals to ' 1 ' then there is a spot for a router in the $$$i$$$-th room. If the $$$i$$$-th character of the string equals to ' 0 ' then you cannot place a router in the $$$i$$$-th room.",
+  "output_specification": "Print one integer — the minimum total cost of connecting all $$$n$$$ rooms to the Internet.",
+  "sample_testcases": [
+    {
+      "input": "5 2\n00100",
+      "output": "3"
+    },
+    {
+      "input": "6 1\n000000",
+      "output": "21"
+    },
+    {
+      "input": "4 1\n0011",
+      "output": "4"
+    },
+    {
+      "input": "12 6\n000010000100",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

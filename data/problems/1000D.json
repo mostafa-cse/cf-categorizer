@@ -1,0 +1,39 @@
+{
+  "id": "1000D",
+  "source": "problemset",
+  "contest_id": 1000,
+  "problem_index": "D",
+  "name": "Yet Another Problem On a Subsequence",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 5257,
+  "problem_url": "https://codeforces.com/problemset/problem/1000/D",
+  "editorial_url": "https://codeforces.com/blog/entry/60288",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The sequence of integers $$$a_1, a_2, \\dots, a_k$$$ is called a good array if $$$a_1 = k - 1$$$ and $$$a_1 \\gt 0$$$. For example, the sequences $$$[3, -1, 44, 0], [1, -99]$$$ are good arrays, and the sequences $$$[3, 7, 8], [2, 5, 4, 1], [0]$$$ — are not. A sequence of integers is called good if it can be divided into a positive number of good arrays. Each good array should be a subsegment of sequence and each element of the sequence should belong to exactly one array. For example, the sequences $$$[2, -3, 0, 1, 4]$$$, $$$[1, 2, 3, -3, -9, 4]$$$ are good, and the sequences $$$[2, -3, 0, 1]$$$, $$$[1, 2, 3, -3 -9, 4, 1]$$$ — are not. For a given sequence of numbers, count the number of its subsequences that are good sequences, and print the number of such subsequences modulo 998244353 .",
+  "input_specification": "The first line contains the number $$$n~(1 \\le n \\le 10^3)$$$ — the length of the initial sequence. The following line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n~(-10^9 \\le a_i \\le 10^9)$$$ — the sequence itself.",
+  "output_specification": "In the single line output one integer — the number of subsequences of the original sequence that are good sequences, taken modulo 998244353 .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 1 1",
+      "output": "2"
+    },
+    {
+      "input": "4\n1 1 1 1",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

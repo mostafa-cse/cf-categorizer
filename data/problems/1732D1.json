@@ -1,0 +1,41 @@
+{
+  "id": "1732D1",
+  "source": "problemset",
+  "contest_id": 1732,
+  "problem_index": "D1",
+  "name": "Balance (Easy version)",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "data structures",
+    "implementation",
+    "number theory"
+  ],
+  "solved_count": 10152,
+  "problem_url": "https://codeforces.com/problemset/problem/1732/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/108327",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the easy version of the problem. The only difference is that in this version there are no \"remove\" queries. Initially you have a set containing one element — $$$0$$$. You need to handle $$$q$$$ queries of the following types: + $$$x$$$ — add the integer $$$x$$$ to the set. It is guaranteed that this integer is not contained in the set; ? $$$k$$$ — find the $$$k\\text{-mex}$$$ of the set. In our problem, we define the $$$k\\text{-mex}$$$ of a set of integers as the smallest non-negative integer $$$x$$$ that is divisible by $$$k$$$ and which is not contained in the set.",
+  "input_specification": "The first line contains an integer $$$q$$$ ($$$1 \\leq q \\leq 2 \\cdot 10^5$$$) — the number of queries. The following $$$q$$$ lines describe the queries. An addition query of integer $$$x$$$ is given in the format + $$$x$$$ ($$$1 \\leq x \\leq 10^{18}$$$). It is guaranteed that $$$x$$$ was not contained in the set. A search query of $$$k\\text{-mex}$$$ is given in the format ? $$$k$$$ ($$$1 \\leq k \\leq 10^{18}$$$). It is guaranteed that there will be at least one query of type ? .",
+  "output_specification": "For each query of type ? output a single integer — the $$$k\\text{-mex}$$$ of the set.",
+  "sample_testcases": [
+    {
+      "input": "15\n+ 1\n+ 2\n? 1\n+ 4\n? 2\n+ 6\n? 3\n+ 7\n+ 8\n? 1\n? 2\n+ 5\n? 1\n+ 1000000000000000000\n? 1000000000000000000",
+      "output": "3\n6\n3\n3\n10\n3\n2000000000000000000"
+    },
+    {
+      "input": "6\n+ 100\n? 100\n+ 200\n? 100\n+ 50\n? 50",
+      "output": "200\n300\n150"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

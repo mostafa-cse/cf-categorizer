@@ -1,0 +1,37 @@
+{
+  "id": "1709C",
+  "source": "problemset",
+  "contest_id": 1709,
+  "problem_index": "C",
+  "name": "Recover an RBS",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 10782,
+  "problem_url": "https://codeforces.com/problemset/problem/1709/C",
+  "editorial_url": "https://codeforces.com/blog/entry/105164",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A bracket sequence is a string containing only characters \" ( \" and \" ) \". A regular bracket sequence (or, shortly, an RBS) is a bracket sequence that can be transformed into a correct arithmetic expression by inserting characters \" 1 \" and \" + \" between the original characters of the sequence. For example: bracket sequences \" ()() \" and \" (()) \" are regular (the resulting expressions are: \" (1)+(1) \" and \" ((1+1)+1) \"); bracket sequences \" )( \", \" ( \" and \" ) \" are not. There was an RBS. Some brackets have been replaced with question marks. Is it true that there is a unique way to replace question marks with brackets, so that the resulting sequence is an RBS?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 5 \\cdot 10^4$$$) — the number of testcases. The only line of each testcase contains an RBS with some brackets replaced with question marks. Each character is either ' ( ', ' ) ' or ' ? '. At least one RBS can be recovered from the given sequence. The total length of the sequences over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print \" YES \" if the way to replace question marks with brackets, so that the resulting sequence is an RBS, is unique . If there is more than one way, then print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "5\n(?))\n??????\n()\n??\n?(?)()?)",
+      "output": "YES\nNO\nYES\nYES\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:24",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

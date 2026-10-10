@@ -1,0 +1,50 @@
+{
+  "id": "1612E",
+  "source": "problemset",
+  "contest_id": 1612,
+  "problem_index": "E",
+  "name": "Messages",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "dp",
+    "greedy",
+    "probabilities",
+    "sortings"
+  ],
+  "solved_count": 2953,
+  "problem_url": "https://codeforces.com/problemset/problem/1612/E",
+  "editorial_url": "https://codeforces.com/blog/entry/97164",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Monocarp is a tutor of a group of $$$n$$$ students. He communicates with them using a conference in a popular messenger. Today was a busy day for Monocarp — he was asked to forward a lot of posts and announcements to his group, that's why he had to write a very large number of messages in the conference. Monocarp knows the students in the group he is tutoring quite well, so he understands which message should each student read: Monocarp wants the student $$$i$$$ to read the message $$$m_i$$$. Of course, no one's going to read all the messages in the conference. That's why Monocarp decided to pin some of them. Monocarp can pin any number of messages, and if he wants anyone to read some message, he should pin it — otherwise it will definitely be skipped by everyone . Unfortunately, even if a message is pinned, some students may skip it anyway. For each student $$$i$$$, Monocarp knows that they will read at most $$$k_i$$$ messages. Suppose Monocarp pins $$$t$$$ messages; if $$$t \\le k_i$$$, then the $$$i$$$-th student will read all the pinned messages; but if $$$t \\gt k_i$$$, the $$$i$$$-th student will choose exactly $$$k_i$$$ random pinned messages (all possible subsets of pinned messages of size $$$k_i$$$ are equiprobable) and read only the chosen messages. Monocarp wants to maximize the expected number of students that read their respective messages (i.e. the number of such indices $$$i$$$ that student $$$i$$$ reads the message $$$m_i$$$). Help him to choose how many (and which) messages should he pin!",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of students in the conference. Then $$$n$$$ lines follow. The $$$i$$$-th line contains two integers $$$m_i$$$ and $$$k_i$$$ ($$$1 \\le m_i \\le 2 \\cdot 10^5$$$; $$$1 \\le k_i \\le 20$$$) — the index of the message which Monocarp wants the $$$i$$$-th student to read and the maximum number of messages the $$$i$$$-th student will read, respectively.",
+  "output_specification": "In the first line, print one integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^5$$$) — the number of messages Monocarp should pin. In the second line, print $$$t$$$ distinct integers $$$c_1$$$, $$$c_2$$$, ..., $$$c_t$$$ ($$$1 \\le c_i \\le 2 \\cdot 10^5$$$) — the indices of the messages Monocarp should pin. The messages can be listed in any order. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n10 1\n10 2\n5 2",
+      "output": "2\n5 10"
+    },
+    {
+      "input": "3\n10 1\n5 2\n10 1",
+      "output": "1\n10"
+    },
+    {
+      "input": "4\n1 1\n2 2\n3 3\n4 4",
+      "output": "3\n2 3 4"
+    },
+    {
+      "input": "3\n13 2\n42 2\n37 2",
+      "output": "3\n42 13 37"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

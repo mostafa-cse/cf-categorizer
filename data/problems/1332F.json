@@ -1,0 +1,40 @@
+{
+  "id": "1332F",
+  "source": "problemset",
+  "contest_id": 1332,
+  "problem_index": "F",
+  "name": "Independent Set",
+  "rating": 2500,
+  "tags": [
+    "dfs and similar",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 1220,
+  "problem_url": "https://codeforces.com/problemset/problem/1332/F",
+  "editorial_url": "https://codeforces.com/blog/entry/75432",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Eric is the teacher of graph theory class. Today, Eric teaches independent set and edge-induced subgraph. Given a graph $$$G=(V,E)$$$, an independent set is a subset of vertices $$$V' \\subset V$$$ such that for every pair $$$u,v \\in V'$$$, $$$(u,v) \\not \\in E$$$ (i.e. no edge in $$$E$$$ connects two vertices from $$$V'$$$). An edge-induced subgraph consists of a subset of edges $$$E' \\subset E$$$ and all the vertices in the original graph that are incident on at least one edge in the subgraph. Given $$$E' \\subset E$$$, denote $$$G[E']$$$ the edge-induced subgraph such that $$$E'$$$ is the edge set of the subgraph. Here is an illustration of those definitions: In order to help his students get familiar with those definitions, he leaves the following problem as an exercise: Given a tree $$$G=(V,E)$$$, calculate the sum of $$$w(H)$$$ over all except null edge-induced subgraph $$$H$$$ of $$$G$$$, where $$$w(H)$$$ is the number of independent sets in $$$H$$$. Formally, calculate $$$\\sum \\limits_{\\emptyset \\not= E' \\subset E} w(G[E'])$$$. Show Eric that you are smarter than his students by providing the correct answer as quickly as possible. Note that the answer might be large, you should output the answer modulo $$$998,244,353$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$), representing the number of vertices of the graph $$$G$$$. Each of the following $$$n-1$$$ lines contains two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\not= v$$$), describing edges of the given tree. It is guaranteed that the given edges form a tree.",
+  "output_specification": "Output one integer, representing the desired value modulo $$$998,244,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 1",
+      "output": "3"
+    },
+    {
+      "input": "3\n1 2\n3 2",
+      "output": "11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:59",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

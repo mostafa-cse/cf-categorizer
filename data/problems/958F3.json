@@ -1,0 +1,34 @@
+{
+  "id": "958F3",
+  "source": "problemset",
+  "contest_id": 958,
+  "problem_index": "F3",
+  "name": "Lightsabers (hard)",
+  "rating": 2600,
+  "tags": [
+    "fft"
+  ],
+  "solved_count": 1022,
+  "problem_url": "https://codeforces.com/problemset/problem/958/F3",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2018-editorial.pdf",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There used to be unrest in the Galactic Senate. Several thousand solar systems had declared their intentions to leave the Republic. But fear not! Master Heidi was able to successfully select the Jedi Knights that have restored peace in the galaxy. However, she knows that evil never sleeps and a time may come when she will need to pick another group of Jedi Knights. She wants to be sure she has enough options to do so. There are n Jedi Knights, each of them with a lightsaber of one of m colors. Given a number k , compute the number of differently colored collections of k lightsabers that some k Jedi Knights might have. Jedi Knights with lightsabers of the same color are indistinguishable (it's not the person, it's the lightsaber color that matters!), and their order does not matter; that is, we consider two collections of Jedi Knights to be different if and only if their vectors of counts of lightsabers of each color (like what you were given in the easy and the medium versions) are different. We count all subsets, not only contiguous subsegments of the input sequence. Output the answer modulo 1009 .",
+  "input_specification": "The first line of the input contains n ( 1 ≤ n ≤ 2·10 5 ), m ( 1 ≤ m ≤ n ) and k ( 1 ≤ k ≤ n ). The second line contains n integers in the range {1, 2, ..., m } representing colors of the lightsabers of subsequent Jedi Knights.",
+  "output_specification": "Output one number: the number of differently colored collections of k lightsabers modulo 1009 .",
+  "sample_testcases": [
+    {
+      "input": "4 3 2\n1 2 3 2",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:28",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

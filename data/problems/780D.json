@@ -1,0 +1,51 @@
+{
+  "id": "780D",
+  "source": "problemset",
+  "contest_id": 780,
+  "problem_index": "D",
+  "name": "Innokenty and a Football League",
+  "rating": 1900,
+  "tags": [
+    "2-sat",
+    "graphs",
+    "greedy",
+    "implementation",
+    "shortest paths",
+    "strings"
+  ],
+  "solved_count": 3068,
+  "problem_url": "https://codeforces.com/problemset/problem/780/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50854",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Innokenty is a president of a new football league in Byteland. The first task he should do is to assign short names to all clubs to be shown on TV next to the score. Of course, the short names should be distinct, and Innokenty wants that all short names consist of three letters . Each club's full name consist of two words: the team's name and the hometown's name, for example, \" DINAMO BYTECITY \". Innokenty doesn't want to assign strange short names, so he wants to choose such short names for each club that: the short name is the same as three first letters of the team's name, for example, for the mentioned club it is \" DIN \", or, the first two letters of the short name should be the same as the first two letters of the team's name, while the third letter is the same as the first letter in the hometown's name. For the mentioned club it is \" DIB \". Apart from this, there is a rule that if for some club x the second option of short name is chosen, then there should be no club, for which the first option is chosen which is the same as the first option for the club x . For example, if the above mentioned club has short name \" DIB \", then no club for which the first option is chosen can have short name equal to \" DIN \". However, it is possible that some club have short name \" DIN \", where \" DI \" are the first two letters of the team's name, and \" N \" is the first letter of hometown's name. Of course, no two teams can have the same short name. Help Innokenty to choose a short name for each of the teams. If this is impossible, report that. If there are multiple answer, any of them will suit Innokenty. If for some team the two options of short name are equal, then Innokenty will formally think that only one of these options is chosen.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 1000 ) — the number of clubs in the league. Each of the next n lines contains two words — the team's name and the hometown's name for some club. Both team's name and hometown's name consist of uppercase English letters and have length at least 3 and at most 20 .",
+  "output_specification": "It it is not possible to choose short names and satisfy all constraints, print a single line \" NO \". Otherwise, in the first line print \" YES \". Then print n lines, in each line print the chosen short name for the corresponding club. Print the clubs in the same order as they appeared in input. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "2\nDINAMO BYTECITY\nFOOTBALL MOSCOW",
+      "output": "YES\nDIN\nFOO"
+    },
+    {
+      "input": "2\nDINAMO BYTECITY\nDINAMO BITECITY",
+      "output": "NO"
+    },
+    {
+      "input": "3\nPLAYFOOTBALL MOSCOW\nPLAYVOLLEYBALL SPB\nGOGO TECHNOCUP",
+      "output": "YES\nPLM\nPLS\nGOG"
+    },
+    {
+      "input": "3\nABC DEF\nABC EFG\nABD OOO",
+      "output": "YES\nABD\nABE\nABO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Graph Theory",
+  "subtopic": "Satisfiability",
+  "subsubtopic": "191. 2 SAT",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Convert boolean constraints to implication edges (¬A => B, ¬B => A). Compute SCCs using Tarjan's; a valid assignment exists iff no variable shares an SCC with its negation."
+}

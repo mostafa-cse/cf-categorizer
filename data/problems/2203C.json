@@ -1,0 +1,37 @@
+{
+  "id": "2203C",
+  "source": "problemset",
+  "contest_id": 2203,
+  "problem_index": "C",
+  "name": "Test Generator",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 8321,
+  "problem_url": "https://codeforces.com/problemset/problem/2203/C",
+  "editorial_url": "https://codeforces.com/blog/entry/151612",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are developing a test generator. It takes two integers $$$s$$$ and $$$m$$$ as input. You need to construct an array of non-negative integers $$$a = [a_{1}, a_{2}, \\dots, a_{n}]$$$ such that: $$$\\displaystyle\\sum_{i=1}^{n} a_i = s$$$; for each $$$i$$$, the condition $$$a_i \\,\\&\\, m = a_i$$$ holds, where $$$\\&$$$ denotes the bitwise AND operator. In other words, in each number $$$a_i$$$, the bits that are set to one can only be in the positions where the bits in the number $$$m$$$ are also set to one. Determine whether there exists at least one such array. If it exists, find the minimum possible length $$$n$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. Each test case consists of a single line containing two integers $$$s$$$ and $$$m$$$ ($$$1 \\le s, m \\le 10^{18}$$$) — parameters of the generator.",
+  "output_specification": "For each test case, print one integer: if such an array does not exist, print $$$-1$$$; otherwise, print the minimum possible value of $$$n$$$ — the length of the array.",
+  "sample_testcases": [
+    {
+      "input": "6\n13 5\n13 3\n13 6\n1000000007 2776648\n99999999999 1\n998244353 1557287",
+      "output": "3\n5\n-1\n-1\n99999999999\n642"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

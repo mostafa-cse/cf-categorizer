@@ -1,0 +1,36 @@
+{
+  "id": "575B",
+  "source": "problemset",
+  "contest_id": 575,
+  "problem_index": "B",
+  "name": "Bribes",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1302,
+  "problem_url": "https://codeforces.com/problemset/problem/575/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20176",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Ruritania is a country with a very badly maintained road network, which is not exactly good news for lorry drivers that constantly have to do deliveries. In fact, when roads are maintained, they become one-way . It turns out that it is sometimes impossible to get from one town to another in a legal way – however, we know that all towns are reachable , though illegally ! Fortunately for us, the police tend to be very corrupt and they will allow a lorry driver to break the rules and drive in the wrong direction provided they receive ‘a small gift’. There is one patrol car for every road and they will request 1000 Ruritanian dinars when a driver drives in the wrong direction. However, being greedy, every time a patrol car notices the same driver breaking the rule, they will charge double the amount of money they requested the previous time on that particular road. Borna is a lorry driver that managed to figure out this bribing pattern. As part of his job, he has to make K stops in some towns all over Ruritania and he has to make these stops in a certain order. There are N towns (enumerated from 1 to N ) in Ruritania and Borna’s initial location is the capital city i.e. town 1. He happens to know which ones out of the N - 1 roads in Ruritania are currently unidirectional, but he is unable to compute the least amount of money he needs to prepare for bribing the police. Help Borna by providing him with an answer and you will be richly rewarded.",
+  "input_specification": "The first line contains N , the number of towns in Ruritania. The following N - 1 lines contain information regarding individual roads between towns. A road is represented by a tuple of integers ( a , b , x ), which are separated with a single whitespace character. The numbers a and b represent the cities connected by this particular road, and x is either 0 or 1: 0 means that the road is bidirectional, 1 means that only the a → b direction is legal. The next line contains K , the number of stops Borna has to make. The final line of input contains K positive integers s 1 , …, s K : the towns Borna has to visit. 1 ≤ N ≤ 10 5 1 ≤ K ≤ 10 6 1 ≤ a , b ≤ N for all roads for all roads 1 ≤ s i ≤ N for all 1 ≤ i ≤ K",
+  "output_specification": "The output should contain a single number: the least amount of thousands of Ruritanian dinars Borna should allocate for bribes, modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 0\n2 3 0\n5 1 1\n3 4 1\n5\n5 4 5 2 2",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

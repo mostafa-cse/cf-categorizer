@@ -1,0 +1,35 @@
+{
+  "id": "1218A",
+  "source": "problemset",
+  "contest_id": 1218,
+  "problem_index": "A",
+  "name": "BubbleReactor",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 191,
+  "problem_url": "https://codeforces.com/problemset/problem/1218/A",
+  "editorial_url": "https://codeforces.com/blog/entry/69752",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are in charge of the BubbleReactor. It consists of $$$N$$$ BubbleCores connected with $$$N$$$ lines of electrical wiring. Each electrical wiring connects two distinct BubbleCores. There are no BubbleCores connected with more than one line of electrical wiring. Your task is to start the BubbleReactor by starting each BubbleCore. In order for a BubbleCore to be started it needs to be receiving power from a directly connected BubbleCore which is already started. However, you can kick-start one BubbleCore manually without needing power. It is guaranteed that all BubbleCores can be started. Before the BubbleCore boot up procedure its potential is calculated as the number of BubbleCores it can power on (the number of inactive BubbleCores which are connected to it directly or with any number of inactive BubbleCores in between, itself included) Start the BubbleReactor so that the sum of all BubbleCores' potentials is maximum.",
+  "input_specification": "First line contains one integer $$$N (3 \\leq N \\leq 15.000)$$$, the number of BubbleCores. The following N lines contain two integers $$$U, V (0 \\leq U \\neq V \\lt N)$$$ denoting that there exists electrical wiring between BubbleCores $$$U$$$ and $$$V$$$.",
+  "output_specification": "Single integer, the maximum sum of all BubbleCores' potentials.",
+  "sample_testcases": [
+    {
+      "input": "10\n0 1\n0 3\n0 4\n0 9\n1 2\n2 3\n2 7\n4 5\n4 6\n7 8",
+      "output": "51"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:24",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

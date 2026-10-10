@@ -1,0 +1,36 @@
+{
+  "id": "1839D",
+  "source": "problemset",
+  "contest_id": 1839,
+  "problem_index": "D",
+  "name": "Ball Sorting",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dp",
+    "sortings"
+  ],
+  "solved_count": 2782,
+  "problem_url": "https://codeforces.com/problemset/problem/1839/D",
+  "editorial_url": "https://codeforces.com/blog/entry/116963",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ colorful balls arranged in a row. The balls are painted in $$$n$$$ distinct colors, denoted by numbers from $$$1$$$ to $$$n$$$. The $$$i$$$-th ball from the left is painted in color $$$c_i$$$. You want to reorder the balls so that the $$$i$$$-th ball from the left has color $$$i$$$. Additionally, you have $$$k \\ge 1$$$ balls of color $$$0$$$ that you can use in the reordering process. Due to the strange properties of the balls, they can be reordered only by performing the following operations: Place a ball of color $$$0$$$ anywhere in the sequence (between any two consecutive balls, before the leftmost ball or after the rightmost ball) while keeping the relative order of other balls. You can perform this operation no more than $$$k$$$ times, because you have only $$$k$$$ balls of color $$$0$$$. Choose any ball of non-zero color such that at least one of the balls adjacent to him has color $$$0$$$, and move that ball (of non-zero color) anywhere in the sequence (between any two consecutive balls, before the leftmost ball or after the rightmost ball) while keeping the relative order of other balls. You can perform this operation as many times as you want, but for each operation you should pay $$$1$$$ coin. You can perform these operations in any order. After the last operation, all balls of color $$$0$$$ magically disappear, leaving a sequence of $$$n$$$ balls of non-zero colors. What is the minimum amount of coins you should spend on the operations of the second type, so that the $$$i$$$-th ball from the left has color $$$i$$$ for all $$$i$$$ from $$$1$$$ to $$$n$$$ after the disappearance of all balls of color zero ? It can be shown that under the constraints of the problem, it is always possible to reorder the balls in the required way. Solve the problem for all $$$k$$$ from $$$1$$$ to $$$n$$$.",
+  "input_specification": "The first line contains integer $$$t$$$ ($$$1 \\le t \\le 500$$$) — the number of test cases. The descriptions of the test cases follow. The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the number of balls. The second line contains $$$n$$$ distinct integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le n$$$) — the colors of balls from left to right. It is guaranteed that sum of $$$n$$$ over all test cases doesn't exceed $$$500$$$.",
+  "output_specification": "For each test case, output $$$n$$$ integers: the $$$i$$$-th ($$$1 \\le i \\le n$$$) of them should be equal to the minimum amount of coins you need to spend in order to reorder balls in the required way for $$$k = i$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n6\n2 3 1 4 6 5\n3\n1 2 3\n11\n7 3 4 6 8 9 10 2 5 11 1",
+      "output": "3 2 2 2 2 2 \n0 0 0 \n10 5 4 4 4 4 4 4 4 4 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:51",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "1519C",
+  "source": "problemset",
+  "contest_id": 1519,
+  "problem_index": "C",
+  "name": "Berland Regional",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "data structures",
+    "greedy",
+    "number theory",
+    "sortings"
+  ],
+  "solved_count": 24141,
+  "problem_url": "https://codeforces.com/problemset/problem/1519/C",
+  "editorial_url": "https://codeforces.com/blog/entry/90212",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp is an organizer of a Berland ICPC regional event. There are $$$n$$$ universities in Berland numbered from $$$1$$$ to $$$n$$$. Polycarp knows all competitive programmers in the region. There are $$$n$$$ students: the $$$i$$$-th student is enrolled at a university $$$u_i$$$ and has a programming skill $$$s_i$$$. Polycarp has to decide on the rules now. In particular, the number of members in the team. Polycarp knows that if he chooses the size of the team to be some integer $$$k$$$, each university will send their $$$k$$$ strongest (with the highest programming skill $$$s$$$) students in the first team, the next $$$k$$$ strongest students in the second team and so on. If there are fewer than $$$k$$$ students left, then the team can't be formed. Note that there might be universities that send zero teams. The strength of the region is the total skill of the members of all present teams. If there are no teams present, then the strength is $$$0$$$. Help Polycarp to find the strength of the region for each choice of $$$k$$$ from $$$1$$$ to $$$n$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of testcases. The first line of each testcase contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of universities and the number of students. The second line of each testcase contains $$$n$$$ integers $$$u_1, u_2, \\dots, u_n$$$ ($$$1 \\le u_i \\le n$$$) — the university the $$$i$$$-th student is enrolled at. The third line of each testcase contains $$$n$$$ integers $$$s_1, s_2, \\dots, s_n$$$ ($$$1 \\le s_i \\le 10^9$$$) — the programming skill of the $$$i$$$-th student. The sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase print $$$n$$$ integers: the strength of the region — the total skill of the members of the present teams — for each choice of team size $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n7\n1 2 1 2 1 2 1\n6 8 3 1 5 1 5\n10\n1 1 1 2 2 2 2 3 3 3\n3435 3014 2241 2233 2893 2102 2286 2175 1961 2567\n6\n3 3 3 3 3 3\n5 9 6 7 9 7\n1\n1\n3083",
+      "output": "29 28 26 19 0 0 0 \n24907 20705 22805 9514 0 0 0 0 0 0 \n43 43 43 32 38 43 \n3083"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

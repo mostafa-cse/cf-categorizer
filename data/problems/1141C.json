@@ -1,0 +1,42 @@
+{
+  "id": "1141C",
+  "source": "problemset",
+  "contest_id": 1141,
+  "problem_index": "C",
+  "name": "Polycarp Restores Permutation",
+  "rating": 1500,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 12439,
+  "problem_url": "https://codeforces.com/problemset/problem/1141/C",
+  "editorial_url": "https://codeforces.com/blog/entry/66062",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "An array of integers $$$p_1, p_2, \\dots, p_n$$$ is called a permutation if it contains each number from $$$1$$$ to $$$n$$$ exactly once. For example, the following arrays are permutations: $$$[3, 1, 2]$$$, $$$[1]$$$, $$$[1, 2, 3, 4, 5]$$$ and $$$[4, 3, 1, 2]$$$. The following arrays are not permutations: $$$[2]$$$, $$$[1, 1]$$$, $$$[2, 3, 4]$$$. Polycarp invented a really cool permutation $$$p_1, p_2, \\dots, p_n$$$ of length $$$n$$$. It is very disappointing, but he forgot this permutation. He only remembers the array $$$q_1, q_2, \\dots, q_{n-1}$$$ of length $$$n-1$$$, where $$$q_i=p_{i+1}-p_i$$$. Given $$$n$$$ and $$$q=q_1, q_2, \\dots, q_{n-1}$$$, help Polycarp restore the invented permutation.",
+  "input_specification": "The first line contains the integer $$$n$$$ ($$$2 \\le n \\le 2\\cdot10^5$$$) — the length of the permutation to restore. The second line contains $$$n-1$$$ integers $$$q_1, q_2, \\dots, q_{n-1}$$$ ($$$-n \\lt q_i \\lt n$$$).",
+  "output_specification": "Print the integer -1 if there is no such permutation of length $$$n$$$ which corresponds to the given array $$$q$$$. Otherwise, if it exists, print $$$p_1, p_2, \\dots, p_n$$$. Print any such permutation if there are many of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n-2 1",
+      "output": "3 1 2"
+    },
+    {
+      "input": "5\n1 1 1 1",
+      "output": "1 2 3 4 5"
+    },
+    {
+      "input": "4\n-1 2 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:47",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

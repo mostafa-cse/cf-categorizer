@@ -1,0 +1,43 @@
+{
+  "id": "1182D",
+  "source": "problemset",
+  "contest_id": 1182,
+  "problem_index": "D",
+  "name": "Complete Mirror",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "dp",
+    "hashing",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 1061,
+  "problem_url": "https://codeforces.com/problemset/problem/1182/D",
+  "editorial_url": "https://codeforces.com/blog/entry/67614",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have given tree consist of $$$n$$$ vertices. Select a vertex as root vertex that satisfies the condition below. For all vertices $$$v_{1}$$$ and $$$v_{2}$$$, if $$$distance$$$($$$root$$$, $$$v_{1}$$$) $$$= distance$$$($$$root$$$, $$$v_{2})$$$ then $$$degree$$$($$$v_{1}$$$) $$$= degree$$$($$$v_{2}$$$), where $$$degree$$$ means the number of vertices connected to that vertex, and $$$distance$$$ means the number of edges between two vertices. Determine and find if there is such root vertex in the tree. If there are multiple answers, find any of them.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^{5}$$$) — the number of vertices. Each of the next $$$n-1$$$ lines contains two integers $$$v_{i}$$$ and $$$u_{i}$$$ ($$$1 \\le v_{i} \\lt u_{i} \\le n$$$) — it means there is an edge exist between $$$v_{i}$$$ and $$$u_{i}$$$. It is guaranteed that the graph forms tree.",
+  "output_specification": "If there is such root vertex exists, print any of them. Otherwise, print $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n1 2\n2 3\n3 4\n4 5\n3 6\n6 7",
+      "output": "3"
+    },
+    {
+      "input": "6\n1 3\n2 3\n3 4\n4 5\n4 6",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

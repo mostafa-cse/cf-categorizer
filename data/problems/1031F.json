@@ -1,0 +1,36 @@
+{
+  "id": "1031F",
+  "source": "problemset",
+  "contest_id": 1031,
+  "problem_index": "F",
+  "name": "Familiar Operations",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 330,
+  "problem_url": "https://codeforces.com/problemset/problem/1031/F",
+  "editorial_url": "https://codeforces.com/blog/entry/62612",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two positive integers $$$a$$$ and $$$b$$$. There are two possible operations: multiply one of the numbers by some prime $$$p$$$; divide one of the numbers on its prime factor $$$p$$$. What is the minimum number of operations required to obtain two integers having the same number of divisors? You are given several such pairs, you need to find the answer for each of them.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of pairs of integers for which you are to find the answer. Each of the next $$$t$$$ lines contain two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 10^6$$$).",
+  "output_specification": "Output $$$t$$$ lines — the $$$i$$$-th of them should contain the answer for the pair $$$a_i$$$, $$$b_i$$$.",
+  "sample_testcases": [
+    {
+      "input": "8\n9 10\n100 17\n220 70\n17 19\n4 18\n32 20\n100 32\n224 385",
+      "output": "1\n3\n1\n0\n1\n0\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:13",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

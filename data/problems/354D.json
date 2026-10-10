@@ -1,0 +1,38 @@
+{
+  "id": "354D",
+  "source": "problemset",
+  "contest_id": 354,
+  "problem_index": "D",
+  "name": "Transferring Pyramid",
+  "rating": 2900,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 533,
+  "problem_url": "https://codeforces.com/problemset/problem/354/D",
+  "editorial_url": "https://codeforces.com/blog/entry/8672",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya and Petya are using an interesting data storing structure: a pyramid. The pyramid consists of n rows, the i -th row contains i cells. Each row is shifted half a cell to the left relative to the previous row. The cells are numbered by integers from 1 to as shown on the picture below. An example of a pyramid at n = 5 is: This data structure can perform operations of two types: Change the value of a specific cell. It is described by three integers: \" t i v \" , where t = 1 (the type of operation), i — the number of the cell to change and v the value to assign to the cell. Change the value of some subpyramid. The picture shows a highlighted subpyramid with the top in cell 5 . It is described by s + 2 numbers: \" t i v 1 v 2 ... v s \" , where t = 2 , i — the number of the top cell of the pyramid, s — the size of the subpyramid (the number of cells it has), v j — the value you should assign to the j -th cell of the subpyramid. Formally: a subpyramid with top at the i -th cell of the k -th row (the 5 -th cell is the second cell of the third row) will contain cells from rows from k to n , the ( k + p ) -th row contains cells from the i -th to the ( i + p ) -th ( 0 ≤ p ≤ n - k ). Vasya and Petya had two identical pyramids. Vasya changed some cells in his pyramid and he now wants to send his changes to Petya. For that, he wants to find a sequence of operations at which Petya can repeat all Vasya's changes. Among all possible sequences, Vasya has to pick the minimum one (the one that contains the fewest numbers). You have a pyramid of n rows with k changed cells. Find the sequence of operations which result in each of the k changed cells being changed by at least one operation . Among all the possible sequences pick the one that contains the fewest numbers .",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n , k ≤ 10 5 ). The next k lines contain the coordinates of the modified cells r i and c i (1 ≤ c i ≤ r i ≤ n ) — the row and the cell's number in the row. All cells are distinct.",
+  "output_specification": "Print a single number showing how many numbers the final sequence has.",
+  "sample_testcases": [
+    {
+      "input": "4 5\n3 1\n3 3\n4 1\n4 3\n4 4",
+      "output": "10"
+    },
+    {
+      "input": "7 11\n2 2\n3 1\n4 3\n5 1\n5 2\n5 5\n6 4\n7 2\n7 3\n7 4\n7 5",
+      "output": "26"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

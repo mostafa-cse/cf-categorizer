@@ -1,0 +1,39 @@
+{
+  "id": "245E",
+  "source": "problemset",
+  "contest_id": 245,
+  "problem_index": "E",
+  "name": "Mishap in Club",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 3562,
+  "problem_url": "https://codeforces.com/problemset/problem/245/E",
+  "editorial_url": "https://codeforces.com/blog/entry/5921",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarpus just has been out of luck lately! As soon as he found a job in the \"Binary Cat\" cafe, the club got burgled. All ice-cream was stolen. On the burglary night Polycarpus kept a careful record of all club visitors. Each time a visitor entered the club, Polycarpus put down character \" + \" in his notes. Similarly, each time a visitor left the club, Polycarpus put character \" - \" in his notes. We know that all cases of going in and out happened consecutively, that is, no two events happened at the same time. Polycarpus doesn't remember whether there was somebody in the club at the moment when his shift begun and at the moment when it ended. Right now the police wonders what minimum number of distinct people Polycarpus could have seen. Assume that he sees anybody coming in or out of the club. Each person could have come in or out an arbitrary number of times.",
+  "input_specification": "The only line of the input contains a sequence of characters \" + \" and \" - \", the characters are written one after another without any separators. The characters are written in the order, in which the corresponding events occurred. The given sequence has length from 1 to 300 characters, inclusive.",
+  "output_specification": "Print the sought minimum number of people",
+  "sample_testcases": [
+    {
+      "input": "+-+-+",
+      "output": "1"
+    },
+    {
+      "input": "---",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

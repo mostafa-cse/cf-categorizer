@@ -1,0 +1,42 @@
+{
+  "id": "191A",
+  "source": "problemset",
+  "contest_id": 191,
+  "problem_index": "A",
+  "name": "Dynasty Puzzles",
+  "rating": 1500,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 4689,
+  "problem_url": "https://codeforces.com/problemset/problem/191/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4634",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The ancient Berlanders believed that the longer the name, the more important its bearer is. Thus, Berland kings were famous for their long names. But long names are somewhat inconvenient, so the Berlanders started to abbreviate the names of their kings. They called every king by the first letters of its name. Thus, the king, whose name was Victorious Vasily Pupkin, was always called by the berlanders VVP. In Berland over its long history many dynasties of kings replaced each other, but they were all united by common traditions. Thus, according to one Berland traditions, to maintain stability in the country, the first name of the heir should be the same as the last name his predecessor (hence, the first letter of the abbreviated name of the heir coincides with the last letter of the abbreviated name of the predecessor). Berlanders appreciate stability, so this tradition has never been broken. Also Berlanders like perfection, so another tradition requires that the first name of the first king in the dynasty coincides with the last name of the last king in this dynasty (hence, the first letter of the abbreviated name of the first king coincides with the last letter of the abbreviated name of the last king). This tradition, of course, has also been always observed. The name of a dynasty is formed by very simple rules: we take all the short names of the kings in the order in which they ruled, and write them in one line. Thus, a dynasty of kings \"ab\" and \"ba\" is called \"abba\", and the dynasty, which had only the king \"abca\", is called \"abca\". Vasya, a historian, has recently found a list of abbreviated names of all Berland kings and their relatives. Help Vasya to find the maximally long name of the dynasty that could have existed in Berland. Note that in his list all the names are ordered by the time, that is, if name A is earlier in the list than B , then if A and B were kings, then king A ruled before king B .",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 5·10 5 ) — the number of names in Vasya's list. Next n lines contain n abbreviated names, one per line. An abbreviated name is a non-empty sequence of lowercase Latin letters. Its length does not exceed 10 characters.",
+  "output_specification": "Print a single number — length of the sought dynasty's name in letters. If Vasya's list is wrong and no dynasty can be found there, print a single number 0 .",
+  "sample_testcases": [
+    {
+      "input": "3\nabc\nca\ncba",
+      "output": "6"
+    },
+    {
+      "input": "4\nvvp\nvvp\ndam\nvvp",
+      "output": "0"
+    },
+    {
+      "input": "3\nab\nc\ndef",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

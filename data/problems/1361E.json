@@ -1,0 +1,37 @@
+{
+  "id": "1361E",
+  "source": "problemset",
+  "contest_id": 1361,
+  "problem_index": "E",
+  "name": "James and the Chase",
+  "rating": 3000,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "probabilities",
+    "trees"
+  ],
+  "solved_count": 1101,
+  "problem_url": "https://codeforces.com/problemset/problem/1361/E",
+  "editorial_url": "https://codeforces.com/blog/entry/78355",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "James Bond has a new plan for catching his enemy. There are some cities and directed roads between them, such that it is possible to travel between any two cities using these roads. When the enemy appears in some city, Bond knows her next destination but has no idea which path she will choose to move there. The city $$$a$$$ is called interesting, if for each city $$$b$$$, there is exactly one simple path from $$$a$$$ to $$$b$$$. By a simple path, we understand a sequence of distinct cities, such that for every two neighboring cities, there exists a directed road from the first to the second city. Bond's enemy is the mistress of escapes, so only the chase started in an interesting city gives the possibility of catching her. James wants to arrange his people in such cities. However, if there are not enough interesting cities, the whole action doesn't make sense since Bond's people may wait too long for the enemy. You are responsible for finding all the interesting cities or saying that there is not enough of them. By not enough, James means strictly less than $$$20\\%$$$ of all cities.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\leq t \\leq 2\\,000$$$) — the number of test cases. Each test case is described as follows: The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\le 10^5$$$, $$$0 \\leq m \\le 2 \\cdot 10^5$$$) — the number of cities and roads between them. Each of the following $$$m$$$ lines contains two integers $$$u$$$, $$$v$$$ ($$$u \\neq v$$$; $$$1 \\leq u, v \\leq n$$$), which denote that there is a directed road from $$$u$$$ to $$$v$$$. You can assume that between each ordered pair of cities there is at most one road. The sum of $$$n$$$ over all test cases doesn't exceed $$$10^5$$$, and the sum of $$$m$$$ doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "If strictly less than $$$20\\%$$$ of all cities are interesting, print $$$-1$$$. Otherwise, let $$$k$$$ be the number of interesting cities. Print $$$k$$$ distinct integers in increasing order — the indices of interesting cities.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n1 2\n2 3\n3 1\n3 6\n1 2\n2 1\n2 3\n3 2\n1 3\n3 1\n7 10\n1 2\n2 3\n3 1\n1 4\n4 5\n5 1\n4 6\n6 7\n7 4\n6 1\n6 8\n1 2\n2 3\n3 4\n4 5\n5 6\n6 1\n6 2\n5 1",
+      "output": "1 2 3 \n-1\n1 2 3 5 \n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:49",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

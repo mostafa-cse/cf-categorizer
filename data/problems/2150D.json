@@ -1,0 +1,36 @@
+{
+  "id": "2150D",
+  "source": "problemset",
+  "contest_id": 2150,
+  "problem_index": "D",
+  "name": "Attraction Theory",
+  "rating": 2700,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1403,
+  "problem_url": "https://codeforces.com/problemset/problem/2150/D",
+  "editorial_url": "https://codeforces.com/blog/entry/146651",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Taylor Swift - Love Story (Taylor's Version) ⠀ There are $$$n$$$ people in positions $$$p_1, p_2, \\ldots, p_n$$$ on a one-dimensional coordinate axis. Initially, $$$p_i = i$$$ for each $$$1 \\leq i \\leq n$$$. You can introduce an attraction at some integer coordinate $$$x$$$ ($$$1 \\le x \\le n$$$), and then all the people will move closer to the attraction to look at it. Formally, if you put an attraction in position $$$x$$$ ($$$1 \\le x \\le n$$$), the following changes happen for each person $$$i$$$ ($$$1 \\le i \\le n$$$): if $$$p_i = x$$$, no change; if $$$p_i \\lt x$$$, the person moves in the positive direction, and $$$p_i$$$ is incremented by $$$1$$$; if $$$p_i \\gt x$$$, the person moves in the negative direction, and $$$p_i$$$ is decremented by $$$1$$$. You can put attractions any finite number of times, and in any order you want. It can be proven that all positions of a person always stays within the range $$$[1, n]$$$, i.e. $$$1 \\le p_i \\le n$$$ at all times. Each position $$$x$$$ ($$$1 \\le x \\le n$$$), has a value $$$a_x$$$ associated with it. The score of a position array $$$[p_1, p_2, \\ldots, p_n]$$$, denoted by $$$score(p)$$$, is $$$\\sum_{i = 1}^{n} a_{p_i}$$$, i.e. your score increases by $$$a_x$$$ for every person standing at $$$x$$$ in the end. Over all possible distinct position arrays $$$p$$$ that are possible with placing attractions, find the sum of $$$score(p)$$$. Since the answer may be large, print it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers — $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single line containing an integer: the sum of $$$score(p)$$$ over all possible distinct position arrays $$$p$$$ that are possible with placing attractions, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n1\n1\n2\n5 10\n3\n1 1 1\n4\n1 1 1 1\n4\n10 2 9 7\n5\n1000000000 1000000000 1000000000 1000000000 1000000000\n8\n100 2 34 59 34 27 5 6",
+      "output": "1\n45\n24\n72\n480\n333572930\n69365"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

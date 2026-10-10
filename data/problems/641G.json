@@ -1,0 +1,36 @@
+{
+  "id": "641G",
+  "source": "problemset",
+  "contest_id": 641,
+  "problem_index": "G",
+  "name": "Little Artem and Graph",
+  "rating": 2300,
+  "tags": [],
+  "solved_count": 136,
+  "problem_url": "https://codeforces.com/problemset/problem/641/G",
+  "editorial_url": "https://codeforces.com/blog/entry/44538",
+  "time_limit": "12 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Little Artem is given a graph, constructed as follows: start with some k -clique, then add new vertices one by one, connecting them to k already existing vertices that form a k -clique. Artem wants to count the number of spanning trees in this graph modulo 10 9 + 7 .",
+  "input_specification": "First line of the input contains two integers n and k ( 1 ≤ n ≤ 10 000 , 1 ≤ k ≤ min ( n , 5) ) — the total size of the graph and the size of the initial clique, respectively. Next n - k lines describe k + 1 -th, k + 2 -th, ..., i -th, ..., n -th vertices by listing k distinct vertex indices 1 ≤ a ij < i it is connected to. It is guaranteed that those vertices form a k-clique.",
+  "output_specification": "Output a single integer — the number of spanning trees in the given graph modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2",
+      "output": "3"
+    },
+    {
+      "input": "4 3\n1 2 3",
+      "output": "16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

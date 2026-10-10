@@ -1,0 +1,36 @@
+{
+  "id": "797E",
+  "source": "problemset",
+  "contest_id": 797,
+  "problem_index": "E",
+  "name": "Array Queries",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 6130,
+  "problem_url": "https://codeforces.com/problemset/problem/797/E",
+  "editorial_url": "https://codeforces.com/blog/entry/51588",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "a is an array of n positive integers, all of which are not greater than n . You have to process q queries to this array. Each query is represented by two numbers p and k . Several operations are performed in each query; each operation changes p to p + a p + k . There operations are applied until p becomes greater than n . The answer to the query is the number of performed operations.",
+  "input_specification": "The first line contains one integer n (1 ≤ n ≤ 100000) . The second line contains n integers — elements of a ( 1 ≤ a i ≤ n for each i from 1 to n ). The third line containts one integer q (1 ≤ q ≤ 100000) . Then q lines follow. Each line contains the values of p and k for corresponding query (1 ≤ p , k ≤ n ) .",
+  "output_specification": "Print q integers, i th integer must be equal to the answer to i th query.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1 1\n3\n1 1\n2 1\n3 1",
+      "output": "2\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

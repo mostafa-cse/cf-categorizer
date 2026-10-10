@@ -1,0 +1,45 @@
+{
+  "id": "1394D",
+  "source": "problemset",
+  "contest_id": 1394,
+  "problem_index": "D",
+  "name": "Boboniu and Jianghu",
+  "rating": 2800,
+  "tags": [
+    "dp",
+    "greedy",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 1324,
+  "problem_url": "https://codeforces.com/problemset/problem/1394/D",
+  "editorial_url": "https://codeforces.com/blog/entry/81355",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Since Boboniu finished building his Jianghu, he has been doing Kungfu on these mountains every day. Boboniu designs a map for his $$$n$$$ mountains. He uses $$$n-1$$$ roads to connect all $$$n$$$ mountains. Every pair of mountains is connected via roads. For the $$$i$$$-th mountain, Boboniu estimated the tiredness of doing Kungfu on the top of it as $$$t_i$$$. He also estimated the height of each mountain as $$$h_i$$$. A path is a sequence of mountains $$$M$$$ such that for each $$$i$$$ ($$$1 \\le i \\lt |M|$$$), there exists a road between $$$M_i$$$ and $$$M_{i+1}$$$. Boboniu would regard the path as a challenge if for each $$$i$$$ ($$$1\\le i \\lt |M|$$$), $$$h_{M_i}\\le h_{M_{i+1}}$$$. Boboniu wants to divide all $$$n-1$$$ roads into several challenges . Note that each road must appear in exactly one challenge, but a mountain may appear in several challenges. Boboniu wants to minimize the total tiredness to do all the challenges . The tiredness of a challenge $$$M$$$ is the sum of tiredness of all mountains in it, i.e. $$$\\sum_{i=1}^{|M|}t_{M_i}$$$. He asked you to find the minimum total tiredness. As a reward for your work, you'll become a guardian in his Jianghu.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$), denoting the number of the mountains. The second line contains $$$n$$$ integers $$$t_1, t_2, \\ldots, t_n$$$ ($$$1 \\le t_i \\le 10^6$$$), denoting the tiredness for Boboniu to do Kungfu on each mountain. The third line contains $$$n$$$ integers $$$h_1, h_2, \\ldots, h_n$$$ ($$$1 \\le h_i \\le 10^6$$$), denoting the height of each mountain. Each of the following $$$n - 1$$$ lines contains two integers $$$u_i$$$, $$$v_i$$$ ($$$1 \\le u_i, v_i \\le n, u_i \\neq v_i$$$), denoting the ends of the road. It's guaranteed that all mountains are connected via roads.",
+  "output_specification": "Print one integer: the smallest sum of tiredness of all challenges.",
+  "sample_testcases": [
+    {
+      "input": "5\n40 10 30 50 20\n2 3 2 3 1\n1 2\n1 3\n2 4\n2 5",
+      "output": "160"
+    },
+    {
+      "input": "5\n1000000 1 1 1 1\n1000000 1 1 1 1\n1 2\n1 3\n1 4\n1 5",
+      "output": "4000004"
+    },
+    {
+      "input": "10\n510916 760492 684704 32545 484888 933975 116895 77095 127679 989957\n402815 705067 705067 705067 623759 103335 749243 138306 138306 844737\n1 2\n3 2\n4 3\n1 5\n6 4\n6 7\n8 7\n8 9\n9 10",
+      "output": "6390572"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

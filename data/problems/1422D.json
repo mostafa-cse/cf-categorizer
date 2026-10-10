@@ -1,0 +1,40 @@
+{
+  "id": "1422D",
+  "source": "problemset",
+  "contest_id": 1422,
+  "problem_index": "D",
+  "name": "Returning Home",
+  "rating": 2300,
+  "tags": [
+    "graphs",
+    "shortest paths",
+    "sortings"
+  ],
+  "solved_count": 3285,
+  "problem_url": "https://codeforces.com/problemset/problem/1422/D",
+  "editorial_url": "https://codeforces.com/blog/entry/83452",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Yura has been walking for some time already and is planning to return home. He needs to get home as fast as possible. To do this, Yura can use the instant-movement locations around the city. Let's represent the city as an area of $$$n \\times n$$$ square blocks. Yura needs to move from the block with coordinates $$$(s_x,s_y)$$$ to the block with coordinates $$$(f_x,f_y)$$$. In one minute Yura can move to any neighboring by side block; in other words, he can move in four directions. Also, there are $$$m$$$ instant-movement locations in the city. Their coordinates are known to you and Yura. Yura can move to an instant-movement location in no time if he is located in a block with the same coordinate $$$x$$$ or with the same coordinate $$$y$$$ as the location. Help Yura to find the smallest time needed to get home.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ — the size of the city and the number of instant-movement locations ($$$1 \\le n \\le 10^9$$$, $$$0 \\le m \\le 10^5$$$). The next line contains four integers $$$s_x$$$ $$$s_y$$$ $$$f_x$$$ $$$f_y$$$ — the coordinates of Yura's initial position and the coordinates of his home ($$$ 1 \\le s_x, s_y, f_x, f_y \\le n$$$). Each of the next $$$m$$$ lines contains two integers $$$x_i$$$ $$$y_i$$$ — coordinates of the $$$i$$$-th instant-movement location ($$$1 \\le x_i, y_i \\le n$$$).",
+  "output_specification": "In the only line print the minimum time required to get home.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1 1 5 5\n1 2\n4 1\n3 3",
+      "output": "5"
+    },
+    {
+      "input": "84 5\n67 59 41 2\n39 56\n7 2\n15 3\n74 18\n22 7",
+      "output": "42"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

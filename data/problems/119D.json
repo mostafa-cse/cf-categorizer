@@ -1,0 +1,43 @@
+{
+  "id": "119D",
+  "source": "problemset",
+  "contest_id": 119,
+  "problem_index": "D",
+  "name": "String Transformation",
+  "rating": 2500,
+  "tags": [
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 770,
+  "problem_url": "https://codeforces.com/problemset/problem/119/D",
+  "editorial_url": "https://codeforces.com/blog/entry/3229",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let s be a string whose length equals n . Its characters are numbered from 0 to n - 1 , i and j are integers, 0 ≤ i < j < n . Let's define function f as follows: f ( s , i , j ) = s [ i + 1... j - 1] + r ( s [ j ... n - 1]) + r ( s [0... i ]) . Here s [ p ... q ] is a substring of string s , that starts in position p and ends in position q (inclusive); \" + \" is the string concatenation operator; r ( x ) is a string resulting from writing the characters of the x string in the reverse order. If j = i + 1 , then the substring s [ i + 1... j - 1] is considered empty. You are given two strings a and b . Find such values of i and j , that f ( a , i , j ) = b . Number i should be maximally possible. If for this i there exists several valid values of j , choose the minimal j .",
+  "input_specification": "The first two input lines are non-empty strings a and b correspondingly. Each string's length does not exceed 10 6 characters. The strings can contain any characters with ASCII codes from 32 to 126 inclusive.",
+  "output_specification": "Print two integers i , j — the answer to the problem. If no solution exists, print \" -1 -1 \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "Die Polizei untersucht eine Straftat im IT-Bereich.\nuntersucht eine Straftat.hciereB-TI mi  ieziloP eiD",
+      "output": "11 36"
+    },
+    {
+      "input": "cbaaaa\naaaabc",
+      "output": "4 5"
+    },
+    {
+      "input": "123342\n3324212",
+      "output": "-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

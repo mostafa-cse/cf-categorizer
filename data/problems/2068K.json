@@ -1,0 +1,35 @@
+{
+  "id": "2068K",
+  "source": "problemset",
+  "contest_id": 2068,
+  "problem_index": "K",
+  "name": "Amusement Park Rides",
+  "rating": 3000,
+  "tags": [
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 249,
+  "problem_url": "https://codeforces.com/problemset/problem/2068/K",
+  "editorial_url": "https://codeforces.com/blog/entry/140239",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Ivan, Dmitrii, and Pjotr are celebrating Ivan's birthday at an amusement park with $$$n$$$ attractions. The $$$i$$$-th attraction operates at minutes $$$a_i, 2a_i, 3a_i, \\dots$$$ (i.e., every $$$a_i$$$ minutes). Each minute, the friends can either ride exactly one available attraction together or wait. Since the rides are very short, they can board another attraction the next minute. They may ride the attractions in any order. They want to experience each ride exactly once before heading off to enjoy the birthday cake. What is the earliest time by which they can finish all $$$n$$$ attractions?",
+  "input_specification": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1\\le t\\le 2000$$$) — the number of test cases. The descriptions of the $$$t$$$ test cases follow. The first line contains an integer $$$n$$$ ($$$1\\le n \\le 2000$$$) — the number of attractions. The second line contains $$$n$$$ integers $$$a_1,\\, a_2,\\,\\ldots,\\, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the values determining when the various attractions operate. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2000$$$.",
+  "output_specification": "For each test case, print the earliest time the three friends can finish all $$$n$$$ attractions.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n1 2 3 4\n4\n1 1 1 1\n6\n1 2 1 2 2 2",
+      "output": "4\n4\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:35",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

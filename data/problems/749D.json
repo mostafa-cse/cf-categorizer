@@ -1,0 +1,39 @@
+{
+  "id": "749D",
+  "source": "problemset",
+  "contest_id": 749,
+  "problem_index": "D",
+  "name": "Leaving Auction",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 2858,
+  "problem_url": "https://codeforces.com/problemset/problem/749/D",
+  "editorial_url": null,
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n people taking part in auction today. The rules of auction are classical. There were n bids made, though it's not guaranteed they were from different people. It might happen that some people made no bids at all. Each bid is define by two integers ( a i , b i ) , where a i is the index of the person, who made this bid and b i is its size. Bids are given in chronological order, meaning b i < b i + 1 for all i < n . Moreover, participant never makes two bids in a row (no one updates his own bid), i.e. a i ≠ a i + 1 for all i < n . Now you are curious with the following question: who (and which bid) will win the auction if some participants were absent? Consider that if someone was absent, all his bids are just removed and no new bids are added. Note, that if during this imaginary exclusion of some participants it happens that some of the remaining participants makes a bid twice (or more times) in a row, only first of these bids is counted. For better understanding take a look at the samples. You have several questions in your mind, compute the answer for each of them.",
+  "input_specification": "The first line of the input contains an integer n ( 1 ≤ n ≤ 200 000 ) — the number of participants and bids. Each of the following n lines contains two integers a i and b i ( 1 ≤ a i ≤ n , 1 ≤ b i ≤ 10 9 , b i < b i + 1 ) — the number of participant who made the i -th bid and the size of this bid. Next line contains an integer q ( 1 ≤ q ≤ 200 000 ) — the number of question you have in mind. Each of next q lines contains an integer k ( 1 ≤ k ≤ n ), followed by k integers l j ( 1 ≤ l j ≤ n ) — the number of people who are not coming in this question and their indices. It is guarenteed that l j values are different for a single question. It's guaranteed that the sum of k over all question won't exceed 200 000 .",
+  "output_specification": "For each question print two integer — the index of the winner and the size of the winning bid. If there is no winner (there are no remaining bids at all), print two zeroes.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 10\n2 100\n3 1000\n1 10000\n2 100000\n3 1000000\n3\n1 3\n2 2 3\n2 1 2",
+      "output": "2 100000\n1 10\n3 1000"
+    },
+    {
+      "input": "3\n1 10\n2 100\n1 1000\n2\n2 1 2\n2 2 3",
+      "output": "0 0\n1 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:15",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

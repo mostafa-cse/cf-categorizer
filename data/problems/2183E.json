@@ -1,0 +1,36 @@
+{
+  "id": "2183E",
+  "source": "problemset",
+  "contest_id": 2183,
+  "problem_index": "E",
+  "name": "LCM is Legendary Counting Master",
+  "rating": 2100,
+  "tags": [
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3095,
+  "problem_url": "https://codeforces.com/problemset/problem/2183/E",
+  "editorial_url": "https://codeforces.com/blog/entry/149944",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a sequence $$$a$$$ of length $$$n$$$ and a positive integer $$$m$$$. Each element of $$$a$$$ is an integer in the range $$$[0, m]$$$. A sequence $$$a$$$ is considered good if and only if the following two conditions hold: $$$a_1 \\lt a_2 \\lt a_3 \\lt \\ldots \\lt a_n$$$, and $$$\\frac{1}{\\operatorname{lcm}(a_1,a_2)}+\\frac{1}{\\operatorname{lcm}(a_2,a_3)}+\\ldots+\\frac{1}{\\operatorname{lcm}(a_{n-1},a_n)}+\\color{red}{\\frac{1}{\\operatorname{lcm}(a_n,a_1)}}\\ge1$$$.$$$^{\\text{∗}}$$$ You need to replace all zeros in $$$a$$$ with integers from the range $$$[1, m]$$$. Calculate the number of different ways to replace the zeros such that the resulting sequence $$$a$$$ is good . Print the answer modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$The Least common multiple ($$$\\operatorname{lcm}$$$) of two positive integers is the smallest positive integer that is a multiple of both. For example, $$$\\operatorname{lcm}(2,3)=6, \\operatorname{lcm}(4,6)=12$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 1000$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\le n\\le m \\le 3000$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le m$$$). It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$3000$$$.",
+  "output_specification": "For each test case, output a single integer — the number of ways to complete the sequence so that it becomes good, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 6\n1 0 0 6\n2 2\n2 1\n5 24\n0 0 4 0 0\n5 6\n0 0 6 0 0\n20 2000\n1 0 0 0 0 14 0 0 0 0 0 0 0 0 0 514 0 0 0 0",
+      "output": "2\n0\n10\n0\n973702700"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:39",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

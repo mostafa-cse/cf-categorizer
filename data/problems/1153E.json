@@ -1,0 +1,40 @@
+{
+  "id": "1153E",
+  "source": "problemset",
+  "contest_id": 1153,
+  "problem_index": "E",
+  "name": "Serval and Snake",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "brute force",
+    "interactive"
+  ],
+  "solved_count": 1820,
+  "problem_url": "https://codeforces.com/problemset/problem/1153/E",
+  "editorial_url": "https://codeforces.com/blog/entry/66539",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. Now Serval is a senior high school student in Japari Middle School. However, on the way to the school, he must go across a pond, in which there is a dangerous snake. The pond can be represented as a $$$n \\times n$$$ grid. The snake has a head and a tail in different cells, and its body is a series of adjacent cells connecting the head and the tail without self-intersecting. If Serval hits its head or tail, the snake will bite him and he will die. Luckily, he has a special device which can answer the following question: you can pick a rectangle, it will tell you the number of times one needs to cross the border of the rectangle walking cell by cell along the snake from the head to the tail. The pictures below show a possible snake and a possible query to it, which will get an answer of $$$4$$$. Today Serval got up too late and only have time to make $$$2019$$$ queries. As his best friend, can you help him find the positions of the head and the tail? Note that two cells are adjacent if and only if they have a common edge in the grid, and a snake can have a body of length $$$0$$$, that means it only has adjacent head and tail. Also note that the snake is sleeping, so it won't move while Serval using his device. And what's obvious is that the snake position does not depend on your queries.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$2\\leq n \\leq 1000$$$) — the size of the grid.",
+  "output_specification": "When you are ready to answer, you should print ! x1 y1 x2 y2 , where $$$(x_1, y_1)$$$ represents the position of the head and $$$(x_2,y_2)$$$ represents the position of the tail. You can print head and tail in any order.",
+  "sample_testcases": [
+    {
+      "input": "2\n\n1\n\n0\n\n0",
+      "output": "? 1 1 1 1\n\n? 1 2 1 2\n\n? 2 2 2 2\n\n! 1 1 2 1"
+    },
+    {
+      "input": "3\n\n2\n\n0",
+      "output": "? 2 2 2 2\n\n? 2 1 2 3\n\n! 2 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:44",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

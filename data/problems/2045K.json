@@ -1,0 +1,40 @@
+{
+  "id": "2045K",
+  "source": "problemset",
+  "contest_id": 2045,
+  "problem_index": "K",
+  "name": "GCDDCG",
+  "rating": 2900,
+  "tags": [],
+  "solved_count": 136,
+  "problem_url": "https://codeforces.com/problemset/problem/2045/K",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2024/raRzKDJLPHcUnqTcwvGznwEdKiDWjEkd.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "You are playing the Greatest Common Divisor Deck-Building Card Game (GCDDCG). There are $$$N$$$ cards (numbered from $$$1$$$ to $$$N$$$). Card $$$i$$$ has the value of $$$A_i$$$, which is an integer between $$$1$$$ and $$$N$$$ (inclusive). The game consists of $$$N$$$ rounds (numbered from $$$1$$$ to $$$N$$$). Within each round, you need to build two non-empty decks, deck $$$1$$$ and deck $$$2$$$. A card cannot be inside both decks, and it is allowed to not use all $$$N$$$ cards. In round $$$i$$$, the greatest common divisor (GCD) of the card values in each deck must equal $$$i$$$. Your creativity point during round $$$i$$$ is the product of $$$i$$$ and the number of ways to build two valid decks. Two ways are considered different if one of the decks contains different cards. Find the sum of creativity points across all $$$N$$$ rounds. Since the sum can be very large, calculate the sum modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line consists of an integer $$$N$$$ ($$$2 \\leq N \\leq 200\\,000)$$$. The second line consists of $$$N$$$ integers $$$A_i$$$ ($$$1 \\leq A_i \\leq N$$$).",
+  "output_specification": "Output a single integer representing the sum of creativity points across all $$$N$$$ rounds modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 3 3",
+      "output": "36"
+    },
+    {
+      "input": "4\n2 2 4 4",
+      "output": "44"
+    },
+    {
+      "input": "9\n4 2 6 9 7 7 7 3 3",
+      "output": "10858"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:41",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

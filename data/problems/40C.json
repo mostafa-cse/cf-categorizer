@@ -1,0 +1,43 @@
+{
+  "id": "40C",
+  "source": "problemset",
+  "contest_id": 40,
+  "problem_index": "C",
+  "name": "Berland Square",
+  "rating": 2300,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 371,
+  "problem_url": "https://codeforces.com/problemset/problem/40/C",
+  "editorial_url": "https://codeforces.com/blog/entry/835",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Last year the world's largest square was built in Berland. It is known that the square can be represented as an infinite plane with an introduced Cartesian system of coordinates. On that square two sets of concentric circles were painted. Let's call the set of concentric circles with radii 1, 2, ..., K and the center in the point ( z , 0) a ( K , z ) -set. Thus, on the square were painted a ( N , x ) -set and a ( M , y ) -set. You have to find out how many parts those sets divided the square into.",
+  "input_specification": "The first line contains integers N , x , M , y . ( 1 ≤ N , M ≤ 100000,  - 100000 ≤ x , y ≤ 100000, x ≠ y ).",
+  "output_specification": "Print the sought number of parts.",
+  "sample_testcases": [
+    {
+      "input": "1 0 1 1",
+      "output": "4"
+    },
+    {
+      "input": "1 0 1 2",
+      "output": "3"
+    },
+    {
+      "input": "3 3 4 7",
+      "output": "17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:34",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

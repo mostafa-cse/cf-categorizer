@@ -1,0 +1,43 @@
+{
+  "id": "708C",
+  "source": "problemset",
+  "contest_id": 708,
+  "problem_index": "C",
+  "name": "Centroids",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 4708,
+  "problem_url": "https://codeforces.com/problemset/problem/708/C",
+  "editorial_url": "https://codeforces.com/blog/entry/46763",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Tree is a connected acyclic graph. Suppose you are given a tree consisting of n vertices. The vertex of this tree is called centroid if the size of each connected component that appears if this vertex is removed from the tree doesn't exceed . You are given a tree of size n and can perform no more than one edge replacement. Edge replacement is the operation of removing one edge from the tree (without deleting incident vertices) and inserting one new edge (without adding new vertices) in such a way that the graph remains a tree. For each vertex you have to determine if it's possible to make it centroid by performing no more than one edge replacement.",
+  "input_specification": "The first line of the input contains an integer n ( 2 ≤ n ≤ 400 000 ) — the number of vertices in the tree. Each of the next n - 1 lines contains a pair of vertex indices u i and v i ( 1 ≤ u i , v i ≤ n ) — endpoints of the corresponding edge.",
+  "output_specification": "Print n integers. The i -th of them should be equal to 1 if the i -th vertex can be made centroid by replacing no more than one edge, and should be equal to 0 otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n2 3",
+      "output": "1 1 1"
+    },
+    {
+      "input": "5\n1 2\n1 3\n1 4\n1 5",
+      "output": "1 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:27",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

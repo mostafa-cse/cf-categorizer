@@ -1,0 +1,38 @@
+{
+  "id": "2248E",
+  "source": "problemset",
+  "contest_id": 2248,
+  "problem_index": "E",
+  "name": "Excuse for Breaks",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 2110,
+  "problem_url": "https://codeforces.com/problemset/problem/2248/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155640",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given three integers $$$n$$$, $$$m$$$, and $$$d$$$, and two arrays $$$p_1, p_2, \\ldots, p_m$$$ and $$$r_1, r_2, \\ldots, r_m$$$. The array $$$p$$$ is strictly increasing. For a binary array $$$a$$$ of any positive finite length (so $$$|a|$$$ need not equal $$$n$$$), define its value $$$f(a)$$$ using the following pseudocode: function f(a): v := 0 c := 0 for i from 1 to length(a): if a[i] is equal to 1: v := v + d c := c + 1 else: c := 0 for j from 1 to m: if c is equal to p[j]: v := v + r[j] if c is equal to n: c := 0 return v Here, \" := \" denotes the assignment operation. Let $$$I(a)$$$ denote the array $$$[1,1,\\ldots,1]$$$ of length $$$|a|$$$. In other words, $$$I(a)$$$ consists of $$$|a|$$$ ones. Determine whether there exists a binary (consisting only of zeros and ones) array $$$a$$$ such that $$$f(a) \\gt f(I(a))$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2000$$$). The description of the test cases follows. The first line of each test case contains three integers $$$n$$$, $$$m$$$, and $$$d$$$ ($$$1 \\le n \\le 10^9$$$, $$$0 \\le m \\le 2000$$$, $$$0 \\le d \\le 10^9$$$). The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$p_i$$$ and $$$r_i$$$ ($$$1 \\le p_i \\le n$$$, $$$1 \\le r_i \\le 10^9$$$). The array $$$p$$$ is strictly increasing. It is guaranteed that the sum of $$$m$$$ over all test cases does not exceed $$$2000$$$.",
+  "output_specification": "For each test case, output \" YES \" if such a binary array $$$a$$$ exists, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "3\n6 4 3\n2 5\n3 9\n4 1\n5 3\n7 3 5\n2 5\n4 5\n7 10\n684492057 3 386217943\n367971233 991739271\n612599954 429216213\n684492056 402931836",
+      "output": "YES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "653E",
+  "source": "problemset",
+  "contest_id": 653,
+  "problem_index": "E",
+  "name": "Bear and Forgotten Tree 2",
+  "rating": 2400,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1815,
+  "problem_url": "https://codeforces.com/problemset/problem/653/E",
+  "editorial_url": "https://codeforces.com/blog/entry/43886",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A tree is a connected undirected graph consisting of n vertices and n -  1 edges. Vertices are numbered 1 through n . Limak is a little polar bear. He once had a tree with n vertices but he lost it. He still remembers something about the lost tree though. You are given m pairs of vertices ( a 1 , b 1 ), ( a 2 , b 2 ), ..., ( a m , b m ) . Limak remembers that for each i there was no edge between a i and b i . He also remembers that vertex 1 was incident to exactly k edges (its degree was equal to k ). Is it possible that Limak remembers everything correctly? Check whether there exists a tree satisfying the given conditions.",
+  "input_specification": "The first line of the input contains three integers n , m and k ( ) — the number of vertices in Limak's tree, the number of forbidden pairs of vertices, and the degree of vertex 1 , respectively. The i -th of next m lines contains two distinct integers a i and b i ( 1 ≤ a i , b i ≤ n , a i ≠ b i ) — the i -th pair that is forbidden . It's guaranteed that each pair of vertices will appear at most once in the input.",
+  "output_specification": "Print \" possible \" (without quotes) if there exists at least one tree satisfying the given conditions. Otherwise, print \" impossible \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "5 4 2\n1 2\n2 3\n4 2\n4 1",
+      "output": "possible"
+    },
+    {
+      "input": "6 5 3\n1 2\n1 3\n1 4\n1 5\n1 6",
+      "output": "impossible"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

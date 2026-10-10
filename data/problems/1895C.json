@@ -1,0 +1,46 @@
+{
+  "id": "1895C",
+  "source": "problemset",
+  "contest_id": 1895,
+  "problem_index": "C",
+  "name": "Torn Lucky Ticket",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "dp",
+    "hashing",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 13380,
+  "problem_url": "https://codeforces.com/problemset/problem/1895/C",
+  "editorial_url": "https://codeforces.com/blog/entry/122034",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "A ticket is a non-empty string of digits from $$$1$$$ to $$$9$$$. A lucky ticket is such a ticket that: it has an even length; the sum of digits in the first half is equal to the sum of digits in the second half. You are given $$$n$$$ ticket pieces $$$s_1, s_2, \\dots, s_n$$$. How many pairs $$$(i, j)$$$ (for $$$1 \\le i, j \\le n$$$) are there such that $$$s_i + s_j$$$ is a lucky ticket? Note that it's possible that $$$i=j$$$. Here, the + operator denotes the concatenation of the two strings. For example, if $$$s_i$$$ is 13 , and $$$s_j$$$ is 37 , then $$$s_i + s_j$$$ is 1337 .",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of ticket pieces. The second line contains $$$n$$$ non-empty strings $$$s_1, s_2, \\dots, s_n$$$, each of length at most $$$5$$$ and consisting only of digits from $$$1$$$ to $$$9$$$.",
+  "output_specification": "Print a single integer — the number of pairs $$$(i, j)$$$ (for $$$1 \\le i, j \\le n$$$) such that $$$s_i + s_j$$$ is a lucky ticket.",
+  "sample_testcases": [
+    {
+      "input": "10\n5 93746 59 3746 593 746 5937 46 59374 6",
+      "output": "20"
+    },
+    {
+      "input": "5\n2 22 222 2222 22222",
+      "output": "13"
+    },
+    {
+      "input": "3\n1 1 1",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

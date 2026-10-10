@@ -1,0 +1,38 @@
+{
+  "id": "566G",
+  "source": "problemset",
+  "contest_id": 566,
+  "problem_index": "G",
+  "name": "Max and Min",
+  "rating": 2500,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 439,
+  "problem_url": "https://codeforces.com/problemset/problem/566/G",
+  "editorial_url": "https://codeforces.com/blog/entry/19518",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Two kittens, Max and Min, play with a pair of non-negative integers x and y . As you can guess from their names, kitten Max loves to maximize and kitten Min loves to minimize. As part of this game Min wants to make sure that both numbers, x and y became negative at the same time, and kitten Max tries to prevent him from doing so. Each kitten has a set of pairs of integers available to it. Kitten Max has n pairs of non-negative integers ( a i , b i ) ( 1 ≤ i ≤ n ), and kitten Min has m pairs of non-negative integers ( c j , d j ) ( 1 ≤ j ≤ m ). As kitten Max makes a move, it can take any available pair ( a i , b i ) and add a i to x and b i to y , and kitten Min can take any available pair ( c j , d j ) and subtract c j from x and d j from y . Each kitten can use each pair multiple times during distinct moves. Max moves first. Kitten Min is winning if at some moment both numbers a , b are negative simultaneously . Otherwise, the winner of the game is kitten Max. Determine which kitten wins if both of them play optimally.",
+  "input_specification": "The first line contains two integers, n and m ( 1 ≤ n , m ≤ 100 000 ) — the number of pairs of numbers available to Max and Min, correspondingly. The second line contains two integers x , y ( 1 ≤ x , y ≤ 10 9 ) — the initial values of numbers with which the kittens are playing. Next n lines contain the pairs of numbers a i , b i ( 1 ≤ a i , b i ≤ 10 9 ) — the pairs available to Max. The last m lines contain pairs of numbers c j , d j ( 1 ≤ c j , d j ≤ 10 9 ) — the pairs available to Min.",
+  "output_specification": "Print « Max » (without the quotes), if kitten Max wins, or \" Min \" (without the quotes), if kitten Min wins.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n42 43\n2 3\n3 2\n3 10\n10 3",
+      "output": "Min"
+    },
+    {
+      "input": "1 1\n1 1\n3 4\n1 1",
+      "output": "Max"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

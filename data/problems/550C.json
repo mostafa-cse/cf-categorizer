@@ -1,0 +1,44 @@
+{
+  "id": "550C",
+  "source": "problemset",
+  "contest_id": 550,
+  "problem_index": "C",
+  "name": "Divisibility by Eight",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "dp",
+    "math"
+  ],
+  "solved_count": 33121,
+  "problem_url": "https://codeforces.com/problemset/problem/550/C",
+  "editorial_url": "https://codeforces.com/blog/entry/18329",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a non-negative integer n , its decimal representation consists of at most 100 digits and doesn't contain leading zeroes. Your task is to determine if it is possible in this case to remove some of the digits (possibly not remove any digit at all) so that the result contains at least one digit, forms a non-negative integer, doesn't have leading zeroes and is divisible by 8. After the removing, it is forbidden to rearrange the digits. If a solution exists, you should print it.",
+  "input_specification": "The single line of the input contains a non-negative integer n . The representation of number n doesn't contain any leading zeroes and its length doesn't exceed 100 digits.",
+  "output_specification": "Print \" NO \" (without quotes), if there is no such way to remove some digits from number n . Otherwise, print \" YES \" in the first line and the resulting number after removing digits from number n in the second line. The printed number must be divisible by 8 . If there are multiple possible answers, you may print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3454",
+      "output": "YES\n344"
+    },
+    {
+      "input": "10",
+      "output": "YES\n0"
+    },
+    {
+      "input": "111111",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

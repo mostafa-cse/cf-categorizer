@@ -1,0 +1,42 @@
+{
+  "id": "985G",
+  "source": "problemset",
+  "contest_id": 985,
+  "problem_index": "G",
+  "name": "Team Players",
+  "rating": 2700,
+  "tags": [
+    "combinatorics"
+  ],
+  "solved_count": 855,
+  "problem_url": "https://codeforces.com/problemset/problem/985/G",
+  "editorial_url": "https://codeforces.com/blog/entry/59623",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ players numbered from $$$0$$$ to $$$n-1$$$ with ranks. The $$$i$$$-th player has rank $$$i$$$. Players can form teams: the team should consist of three players and no pair of players in the team should have a conflict. The rank of the team is calculated using the following algorithm: let $$$i$$$, $$$j$$$, $$$k$$$ be the ranks of players in the team and $$$i \\lt j \\lt k$$$, then the rank of the team is equal to $$$A \\cdot i + B \\cdot j + C \\cdot k$$$. You are given information about the pairs of players who have a conflict. Calculate the total sum of ranks over all possible valid teams modulo $$$2^{64}$$$.",
+  "input_specification": "The first line contains two space-separated integers $$$n$$$ and $$$m$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$, $$$0 \\le m \\le 2 \\cdot 10^5$$$) — the number of players and the number of conflicting pairs. The second line contains three space-separated integers $$$A$$$, $$$B$$$ and $$$C$$$ ($$$1 \\le A, B, C \\le 10^6$$$) — coefficients for team rank calculation. Each of the next $$$m$$$ lines contains two space-separated integers $$$u_i$$$ and $$$v_i$$$ ($$$0 \\le u_i, v_i \\lt n, u_i \\neq v_i$$$) — pair of conflicting players. It's guaranteed that each unordered pair of players appears in the input file no more than once.",
+  "output_specification": "Print single integer — the total sum of ranks over all possible teams modulo $$$2^{64}$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 0\n2 3 4",
+      "output": "64"
+    },
+    {
+      "input": "4 1\n2 3 4\n1 0",
+      "output": "38"
+    },
+    {
+      "input": "6 4\n1 5 3\n0 3\n3 5\n5 4\n4 3",
+      "output": "164"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:22",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

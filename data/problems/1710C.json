@@ -1,0 +1,47 @@
+{
+  "id": "1710C",
+  "source": "problemset",
+  "contest_id": 1710,
+  "problem_index": "C",
+  "name": "XOR Triangle",
+  "rating": 2500,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1699,
+  "problem_url": "https://codeforces.com/problemset/problem/1710/C",
+  "editorial_url": "https://codeforces.com/blog/entry/105232",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a positive integer $$$n$$$. Since $$$n$$$ may be very large, you are given its binary representation. You should compute the number of triples $$$(a,b,c)$$$ with $$$0 \\leq a,b,c \\leq n$$$ such that $$$a \\oplus b$$$, $$$b \\oplus c$$$, and $$$a \\oplus c$$$ are the sides of a non-degenerate triangle. Here, $$$\\oplus$$$ denotes the bitwise XOR operation . You should output the answer modulo $$$998\\,244\\,353$$$. Three positive values $$$x$$$, $$$y$$$, and $$$z$$$ are the sides of a non-degenerate triangle if and only if $$$x+y \\gt z$$$, $$$x+z \\gt y$$$, and $$$y+z \\gt x$$$.",
+  "input_specification": "The first and only line contains the binary representation of an integer $$$n$$$ ($$$0 \\lt n \\lt 2^{200\\,000}$$$) without leading zeros. For example, the string 10 is the binary representation of the number $$$2$$$, while the string 1010 represents the number $$$10$$$.",
+  "output_specification": "Print one integer — the number of triples $$$(a,b,c)$$$ satisfying the conditions described in the statement modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "101",
+      "output": "12"
+    },
+    {
+      "input": "1110",
+      "output": "780"
+    },
+    {
+      "input": "11011111101010010",
+      "output": "141427753"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:24",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

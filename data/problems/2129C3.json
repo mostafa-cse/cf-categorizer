@@ -1,0 +1,38 @@
+{
+  "id": "2129C3",
+  "source": "problemset",
+  "contest_id": 2129,
+  "problem_index": "C3",
+  "name": "Interactive RBS (Hard Version)",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "constructive algorithms",
+    "dp",
+    "interactive"
+  ],
+  "solved_count": 2334,
+  "problem_url": "https://codeforces.com/problemset/problem/2129/C3",
+  "editorial_url": "https://codeforces.com/blog/entry/145152",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. This is the hard version of the problem. The only difference is the limit on the number of queries. You can make hacks only if all versions of the problem are solved. There is a hidden bracket sequence $$$s$$$ of length $$$n$$$, where $$$s$$$ only contains $$$\\texttt{'('}$$$ and $$$\\texttt{')'}$$$. It is guaranteed that $$$s$$$ contains at least one $$$\\texttt{'('}$$$ and one $$$\\texttt{')'}$$$. To find this bracket sequence, you can ask queries. Each query has the following form: you pick an integer $$$k$$$ and arbitrary indices $$$i_1, i_2, \\ldots, i_k$$$ ($$$1 \\le k \\le 1000$$$, $$$1 \\le i_1, i_2, \\ldots, i_k \\le n$$$). Note that the indices can be equal. Next, you receive an integer $$$f(s_{i_1}s_{i_2}\\ldots s_{i_k})$$$ calculated by the jury. For a bracket sequence $$$t$$$, $$$f(t)$$$ is the number of non-empty regular bracket substrings in $$$t$$$ (the substrings must be contiguous ). For example, $$$f(\\texttt{\"()())\"}) = 3$$$. A bracket sequence is called regular if it can be constructed in the following way. The empty sequence $$$\\varnothing$$$ is regular. If the bracket sequence $$$A$$$ is regular, then $$$\\mathtt{(}A\\mathtt{)}$$$ is also regular. If the bracket sequences $$$A$$$ and $$$B$$$ are regular, then the concatenated sequence $$$A B$$$ is also regular. For example, the sequences $$$\\texttt{\"(())()\"}$$$, $$$\\texttt{\"()\"}$$$ are regular, while $$$\\texttt{\"(()\"}$$$ and $$$\\texttt{\"())(\"}$$$ are not. Find the sequence $$$s$$$ using no more than $$$100$$$ queries.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 20$$$). The description of the test cases follows.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n3\n\n0\n\n1\n\n1\n\n2\n\n3",
+      "output": "? 4 1 2 3 3\n\n? 2 2 1\n\n? 2 3 1\n\n! )((\n\n? 4 1 2 1 2\n\n! ()"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

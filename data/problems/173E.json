@@ -1,0 +1,35 @@
+{
+  "id": "173E",
+  "source": "problemset",
+  "contest_id": 173,
+  "problem_index": "E",
+  "name": "Camping Groups",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "sortings"
+  ],
+  "solved_count": 789,
+  "problem_url": "https://codeforces.com/problemset/problem/173/E",
+  "editorial_url": "https://codeforces.com/blog/entry/4289",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A club wants to take its members camping. In order to organize the event better the club directors decided to partition the members into several groups. Club member i has a responsibility value r i and an age value a i . A group is a non-empty subset of club members with one member known as group leader. A group leader should be one of the most responsible members of the group (his responsibility value is not less than responsibility of any other group member) and his age absolute difference with any other group member should not exceed k . Some club members are friends and want to be in the same group. They also like their group to be as large as possible. Now you should write a program that answers a series of questions like \"What's the largest size of a group containing club member x and club member y ?\". It's possible for x or y to be the group leader.",
+  "input_specification": "The first line contains two integers n and k ( 2 ≤ n ≤ 10 5 , 0 ≤ k ≤ 10 9 ) — the number of club members and the age restriction for one group. The next line contains integer numbers r 1 , r 2 , ..., r n ( 1 ≤ r i ≤ 10 9 ) separated by space: r i denotes the i -th club member's responsibility. In the same way there are integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 ) in the third line: a i denotes the i -th club member's age. The next line contains an integer q denoting the number of questions that you should answer ( 1 ≤ q ≤ 10 5 ). The next q lines describe the questions. Each line contains two space-separated integers x i and y i ( 1 ≤ x i , y i ≤ n , x i ≠ y i ) — the indices of the club members that should end up in the same group.",
+  "output_specification": "For each question print the maximum size of the group in a line. If making such a group is impossible print -1 instead.",
+  "sample_testcases": [
+    {
+      "input": "5 1\n1 5 4 1 2\n4 4 3 2 2\n4\n5 3\n2 3\n2 5\n4 1",
+      "output": "4\n3\n-1\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:34",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

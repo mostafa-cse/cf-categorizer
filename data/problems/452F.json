@@ -1,0 +1,40 @@
+{
+  "id": "452F",
+  "source": "problemset",
+  "contest_id": 452,
+  "problem_index": "F",
+  "name": "Permutation",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "hashing"
+  ],
+  "solved_count": 1890,
+  "problem_url": "https://codeforces.com/problemset/problem/452/F",
+  "editorial_url": "https://codeforces.com/blog/entry/13855",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation of numbers from 1 to n . Determine whether there's a pair of integers a , b (1 ≤ a , b ≤ n ; a ≠ b ) such that the element (note, that it is usual division, not integer one) is between a and b in this permutation.",
+  "input_specification": "First line consists of a single integer n ( 1 ≤ n ≤ 300000 ) — the size of permutation. Second line contains n integers — the permutation itself.",
+  "output_specification": "Print \" YES \", if such a pair exists, \" NO \" otherwise (in both cases without quotes, the answer is case insensitive).",
+  "sample_testcases": [
+    {
+      "input": "4\n1 3 4 2",
+      "output": "NO"
+    },
+    {
+      "input": "5\n1 5 2 4 3",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:28",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

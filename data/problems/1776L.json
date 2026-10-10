@@ -1,0 +1,43 @@
+{
+  "id": "1776L",
+  "source": "problemset",
+  "contest_id": 1776,
+  "problem_index": "L",
+  "name": "Controllers",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "math"
+  ],
+  "solved_count": 13085,
+  "problem_url": "https://codeforces.com/problemset/problem/1776/L",
+  "editorial_url": "https://codeforces.com/contest/1776/attachments/download/19130/solutions.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are at your grandparents' house and you are playing an old video game on a strange console. Your controller has only two buttons and each button has a number written on it. Initially, your score is $$$0$$$. The game is composed of $$$n$$$ rounds. For each $$$1\\le i\\le n$$$, the $$$i$$$-th round works as follows. On the screen, a symbol $$$s_i$$$ appears, which is either $$$\\texttt{+}$$$ ( plus ) or $$$\\texttt{-}$$$ ( minus ). Then you must press one of the two buttons on the controller once . Suppose you press a button with the number $$$x$$$ written on it: your score will increase by $$$x$$$ if the symbol was $$$\\texttt{+}$$$ and will decrease by $$$x$$$ if the symbol was $$$\\texttt{-}$$$. After you press the button, the round ends. After you have played all $$$n$$$ rounds, you win if your score is $$$0$$$. Over the years, your grandparents bought many different controllers, so you have $$$q$$$ of them. The two buttons on the $$$j$$$-th controller have the numbers $$$a_j$$$ and $$$b_j$$$ written on them. For each controller, you must compute whether you can win the game playing with that controller.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot 10^5$$$) — the number of rounds. The second line contains a string $$$s$$$ of length $$$n$$$ — where $$$s_i$$$ is the symbol that will appear on the screen in the $$$i$$$-th round. It is guaranteed that $$$s$$$ contains only the characters $$$\\texttt{+}$$$ and $$$\\texttt{-}$$$. The third line contains an integer $$$q$$$ ($$$1 \\le q \\le 10^5$$$) — the number of controllers. The following $$$q$$$ lines contain two integers $$$a_j$$$ and $$$b_j$$$ each ($$$1 \\le a_j, b_j \\le 10^9$$$) — the numbers on the buttons of controller $$$j$$$.",
+  "output_specification": "Output $$$q$$$ lines. On line $$$j$$$ print $$$\\texttt{YES}$$$ if the game is winnable using controller $$$j$$$, otherwise print $$$\\texttt{NO}$$$.",
+  "sample_testcases": [
+    {
+      "input": "8\n+-+---+-\n5\n2 1\n10 3\n7 9\n10 10\n5 3",
+      "output": "YES\nNO\nNO\nNO\nYES"
+    },
+    {
+      "input": "6\n+-++--\n2\n9 7\n1 1",
+      "output": "YES\nYES"
+    },
+    {
+      "input": "20\n+-----+--+--------+-\n2\n1000000000 99999997\n250000000 1000000000",
+      "output": "NO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:07",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

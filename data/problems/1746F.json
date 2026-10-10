@@ -1,0 +1,36 @@
+{
+  "id": "1746F",
+  "source": "problemset",
+  "contest_id": 1746,
+  "problem_index": "F",
+  "name": "Kazaee",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "hashing",
+    "probabilities"
+  ],
+  "solved_count": 2918,
+  "problem_url": "https://codeforces.com/problemset/problem/1746/F",
+  "editorial_url": "https://codeforces.com/blog/entry/108011",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array $$$a$$$ consisting of $$$n$$$ positive integers and you have to handle $$$q$$$ queries of the following types: $$$1$$$ $$$i$$$ $$$x$$$: change $$$a_{i}$$$ to $$$x$$$, $$$2$$$ $$$l$$$ $$$r$$$ $$$k$$$: check if the number of occurrences of every positive integer in the subarray $$$a_{l}, a_{l+1}, \\ldots a_{r}$$$ is a multiple of $$$k$$$ (check the example for better understanding).",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n , q \\le 3 \\cdot 10^5$$$), the length of $$$a$$$ and the number of queries. Next line contains $$$n$$$ integers $$$a_{1}, a_{2}, \\ldots a_{n}$$$ ($$$1 \\le a_{i} \\le 10^9$$$) — the elements of $$$a$$$. Each of the next $$$q$$$ lines describes a query. It has one of the following forms. $$$1$$$ $$$i$$$ $$$x$$$, ($$$1 \\le i \\le n$$$ , $$$1 \\le x \\le 10^9$$$), or $$$2$$$ $$$l$$$ $$$r$$$ $$$k$$$, ($$$1 \\le l \\le r \\le n$$$ , $$$1 \\le k \\le n$$$).",
+  "output_specification": "For each query of the second type, if answer of the query is yes, print \" YES \", otherwise print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "10 8\n1234 2 3 3 2 1 1 2 3 4\n2 1 6 2\n1 1 1\n2 1 6 2\n2 1 9 2\n1 10 5\n2 1 9 3\n1 3 5\n2 3 10 2",
+      "output": "NO\nYES\nNO\nYES\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:14",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

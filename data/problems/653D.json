@@ -1,0 +1,40 @@
+{
+  "id": "653D",
+  "source": "problemset",
+  "contest_id": 653,
+  "problem_index": "D",
+  "name": "Delivery Bears",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 3203,
+  "problem_url": "https://codeforces.com/problemset/problem/653/D",
+  "editorial_url": "https://codeforces.com/blog/entry/43886",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Niwel is a little golden bear. As everyone knows, bears live in forests, but Niwel got tired of seeing all the trees so he decided to move to the city. In the city, Niwel took on a job managing bears to deliver goods. The city that he lives in can be represented as a directed graph with n nodes and m edges. Each edge has a weight capacity. A delivery consists of a bear carrying weights with their bear hands on a simple path from node 1 to node n . The total weight that travels across a particular edge must not exceed the weight capacity of that edge. Niwel has exactly x bears. In the interest of fairness, no bear can rest, and the weight that each bear carries must be exactly the same. However, each bear may take different paths if they like. Niwel would like to determine, what is the maximum amount of weight he can deliver (it's the sum of weights carried by bears). Find the maximum weight.",
+  "input_specification": "The first line contains three integers n , m and x ( 2 ≤ n ≤ 50 , 1 ≤ m ≤ 500 , 1 ≤ x ≤ 100 000 ) — the number of nodes, the number of directed edges and the number of bears, respectively. Each of the following m lines contains three integers a i , b i and c i ( 1 ≤ a i , b i ≤ n , a i ≠ b i , 1 ≤ c i ≤ 1 000 000 ). This represents a directed edge from node a i to b i with weight capacity c i . There are no self loops and no multiple edges from one city to the other city. More formally, for each i and j that i ≠ j it's guaranteed that a i ≠ a j or b i ≠ b j . It is also guaranteed that there is at least one path from node 1 to node n .",
+  "output_specification": "Print one real value on a single line — the maximum amount of weight Niwel can deliver if he uses exactly x bears. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "4 4 3\n1 2 2\n2 4 1\n1 3 1\n3 4 2",
+      "output": "1.5000000000"
+    },
+    {
+      "input": "5 11 23\n1 2 3\n2 3 4\n3 4 5\n4 5 6\n1 3 4\n2 4 5\n3 5 6\n1 4 2\n2 5 3\n1 5 2\n3 2 30",
+      "output": "10.2222222222"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

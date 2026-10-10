@@ -1,0 +1,44 @@
+{
+  "id": "1165E",
+  "source": "problemset",
+  "contest_id": 1165,
+  "problem_index": "E",
+  "name": "Two Arrays and Sum of Functions",
+  "rating": 1600,
+  "tags": [
+    "greedy",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 10615,
+  "problem_url": "https://codeforces.com/problemset/problem/1165/E",
+  "editorial_url": "https://codeforces.com/blog/entry/67041",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two arrays $$$a$$$ and $$$b$$$, both of length $$$n$$$. Let's define a function $$$f(l, r) = \\sum\\limits_{l \\le i \\le r} a_i \\cdot b_i$$$. Your task is to reorder the elements (choose an arbitrary order of elements) of the array $$$b$$$ to minimize the value of $$$\\sum\\limits_{1 \\le l \\le r \\le n} f(l, r)$$$. Since the answer can be very large, you have to print it modulo $$$998244353$$$. Note that you should minimize the answer but not its remainder .",
+  "input_specification": "The first line of the input contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in $$$a$$$ and $$$b$$$. The second line of the input contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$), where $$$a_i$$$ is the $$$i$$$-th element of $$$a$$$. The third line of the input contains $$$n$$$ integers $$$b_1, b_2, \\dots, b_n$$$ ($$$1 \\le b_j \\le 10^6$$$), where $$$b_j$$$ is the $$$j$$$-th element of $$$b$$$.",
+  "output_specification": "Print one integer — the minimum possible value of $$$\\sum\\limits_{1 \\le l \\le r \\le n} f(l, r)$$$ after rearranging elements of $$$b$$$, taken modulo $$$998244353$$$. Note that you should minimize the answer but not its remainder .",
+  "sample_testcases": [
+    {
+      "input": "5\n1 8 7 2 4\n9 7 2 9 3",
+      "output": "646"
+    },
+    {
+      "input": "1\n1000000\n1000000",
+      "output": "757402647"
+    },
+    {
+      "input": "2\n1 3\n4 2",
+      "output": "20"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:40",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

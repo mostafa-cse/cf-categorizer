@@ -1,0 +1,38 @@
+{
+  "id": "1985H2",
+  "source": "problemset",
+  "contest_id": 1985,
+  "problem_index": "H2",
+  "name": "Maximize the Largest Component (Hard Version)",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "implementation"
+  ],
+  "solved_count": 2028,
+  "problem_url": "https://codeforces.com/problemset/problem/1985/H2",
+  "editorial_url": "https://codeforces.com/blog/entry/129620",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Easy and hard versions are actually different problems, so read statements of both problems completely and carefully. The only difference between the two versions is the operation. Alex has a grid with $$$n$$$ rows and $$$m$$$ columns consisting of ' . ' and ' # ' characters. A set of ' # ' cells forms a connected component if from any cell in this set, it is possible to reach any other cell in this set by only moving to another cell in the set that shares a common side . The size of a connected component is the number of cells in the set. In one operation, Alex selects any row $$$r$$$ ($$$1 \\le r \\le n$$$) and any column $$$c$$$ ($$$1 \\le c \\le m$$$), then sets every cell in row $$$r$$$ and column $$$c$$$ to be ' # '. Help Alex find the maximum possible size of the largest connected component of ' # ' cells that he can achieve after performing the operation at most once .",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\cdot m \\le 10^6$$$) — the number of rows and columns of the grid. The next $$$n$$$ lines each contain $$$m$$$ characters. Each character is either ' . ' or ' # '. It is guaranteed that the sum of $$$n \\cdot m$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum possible size of a connected component of ' # ' cells that Alex can achieve.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1\n.\n4 2\n..\n#.\n#.\n.#\n3 5\n.#.#.\n..#..\n.#.#.\n5 5\n#...#\n....#\n#...#\n.....\n...##\n6 6\n.#..#.\n#..#..\n.#...#\n#.#.#.\n.#.##.\n###..#\n6 8\n..#....#\n.####.#.\n###.#..#\n.##.#.##\n.#.##.##\n#..##.#.",
+      "output": "1\n7\n11\n16\n22\n36"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

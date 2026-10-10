@@ -1,0 +1,40 @@
+{
+  "id": "1906B",
+  "source": "problemset",
+  "contest_id": 1906,
+  "problem_index": "B",
+  "name": "Button Pressing",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "hashing"
+  ],
+  "solved_count": 952,
+  "problem_url": "https://codeforces.com/problemset/problem/1906/B",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2023/problem_analysis.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given $$$N$$$ buttons (numbered from $$$1$$$ to $$$N$$$) and $$$N$$$ lamps (numbered from $$$1$$$ to $$$N$$$). Each lamp can either be on or off. Initially, lamp $$$i$$$ is on if $$$A_i = 1$$$, and off if $$$A_i = 0$$$. Button $$$i$$$ is connected to lamp $$$i - 1$$$ (if $$$i \\gt 1$$$) and lamp $$$i + 1$$$ (if $$$i \\lt N$$$). In one move, you can press a button $$$i$$$ only if lamp $$$i$$$ is on . When a button is pressed, the state of the lamps connected to this button is toggled. Formally, the lamps will be on if it was off previously, and the lamps will be off if it was on previously. Note that lamp $$$i$$$ is not connected to button $$$i$$$, thus, the state of lamp $$$i$$$ does not change if button $$$i$$$ is pressed. After zero or more moves, you want lamp $$$i$$$ to be on if $$$B_i = 1$$$, and off if $$$B_i = 0$$$. Determine if it is possible to achieve this task.",
+  "input_specification": "This problem has multiple test cases. The first line consists of an integer $$$T$$$ ($$$1 \\leq T \\leq 1000$$$), which represents the number of test cases. Each test case consists of three lines. The first line of each test case consists of an integer $$$N$$$ ($$$3 \\le N \\le 200\\,000$$$). The sum of $$$N$$$ over all test cases does not exceed $$$200\\,000$$$. The second line of each test case consists of a string $$$A$$$ of length $$$N$$$. Each character of $$$A$$$ can either be 0 or 1 . The $$$i$$$-th character represents the initial state of lamp $$$i$$$. The third line of each test case consists of a string $$$A$$$ of length $$$N$$$. Each character of $$$B$$$ can either be 0 or 1 . The $$$i$$$-th character represents the desired final state of lamp $$$i$$$.",
+  "output_specification": "For each test case, output YES in a single line if the final state of all lamps can be reached after zero or more moves, or NO otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2\n4\n0101\n0100\n3\n000\n010",
+      "output": "YES\nNO"
+    },
+    {
+      "input": "5\n7\n0101011\n1111010\n5\n11111\n00000\n4\n1101\n1101\n6\n101010\n100100\n3\n000\n000",
+      "output": "NO\nNO\nYES\nYES\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "1436F",
+  "source": "problemset",
+  "contest_id": 1436,
+  "problem_index": "F",
+  "name": "Sum Over Subsets",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 733,
+  "problem_url": "https://codeforces.com/problemset/problem/1436/F",
+  "editorial_url": "https://codeforces.com/blog/entry/84024",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a multiset $$$S$$$. Over all pairs of subsets $$$A$$$ and $$$B$$$, such that: $$$B \\subset A$$$; $$$|B| = |A| - 1$$$; greatest common divisor of all elements in $$$A$$$ is equal to one; find the sum of $$$\\sum_{x \\in A}{x} \\cdot \\sum_{x \\in B}{x}$$$, modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains one integer $$$m$$$ ($$$1 \\le m \\le 10^5$$$): the number of different values in the multiset $$$S$$$. Each of the next $$$m$$$ lines contains two integers $$$a_i$$$, $$$freq_i$$$ ($$$1 \\le a_i \\le 10^5, 1 \\le freq_i \\le 10^9$$$). Element $$$a_i$$$ appears in the multiset $$$S$$$ $$$freq_i$$$ times. All $$$a_i$$$ are different.",
+  "output_specification": "Print the required sum, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "2\n1 1\n2 1",
+      "output": "9"
+    },
+    {
+      "input": "4\n1 1\n2 1\n3 1\n6 1",
+      "output": "1207"
+    },
+    {
+      "input": "1\n1 5",
+      "output": "560"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

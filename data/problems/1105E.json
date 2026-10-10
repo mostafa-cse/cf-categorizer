@@ -1,0 +1,41 @@
+{
+  "id": "1105E",
+  "source": "problemset",
+  "contest_id": 1105,
+  "problem_index": "E",
+  "name": "Helping Hiasat ",
+  "rating": 2200,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "meet-in-the-middle"
+  ],
+  "solved_count": 2100,
+  "problem_url": "https://codeforces.com/problemset/problem/1105/E",
+  "editorial_url": "https://codeforces.com/blog/entry/64664",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hiasat registered a new account in NeckoForces and when his friends found out about that, each one of them asked to use his name as Hiasat's handle. Luckily for Hiasat, he can change his handle in some points in time. Also he knows the exact moments friends will visit his profile page. Formally, you are given a sequence of events of two types: $$$1$$$ — Hiasat can change his handle. $$$2$$$ $$$s$$$ — friend $$$s$$$ visits Hiasat's profile. The friend $$$s$$$ will be happy, if each time he visits Hiasat's profile his handle would be $$$s$$$. Hiasat asks you to help him, find the maximum possible number of happy friends he can get.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 10^5, 1 \\le m \\le 40$$$) — the number of events and the number of friends. Then $$$n$$$ lines follow, each denoting an event of one of two types: $$$1$$$ — Hiasat can change his handle. $$$2$$$ $$$s$$$ — friend $$$s$$$ ($$$1 \\le |s| \\le 40$$$) visits Hiasat's profile. It's guaranteed, that each friend's name consists only of lowercase Latin letters. It's guaranteed, that the first event is always of the first type and each friend will visit Hiasat's profile at least once.",
+  "output_specification": "Print a single integer — the maximum number of happy friends.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n1\n2 motarack\n2 mike\n1\n2 light",
+      "output": "2"
+    },
+    {
+      "input": "4 3\n1\n2 alice\n2 bob\n2 tanyaromanova",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

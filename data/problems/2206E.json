@@ -1,0 +1,35 @@
+{
+  "id": "2206E",
+  "source": "problemset",
+  "contest_id": 2206,
+  "problem_index": "E",
+  "name": "Parallel Sums",
+  "rating": 2500,
+  "tags": [
+    "data structures",
+    "geometry"
+  ],
+  "solved_count": 563,
+  "problem_url": "https://codeforces.com/problemset/problem/2206/E",
+  "editorial_url": "https://codeforces.com/contest/2206/attachments/download/36244/analysis.pdf",
+  "time_limit": "4 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given two integers $$$n$$$ and $$$m$$$. For a sequence of $$$n$$$ integers $$$A=(a_1, a_2, \\ldots, a_n)$$$, the parallel sums of $$$A$$$ are the $$$n-m+1$$$ integers $$$s_1, s_2, \\ldots, s_{n-m+1}$$$ defined by $$$s_i = a_i + a_{i+1} + \\ldots + a_{i+m-1}$$$ for each $$$i$$$ ($$$1 \\leq i \\leq n-m+1$$$). You are given the values of $$$s_1, s_2, \\ldots, s_{n-m+1}$$$. Your task is to answer $$$q$$$ queries, described as follows. In the $$$j$$$-th query, you are given two integers $$$l_j$$$ and $$$r_j$$$, and you are asked to find the smallest possible value of $$$\\max(a_{l_j}, a_{l_j+1}, \\ldots, a_{r_j})$$$ among all sequences $$$A=(a_1, a_2, \\ldots, a_n)$$$ of $$$n$$$ integers (possibly negative) such that $$$s_1, s_2, \\ldots, s_{n-m+1}$$$ are the parallel sums of $$$A$$$. Or determine if this value can be arbitrarily small.",
+  "input_specification": "The first line of input contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq m \\leq n \\leq 200\\,000$$$). The second line contains $$$n-m+1$$$ integers $$$s_1, s_2, \\ldots, s_{n-m+1}$$$ ($$$-10^9 \\leq s_i \\leq 10^9$$$). The third line contains a single integer $$$q$$$ ($$$1 \\leq q \\leq 100\\,000$$$). The $$$j$$$-th of the next $$$q$$$ lines contains two integers $$$l_j$$$ and $$$r_j$$$ ($$$1 \\leq l_j \\leq r_j \\leq n$$$).",
+  "output_specification": "Output $$$q$$$ lines. The $$$j$$$-th line should contain the smallest possible value of $$$\\max(a_{l_j}, a_{l_j+1}, \\ldots, a_{r_j})$$$. If that value can be arbitrarily small, output unbounded instead.",
+  "sample_testcases": [
+    {
+      "input": "8 4\n4 -4 2 6 5\n4\n3 7\n4 6\n1 8\n2 5",
+      "output": "2\nunbounded\n4\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

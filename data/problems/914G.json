@@ -1,0 +1,50 @@
+{
+  "id": "914G",
+  "source": "problemset",
+  "contest_id": 914,
+  "problem_index": "G",
+  "name": "Sum the Fibonacci",
+  "rating": 2600,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 1287,
+  "problem_url": "https://codeforces.com/problemset/problem/914/G",
+  "editorial_url": "https://codeforces.com/blog/entry/57250",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array s of n non-negative integers. A 5-tuple of integers ( a , b , c , d , e ) is said to be valid if it satisfies the following conditions: 1 ≤ a , b , c , d , e ≤ n ( s a | s b ) & s c & ( s d ^ s e ) = 2 i for some integer i s a & s b = 0 Here, '|' is the bitwise OR, '&' is the bitwise AND and '^' is the bitwise XOR operation. Find the sum of f ( s a | s b ) * f ( s c ) * f ( s d ^ s e ) over all valid 5-tuples ( a , b , c , d , e ) , where f ( i ) is the i -th Fibonnaci number ( f (0) = 0, f (1) = 1, f ( i ) = f ( i - 1) + f ( i - 2) ). Since answer can be is huge output it modulo 10 9 + 7 .",
+  "input_specification": "The first line of input contains an integer n ( 1 ≤ n ≤ 10 6 ). The second line of input contains n integers s i ( 0 ≤ s i < 2 17 ).",
+  "output_specification": "Output the sum as described above, modulo 10 9 + 7",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "32"
+    },
+    {
+      "input": "3\n7 4 1",
+      "output": "3520"
+    },
+    {
+      "input": "10\n1 3 0 7 3 7 6 5 7 5",
+      "output": "1235424"
+    },
+    {
+      "input": "10\n50 9 11 44 39 40 5 39 23 7",
+      "output": "113860062"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

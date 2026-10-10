@@ -1,0 +1,38 @@
+{
+  "id": "24B",
+  "source": "problemset",
+  "contest_id": 24,
+  "problem_index": "B",
+  "name": "F1 Champions",
+  "rating": 1500,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 2115,
+  "problem_url": "https://codeforces.com/problemset/problem/24/B",
+  "editorial_url": "https://codeforces.com/blog/entry/557",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Formula One championship consists of series of races called Grand Prix. After every race drivers receive points according to their final position. Only the top 10 drivers receive points in the following order 25, 18, 15, 12, 10, 8, 6, 4, 2, 1. At the conclusion of the championship the driver with most points is the champion. If there is a tie, champion is the one with most wins (i.e. first places). If a tie still exists, it is chosen the one with most second places, and so on, until there are no more place to use for compare. Last year another scoring system was proposed but rejected. In it the champion is the one with most wins. If there is tie, champion is the one with most points. If a tie still exists it is proceeded the same way as in the original scoring system, that is comparing number of second, third, forth, and so on, places. You are given the result of all races during the season and you are to determine the champion according to both scoring systems. It is guaranteed, that both systems will produce unique champion.",
+  "input_specification": "The first line contain integer t ( 1 ≤ t ≤ 20 ), where t is the number of races. After that all races are described one by one. Every race description start with an integer n ( 1 ≤ n ≤ 50 ) on a line of itself, where n is the number of clasified drivers in the given race. After that n lines follow with the classification for the race, each containing the name of a driver. The names of drivers are given in order from the first to the last place. The name of the driver consists of lowercase and uppercase English letters and has length at most 50 characters. Comparing of names should be case-sensetive.",
+  "output_specification": "Your output should contain exactly two line. On the first line is the name of the champion according to the original rule, and on the second line the name of the champion according to the alternative rule.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\nHamilton\nVettel\nWebber\n2\nWebber\nVettel\n2\nHamilton\nVettel",
+      "output": "Vettel\nHamilton"
+    },
+    {
+      "input": "2\n7\nProst\nSurtees\nNakajima\nSchumacher\nButton\nDeLaRosa\nBuemi\n8\nAlonso\nProst\nNinoFarina\nJimClark\nDeLaRosa\nNakajima\nPatrese\nSurtees",
+      "output": "Prost\nProst"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

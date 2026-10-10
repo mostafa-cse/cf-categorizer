@@ -1,0 +1,42 @@
+{
+  "id": "661E",
+  "source": "problemset",
+  "contest_id": 661,
+  "problem_index": "E",
+  "name": "Divisibility Check",
+  "rating": 2000,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 93,
+  "problem_url": "https://codeforces.com/problemset/problem/661/E",
+  "editorial_url": "https://codeforces.com/blog/entry/44292",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given an array of integers. Check whether there exists a number in this array which is divisible by all other numbers in this array. Output 1 , if such a number exists, and 0 otherwise.",
+  "input_specification": "The only line of the input contains a list of space-separated integers a i ( 1 ≤ a i ≤ 100 ) — elements of the array. The size of the array is between 2 and 10 , inclusive. Note that the size of the array is not given explicitly!",
+  "output_specification": "Output 1 if there exists element of this array which is divisible by all other elements of the array, and 0 otherwise.",
+  "sample_testcases": [
+    {
+      "input": "6 12 4",
+      "output": "1"
+    },
+    {
+      "input": "3 13",
+      "output": "0"
+    },
+    {
+      "input": "26 13 12",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

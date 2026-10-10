@@ -1,0 +1,35 @@
+{
+  "id": "1342C",
+  "source": "problemset",
+  "contest_id": 1342,
+  "problem_index": "C",
+  "name": "Yet Another Counting Problem",
+  "rating": 1600,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 15260,
+  "problem_url": "https://codeforces.com/problemset/problem/1342/C",
+  "editorial_url": "https://codeforces.com/blog/entry/76633",
+  "time_limit": "3.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two integers $$$a$$$ and $$$b$$$, and $$$q$$$ queries. The $$$i$$$-th query consists of two numbers $$$l_i$$$ and $$$r_i$$$, and the answer to it is the number of integers $$$x$$$ such that $$$l_i \\le x \\le r_i$$$, and $$$((x \\bmod a) \\bmod b) \\ne ((x \\bmod b) \\bmod a)$$$. Calculate the answer for each query. Recall that $$$y \\bmod z$$$ is the remainder of the division of $$$y$$$ by $$$z$$$. For example, $$$5 \\bmod 3 = 2$$$, $$$7 \\bmod 8 = 7$$$, $$$9 \\bmod 4 = 1$$$, $$$9 \\bmod 9 = 0$$$.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. Then the test cases follow. The first line of each test case contains three integers $$$a$$$, $$$b$$$ and $$$q$$$ ($$$1 \\le a, b \\le 200$$$; $$$1 \\le q \\le 500$$$). Then $$$q$$$ lines follow, each containing two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l_i \\le r_i \\le 10^{18}$$$) for the corresponding query.",
+  "output_specification": "For each test case, print $$$q$$$ integers — the answers to the queries of this test case in the order they appear.",
+  "sample_testcases": [
+    {
+      "input": "2\n4 6 5\n1 1\n1 3\n1 5\n1 7\n1 9\n7 10 2\n7 8\n100 200",
+      "output": "0 0 0 2 4 \n0 91"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:54",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

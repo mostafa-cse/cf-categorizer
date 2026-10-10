@@ -1,0 +1,37 @@
+{
+  "id": "1746E1",
+  "source": "problemset",
+  "contest_id": 1746,
+  "problem_index": "E1",
+  "name": "Joking (Easy Version)",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "interactive",
+    "ternary search"
+  ],
+  "solved_count": 1862,
+  "problem_url": "https://codeforces.com/problemset/problem/1746/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/108011",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between this problem and the hard version is the maximum number of questions. This is an interactive problem. There is a hidden integer $$$1 \\le x \\le n$$$ which you have to find. In order to find it you can ask at most $$$\\mathbf{82}$$$ questions. In each question you can choose a non-empty integer set $$$S$$$ and ask if $$$x$$$ belongs to $$$S$$$ or not, after each question, if $$$x$$$ belongs to $$$S$$$, you'll receive \" YES \", otherwise \" NO \". But the problem is that not all answers are necessarily true (some of them are joking), it's just guaranteed that for each two consecutive questions, at least one of them is answered correctly. Additionally to the questions, you can make at most $$$2$$$ guesses for the answer $$$x$$$. Each time you make a guess, if you guess $$$x$$$ correctly, you receive \" :) \" and your program should terminate, otherwise you'll receive \" :( \". As a part of the joking, we will not fix the value of $$$x$$$ in the beginning. Instead, it can change throughout the interaction as long as all the previous responses are valid as described above. Note that your answer guesses are always answered correctly. If you ask a question before and after a guess, at least one of these two questions is answered correctly, as normal.",
+  "input_specification": "The only line of the input contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$), the maximum possible value of $$$x$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "6\nNO\n:(\nNO\n:)",
+      "output": "? 5 1 2 5 4 3\n! 6\n? 4 1 2 3 4\n! 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:17",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

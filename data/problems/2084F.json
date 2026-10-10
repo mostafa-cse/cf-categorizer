@@ -1,0 +1,36 @@
+{
+  "id": "2084F",
+  "source": "problemset",
+  "contest_id": 2084,
+  "problem_index": "F",
+  "name": "Skyscape",
+  "rating": 2900,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 529,
+  "problem_url": "https://codeforces.com/problemset/problem/2084/F",
+  "editorial_url": "https://codeforces.com/blog/entry/141155",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a permutation $$$a$$$ of length $$$n$$$$$$^{\\text{∗}}$$$. We say that a permutation $$$b$$$ of length $$$n$$$ is good if the two permutations $$$a$$$ and $$$b$$$ can become the same after performing the following operation at most $$$n$$$ times (possibly zero): Choose two integers $$$l, r$$$ such that $$$1 \\le l \\lt r \\le n$$$ and $$$a_r = \\min(a_l, a_{l + 1}, \\ldots, a_r)$$$. Cyclically shift the subsegment $$$[a_l, a_{l + 1}, \\ldots, a_r]$$$ one position to the right. In other words, replace $$$a$$$ with $$$[a_1, \\ldots, a_{l - 1}, \\; a_r, a_l, a_{l + 1}, \\ldots, a_{r - 1}, \\; a_{r + 1}, \\ldots, a_n]$$$. You are also given a permutation $$$c$$$ of length $$$n$$$ where some elements are missing and represented by $$$0$$$. You need to find a good permutation $$$b_1, b_2, \\ldots, b_n$$$ such that $$$b$$$ can be formed by filling in the missing elements of $$$c$$$ (i.e., for all $$$1 \\le i \\le n$$$, if $$$c_i \\ne 0$$$, then $$$b_i = c_i$$$). If it is impossible, output $$$-1$$$. $$$^{\\text{∗}}$$$A permutation of length $$$n$$$ is an array consisting of $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ in arbitrary order. For example, $$$[2,3,1,5,4]$$$ is a permutation, but $$$[1,2,2]$$$ is not a permutation ($$$2$$$ appears twice in the array), and $$$[1,3,4]$$$ is also not a permutation ($$$n=3$$$ but there is $$$4$$$ in the array).",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 5 \\cdot 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$). It is guaranteed that $$$a$$$ is a permutation of length $$$n$$$. The third line of each test case contains $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$0 \\le c_i \\le n$$$). It is guaranteed that the elements of $$$c$$$ that are not $$$0$$$ are distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case: If it is impossible to find such a good permutation $$$b$$$, output a single integer $$$-1$$$. Otherwise, output $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ — the good permutation $$$b$$$ you've found. You need to ensure that for all $$$1 \\le i \\le n$$$, if $$$c_i \\ne 0$$$, then $$$b_i = c_i$$$. If there are multiple answers, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "9\n2\n2 1\n1 2\n4\n3 2 4 1\n2 0 0 1\n5\n3 2 1 5 4\n1 3 0 0 0\n5\n3 2 1 5 4\n3 2 1 5 4\n5\n3 2 1 5 4\n3 2 5 1 4\n6\n3 5 6 2 1 4\n0 2 0 5 0 0\n6\n3 5 6 2 1 4\n0 2 0 6 4 0\n9\n6 9 2 4 1 7 8 3 5\n0 2 5 9 0 0 0 8 0\n9\n8 5 3 9 1 7 4 6 2\n0 0 8 0 7 0 4 0 2",
+      "output": "1 2\n2 3 4 1\n1 3 2 4 5\n3 2 1 5 4\n-1\n3 2 1 5 4 6\n-1\n-1\n1 3 8 5 7 9 4 6 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

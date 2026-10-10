@@ -1,0 +1,47 @@
+{
+  "id": "1794E",
+  "source": "problemset",
+  "contest_id": 1794,
+  "problem_index": "E",
+  "name": "Labeling the Tree with Distances",
+  "rating": 2400,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "hashing",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 1615,
+  "problem_url": "https://codeforces.com/problemset/problem/1794/E",
+  "editorial_url": "https://codeforces.com/blog/entry/113500",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an unweighted tree of $$$n$$$ vertices numbered from $$$1$$$ to $$$n$$$ and a list of $$$n-1$$$ integers $$$a_1, a_2, \\ldots, a_{n-1}$$$. A tree is a connected undirected graph without cycles. You will use each element of the list to label one vertex. No vertex should be labeled twice. You can label the only remaining unlabeled vertex with any integer. A vertex $$$x$$$ is called good if it is possible to do this labeling so that for each vertex $$$i$$$, its label is the distance between $$$x$$$ and $$$i$$$. The distance between two vertices $$$s$$$ and $$$t$$$ on a tree is the minimum number of edges on a path that starts at vertex $$$s$$$ and ends at vertex $$$t$$$. Find all good vertices.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2\\le n\\le 2\\cdot 10^5$$$) — the number of vertices in the tree. The second line contains $$$n - 1$$$ integers $$$a_1,a_2,\\ldots,a_{n-1}$$$ ($$$0\\le a_i \\lt n$$$) — the given list. Then, $$$n−1$$$ lines follow. Each of them contains two integers $$$u$$$ and $$$v$$$ ($$$1\\le u,v\\le n$$$) denoting an edge between vertices $$$u$$$ and $$$v$$$. It is guaranteed that the edges form a tree.",
+  "output_specification": "In the first line print the number of good vertices. In the second line, print the indices of all good vertices in ascending order .",
+  "sample_testcases": [
+    {
+      "input": "6\n2 1 0 1 2\n1 2\n2 3\n2 4\n4 5\n4 6",
+      "output": "2\n2 4"
+    },
+    {
+      "input": "5\n1 2 1 2\n1 2\n3 2\n3 4\n5 4",
+      "output": "1\n3"
+    },
+    {
+      "input": "3\n2 2\n1 2\n2 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

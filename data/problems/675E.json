@@ -1,0 +1,40 @@
+{
+  "id": "675E",
+  "source": "problemset",
+  "contest_id": 675,
+  "problem_index": "E",
+  "name": "Trains and Statistic",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 3490,
+  "problem_url": "https://codeforces.com/problemset/problem/675/E",
+  "editorial_url": "https://codeforces.com/blog/entry/44902",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya commutes by train every day. There are n train stations in the city, and at the i -th station it's possible to buy only tickets to stations from i + 1 to a i inclusive. No tickets are sold at the last station. Let ρ i , j be the minimum number of tickets one needs to buy in order to get from stations i to station j . As Vasya is fond of different useless statistic he asks you to compute the sum of all values ρ i , j among all pairs 1 ≤ i < j ≤ n .",
+  "input_specification": "The first line of the input contains a single integer n ( 2 ≤ n ≤ 100 000 ) — the number of stations. The second line contains n - 1 integer a i ( i + 1 ≤ a i ≤ n ), the i -th of them means that at the i -th station one may buy tickets to each station from i + 1 to a i inclusive.",
+  "output_specification": "Print the sum of ρ i , j among all pairs of 1 ≤ i < j ≤ n .",
+  "sample_testcases": [
+    {
+      "input": "4\n4 4 4",
+      "output": "6"
+    },
+    {
+      "input": "5\n2 3 5 5",
+      "output": "17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

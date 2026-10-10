@@ -1,0 +1,42 @@
+{
+  "id": "585C",
+  "source": "problemset",
+  "contest_id": 585,
+  "problem_index": "C",
+  "name": "Alice, Bob, Oranges and Apples",
+  "rating": 2400,
+  "tags": [
+    "number theory"
+  ],
+  "solved_count": 1090,
+  "problem_url": "https://codeforces.com/problemset/problem/585/C",
+  "editorial_url": "https://codeforces.com/blog/entry/20898",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob decided to eat some fruit. In the kitchen they found a large bag of oranges and apples. Alice immediately took an orange for herself, Bob took an apple. To make the process of sharing the remaining fruit more fun, the friends decided to play a game. They put multiple cards and on each one they wrote a letter, either ' A ', or the letter ' B '. Then they began to remove the cards one by one from left to right, every time they removed a card with the letter ' A ', Alice gave Bob all the fruits she had at that moment and took out of the bag as many apples and as many oranges as she had before. Thus the number of oranges and apples Alice had, did not change. If the card had written letter ' B ', then Bob did the same, that is, he gave Alice all the fruit that he had, and took from the bag the same set of fruit. After the last card way removed, all the fruit in the bag were over. You know how many oranges and apples was in the bag at first. Your task is to find any sequence of cards that Alice and Bob could have played with.",
+  "input_specification": "The first line of the input contains two integers, x , y ( 1 ≤ x , y ≤ 10 18 , xy > 1 ) — the number of oranges and apples that were initially in the bag.",
+  "output_specification": "Print any sequence of cards that would meet the problem conditions as a compressed string of characters ' A ' and ' B . That means that you need to replace the segments of identical consecutive characters by the number of repetitions of the characters and the actual character. For example, string AAABAABBB should be replaced by string 3A1B2A3B , but cannot be replaced by 2A1A1B2A3B or by 3AB2A3B . See the samples for clarifications of the output format. The string that you print should consist of at most 10 6 characters. It is guaranteed that if the answer exists, its compressed representation exists, consisting of at most 10 6 characters. If there are several possible answers, you are allowed to print any of them. If the sequence of cards that meet the problem statement does not not exist, print a single word Impossible .",
+  "sample_testcases": [
+    {
+      "input": "1 4",
+      "output": "3B"
+    },
+    {
+      "input": "2 2",
+      "output": "Impossible"
+    },
+    {
+      "input": "3 2",
+      "output": "1A1B"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:57",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

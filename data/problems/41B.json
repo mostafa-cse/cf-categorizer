@@ -1,0 +1,42 @@
+{
+  "id": "41B",
+  "source": "problemset",
+  "contest_id": 41,
+  "problem_index": "B",
+  "name": "Martian Dollar",
+  "rating": 1400,
+  "tags": [
+    "brute force"
+  ],
+  "solved_count": 4742,
+  "problem_url": "https://codeforces.com/problemset/problem/41/B",
+  "editorial_url": "https://codeforces.com/blog/entry/1620",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "One day Vasya got hold of information on the Martian dollar course in bourles for the next n days. The buying prices and the selling prices for one dollar on day i are the same and are equal to a i . Vasya has b bourles. He can buy a certain number of dollars and then sell it no more than once in n days. According to Martian laws, one can buy only an integer number of dollars. Which maximal sum of money in bourles can Vasya get by the end of day n ?",
+  "input_specification": "The first line contains two integers n and b ( 1 ≤ n , b ≤ 2000 ) — the number of days and the initial number of money in bourles. The next line contains n integers a i ( 1 ≤ a i ≤ 2000 ) — the prices of Martian dollars.",
+  "output_specification": "Print the single number — which maximal sum of money in bourles can Vasya get by the end of day n .",
+  "sample_testcases": [
+    {
+      "input": "2 4\n3 7",
+      "output": "8"
+    },
+    {
+      "input": "4 10\n4 3 2 1",
+      "output": "10"
+    },
+    {
+      "input": "4 10\n4 2 3 1",
+      "output": "15"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

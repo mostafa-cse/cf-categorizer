@@ -1,0 +1,36 @@
+{
+  "id": "2237D",
+  "source": "problemset",
+  "contest_id": 2237,
+  "problem_index": "D",
+  "name": "Fullmetal Bitchemist",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 6731,
+  "problem_url": "https://codeforces.com/problemset/problem/2237/D",
+  "editorial_url": "https://codeforces.com/blog/entry/154603",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A binary string is a string consisting only of characters $$$0$$$ and $$$1$$$. The two characters $$$0$$$ and $$$1$$$ are called opposite values. Consider a binary string $$$t$$$. Let $$$|t|$$$ be the length of $$$t$$$. When $$$|t| \\ge 2$$$, for every $$$1 \\le i \\lt |t|$$$, the characters $$$t_i$$$ and $$$t_{i+1}$$$ are adjacent. A binary string $$$t$$$ is called beautiful if it can be reduced to a string of length exactly $$$1$$$ by applying the following operation any number of times, possibly zero: Choose two equal adjacent characters, remove both of them, and insert one character with the opposite value in their place. For example, the string $$$\\mathtt{10001}$$$ can become $$$\\mathtt{1101}$$$ by replacing the first adjacent pair $$$\\mathtt{00}$$$ with $$$\\mathtt{1}$$$. Then it can become $$$\\mathtt{001}$$$, then $$$\\mathtt{11}$$$, and finally $$$\\mathtt{0}$$$. Therefore, $$$\\mathtt{10001}$$$ is beautiful. On the other hand, $$$\\mathtt{111}$$$ is not beautiful. After one operation, it becomes $$$\\mathtt{01}$$$, and then no operation can be applied. You are given a binary string $$$s$$$. Compute the number of non-empty beautiful substrings$$$^{\\text{∗}}$$$ of $$$s$$$. $$$^{\\text{∗}}$$$A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$) — the length of $$$s$$$. The second line of each test case contains a binary string $$$s$$$ of length $$$n$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^6$$$.",
+  "output_specification": "For each test case, output a single integer — the number of beautiful substrings of $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "10\n1\n0\n2\n01\n5\n01001\n3\n001\n6\n011110\n9\n010110110\n12\n010000101001\n16\n1010011010010110\n20\n11110101101101001110\n30\n000101100011111001111100000010",
+      "output": "1\n2\n10\n5\n15\n30\n47\n81\n139\n316"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:50",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

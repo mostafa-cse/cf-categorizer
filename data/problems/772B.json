@@ -1,0 +1,38 @@
+{
+  "id": "772B",
+  "source": "problemset",
+  "contest_id": 772,
+  "problem_index": "B",
+  "name": "Volatile Kite",
+  "rating": 1800,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 3537,
+  "problem_url": "https://codeforces.com/problemset/problem/772/B",
+  "editorial_url": "https://codeforces.com/blog/entry/51598",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a convex polygon P with n distinct vertices p 1 , p 2 , ..., p n . Vertex p i has coordinates ( x i , y i ) in the 2D plane. These vertices are listed in clockwise order. You can choose a real number D and move each vertex of the polygon a distance of at most D from their original positions. Find the maximum value of D such that no matter how you move the vertices, the polygon does not intersect itself and stays convex.",
+  "input_specification": "The first line has one integer n ( 4 ≤ n ≤ 1 000 ) — the number of vertices. The next n lines contain the coordinates of the vertices. Line i contains two integers x i and y i ( - 10 9 ≤ x i , y i ≤ 10 9 ) — the coordinates of the i -th vertex. These points are guaranteed to be given in clockwise order, and will form a strictly convex polygon (in particular, no three consecutive points lie on the same straight line).",
+  "output_specification": "Print one real number D , which is the maximum real number such that no matter how you move the vertices, the polygon stays convex. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely, let's assume that your answer is a and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "4\n0 0\n0 1\n1 1\n1 0",
+      "output": "0.3535533906"
+    },
+    {
+      "input": "6\n5 0\n10 0\n12 -4\n10 -8\n5 -8\n3 -4",
+      "output": "1.0000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

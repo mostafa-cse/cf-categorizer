@@ -1,0 +1,45 @@
+{
+  "id": "748E",
+  "source": "problemset",
+  "contest_id": 748,
+  "problem_index": "E",
+  "name": "Santa Claus and Tangerines",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 1687,
+  "problem_url": "https://codeforces.com/problemset/problem/748/E",
+  "editorial_url": "https://codeforces.com/blog/entry/49328",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Santa Claus has n tangerines, and the i -th of them consists of exactly a i slices. Santa Claus came to a school which has k pupils. Santa decided to treat them with tangerines. However, there can be too few tangerines to present at least one tangerine to each pupil. So Santa decided to divide tangerines into parts so that no one will be offended. In order to do this, he can divide a tangerine or any existing part into two smaller equal parts. If the number of slices in the part he wants to split is odd, then one of the resulting parts will have one slice more than the other. It's forbidden to divide a part consisting of only one slice. Santa Claus wants to present to everyone either a whole tangerine or exactly one part of it (that also means that everyone must get a positive number of slices). One or several tangerines or their parts may stay with Santa. Let b i be the number of slices the i -th pupil has in the end. Let Santa's joy be the minimum among all b i 's. Your task is to find the maximum possible joy Santa can have after he treats everyone with tangerines (or their parts).",
+  "input_specification": "The first line contains two positive integers n and k ( 1 ≤ n ≤ 10 6 , 1 ≤ k ≤ 2·10 9 ) denoting the number of tangerines and the number of pupils, respectively. The second line consists of n positive integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 7 ), where a i stands for the number of slices the i -th tangerine consists of.",
+  "output_specification": "If there's no way to present a tangerine or a part of tangerine to everyone, print -1 . Otherwise, print the maximum possible joy that Santa can have.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n5 9 3",
+      "output": "5"
+    },
+    {
+      "input": "2 4\n12 14",
+      "output": "6"
+    },
+    {
+      "input": "2 3\n1 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:17",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

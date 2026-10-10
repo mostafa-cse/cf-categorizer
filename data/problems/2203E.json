@@ -1,0 +1,47 @@
+{
+  "id": "2203E",
+  "source": "problemset",
+  "contest_id": 2203,
+  "problem_index": "E",
+  "name": "Probabilistic Card Game",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "games",
+    "greedy",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 1581,
+  "problem_url": "https://codeforces.com/problemset/problem/2203/E",
+  "editorial_url": "https://codeforces.com/blog/entry/151612",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Alice and Bob have a deck of cards, which is initially empty. They play a game that lasts for $$$m$$$ rounds. In the $$$i$$$-th round, the following events occur: a card with the value $$$a_i$$$ is added to the deck (it is guaranteed that no card with this value was previously in the deck); if there are fewer than $$$3$$$ cards in the deck, the round ends; otherwise, Alice chooses a card from the deck; then Bob chooses a card (knowing which card Alice chose; he cannot choose the same one); one more card is chosen from the remaining $$$i-2$$$ cards uniformly at random; at the end, all three chosen cards are returned to the deck. Let $$$a$$$ be the value on Alice's card, $$$b$$$ be the value on Bob's card, and $$$c$$$ be the value on the randomly chosen card. Then Bob receives: $$$0$$$ points if $$$|a - c| \\le |b - c|$$$ (where $$$|x|$$$ denotes the absolute value of $$$x$$$); $$$0$$$ points if card $$$c$$$ is between cards $$$a$$$ and $$$b$$$ (i. e., $$$a \\lt c \\lt b$$$ or $$$b \\lt c \\lt a$$$); $$$|b-c|$$$ points otherwise. Alice's goal in each round is to minimize Bob's expected score, while Bob's goal is to maximize it. What will be the expected score for Bob in each round if both Alice and Bob play optimally? Print the expected score modulo $$$998\\,244\\,353$$$. Note that the players minimize or maximize the real value of the expected score, not the result taken modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains a single integer ($$$3 \\le m \\le 2 \\cdot 10^5$$$) — the number of rounds. The second line contains $$$m$$$ integers $$$a_1, a_2, \\dots, a_m$$$ ($$$1 \\le a_i \\le 10^{12}$$$; all $$$a_i$$$ are distinct).",
+  "output_specification": "Print $$$m-2$$$ integers: the $$$i$$$-th number should be equal to the expected score for Bob in the round $$$i+2$$$ with optimal play from both players modulo $$$998\\,244\\,353$$$ (i. e., let the expected score be an irreducible fraction $$$\\frac{x}{y}$$$; you need to output $$$x \\cdot y^{-1} \\bmod 998\\,244\\,353$$$, where $$$y^{-1}$$$ is such a number that $$$y \\cdot y^{-1} \\bmod 998\\,244\\,353 = 1$$$). Note that the players minimize or maximize the real value of the expected score, not the result taken modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 10 3 11 7",
+      "output": "0\n499122177\n665496236"
+    },
+    {
+      "input": "6\n23 7 11 24 10 28",
+      "output": "0\n499122177\n1\n748683266"
+    },
+    {
+      "input": "9\n4 10 7 1 16 5 9 12 2",
+      "output": "0\n499122178\n2\n499122178\n798595484\n831870296\n427819010"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

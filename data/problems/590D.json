@@ -1,0 +1,42 @@
+{
+  "id": "590D",
+  "source": "problemset",
+  "contest_id": 590,
+  "problem_index": "D",
+  "name": "Top Secret Task",
+  "rating": 2300,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1438,
+  "problem_url": "https://codeforces.com/problemset/problem/590/D",
+  "editorial_url": "https://codeforces.com/blog/entry/21203",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A top-secret military base under the command of Colonel Zuev is expecting an inspection from the Ministry of Defence. According to the charter, each top-secret military base must include a top-secret troop that should... well, we cannot tell you exactly what it should do, it is a top secret troop at the end. The problem is that Zuev's base is missing this top-secret troop for some reasons. The colonel decided to deal with the problem immediately and ordered to line up in a single line all n soldiers of the base entrusted to him. Zuev knows that the loquacity of the i -th soldier from the left is equal to q i . Zuev wants to form the top-secret troop using k leftmost soldiers in the line, thus he wants their total loquacity to be as small as possible (as the troop should remain top-secret). To achieve this, he is going to choose a pair of consecutive soldiers and swap them. He intends to do so no more than s times. Note that any soldier can be a participant of such swaps for any number of times. The problem turned out to be unusual, and colonel Zuev asked you to help. Determine, what is the minimum total loquacity of the first k soldiers in the line, that can be achieved by performing no more than s swaps of two consecutive soldiers.",
+  "input_specification": "The first line of the input contains three positive integers n , k , s ( 1 ≤ k ≤ n ≤ 150 , 1 ≤ s ≤ 10 9 ) — the number of soldiers in the line, the size of the top-secret troop to be formed and the maximum possible number of swap operations of the consecutive pair of soldiers, respectively. The second line of the input contains n integer q i ( 1 ≤ q i ≤ 1 000 000 ) — the values of loquacity of soldiers in order they follow in line from left to right.",
+  "output_specification": "Print a single integer — the minimum possible total loquacity of the top-secret troop.",
+  "sample_testcases": [
+    {
+      "input": "3 2 2\n2 4 1",
+      "output": "3"
+    },
+    {
+      "input": "5 4 2\n10 1 6 2 5",
+      "output": "18"
+    },
+    {
+      "input": "5 2 3\n3 1 4 2 5",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

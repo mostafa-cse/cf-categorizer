@@ -1,0 +1,43 @@
+{
+  "id": "360B",
+  "source": "problemset",
+  "contest_id": 360,
+  "problem_index": "B",
+  "name": "Levko and Array",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "dp"
+  ],
+  "solved_count": 3782,
+  "problem_url": "https://codeforces.com/problemset/problem/360/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9529",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Levko has an array that consists of integers: a 1 , a 2 , ... , a n . But he doesn’t like this array at all. Levko thinks that the beauty of the array a directly depends on value c ( a ) , which can be calculated by the formula: The less value c ( a ) is, the more beautiful the array is. It’s time to change the world and Levko is going to change his array for the better. To be exact, Levko wants to change the values of at most k array elements (it is allowed to replace the values by any integers). Of course, the changes should make the array as beautiful as possible. Help Levko and calculate what minimum number c ( a ) he can reach.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ k ≤ n ≤ 2000 ). The second line contains space-separated integers a 1 , a 2 , ... , a n ( - 10 9 ≤ a i ≤ 10 9 ).",
+  "output_specification": "A single number — the minimum value of c ( a ) Levko can get.",
+  "sample_testcases": [
+    {
+      "input": "5 2\n4 7 4 7 4",
+      "output": "0"
+    },
+    {
+      "input": "3 1\n-100 0 100",
+      "output": "100"
+    },
+    {
+      "input": "6 3\n1 2 3 7 8 9",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:04",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "661F",
+  "source": "problemset",
+  "contest_id": 661,
+  "problem_index": "F",
+  "name": "Primes in Interval",
+  "rating": 1900,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 751,
+  "problem_url": "https://codeforces.com/problemset/problem/661/F",
+  "editorial_url": "https://codeforces.com/blog/entry/44292",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given two integers a and b ( a ≤ b ). How many prime numbers are there on the interval from a to b , inclusive?",
+  "input_specification": "The input contains two integers a and b ( 2 ≤ a ≤ b ≤ 1 000 000 ), separated by a single space.",
+  "output_specification": "Output a single integer — the number of primes between a and b , inclusive.",
+  "sample_testcases": [
+    {
+      "input": "10 20",
+      "output": "4"
+    },
+    {
+      "input": "23 23",
+      "output": "1"
+    },
+    {
+      "input": "271 566",
+      "output": "46"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

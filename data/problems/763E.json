@@ -1,0 +1,36 @@
+{
+  "id": "763E",
+  "source": "problemset",
+  "contest_id": 763,
+  "problem_index": "E",
+  "name": "Timofey and our friends animals",
+  "rating": 2900,
+  "tags": [
+    "data structures",
+    "divide and conquer",
+    "dsu"
+  ],
+  "solved_count": 645,
+  "problem_url": "https://codeforces.com/problemset/problem/763/E",
+  "editorial_url": "https://codeforces.com/blog/entry/50205",
+  "time_limit": "7 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After his birthday party, Timofey went to his favorite tree alley in a park. He wants to feed there his favorite birds — crows. It's widely known that each tree is occupied by a single crow family. The trees in the alley form a row and are numbered from 1 to n . Some families are friends to each other. For some reasons, two families can be friends only if they live not too far from each other, more precisely, there is no more than k - 1 trees between any pair of friend families. Formally, the family on the u -th tree and the family on the v -th tree can be friends only if | u - v | ≤ k holds. One of the friendship features is that if some family learns that Timofey is feeding crows somewhere, it notifies about this all friend families. Thus, after Timofey starts to feed crows under some tree, all the families that are friends to the family living on this tree, as well as their friends and so on, fly to the feeding place. Of course, the family living on the tree also comes to the feeding place. Today Timofey came to the alley and noticed that all the families that live on trees with numbers strictly less than l or strictly greater than r have flown away. Thus, it is not possible to pass the information about feeding through them. Moreover, there is no need to feed them. Help Timofey to learn what is the minimum number of trees under which he has to feed crows so that all the families that have remained will get the information about feeding. You are given several situations, described by integers l and r , you need to calculate the answer for all of them.",
+  "input_specification": "The first line contains integers n and k ( 1 ≤ n ≤ 10 5 , 1 ≤ k ≤ 5 ), where n is the number of trees, and k is the maximum possible distance between friend families. The next line contains single integer m ( 0 ≤ m ≤ n · k ) — the number of pair of friend families. Each of the next m lines contains two integers u and v ( 1 ≤ u , v ≤ 10 5 ), that means that the families on trees u and v are friends. It is guaranteed that u ≠ v and | u - v | ≤ k . All the given pairs are distinct. The next line contains single integer q ( 1 ≤ q ≤ 10 5 ) — the number of situations you need to calculate the answer in. Each of the next q lines contains two integers l and r ( 1 ≤ l ≤ r ≤ 10 5 ), that means that in this situation families that have flown away lived on such trees x , so that either x < l or x > r .",
+  "output_specification": "Print q lines. Line i should contain single integer — the answer in the i -th situation.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n3\n1 3\n2 3\n4 5\n5\n1 1\n1 2\n2 3\n1 3\n1 5",
+      "output": "1\n2\n1\n1\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

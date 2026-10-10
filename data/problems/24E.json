@@ -1,0 +1,38 @@
+{
+  "id": "24E",
+  "source": "problemset",
+  "contest_id": 24,
+  "problem_index": "E",
+  "name": "Berland collider",
+  "rating": 2300,
+  "tags": [
+    "binary search"
+  ],
+  "solved_count": 1096,
+  "problem_url": "https://codeforces.com/problemset/problem/24/E",
+  "editorial_url": "https://codeforces.com/blog/entry/557",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Recently the construction of Berland collider has been completed. Collider can be represented as a long narrow tunnel that contains n particles. We associate with collider 1-dimensional coordinate system, going from left to right. For each particle we know its coordinate and velocity at the moment of start of the collider. The velocities of the particles don't change after the launch of the collider. Berland scientists think that the big bang will happen at the first collision of particles, whose velocities differs in directions. Help them to determine how much time elapses after the launch of the collider before the big bang happens.",
+  "input_specification": "The first line contains single integer n ( 1 ≤ n ≤ 5·10 5 ) — amount of particles in the collider. Next n lines contain description of particles. Each particle is described by two integers x i , v i ( - 10 9 ≤ x i , v i ≤ 10 9 , v i ≠ 0 ) — coordinate and velocity respectively. All the coordinates are distinct. The particles are listed in order of increasing of coordinates. All the coordinates are in meters, and all the velocities — in meters per second. The negative velocity means that after the start of collider the particle will move to the left, and the positive — that the particle will move to the right.",
+  "output_specification": "If there will be no big bang, output -1 . Otherwise output one number — how much time in seconds elapses after the launch of the collider before the big bang happens. Your answer must have a relative or absolute error less than 10 - 9 .",
+  "sample_testcases": [
+    {
+      "input": "3\n-5 9\n0 1\n5 -1",
+      "output": "1.00000000000000000000"
+    },
+    {
+      "input": "6\n1 3\n2 3\n3 3\n4 -3\n5 -1\n6 -100",
+      "output": "0.02912621359223301065"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

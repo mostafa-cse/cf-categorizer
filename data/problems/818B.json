@@ -1,0 +1,38 @@
+{
+  "id": "818B",
+  "source": "problemset",
+  "contest_id": 818,
+  "problem_index": "B",
+  "name": "Permutation Game",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3292,
+  "problem_url": "https://codeforces.com/problemset/problem/818/B",
+  "editorial_url": "https://codeforces.com/blog/entry/52991",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "n children are standing in a circle and playing a game. Children's numbers in clockwise order form a permutation a 1 , a 2 , ..., a n of length n . It is an integer sequence such that each integer from 1 to n appears exactly once in it. The game consists of m steps. On each step the current leader with index i counts out a i people in clockwise order, starting from the next person. The last one to be pointed at by the leader becomes the new leader. You are given numbers l 1 , l 2 , ..., l m — indices of leaders in the beginning of each step. Child with number l 1 is the first leader in the game. Write a program which will restore a possible permutation a 1 , a 2 , ..., a n . If there are multiple solutions then print any of them. If there is no solution then print -1 .",
+  "input_specification": "The first line contains two integer numbers n , m ( 1 ≤ n , m ≤ 100 ). The second line contains m integer numbers l 1 , l 2 , ..., l m ( 1 ≤ l i ≤ n ) — indices of leaders in the beginning of each step.",
+  "output_specification": "Print such permutation of n numbers a 1 , a 2 , ..., a n that leaders in the game will be exactly l 1 , l 2 , ..., l m if all the rules are followed. If there are multiple solutions print any of them. If there is no permutation which satisfies all described conditions print -1 .",
+  "sample_testcases": [
+    {
+      "input": "4 5\n2 3 1 4 4",
+      "output": "3 1 2 4"
+    },
+    {
+      "input": "3 3\n3 1 2",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:59",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

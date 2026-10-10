@@ -1,0 +1,38 @@
+{
+  "id": "15C",
+  "source": "problemset",
+  "contest_id": 15,
+  "problem_index": "C",
+  "name": "Industrial Nim",
+  "rating": 2000,
+  "tags": [
+    "games"
+  ],
+  "solved_count": 3058,
+  "problem_url": "https://codeforces.com/problemset/problem/15/C",
+  "editorial_url": "https://codeforces.com/blog/entry/411",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "There are n stone quarries in Petrograd. Each quarry owns m i dumpers ( 1 ≤ i ≤ n ). It is known that the first dumper of the i -th quarry has x i stones in it, the second dumper has x i + 1 stones in it, the third has x i + 2 , and the m i -th dumper (the last for the i -th quarry) has x i + m i - 1 stones in it. Two oligarchs play a well-known game Nim. Players take turns removing stones from dumpers. On each turn, a player can select any dumper and remove any non-zero amount of stones from it. The player who cannot take a stone loses. Your task is to find out which oligarch will win, provided that both of them play optimally. The oligarchs asked you not to reveal their names. So, let's call the one who takes the first stone « tolik » and the other one « bolik ».",
+  "input_specification": "The first line of the input contains one integer number n ( 1 ≤ n ≤ 10 5 ) — the amount of quarries. Then there follow n lines, each of them contains two space-separated integers x i and m i ( 1 ≤ x i , m i ≤ 10 16 ) — the amount of stones in the first dumper of the i -th quarry and the number of dumpers at the i -th quarry.",
+  "output_specification": "Output « tolik » if the oligarch who takes a stone first wins, and « bolik » otherwise.",
+  "sample_testcases": [
+    {
+      "input": "2\n2 1\n3 2",
+      "output": "tolik"
+    },
+    {
+      "input": "4\n1 1\n1 1\n1 1\n1 1",
+      "output": "bolik"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

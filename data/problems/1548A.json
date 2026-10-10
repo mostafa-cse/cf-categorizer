@@ -1,0 +1,40 @@
+{
+  "id": "1548A",
+  "source": "problemset",
+  "contest_id": 1548,
+  "problem_index": "A",
+  "name": "Web of Lies",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "graphs",
+    "greedy"
+  ],
+  "solved_count": 18009,
+  "problem_url": "https://codeforces.com/problemset/problem/1548/A",
+  "editorial_url": "https://codeforces.com/blog/entry/93586",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "When you play the game of thrones, you win, or you die. There is no middle ground. Cersei Lannister, A Game of Thrones by George R. R. Martin There are $$$n$$$ nobles, numbered from $$$1$$$ to $$$n$$$. Noble $$$i$$$ has a power of $$$i$$$. There are also $$$m$$$ \"friendships\". A friendship between nobles $$$a$$$ and $$$b$$$ is always mutual. A noble is defined to be vulnerable if both of the following conditions are satisfied: the noble has at least one friend, and all of that noble's friends have a higher power. You will have to process the following three types of queries. Add a friendship between nobles $$$u$$$ and $$$v$$$. Remove a friendship between nobles $$$u$$$ and $$$v$$$. Calculate the answer to the following process. The process: all vulnerable nobles are simultaneously killed, and all their friendships end. Then, it is possible that new nobles become vulnerable. The process repeats itself until no nobles are vulnerable. It can be proven that the process will end in finite time. After the process is complete, you need to calculate the number of remaining nobles. Note that the results of the process are not carried over between queries, that is, every process starts with all nobles being alive!",
+  "input_specification": "The first line contains the integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 2\\cdot 10^5$$$, $$$0 \\le m \\le 2\\cdot 10^5$$$) — the number of nobles and number of original friendships respectively. The next $$$m$$$ lines each contain the integers $$$u$$$ and $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\ne v$$$), describing a friendship. No friendship is listed twice. The next line contains the integer $$$q$$$ ($$$1 \\le q \\le 2\\cdot {10}^{5}$$$) — the number of queries. The next $$$q$$$ lines contain the queries themselves, each query has one of the following three formats. $$$1$$$ $$$u$$$ $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\ne v$$$) — add a friendship between $$$u$$$ and $$$v$$$. It is guaranteed that $$$u$$$ and $$$v$$$ are not friends at this moment. $$$2$$$ $$$u$$$ $$$v$$$ ($$$1 \\le u,v \\le n$$$, $$$u \\ne v$$$) — remove a friendship between $$$u$$$ and $$$v$$$. It is guaranteed that $$$u$$$ and $$$v$$$ are friends at this moment. $$$3$$$ — print the answer to the process described in the statement.",
+  "output_specification": "For each type $$$3$$$ query print one integer to a new line. It is guaranteed that there will be at least one type $$$3$$$ query.",
+  "sample_testcases": [
+    {
+      "input": "4 3\n2 1\n1 3\n3 4\n4\n3\n1 2 3\n2 3 1\n3",
+      "output": "2\n1"
+    },
+    {
+      "input": "4 3\n2 3\n3 4\n4 1\n1\n3",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

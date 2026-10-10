@@ -1,0 +1,40 @@
+{
+  "id": "1950G",
+  "source": "problemset",
+  "contest_id": 1950,
+  "problem_index": "G",
+  "name": "Shuffling Songs",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "dfs and similar",
+    "dp",
+    "graphs",
+    "hashing",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 6544,
+  "problem_url": "https://codeforces.com/problemset/problem/1950/G",
+  "editorial_url": "https://codeforces.com/blog/entry/127664",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vladislav has a playlist consisting of $$$n$$$ songs, numbered from $$$1$$$ to $$$n$$$. Song $$$i$$$ has genre $$$g_i$$$ and writer $$$w_i$$$. He wants to make a playlist in such a way that every pair of adjacent songs either have the same writer or are from the same genre (or both). He calls such a playlist exciting . Both $$$g_i$$$ and $$$w_i$$$ are strings of length no more than $$$10^4$$$. It might not always be possible to make an exciting playlist using all the songs, so the shuffling process occurs in two steps. First, some amount (possibly zero) of the songs are removed, and then the remaining songs in the playlist are rearranged to make it exciting. Since Vladislav doesn't like when songs get removed from his playlist, he wants the making playlist to perform as few removals as possible. Help him find the minimum number of removals that need to be performed in order to be able to rearrange the rest of the songs to make the playlist exciting.",
+  "input_specification": "The first line of the input contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 16$$$) — the number of songs in the original playlist. Then $$$n$$$ lines follow, the $$$i$$$-th of which contains two strings of lowercase letters $$$g_i$$$ and $$$w_i$$$ ($$$1 \\leq |g_i|, |w_i| \\leq 10^4$$$) — the genre and the writer of the $$$i$$$-th song. Where $$$|g_i|$$$ and $$$|w_i|$$$ are lengths of the strings. The sum of $$$2^n$$$ over all test cases does not exceed $$$2^{16}$$$. The sum of $$$|g_i| + |w_i|$$$ over all test cases does not exceed $$$4 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum number of removals necessary so that the resulting playlist can be made exciting.",
+  "sample_testcases": [
+    {
+      "input": "4\n1\npop taylorswift\n4\nelectronic themotans\nelectronic carlasdreams\npop themotans\npop irinarimes\n7\nrap eminem\nrap drdre\nrap kanyewest\npop taylorswift\nindierock arcticmonkeys\nindierock arcticmonkeys\npunkrock theoffspring\n4\na b\nc d\ne f\ng h",
+      "output": "0\n0\n4\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

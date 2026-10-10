@@ -1,0 +1,36 @@
+{
+  "id": "827E",
+  "source": "problemset",
+  "contest_id": 827,
+  "problem_index": "E",
+  "name": "Rusty String",
+  "rating": 2700,
+  "tags": [
+    "fft",
+    "math",
+    "strings"
+  ],
+  "solved_count": 1314,
+  "problem_url": "https://codeforces.com/problemset/problem/827/E",
+  "editorial_url": "https://codeforces.com/blog/entry/53268",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Grigory loves strings. Recently he found a metal strip on a loft. The strip had length n and consisted of letters \" V \" and \" K \". Unfortunately, rust has eaten some of the letters so that it's now impossible to understand which letter was written. Grigory couldn't understand for a long time what these letters remind him of, so he became interested in the following question: if we put a letter \" V \" or \" K \" on each unreadable position, which values can the period of the resulting string be equal to? A period of a string is such an integer d from 1 to the length of the string that if we put the string shifted by d positions to the right on itself, then all overlapping letters coincide. For example, 3 and 5 are periods of \" VKKVK \".",
+  "input_specification": "There are several (at least one) test cases in the input. The first line contains single integer — the number of test cases. There is an empty line before each test case. Each test case is described in two lines: the first line contains single integer n ( 1 ≤ n ≤ 5·10 5 ) — the length of the string, the second line contains the string of length n , consisting of letters \" V \", \" K \" and characters \" ? \". The latter means the letter on its position is unreadable. It is guaranteed that the sum of lengths among all test cases doesn't exceed 5·10 5 . For hacks you can only use tests with one test case.",
+  "output_specification": "For each test case print two lines. In the first line print the number of possible periods after we replace each unreadable letter with \" V \" or \" K \". In the next line print all these values in increasing order.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\nV??VK\n6\n??????\n4\n?VK?",
+      "output": "2\n3 5\n6\n1 2 3 4 5 6\n3\n2 3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

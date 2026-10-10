@@ -1,0 +1,40 @@
+{
+  "id": "675B",
+  "source": "problemset",
+  "contest_id": 675,
+  "problem_index": "B",
+  "name": "Restoring Painting",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "math"
+  ],
+  "solved_count": 7816,
+  "problem_url": "https://codeforces.com/problemset/problem/675/B",
+  "editorial_url": "https://codeforces.com/blog/entry/44902",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya works as a watchman in the gallery. Unfortunately, one of the most expensive paintings was stolen while he was on duty. He doesn't want to be fired, so he has to quickly restore the painting. He remembers some facts about it. The painting is a square 3 × 3 , each cell contains a single integer from 1 to n , and different cells may contain either different or equal integers. The sum of integers in each of four squares 2 × 2 is equal to the sum of integers in the top left square 2 × 2 . Four elements a , b , c and d are known and are located as shown on the picture below. Help Vasya find out the number of distinct squares the satisfy all the conditions above. Note, that this number may be equal to 0 , meaning Vasya remembers something wrong. Two squares are considered to be different, if there exists a cell that contains two different integers in different squares.",
+  "input_specification": "The first line of the input contains five integers n , a , b , c and d ( 1 ≤ n ≤ 100 000 , 1 ≤ a , b , c , d ≤ n ) — maximum possible value of an integer in the cell and four integers that Vasya remembers.",
+  "output_specification": "Print one integer — the number of distinct valid squares.",
+  "sample_testcases": [
+    {
+      "input": "2 1 1 1 2",
+      "output": "2"
+    },
+    {
+      "input": "3 3 1 2 3",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

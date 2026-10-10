@@ -1,0 +1,47 @@
+{
+  "id": "1509C",
+  "source": "problemset",
+  "contest_id": 1509,
+  "problem_index": "C",
+  "name": "The Sports Festival",
+  "rating": 1800,
+  "tags": [
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 16390,
+  "problem_url": "https://codeforces.com/problemset/problem/1509/C",
+  "editorial_url": "https://codeforces.com/blog/entry/89644",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The student council is preparing for the relay race at the sports festival. The council consists of $$$n$$$ members. They will run one after the other in the race, the speed of member $$$i$$$ is $$$s_i$$$. The discrepancy $$$d_i$$$ of the $$$i$$$-th stage is the difference between the maximum and the minimum running speed among the first $$$i$$$ members who ran. Formally, if $$$a_i$$$ denotes the speed of the $$$i$$$-th member who participated in the race, then $$$d_i = \\max(a_1, a_2, \\dots, a_i) - \\min(a_1, a_2, \\dots, a_i)$$$. You want to minimize the sum of the discrepancies $$$d_1 + d_2 + \\dots + d_n$$$. To do this, you are allowed to change the order in which the members run. What is the minimum possible sum that can be achieved?",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$)  — the number of members of the student council. The second line contains $$$n$$$ integers $$$s_1, s_2, \\dots, s_n$$$ ($$$1 \\le s_i \\le 10^9$$$)  – the running speeds of the members.",
+  "output_specification": "Print a single integer  — the minimum possible value of $$$d_1 + d_2 + \\dots + d_n$$$ after choosing the order of the members.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 1 2",
+      "output": "3"
+    },
+    {
+      "input": "1\n5",
+      "output": "0"
+    },
+    {
+      "input": "6\n1 6 3 3 6 3",
+      "output": "11"
+    },
+    {
+      "input": "6\n104 943872923 6589 889921234 1000000000 69",
+      "output": "2833800505"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

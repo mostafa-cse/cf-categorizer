@@ -1,0 +1,48 @@
+{
+  "id": "839B",
+  "source": "problemset",
+  "contest_id": 839,
+  "problem_index": "B",
+  "name": "Game of the Rows",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 3458,
+  "problem_url": "https://codeforces.com/problemset/problem/839/B",
+  "editorial_url": "https://codeforces.com/blog/entry/53815",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Daenerys Targaryen has an army consisting of k groups of soldiers, the i -th group contains a i soldiers. She wants to bring her army to the other side of the sea to get the Iron Throne. She has recently bought an airplane to carry her army through the sea. The airplane has n rows, each of them has 8 seats. We call two seats neighbor, if they are in the same row and in seats {1, 2} , {3, 4} , {4, 5} , {5, 6} or {7, 8} . A row in the airplane Daenerys Targaryen wants to place her army in the plane so that there are no two soldiers from different groups sitting on neighboring seats. Your task is to determine if there is a possible arranging of her army in the airplane such that the condition above is satisfied.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 10000 , 1 ≤ k ≤ 100 ) — the number of rows and the number of groups of soldiers, respectively. The second line contains k integers a 1 , a 2 , a 3 , ..., a k ( 1 ≤ a i ≤ 10000 ), where a i denotes the number of soldiers in the i -th group. It is guaranteed that a 1 + a 2 + ... + a k ≤ 8· n .",
+  "output_specification": "If we can place the soldiers in the airplane print \" YES \" (without quotes). Otherwise print \" NO \" (without quotes). You can choose the case (lower or upper) for each letter arbitrary.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n5 8",
+      "output": "YES"
+    },
+    {
+      "input": "1 2\n7 1",
+      "output": "NO"
+    },
+    {
+      "input": "1 2\n4 4",
+      "output": "YES"
+    },
+    {
+      "input": "1 4\n2 2 1 2",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

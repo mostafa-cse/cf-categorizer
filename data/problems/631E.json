@@ -1,0 +1,44 @@
+{
+  "id": "631E",
+  "source": "problemset",
+  "contest_id": 631,
+  "problem_index": "E",
+  "name": "Product Sum",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "dp",
+    "geometry"
+  ],
+  "solved_count": 3448,
+  "problem_url": "https://codeforces.com/problemset/problem/631/E",
+  "editorial_url": "https://codeforces.com/blog/entry/43551",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Blake is the boss of Kris, however, this doesn't spoil their friendship. They often gather at the bar to talk about intriguing problems about maximising some values. This time the problem is really special. You are given an array a of length n . The characteristic of this array is the value — the sum of the products of the values a i by i . One may perform the following operation exactly once : pick some element of the array and move to any position. In particular, it's allowed to move the element to the beginning or to the end of the array. Also, it's allowed to put it back to the initial position. The goal is to get the array with the maximum possible value of characteristic.",
+  "input_specification": "The first line of the input contains a single integer n ( 2 ≤ n ≤ 200 000 ) — the size of the array a . The second line contains n integers a i ( 1 ≤ i ≤ n , | a i | ≤ 1 000 000 ) — the elements of the array a .",
+  "output_specification": "Print a single integer — the maximum possible value of characteristic of a that can be obtained by performing no more than one move.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 3 2 5",
+      "output": "39"
+    },
+    {
+      "input": "5\n1 1 2 7 1",
+      "output": "49"
+    },
+    {
+      "input": "3\n1 1 2",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:45",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

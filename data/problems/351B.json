@@ -1,0 +1,40 @@
+{
+  "id": "351B",
+  "source": "problemset",
+  "contest_id": 351,
+  "problem_index": "B",
+  "name": "Jeff and Furik",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "probabilities"
+  ],
+  "solved_count": 2850,
+  "problem_url": "https://codeforces.com/problemset/problem/351/B",
+  "editorial_url": "https://codeforces.com/blog/entry/9070",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Jeff has become friends with Furik. Now these two are going to play one quite amusing game. At the beginning of the game Jeff takes a piece of paper and writes down a permutation consisting of n numbers: p 1 , p 2 , ... , p n . Then the guys take turns to make moves, Jeff moves first. During his move, Jeff chooses two adjacent permutation elements and then the boy swaps them. During his move, Furic tosses a coin and if the coin shows \"heads\" he chooses a random pair of adjacent elements with indexes i and i + 1 , for which an inequality p i > p i + 1 holds, and swaps them. But if the coin shows \"tails\", Furik chooses a random pair of adjacent elements with indexes i and i + 1 , for which the inequality p i < p i + 1 holds, and swaps them. If the coin shows \"heads\" or \"tails\" and Furik has multiple ways of adjacent pairs to take, then he uniformly takes one of the pairs. If Furik doesn't have any pair to take, he tosses a coin one more time. The game ends when the permutation is sorted in the increasing order. Jeff wants the game to finish as quickly as possible (that is, he wants both players to make as few moves as possible). Help Jeff find the minimum mathematical expectation of the number of moves in the game if he moves optimally well. You can consider that the coin shows the heads (or tails) with the probability of 50 percent.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 3000) . The next line contains n distinct integers p 1 , p 2 , ... , p n (1 ≤ p i ≤ n ) — the permutation p . The numbers are separated by spaces.",
+  "output_specification": "In a single line print a single real value — the answer to the problem. The answer will be considered correct if the absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "2\n1 2",
+      "output": "0.000000"
+    },
+    {
+      "input": "5\n3 5 2 4 1",
+      "output": "13.000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

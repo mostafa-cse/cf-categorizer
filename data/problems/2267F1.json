@@ -1,0 +1,37 @@
+{
+  "id": "2267F1",
+  "source": "problemset",
+  "contest_id": 2267,
+  "problem_index": "F1",
+  "name": "XOR Transformations (Easy Version)",
+  "rating": 1700,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 3937,
+  "problem_url": "https://codeforces.com/problemset/problem/2267/F1",
+  "editorial_url": "https://codeforces.com/blog/entry/157126",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is the easy version of the problem. The difference between the versions is that in this version, the constraints on $$$n$$$ and $$$q$$$ are smaller. You can make hacks only if you have solved all versions of this problem. For an array $$$b$$$ consisting of $$$m$$$ integers, define a transformation as follows: Write down the values $$$b_i\\oplus b_j$$$ for all $$$1\\le i\\lt j\\le m$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation .. Take the $$$m$$$ smallest among the written values. Replace the elements of the array with the taken $$$m$$$ values. For example, consider the transformation of the array $$$[6, 7, 8, 9, 15]$$$. We write down the values $$$1, 1, 6, 7, 8, 9, 14, 14, 15, 15$$$. After the transformation , the array becomes $$$[1, 1, 6, 7, 8]$$$ — the $$$5$$$ smallest elements. You are given an array $$$a$$$ consisting of $$$n$$$ non-negative integers. Let $$$\\max(a)$$$ denote the maximum element of the array $$$a$$$, and $$$\\min(a)$$$ — the minimum. Your task is to answer $$$q$$$ queries, each of which gives you one integer $$$x$$$. For each query, find the value of $$$\\max(a) - \\min(a)$$$ after $$$x$$$ transformations on the array. Note that the queries are independent, i.e. before each query, the array $$$a$$$ is restored to its original state.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$q$$$ ($$$5\\le n\\le 2000, 1\\le q\\le 2000$$$) — the size of the array and the number of queries. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0\\le a_i\\lt 2^{30}$$$). The next $$$q$$$ lines of each test case contain an integer $$$x$$$ ($$$0\\le x\\lt 2^{30}$$$). It is guaranteed that the sum of $$$n$$$ and the sum of $$$q$$$ over all test cases do not exceed $$$2000$$$.",
+  "output_specification": "For each test case, output $$$q$$$ integers — the answer to each query.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 1\n0 0 1 1 1\n1\n5 2\n6 7 8 9 15\n0\n1\n8 2\n102 92 15 19 25 54 62 36\n2\n1\n10 1\n56 73 81 23 17 92 50 34 67 78\n2",
+      "output": "1\n9\n7\n12\n31\n7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:57:34",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "235B",
+  "source": "problemset",
+  "contest_id": 235,
+  "problem_index": "B",
+  "name": "Let's Play Osu!",
+  "rating": 2000,
+  "tags": [
+    "dp",
+    "math",
+    "probabilities"
+  ],
+  "solved_count": 4618,
+  "problem_url": "https://codeforces.com/problemset/problem/235/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5592",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You're playing a game called Osu! Here's a simplified version of it. There are n clicks in a game. For each click there are two outcomes: correct or bad. Let us denote correct as \" O \", bad as \" X \", then the whole play can be encoded as a sequence of n characters \" O \" and \" X \". Using the play sequence you can calculate the score for the play as follows: for every maximal consecutive \" O \"s block, add the square of its length (the number of characters \" O \") to the score. For example, if your play can be encoded as \" OOXOOOXXOO \", then there's three maximal consecutive \" O \"s block \" OO \", \" OOO \", \" OO \", so your score will be 2 2 + 3 2 + 2 2 = 17 . If there are no correct clicks in a play then the score for the play equals to 0 . You know that the probability to click the i -th (1 ≤ i ≤ n ) click correctly is p i . In other words, the i -th character in the play sequence has p i probability to be \" O \", 1 - p i to be \" X \". You task is to calculate the expected score for your play.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 5 ) — the number of clicks. The second line contains n space-separated real numbers p 1 , p 2 , ..., p n (0 ≤ p i ≤ 1) . There will be at most six digits after the decimal point in the given p i .",
+  "output_specification": "Print a single real number — the expected score for your play. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "3\n0.5 0.5 0.5",
+      "output": "2.750000000000000"
+    },
+    {
+      "input": "4\n0.7 0.2 0.1 0.9",
+      "output": "2.489200000000000"
+    },
+    {
+      "input": "5\n1 1 1 1 1",
+      "output": "25.000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

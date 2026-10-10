@@ -1,0 +1,37 @@
+{
+  "id": "1787E",
+  "source": "problemset",
+  "contest_id": 1787,
+  "problem_index": "E",
+  "name": "The Harmonization of XOR",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 2830,
+  "problem_url": "https://codeforces.com/problemset/problem/1787/E",
+  "editorial_url": "https://codeforces.com/blog/entry/112009",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array of exactly $$$n$$$ numbers $$$[1,2,3,\\ldots,n]$$$ along with integers $$$k$$$ and $$$x$$$. Partition the array in exactly $$$k$$$ non-empty disjoint subsequences such that the bitwise XOR of all numbers in each subsequence is $$$x$$$, and each number is in exactly one subsequence. Notice that there are no constraints on the length of each subsequence. A sequence $$$a$$$ is a subsequence of a sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements. For example, for $$$n = 15$$$, $$$k = 6$$$, $$$x = 7$$$, the following scheme is valid: $$$[6,10,11]$$$, $$$6 \\oplus 10 \\oplus 11 = 7$$$, $$$[5,12,14]$$$, $$$5 \\oplus 12 \\oplus 14 = 7$$$, $$$[3,9,13]$$$, $$$3 \\oplus 9 \\oplus 13 = 7$$$, $$$[1,2,4]$$$, $$$1 \\oplus 2 \\oplus 4 = 7$$$, $$$[8,15]$$$, $$$8 \\oplus 15 = 7$$$, $$$[7]$$$, $$$7 = 7$$$, where $$$\\oplus$$$ represents the bitwise XOR operation. The following scheme is invalid, since $$$8$$$, $$$15$$$ do not appear: $$$[6,10,11]$$$, $$$6 \\oplus 10 \\oplus 11 = 7$$$, $$$[5,12,14]$$$, $$$5 \\oplus 12 \\oplus 14 = 7$$$, $$$[3,9,13]$$$, $$$3 \\oplus 9 \\oplus 13 = 7$$$, $$$[1,2,4]$$$, $$$1 \\oplus 2 \\oplus 4 = 7$$$, $$$[7]$$$, $$$7 = 7$$$. The following scheme is invalid, since $$$3$$$ appears twice, and $$$1$$$, $$$2$$$ do not appear: $$$[6,10,11]$$$, $$$6 \\oplus 10 \\oplus 11 = 7$$$, $$$[5,12,14]$$$, $$$5 \\oplus 12 \\oplus 14 = 7$$$, $$$[3,9,13]$$$, $$$3 \\oplus 9 \\oplus 13 = 7$$$, $$$[3,4]$$$, $$$3 \\oplus 4 = 7$$$, $$$[8,15]$$$, $$$8 \\oplus 15 = 7$$$, $$$[7]$$$, $$$7 = 7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first and the only line of each test case contains three integers $$$n$$$, $$$k$$$, $$$x$$$ ($$$1 \\le k \\le n \\le 2 \\cdot 10^5$$$; $$$1\\le x \\le 10^9$$$) — the length of the array, the number of subsequences and the required XOR. It's guaranteed that the sum of $$$n$$$ does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if it is possible to partition the sequence, print \" YES \" in the first line. In the $$$i$$$-th of the following $$$k$$$ lines first print the length $$$s_i$$$ of the $$$i$$$-th subsequence, then print $$$s_i$$$ integers, representing the elements in the $$$i$$$-th subsequence. If there are multiple answers, print any. Note that you can print a subsequence in any order. If it is not possible to partition the sequence, print \" NO \".",
+  "sample_testcases": [
+    {
+      "input": "7\n15 6 7\n11 4 5\n5 3 2\n4 1 4\n6 1 7\n11 5 5\n11 6 5",
+      "output": "YES\n3 6 10 11\n3 5 12 14\n3 3 9 13\n3 1 2 4\n2 8 15\n1 7\nYES\n2 1 4\n2 2 7\n2 3 6\n5 5 8 9 10 11\nNO\nYES\n4 1 2 3 4\nYES\n6 1 2 3 4 5 6\nNO\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

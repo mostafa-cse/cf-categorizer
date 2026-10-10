@@ -1,0 +1,40 @@
+{
+  "id": "201A",
+  "source": "problemset",
+  "contest_id": 201,
+  "problem_index": "A",
+  "name": "Clear Symmetry",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "math"
+  ],
+  "solved_count": 3276,
+  "problem_url": "https://codeforces.com/problemset/problem/201/A",
+  "editorial_url": "https://codeforces.com/blog/entry/4808",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider some square matrix A with side n consisting of zeros and ones. There are n rows numbered from 1 to n from top to bottom and n columns numbered from 1 to n from left to right in this matrix. We'll denote the element of the matrix which is located at the intersection of the i -row and the j -th column as A i , j . Let's call matrix A clear if no two cells containing ones have a common side. Let's call matrix A symmetrical if it matches the matrices formed from it by a horizontal and/or a vertical reflection. Formally, for each pair ( i , j ) (1 ≤ i , j ≤ n ) both of the following conditions must be met: A i , j = A n - i + 1, j and A i , j = A i , n - j + 1 . Let's define the sharpness of matrix A as the number of ones in it. Given integer x , your task is to find the smallest positive integer n such that there exists a clear symmetrical matrix A with side n and sharpness x .",
+  "input_specification": "The only line contains a single integer x ( 1 ≤ x ≤ 100 ) — the required sharpness of the matrix.",
+  "output_specification": "Print a single number — the sought value of n .",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "3"
+    },
+    {
+      "input": "9",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

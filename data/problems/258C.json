@@ -1,0 +1,41 @@
+{
+  "id": "258C",
+  "source": "problemset",
+  "contest_id": 258,
+  "problem_index": "C",
+  "name": "Little Elephant and LCM",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 2036,
+  "problem_url": "https://codeforces.com/problemset/problem/258/C",
+  "editorial_url": "https://codeforces.com/blog/entry/6213",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The Little Elephant loves the LCM (least common multiple) operation of a non-empty set of positive integers. The result of the LCM operation of k positive integers x 1 , x 2 , ..., x k is the minimum positive integer that is divisible by each of numbers x i . Let's assume that there is a sequence of integers b 1 , b 2 , ..., b n . Let's denote their LCMs as lcm ( b 1 , b 2 , ..., b n ) and the maximum of them as max ( b 1 , b 2 , ..., b n ) . The Little Elephant considers a sequence b good , if lcm ( b 1 , b 2 , ..., b n ) = max ( b 1 , b 2 , ..., b n ) . The Little Elephant has a sequence of integers a 1 , a 2 , ..., a n . Help him find the number of good sequences of integers b 1 , b 2 , ..., b n , such that for all i (1 ≤ i ≤ n ) the following condition fulfills: 1 ≤ b i ≤ a i . As the answer can be rather large, print the remainder from dividing it by 1000000007 (10 9 + 7) .",
+  "input_specification": "The first line contains a single positive integer n (1 ≤ n ≤ 10 5 ) — the number of integers in the sequence a . The second line contains n space-separated integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 5 ) — sequence a .",
+  "output_specification": "In the single line print a single integer — the answer to the problem modulo 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "4\n1 4 3 2",
+      "output": "15"
+    },
+    {
+      "input": "2\n6 3",
+      "output": "13"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:55",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

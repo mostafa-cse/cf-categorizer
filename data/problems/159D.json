@@ -1,0 +1,45 @@
+{
+  "id": "159D",
+  "source": "problemset",
+  "contest_id": 159,
+  "problem_index": "D",
+  "name": "Palindrome pairs",
+  "rating": 1500,
+  "tags": [
+    "*special",
+    "brute force",
+    "dp",
+    "strings"
+  ],
+  "solved_count": 4767,
+  "problem_url": "https://codeforces.com/problemset/problem/159/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4089",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a non-empty string s consisting of lowercase letters. Find the number of pairs of non-overlapping palindromic substrings of this string. In a more formal way, you have to find the quantity of tuples ( a , b , x , y ) such that 1 ≤ a ≤ b < x ≤ y ≤ | s | and substrings s [ a ... b ] , s [ x ... y ] are palindromes. A palindrome is a string that can be read the same way from left to right and from right to left. For example, \" abacaba \", \" z \", \" abba \" are palindromes. A substring s [ i ... j ] ( 1 ≤ i ≤ j ≤ | s | ) of string s = s 1 s 2 ... s | s | is a string s i s i + 1 ... s j . For example, substring s [2...4] of string s = \" abacaba \" equals \" bac \".",
+  "input_specification": "The first line of input contains a non-empty string s which consists of lowercase letters (' a '...' z '), s contains at most 2000 characters.",
+  "output_specification": "Output a single number — the quantity of pairs of non-overlapping palindromic substrings of s . Please do not use the %lld format specifier to read or write 64-bit integers in С++. It is preferred to use cin, cout streams or the %I64d format specifier.",
+  "sample_testcases": [
+    {
+      "input": "aa",
+      "output": "1"
+    },
+    {
+      "input": "aaa",
+      "output": "5"
+    },
+    {
+      "input": "abacaba",
+      "output": "36"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "1237E",
+  "source": "problemset",
+  "contest_id": 1237,
+  "problem_index": "E",
+  "name": "Balanced Binary Search Trees",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "math"
+  ],
+  "solved_count": 1755,
+  "problem_url": "https://codeforces.com/problemset/problem/1237/E",
+  "editorial_url": "https://codeforces.com/blog/entry/70547",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Recall that a binary search tree is a rooted binary tree, whose nodes each store a key and each have at most two distinguished subtrees, left and right. The key in each node must be greater than any key stored in the left subtree, and less than any key stored in the right subtree. The depth of a vertex is the number of edges on the simple path from the vertex to the root. In particular, the depth of the root is $$$0$$$. Let's call a binary search tree perfectly balanced if there doesn't exist a binary search tree with the same number of vertices that has a strictly smaller sum of depths of its vertices. Let's call a binary search tree with integer keys striped if both of the following conditions are satisfied for every vertex $$$v$$$: If $$$v$$$ has a left subtree whose root is $$$u$$$, then the parity of the key of $$$v$$$ is different from the parity of the key of $$$u$$$. If $$$v$$$ has a right subtree whose root is $$$w$$$, then the parity of the key of $$$v$$$ is the same as the parity of the key of $$$w$$$. You are given a single integer $$$n$$$. Find the number of perfectly balanced striped binary search trees with $$$n$$$ vertices that have distinct integer keys between $$$1$$$ and $$$n$$$, inclusive. Output this number modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The only line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$), denoting the required number of vertices.",
+  "output_specification": "Output the number of perfectly balanced striped binary search trees with $$$n$$$ vertices and distinct integer keys between $$$1$$$ and $$$n$$$, inclusive, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "1"
+    },
+    {
+      "input": "3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:22",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

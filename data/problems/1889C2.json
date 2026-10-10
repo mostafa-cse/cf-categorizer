@@ -1,0 +1,35 @@
+{
+  "id": "1889C2",
+  "source": "problemset",
+  "contest_id": 1889,
+  "problem_index": "C2",
+  "name": "Doremy's Drying Plan (Hard Version)",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "dp"
+  ],
+  "solved_count": 1239,
+  "problem_url": "https://codeforces.com/problemset/problem/1889/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/121813",
+  "time_limit": "4 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "The only differences between the two versions of this problem are the constraint on $$$k$$$, the time limit and the memory limit. You can make hacks only if all versions of the problem are solved. Doremy lives in a rainy country consisting of $$$n$$$ cities numbered from $$$1$$$ to $$$n$$$. The weather broadcast predicted the distribution of rain in the next $$$m$$$ days. In the $$$i$$$-th day, it will rain in the cities in the interval $$$[l_i, r_i]$$$. A city is called dry if it will never rain in that city in the next $$$m$$$ days. It turns out that Doremy has a special power. She can choose $$$k$$$ days, and during these days it will not rain. Doremy wants to calculate the maximum number of dry cities after using the special power.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line contains three integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$1\\le n\\le 2\\cdot 10^5$$$, $$$2 \\le m \\le 2\\cdot 10^5$$$, $$$2 \\le k \\le \\min(10, m)$$$) — the number of cities, the number of days, and the number of days of rain that Doremy can prevent. Then, $$$m$$$ lines follow. The $$$i$$$-th line contains two integers $$$l_i$$$, $$$r_i$$$ ($$$1\\le l_i\\le r_i\\le n$$$) — the rain coverage on day $$$i$$$. It is guaranteed that the sum of $$$n$$$ and the sum of $$$m$$$ over all test cases do not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output one integer — the maximum number of dry cities.",
+  "sample_testcases": [
+    {
+      "input": "6\n2 3 2\n1 2\n1 2\n1 1\n5 3 2\n1 3\n2 4\n3 5\n10 6 4\n1 5\n6 10\n2 2\n3 7\n5 8\n1 4\n100 6 5\n1 100\n1 100\n1 100\n1 100\n1 100\n1 100\n1000 2 2\n1 1\n1 1\n20 5 3\n9 20\n3 3\n10 11\n11 13\n6 18",
+      "output": "1\n2\n6\n0\n1000\n17"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:42",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "687E",
+  "source": "problemset",
+  "contest_id": 687,
+  "problem_index": "E",
+  "name": "TOF",
+  "rating": 2900,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 484,
+  "problem_url": "https://codeforces.com/problemset/problem/687/E",
+  "editorial_url": "https://codeforces.com/blog/entry/45770",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Today Pari gave Arya a cool graph problem. Arya wrote a non-optimal solution for it, because he believes in his ability to optimize non-optimal solutions. In addition to being non-optimal, his code was buggy and he tried a lot to optimize it, so the code also became dirty! He keeps getting Time Limit Exceeds and he is disappointed. Suddenly a bright idea came to his mind! Here is how his dirty code looks like: dfs(v) { set count[v] = count[v] + 1 if(count[v] < 1000) { foreach u in neighbors[v] { if(visited[u] is equal to false) { dfs(u) } break } } set visited[v] = true } main() { input the digraph() TOF() foreach 1<=i<=n { set count[i] = 0 , visited[i] = false } foreach 1 <= v <= n { if(visited[v] is equal to false) { dfs(v) } } ... // And do something cool and magical but we can't tell you what! } He asks you to write the TOF function in order to optimize the running time of the code with minimizing the number of calls of the dfs function. The input is a directed graph and in the TOF function you have to rearrange the edges of the graph in the list neighbors for each vertex. The number of calls of dfs function depends on the arrangement of neighbors of each vertex.",
+  "input_specification": "The first line of the input contains two integers n and m ( 1 ≤ n , m ≤ 5000 ) — the number of vertices and then number of directed edges in the input graph. Each of the next m lines contains a pair of integers u i and v i ( 1  ≤ u i , v i ≤ n ), meaning there is a directed edge in the input graph. You may assume that the graph won't contain any self-loops and there is at most one edge between any unordered pair of vertices.",
+  "output_specification": "Print a single integer — the minimum possible number of dfs calls that can be achieved with permuting the edges.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n2 3\n3 1",
+      "output": "2998"
+    },
+    {
+      "input": "6 7\n1 2\n2 3\n3 1\n3 4\n4 5\n5 6\n6 4",
+      "output": "3001"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

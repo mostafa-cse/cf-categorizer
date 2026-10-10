@@ -1,0 +1,38 @@
+{
+  "id": "853C",
+  "source": "problemset",
+  "contest_id": 853,
+  "problem_index": "C",
+  "name": "Boredom",
+  "rating": 2100,
+  "tags": [
+    "data structures"
+  ],
+  "solved_count": 1878,
+  "problem_url": "https://codeforces.com/problemset/problem/853/C",
+  "editorial_url": "https://codeforces.com/blog/entry/54368",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Ilya is sitting in a waiting area of Metropolis airport and is bored of looking at time table that shows again and again that his plane is delayed. So he took out a sheet of paper and decided to solve some problems. First Ilya has drawn a grid of size n × n and marked n squares on it, such that no two marked squares share the same row or the same column. He calls a rectangle on a grid with sides parallel to grid sides beautiful if exactly two of its corner squares are marked. There are exactly n ·( n - 1) / 2 beautiful rectangles. Ilya has chosen q query rectangles on a grid with sides parallel to grid sides (not necessarily beautiful ones), and for each of those rectangles he wants to find its beauty degree . Beauty degree of a rectangle is the number of beautiful rectangles that share at least one square with the given one. Now Ilya thinks that he might not have enough time to solve the problem till the departure of his flight. You are given the description of marked cells and the query rectangles, help Ilya find the beauty degree of each of the query rectangles.",
+  "input_specification": "The first line of input contains two integers n and q ( 2 ≤ n ≤ 200 000 , 1 ≤ q ≤ 200 000 ) — the size of the grid and the number of query rectangles. The second line contains n integers p 1 , p 2 , ..., p n , separated by spaces ( 1 ≤ p i ≤ n , all p i are different), they specify grid squares marked by Ilya: in column i he has marked a square at row p i , rows are numbered from 1 to n , bottom to top, columns are numbered from 1 to n , left to right. The following q lines describe query rectangles. Each rectangle is described by four integers: l , d , r , u ( 1 ≤ l ≤ r ≤ n , 1 ≤ d ≤ u ≤ n ), here l and r are the leftmost and the rightmost columns of the rectangle, d and u the bottommost and the topmost rows of the rectangle.",
+  "output_specification": "For each query rectangle output its beauty degree on a separate line.",
+  "sample_testcases": [
+    {
+      "input": "2 3\n1 2\n1 1 1 1\n1 1 1 2\n1 1 2 2",
+      "output": "1\n1\n1"
+    },
+    {
+      "input": "4 2\n1 3 2 4\n4 1 4 4\n1 1 2 3",
+      "output": "3\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:52",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

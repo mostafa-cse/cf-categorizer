@@ -1,0 +1,40 @@
+{
+  "id": "1858E2",
+  "source": "problemset",
+  "contest_id": 1858,
+  "problem_index": "E2",
+  "name": "Rollbacks (Hard Version)",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "interactive",
+    "trees"
+  ],
+  "solved_count": 1328,
+  "problem_url": "https://codeforces.com/problemset/problem/1858/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/119398",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is a hard version of this problem. The only difference between the versions is that you have to solve the hard version in online mode. You can make hacks only if both versions of the problem are solved. You have an array $$$a$$$, which is initially empty. You need to process queries of the following types: + $$$x$$$ — add the integer $$$x$$$ to the end of the array $$$a$$$. - $$$k$$$ — remove the last $$$k$$$ numbers from the array $$$a$$$. ! — roll back the last active change (i.e., make the array $$$a$$$ the way it was before the change). In this problem, only queries of the first two types ( + and - ) are considered as changes. ? — find the number of distinct numbers in the array $$$a$$$.",
+  "input_specification": "The first line contains an integer $$$q$$$ ($$$1 \\leq q \\leq 10^6$$$) — the number of queries. The next $$$q$$$ lines contain the queries as described above. It is guaranteed that in the queries of the first type, $$$1 \\le x \\le 10^6$$$; in the queries of the second type, $$$k \\ge 1$$$ and $$$k$$$ does not exceed the current length of the array $$$a$$$; at the moment of the queries of the third type, there is at least one query of the first or of the second type that can be rolled back. It is also guaranteed that the number of queries of the fourth type ( ? ) does not exceed $$$10^5$$$. Note that you should solve the problem in online mode. It means that you can't read the whole input at once. You can read each query only after writing the answer for the last query, so don't forget to flush output after printing answers. You can use functions like fflush(stdout) in C++ and BufferedWriter.flush in Java or similar after each writing in your program.",
+  "output_specification": "For each query of the fourth type output one integer — the number of distinct elements in array $$$a$$$ at the moment of query.",
+  "sample_testcases": [
+    {
+      "input": "10\n+ 1\n+ 2\n+ 2\n?\n!\n+ 3\n- 2\n?\n+ 1\n?",
+      "output": "2\n1\n1"
+    },
+    {
+      "input": "6\n+ 1\n+ 1000000\n?\n!\n!\n?",
+      "output": "2\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

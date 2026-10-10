@@ -1,0 +1,49 @@
+{
+  "id": "814E",
+  "source": "problemset",
+  "contest_id": 814,
+  "problem_index": "E",
+  "name": "An unavoidable detour for home",
+  "rating": 2600,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 863,
+  "problem_url": "https://codeforces.com/problemset/problem/814/E",
+  "editorial_url": "https://codeforces.com/blog/entry/52449",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Those unwilling to return home from a long journey, will be affected by the oddity of the snail and lose their way. Mayoi, the oddity's carrier, wouldn't like this to happen, but there's nothing to do with this before a cure is figured out. For now, she would only like to know the enormous number of possibilities to be faced with if someone gets lost. There are n towns in the region, numbered from 1 to n . The town numbered 1 is called the capital. The traffic network is formed by bidirectional roads connecting pairs of towns. No two roads connect the same pair of towns, and no road connects a town with itself. The time needed to travel through each of the roads is the same. Lost travelers will not be able to find out how the towns are connected, but the residents can help them by providing the following facts: Starting from each town other than the capital, the shortest path (i.e. the path passing through the minimum number of roads) to the capital exists, and is unique; Let l i be the number of roads on the shortest path from town i to the capital, then l i ≥ l i - 1 holds for all 2 ≤ i ≤ n ; For town i , the number of roads connected to it is denoted by d i , which equals either 2 or 3 . You are to count the number of different ways in which the towns are connected, and give the answer modulo 10 9 + 7 . Two ways of connecting towns are considered different if a pair ( u , v ) ( 1 ≤ u , v ≤ n ) exists such there is a road between towns u and v in one of them but not in the other.",
+  "input_specification": "The first line of input contains a positive integer n ( 3 ≤ n ≤ 50 ) — the number of towns. The second line contains n space-separated integers d 1 , d 2 , ..., d n ( 2 ≤ d i ≤ 3 ) — the number of roads connected to towns 1, 2, ..., n , respectively. It is guaranteed that the sum of d i over all i is even.",
+  "output_specification": "Output one integer — the total number of different possible ways in which the towns are connected, modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4\n3 2 3 2",
+      "output": "1"
+    },
+    {
+      "input": "5\n2 3 3 2 2",
+      "output": "2"
+    },
+    {
+      "input": "5\n2 2 2 2 2",
+      "output": "2"
+    },
+    {
+      "input": "20\n2 2 2 2 3 2 3 2 2 2 2 2 2 2 2 2 2 3 3 2",
+      "output": "82944"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

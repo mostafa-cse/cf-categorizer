@@ -1,0 +1,35 @@
+{
+  "id": "2228E1",
+  "source": "problemset",
+  "contest_id": 2228,
+  "problem_index": "E1",
+  "name": "Amanojaku and Sequence (Easy Version)",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "math"
+  ],
+  "solved_count": 677,
+  "problem_url": "https://codeforces.com/problemset/problem/2228/E1",
+  "editorial_url": "https://codeforces.com/blog/entry/153619",
+  "time_limit": "4 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Tinkerbell of Inequality — Taboo Japan Disentanglement This is the easy version of the problem. The difference between the versions is that in this version, $$$q=1$$$ and $$$\\mathrm{op}=2$$$. You can hack only if you solved all versions of this problem. For a sequence $$$s$$$, let $$$|s|$$$ denote its length. For a non-negative integer sequence $$$c$$$, define $$$f(c)$$$ as the sum of the squares of its prefix sums: $$$$$$ f(c)=\\sum_{i=1}^{|c|}\\left(\\sum_{j=1}^{i} c_j\\right)^2. $$$$$$ Now define $$$g(b,m)$$$ as follows. Let $$$b$$$ be an integer sequence such that $$$b_i\\ge -1$$$ for every $$$i$$$, and let $$$m$$$ be a non-negative integer. A non-negative integer sequence $$$c$$$ is called valid for $$$(b,m)$$$ if all of the following conditions hold: $$$|c|=|b|$$$; $$$\\sum_{i=1}^{|c|} c_i=m$$$; for every $$$1\\le i\\le |b|$$$, if $$$b_i\\ge 0$$$, then $$$c_i=b_i$$$; otherwise, if $$$b_i=-1$$$, then $$$c_i$$$ may be any non-negative integer. The value $$$g(b,m)$$$ is defined as the sum of $$$f(c)$$$ over all valid sequences $$$c$$$ for $$$(b,m)$$$. If there is no such sequence, then $$$g(b,m)=0$$$. You are given an array $$$a$$$ of length $$$n$$$, where $$$a_i\\ge -1$$$, and $$$q$$$ queries of the following one type: Given three integers $$$l$$$, $$$r$$$, and $$$m$$$, compute $$$g([a_l,a_{l+1},\\ldots,a_r],m)$$$ modulo $$$998\\,244\\,353$$$, where $$$[a_l,a_{l+1},\\ldots,a_r]$$$ denotes the subarray$$$^{\\text{∗}}$$$ of $$$a$$$ from position $$$l$$$ to position $$$r$$$. $$$^{\\text{∗}}$$$An array $$$a$$$ is a subarray of an array $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. For each test case, the first line contains two integers $$$n$$$ and $$$q$$$ ($$$1\\leq n\\leq 3\\cdot 10^5$$$, $$$q=1$$$). The second line contains $$$n$$$ integers $$$a_1,a_2,\\ldots,a_n$$$ ($$$-1\\leq a_i\\leq 10^6$$$). Then $$$q$$$ lines follow. Each line describes a query in the following format. The first integer $$$\\textrm{op}$$$ is $$$2$$$. $$$2\\,l\\,r\\,m$$$: compute $$$g([a_l,a_{l+1},\\ldots,a_r],m)$$$ modulo $$$998\\,244\\,353$$$ ($$$1\\leq l\\leq r\\leq n$$$, $$$0\\leq m\\leq 10^6$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$3\\cdot 10^5$$$.",
+  "output_specification": "For each test case, for every query of the second type, output the value of $$$g([a_l,a_{l+1},\\ldots,a_r],m)$$$ modulo $$$998\\,244\\,353$$$ on a line.",
+  "sample_testcases": [
+    {
+      "input": "10\n5 1\n4 -1 7 6 -1\n2 2 2 2\n5 1\n4 -1 8 6 -1\n2 3 3 0\n5 1\n4 -1 8 6 -1\n2 4 5 8\n5 1\n4 -1 8 6 7\n2 3 5 21\n5 1\n4 -1 8 6 7\n2 3 5 22\n4 1\n-1 -1 -1 -1\n2 1 1 4\n4 1\n-1 -1 -1 -1\n2 1 2 5\n4 1\n-1 -1 -1 -1\n2 1 3 6\n4 1\n-1 -1 -1 -1\n2 1 4 7\n4 1\n-1 -1 3 -1\n2 1 4 5",
+      "output": "4\n0\n100\n701\n0\n16\n205\n1736\n12180\n286"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:29",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

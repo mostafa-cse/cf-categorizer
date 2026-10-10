@@ -1,0 +1,50 @@
+{
+  "id": "1461E",
+  "source": "problemset",
+  "contest_id": 1461,
+  "problem_index": "E",
+  "name": "Water Level",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "graphs",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2256,
+  "problem_url": "https://codeforces.com/problemset/problem/1461/E",
+  "editorial_url": "https://codeforces.com/blog/entry/85491",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "In recent years John has very successfully settled at his new job at the office. But John doesn't like to idly sit around while his code is compiling, so he immediately found himself an interesting distraction. The point of his distraction was to maintain a water level in the water cooler used by other zebras. Originally the cooler contained exactly $$$k$$$ liters of water. John decided that the amount of water must always be at least $$$l$$$ liters of water but no more than $$$r$$$ liters. John will stay at the office for exactly $$$t$$$ days. He knows that each day exactly $$$x$$$ liters of water will be used by his colleagues. At the beginning of each day he can add exactly $$$y$$$ liters of water to the cooler, but at any point in time the amount of water in the cooler must be in the range $$$[l, r]$$$. Now John wants to find out whether he will be able to maintain the water level at the necessary level for $$$t$$$ days. Help him answer this question!",
+  "input_specification": "The first line of the input contains six integers $$$k$$$, $$$l$$$, $$$r$$$, $$$t$$$, $$$x$$$ and $$$y$$$ ($$$1 \\le l \\le k \\le r \\le 10^{18}; 1 \\le t \\le 10^{18}; 1 \\le x \\le 10^6; 1 \\le y \\le 10^{18}$$$) — initial water level, the required range, the number of days, daily water usage and the exact amount of water that can be added, respectively.",
+  "output_specification": "Print \" Yes \" if John can maintain the water level for $$$t$$$ days and \" No \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "8 1 10 2 6 4",
+      "output": "No"
+    },
+    {
+      "input": "8 1 10 2 6 5",
+      "output": "Yes"
+    },
+    {
+      "input": "9 1 10 9 2 9",
+      "output": "No"
+    },
+    {
+      "input": "20 15 25 3 5 7",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:25",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1764E",
+  "source": "problemset",
+  "contest_id": 1764,
+  "problem_index": "E",
+  "name": "Doremy's Number Line",
+  "rating": 2400,
+  "tags": [
+    "dp",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 1476,
+  "problem_url": "https://codeforces.com/problemset/problem/1764/E",
+  "editorial_url": "https://codeforces.com/blog/entry/109468",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Doremy has two arrays $$$a$$$ and $$$b$$$ of $$$n$$$ integers each, and an integer $$$k$$$. Initially, she has a number line where no integers are colored. She chooses a permutation $$$p$$$ of $$$[1,2,\\ldots,n]$$$ then performs $$$n$$$ moves. On the $$$i$$$-th move she does the following: Pick an uncolored integer $$$x$$$ on the number line such that either: $$$x \\leq a_{p_i}$$$; or there exists a colored integer $$$y$$$ such that $$$y \\leq a_{p_i}$$$ and $$$x \\leq y+b_{p_i}$$$. Color integer $$$x$$$ with color $$$p_i$$$. Determine if the integer $$$k$$$ can be colored with color $$$1$$$.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 10^5$$$, $$$1 \\le k \\le 10^9$$$). Each of the following $$$n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i,b_i \\le 10^9$$$). It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output \" YES \" (without quotes) if the point $$$k$$$ can be colored with color $$$1$$$. Otherwise, output \" NO \" (without quotes). You can output \" YES \" and \" NO \" in any case (for example, strings \" yEs \", \" yes \" and \" Yes \" will be recognized as a positive response).",
+  "sample_testcases": [
+    {
+      "input": "6\n4 16\n5 3\n8 12\n10 7\n15 1\n4 16\n8 12\n10 7\n15 1\n5 3\n4 16\n10 7\n15 1\n5 3\n8 12\n4 16\n15 1\n5 3\n8 12\n10 7\n1 1000000000\n500000000 500000000\n2 1000000000\n1 999999999\n1 1",
+      "output": "NO\nYES\nYES\nYES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1857E",
+  "source": "problemset",
+  "contest_id": 1857,
+  "problem_index": "E",
+  "name": "Power of Points",
+  "rating": 1500,
+  "tags": [
+    "math",
+    "sortings"
+  ],
+  "solved_count": 15242,
+  "problem_url": "https://codeforces.com/problemset/problem/1857/E",
+  "editorial_url": "https://codeforces.com/blog/entry/119134",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given $$$n$$$ points with integer coordinates $$$x_1,\\dots x_n$$$, which lie on a number line. For some integer $$$s$$$, we construct segments [$$$s,x_1$$$], [$$$s,x_2$$$], $$$\\dots$$$, [$$$s,x_n$$$]. Note that if $$$x_i \\lt s$$$, then the segment will look like [$$$x_i,s$$$]. The segment [$$$a, b$$$] covers all integer points $$$a, a+1, a+2, \\dots, b$$$. We define the power of a point $$$p$$$ as the number of segments that intersect the point with coordinate $$$p$$$, denoted as $$$f_p$$$. Your task is to compute $$$\\sum\\limits_{p=1}^{10^9}f_p$$$ for each $$$s \\in \\{x_1,\\dots,x_n\\}$$$, i.e., the sum of $$$f_p$$$ for all integer points from $$$1$$$ to $$$10^9$$$. For example, if the initial coordinates are $$$[1,2,5,7,1]$$$ and we choose $$$s=5$$$, then the segments will be: $$$[1,5]$$$,$$$[2,5]$$$,$$$[5,5]$$$,$$$[5,7]$$$,$$$[1,5]$$$. And the powers of the points will be: $$$f_1=2, f_2=3, f_3=3, f_4=3, f_5=5, f_6=1, f_7=1, f_8=0, \\dots, f_{10^9}=0$$$. Their sum is $$$2+3+3+3+5+1+1=18$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1\\le t\\le 10^4$$$) — the number of test cases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 2\\cdot 10^5$$$) — the number of points. The second line contains $$$n$$$ integers $$$x_1,x_2 \\dots x_n$$$ ($$$1 \\le x_i \\le 10^9$$$) — the coordinates of the points. It is guaranteed that the sum of the values of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$n$$$ integers, where the $$$i$$$-th integer is equal to the sum of the powers of all points for $$$s=x_i$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3\n1 4 3\n5\n1 2 5 7 1\n4\n1 10 100 1000",
+      "output": "8 7 6\n16 15 18 24 16\n1111 1093 1093 2893"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:53",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

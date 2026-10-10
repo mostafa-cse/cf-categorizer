@@ -1,0 +1,35 @@
+{
+  "id": "213D",
+  "source": "problemset",
+  "contest_id": 213,
+  "problem_index": "D",
+  "name": "Stars",
+  "rating": 2300,
+  "tags": [
+    "constructive algorithms",
+    "geometry"
+  ],
+  "solved_count": 385,
+  "problem_url": "https://codeforces.com/problemset/problem/213/D",
+  "editorial_url": "https://codeforces.com/blog/entry/4982",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Furik loves painting stars. A star is a shape that results if we take a regular pentagon and paint all diagonals in it. Recently he decided to teach Rubik to paint stars. After many years of training Rubik could paint stars easily. But now Furik decided to test Rubik and complicated the task. Rubik must paint n stars, observing the following rules: all stars must be painted in a single move (i.e. it is forbidden to take the pen away from the paper); it is forbidden to paint the same segment of non-zero length more than once; the stars can intersect only in their vertexes; the length of a side of the regular pentagon, in which Rubik paints each star, must equal 10. Help Rubik to cope with this hard task.",
+  "input_specification": "A single line contains an integer (1 ≤ n ≤ 100) — the number of stars to paint.",
+  "output_specification": "On the first line print an integer m (1 ≤ m ≤ 5· n ) . On the next m lines print coordinates of m distinct points with accuracy of at least 9 and at most 100 digits after decimal point. All coordinates should not exceed 5000 in their absolute value. On each of the next n lines print 5 integers — the indexes of the points that form the given star in the clockwise or counterclockwise order. On the next line print 5· n + 1 integers — the numbers of points in the order, in which Rubik paints stars. That is, if number with index i is a i , and number with index i + 1 is a i + 1 , then points with indexes a i and a i + 1 will have a segment painted between them. You can consider all m printed points indexed from 1 to m in the order, in which they occur in the output. Separate the numbers on the lines with whitespaces. Note that the answer has an imprecise validation. Try to obtain as accurate a solution as possible. The validator performs all calculations considering that the absolute error of a participant's answer is not more than 10 - 8 .",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "5\n3.830127018922193 3.366025403784439\n-3.601321235851749 10.057331467373021\n0.466045194906253 19.192786043799030\n10.411264148588986 18.147501411122495\n12.490381056766580 8.366025403784439\n1 2 3 4 5\n1 3 5 2 4 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:15",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

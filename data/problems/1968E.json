@@ -1,0 +1,34 @@
+{
+  "id": "1968E",
+  "source": "problemset",
+  "contest_id": 1968,
+  "problem_index": "E",
+  "name": "Cells Arrangement",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms"
+  ],
+  "solved_count": 13017,
+  "problem_url": "https://codeforces.com/problemset/problem/1968/E",
+  "editorial_url": "https://codeforces.com/blog/entry/129096",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$. You choose $$$n$$$ cells $$$(x_1,y_1), (x_2,y_2),\\dots,(x_n,y_n)$$$ in the grid $$$n\\times n$$$ where $$$1\\le x_i\\le n$$$ and $$$1\\le y_i\\le n$$$. Let $$$\\mathcal{H}$$$ be the set of distinct Manhattan distances between any pair of cells. Your task is to maximize the size of $$$\\mathcal{H}$$$. Examples of sets and their construction are given in the notes. If there exists more than one solution, you are allowed to output any. Manhattan distance between cells $$$(x_1,y_1)$$$ and $$$(x_2,y_2)$$$ equals $$$|x_1-x_2|+|y_1-y_2|$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1\\le t\\le 50$$$) — the number of test cases. Each of the following $$$t$$$ lines contains a single integer $$$n$$$ ($$$2\\le n\\le 10^3$$$).",
+  "output_specification": "For each test case, output $$$n$$$ points which maximize the size of $$$\\mathcal{H}$$$. It is not necessary to output an empty line at the end of the answer for each test case.",
+  "sample_testcases": [
+    {
+      "input": "5\n2\n3\n4\n5\n6",
+      "output": "1 1\n1 2\n\n2 1\n2 3\n3 1\n\n1 1\n1 3\n4 3\n4 4\n\n1 1\n1 3\n1 4\n2 1\n5 5\n\n1 4\n1 5\n1 6\n5 2\n5 5\n6 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

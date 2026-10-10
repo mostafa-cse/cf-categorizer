@@ -1,0 +1,37 @@
+{
+  "id": "1437D",
+  "source": "problemset",
+  "contest_id": 1437,
+  "problem_index": "D",
+  "name": "Minimal Height Tree",
+  "rating": 1600,
+  "tags": [
+    "graphs",
+    "greedy",
+    "shortest paths",
+    "trees"
+  ],
+  "solved_count": 14732,
+  "problem_url": "https://codeforces.com/problemset/problem/1437/D",
+  "editorial_url": "https://codeforces.com/blog/entry/84149",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Monocarp had a tree which consisted of $$$n$$$ vertices and was rooted at vertex $$$1$$$. He decided to study BFS ( Breadth-first search ), so he ran BFS on his tree, starting from the root. BFS can be described by the following pseudocode: a = [] # the order in which vertices were processed q = Queue() q.put(1) # place the root at the end of the queue while not q.empty(): k = q.pop() # retrieve the first vertex from the queue a.append(k) # append k to the end of the sequence in which vertices were visited for y in g[k]: # g[k] is the list of all children of vertex k, sorted in ascending order q.put(y) Monocarp was fascinated by BFS so much that, in the end, he lost his tree. Fortunately, he still has a sequence of vertices, in which order vertices were visited by the BFS algorithm (the array a from the pseudocode). Monocarp knows that each vertex was visited exactly once (since they were put and taken from the queue exactly once). Also, he knows that all children of each vertex were viewed in ascending order . Monocarp knows that there are many trees (in the general case) with the same visiting order $$$a$$$, so he doesn't hope to restore his tree. Monocarp is okay with any tree that has minimum height . The height of a tree is the maximum depth of the tree's vertices, and the depth of a vertex is the number of edges in the path from the root to it. For example, the depth of vertex $$$1$$$ is $$$0$$$, since it's the root, and the depth of all root's children are $$$1$$$. Help Monocarp to find any tree with given visiting order $$$a$$$ and minimum height.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le n$$$; $$$a_i \\neq a_j$$$; $$$a_1 = 1$$$) — the order in which the vertices were visited by the BFS algorithm. It's guaranteed that the total sum of $$$n$$$ over test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case print the minimum possible height of a tree with the given visiting order $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n1 4 3 2\n2\n1 2\n3\n1 2 3",
+      "output": "3\n1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:29",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

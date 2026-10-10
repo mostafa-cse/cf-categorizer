@@ -1,0 +1,37 @@
+{
+  "id": "2032C",
+  "source": "problemset",
+  "contest_id": 2032,
+  "problem_index": "C",
+  "name": "Trinity",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "math",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 16854,
+  "problem_url": "https://codeforces.com/problemset/problem/2032/C",
+  "editorial_url": "https://codeforces.com/blog/entry/135622",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ of $$$n$$$ elements $$$a_1, a_2, \\ldots, a_n$$$. You can perform the following operation any number (possibly $$$0$$$) of times: Choose two integers $$$i$$$ and $$$j$$$, where $$$1 \\le i, j \\le n$$$, and assign $$$a_i := a_j$$$. Find the minimum number of operations required to make the array $$$a$$$ satisfy the condition: For every pairwise distinct triplet of indices $$$(x, y, z)$$$ ($$$1 \\le x, y, z \\le n$$$, $$$x \\ne y$$$, $$$y \\ne z$$$, $$$x \\ne z$$$), there exists a non-degenerate triangle with side lengths $$$a_x$$$, $$$a_y$$$ and $$$a_z$$$, i.e. $$$a_x + a_y \\gt a_z$$$, $$$a_y + a_z \\gt a_x$$$ and $$$a_z + a_x \\gt a_y$$$.",
+  "input_specification": "Each test consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in the array $$$a$$$. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$) — the elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations required.",
+  "sample_testcases": [
+    {
+      "input": "4\n7\n1 2 3 4 5 6 7\n3\n1 3 2\n3\n4 5 3\n15\n9 3 8 1 6 5 3 8 2 1 4 2 9 4 7",
+      "output": "3\n1\n0\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

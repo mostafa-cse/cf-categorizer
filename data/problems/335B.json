@@ -1,0 +1,39 @@
+{
+  "id": "335B",
+  "source": "problemset",
+  "contest_id": 335,
+  "problem_index": "B",
+  "name": "Palindrome",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "dp"
+  ],
+  "solved_count": 2426,
+  "problem_url": "https://codeforces.com/problemset/problem/335/B",
+  "editorial_url": "https://codeforces.com/blog/entry/8538",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given a string s , determine if it contains any palindrome of length exactly 100 as a subsequence . If it has any, print any one of them. If it doesn't have any, print a palindrome that is a subsequence of s and is as long as possible.",
+  "input_specification": "The only line of the input contains one string s of length n ( 1 ≤ n ≤ 5·10 4 ) containing only lowercase English letters.",
+  "output_specification": "If s contains a palindrome of length exactly 100 as a subsequence, print any palindrome of length 100 which is a subsequence of s . If s doesn't contain any palindromes of length exactly 100 , print a palindrome that is a subsequence of s and is as long as possible. If there exists multiple answers, you are allowed to print any of them.",
+  "sample_testcases": [
+    {
+      "input": "bbbabcbbb",
+      "output": "bbbcbbb"
+    },
+    {
+      "input": "rquwmzexectvnbanemsmdufrg",
+      "output": "rumenanemur"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

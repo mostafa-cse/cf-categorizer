@@ -1,0 +1,44 @@
+{
+  "id": "620F",
+  "source": "problemset",
+  "contest_id": 620,
+  "problem_index": "F",
+  "name": "Xors on Segments",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 927,
+  "problem_url": "https://codeforces.com/problemset/problem/620/F",
+  "editorial_url": "https://codeforces.com/blog/entry/22936",
+  "time_limit": "10 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given an array with n integers a i and m queries. Each query is described by two integers ( l j , r j ) . Let's define the function . The function is defined for only u ≤ v . For each query print the maximal value of the function f ( a x , a y ) over all l j ≤ x , y ≤ r j , a x ≤ a y .",
+  "input_specification": "The first line contains two integers n , m ( 1 ≤ n ≤ 5·10 4 ,  1 ≤ m ≤ 5·10 3 ) — the size of the array and the number of the queries. The second line contains n integers a i ( 1 ≤ a i ≤ 10 6 ) — the elements of the array a . Each of the next m lines contains two integers l j , r j ( 1 ≤ l j ≤ r j ≤ n ) – the parameters of the j -th query.",
+  "output_specification": "For each query print the value a j on a separate line — the maximal value of the function f ( a x , a y ) over all l j ≤ x , y ≤ r j , a x ≤ a y .",
+  "sample_testcases": [
+    {
+      "input": "6 3\n1 2 3 4 5 6\n1 6\n2 5\n3 4",
+      "output": "7\n7\n7"
+    },
+    {
+      "input": "1 1\n1\n1 1",
+      "output": "1"
+    },
+    {
+      "input": "6 20\n10 21312 2314 214 1 322\n1 1\n1 2\n1 3\n1 4\n1 5\n1 6\n2 2\n2 3\n2 4\n2 5\n2 6\n3 4\n3 5\n3 6\n4 4\n4 5\n4 6\n5 5\n5 6\n6 6",
+      "output": "10\n21313\n21313\n21313\n21313\n21313\n21312\n21313\n21313\n21313\n21313\n2314\n2315\n2315\n214\n215\n323\n1\n323\n322"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

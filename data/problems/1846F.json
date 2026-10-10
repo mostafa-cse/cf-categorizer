@@ -1,0 +1,36 @@
+{
+  "id": "1846F",
+  "source": "problemset",
+  "contest_id": 1846,
+  "problem_index": "F",
+  "name": "Rudolph and Mimic",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 3899,
+  "problem_url": "https://codeforces.com/problemset/problem/1846/F",
+  "editorial_url": "https://codeforces.com/blog/entry/118044",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive task. Rudolph is a scientist who studies alien life forms. There is a room in front of Rudolph with $$$n$$$ different objects scattered around. Among the objects there is exactly one amazing creature — a mimic that can turn into any object. He has already disguised himself in this room and Rudolph needs to find him by experiment. The experiment takes place in several stages. At each stage, the following happens: Rudolf looks at all the objects in the room and writes down their types. The type of each object is indicated by a number; there can be several objects of the same type. After inspecting, Rudolph can point to an object that he thinks is a mimic. After that, the experiment ends. Rudolph only has one try, so if he is unsure of the mimic's position, he does the next step instead. Rudolf can remove any number of objects from the room (possibly zero). Then Rudolf leaves the room and at this time all objects, including the mimic, are mixed with each other, their order is changed, and the mimic can transform into any other object (even one that is not in the room). After this, Rudolf returns to the room and repeats the stage. The mimic may not change appearance , but it can not remain a same object for more than two stages in a row. Rudolf's task is to detect mimic in no more than five stages.",
+  "input_specification": "The first line contains one integer $$$t$$$ $$$(1 \\le t \\le 1000)$$$ — the number of test cases. The first line of each test case contains one integer $$$n$$$ $$$(2 \\le n \\le 200)$$$ — the number of objects in the room. The second line of each test case contains $$$n$$$ integers $$$a_1$$$,$$$a_2$$$,...,$$$a_n$$$ $$$(1 \\le a_i \\le 9)$$$ — object types.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 1 2 2 3\n\n2 1 1 2\n\n2 2 2\n\n2\n\n8\n1 2 3 4 3 4 2 1\n\n4 3 4 3 2 2 1 3\n \n2 3 3 2\n\n5 3 2\n\n2 5\n\n15\n1 2 3 4 5 6 7 8 7 6 5 4 3 2 1 \n\n1 2 3 4 5 6 7 8 7 9 5 4 3 2 1",
+      "output": "- 1 5\n\n- 1 3\n\n- 2 1 2\n\n! 1\n\n\n- 0\n\n- 4 1 3 7 8\n\n- 1 4\n\n- 1 2\n\n! 2\n\n\n- 0\n\n! 10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

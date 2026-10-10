@@ -1,0 +1,21 @@
+{
+  "id": "gym_100004_C",
+  "source": "gym",
+  "contest_id": 100004,
+  "problem_index": "C",
+  "name": "Party Location",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100004/problem/C",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 05:58:17",
+  "updated_at": "2026-10-10 06:04:24"
+}

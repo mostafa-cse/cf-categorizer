@@ -1,0 +1,37 @@
+{
+  "id": "2210D",
+  "source": "problemset",
+  "contest_id": 2210,
+  "problem_index": "D",
+  "name": "A Simple RBS Problem",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 2347,
+  "problem_url": "https://codeforces.com/problemset/problem/2210/D",
+  "editorial_url": "https://codeforces.com/blog/entry/152413",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A bracket sequence is called regular if it is possible to obtain a correct arithmetic expression by inserting characters $$$+$$$ and $$$1$$$ into this sequence. For example, sequences (())() , () and (()(())) are regular, while )( , (() and (()))( are not. Let's call a regular bracket sequence RBS . You can perform the following operation on any RBS string $$$b$$$ — Choose any two disjoint , non empty substrings$$$^{\\text{∗}}$$$ of $$$b$$$ which are RBS and swap the two substrings. More formally, let $$$m$$$ be the length of $$$b$$$. You can perform the following operation on $$$b$$$: Choose indices $$$1 \\le l_1 \\lt r_1 \\lt l_2 \\lt r_2 \\le m$$$ such that the substrings $$$b[{l_1..r_1}]$$$ and $$$b[l_2..r_2]$$$ are both RBS and swap these substrings. The string $$$b$$$ becomes $$$b_1 \\ldots b_{l_1-1} b_{l_2} b_{l_2+1}\\ldots b_{r_2} b_{r_1+1}\\ldots b_{l_2-1} b_{l_1} b_{l_1+1}\\ldots b_{r_1}b_{r_2+1} \\ldots b_m$$$. You are given two strings $$$s$$$ and $$$t$$$ of length $$$n$$$ ($$$n$$$ is even ) such that both $$$s$$$ and $$$t$$$ are RBS. Determine whether you can transform $$$s$$$ to $$$t$$$ using the above operation any number of times. $$$^{\\text{∗}}$$$A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains an integer $$$n$$$ ($$$4\\leq n\\leq 5\\cdot 10^5$$$, $$$n$$$ is even ). The second line of each test case contains a string $$$s$$$ of length $$$n$$$ such that $$$s$$$ is an RBS. The third line of each test case contains a string $$$t$$$ of length $$$n$$$ such that $$$t$$$ is an RBS. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$5\\cdot 10^5$$$.",
+  "output_specification": "For each test case, print \" YES \" if $$$s$$$ can be transformed to $$$t$$$, and \" NO \" otherwise. You can output the answer in any case (upper or lower). For example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "5\n4\n()()\n()()\n4\n()()\n(())\n6\n(())()\n()(())\n8\n(()()())\n()()(())\n8\n()()(())\n()(()())",
+      "output": "YES\nNO\nYES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:31",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

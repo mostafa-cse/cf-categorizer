@@ -1,0 +1,41 @@
+{
+  "id": "2229F",
+  "source": "problemset",
+  "contest_id": 2229,
+  "problem_index": "F",
+  "name": "Load Unbalancing",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1180,
+  "problem_url": "https://codeforces.com/problemset/problem/2229/F",
+  "editorial_url": "https://codeforces.com/blog/entry/153948",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Note the unusually low time limit. You are given a sequence $$$a$$$ of length $$$n$$$, as well as an integer $$$k$$$. You may first reorder the elements of $$$a$$$ however you like. Then, define $$$f(a)$$$ as follows: Let $$$b$$$ be an array of length $$$k$$$ which is initially all zeros. For each $$$1 \\le i \\le n$$$ in order, add $$$a_i$$$ to any minimum element of $$$b$$$. At the end of this process, $$$f(a) = \\max(b)$$$. Find the maximum possible value of $$$f(a)$$$ among all rearrangements of $$$a$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 18$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^9$$$). It is guaranteed that the sum of $$$2^n$$$ over all test cases does not exceed $$$2^{18}$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum possible value of $$$f(a)$$$ among all rearrangements of $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "1\n18 5\n837492015 264819073 519603847 902746518 173058264 648291507 395174620 781532946 506847193 924613708 158397042 673029415 240785631 819456270 461302987 730619824 528947163 894271056",
+      "output": "2823249283"
+    },
+    {
+      "input": "6\n4 2\n1 2 4 5\n1 1\n10\n8 3\n3 4 1 3 2 4 5 3\n3 1\n1000000000 1000000000 1000000000\n17 6\n6 7 67 4 1 41 6 9 69 3 1 4 1 5 9 2 6\n2 2\n1 2",
+      "output": "8\n10\n11\n3000000000\n85\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:52",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

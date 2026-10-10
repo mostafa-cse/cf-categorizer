@@ -1,0 +1,43 @@
+{
+  "id": "479E",
+  "source": "problemset",
+  "contest_id": 479,
+  "problem_index": "E",
+  "name": "Riding in a Lift",
+  "rating": 1900,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 5807,
+  "problem_url": "https://codeforces.com/problemset/problem/479/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14351",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Imagine that you are in a building that has exactly n floors. You can move between the floors in a lift. Let's number the floors from bottom to top with integers from 1 to n . Now you're on the floor number a . You are very bored, so you want to take the lift. Floor number b has a secret lab, the entry is forbidden. However, you already are in the mood and decide to make k consecutive trips in the lift. Let us suppose that at the moment you are on the floor number x (initially, you were on floor a ). For another trip between floors you choose some floor with number y ( y ≠ x ) and the lift travels to this floor. As you cannot visit floor b with the secret lab, you decided that the distance from the current floor x to the chosen y must be strictly less than the distance from the current floor x to floor b with the secret lab. Formally, it means that the following inequation must fulfill: | x - y | < | x - b | . After the lift successfully transports you to floor y , you write down number y in your notepad. Your task is to find the number of distinct number sequences that you could have written in the notebook as the result of k trips in the lift. As the sought number of trips can be rather large, find the remainder after dividing the number by 1000000007 ( 10 9 + 7 ).",
+  "input_specification": "The first line of the input contains four space-separated integers n , a , b , k ( 2 ≤ n ≤ 5000 , 1 ≤ k ≤ 5000 , 1 ≤ a , b ≤ n , a ≠ b ).",
+  "output_specification": "Print a single integer — the remainder after dividing the sought number of sequences by 1000000007 ( 10 9 + 7 ).",
+  "sample_testcases": [
+    {
+      "input": "5 2 4 1",
+      "output": "2"
+    },
+    {
+      "input": "5 2 4 2",
+      "output": "2"
+    },
+    {
+      "input": "5 3 4 1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

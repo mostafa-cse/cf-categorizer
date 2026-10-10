@@ -1,0 +1,38 @@
+{
+  "id": "2180E",
+  "source": "problemset",
+  "contest_id": 2180,
+  "problem_index": "E",
+  "name": "No Effect XOR",
+  "rating": 2300,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 1843,
+  "problem_url": "https://codeforces.com/problemset/problem/2180/E",
+  "editorial_url": "https://codeforces.com/blog/entry/149318",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In the jungle, there is a lake with infinite lily pads on it. The lily pads are numbered with non-negative integers $$$0, 1, 2, 3, \\ldots$$$. The lily pads with numbers between $$$l$$$ and $$$r$$$ inclusive are called suitable , while all other lily pads are not suitable for the frogs to sit on. Currently, a single frog is sitting on each suitable lily pad. Ostad is watching the lake and wants to reorder the frogs. To do so, Ostad can pick a positive integer $$$x$$$ and announce it to the frogs. After hearing the number, the frog sitting on the $$$i$$$-th lily pad will jump to the $$$(i \\oplus x)$$$-th one, where $$$\\oplus$$$ denotes the bitwise XOR operation . Ostad likes the frogs, and therefore he wants to pick the number $$$x$$$ in such a way that all frogs stay within the range of suitable lily pads. Help Ostad by counting how many different numbers $$$x$$$ Ostad can choose such that no frog jumps outside the suitable segment of the lily pads.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^5$$$). The description of the test cases follows. For each test case, there is a single line containing two integers $$$l$$$ and $$$r$$$ ($$$1 \\leq l \\leq r \\leq 10^{15}$$$).",
+  "output_specification": "For each test case, output a single integer denoting the number of valid values for $$$x$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n3 3\n2 4\n4 7\n24189255811072 59373627899903",
+      "output": "1\n0\n0\n3\n2199023255551"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

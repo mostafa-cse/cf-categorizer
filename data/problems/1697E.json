@@ -1,0 +1,50 @@
+{
+  "id": "1697E",
+  "source": "problemset",
+  "contest_id": 1697,
+  "problem_index": "E",
+  "name": "Coloring",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "constructive algorithms",
+    "dp",
+    "geometry",
+    "graphs",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1506,
+  "problem_url": "https://codeforces.com/problemset/problem/1697/E",
+  "editorial_url": "https://codeforces.com/blog/entry/103835",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given $$$n$$$ points on the plane, the coordinates of the $$$i$$$-th point are $$$(x_i, y_i)$$$. No two points have the same coordinates. The distance between points $$$i$$$ and $$$j$$$ is defined as $$$d(i,j) = |x_i - x_j| + |y_i - y_j|$$$. For each point, you have to choose a color, represented by an integer from $$$1$$$ to $$$n$$$. For every ordered triple of different points $$$(a,b,c)$$$, the following constraints should be met: if $$$a$$$, $$$b$$$ and $$$c$$$ have the same color, then $$$d(a,b) = d(a,c) = d(b,c)$$$; if $$$a$$$ and $$$b$$$ have the same color, and the color of $$$c$$$ is different from the color of $$$a$$$, then $$$d(a,b) \\lt d(a,c)$$$ and $$$d(a,b) \\lt d(b,c)$$$. Calculate the number of different ways to choose the colors that meet these constraints.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 100$$$) — the number of points. Then $$$n$$$ lines follow. The $$$i$$$-th of them contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$0 \\le x_i, y_i \\le 10^8$$$). No two points have the same coordinates (i. e. if $$$i \\ne j$$$, then either $$$x_i \\ne x_j$$$ or $$$y_i \\ne y_j$$$).",
+  "output_specification": "Print one integer — the number of ways to choose the colors for the points. Since it can be large, print it modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 0\n3 0\n2 1",
+      "output": "9"
+    },
+    {
+      "input": "5\n1 2\n2 4\n3 4\n4 4\n1 3",
+      "output": "240"
+    },
+    {
+      "input": "4\n1 0\n3 0\n2 1\n2 0",
+      "output": "24"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "1469F",
+  "source": "problemset",
+  "contest_id": 1469,
+  "problem_index": "F",
+  "name": "Power Sockets",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures",
+    "greedy"
+  ],
+  "solved_count": 1141,
+  "problem_url": "https://codeforces.com/problemset/problem/1469/F",
+  "editorial_url": "https://codeforces.com/blog/entry/86082",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "// We decided to drop the legend about the power sockets but feel free to come up with your own :^) Define a chain: a chain of length $$$1$$$ is a single vertex; a chain of length $$$x$$$ is a chain of length $$$x-1$$$ with a new vertex connected to the end of it with a single edge. You are given $$$n$$$ chains of lengths $$$l_1, l_2, \\dots, l_n$$$. You plan to build a tree using some of them. Each vertex of the tree is either white or black. The tree initially only has a white root vertex. All chains initially consist only of white vertices. You can take one of the chains and connect any of its vertices to any white vertex of the tree with an edge. The chain becomes part of the tree. Both endpoints of this edge become black. Each chain can be used no more than once. Some chains can be left unused. The distance between two vertices of the tree is the number of edges on the shortest path between them. If there is at least $$$k$$$ white vertices in the resulting tree, then the value of the tree is the distance between the root and the $$$k$$$-th closest white vertex. What's the minimum value of the tree you can obtain? If there is no way to build a tree with at least $$$k$$$ white vertices, then print -1 .",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$, $$$2 \\le k \\le 10^9$$$) — the number of chains and the minimum number of white vertices a tree should have to have a value. The second line contains $$$n$$$ integers $$$l_1, l_2, \\dots, l_n$$$ ($$$3 \\le l_i \\le 2 \\cdot 10^5$$$) — the lengths of the chains.",
+  "output_specification": "Print a single integer. If there is no way to build a tree with at least $$$k$$$ white vertices, then print -1 . Otherwise, print the minimum value the tree can have.",
+  "sample_testcases": [
+    {
+      "input": "1 2\n3",
+      "output": "2"
+    },
+    {
+      "input": "3 3\n4 3 3",
+      "output": "3"
+    },
+    {
+      "input": "3 5\n4 3 4",
+      "output": "4"
+    },
+    {
+      "input": "2 10\n5 7",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:21",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

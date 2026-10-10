@@ -1,0 +1,37 @@
+{
+  "id": "1389D",
+  "source": "problemset",
+  "contest_id": 1389,
+  "problem_index": "D",
+  "name": "Segment Intersections",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 4605,
+  "problem_url": "https://codeforces.com/problemset/problem/1389/D",
+  "editorial_url": "https://codeforces.com/blog/entry/80809",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two lists of segments $$$[al_1, ar_1], [al_2, ar_2], \\dots, [al_n, ar_n]$$$ and $$$[bl_1, br_1], [bl_2, br_2], \\dots, [bl_n, br_n]$$$. Initially, all segments $$$[al_i, ar_i]$$$ are equal to $$$[l_1, r_1]$$$ and all segments $$$[bl_i, br_i]$$$ are equal to $$$[l_2, r_2]$$$. In one step, you can choose one segment (either from the first or from the second list) and extend it by $$$1$$$. In other words, suppose you've chosen segment $$$[x, y]$$$ then you can transform it either into $$$[x - 1, y]$$$ or into $$$[x, y + 1]$$$. Let's define a total intersection $$$I$$$ as the sum of lengths of intersections of the corresponding pairs of segments, i.e. $$$\\sum\\limits_{i=1}^{n}{\\text{intersection_length}([al_i, ar_i], [bl_i, br_i])}$$$. Empty intersection has length $$$0$$$ and length of a segment $$$[x, y]$$$ is equal to $$$y - x$$$. What is the minimum number of steps you need to make $$$I$$$ greater or equal to $$$k$$$?",
+  "input_specification": "The first line contains the single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$; $$$1 \\le k \\le 10^9$$$) — the length of lists and the minimum required total intersection. The second line of each test case contains two integers $$$l_1$$$ and $$$r_1$$$ ($$$1 \\le l_1 \\le r_1 \\le 10^9$$$) — the segment all $$$[al_i, ar_i]$$$ are equal to initially. The third line of each test case contains two integers $$$l_2$$$ and $$$r_2$$$ ($$$1 \\le l_2 \\le r_2 \\le 10^9$$$) — the segment all $$$[bl_i, br_i]$$$ are equal to initially. It's guaranteed that the sum of $$$n$$$ doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "Print $$$t$$$ integers — one per test case. For each test case, print the minimum number of step you need to make $$$I$$$ greater or equal to $$$k$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n3 5\n1 2\n3 4\n2 1000000000\n1 1\n999999999 999999999\n10 3\n5 10\n7 8",
+      "output": "7\n2000000000\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:41",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

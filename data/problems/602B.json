@@ -1,0 +1,40 @@
+{
+  "id": "602B",
+  "source": "problemset",
+  "contest_id": 602,
+  "problem_index": "B",
+  "name": "Approximating a Constant Range",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 12514,
+  "problem_url": "https://codeforces.com/problemset/problem/602/B",
+  "editorial_url": "https://codeforces.com/blog/entry/21755",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "When Xellos was doing a practice course in university, he once had to measure the intensity of an effect that slowly approached equilibrium. A good way to determine the equilibrium intensity would be choosing a sufficiently large number of consecutive data points that seems as constant as possible and taking their average. Of course, with the usual sizes of data, it's nothing challenging — but why not make a similar programming contest problem while we're at it? You're given a sequence of n data points a 1 , ..., a n . There aren't any big jumps between consecutive data points — for each 1 ≤ i < n , it's guaranteed that | a i + 1 - a i | ≤ 1 . A range [ l , r ] of data points is said to be almost constant if the difference between the largest and the smallest value in that range is at most 1 . Formally, let M be the maximum and m the minimum value of a i for l ≤ i ≤ r ; the range [ l , r ] is almost constant if M - m ≤ 1 . Find the length of the longest almost constant range.",
+  "input_specification": "The first line of the input contains a single integer n ( 2 ≤ n ≤ 100 000 ) — the number of data points. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 100 000 ).",
+  "output_specification": "Print a single number — the maximum length of an almost constant range of the given sequence.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2 3 3 2",
+      "output": "4"
+    },
+    {
+      "input": "11\n5 4 5 5 6 7 8 8 8 7 6",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

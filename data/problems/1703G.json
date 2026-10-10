@@ -1,0 +1,38 @@
+{
+  "id": "1703G",
+  "source": "problemset",
+  "contest_id": 1703,
+  "problem_index": "G",
+  "name": "Good Key, Bad Key",
+  "rating": 1600,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 13196,
+  "problem_url": "https://codeforces.com/problemset/problem/1703/G",
+  "editorial_url": "https://codeforces.com/blog/entry/104786",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ chests. The $$$i$$$-th chest contains $$$a_i$$$ coins. You need to open all $$$n$$$ chests in order from chest $$$1$$$ to chest $$$n$$$. There are two types of keys you can use to open a chest: a good key, which costs $$$k$$$ coins to use; a bad key, which does not cost any coins, but will halve all the coins in each unopened chest, including the chest it is about to open . The halving operation will round down to the nearest integer for each chest halved. In other words using a bad key to open chest $$$i$$$ will do $$$a_i = \\lfloor{\\frac{a_i}{2}\\rfloor}$$$, $$$a_{i+1} = \\lfloor\\frac{a_{i+1}}{2}\\rfloor, \\dots, a_n = \\lfloor \\frac{a_n}{2}\\rfloor$$$; any key (both good and bad) breaks after a usage, that is, it is a one-time use. You need to use in total $$$n$$$ keys, one for each chest. Initially, you have no coins and no keys. If you want to use a good key, then you need to buy it. During the process, you are allowed to go into debt; for example, if you have $$$1$$$ coin, you are allowed to buy a good key worth $$$k=3$$$ coins, and your balance will become $$$-2$$$ coins. Find the maximum number of coins you can have after opening all $$$n$$$ chests in order from chest $$$1$$$ to chest $$$n$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 10^5$$$; $$$0 \\leq k \\leq 10^9$$$) — the number of chests and the cost of a good key respectively. The second line of each test case contains $$$n$$$ integers $$$a_i$$$ ($$$0 \\leq a_i \\leq 10^9$$$)  — the amount of coins in each chest. The sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case output a single integer  — the maximum number of coins you can obtain after opening the chests in order from chest $$$1$$$ to chest $$$n$$$. Please note, that the answer for some test cases won't fit into 32-bit integer type, so you should use at least 64-bit integer type in your programming language (like long long for C++).",
+  "sample_testcases": [
+    {
+      "input": "5\n4 5\n10 10 3 1\n1 2\n1\n3 12\n10 10 29\n12 51\n5 74 89 45 18 69 67 67 11 96 23 59\n2 57\n85 60",
+      "output": "11\n0\n13\n60\n58"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2205F",
+  "source": "problemset",
+  "contest_id": 2205,
+  "problem_index": "F",
+  "name": "Simons and Reconstructing His Roads",
+  "rating": 2400,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "dsu",
+    "graphs"
+  ],
+  "solved_count": 755,
+  "problem_url": "https://codeforces.com/problemset/problem/2205/F",
+  "editorial_url": "https://codeforces.com/blog/entry/151310",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Dropping all the time, but the exit I can find. — SHUN, DYING FOR YOU There are $$$n \\times m$$$ crossroads in the city, named crossroad $$$(1, 1), (1, 2),\\ldots, (n, m)$$$. The first number represents the row, and the second represents the column. There exists and only exists streets between $$$(i,j)$$$ and $$$(i+1,j)$$$ or between $$$(i,j)$$$ and $$$(i,j+1)$$$. The street between $$$(i, j)$$$ and $$$(i + 1, j)$$$ has a weight of $$$w_{i,j}$$$, and the street between $$$(i, j)$$$ and $$$(i, j + 1)$$$ has a weight of $$$v_{i,j}$$$. Simons wants some streets reconstructed. Due to some accidents, some of the streets cannot be reconstructed, while others are optional to be reconstructed. For each crossroad, if the number of reconstructed streets adjacent to it is even , Simons calls the crossroad elegant . If all the crossroads are elegant , Simons calls the reconstruction nice . The beauty of a reconstruction is calculated as follows: At first, the beauty is $$$0$$$. For each row $$$i$$$ from $$$1$$$ to $$$n - 1$$$, let the columns of the streets reconstructed be $$$c_1 \\lt c_2 \\lt c_3 \\lt \\cdots$$$, add $$$w_{i, c_1} - w_{i, c_2} + w_{i, c_3} - w_{i, c_4}+\\cdots$$$ to the beauty . Similarly, for each column $$$j$$$ from $$$1$$$ to $$$m - 1$$$, let the rows of the streets reconstructed be $$$r_1 \\lt r_2 \\lt r_3 \\lt \\cdots$$$, add $$$v_{r_1, j} - v_{r_2, j} + v_{r_3, j} - v_{r_4, j}+\\cdots$$$ to the beauty . In other words, if a street is an odd-indexed one reconstructed in its row or column, add its weight to the beauty ; else subtract it from the beauty . For example, consider the streets and crossroads below without any streets that cannot be reconstructed: We can have a nice reconstruction as follows: The beauty of the reconstruction is $$$3+4+2-(-9)-(-2)+9+1-(-1)-(-3)-(-4)=38$$$. Help Simons find the maximum beauty among all the nice reconstructions.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 5\\cdot 10^4$$$). The description of the test cases follows. The first line contains two integers $$$n$$$ and $$$m$$$ ($$$2\\le n,m\\le 2\\cdot 10^5$$$; $$$n\\cdot m\\le 4\\cdot 10^5$$$) — the number of rows and columns. In the next $$$n-1$$$ lines, each line contains $$$m$$$ integers $$$w_{i,j}$$$ ($$$-10^9\\le w_{i,j}\\le 10^9$$$) — the weights of the street between $$$(i,j)$$$ and $$$(i+1,j)$$$. In the next $$$n$$$ lines, each line contains $$$m-1$$$ integers $$$v_{i,j}$$$ ($$$-10^9\\le v_{i,j}\\le 10^9$$$) — the weights of the street between $$$(i,j)$$$ and $$$(i,j+1)$$$. In the next $$$n-1$$$ lines, each line contains $$$m$$$ characters $$$p_{i,j}$$$ ($$$p_{i,j}\\in\\{\\texttt{0},\\texttt{1}\\}$$$) — if $$$p_{i,j}=\\texttt{0}$$$, the street between $$$(i,j)$$$ and $$$(i+1,j)$$$ cannot be reconstructed, and vice versa. In the next $$$n$$$ lines, each line contains $$$m-1$$$ characters $$$q_{i,j}$$$ ($$$q_{i,j}\\in\\{\\texttt{0},\\texttt{1}\\}$$$) — if $$$q_{i,j}=\\texttt{0}$$$, the street between $$$(i,j)$$$ and $$$(i,j+1)$$$ cannot be reconstructed, and vice versa. It is guaranteed that the sum of $$$n\\cdot m$$$ over all test cases does not exceed $$$4\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the maximum beauty among all the nice reconstructions.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 4\n2 3 -2 3\n4 9 4 -4\n3 4 -2\n-9 -5 1\n6 -1 -3\n1111\n1111\n111\n111\n111\n2 4\n4 23 1 35\n6 12 -17\n-14 1 -40\n0100\n000\n101\n3 3\n1 0 1\n0 1 0\n1 0\n0 1\n0 0\n110\n111\n10\n11\n11\n3 4\n13 7 6 -12\n3 -5 12 -6\n-3 10 -15\n-5 8 -11\n10 0 -5\n1111\n0110\n110\n101\n010",
+      "output": "38\n0\n4\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:33",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

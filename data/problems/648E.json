@@ -1,0 +1,47 @@
+{
+  "id": "648E",
+  "source": "problemset",
+  "contest_id": 648,
+  "problem_index": "E",
+  "name": "Собери число",
+  "rating": 2300,
+  "tags": [
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 183,
+  "problem_url": "https://codeforces.com/problemset/problem/648/E",
+  "editorial_url": "https://codeforces.com/blog/entry/43964",
+  "time_limit": "ограничение по времени на тест 2 секунды",
+  "memory_limit": "ограничение по памяти на тест 256 мегабайт",
+  "description": "Дано целое неотрицательное число k и n неотрицательных целых чисел a 1 , a 2 , ..., a n . Записывая некоторые из этих чисел друг за другом в произвольном порядке и, возможно, используя какие-то из них несколько раз (а какие-то вообще не используя), требуется составить кратчайшее (наименьшее по количеству цифр) число, делящееся на k , или определить, что это невозможно.",
+  "input_specification": "В первой строке содержится два целых числа n ( 1 ≤ n ≤ 1 000 000 ) и k ( 1 ≤ k ≤ 1000 ) — количество чисел и требуемый делитель соответственно. Во второй строке содержится n целых чисел a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 10 9 ).",
+  "output_specification": "Если ответ существует, в первой строке выведите «YES» (без кавычек), а во второй строке — искомое кратчайшее число без ведущих нулей. В случае если ответа не существует, в единственной строке выходных данных выведите «NO» (без кавычек).",
+  "sample_testcases": [
+    {
+      "input": "2 3\n123 1",
+      "output": "YES\n123"
+    },
+    {
+      "input": "1 10\n1",
+      "output": "NO"
+    },
+    {
+      "input": "3 4\n1 2 3",
+      "output": "YES\n12"
+    },
+    {
+      "input": "3 777\n12 23 345",
+      "output": "YES\n121212"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:40",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "336B",
+  "source": "problemset",
+  "contest_id": 336,
+  "problem_index": "B",
+  "name": "Vasily the Bear and Fly",
+  "rating": 1900,
+  "tags": [
+    "math"
+  ],
+  "solved_count": 1377,
+  "problem_url": "https://codeforces.com/problemset/problem/336/B",
+  "editorial_url": "https://codeforces.com/blog/entry/8574",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One beautiful day Vasily the bear painted 2 m circles of the same radius R on a coordinate plane. Circles with numbers from 1 to m had centers at points (2 R - R , 0) , (4 R - R , 0) , ... , (2 Rm - R , 0) , respectively. Circles with numbers from m + 1 to 2 m had centers at points (2 R - R , 2 R ) , (4 R - R , 2 R ) , ... , (2 Rm - R , 2 R ) , respectively. Naturally, the bear painted the circles for a simple experiment with a fly. The experiment continued for m 2 days. Each day of the experiment got its own unique number from 0 to m 2 - 1 , inclusive. On the day number i the following things happened: The fly arrived at the coordinate plane at the center of the circle with number ( is the result of dividing number x by number y , rounded down to an integer). The fly went along the coordinate plane to the center of the circle number ( is the remainder after dividing number x by number y ). The bear noticed that the fly went from the center of circle v to the center of circle u along the shortest path with all points lying on the border or inside at least one of the 2 m circles. After the fly reached the center of circle u , it flew away in an unknown direction. Help Vasily, count the average distance the fly went along the coordinate plane during each of these m 2 days.",
+  "input_specification": "The first line contains two integers m , R ( 1 ≤ m ≤ 10 5 , 1 ≤ R ≤ 10 ).",
+  "output_specification": "In a single line print a single real number — the answer to the problem. The answer will be considered correct if its absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "1 1",
+      "output": "2.0000000000"
+    },
+    {
+      "input": "2 2",
+      "output": "5.4142135624"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:16",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

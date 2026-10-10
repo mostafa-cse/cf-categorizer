@@ -1,0 +1,38 @@
+{
+  "id": "530I",
+  "source": "problemset",
+  "contest_id": 530,
+  "problem_index": "I",
+  "name": "Different variables",
+  "rating": 2500,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 53,
+  "problem_url": "https://codeforces.com/problemset/problem/530/I",
+  "editorial_url": "https://codeforces.com/blog/entry/17177",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "N variables X 1 , ..., X N can have positive integer values. You are given K constraints for these value that look like \"the values of variables X i 1 , X i 2 , ..., X i M are different\". Among all possible lists of values of these variables that satisfy these constraints select the ones which have minimum possible max ( X i ) . Output lexicographically least of these lists.",
+  "input_specification": "The first line of input contains two integers n and k ( 2 ≤ N ≤ 10 , 1 ≤ K ≤ 100 ) — the number of variables and the number of constraints. The following K lines contain the constraints, formatted as follows: the first number in the line M ( 2 ≤ M ≤ N ) gives the number of variables in the constraint. After it follow M space-separated integers i 1 , ..., i M — the indices of the variables used in the constraint ( 1 ≤ i j ≤ N ). All i j in one constraint are different.",
+  "output_specification": "Output the values of X 1 , X 2 , ..., X N in a single line, separated with single spaces.",
+  "sample_testcases": [
+    {
+      "input": "2 1\n2 1 2",
+      "output": "1 2"
+    },
+    {
+      "input": "3 2\n2 1 2\n2 2 3",
+      "output": "1 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

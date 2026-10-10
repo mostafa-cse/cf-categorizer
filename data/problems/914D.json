@@ -1,0 +1,39 @@
+{
+  "id": "914D",
+  "source": "problemset",
+  "contest_id": 914,
+  "problem_index": "D",
+  "name": "Bash and a Tough Math Puzzle",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "number theory"
+  ],
+  "solved_count": 6818,
+  "problem_url": "https://codeforces.com/problemset/problem/914/D",
+  "editorial_url": "https://codeforces.com/blog/entry/57250",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bash likes playing with arrays. He has an array a 1 , a 2 , ... a n of n integers. He likes to guess the greatest common divisor (gcd) of different segments of the array. Of course, sometimes the guess is not correct. However, Bash will be satisfied if his guess is almost correct . Suppose he guesses that the gcd of the elements in the range [ l , r ] of a is x . He considers the guess to be almost correct if he can change at most one element in the segment such that the gcd of the segment is x after making the change. Note that when he guesses, he doesn't actually change the array — he just wonders if the gcd of the segment can be made x . Apart from this, he also sometimes makes changes to the array itself. Since he can't figure it out himself, Bash wants you to tell him which of his guesses are almost correct. Formally, you have to process q queries of one of the following forms: 1 l r x — Bash guesses that the gcd of the range [ l , r ] is x . Report if this guess is almost correct. 2 i y — Bash sets a i to y . Note: The array is 1 -indexed.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 5·10 5 )  — the size of the array. The second line contains n integers a 1 , a 2 , ..., a n ( 1 ≤ a i ≤ 10 9 )  — the elements of the array. The third line contains an integer q ( 1 ≤ q ≤ 4·10 5 )  — the number of queries. The next q lines describe the queries and may have one of the following forms: 1 l r x ( 1 ≤ l ≤ r ≤ n , 1 ≤ x ≤ 10 9 ). 2 i y (1 ≤ i ≤ n , 1 ≤ y ≤ 10 9 ) . Guaranteed, that there is at least one query of first type.",
+  "output_specification": "For each query of first type, output \"YES\" (without quotes) if Bash's guess is almost correct and \"NO\" (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 6 3\n4\n1 1 2 2\n1 1 3 3\n2 1 9\n1 1 3 2",
+      "output": "YES\nYES\nNO"
+    },
+    {
+      "input": "5\n1 2 3 4 5\n6\n1 1 4 2\n2 3 6\n1 1 4 2\n1 1 5 2\n2 5 10\n1 1 5 2",
+      "output": "NO\nYES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

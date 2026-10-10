@@ -1,0 +1,38 @@
+{
+  "id": "56D",
+  "source": "problemset",
+  "contest_id": 56,
+  "problem_index": "D",
+  "name": "Changing a String",
+  "rating": 2100,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 2222,
+  "problem_url": "https://codeforces.com/problemset/problem/56/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1147",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a string s , consisting of capital Latin letters. Let's denote its current length as | s | . During one move it is allowed to apply one of the following operations to it: INSERT pos ch — insert a letter ch in the string s in the position pos ( 1 ≤ pos ≤ | s | + 1, A ≤ ch ≤ Z ). The letter ch becomes the pos -th symbol of the string s , at that the letters shift aside and the length of the string increases by 1. DELETE pos — delete a character number pos ( 1 ≤ pos ≤ | s | ) from the string s . At that the letters shift together and the length of the string decreases by 1. REPLACE pos ch — the letter in the position pos of the line s is replaced by ch ( 1 ≤ pos ≤ | s |, A ≤ ch ≤ Z ). At that the length of the string does not change. Your task is to find in which minimal number of moves one can get a t string from an s string. You should also find the sequence of actions leading to the required results.",
+  "input_specification": "The first line contains s , the second line contains t . The lines consist only of capital Latin letters, their lengths are positive numbers from 1 to 1000 .",
+  "output_specification": "In the first line print the number of moves k in the given sequence of operations. The number should be the minimal possible one. Then print k lines containing one operation each. Print the operations in the format, described above. If there are several solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "ABA\nABBBA",
+      "output": "2\nINSERT 3 B\nINSERT 4 B"
+    },
+    {
+      "input": "ACCEPTED\nWRONGANSWER",
+      "output": "10\nREPLACE 1 W\nREPLACE 2 R\nREPLACE 3 O\nREPLACE 4 N\nREPLACE 5 G\nREPLACE 6 A\nINSERT 7 N\nINSERT 8 S\nINSERT 9 W\nREPLACE 11 R"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

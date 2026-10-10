@@ -1,0 +1,41 @@
+{
+  "id": "559B",
+  "source": "problemset",
+  "contest_id": 559,
+  "problem_index": "B",
+  "name": "Equivalent Strings",
+  "rating": 1700,
+  "tags": [
+    "divide and conquer",
+    "hashing",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 11955,
+  "problem_url": "https://codeforces.com/problemset/problem/559/B",
+  "editorial_url": "https://codeforces.com/blog/entry/19237",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Today on a lecture about strings Gerald learned a new definition of string equivalency. Two strings a and b of equal length are called equivalent in one of the two cases: They are equal. If we split string a into two halves of the same size a 1 and a 2 , and string b into two halves of the same size b 1 and b 2 , then one of the following is correct: a 1 is equivalent to b 1 , and a 2 is equivalent to b 2 a 1 is equivalent to b 2 , and a 2 is equivalent to b 1 As a home task, the teacher gave two strings to his students and asked to determine if they are equivalent. Gerald has already completed this home task. Now it's your turn!",
+  "input_specification": "The first two lines of the input contain two strings given by the teacher. Each of them has the length from 1 to 200 000 and consists of lowercase English letters. The strings have the same length.",
+  "output_specification": "Print \" YES \" (without the quotes), if these two strings are equivalent, and \" NO \" (without the quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "aaba\nabaa",
+      "output": "YES"
+    },
+    {
+      "input": "aabb\nabab",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

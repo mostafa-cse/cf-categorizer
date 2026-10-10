@@ -1,0 +1,37 @@
+{
+  "id": "2070F",
+  "source": "problemset",
+  "contest_id": 2070,
+  "problem_index": "F",
+  "name": "Friends and Pizza",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "divide and conquer",
+    "dp",
+    "fft"
+  ],
+  "solved_count": 389,
+  "problem_url": "https://codeforces.com/problemset/problem/2070/F",
+  "editorial_url": "https://codeforces.com/blog/entry/140118",
+  "time_limit": "8 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Monocarp has $$$n$$$ pizzas, the $$$i$$$-th pizza consists of $$$a_i$$$ slices. Pizzas are denoted by uppercase Latin letters from A to the $$$n$$$-th letter of the Latin alphabet. Monocarp also has $$$m$$$ friends, and he wants to invite exactly two of them to eat pizza. For each friend, Monocarp knows which pizzas that friend likes. After the friends arrive at Monocarp's house, for each pizza, the following happens: if the pizza is not liked by any of the two invited friends, Monocarp eats it; if the pizza is liked by exactly one of the two invited friends, that friend eats it; and if the pizza is liked by both friends, they try to split it. If it consists of an even number of slices, they both eat exactly half of the slices. But if the pizza consists of an odd number of slices, they start quarrelling, trying to decide who will eat an extra slice — and Monocarp doesn't like that. For each $$$k$$$ from $$$0$$$ to $$$\\sum a_i$$$, calculate the number of ways to choose exactly two friends to invite so that the friends don't quarrel, and Monocarp eats exactly $$$k$$$ slices.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 20$$$; $$$2 \\le m \\le 5 \\cdot 10^5$$$) — the number of pizzas and the number of friends, respectively. The second line contains $$$m$$$ strings $$$s_1, s_2, \\dots, s_m$$$ ($$$1 \\le |s_i| \\le n$$$), where $$$s_i$$$ is a string consisting of distinct characters from A to the $$$n$$$-th letter of the Latin alphabet, denoting which pizzas the $$$i$$$-th friend likes. In every string $$$s_i$$$, the characters are sorted in lexicographical (alphabetic) order. The third line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 2 \\cdot 10^4$$$) — the sizes of the pizzas.",
+  "output_specification": "Print $$$\\sum a_i + 1$$$ integers, where the $$$k$$$-th integer (starting from $$$0$$$) should be the number of ways to choose exactly two friends to invite so that the friends don't quarrel, and Monocarp eats exactly $$$k$$$ slices.",
+  "sample_testcases": [
+    {
+      "input": "3 6\nA AB ABC AB BC C\n2 3 5",
+      "output": "4 0 0 1 0 2 0 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:33",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

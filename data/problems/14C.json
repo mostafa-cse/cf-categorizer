@@ -1,0 +1,42 @@
+{
+  "id": "14C",
+  "source": "problemset",
+  "contest_id": 14,
+  "problem_index": "C",
+  "name": "Four Segments",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "geometry",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 3976,
+  "problem_url": "https://codeforces.com/problemset/problem/14/C",
+  "editorial_url": "https://codeforces.com/blog/entry/389",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Several months later Alex finally got his brother Bob's creation by post. And now, in his turn, Alex wants to boast about something to his brother. He thought for a while, and came to the conclusion that he has no ready creations, and decided to write a program for rectangles detection. According to his plan, the program detects if the four given segments form a rectangle of a positive area and with sides parallel to coordinate axes. As Alex does badly at school and can't write this program by himself, he asks you to help him.",
+  "input_specification": "The input data contain four lines. Each of these lines contains four integers x 1 , y 1 , x 2 , y 2 ( - 10 9 ≤ x 1 , y 1 , x 2 , y 2 ≤ 10 9 ) — coordinates of segment's beginning and end positions. The given segments can degenerate into points.",
+  "output_specification": "Output the word « YES », if the given four segments form the required rectangle, otherwise output « NO ».",
+  "sample_testcases": [
+    {
+      "input": "1 1 6 1\n1 0 6 0\n6 0 6 1\n1 1 1 0",
+      "output": "YES"
+    },
+    {
+      "input": "0 0 0 3\n2 0 0 0\n2 2 2 0\n0 2 2 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:51",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

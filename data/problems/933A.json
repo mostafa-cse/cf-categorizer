@@ -1,0 +1,38 @@
+{
+  "id": "933A",
+  "source": "problemset",
+  "contest_id": 933,
+  "problem_index": "A",
+  "name": "A Twisty Movement",
+  "rating": 1800,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 5529,
+  "problem_url": "https://codeforces.com/problemset/problem/933/A",
+  "editorial_url": "https://codeforces.com/blog/entry/57763",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A dragon symbolizes wisdom, power and wealth. On Lunar New Year's Day, people model a dragon with bamboo strips and clothes, raise them with rods, and hold the rods high and low to resemble a flying dragon. A performer holding the rod low is represented by a 1 , while one holding it high is represented by a 2 . Thus, the line of performers can be represented by a sequence a 1 , a 2 , ..., a n . Little Tommy is among them. He would like to choose an interval [ l , r ] ( 1 ≤ l ≤ r ≤ n ), then reverse a l , a l + 1 , ..., a r so that the length of the longest non-decreasing subsequence of the new sequence is maximum. A non-decreasing subsequence is a sequence of indices p 1 , p 2 , ..., p k , such that p 1 < p 2 < ... < p k and a p 1 ≤ a p 2 ≤ ... ≤ a p k . The length of the subsequence is k .",
+  "input_specification": "The first line contains an integer n (1 ≤ n ≤ 2000) , denoting the length of the original sequence. The second line contains n space-separated integers, describing the original sequence a 1 , a 2 , ..., a n (1 ≤ a i ≤ 2, i = 1, 2, ..., n ) .",
+  "output_specification": "Print a single integer, which means the maximum possible length of the longest non-decreasing subsequence of the new sequence.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 1 2",
+      "output": "4"
+    },
+    {
+      "input": "10\n1 1 2 2 2 1 1 2 2 1",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

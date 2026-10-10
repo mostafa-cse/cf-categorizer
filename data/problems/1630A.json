@@ -1,0 +1,35 @@
+{
+  "id": "1630A",
+  "source": "problemset",
+  "contest_id": 1630,
+  "problem_index": "A",
+  "name": "And Matching",
+  "rating": 1500,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms"
+  ],
+  "solved_count": 16422,
+  "problem_url": "https://codeforces.com/problemset/problem/1630/A",
+  "editorial_url": "https://codeforces.com/blog/entry/99384",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of $$$n$$$ ($$$n$$$ is always a power of $$$2$$$) elements containing all integers $$$0, 1, 2, \\ldots, n-1$$$ exactly once. Find $$$\\frac{n}{2}$$$ pairs of elements such that: Each element in the set is in exactly one pair. The sum over all pairs of the bitwise AND of its elements must be exactly equal to $$$k$$$. Formally, if $$$a_i$$$ and $$$b_i$$$ are the elements of the $$$i$$$-th pair, then the following must hold: $$$$$$\\sum_{i=1}^{n/2}{a_i \\& b_i} = k,$$$$$$ where $$$\\&$$$ denotes the bitwise AND operation. If there are many solutions, print any of them, if there is no solution, print $$$-1$$$ instead.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 400$$$) — the number of test cases. Description of the test cases follows. Each test case consists of a single line with two integers $$$n$$$ and $$$k$$$ ($$$4 \\leq n \\leq 2^{16}$$$, $$$n$$$ is a power of $$$2$$$, $$$0 \\leq k \\leq n-1$$$). The sum of $$$n$$$ over all test cases does not exceed $$$2^{16}$$$. All test cases in each individual input will be pairwise different .",
+  "output_specification": "For each test case, if there is no solution, print a single line with the integer $$$-1$$$. Otherwise, print $$$\\frac{n}{2}$$$ lines, the $$$i$$$-th of them must contain $$$a_i$$$ and $$$b_i$$$, the elements in the $$$i$$$-th pair. If there are many solutions, print any of them. Print the pairs and the elements in the pairs in any order.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 0\n4 1\n4 2\n4 3",
+      "output": "0 3\n1 2\n0 2\n1 3\n0 1\n2 3\n-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:42",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

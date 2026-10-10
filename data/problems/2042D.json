@@ -1,0 +1,37 @@
+{
+  "id": "2042D",
+  "source": "problemset",
+  "contest_id": 2042,
+  "problem_index": "D",
+  "name": "Recommendations",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "implementation",
+    "sortings",
+    "two pointers"
+  ],
+  "solved_count": 5645,
+  "problem_url": "https://codeforces.com/problemset/problem/2042/D",
+  "editorial_url": "https://codeforces.com/blog/entry/136886",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Suppose you are working in some audio streaming service. The service has $$$n$$$ active users and $$$10^9$$$ tracks users can listen to. Users can like tracks and, based on likes, the service should recommend them new tracks. Tracks are numbered from $$$1$$$ to $$$10^9$$$. It turned out that tracks the $$$i$$$-th user likes form a segment $$$[l_i, r_i]$$$. Let's say that the user $$$j$$$ is a predictor for user $$$i$$$ ($$$j \\neq i$$$) if user $$$j$$$ likes all tracks the $$$i$$$-th user likes (and, possibly, some other tracks too). Also, let's say that a track is strongly recommended for user $$$i$$$ if the track is not liked by the $$$i$$$-th user yet, but it is liked by every predictor for the $$$i$$$-th user. Calculate the number of strongly recommended tracks for each user $$$i$$$. If a user doesn't have any predictors, then print $$$0$$$ for that user.",
+  "input_specification": "The first line contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. Next, $$$t$$$ cases follow. The first line of each test case contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of users. The next $$$n$$$ lines contain two integers $$$l_i$$$ and $$$r_i$$$ per line ($$$1 \\le l_i \\le r_i \\le 10^9$$$) — the segment of tracks the $$$i$$$-th user likes. Additional constraint on the input: the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print $$$n$$$ integers, where the $$$i$$$-th integer is the number of strongly recommended tracks for the $$$i$$$-th user (or $$$0$$$, if that user doesn't have any predictors).",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n3 8\n2 5\n4 5\n2\n42 42\n1 1000000000\n3\n42 42\n1 1000000000\n42 42\n6\n1 10\n3 10\n3 7\n5 7\n4 4\n1 2",
+      "output": "0\n0\n1\n999999999\n0\n0\n0\n0\n0\n2\n3\n2\n4\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:44",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

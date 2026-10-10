@@ -1,0 +1,40 @@
+{
+  "id": "960F",
+  "source": "problemset",
+  "contest_id": 960,
+  "problem_index": "F",
+  "name": "Pathwalks",
+  "rating": 2100,
+  "tags": [
+    "data structures",
+    "dp",
+    "graphs"
+  ],
+  "solved_count": 3542,
+  "problem_url": "https://codeforces.com/problemset/problem/960/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58802",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a directed graph with n nodes and m edges, with all edges having a certain weight. There might be multiple edges and self loops, and the graph can also be disconnected. You need to choose a path (possibly passing through same vertices multiple times) in the graph such that the weights of the edges are in strictly increasing order, and these edges come in the order of input. Among all such paths, you need to find the the path that has the maximum possible number of edges, and report this value. Please note that the edges picked don't have to be consecutive in the input.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n ≤ 100000 , 1 ≤ m ≤ 100000 ) — the number of vertices and edges in the graph, respectively. m lines follows. The i -th of these lines contains three space separated integers a i , b i and w i ( 1 ≤ a i , b i ≤ n , 0 ≤ w i ≤ 100000 ), denoting an edge from vertex a i to vertex b i having weight w i",
+  "output_specification": "Print one integer in a single line — the maximum number of edges in the path.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n3 1 3\n1 2 1\n2 3 2",
+      "output": "2"
+    },
+    {
+      "input": "5 5\n1 3 2\n3 2 3\n3 4 5\n5 4 0\n4 5 8",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

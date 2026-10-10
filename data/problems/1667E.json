@@ -1,0 +1,45 @@
+{
+  "id": "1667E",
+  "source": "problemset",
+  "contest_id": 1667,
+  "problem_index": "E",
+  "name": "Centroid Probabilities",
+  "rating": 3000,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 976,
+  "problem_url": "https://codeforces.com/problemset/problem/1667/E",
+  "editorial_url": "https://codeforces.com/blog/entry/102013",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider every tree (connected undirected acyclic graph) with $$$n$$$ vertices ( $$$n$$$ is odd , vertices numbered from $$$1$$$ to $$$n$$$), and for each $$$2 \\le i \\le n$$$ the $$$i$$$-th vertex is adjacent to exactly one vertex with a smaller index. For each $$$i$$$ ($$$1 \\le i \\le n$$$) calculate the number of trees for which the $$$i$$$-th vertex will be the centroid. The answer can be huge, output it modulo $$$998\\,244\\,353$$$. A vertex is called a centroid if its removal splits the tree into subtrees with at most $$$(n-1)/2$$$ vertices each.",
+  "input_specification": "The first line contains an odd integer $$$n$$$ ($$$3 \\le n \\lt 2 \\cdot 10^5$$$, $$$n$$$ is odd) — the number of the vertices in the tree.",
+  "output_specification": "Print $$$n$$$ integers in a single line, the $$$i$$$-th integer is the answer for the $$$i$$$-th vertex (modulo $$$998\\,244\\,353$$$).",
+  "sample_testcases": [
+    {
+      "input": "3",
+      "output": "1 1 0"
+    },
+    {
+      "input": "5",
+      "output": "10 10 4 0 0"
+    },
+    {
+      "input": "7",
+      "output": "276 276 132 36 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:36",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

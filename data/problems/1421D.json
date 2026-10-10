@@ -1,0 +1,39 @@
+{
+  "id": "1421D",
+  "source": "problemset",
+  "contest_id": 1421,
+  "problem_index": "D",
+  "name": "Hexagons",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "math",
+    "shortest paths"
+  ],
+  "solved_count": 4445,
+  "problem_url": "https://codeforces.com/problemset/problem/1421/D",
+  "editorial_url": "https://codeforces.com/blog/entry/83761",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Lindsey Buckingham told Stevie Nicks \"Go your own way\" . Nicks is now sad and wants to go away as quickly as possible, but she lives in a 2D hexagonal world. Consider a hexagonal tiling of the plane as on the picture below. Nicks wishes to go from the cell marked $$$(0, 0)$$$ to a certain cell given by the coordinates. She may go from a hexagon to any of its six neighbors you want, but there is a cost associated with each of them. The costs depend only on the direction in which you travel. Going from $$$(0, 0)$$$ to $$$(1, 1)$$$ will take the exact same cost as going from $$$(-2, -1)$$$ to $$$(-1, 0)$$$. The costs are given in the input in the order $$$c_1$$$, $$$c_2$$$, $$$c_3$$$, $$$c_4$$$, $$$c_5$$$, $$$c_6$$$ as in the picture below. Print the smallest cost of a path from the origin which has coordinates $$$(0, 0)$$$ to the given cell.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^{4}$$$). Description of the test cases follows. The first line of each test case contains two integers $$$x$$$ and $$$y$$$ ($$$-10^{9} \\le x, y \\le 10^{9}$$$) representing the coordinates of the target hexagon. The second line of each test case contains six integers $$$c_1$$$, $$$c_2$$$, $$$c_3$$$, $$$c_4$$$, $$$c_5$$$, $$$c_6$$$ ($$$1 \\le c_1, c_2, c_3, c_4, c_5, c_6 \\le 10^{9}$$$) representing the six costs of the making one step in a particular direction (refer to the picture above to see which edge is for each value).",
+  "output_specification": "For each testcase output the smallest cost of a path from the origin to the given cell.",
+  "sample_testcases": [
+    {
+      "input": "2\n-3 1\n1 3 5 7 9 11\n1000000000 1000000000\n1000000000 1000000000 1000000000 1000000000 1000000000 1000000000",
+      "output": "18\n1000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

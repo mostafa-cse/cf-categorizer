@@ -1,0 +1,44 @@
+{
+  "id": "962F",
+  "source": "problemset",
+  "contest_id": 962,
+  "problem_index": "F",
+  "name": "Simple Cycles Edges",
+  "rating": 2400,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 1716,
+  "problem_url": "https://codeforces.com/problemset/problem/962/F",
+  "editorial_url": "https://codeforces.com/blog/entry/58845",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected graph, consisting of $$$n$$$ vertices and $$$m$$$ edges. The graph does not necessarily connected. Guaranteed, that the graph does not contain multiple edges (more than one edges between a pair of vertices) or loops (edges from a vertex to itself). A cycle in a graph is called a simple, if it contains each own vertex exactly once. So simple cycle doesn't allow to visit a vertex more than once in a cycle. Determine the edges, which belong to exactly on one simple cycle.",
+  "input_specification": "The first line contain two integers $$$n$$$ and $$$m$$$ $$$(1 \\le n \\le 100\\,000$$$, $$$0 \\le m \\le \\min(n \\cdot (n - 1) / 2, 100\\,000))$$$ — the number of vertices and the number of edges. Each of the following $$$m$$$ lines contain two integers $$$u$$$ and $$$v$$$ ($$$1 \\le u, v \\le n$$$, $$$u \\neq v$$$) — the description of the edges.",
+  "output_specification": "In the first line print the number of edges, which belong to exactly one simple cycle. In the second line print the indices of edges, which belong to exactly one simple cycle, in increasing order. The edges are numbered from one in the same order as they are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2\n2 3\n3 1",
+      "output": "3\n1 2 3"
+    },
+    {
+      "input": "6 7\n2 3\n3 4\n4 2\n1 2\n1 5\n5 6\n6 1",
+      "output": "6\n1 2 3 5 6 7"
+    },
+    {
+      "input": "5 6\n1 2\n2 3\n2 4\n4 3\n2 5\n5 3",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

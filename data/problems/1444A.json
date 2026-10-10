@@ -1,0 +1,36 @@
+{
+  "id": "1444A",
+  "source": "problemset",
+  "contest_id": 1444,
+  "problem_index": "A",
+  "name": "Division",
+  "rating": 1500,
+  "tags": [
+    "brute force",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 14736,
+  "problem_url": "https://codeforces.com/problemset/problem/1444/A",
+  "editorial_url": "https://codeforces.com/blog/entry/84248",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Oleg's favorite subjects are History and Math, and his favorite branch of mathematics is division. To improve his division skills, Oleg came up with $$$t$$$ pairs of integers $$$p_i$$$ and $$$q_i$$$ and for each pair decided to find the greatest integer $$$x_i$$$, such that: $$$p_i$$$ is divisible by $$$x_i$$$; $$$x_i$$$ is not divisible by $$$q_i$$$. Oleg is really good at division and managed to find all the answers quickly, how about you?",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 50$$$) — the number of pairs. Each of the following $$$t$$$ lines contains two integers $$$p_i$$$ and $$$q_i$$$ ($$$1 \\le p_i \\le 10^{18}$$$; $$$2 \\le q_i \\le 10^{9}$$$) — the $$$i$$$-th pair of integers.",
+  "output_specification": "Print $$$t$$$ integers: the $$$i$$$-th integer is the largest $$$x_i$$$ such that $$$p_i$$$ is divisible by $$$x_i$$$, but $$$x_i$$$ is not divisible by $$$q_i$$$. One can show that there is always at least one value of $$$x_i$$$ satisfying the divisibility conditions for the given constraints.",
+  "sample_testcases": [
+    {
+      "input": "3\n10 4\n12 6\n179 822",
+      "output": "10\n4\n179"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:27",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

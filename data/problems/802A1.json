@@ -1,0 +1,42 @@
+{
+  "id": "802A1",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "A1",
+  "name": "Heidi and Library (easy)",
+  "rating": 1800,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 1617,
+  "problem_url": "https://codeforces.com/problemset/problem/802/A1",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Your search for Heidi is over – you finally found her at a library, dressed up as a human. In fact, she has spent so much time there that she now runs the place! Her job is to buy books and keep them at the library so that people can borrow and read them. There are $$$n$$$ different books, numbered $$$1$$$ through $$$n$$$. We will look at the library's operation during $$$n$$$ consecutive days. Heidi knows in advance that on the $$$i$$$-th day ($$$1 \\le i \\le n$$$) precisely one person will come to the library, request to borrow the book $$$a_i$$$, read it in a few hours, and return the book later on the same day. Heidi desperately wants to please all her guests, so she will make sure to always have the book $$$a_i$$$ available in the library on the $$$i$$$-th day. During the night before the $$$i$$$-th day, she has the option of going to the bookstore (which operates at nights to avoid competition with the library) and buying any book for the price of 1 CHF. Of course, if she already has a book at the library, she does not need to buy it again. Initially, the library contains no books. There is a problem, though. The capacity of the library is $$$k$$$ – this means that at any time, there can be at most $$$k$$$ books at the library. If buying a new book would cause Heidi to have more than $$$k$$$ books, she must first get rid of some book that she already has, in order to make room for the new book. If she later needs a book that she got rid of, she will need to buy that book again. You are given $$$k$$$ and the sequence of requests for books $$$a_1, a_2, \\ldots, a_n$$$. What is the minimum cost (in CHF) of buying new books to satisfy all the requests?",
+  "input_specification": "The first line of input will contain two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n, k \\le 80$$$). The second line will contain $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) – the sequence of book requests.",
+  "output_specification": "On a single line print the minimum cost of buying books at the store so as to satisfy all requests.",
+  "sample_testcases": [
+    {
+      "input": "4 80\n1 2 2 1",
+      "output": "2"
+    },
+    {
+      "input": "4 1\n1 2 2 1",
+      "output": "3"
+    },
+    {
+      "input": "4 2\n1 2 3 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

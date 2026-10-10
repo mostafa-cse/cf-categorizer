@@ -1,0 +1,43 @@
+{
+  "id": "140A",
+  "source": "problemset",
+  "contest_id": 140,
+  "problem_index": "A",
+  "name": "New Year Table",
+  "rating": 1700,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 4415,
+  "problem_url": "https://codeforces.com/problemset/problem/140/A",
+  "editorial_url": "https://codeforces.com/blog/entry/3542",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Gerald is setting the New Year table. The table has the form of a circle; its radius equals R . Gerald invited many guests and is concerned whether the table has enough space for plates for all those guests. Consider all plates to be round and have the same radii that equal r . Each plate must be completely inside the table and must touch the edge of the table. Of course, the plates must not intersect, but they can touch each other. Help Gerald determine whether the table is large enough for n plates.",
+  "input_specification": "The first line contains three integers n , R and r ( 1 ≤ n ≤ 100 , 1 ≤ r , R ≤ 1000 ) — the number of plates, the radius of the table and the plates' radius.",
+  "output_specification": "Print \" YES \" (without the quotes) if it is possible to place n plates on the table by the rules given above. If it is impossible, print \" NO \". Remember, that each plate must touch the edge of the table.",
+  "sample_testcases": [
+    {
+      "input": "4 10 4",
+      "output": "YES"
+    },
+    {
+      "input": "5 10 4",
+      "output": "NO"
+    },
+    {
+      "input": "1 10 10",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:47",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

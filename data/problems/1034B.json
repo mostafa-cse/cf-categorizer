@@ -1,0 +1,41 @@
+{
+  "id": "1034B",
+  "source": "problemset",
+  "contest_id": 1034,
+  "problem_index": "B",
+  "name": "Little C Loves 3 II",
+  "rating": 2200,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "flows",
+    "graph matchings"
+  ],
+  "solved_count": 2352,
+  "problem_url": "https://codeforces.com/problemset/problem/1034/B",
+  "editorial_url": "https://codeforces.com/blog/entry/61993",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little C loves number « 3 » very much. He loves all things about it. Now he is playing a game on a chessboard of size $$$n \\times m$$$. The cell in the $$$x$$$-th row and in the $$$y$$$-th column is called $$$(x,y)$$$. Initially, The chessboard is empty. Each time, he places two chessmen on two different empty cells, the Manhattan distance between which is exactly $$$3$$$. The Manhattan distance between two cells $$$(x_i,y_i)$$$ and $$$(x_j,y_j)$$$ is defined as $$$|x_i-x_j|+|y_i-y_j|$$$. He want to place as many chessmen as possible on the chessboard. Please help him find the maximum number of chessmen he can place.",
+  "input_specification": "A single line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n,m \\leq 10^9$$$) — the number of rows and the number of columns of the chessboard.",
+  "output_specification": "Print one integer — the maximum number of chessmen Little C can place.",
+  "sample_testcases": [
+    {
+      "input": "2 2",
+      "output": "0"
+    },
+    {
+      "input": "3 3",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:11",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

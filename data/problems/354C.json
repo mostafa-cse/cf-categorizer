@@ -1,0 +1,40 @@
+{
+  "id": "354C",
+  "source": "problemset",
+  "contest_id": 354,
+  "problem_index": "C",
+  "name": "Vasya and Beautiful Arrays",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "dp",
+    "number theory"
+  ],
+  "solved_count": 3406,
+  "problem_url": "https://codeforces.com/problemset/problem/354/C",
+  "editorial_url": "https://codeforces.com/blog/entry/8672",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya's got a birthday coming up and his mom decided to give him an array of positive integers a of length n . Vasya thinks that an array's beauty is the greatest common divisor of all its elements. His mom, of course, wants to give him as beautiful an array as possible (with largest possible beauty). Unfortunately, the shop has only one array a left. On the plus side, the seller said that he could decrease some numbers in the array (no more than by k for each number). The seller can obtain array b from array a if the following conditions hold: b i > 0; 0 ≤ a i - b i ≤ k for all 1 ≤ i ≤ n . Help mom find the maximum possible beauty of the array she will give to Vasya (that seller can obtain).",
+  "input_specification": "The first line contains two integers n and k (1 ≤ n ≤ 3·10 5 ; 1 ≤ k ≤ 10 6 ) . The second line contains n integers a i (1 ≤ a i ≤ 10 6 ) — array a .",
+  "output_specification": "In the single line print a single number — the maximum possible beauty of the resulting array.",
+  "sample_testcases": [
+    {
+      "input": "6 1\n3 6 10 12 13 16",
+      "output": "3"
+    },
+    {
+      "input": "5 3\n8 21 52 15 77",
+      "output": "7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

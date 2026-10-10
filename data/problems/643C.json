@@ -1,0 +1,38 @@
+{
+  "id": "643C",
+  "source": "problemset",
+  "contest_id": 643,
+  "problem_index": "C",
+  "name": "Levels and Regions",
+  "rating": 2400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1872,
+  "problem_url": "https://codeforces.com/problemset/problem/643/C",
+  "editorial_url": "https://codeforces.com/blog/entry/44754",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Radewoosh is playing a computer game. There are n levels, numbered 1 through n . Levels are divided into k regions (groups). Each region contains some positive number of consecutive levels. The game repeats the the following process: If all regions are beaten then the game ends immediately. Otherwise, the system finds the first region with at least one non-beaten level. Let X denote this region. The system creates an empty bag for tokens. Each token will represent one level and there may be many tokens representing the same level. For each already beaten level i in the region X , the system adds t i tokens to the bag (tokens representing the i -th level). Let j denote the first non-beaten level in the region X . The system adds t j tokens to the bag. Finally, the system takes a uniformly random token from the bag and a player starts the level represented by the token. A player spends one hour and beats the level, even if he has already beaten it in the past. Given n , k and values t 1 , t 2 , ..., t n , your task is to split levels into regions. Each level must belong to exactly one region, and each region must contain non-empty consecutive set of levels. What is the minimum possible expected number of hours required to finish the game?",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n ≤ 200 000 , 1 ≤ k ≤ min (50, n ) ) — the number of levels and the number of regions, respectively. The second line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 100 000 ).",
+  "output_specification": "Print one real number — the minimum possible expected value of the number of hours spent to finish the game if levels are distributed between regions in the optimal way. Your answer will be considered correct if its absolute or relative error does not exceed 10 - 4 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct if .",
+  "sample_testcases": [
+    {
+      "input": "4 2\n100 3 5 7",
+      "output": "5.7428571429"
+    },
+    {
+      "input": "6 2\n1 2 4 8 16 32",
+      "output": "8.5000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:43",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

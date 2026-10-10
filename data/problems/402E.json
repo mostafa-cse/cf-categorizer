@@ -1,0 +1,39 @@
+{
+  "id": "402E",
+  "source": "problemset",
+  "contest_id": 402,
+  "problem_index": "E",
+  "name": "Strictly Positive Matrix",
+  "rating": 2200,
+  "tags": [
+    "graphs",
+    "math"
+  ],
+  "solved_count": 2659,
+  "problem_url": "https://codeforces.com/problemset/problem/402/E",
+  "editorial_url": "https://codeforces.com/blog/entry/10972",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have matrix a of size n × n . Let's number the rows of the matrix from 1 to n from top to bottom, let's number the columns from 1 to n from left to right. Let's use a ij to represent the element on the intersection of the i -th row and the j -th column. Matrix a meets the following two conditions: for any numbers i , j ( 1 ≤ i , j ≤ n ) the following inequality holds: a ij ≥ 0 ; . Matrix b is strictly positive , if for any numbers i , j ( 1 ≤ i , j ≤ n ) the inequality b ij > 0 holds. You task is to determine if there is such integer k ≥ 1 , that matrix a k is strictly positive.",
+  "input_specification": "The first line contains integer n ( 2 ≤ n ≤ 2000 ) — the number of rows and columns in matrix a . The next n lines contain the description of the rows of matrix a . The i -th line contains n non-negative integers a i 1 , a i 2 , ..., a in ( 0 ≤ a ij ≤ 50 ). It is guaranteed that .",
+  "output_specification": "If there is a positive integer k ≥ 1 , such that matrix a k is strictly positive, print \" YES \" (without the quotes). Otherwise, print \" NO \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2\n1 0\n0 1",
+      "output": "NO"
+    },
+    {
+      "input": "5\n4 5 6 1 2\n1 2 3 4 5\n6 4 1 2 4\n1 1 1 1 1\n4 4 4 4 4",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:46",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

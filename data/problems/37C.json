@@ -1,0 +1,40 @@
+{
+  "id": "37C",
+  "source": "problemset",
+  "contest_id": 37,
+  "problem_index": "C",
+  "name": "Old Berland Language",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 2379,
+  "problem_url": "https://codeforces.com/problemset/problem/37/C",
+  "editorial_url": "https://codeforces.com/blog/entry/798",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Berland scientists know that the Old Berland language had exactly n words. Those words had lengths of l 1 , l 2 , ..., l n letters. Every word consisted of two letters, 0 and 1 . Ancient Berland people spoke quickly and didn’t make pauses between the words, but at the same time they could always understand each other perfectly. It was possible because no word was a prefix of another one. The prefix of a string is considered to be one of its substrings that starts from the initial symbol. Help the scientists determine whether all the words of the Old Berland language can be reconstructed and if they can, output the words themselves.",
+  "input_specification": "The first line contains one integer N ( 1 ≤ N ≤ 1000 ) — the number of words in Old Berland language. The second line contains N space-separated integers — the lengths of these words. All the lengths are natural numbers not exceeding 1000 .",
+  "output_specification": "If there’s no such set of words, in the single line output NO . Otherwise, in the first line output YES , and in the next N lines output the words themselves in the order their lengths were given in the input file. If the answer is not unique, output any.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "YES\n0\n10\n110"
+    },
+    {
+      "input": "3\n1 1 1",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:37",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "31E",
+  "source": "problemset",
+  "contest_id": 31,
+  "problem_index": "E",
+  "name": "TV Game",
+  "rating": 2400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 1374,
+  "problem_url": "https://codeforces.com/problemset/problem/31/E",
+  "editorial_url": "https://codeforces.com/blog/entry/704",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a new TV game on BerTV. In this game two players get a number A consisting of 2 n digits. Before each turn players determine who will make the next move. Each player should make exactly n moves. On it's turn i -th player takes the leftmost digit of A and appends it to his or her number S i . After that this leftmost digit is erased from A . Initially the numbers of both players ( S 1 and S 2 ) are «empty». Leading zeroes in numbers A , S 1 , S 2 are allowed. In the end of the game the first player gets S 1 dollars, and the second gets S 2 dollars. One day Homer and Marge came to play the game. They managed to know the number A beforehand. They want to find such sequence of their moves that both of them makes exactly n moves and which maximizes their total prize. Help them.",
+  "input_specification": "The first line contains integer n ( 1 ≤ n ≤ 18 ). The second line contains integer A consisting of exactly 2 n digits. This number can have leading zeroes.",
+  "output_specification": "Output the line of 2 n characters «H» and «M» — the sequence of moves of Homer and Marge, which gives them maximum possible total prize. Each player must make exactly n moves. If there are several solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "2\n1234",
+      "output": "HHMM"
+    },
+    {
+      "input": "2\n9911",
+      "output": "HMHM"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:41",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "2038G",
+  "source": "problemset",
+  "contest_id": 2038,
+  "problem_index": "G",
+  "name": "Guess One Character",
+  "rating": 1900,
+  "tags": [
+    "constructive algorithms",
+    "implementation",
+    "interactive"
+  ],
+  "solved_count": 3132,
+  "problem_url": "https://codeforces.com/problemset/problem/2038/G",
+  "editorial_url": "https://codeforces.com/contest/2038/attachments/download/28399/presentation_rus.pdf",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "This is an interactive problem. You have to use flush operation right after printing each line. For example, in C++ you should use the function fflush(stdout) or cout.flush() , in Java or Kotlin — System.out.flush() , and in Python — sys.stdout.flush() . The jury has a string $$$s$$$ consisting of characters 0 and/or 1 . The length of this string is $$$n$$$. You can ask the following queries: $$$1$$$ $$$t$$$ — \"how many times does $$$t$$$ appear in $$$s$$$ as a contiguous substring?\" Here, $$$t$$$ should be a string consisting of characters 0 and/or 1 ; its length should be at least $$$1$$$ and at most $$$n$$$. For example, if the string $$$s$$$ is 111011 and the string $$$t$$$ is 11 , the response to the query is $$$3$$$. You have to guess at least one character in the string $$$s$$$ by asking no more than $$$3$$$ queries. Note that giving the answer does not count as a query. In every test and in every test case, the string $$$s$$$ is fixed beforehand .\n\nInteraction Initially, the jury program sends one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. At the start of each test case, the jury program sends one integer $$$n$$$ ($$$2 \\le n \\le 50$$$) — the length of the string. After that, your program can submit queries to the jury program by printing the following line (do not forget to flush the output after printing a line!) : $$$1$$$ $$$t$$$ means asking a query \"how many times does $$$t$$$ appear in $$$s$$$ as a contiguous substring?\" For every query, the jury prints one integer on a separate line. It is either: the answer to your query, if the query is correct, and you haven't exceeded the query limit; or the integer $$$-1$$$, if your query is incorrect (for example, the constraint $$$1 \\le |t| \\le n$$$ is not met or the string $$$t$$$ contains characters other than 0 and 1 ) or if you have asked too many queries while processing the current test case. To submit the answer, your program should send a line in the following format (do not forget to flush the output after printing a line!) : $$$0$$$ $$$i$$$ $$$c$$$, where $$$1 \\le i \\le n$$$ and $$$c$$$ is either 0 or 1 , meaning that $$$s_i = c$$$. If your guess is correct, the jury program will print one integer $$$1$$$ on a separate line, indicating that you may proceed to the next test case (or terminate the program, if it was the last test case) and that the number of queries you have asked is reset. If it is not correct, the jury program will print one integer $$$-1$$$ on a separate line. After your program receives $$$-1$$$ as the response, it should immediately terminate. This will lead to your submission receiving the verdict \"Wrong Answer\". If your program does not terminate, the verdict of your submission is undefined.",
+  "input_specification": "",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "3     // 3 test cases\n3     // the length of the string is 3\n\n1     // 101 occurs once\n\n1     // guessed correctly\n2     // the length of the string is 2\n\n0     // 00 occurs zero times\n\n0     // 0 occurs zero times\n\n1     // guessed correctly\n2     // the length of the string is 2\n\n1     // 1 occurs once\n\n0     // 01 occurs zero times\n\n1     // guessed correctly",
+      "output": "1 101 // how many times 101 occurs\n\n0 2 0 // guess: s[2] is 0\n\n\n1 00  // how many times 00 occurs\n\n1 0   // how many times 0 occurs\n\n0 1 1 // guess: s[1] is 1\n\n\n1 1   // how many times 1 occurs\n\n1 01  // how many times 01 occurs\n\n0 2 0 // guess: s[2] is 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:46",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "175B",
+  "source": "problemset",
+  "contest_id": 175,
+  "problem_index": "B",
+  "name": "Plane of Tanks: Pro",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 1605,
+  "problem_url": "https://codeforces.com/problemset/problem/175/B",
+  "editorial_url": "https://codeforces.com/blog/entry/4339",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya has been playing Plane of Tanks with his friends the whole year. Now it is time to divide the participants into several categories depending on their results. A player is given a non-negative integer number of points in each round of the Plane of Tanks. Vasya wrote results for each round of the last year. He has n records in total. In order to determine a player's category consider the best result obtained by the player and the best results of other players. The player belongs to category: \" noob \" — if more than 50% of players have better results ; \" random \" — if his result is not worse than the result that 50% of players have, but more than 20% of players have better results; \" average \" — if his result is not worse than the result that 80% of players have, but more than 10% of players have better results; \" hardcore \" — if his result is not worse than the result that 90% of players have, but more than 1% of players have better results; \" pro \" — if his result is not worse than the result that 99% of players have. When the percentage is calculated the player himself is taken into account. That means that if two players played the game and the first one gained 100 points and the second one 1000 points, then the first player's result is not worse than the result that 50% of players have, and the second one is not worse than the result that 100% of players have. Vasya gave you the last year Plane of Tanks results. Help Vasya determine each player's category.",
+  "input_specification": "The first line contains the only integer number n ( 1 ≤ n ≤ 1000 ) — a number of records with the players' results. Each of the next n lines contains a player's name and the amount of points, obtained by the player for the round, separated with a space. The name contains not less than 1 and no more than 10 characters. The name consists of lowercase Latin letters only. It is guaranteed that any two different players have different names. The amount of points, obtained by the player for the round, is a non-negative integer number and does not exceed 1000.",
+  "output_specification": "Print on the first line the number m — the number of players, who participated in one round at least. Each one of the next m lines should contain a player name and a category he belongs to, separated with space. Category can be one of the following: \" noob \", \" random \", \" average \", \" hardcore \" or \" pro \" (without quotes). The name of each player should be printed only once. Player names with respective categories can be printed in an arbitrary order.",
+  "sample_testcases": [
+    {
+      "input": "5\nvasya 100\nvasya 200\nartem 100\nkolya 200\nigor 250",
+      "output": "4\nartem noob\nigor pro\nkolya random\nvasya random"
+    },
+    {
+      "input": "3\nvasya 200\nkolya 1000\nvasya 1000",
+      "output": "2\nkolya pro\nvasya pro"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

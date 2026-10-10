@@ -1,0 +1,39 @@
+{
+  "id": "476E",
+  "source": "problemset",
+  "contest_id": 476,
+  "problem_index": "E",
+  "name": "Dreamoon and Strings",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "strings"
+  ],
+  "solved_count": 2176,
+  "problem_url": "https://codeforces.com/problemset/problem/476/E",
+  "editorial_url": "https://codeforces.com/blog/entry/14256",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Dreamoon has a string s and a pattern string p . He first removes exactly x characters from s obtaining string s ' as a result. Then he calculates that is defined as the maximal number of non-overlapping substrings equal to p that can be found in s ' . He wants to make this number as big as possible. More formally, let's define as maximum value of over all s ' that can be obtained by removing exactly x characters from s . Dreamoon wants to know for all x from 0 to | s | where | s | denotes the length of string s .",
+  "input_specification": "The first line of the input contains the string s ( 1 ≤ | s | ≤ 2 000 ). The second line of the input contains the string p ( 1 ≤ | p | ≤ 500 ). Both strings will only consist of lower case English letters.",
+  "output_specification": "Print | s | + 1 space-separated integers in a single line representing the for all x from 0 to | s | .",
+  "sample_testcases": [
+    {
+      "input": "aaaaa\naa",
+      "output": "2 2 1 1 0 0"
+    },
+    {
+      "input": "axbaxxb\nab",
+      "output": "0 1 1 2 1 1 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

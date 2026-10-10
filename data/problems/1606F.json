@@ -1,0 +1,36 @@
+{
+  "id": "1606F",
+  "source": "problemset",
+  "contest_id": 1606,
+  "problem_index": "F",
+  "name": "Tree Queries",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "dp",
+    "trees"
+  ],
+  "solved_count": 828,
+  "problem_url": "https://codeforces.com/problemset/problem/1606/F",
+  "editorial_url": "https://codeforces.com/blog/entry/96454",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a tree consisting of $$$n$$$ vertices. Recall that a tree is an undirected connected acyclic graph. The given tree is rooted at the vertex $$$1$$$. You have to process $$$q$$$ queries. In each query, you are given a vertex of the tree $$$v$$$ and an integer $$$k$$$. To process a query, you may delete any vertices from the tree in any order, except for the root and the vertex $$$v$$$. When a vertex is deleted, its children become the children of its parent. You have to process a query in such a way that maximizes the value of $$$c(v) - m \\cdot k$$$ (where $$$c(v)$$$ is the resulting number of children of the vertex $$$v$$$, and $$$m$$$ is the number of vertices you have deleted). Print the maximum possible value you can obtain. The queries are independent: the changes you make to the tree while processing a query don't affect the tree in other queries.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of vertices in the tree. Then $$$n-1$$$ lines follow, the $$$i$$$-th of them contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i, y_i \\le n$$$; $$$x_i \\ne y_i$$$) — the endpoints of the $$$i$$$-th edge. These edges form a tree. The next line contains one integer $$$q$$$ ($$$1 \\le q \\le 2 \\cdot 10^5$$$) — the number of queries. Then $$$q$$$ lines follow, the $$$j$$$-th of them contains two integers $$$v_j$$$ and $$$k_j$$$ ($$$1 \\le v_j \\le n$$$; $$$0 \\le k_j \\le 2 \\cdot 10^5$$$) — the parameters of the $$$j$$$-th query.",
+  "output_specification": "For each query, print one integer — the maximum value of $$$c(v) - m \\cdot k$$$ you can achieve.",
+  "sample_testcases": [
+    {
+      "input": "8\n6 7\n3 2\n8 3\n5 7\n7 4\n7 1\n7 3\n6\n1 0\n1 2\n1 3\n7 1\n5 0\n7 200000",
+      "output": "5\n2\n1\n4\n0\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "802M2",
+  "source": "problemset",
+  "contest_id": 802,
+  "problem_index": "M2",
+  "name": "April Fools' Problem (medium)",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "flows",
+    "graphs"
+  ],
+  "solved_count": 1520,
+  "problem_url": "https://codeforces.com/problemset/problem/802/M2",
+  "editorial_url": "https://codeforces.com//assets.codeforces.com/files/helvetic/helvetic-coding-contest-2017-editorial.pdf",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The marmots need to prepare k problems for HC 2 over n days. Each problem, once prepared, also has to be printed. The preparation of a problem on day i (at most one per day) costs a i CHF, and the printing of a problem on day i (also at most one per day) costs b i CHF. Of course, a problem cannot be printed before it has been prepared (but doing both on the same day is fine). What is the minimum cost of preparation and printing?",
+  "input_specification": "The first line of input contains two space-separated integers n and k ( 1 ≤ k ≤ n ≤ 2200 ). The second line contains n space-separated integers a 1 , ..., a n ( ) — the preparation costs. The third line contains n space-separated integers b 1 , ..., b n ( ) — the printing costs.",
+  "output_specification": "Output the minimum cost of preparation and printing k problems — that is, the minimum possible sum a i 1 + a i 2 + ... + a i k + b j 1 + b j 2 + ... + b j k , where 1 ≤ i 1 < i 2 < ... < i k ≤ n , 1 ≤ j 1 < j 2 < ... < j k ≤ n and i 1 ≤ j 1 , i 2 ≤ j 2 , ..., i k ≤ j k .",
+  "sample_testcases": [
+    {
+      "input": "8 4\n3 8 7 9 9 4 6 8\n2 5 9 4 3 8 9 1",
+      "output": "32"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:05",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "216. Min Cost Max Flow (MCMF)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Model constraint matching as minimum-cost flow. Augment along the shortest augmenting path using SPFA or Dijkstra with Johnson's potentials."
+}

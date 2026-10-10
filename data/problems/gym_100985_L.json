@@ -1,0 +1,21 @@
+{
+  "id": "gym_100985_L",
+  "source": "gym",
+  "contest_id": 100985,
+  "problem_index": "L",
+  "name": "MaratonIME goes karting",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100985/problem/L",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:31:44",
+  "updated_at": "2026-10-10 06:31:44"
+}

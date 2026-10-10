@@ -1,0 +1,48 @@
+{
+  "id": "913C",
+  "source": "problemset",
+  "contest_id": 913,
+  "problem_index": "C",
+  "name": "Party Lemonade",
+  "rating": 1600,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 8620,
+  "problem_url": "https://codeforces.com/problemset/problem/913/C",
+  "editorial_url": "https://codeforces.com/blog/entry/56992",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A New Year party is not a New Year party without lemonade! As usual, you are expecting a lot of guests, and buying lemonade has already become a pleasant necessity. Your favorite store sells lemonade in bottles of n different volumes at different costs. A single bottle of type i has volume 2 i - 1 liters and costs c i roubles. The number of bottles of each type in the store can be considered infinite. You want to buy at least L liters of lemonade. How many roubles do you have to spend?",
+  "input_specification": "The first line contains two integers n and L ( 1 ≤ n ≤ 30 ; 1 ≤ L ≤ 10 9 ) — the number of types of bottles in the store and the required amount of lemonade in liters, respectively. The second line contains n integers c 1 , c 2 , ..., c n ( 1 ≤ c i ≤ 10 9 ) — the costs of bottles of different types.",
+  "output_specification": "Output a single integer — the smallest number of roubles you have to pay in order to buy at least L liters of lemonade.",
+  "sample_testcases": [
+    {
+      "input": "4 12\n20 30 70 90",
+      "output": "150"
+    },
+    {
+      "input": "4 3\n10000 1000 100 10",
+      "output": "10"
+    },
+    {
+      "input": "4 3\n10 100 1000 10000",
+      "output": "30"
+    },
+    {
+      "input": "5 787787787\n123456789 234567890 345678901 456789012 987654321",
+      "output": "44981600785557577"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

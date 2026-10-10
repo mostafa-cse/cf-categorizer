@@ -1,0 +1,37 @@
+{
+  "id": "2200E",
+  "source": "problemset",
+  "contest_id": 2200,
+  "problem_index": "E",
+  "name": "Divisive Battle",
+  "rating": 1500,
+  "tags": [
+    "games",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 9774,
+  "problem_url": "https://codeforces.com/problemset/problem/2200/E",
+  "editorial_url": "https://codeforces.com/blog/entry/151625",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are playing game on array $$$a$$$ initially containing $$$n$$$ positive integers, with Alice going first. On each player's turn, if $$$a$$$ is non-decreasing$$$^{\\text{∗}}$$$, the game immediately ends. Otherwise, the player can choose an element $$$x$$$ from the array and positive integers $$$1 \\lt y,z \\lt x$$$ such that $$$x=yz$$$ and replace $$$x$$$ in the array with two elements $$$y$$$ and $$$z$$$ (in any order at the original location of $$$x$$$). If no such move is possible, the game ends. Once the game ends, if $$$a$$$ is non-decreasing, then Bob wins. Otherwise, Alice wins. Determine who will win the game if both players play optimally. $$$^{\\text{∗}}$$$$$$a$$$ is non-decreasing if $$$a_i\\leq a_{i+1}$$$ for all $$$1\\leq i\\leq m-1$$$, where $$$m$$$ is the length of $$$a$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$), the number of test cases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\leq n \\leq 10^5$$$). The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\leq a_i \\leq 10^6$$$). The sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a line containing \"Alice\" if Alice wins or \"Bob\" if Bob wins. The grader is case-sensitive.",
+  "sample_testcases": [
+    {
+      "input": "4\n10\n10 9 8 7 6 5 4 3 2 1\n3\n1 8192 677\n2\n6 5\n2\n6 7",
+      "output": "Alice\nBob\nAlice\nBob"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

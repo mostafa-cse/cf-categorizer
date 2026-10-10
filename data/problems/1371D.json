@@ -1,0 +1,36 @@
+{
+  "id": "1371D",
+  "source": "problemset",
+  "contest_id": 1371,
+  "problem_index": "D",
+  "name": "Grid-00100",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 13805,
+  "problem_url": "https://codeforces.com/problemset/problem/1371/D",
+  "editorial_url": "https://codeforces.com/blog/entry/79624",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A mad scientist Dr.Jubal has made a competitive programming task. Try to solve it! You are given integers $$$n,k$$$. Construct a grid $$$A$$$ with size $$$n \\times n$$$ consisting of integers $$$0$$$ and $$$1$$$ . The very important condition should be satisfied: the sum of all elements in the grid is exactly $$$k$$$. In other words, the number of $$$1$$$ in the grid is equal to $$$k$$$. Let's define: $$$A_{i,j}$$$ as the integer in the $$$i$$$-th row and the $$$j$$$-th column. $$$R_i = A_{i,1}+A_{i,2}+...+A_{i,n}$$$ (for all $$$1 \\le i \\le n$$$). $$$C_j = A_{1,j}+A_{2,j}+...+A_{n,j}$$$ (for all $$$1 \\le j \\le n$$$). In other words, $$$R_i$$$ are row sums and $$$C_j$$$ are column sums of the grid $$$A$$$. For the grid $$$A$$$ let's define the value $$$f(A) = (\\max(R)-\\min(R))^2 + (\\max(C)-\\min(C))^2$$$ (here for an integer sequence $$$X$$$ we define $$$\\max(X)$$$ as the maximum value in $$$X$$$ and $$$\\min(X)$$$ as the minimum value in $$$X$$$). Find any grid $$$A$$$, which satisfies the following condition. Among such grids find any, for which the value $$$f(A)$$$ is the minimum possible. Among such tables, you can find any.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. Next $$$t$$$ lines contain descriptions of test cases. For each test case the only line contains two integers $$$n$$$, $$$k$$$ $$$(1 \\le n \\le 300, 0 \\le k \\le n^2)$$$. It is guaranteed that the sum of $$$n^2$$$ for all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, firstly print the minimum possible value of $$$f(A)$$$ among all tables, for which the condition is satisfied. After that, print $$$n$$$ lines contain $$$n$$$ characters each. The $$$j$$$-th character in the $$$i$$$-th line should be equal to $$$A_{i,j}$$$. If there are multiple answers you can print any.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 2\n3 8\n1 0\n4 16",
+      "output": "0\n10\n01\n2\n111\n111\n101\n0\n0\n0\n1111\n1111\n1111\n1111"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:47",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

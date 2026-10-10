@@ -1,0 +1,40 @@
+{
+  "id": "1111B",
+  "source": "problemset",
+  "contest_id": 1111,
+  "problem_index": "B",
+  "name": "Average Superhero Gang Power ",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 6593,
+  "problem_url": "https://codeforces.com/problemset/problem/1111/B",
+  "editorial_url": "https://codeforces.com/blog/entry/64989",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Every superhero has been given a power value by the Felicity Committee. The avengers crew wants to maximize the average power of the superheroes in their team by performing certain operations. Initially, there are $$$n$$$ superheroes in avengers team having powers $$$a_1, a_2, \\ldots, a_n$$$, respectively. In one operation, they can remove one superhero from their team (if there are at least two) or they can increase the power of a superhero by $$$1$$$. They can do at most $$$m$$$ operations. Also, on a particular superhero at most $$$k$$$ operations can be done. Can you help the avengers team to maximize the average power of their crew?",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$k$$$ and $$$m$$$ ($$$1 \\le n \\le 10^{5}$$$, $$$1 \\le k \\le 10^{5}$$$, $$$1 \\le m \\le 10^{7}$$$) — the number of superheroes, the maximum number of times you can increase power of a particular superhero, and the total maximum number of operations. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^{6}$$$) — the initial powers of the superheroes in the cast of avengers.",
+  "output_specification": "Output a single number — the maximum final average power. Your answer is considered correct if its absolute or relative error does not exceed $$$10^{-6}$$$. Formally, let your answer be $$$a$$$, and the jury's answer be $$$b$$$. Your answer is accepted if and only if $$$\\frac{|a - b|}{\\max{(1, |b|)}} \\le 10^{-6}$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 4 6\n4 7",
+      "output": "11.00000000000000000000"
+    },
+    {
+      "input": "4 2 6\n1 3 2 3",
+      "output": "5.00000000000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

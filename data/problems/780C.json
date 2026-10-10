@@ -1,0 +1,45 @@
+{
+  "id": "780C",
+  "source": "problemset",
+  "contest_id": 780,
+  "problem_index": "C",
+  "name": "Andryusha and Colored Balloons",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 10346,
+  "problem_url": "https://codeforces.com/problemset/problem/780/C",
+  "editorial_url": "https://codeforces.com/blog/entry/50854",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Andryusha goes through a park each day. The squares and paths between them look boring to Andryusha, so he decided to decorate them. The park consists of n squares connected with ( n - 1) bidirectional paths in such a way that any square is reachable from any other using these paths. Andryusha decided to hang a colored balloon at each of the squares. The baloons' colors are described by positive integers, starting from 1 . In order to make the park varicolored, Andryusha wants to choose the colors in a special way. More precisely, he wants to use such colors that if a , b and c are distinct squares that a and b have a direct path between them, and b and c have a direct path between them, then balloon colors on these three squares are distinct. Andryusha wants to use as little different colors as possible. Help him to choose the colors!",
+  "input_specification": "The first line contains single integer n ( 3 ≤ n ≤ 2·10 5 ) — the number of squares in the park. Each of the next ( n - 1) lines contains two integers x and y ( 1 ≤ x , y ≤ n ) — the indices of two squares directly connected by a path. It is guaranteed that any square is reachable from any other using the paths.",
+  "output_specification": "In the first line print single integer k — the minimum number of colors Andryusha has to use. In the second line print n integers, the i -th of them should be equal to the balloon color on the i -th square. Each of these numbers should be within range from 1 to k .",
+  "sample_testcases": [
+    {
+      "input": "3\n2 3\n1 3",
+      "output": "3\n1 3 2"
+    },
+    {
+      "input": "5\n2 3\n5 3\n4 3\n1 3",
+      "output": "5\n1 3 2 5 4"
+    },
+    {
+      "input": "5\n2 1\n3 2\n4 3\n5 4",
+      "output": "3\n1 2 3 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:09",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

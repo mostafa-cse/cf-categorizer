@@ -1,0 +1,44 @@
+{
+  "id": "464E",
+  "source": "problemset",
+  "contest_id": 464,
+  "problem_index": "E",
+  "name": "The Classic Problem",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 2067,
+  "problem_url": "https://codeforces.com/problemset/problem/464/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13694",
+  "time_limit": "5 seconds",
+  "memory_limit": "768 megabytes",
+  "description": "You are given a weighted undirected graph on $$$n$$$ vertices and $$$m$$$ edges. Find the shortest path from vertex $$$s$$$ to vertex $$$t$$$ or else state that such path doesn't exist.",
+  "input_specification": "The first line of the input contains two space-separated integers — $$$n$$$ and $$$m$$$ ($$$1 \\leq n \\leq 10^5$$$; $$$0 \\leq m \\leq 10^5$$$). Next $$$m$$$ lines contain the description of the graph edges. The $$$i$$$-th line contains three space-separated integers — $$$u_i$$$, $$$v_i$$$, $$$x_i$$$ ($$$1 \\leq u_i, v_i \\leq n$$$; $$$0 \\leq x_i \\leq 10^5$$$). That means that vertices with numbers $$$u_i$$$ and $$$v_i$$$ are connected by edge of length $$$2^{x_i}$$$ (2 to the power of $$$x_i$$$). The last line contains two space-separated integers — the numbers of vertices $$$s$$$ and $$$t$$$. The vertices are numbered from $$$1$$$ to $$$n$$$. The graph contains no multiple edges and self-loops.",
+  "output_specification": "In the first line, print the remainder after dividing the length of the shortest path by $$$1000\\,000\\,007$$$ ($$$10^9 + 7$$$) if the path exists, and $$$-1$$$ if the path doesn't exist. If the path exists, print in the second line integer $$$k$$$ — the number of vertices in the shortest path from vertex $$$s$$$ to vertex $$$t$$$; in the third line print $$$k$$$ space-separated integers — the vertices of the shortest path in the visiting order. The first vertex should be vertex $$$s$$$, the last vertex should be vertex $$$t$$$. If there are multiple shortest paths, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n1 4 2\n1 2 0\n2 3 0\n3 4 0\n1 4",
+      "output": "3\n4\n1 2 3 4"
+    },
+    {
+      "input": "4 3\n1 2 4\n2 3 5\n3 4 6\n1 4",
+      "output": "112\n4\n1 2 3 4"
+    },
+    {
+      "input": "4 2\n1 2 0\n3 4 1\n1 4",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

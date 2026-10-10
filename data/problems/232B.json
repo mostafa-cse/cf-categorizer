@@ -1,0 +1,37 @@
+{
+  "id": "232B",
+  "source": "problemset",
+  "contest_id": 232,
+  "problem_index": "B",
+  "name": "Table",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1707,
+  "problem_url": "https://codeforces.com/problemset/problem/232/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5514",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "John Doe has an n × m table. John Doe can paint points in some table cells, not more than one point in one table cell. John Doe wants to use such operations to make each square subtable of size n × n have exactly k points. John Doe wondered, how many distinct ways to fill the table with points are there, provided that the condition must hold. As this number can be rather large, John Doe asks to find its remainder after dividing by 1000000007 (10 9 + 7) . You should assume that John always paints a point exactly in the center of some cell. Two ways to fill a table are considered distinct, if there exists a table cell, that has a point in one way and doesn't have it in the other.",
+  "input_specification": "A single line contains space-separated integers n , m , k ( 1 ≤ n ≤ 100; n ≤ m ≤ 10 18 ; 0 ≤ k ≤ n 2 ) — the number of rows of the table, the number of columns of the table and the number of points each square must contain. Please, do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "output_specification": "In a single line print a single integer — the remainder from dividing the described number of ways by 1000000007 (10 9 + 7) .",
+  "sample_testcases": [
+    {
+      "input": "5 6 1",
+      "output": "45"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

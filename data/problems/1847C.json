@@ -1,0 +1,37 @@
+{
+  "id": "1847C",
+  "source": "problemset",
+  "contest_id": 1847,
+  "problem_index": "C",
+  "name": "Vampiric Powers, anyone?",
+  "rating": 1400,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 15109,
+  "problem_url": "https://codeforces.com/problemset/problem/1847/C",
+  "editorial_url": "https://codeforces.com/blog/entry/117928",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "DIO knows that the Stardust Crusaders have determined his location and will be coming to fight him. To foil their plans he decides to send out some Stand users to fight them. Initially, he summoned $$$n$$$ Stand users with him, the $$$i$$$-th one having a strength of $$$a_i$$$. Using his vampiric powers, he can do the following as many times as he wishes: Let the current number of Stand users be $$$m$$$. DIO chooses an index $$$i$$$ ($$$1 \\le i \\le m$$$). Then he summons a new Stand user, with index $$$m+1$$$ and strength given by: $$$$$$a_{m+1} = a_i \\oplus a_{i+1} \\oplus \\ldots \\oplus a_m,$$$$$$ where the operator $$$\\oplus$$$ denotes the bitwise XOR operation . Now, the number of Stand users becomes $$$m+1$$$. Unfortunately for DIO, by using Hermit Purple's divination powers, the Crusaders know that he is plotting this, and they also know the strengths of the original Stand users. Help the Crusaders find the maximum possible strength of a Stand user among all possible ways that DIO can summon.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10\\,000$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$)  – the number of Stand users initially summoned. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\lt 2^8$$$)  – the strength of each Stand user. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single integer, maximum strength of a Stand user among all possible ways that DIO can summon.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\n0 2 5 1\n3\n1 2 3\n5\n8 2 4 12 1",
+      "output": "7\n3\n14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

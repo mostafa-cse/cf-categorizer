@@ -1,0 +1,38 @@
+{
+  "id": "26B",
+  "source": "problemset",
+  "contest_id": 26,
+  "problem_index": "B",
+  "name": "Regular Bracket Sequence",
+  "rating": 1400,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 27773,
+  "problem_url": "https://codeforces.com/problemset/problem/26/B",
+  "editorial_url": "https://codeforces.com/blog/entry/610",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A bracket sequence is called regular if it is possible to obtain correct arithmetic expression by inserting characters « + » and « 1 » into this sequence. For example, sequences « (())() », « () » and « (()(())) » are regular, while « )( », « (() » and « (()))( » are not. One day Johnny got bracket sequence. He decided to remove some of the brackets from it in order to obtain a regular bracket sequence. What is the maximum length of a regular bracket sequence which can be obtained?",
+  "input_specification": "Input consists of a single line with non-empty string of « ( » and « ) » characters. Its length does not exceed 10 6 .",
+  "output_specification": "Output the maximum possible length of a regular bracket sequence.",
+  "sample_testcases": [
+    {
+      "input": "(()))(",
+      "output": "4"
+    },
+    {
+      "input": "((()())",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:44",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

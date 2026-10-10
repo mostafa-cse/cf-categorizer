@@ -1,0 +1,51 @@
+{
+  "id": "1789F",
+  "source": "problemset",
+  "contest_id": 1789,
+  "problem_index": "F",
+  "name": "Serval and Brain Power",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 1046,
+  "problem_url": "https://codeforces.com/problemset/problem/1789/F",
+  "editorial_url": "https://codeforces.com/blog/entry/113246",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Serval loves Brain Power and his brain power problem. Serval defines that a string $$$T$$$ is powerful iff $$$T$$$ can be obtained by concatenating some string $$$T'$$$ multiple times. Formally speaking, $$$T$$$ is powerful iff there exist a string $$$T'$$$ and an integer $$$k\\geq 2$$$ such that $$$$$$T=\\underbrace{T'+T'+\\dots+T'}_{k\\text{ times}}$$$$$$ For example, gogogo is powerful because it can be obtained by concatenating go three times, but power is not powerful. Serval has a string $$$S$$$ consists of lowercase English letters. He is curious about the longest powerful subsequence of $$$S$$$, and he only needs you to find out the length of it. If all the non-empty subsequences of $$$S$$$ is not powerful, the answer is considered to be $$$0$$$. A string $$$a$$$ is a subsequence of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) characters.",
+  "input_specification": "The first line contains a single string $$$S$$$ ($$$|S|\\leq 80$$$) consisting of lowercase English letters.",
+  "output_specification": "Print a single integer — the length of the longest powerful subsequence of $$$S$$$. If all the non-empty subsequences of $$$S$$$ is not powerful, print $$$0$$$.",
+  "sample_testcases": [
+    {
+      "input": "buaa",
+      "output": "2"
+    },
+    {
+      "input": "codeforcesround",
+      "output": "6"
+    },
+    {
+      "input": "oooooooooooaaaaeaaiaujooooooooooooo",
+      "output": "24"
+    },
+    {
+      "input": "zero",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

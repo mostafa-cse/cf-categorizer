@@ -1,0 +1,40 @@
+{
+  "id": "804C",
+  "source": "problemset",
+  "contest_id": 804,
+  "problem_index": "C",
+  "name": "Ice cream coloring",
+  "rating": 2200,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "greedy"
+  ],
+  "solved_count": 1994,
+  "problem_url": "https://codeforces.com/problemset/problem/804/C",
+  "editorial_url": "https://codeforces.com/blog/entry/51846",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Isart and Modsart were trying to solve an interesting problem when suddenly Kasra arrived. Breathless, he asked: \"Can you solve a problem I'm stuck at all day?\" We have a tree T with n vertices and m types of ice cream numerated from 1 to m . Each vertex i has a set of s i types of ice cream. Vertices which have the i -th ( 1 ≤ i ≤ m ) type of ice cream form a connected subgraph. We build a new graph G with m vertices. We put an edge between the v -th and the u -th ( 1 ≤ u , v ≤ m , u ≠ v ) vertices in G if and only if there exists a vertex in T that has both the v -th and the u -th types of ice cream in its set. The problem is to paint the vertices of G with minimum possible number of colors in a way that no adjacent vertices have the same color. Please note that we consider that empty set of vertices form a connected subgraph in this problem. As usual, Modsart don't like to abandon the previous problem, so Isart wants you to solve the new problem.",
+  "input_specification": "The first line contains two integer n and m ( 1 ≤ n , m ≤ 3·10 5 ) — the number of vertices in T and the number of ice cream types. n lines follow, the i -th of these lines contain single integer s i ( 0 ≤ s i ≤ 3·10 5 ) and then s i distinct integers, each between 1 and m — the types of ice cream in the i -th vertex. The sum of s i doesn't exceed 5·10 5 . n - 1 lines follow. Each of these lines describes an edge of the tree with two integers u and v ( 1 ≤ u , v ≤ n ) — the indexes of connected by this edge vertices.",
+  "output_specification": "Print single integer c in the first line — the minimum number of colors to paint the vertices in graph G . In the second line print m integers, the i -th of which should be the color of the i -th vertex. The colors should be between 1 and c . If there are some answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 1\n2 2 3\n1 2\n1 2\n2 3",
+      "output": "2\n1 1 2"
+    },
+    {
+      "input": "4 5\n0\n1 1\n1 3\n3 2 4 5\n2 1\n3 2\n4 3",
+      "output": "3\n1 1 1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

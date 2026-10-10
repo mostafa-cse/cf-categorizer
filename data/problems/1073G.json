@@ -1,0 +1,35 @@
+{
+  "id": "1073G",
+  "source": "problemset",
+  "contest_id": 1073,
+  "problem_index": "G",
+  "name": "Yet Another LCP Problem",
+  "rating": 2600,
+  "tags": [
+    "data structures",
+    "string suffix structures"
+  ],
+  "solved_count": 1187,
+  "problem_url": "https://codeforces.com/problemset/problem/1073/G",
+  "editorial_url": "https://codeforces.com/blog/entry/62742",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$\\text{LCP}(s, t)$$$ be the length of the longest common prefix of strings $$$s$$$ and $$$t$$$. Also let $$$s[x \\dots y]$$$ be the substring of $$$s$$$ from index $$$x$$$ to index $$$y$$$ (inclusive). For example, if $$$s = $$$ \" abcde \", then $$$s[1 \\dots 3] =$$$ \" abc \", $$$s[2 \\dots 5] =$$$ \" bcde \". You are given a string $$$s$$$ of length $$$n$$$ and $$$q$$$ queries. Each query is a pair of integer sets $$$a_1, a_2, \\dots, a_k$$$ and $$$b_1, b_2, \\dots, b_l$$$. Calculate $$$\\sum\\limits_{i = 1}^{i = k} \\sum\\limits_{j = 1}^{j = l}{\\text{LCP}(s[a_i \\dots n], s[b_j \\dots n])}$$$ for each query.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$q$$$ ($$$1 \\le n, q \\le 2 \\cdot 10^5$$$) — the length of string $$$s$$$ and the number of queries, respectively. The second line contains a string $$$s$$$ consisting of lowercase Latin letters ($$$|s| = n$$$). Next $$$3q$$$ lines contains descriptions of queries — three lines per query. The first line of each query contains two integers $$$k_i$$$ and $$$l_i$$$ ($$$1 \\le k_i, l_i \\le n$$$) — sizes of sets $$$a$$$ and $$$b$$$ respectively. The second line of each query contains $$$k_i$$$ integers $$$a_1, a_2, \\dots a_{k_i}$$$ ($$$1 \\le a_1 \\lt a_2 \\lt \\dots \\lt a_{k_i} \\le n$$$) — set $$$a$$$. The third line of each query contains $$$l_i$$$ integers $$$b_1, b_2, \\dots b_{l_i}$$$ ($$$1 \\le b_1 \\lt b_2 \\lt \\dots \\lt b_{l_i} \\le n$$$) — set $$$b$$$. It is guaranteed that $$$\\sum\\limits_{i = 1}^{i = q}{k_i} \\le 2 \\cdot 10^5$$$ and $$$\\sum\\limits_{i = 1}^{i = q}{l_i} \\le 2 \\cdot 10^5$$$.",
+  "output_specification": "Print $$$q$$$ integers — answers for the queries in the same order queries are given in the input.",
+  "sample_testcases": [
+    {
+      "input": "7 4\nabacaba\n2 2\n1 2\n1 2\n3 1\n1 2 3\n7\n1 7\n1\n1 2 3 4 5 6 7\n2 2\n1 5\n1 5",
+      "output": "13\n2\n12\n16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:04",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

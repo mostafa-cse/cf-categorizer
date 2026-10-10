@@ -1,0 +1,38 @@
+{
+  "id": "1900D",
+  "source": "problemset",
+  "contest_id": 1900,
+  "problem_index": "D",
+  "name": "Small GCD",
+  "rating": 2000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5764,
+  "problem_url": "https://codeforces.com/problemset/problem/1900/D",
+  "editorial_url": "https://codeforces.com/blog/entry/122677",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Let $$$a$$$, $$$b$$$, and $$$c$$$ be integers. We define function $$$f(a, b, c)$$$ as follows: Order the numbers $$$a$$$, $$$b$$$, $$$c$$$ in such a way that $$$a \\le b \\le c$$$. Then return $$$\\gcd(a, b)$$$, where $$$\\gcd(a, b)$$$ denotes the greatest common divisor (GCD) of integers $$$a$$$ and $$$b$$$. So basically, we take the $$$\\gcd$$$ of the $$$2$$$ smaller values and ignore the biggest one. You are given an array $$$a$$$ of $$$n$$$ elements. Compute the sum of $$$f(a_i, a_j, a_k)$$$ for each $$$i$$$, $$$j$$$, $$$k$$$, such that $$$1 \\le i \\lt j \\lt k \\le n$$$. More formally, compute $$$$$$\\sum_{i = 1}^n \\sum_{j = i+1}^n \\sum_{k =j +1}^n f(a_i, a_j, a_k).$$$$$$",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$3 \\le n \\le 8 \\cdot 10^4$$$) — length of the array $$$a$$$. The second line of each test case contains $$$n$$$ integers, $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^5$$$) — elements of the array $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$8 \\cdot 10^4$$$.",
+  "output_specification": "For each test case, output a single number — the sum from the problem statement.",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n2 3 6 12 17\n8\n6 12 8 10 15 12 18 16",
+      "output": "24\n203"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:40",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

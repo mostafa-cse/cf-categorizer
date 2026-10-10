@@ -1,0 +1,45 @@
+{
+  "id": "439D",
+  "source": "problemset",
+  "contest_id": 439,
+  "problem_index": "D",
+  "name": "Devu and his Brother",
+  "rating": 1700,
+  "tags": [
+    "binary search",
+    "sortings",
+    "ternary search",
+    "two pointers"
+  ],
+  "solved_count": 7357,
+  "problem_url": "https://codeforces.com/problemset/problem/439/D",
+  "editorial_url": "https://codeforces.com/blog/entry/12545",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Devu and his brother love each other a lot. As they are super geeks, they only like to play with arrays. They are given two arrays a and b by their father. The array a is given to Devu and b to his brother. As Devu is really a naughty kid, he wants the minimum value of his array a should be at least as much as the maximum value of his brother's array b . Now you have to help Devu in achieving this condition. You can perform multiple operations on the arrays. In a single operation, you are allowed to decrease or increase any element of any of the arrays by 1. Note that you are allowed to apply the operation on any index of the array multiple times. You need to find minimum number of operations required to satisfy Devu's condition so that the brothers can play peacefully without fighting.",
+  "input_specification": "The first line contains two space-separated integers n , m (1 ≤ n , m ≤ 10 5 ) . The second line will contain n space-separated integers representing content of the array a (1 ≤ a i ≤ 10 9 ) . The third line will contain m space-separated integers representing content of the array b (1 ≤ b i ≤ 10 9 ) .",
+  "output_specification": "You need to output a single integer representing the minimum number of operations needed to satisfy Devu's condition.",
+  "sample_testcases": [
+    {
+      "input": "2 2\n2 3\n3 5",
+      "output": "3"
+    },
+    {
+      "input": "3 2\n1 2 3\n3 4",
+      "output": "4"
+    },
+    {
+      "input": "3 2\n4 5 6\n1 2",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:31",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

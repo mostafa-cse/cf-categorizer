@@ -1,0 +1,44 @@
+{
+  "id": "1516E",
+  "source": "problemset",
+  "contest_id": 1516,
+  "problem_index": "E",
+  "name": "Baby Ehab Plays with Permutations",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1115,
+  "problem_url": "https://codeforces.com/problemset/problem/1516/E",
+  "editorial_url": "https://codeforces.com/blog/entry/89846",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This time around, Baby Ehab will play with permutations. He has $$$n$$$ cubes arranged in a row, with numbers from $$$1$$$ to $$$n$$$ written on them. He'll make exactly $$$j$$$ operations. In each operation, he'll pick up $$$2$$$ cubes and switch their positions. He's wondering: how many different sequences of cubes can I have at the end? Since Baby Ehab is a turbulent person, he doesn't know how many operations he'll make, so he wants the answer for every possible $$$j$$$ between $$$1$$$ and $$$k$$$.",
+  "input_specification": "The only line contains $$$2$$$ integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^9$$$, $$$1 \\le k \\le 200$$$) — the number of cubes Baby Ehab has, and the parameter $$$k$$$ from the statement.",
+  "output_specification": "Print $$$k$$$ space-separated integers. The $$$i$$$-th of them is the number of possible sequences you can end up with if you do exactly $$$i$$$ operations. Since this number can be very large, print the remainder when it's divided by $$$10^9+7$$$.",
+  "sample_testcases": [
+    {
+      "input": "2 3",
+      "output": "1 1 1"
+    },
+    {
+      "input": "3 2",
+      "output": "3 3"
+    },
+    {
+      "input": "4 2",
+      "output": "6 12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:12",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

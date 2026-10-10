@@ -1,0 +1,41 @@
+{
+  "id": "576B",
+  "source": "problemset",
+  "contest_id": 576,
+  "problem_index": "B",
+  "name": "Invariance of Tree",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "greedy",
+    "trees"
+  ],
+  "solved_count": 1956,
+  "problem_url": "https://codeforces.com/problemset/problem/576/B",
+  "editorial_url": "https://codeforces.com/blog/entry/20226",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "A tree of size n is an undirected connected graph consisting of n vertices without cycles. Consider some tree with n vertices. We call a tree invariant relative to permutation p = p 1 p 2 ... p n , if for any two vertices of the tree u and v the condition holds: \"vertices u and v are connected by an edge if and only if vertices p u and p v are connected by an edge\". You are given permutation p of size n . Find some tree size n , invariant relative to the given permutation.",
+  "input_specification": "The first line contains number n ( 1 ≤ n ≤ 10 5 ) — the size of the permutation (also equal to the size of the sought tree). The second line contains permutation p i ( 1 ≤ p i ≤ n ).",
+  "output_specification": "If the sought tree does not exist, print \" NO \" (without the quotes). Otherwise, print \" YES \", and then print n - 1 lines, each of which contains two integers — the numbers of vertices connected by an edge of the tree you found. The vertices are numbered from 1, the order of the edges and the order of the vertices within the edges does not matter. If there are multiple solutions, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 3 2 1",
+      "output": "YES\n4 1\n4 2\n1 3"
+    },
+    {
+      "input": "3\n3 1 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:59",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

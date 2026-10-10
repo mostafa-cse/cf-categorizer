@@ -1,0 +1,43 @@
+{
+  "id": "722E",
+  "source": "problemset",
+  "contest_id": 722,
+  "problem_index": "E",
+  "name": "Research Rover",
+  "rating": 2900,
+  "tags": [
+    "combinatorics",
+    "dp"
+  ],
+  "solved_count": 1182,
+  "problem_url": "https://codeforces.com/problemset/problem/722/E",
+  "editorial_url": "https://codeforces.com/blog/entry/47497",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Unfortunately, the formal description of the task turned out to be too long, so here is the legend. Research rover finally reached the surface of Mars and is ready to complete its mission. Unfortunately, due to the mistake in the navigation system design, the rover is located in the wrong place. The rover will operate on the grid consisting of n rows and m columns. We will define as ( r , c ) the cell located in the row r and column c . From each cell the rover is able to move to any cell that share a side with the current one. The rover is currently located at cell (1, 1) and has to move to the cell ( n , m ) . It will randomly follow some shortest path between these two cells. Each possible way is chosen equiprobably. The cargo section of the rover contains the battery required to conduct the research. Initially, the battery charge is equal to s units of energy. Some of the cells contain anomaly. Each time the rover gets to the cell with anomaly, the battery looses half of its charge rounded down. Formally, if the charge was equal to x before the rover gets to the cell with anomaly, the charge will change to . While the rover picks a random shortest path to proceed, compute the expected value of the battery charge after it reaches cell ( n , m ) . If the cells (1, 1) and ( n , m ) contain anomaly, they also affect the charge of the battery.",
+  "input_specification": "The first line of the input contains four integers n , m , k and s ( 1 ≤ n , m ≤ 100 000 , 0 ≤ k ≤ 2000 , 1 ≤ s ≤ 1 000 000 ) — the number of rows and columns of the field, the number of cells with anomaly and the initial charge of the battery respectively. The follow k lines containing two integers r i and c i ( 1 ≤ r i ≤ n , 1 ≤ c i ≤ m ) — coordinates of the cells, containing anomaly. It's guaranteed that each cell appears in this list no more than once.",
+  "output_specification": "The answer can always be represented as an irreducible fraction . Print the only integer P · Q - 1 modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 3 2 11\n2 1\n2 3",
+      "output": "333333342"
+    },
+    {
+      "input": "4 5 3 17\n1 2\n3 3\n4 1",
+      "output": "514285727"
+    },
+    {
+      "input": "1 6 2 15\n1 1\n1 5",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:23",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "More Tricks",
+  "subsubtopic": "459. Combining Subtrees Technique",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate expectation as E[X] = ∑ P(e) * v(e). Formulate linear transition equations on states and solve via DAG DP or Gaussian elimination."
+}

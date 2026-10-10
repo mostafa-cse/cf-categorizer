@@ -1,0 +1,43 @@
+{
+  "id": "784D",
+  "source": "problemset",
+  "contest_id": 784,
+  "problem_index": "D",
+  "name": "Touchy-Feely Palindromes",
+  "rating": 1900,
+  "tags": [
+    "*special",
+    "implementation"
+  ],
+  "solved_count": 519,
+  "problem_url": "https://codeforces.com/problemset/problem/784/D",
+  "editorial_url": "https://codeforces.com/blog/entry/51351",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "",
+  "input_specification": "The only line of the input contains a string of digits. The length of the string is between 1 and 10 , inclusive.",
+  "output_specification": "Output \" Yes \" or \" No \".",
+  "sample_testcases": [
+    {
+      "input": "373",
+      "output": "Yes"
+    },
+    {
+      "input": "121",
+      "output": "No"
+    },
+    {
+      "input": "436",
+      "output": "Yes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:07",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

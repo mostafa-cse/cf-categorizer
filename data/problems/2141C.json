@@ -1,0 +1,39 @@
+{
+  "id": "2141C",
+  "source": "problemset",
+  "contest_id": 2141,
+  "problem_index": "C",
+  "name": "Minimum on Subarrays",
+  "rating": 1800,
+  "tags": [
+    "*special",
+    "brute force"
+  ],
+  "solved_count": 361,
+  "problem_url": "https://codeforces.com/problemset/problem/2141/C",
+  "editorial_url": "https://codeforces.com/blog/entry/146347",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "There is a variable $$$sum$$$, which is initially equal to $$$0$$$. There is also a data structure that can perform the following operations: pushback x — adds an element with value $$$x$$$ to the end of the structure; pushfront x — adds an element with value $$$x$$$ to the beginning of the structure; popback — removes the last element from the structure; popfront — removes the first element from the structure; min — adds the value of the minimum element currently in the structure to the variable $$$sum$$$. The operations popback , popfront , and min cannot be applied to an empty structure! Using this structure, you would like to be able to find the sum of the minimums of all non-empty subarrays of an array $$$a$$$ of $$$n$$$ elements. More formally, your task is to find a sequence of no more than $$$n \\cdot (n + 2)$$$ commands such that after all operations, the variable $$$sum$$$ will be equal to $$$\\sum_{0 \\le l \\le r \\lt n} \\min(a[l],\\dots, a[r])$$$ for any possible array $$$a$$$.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 500$$$) — the number of elements in the array.",
+  "output_specification": "Output $$$k$$$ ($$$1 \\le k \\le n \\cdot (n + 2)$$$) commands. Each command must be one of the following five lines: \" pushback a[i] \", where $$$i$$$ — a number from $$$0$$$ to $$$n - 1$$$ \" pushfront a[i] \", where $$$i$$$ — a number from $$$0$$$ to $$$n - 1$$$ \" popback \" \" popfront \" \" min \" If there are multiple valid answers, output any.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "3\npushback a[0]\nmin\npopfront"
+    },
+    {
+      "input": "2",
+      "output": "6\npushfront a[1]\nmin\npushback a[0]\nmin\npopfront\nmin"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:17",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

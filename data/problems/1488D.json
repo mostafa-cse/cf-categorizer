@@ -1,0 +1,36 @@
+{
+  "id": "1488D",
+  "source": "problemset",
+  "contest_id": 1488,
+  "problem_index": "D",
+  "name": "Problemsolving Marathon",
+  "rating": 1900,
+  "tags": [
+    "*special",
+    "binary search",
+    "greedy"
+  ],
+  "solved_count": 360,
+  "problem_url": "https://codeforces.com/problemset/problem/1488/D",
+  "editorial_url": "https://codeforces.com/blog/entry/88522",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has decided to do a problemsolving marathon. He wants to solve $$$s$$$ problems in $$$n$$$ days. Let $$$a_i$$$ be the number of problems he solves during the $$$i$$$-th day. He wants to find a distribution of problems into days such that: $$$a_i$$$ is an integer value for all $$$i$$$ from $$$1$$$ to $$$n$$$; $$$a_i \\ge 1$$$ for all $$$i$$$ from $$$1$$$ to $$$n$$$; $$$a_{i + 1} \\ge a_i$$$ for all $$$i$$$ from $$$1$$$ to $$$n-1$$$; $$$a_{i + 1} \\le 2 \\cdot a_i$$$ for all $$$i$$$ from $$$1$$$ to $$$n-1$$$; $$$a_n$$$ is maximized. Note that $$$a_1$$$ can be arbitrarily large. What is the largest value of $$$a_n$$$ Polycarp can obtain?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of testcases. Then the descriptions of $$$t$$$ testcases follow. The only line of each testcase contains two integers $$$n$$$ and $$$s$$$ ($$$1 \\le n \\le s \\le 10^{18}$$$) — the number of days and the number of problems Polycarp wants to solve. It's guaranteed that the distribution always exists within the given constraints.",
+  "output_specification": "For each testcase print a single integer — the maximum value of $$$a_n$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 15\n3 9\n2 6",
+      "output": "15\n4\n4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:17",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

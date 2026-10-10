@@ -1,0 +1,44 @@
+{
+  "id": "1770E",
+  "source": "problemset",
+  "contest_id": 1770,
+  "problem_index": "E",
+  "name": "Koxia and Tree",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "dsu",
+    "math",
+    "probabilities",
+    "trees"
+  ],
+  "solved_count": 1665,
+  "problem_url": "https://codeforces.com/problemset/problem/1770/E",
+  "editorial_url": "https://codeforces.com/contest/1770/attachments/download/18470/editorial.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Imi has an undirected tree with $$$n$$$ vertices where edges are numbered from $$$1$$$ to $$$n-1$$$. The $$$i$$$-th edge connects vertices $$$u_i$$$ and $$$v_i$$$. There are also $$$k$$$ butterflies on the tree. Initially, the $$$i$$$-th butterfly is on vertex $$$a_i$$$. All values of $$$a$$$ are pairwise distinct. Koxia plays a game as follows: For $$$i = 1, 2, \\dots, n - 1$$$, Koxia set the direction of the $$$i$$$-th edge as $$$u_i \\rightarrow v_i$$$ or $$$v_i \\rightarrow u_i$$$ with equal probability. For $$$i = 1, 2, \\dots, n - 1$$$, if a butterfly is on the initial vertex of $$$i$$$-th edge and there is no butterfly on the terminal vertex, then this butterfly flies to the terminal vertex. Note that operations are sequentially in order of $$$1, 2, \\dots, n - 1$$$ instead of simultaneously. Koxia chooses two butterflies from the $$$k$$$ butterflies with equal probability from all possible $$$\\frac{k(k-1)}{2}$$$ ways to select two butterflies, then she takes the distance$$$^\\dagger$$$ between the two chosen vertices as her score. Now, Koxia wants you to find the expected value of her score, modulo $$$998\\,244\\,353^\\ddagger$$$. $$$^\\dagger$$$ The distance between two vertices on a tree is the number of edges on the (unique) simple path between them. $$$^\\ddagger$$$ Formally, let $$$M = 998\\,244\\,353$$$. It can be shown that the answer can be expressed as an irreducible fraction $$$\\frac{p}{q}$$$, where $$$p$$$ and $$$q$$$ are integers and $$$q \\not \\equiv 0 \\pmod{M}$$$. Output the integer equal to $$$p \\cdot q^{-1} \\bmod M$$$. In other words, output such an integer $$$x$$$ that $$$0 \\le x \\lt M$$$ and $$$x \\cdot q \\equiv p \\pmod{M}$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$, $$$k$$$ ($$$2 \\leq k \\leq n \\leq 3 \\cdot {10}^5$$$) — the size of the tree and the number of butterflies. The second line contains $$$k$$$ integers $$$a_1, a_2, \\dots, a_k$$$ ($$$1 \\leq a_i \\leq n$$$) — the initial position of butterflies. It's guaranteed that all positions are distinct. The $$$i$$$-th line in following $$$n − 1$$$ lines contains two integers $$$u_i$$$, $$$v_i$$$ ($$$1 \\leq u_i, v_i \\leq n$$$, $$$u_i \\neq v_i$$$) — the vertices the $$$i$$$-th edge connects. It is guaranteed that the given edges form a tree.",
+  "output_specification": "Output a single integer — the expected value of Koxia's score, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 3\n1 2\n2 3",
+      "output": "748683266"
+    },
+    {
+      "input": "5 3\n3 4 5\n1 2\n1 3\n2 4\n2 5",
+      "output": "831870296"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:11",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

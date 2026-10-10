@@ -1,0 +1,44 @@
+{
+  "id": "379E",
+  "source": "problemset",
+  "contest_id": 379,
+  "problem_index": "E",
+  "name": "New Year Tree Decorations",
+  "rating": 2500,
+  "tags": [
+    "geometry",
+    "schedules",
+    "sortings"
+  ],
+  "solved_count": 406,
+  "problem_url": "https://codeforces.com/problemset/problem/379/E",
+  "editorial_url": "https://codeforces.com/blog/entry/10171",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Due to atheistic Soviet past, Christmas wasn't officially celebrated in Russia for most of the twentieth century. As a result, the Russian traditions for Christmas and New Year mixed into one event celebrated on the New Year but including the tree, a Santa-like 'Grandfather Frost', presents and huge family reunions and dinner parties all over the country. Bying a Tree at the New Year and installing it in the house is a tradition. Usually the whole family decorates the tree on the New Year Eve. We hope that Codeforces is a big and loving family, so in this problem we are going to decorate a tree as well. So, our decoration consists of n pieces, each piece is a piece of colored paper, its border is a closed polyline of a special shape. The pieces go one by one as is shown on the picture. The i -th piece is a polyline that goes through points: (0, 0) , (0, y 0 ) , (1, y 1 ) , (2, y 2 ) , ..., ( k , y k ) , ( k , 0) . The width of each piece equals k . The figure to the left shows the decoration, the figure to the right shows the individual pieces it consists of. The piece number 1 (shown red on the figure) is the outer piece (we see it completely), piece number 2 (shown yellow) follows it (we don't see it completely as it is partially closed by the first piece) and so on. The programmers are quite curious guys, so the moment we hung a decoration on the New Year tree we started to wonder: what area of each piece can people see?",
+  "input_specification": "The first line contains two integers, n and k (1 ≤ n , k ≤ 300) . Each of the following n lines contains k + 1 integers — the description of the polyline. If the i -th line contains ontegers y i , 0 , y i , 1 , ..., y i , k , that means that the polyline of the i -th piece goes through points (0, 0) , (0, y i , 0 ) , (1, y i , 1 ) , (2, y i , 2 ) , ..., ( k , y i , k ) , ( k , 0) (1 ≤ y i , j ≤ 1000) .",
+  "output_specification": "Print n real numbers — for each polyline, the area of its visible part. The answer will be considered correct if its relative or absolute error do not exceed 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "2 2\n2 1 2\n1 2 1",
+      "output": "3.000000000000\n0.500000000000"
+    },
+    {
+      "input": "1 1\n1 1",
+      "output": "1.000000000000"
+    },
+    {
+      "input": "4 1\n2 7\n7 2\n5 5\n6 4",
+      "output": "4.500000000000\n1.250000000000\n0.050000000000\n0.016666666667"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:55",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

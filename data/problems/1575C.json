@@ -1,0 +1,44 @@
+{
+  "id": "1575C",
+  "source": "problemset",
+  "contest_id": 1575,
+  "problem_index": "C",
+  "name": "Cyclic Sum",
+  "rating": 3000,
+  "tags": [
+    "data structures",
+    "fft",
+    "number theory"
+  ],
+  "solved_count": 327,
+  "problem_url": "https://codeforces.com/problemset/problem/1575/C",
+  "editorial_url": "https://codeforces.com/blog/entry/95561",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Denote a cyclic sequence of size $$$n$$$ as an array $$$s$$$ such that $$$s_n$$$ is adjacent to $$$s_1$$$. The segment $$$s[r, l]$$$ where $$$l \\lt r$$$ is the concatenation of $$$s[r, n]$$$ and $$$s[1, l]$$$. You are given an array $$$a$$$ consisting of $$$n$$$ integers. Define $$$b$$$ as the cyclic sequence obtained from concatenating $$$m$$$ copies of $$$a$$$. Note that $$$b$$$ has size $$$n \\cdot m$$$. You are given an integer $$$k$$$ where $$$k = 1$$$ or $$$k$$$ is a prime number. Find the number of different segments in $$$b$$$ where the sum of elements in the segment is divisible by $$$k$$$. Two segments are considered different if the set of indices of the segments are different . For example, when $$$n = 3$$$ and $$$m = 2$$$, the set of indices for segment $$$s[2, 5]$$$ is $$$\\{2, 3, 4, 5\\}$$$, and for segment $$$s[5, 2]$$$ is $$$\\{5, 6, 1, 2\\}$$$. In particular, the segments $$$s[1, 6], s[2,1], \\ldots, s[6, 5]$$$ are considered as the same segment. Output the answer modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line contains three integers $$$n$$$, $$$m$$$, and $$$k$$$ ($$$1 \\leq n, m, k \\leq 2 \\cdot 10^5$$$, $$$k = 1$$$ or $$$k$$$ is a prime number). The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq a_i \\leq 2 \\cdot 10^5$$$).",
+  "output_specification": "Output an integer denoting the number of different segments in $$$b$$$ where the sum of elements in the segment is divisible by $$$k$$$, modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "5 1 5\n1 2 3 4 3",
+      "output": "4"
+    },
+    {
+      "input": "5 1 5\n1 2 3 4 5",
+      "output": "5"
+    },
+    {
+      "input": "5 4 5\n1 2 3 4 5",
+      "output": "125"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:56",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

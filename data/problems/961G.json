@@ -1,0 +1,40 @@
+{
+  "id": "961G",
+  "source": "problemset",
+  "contest_id": 961,
+  "problem_index": "G",
+  "name": "Partitions",
+  "rating": 2700,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 1851,
+  "problem_url": "https://codeforces.com/problemset/problem/961/G",
+  "editorial_url": "https://codeforces.com/blog/entry/58743",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a set of n elements indexed from 1 to n . The weight of i -th element is w i . The weight of some subset of a given set is denoted as . The weight of some partition R of a given set into k subsets is (recall that a partition of a given set is a set of its subsets such that every element of the given set belongs to exactly one subset in partition). Calculate the sum of weights of all partitions of a given set into exactly k non-empty subsets, and print it modulo 10 9 + 7 . Two partitions are considered different iff there exist two elements x and y such that they belong to the same set in one of the partitions, and to different sets in another partition.",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ k ≤ n ≤ 2·10 5 ) — the number of elements and the number of subsets in each partition, respectively. The second line contains n integers w i ( 1 ≤ w i ≤ 10 9 )— weights of elements of the set.",
+  "output_specification": "Print one integer — the sum of weights of all partitions of a given set into k non-empty subsets, taken modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4 2\n2 3 2 3",
+      "output": "160"
+    },
+    {
+      "input": "5 2\n1 2 3 4 5",
+      "output": "645"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:26",
+  "main_topic": "Combinatorics",
+  "subtopic": "Partitions",
+  "subsubtopic": "321. Partitions of an Integer, Partition Function and Pentagonal Number Theorem",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Partitions of an Integer, Partition Function and Pentagonal Number Theorem paradigm under the Combinatorics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "1657E",
+  "source": "problemset",
+  "contest_id": 1657,
+  "problem_index": "E",
+  "name": "Star MST",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graph matchings",
+    "math"
+  ],
+  "solved_count": 2610,
+  "problem_url": "https://codeforces.com/problemset/problem/1657/E",
+  "editorial_url": "https://codeforces.com/blog/entry/101161",
+  "time_limit": "6 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "In this problem, we will consider complete undirected graphs consisting of $$$n$$$ vertices with weighted edges. The weight of each edge is an integer from $$$1$$$ to $$$k$$$. An undirected graph is considered beautiful if the sum of weights of all edges incident to vertex $$$1$$$ is equal to the weight of MST in the graph. MST is the minimum spanning tree — a tree consisting of $$$n-1$$$ edges of the graph, which connects all $$$n$$$ vertices and has the minimum sum of weights among all such trees; the weight of MST is the sum of weights of all edges in it. Calculate the number of complete beautiful graphs having exactly $$$n$$$ vertices and the weights of edges from $$$1$$$ to $$$k$$$. Since the answer might be large, print it modulo $$$998244353$$$.",
+  "input_specification": "The only line contains two integers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 250$$$; $$$1 \\le k \\le 250$$$).",
+  "output_specification": "Print one integer — the number of complete beautiful graphs having exactly $$$n$$$ vertices and the weights of edges from $$$1$$$ to $$$k$$$. Since the answer might be large, print it modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 2",
+      "output": "5"
+    },
+    {
+      "input": "4 4",
+      "output": "571"
+    },
+    {
+      "input": "6 9",
+      "output": "310640163"
+    },
+    {
+      "input": "42 13",
+      "output": "136246935"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:38",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "837B",
+  "source": "problemset",
+  "contest_id": 837,
+  "problem_index": "B",
+  "name": "Flag of Berland",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "implementation"
+  ],
+  "solved_count": 4452,
+  "problem_url": "https://codeforces.com/problemset/problem/837/B",
+  "editorial_url": "https://codeforces.com/blog/entry/53662",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The flag of Berland is such rectangular field n × m that satisfies following conditions: Flag consists of three colors which correspond to letters 'R' , 'G' and 'B' . Flag consists of three equal in width and height stripes, parralel to each other and to sides of the flag. Each stripe has exactly one color . Each color should be used in exactly one stripe . You are given a field n × m , consisting of characters 'R' , 'G' and 'B' . Output \" YES \" (without quotes) if this field corresponds to correct flag of Berland. Otherwise, print \" NO \" (without quotes).",
+  "input_specification": "The first line contains two integer numbers n and m ( 1 ≤ n , m ≤ 100 ) — the sizes of the field. Each of the following n lines consisting of m characters 'R' , 'G' and 'B' — the description of the field.",
+  "output_specification": "Print \" YES \" (without quotes) if the given field corresponds to correct flag of Berland . Otherwise, print \" NO \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "6 5\nRRRRR\nRRRRR\nBBBBB\nBBBBB\nGGGGG\nGGGGG",
+      "output": "YES"
+    },
+    {
+      "input": "4 3\nBRG\nBRG\nBRG\nBRG",
+      "output": "YES"
+    },
+    {
+      "input": "6 7\nRRRGGGG\nRRRGGGG\nRRRGGGG\nRRRBBBB\nRRRBBBB\nRRRBBBB",
+      "output": "NO"
+    },
+    {
+      "input": "4 4\nRRRR\nRRRR\nBBBB\nGGGG",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:55",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "97E",
+  "source": "problemset",
+  "contest_id": 97,
+  "problem_index": "E",
+  "name": "Leaders",
+  "rating": 2200,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 458,
+  "problem_url": "https://codeforces.com/problemset/problem/97/E",
+  "editorial_url": "https://codeforces.com/blog/entry/2293",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After a revolution in Berland the new dictator faced an unexpected challenge: the country has to be somehow ruled. The dictator is a very efficient manager, yet he can't personally give orders to each and every citizen. That's why he decided to pick some set of leaders he would control. Those leaders will directly order the citizens. However, leadership efficiency turned out to vary from person to person (i.e. while person A makes an efficient leader, person B may not be that good at it). That's why the dictator asked world-famous berland scientists for help. The scientists suggested an innovatory technology — to make the leaders work in pairs. A relationship graph is some undirected graph whose vertices correspond to people. A simple path is a path with no repeated vertices. Long and frighteningly expensive research showed that a pair of people has maximum leadership qualities if a graph of relationships has a simple path between them with an odd number of edges. The scientists decided to call such pairs of different people leader pairs . Secret services provided the scientists with the relationship graph so that the task is simple — we have to learn to tell the dictator whether the given pairs are leader pairs or not. Help the scientists cope with the task.",
+  "input_specification": "The first line contains integers n and m ( 1 ≤ n ≤ 10 5 , 0 ≤ m ≤ 10 5 ) — the number of vertices and edges in the relationship graph correspondingly. Next m lines contain pairs of integers a and b which mean that there is an edge between the a -th and the b -th vertices (the vertices are numbered starting from 1 , 1 ≤ a , b ≤ n ). It is guaranteed that the graph has no loops or multiple edges. Next line contains number q ( 1 ≤ q ≤ 10 5 ) — the number of pairs the scientists are interested in. Next q lines contain these pairs (in the same format as the edges, the queries can be repeated, a query can contain a pair of the identical vertices).",
+  "output_specification": "For each query print on a single line \"Yes\" if there's a simple odd path between the pair of people; otherwise, print \"No\".",
+  "sample_testcases": [
+    {
+      "input": "7 7\n1 3\n1 4\n2 3\n2 4\n5 6\n6 7\n7 5\n8\n1 2\n1 3\n1 4\n2 4\n1 5\n5 6\n5 7\n6 7",
+      "output": "No\nYes\nYes\nYes\nNo\nYes\nYes\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:06",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

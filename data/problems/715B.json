@@ -1,0 +1,45 @@
+{
+  "id": "715B",
+  "source": "problemset",
+  "contest_id": 715,
+  "problem_index": "B",
+  "name": "Complete The Graph",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 3929,
+  "problem_url": "https://codeforces.com/problemset/problem/715/B",
+  "editorial_url": "https://codeforces.com/blog/entry/47169",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "ZS the Coder has drawn an undirected graph of n vertices numbered from 0 to n - 1 and m edges between them. Each edge of the graph is weighted, each weight is a positive integer . The next day, ZS the Coder realized that some of the weights were erased! So he wants to reassign positive integer weight to each of the edges which weights were erased, so that the length of the shortest path between vertices s and t in the resulting graph is exactly L . Can you help him?",
+  "input_specification": "The first line contains five integers n , m , L , s , t ( 2 ≤ n ≤ 1000,  1 ≤ m ≤ 10 000,  1 ≤ L ≤ 10 9 ,  0 ≤ s , t ≤ n - 1, s ≠ t ) — the number of vertices, number of edges, the desired length of shortest path, starting vertex and ending vertex respectively. Then, m lines describing the edges of the graph follow. i -th of them contains three integers, u i , v i , w i ( 0 ≤ u i , v i ≤ n - 1, u i ≠ v i ,  0 ≤ w i ≤ 10 9 ). u i and v i denote the endpoints of the edge and w i denotes its weight. If w i is equal to 0 then the weight of the corresponding edge was erased. It is guaranteed that there is at most one edge between any pair of vertices.",
+  "output_specification": "Print \" NO \" (without quotes) in the only line if it's not possible to assign the weights in a required way. Otherwise, print \" YES \" in the first line. Next m lines should contain the edges of the resulting graph, with weights assigned to edges which weights were erased. i -th of them should contain three integers u i , v i and w i , denoting an edge between vertices u i and v i of weight w i . The edges of the new graph must coincide with the ones in the graph from the input. The weights that were not erased must remain unchanged whereas the new weights can be any positive integer not exceeding 10 18 . The order of the edges in the output doesn't matter. The length of the shortest path between s and t must be equal to L . If there are multiple solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5 5 13 0 4\n0 1 5\n2 1 2\n3 2 3\n1 4 0\n4 3 4",
+      "output": "YES\n0 1 5\n2 1 2\n3 2 3\n1 4 8\n4 3 4"
+    },
+    {
+      "input": "2 1 123456789 0 1\n0 1 0",
+      "output": "YES\n0 1 123456789"
+    },
+    {
+      "input": "2 1 999999999 1 0\n0 1 1000000000",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:25",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

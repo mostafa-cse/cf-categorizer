@@ -1,0 +1,38 @@
+{
+  "id": "131E",
+  "source": "problemset",
+  "contest_id": 131,
+  "problem_index": "E",
+  "name": "Yet Another Task with Queens",
+  "rating": 1700,
+  "tags": [
+    "sortings"
+  ],
+  "solved_count": 2118,
+  "problem_url": "https://codeforces.com/problemset/problem/131/E",
+  "editorial_url": "https://codeforces.com/blog/entry/3256",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A queen is the strongest chess piece. In modern chess the queen can move any number of squares in any horizontal, vertical or diagonal direction (considering that there're no other pieces on its way). The queen combines the options given to the rook and the bishop. There are m queens on a square n × n chessboard. You know each queen's positions, the i -th queen is positioned in the square ( r i , c i ) , where r i is the board row number (numbered from the top to the bottom from 1 to n ), and c i is the board's column number (numbered from the left to the right from 1 to n ). No two queens share the same position. For each queen one can count w — the number of other queens that the given queen threatens (attacks). For a fixed attack direction only the first queen in this direction is under attack if there are many queens are on the ray of the attack. Obviously, for any queen w is between 0 and 8, inclusive. Print the sequence t 0 , t 1 , ..., t 8 , where t i is the number of queens that threaten exactly i other queens, i.e. the number of queens that their w equals i .",
+  "input_specification": "The first line of the input contains a pair of integers n , m ( 1 ≤ n , m ≤ 10 5 ), where n is the size of the board and m is the number of queens on the board. Then m following lines contain positions of the queens, one per line. Each line contains a pair of integers r i , c i ( 1 ≤ r i , c i ≤ n ) — the queen's position. No two queens stand on the same square.",
+  "output_specification": "Print the required sequence t 0 , t 1 , ..., t 8 , separating the numbers with spaces.",
+  "sample_testcases": [
+    {
+      "input": "8 4\n4 3\n4 8\n6 5\n1 6",
+      "output": "0 3 0 1 0 0 0 0 0"
+    },
+    {
+      "input": "10 3\n1 1\n1 2\n1 3",
+      "output": "0 2 1 0 0 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

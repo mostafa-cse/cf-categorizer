@@ -1,0 +1,40 @@
+{
+  "id": "832D",
+  "source": "problemset",
+  "contest_id": 832,
+  "problem_index": "D",
+  "name": "Misha, Grisha and Underground",
+  "rating": 1900,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "trees"
+  ],
+  "solved_count": 4858,
+  "problem_url": "https://codeforces.com/problemset/problem/832/D",
+  "editorial_url": "https://codeforces.com/blog/entry/53461",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Misha and Grisha are funny boys, so they like to use new underground. The underground has n stations connected with n - 1 routes so that each route connects two stations, and it is possible to reach every station from any other. The boys decided to have fun and came up with a plan. Namely, in some day in the morning Misha will ride the underground from station s to station f by the shortest path, and will draw with aerosol an ugly text \"Misha was here\" on every station he will pass through (including s and f ). After that on the same day at evening Grisha will ride from station t to station f by the shortest path and will count stations with Misha's text. After that at night the underground workers will wash the texts out, because the underground should be clean. The boys have already chosen three stations a , b and c for each of several following days, one of them should be station s on that day, another should be station f , and the remaining should be station t . They became interested how they should choose these stations s , f , t so that the number Grisha will count is as large as possible. They asked you for help.",
+  "input_specification": "The first line contains two integers n and q ( 2 ≤ n ≤ 10 5 , 1 ≤ q ≤ 10 5 ) — the number of stations and the number of days. The second line contains n - 1 integers p 2 , p 3 , ..., p n ( 1 ≤ p i ≤ n ). The integer p i means that there is a route between stations p i and i . It is guaranteed that it's possible to reach every station from any other. The next q lines contains three integers a , b and c each ( 1 ≤ a , b , c ≤ n ) — the ids of stations chosen by boys for some day. Note that some of these ids could be same.",
+  "output_specification": "Print q lines. In the i -th of these lines print the maximum possible number Grisha can get counting when the stations s , t and f are chosen optimally from the three stations on the i -th day.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 1\n1 2 3\n2 3 3",
+      "output": "2\n3"
+    },
+    {
+      "input": "4 1\n1 2 3\n1 2 3",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "497E",
+  "source": "problemset",
+  "contest_id": 497,
+  "problem_index": "E",
+  "name": "Subsequences Return",
+  "rating": 2900,
+  "tags": [
+    "dp",
+    "matrices"
+  ],
+  "solved_count": 359,
+  "problem_url": "https://codeforces.com/problemset/problem/497/E",
+  "editorial_url": "https://codeforces.com/blog/entry/15208",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Assume that s k ( n ) equals the sum of digits of number n in the k -based notation. For example, s 2 (5) = s 2 (101 2 ) = 1 + 0 + 1 = 2 , s 3 (14) = s 3 (112 3 ) = 1 + 1 + 2 = 4 . The sequence of integers a 0 , ..., a n - 1 is defined as . Your task is to calculate the number of distinct subsequences of sequence a 0 , ..., a n - 1 . Calculate the answer modulo 10 9 + 7 . Sequence a 1 , ..., a k is called to be a subsequence of sequence b 1 , ..., b l , if there is a sequence of indices 1 ≤ i 1 < ... < i k ≤ l , such that a 1 = b i 1 , ..., a k = b i k . In particular, an empty sequence (i.e. the sequence consisting of zero elements) is a subsequence of any sequence.",
+  "input_specification": "The first line contains two space-separated numbers n and k ( 1 ≤ n ≤ 10 18 , 2 ≤ k ≤ 30 ).",
+  "output_specification": "In a single line print the answer to the problem modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "4 2",
+      "output": "11"
+    },
+    {
+      "input": "7 7",
+      "output": "128"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:16",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

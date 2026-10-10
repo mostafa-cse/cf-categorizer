@@ -1,0 +1,42 @@
+{
+  "id": "1691F",
+  "source": "problemset",
+  "contest_id": 1691,
+  "problem_index": "F",
+  "name": "K-Set Tree",
+  "rating": 2500,
+  "tags": [
+    "combinatorics",
+    "dfs and similar",
+    "dp",
+    "math",
+    "trees"
+  ],
+  "solved_count": 1210,
+  "problem_url": "https://codeforces.com/problemset/problem/1691/F",
+  "editorial_url": "https://codeforces.com/blog/entry/103212",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given a tree $$$G$$$ with $$$n$$$ vertices and an integer $$$k$$$. The vertices of the tree are numbered from $$$1$$$ to $$$n$$$. For a vertex $$$r$$$ and a subset $$$S$$$ of vertices of $$$G$$$, such that $$$|S| = k$$$, we define $$$f(r, S)$$$ as the size of the smallest rooted subtree containing all vertices in $$$S$$$ when the tree is rooted at $$$r$$$. A set of vertices $$$T$$$ is called a rooted subtree, if all the vertices in $$$T$$$ are connected, and for each vertex in $$$T$$$, all its descendants belong to $$$T$$$. You need to calculate the sum of $$$f(r, S)$$$ over all possible distinct combinations of vertices $$$r$$$ and subsets $$$S$$$, where $$$|S| = k$$$. Formally, compute the following: $$$$$$\\sum_{r \\in V} \\sum_{S \\subseteq V, |S| = k} f(r, S),$$$$$$ where $$$V$$$ is the set of vertices in $$$G$$$. Output the answer modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$, $$$1 \\le k \\le n$$$). Each of the following $$$n - 1$$$ lines contains two integers $$$x$$$ and $$$y$$$ ($$$1 \\le x, y \\le n$$$), denoting an edge between vertex $$$x$$$ and $$$y$$$. It is guaranteed that the given edges form a tree.",
+  "output_specification": "Print the answer modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2\n1 3",
+      "output": "25"
+    },
+    {
+      "input": "7 2\n1 2\n2 3\n2 4\n1 5\n4 6\n4 7",
+      "output": "849"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:28",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

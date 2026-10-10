@@ -1,0 +1,42 @@
+{
+  "id": "678B",
+  "source": "problemset",
+  "contest_id": 678,
+  "problem_index": "B",
+  "name": "The Same Calendar",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 4851,
+  "problem_url": "https://codeforces.com/problemset/problem/678/B",
+  "editorial_url": "https://codeforces.com/blog/entry/45405",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The girl Taylor has a beautiful calendar for the year y . In the calendar all days are given with their days of week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. The calendar is so beautiful that she wants to know what is the next year after y when the calendar will be exactly the same. Help Taylor to find that year. Note that leap years has 366 days. The year is leap if it is divisible by 400 or it is divisible by 4 , but not by 100 ( https://en.wikipedia.org/wiki/Leap_year ).",
+  "input_specification": "The only line contains integer y ( 1000 ≤ y < 100'000 ) — the year of the calendar.",
+  "output_specification": "Print the only integer y ' — the next year after y when the calendar will be the same. Note that you should find the first year after y with the same calendar.",
+  "sample_testcases": [
+    {
+      "input": "2016",
+      "output": "2044"
+    },
+    {
+      "input": "2000",
+      "output": "2028"
+    },
+    {
+      "input": "50501",
+      "output": "50507"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

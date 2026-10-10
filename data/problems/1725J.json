@@ -1,0 +1,39 @@
+{
+  "id": "1725J",
+  "source": "problemset",
+  "contest_id": 1725,
+  "problem_index": "J",
+  "name": "Journey",
+  "rating": 2500,
+  "tags": [
+    "dp",
+    "trees"
+  ],
+  "solved_count": 512,
+  "problem_url": "https://codeforces.com/problemset/problem/1725/J",
+  "editorial_url": "https://codeforces.com/blog/entry/106567",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One day, Pak Chanek who is already bored of being alone at home decided to go traveling. While looking for an appropriate place, he found that Londonesia has an interesting structure. According to the information gathered by Pak Chanek, there are $$$N$$$ cities numbered from $$$1$$$ to $$$N$$$. The cities are connected to each other with $$$N-1$$$ two-directional roads, with the $$$i$$$-th road connecting cities $$$U_i$$$ and $$$V_i$$$, and taking a time of $$$W_i$$$ hours to be traversed. In other words, Londonesia's structure forms a tree. Pak Chanek wants to go on a journey in Londonesia starting and ending in any city (not necessarily the same city) such that each city is visited at least once with the least time possible. In order for the journey to end quicker, Pak Chanek also carries an instant teleportation device for moving from one city to any city that can only be used at most once. Help Pak Chanek for finding the minimum time needed. Notes: Pak Chanek only needs to visit each city at least once. Pak Chanek does not have to traverse each road. In the journey, a city or a road can be visited more than once.",
+  "input_specification": "The first line contains a single integer $$$N$$$ ($$$1 \\le N \\le 10^5$$$) — the number of cities in Londonesia. The $$$i$$$-th of the next $$$N-1$$$ lines contains three integers $$$U_i$$$, $$$V_i$$$, and $$$W_i$$$ ($$$1 \\le U_i, V_i \\le N$$$, $$$1 \\le W_i \\le 10^9$$$) — a two-directional road that connects cities $$$U_i$$$ and $$$V_i$$$ that takes $$$W_i$$$ hours to be traversed. The roads in Londonesia form a tree.",
+  "output_specification": "Output one integer, which represents the minimum time in hours that is needed to visit each city at least once.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 2 4\n2 3 5\n3 4 4",
+      "output": "8"
+    },
+    {
+      "input": "5\n1 2 45\n1 3 50\n1 4 10\n1 5 65",
+      "output": "115"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

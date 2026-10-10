@@ -1,0 +1,38 @@
+{
+  "id": "1644E",
+  "source": "problemset",
+  "contest_id": 1644,
+  "problem_index": "E",
+  "name": "Expand the Path",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "data structures",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 3537,
+  "problem_url": "https://codeforces.com/problemset/problem/1644/E",
+  "editorial_url": "https://codeforces.com/blog/entry/100227",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a grid of size $$$n \\times n$$$. The rows are numbered top to bottom from $$$1$$$ to $$$n$$$, the columns are numbered left to right from $$$1$$$ to $$$n$$$. The robot is positioned in a cell $$$(1, 1)$$$. It can perform two types of moves: D — move one cell down; R — move one cell right. The robot is not allowed to move outside the grid. You are given a sequence of moves $$$s$$$ — the initial path of the robot. This path doesn't lead the robot outside the grid. You are allowed to perform an arbitrary number of modifications to it (possibly, zero). With one modification, you can duplicate one move in the sequence. That is, replace a single occurrence of D with DD or a single occurrence of R with RR . Count the number of cells such that there exists at least one sequence of modifications that the robot visits this cell on the modified path and doesn't move outside the grid.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases. The first line of each testcase contains the single integer $$$n$$$ ($$$2 \\le n \\le 10^8$$$) — the number of rows and columns in the grid. The second line of each testcase contains a non-empty string $$$s$$$, consisting only of characters D and R , — the initial path of the robot. This path doesn't lead the robot outside the grid. The total length of strings $$$s$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each testcase, print a single integer — the number of cells such that there exists at least one sequence of modifications that the robot visits this cell on the modified path and doesn't move outside the grid.",
+  "sample_testcases": [
+    {
+      "input": "3\n4\nRD\n5\nDRDRDRDR\n3\nD",
+      "output": "13\n9\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:40",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "757F",
+  "source": "problemset",
+  "contest_id": 757,
+  "problem_index": "F",
+  "name": "Team Rocket Rises Again",
+  "rating": 2800,
+  "tags": [
+    "data structures",
+    "graphs",
+    "shortest paths"
+  ],
+  "solved_count": 1577,
+  "problem_url": "https://codeforces.com/problemset/problem/757/F",
+  "editorial_url": "https://codeforces.com/blog/entry/49743",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "It's the turn of the year, so Bash wants to send presents to his friends. There are n cities in the Himalayan region and they are connected by m bidirectional roads. Bash is living in city s . Bash has exactly one friend in each of the other cities. Since Bash wants to surprise his friends, he decides to send a Pikachu to each of them. Since there may be some cities which are not reachable from Bash's city, he only sends a Pikachu to those friends who live in a city reachable from his own city . He also wants to send it to them as soon as possible. He finds out the minimum time for each of his Pikachus to reach its destination city. Since he is a perfectionist, he informs all his friends with the time their gift will reach them. A Pikachu travels at a speed of 1 meters per second. His friends were excited to hear this and would be unhappy if their presents got delayed. Unfortunately Team Rocket is on the loose and they came to know of Bash's plan. They want to maximize the number of friends who are unhappy with Bash. They do this by destroying exactly one of the other n - 1 cities. This implies that the friend residing in that city dies, so he is unhappy as well . Note that if a city is destroyed, all the roads directly connected to the city are also destroyed and the Pikachu may be forced to take a longer alternate route . Please also note that only friends that are waiting for a gift count as unhappy, even if they die. Since Bash is already a legend, can you help Team Rocket this time and find out the maximum number of Bash's friends who can be made unhappy by destroying exactly one city.",
+  "input_specification": "The first line contains three space separated integers n , m and s ( 2 ≤ n ≤ 2·10 5 , , 1 ≤ s ≤ n ) — the number of cities and the number of roads in the Himalayan region and the city Bash lives in. Each of the next m lines contain three space-separated integers u , v and w ( 1 ≤ u , v ≤ n , u ≠ v , 1 ≤ w ≤ 10 9 ) denoting that there exists a road between city u and city v of length w meters. It is guaranteed that no road connects a city to itself and there are no two roads that connect the same pair of cities.",
+  "output_specification": "Print a single integer, the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "4 4 3\n1 2 1\n2 3 1\n2 4 1\n3 1 1",
+      "output": "2"
+    },
+    {
+      "input": "7 11 2\n1 2 5\n1 3 5\n2 4 2\n2 5 2\n3 6 3\n3 7 3\n4 6 2\n3 4 2\n6 7 3\n4 5 7\n4 7 7",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:15",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+}

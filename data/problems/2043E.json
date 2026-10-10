@@ -1,0 +1,40 @@
+{
+  "id": "2043E",
+  "source": "problemset",
+  "contest_id": 2043,
+  "problem_index": "E",
+  "name": "Matrix Transformation",
+  "rating": 2300,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "data structures",
+    "dfs and similar",
+    "graphs",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 1889,
+  "problem_url": "https://codeforces.com/problemset/problem/2043/E",
+  "editorial_url": "https://codeforces.com/blog/entry/137801",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two matrices $$$A$$$ and $$$B$$$ of size $$$n \\times m$$$, filled with integers between $$$0$$$ and $$$10^9$$$. You can perform the following operations on matrix $$$A$$$ in any order and any number of times: &= : choose two integers $$$i$$$ and $$$x$$$ ($$$1 \\le i \\le n$$$, $$$x \\ge 0$$$) and replace each element in row $$$i$$$ with the result of the bitwise AND operation between $$$x$$$ and that element. Formally, for every $$$j \\in [1, m]$$$, the element $$$A_{i,j}$$$ is replaced with $$$A_{i,j} \\text{ & } x$$$; |= : choose two integers $$$j$$$ and $$$x$$$ ($$$1 \\le j \\le m$$$, $$$x \\ge 0$$$) and replace each element in column $$$j$$$ with the result of the bitwise OR operation between $$$x$$$ and that element. Formally, for every $$$i \\in [1, n]$$$, the element $$$A_{i,j}$$$ is replaced with $$$A_{i,j} \\text{ | } x$$$. The value of $$$x$$$ may be chosen differently for different operations. Determine whether it is possible to transform matrix $$$A$$$ into matrix $$$B$$$ using the given operations any number of times (including zero).",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. Then, $$$t$$$ test cases follow. Each test case is given as follows: the first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 10^3$$$; $$$n \\cdot m \\le 10^3$$$) — the dimensions of the matrices $$$A$$$ and $$$B$$$; the following $$$n$$$ lines describe the matrix $$$A$$$, where the $$$i$$$-th line contains $$$m$$$ integers $$$A_{i,1}, A_{i,2}, \\dots, A_{i,m}$$$ ($$$0 \\le A_{i,j} \\le 10^9$$$); the following $$$n$$$ lines describe the matrix $$$B$$$, where the $$$i$$$-th line contains $$$m$$$ integers $$$B_{i,1}, B_{i,2}, \\dots, B_{i,m}$$$ ($$$0 \\le B_{i,j} \\le 10^9$$$).",
+  "output_specification": "For each test case, output Yes if it is possible to transform the matrix $$$A$$$ into the matrix $$$B$$$; otherwise, output No . Each letter can be output in any case, upper or lower.",
+  "sample_testcases": [
+    {
+      "input": "4\n1 1\n12\n13\n2 2\n10 10\n42 42\n21 21\n21 21\n2 2\n74 10\n42 106\n21 85\n85 21\n2 4\n1 2 3 4\n5 6 7 8\n3 2 3 4\n1 0 1 0",
+      "output": "Yes\nYes\nNo\nYes"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:44",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic": "70. BIT / Fenwick Tree",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "467E",
+  "source": "problemset",
+  "contest_id": 467,
+  "problem_index": "E",
+  "name": "Alex and Complicated Task",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 891,
+  "problem_url": "https://codeforces.com/problemset/problem/467/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13797",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After you have read all the problems, probably, you think Alex is genius person. That's true! One day he came up with the following task. Given a sequence of integer numbers a 1 , a 2 , ..., a n . You are to find a longest sequence b 1 , b 2 , ..., b 4 m , that satisfies the following conditions: b 4 k + 1 = b 4 k + 3 for all valid integer k ; b 4 k + 2 = b 4 k + 4 for all valid integer k ; sequence b is subsequence of a (not necessarily contiguous subsequence). And finally... Alex had given this complicated task to George, and George gave it to you. Help George to cope with the task.",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 5·10 5 ) . The next line contains n integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) .",
+  "output_specification": "In the first line print a single integer 4 m — the maximal possible length of required sequence b . In the second line print 4 m integers b 1 , b 2 , ..., b 4 m , that is required sequence. If there are multiple optimal answers you may print any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 5 3 5",
+      "output": "4\n3 5 3 5"
+    },
+    {
+      "input": "10\n35 1 2 1 2 35 100 200 100 200",
+      "output": "8\n1 2 1 2 100 200 100 200"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "460. Longest Increasing Subsequence (LIS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute the Longest Increasing Subsequence using patience sorting with binary search (std::lower_bound) in O(N log N) time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1554D",
+  "source": "problemset",
+  "contest_id": 1554,
+  "problem_index": "D",
+  "name": "Diane",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 10750,
+  "problem_url": "https://codeforces.com/problemset/problem/1554/D",
+  "editorial_url": "https://codeforces.com/blog/entry/93321",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$. Find any string $$$s$$$ of length $$$n$$$ consisting only of English lowercase letters such that each non-empty substring of $$$s$$$ occurs in $$$s$$$ an odd number of times. If there are multiple such strings, output any. It can be shown that such string always exists under the given constraints. A string $$$a$$$ is a substring of a string $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 500$$$) — the number of test cases. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$). It is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print a single line containing the string $$$s$$$. If there are multiple such strings, output any. It can be shown that such string always exists under the given constraints.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n5\n9\n19",
+      "output": "abc\ndiane\nbbcaabbba\nyouarethecutestuwuu"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:02",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

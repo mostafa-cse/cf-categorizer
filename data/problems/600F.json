@@ -1,0 +1,34 @@
+{
+  "id": "600F",
+  "source": "problemset",
+  "contest_id": 600,
+  "problem_index": "F",
+  "name": "Edge coloring of bipartite graph",
+  "rating": 2800,
+  "tags": [
+    "graphs"
+  ],
+  "solved_count": 1253,
+  "problem_url": "https://codeforces.com/problemset/problem/600/F",
+  "editorial_url": "https://codeforces.com/blog/entry/21827",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an undirected bipartite graph without multiple edges. You should paint the edges of graph to minimal number of colours, so that no two adjacent edges have the same colour.",
+  "input_specification": "The first line contains three integers a , b , m ( 1 ≤ a , b ≤ 1000 , 0 ≤ m ≤ 10 5 ), a is the size of the first part, b is the size of the second part, m is the number of edges in the graph. Each of the next m lines contains two integers x , y ( 1 ≤ x ≤ a , 1 ≤ y ≤ b ), where x is the number of the vertex in the first part and y is the number of the vertex in the second part. It is guaranteed that there are no multiple edges.",
+  "output_specification": "In the first line print integer c — the minimal number of colours. The second line should contain m integers from 1 to c — the colours of the edges (in the order they appear in the input). If there are several solutions, you can print any one of them.",
+  "sample_testcases": [
+    {
+      "input": "4 3 5\n1 2\n2 2\n3 2\n4 1\n4 3",
+      "output": "3\n1 2 3 1 2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:53",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

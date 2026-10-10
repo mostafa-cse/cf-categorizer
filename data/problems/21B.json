@@ -1,0 +1,39 @@
+{
+  "id": "21B",
+  "source": "problemset",
+  "contest_id": 21,
+  "problem_index": "B",
+  "name": "Intersection",
+  "rating": 2000,
+  "tags": [
+    "implementation",
+    "math"
+  ],
+  "solved_count": 1687,
+  "problem_url": "https://codeforces.com/problemset/problem/21/B",
+  "editorial_url": "https://codeforces.com/blog/entry/496",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two set of points. The first set is determined by the equation A 1 x + B 1 y + C 1 = 0 , and the second one is determined by the equation A 2 x + B 2 y + C 2 = 0 . Write the program which finds the number of points in the intersection of two given sets.",
+  "input_specification": "The first line of the input contains three integer numbers A 1 , B 1 , C 1 separated by space. The second line contains three integer numbers A 2 , B 2 , C 2 separated by space. All the numbers are between -100 and 100, inclusive.",
+  "output_specification": "Print the number of points in the intersection or -1 if there are infinite number of points.",
+  "sample_testcases": [
+    {
+      "input": "1 1 0\n2 2 0",
+      "output": "-1"
+    },
+    {
+      "input": "1 1 0\n2 -2 0",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "730E",
+  "source": "problemset",
+  "contest_id": 730,
+  "problem_index": "E",
+  "name": "Award Ceremony",
+  "rating": 2200,
+  "tags": [
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 930,
+  "problem_url": "https://codeforces.com/problemset/problem/730/E",
+  "editorial_url": "https://codeforces.com//www.luogu.com.cn/article/9vn5s0ia",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "All-Berland programming contest comes to an end. In total, n teams participated in it. Like in ACM-ICPC, current results stopped refreshing one hour before the contest ends. So at the Award Ceremony, results are partially known. For each team the value a i is given — the number of points the i -th team has earned before the last hour of the contest. Besides that, the Jury has evaluated all submissions sent during the last hour and knows values d i — the number of points earned by the i -th team during the last hour (these values can be negative, which means that a team can lose points). Before the contest, each team got unique id from 1 to n . According to the contest rules, a team with more points takes a higher place. If two or more teams have equal number of points, the team with lower id will take the higher place. So no two teams can share the same place. The Award Ceremony proceeds in the following way. At the beginning of the ceremony, a large screen shows the results for the time moment \"one hour before the end\", which means that the i -th team has a i points. Then the Jury unfreezes results of the teams one by one in some order. When result of the j -th team is unfrozen, its score changes from a j to a j + d j . At this time the table of results is modified and the place of the team can change. The unfreezing of the j -th team is followed by the applause from the audience with duration of | x j - y j | seconds, where x j is the place of the j -th team before unfreezing and y j is the place right after the unfreezing. For example, if the team does not change the place, there is no applause from the audience. As you can see, during the Award Ceremony, each team will be unfrozen exactly once. Your task is to find such an order to unfreeze all the teams that the total duration of applause is maximum possible.",
+  "input_specification": "The first line of the input file contains a single integer n ( 1 ≤ n ≤ 100 ) — the number of teams. Each of the next n lines contains two integers a i and d i ( 1 ≤ a i ≤ 100 , - 100 ≤ d i ≤ 100 ) — the number of points the i -th team has earned before the last hour of the contest and the number of points earned by this team during the last hour. It is possible that after unfreezing a team will have a negative score.",
+  "output_specification": "Print the only integer — maximal total applause duration in seconds if the Jury can choose any order of the teams to unfreeze.",
+  "sample_testcases": [
+    {
+      "input": "4\n17 -14\n52 -5\n1 52\n6 0",
+      "output": "4"
+    },
+    {
+      "input": "5\n4 5\n3 2\n5 -3\n6 -2\n4 3",
+      "output": "14"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

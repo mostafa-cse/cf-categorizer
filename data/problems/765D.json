@@ -1,0 +1,44 @@
+{
+  "id": "765D",
+  "source": "problemset",
+  "contest_id": 765,
+  "problem_index": "D",
+  "name": "Artsem and Saunders",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dsu",
+    "math"
+  ],
+  "solved_count": 2612,
+  "problem_url": "https://codeforces.com/problemset/problem/765/D",
+  "editorial_url": "https://codeforces.com/blog/entry/50456",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Artsem has a friend Saunders from University of Chicago. Saunders presented him with the following problem. Let [ n ] denote the set {1, ..., n } . We will also write f : [ x ] → [ y ] when a function f is defined in integer points 1 , ..., x , and all its values are integers from 1 to y . Now then, you are given a function f : [ n ] → [ n ] . Your task is to find a positive integer m , and two functions g : [ n ] → [ m ] , h : [ m ] → [ n ] , such that g ( h ( x )) = x for all , and h ( g ( x )) = f ( x ) for all , or determine that finding these is impossible.",
+  "input_specification": "The first line contains an integer n ( 1 ≤ n ≤ 10 5 ). The second line contains n space-separated integers — values f (1), ..., f ( n ) ( 1 ≤ f ( i ) ≤ n ).",
+  "output_specification": "If there is no answer, print one integer -1 . Otherwise, on the first line print the number m ( 1 ≤ m ≤ 10 6 ). On the second line print n numbers g (1), ..., g ( n ) . On the third line print m numbers h (1), ..., h ( m ) . If there are several correct answers, you may output any of them. It is guaranteed that if a valid answer exists, then there is an answer satisfying the above restrictions.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2 3",
+      "output": "3\n1 2 3\n1 2 3"
+    },
+    {
+      "input": "3\n2 2 2",
+      "output": "1\n1 1 1\n2"
+    },
+    {
+      "input": "2\n2 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

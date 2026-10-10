@@ -1,0 +1,41 @@
+{
+  "id": "835D",
+  "source": "problemset",
+  "contest_id": 835,
+  "problem_index": "D",
+  "name": "Palindromic characteristics",
+  "rating": 1900,
+  "tags": [
+    "brute force",
+    "dp",
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 4938,
+  "problem_url": "https://codeforces.com/problemset/problem/835/D",
+  "editorial_url": "https://codeforces.com/blog/entry/53566",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Palindromic characteristics of string s with length | s | is a sequence of | s | integers, where k -th number is the total number of non-empty substrings of s which are k -palindromes. A string is 1 -palindrome if and only if it reads the same backward as forward. A string is k -palindrome ( k > 1 ) if and only if: Its left half equals to its right half. Its left and right halfs are non-empty ( k - 1 )-palindromes. The left half of string t is its prefix of length ⌊| t | / 2⌋ , and right half — the suffix of the same length. ⌊| t | / 2⌋ denotes the length of string t divided by 2 , rounded down. Note that each substring is counted as many times as it appears in the string. For example, in the string \"aaa\" the substring \"a\" appears 3 times.",
+  "input_specification": "The first line contains the string s ( 1 ≤ | s | ≤ 5000 ) consisting of lowercase English letters.",
+  "output_specification": "Print | s | integers — palindromic characteristics of string s .",
+  "sample_testcases": [
+    {
+      "input": "abba",
+      "output": "6 1 0 0"
+    },
+    {
+      "input": "abacaba",
+      "output": "12 4 1 0 0 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

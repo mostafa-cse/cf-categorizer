@@ -1,0 +1,39 @@
+{
+  "id": "100D",
+  "source": "problemset",
+  "contest_id": 100,
+  "problem_index": "D",
+  "name": "World of Mouth",
+  "rating": 1500,
+  "tags": [
+    "*special",
+    "strings"
+  ],
+  "solved_count": 375,
+  "problem_url": "https://codeforces.com/problemset/problem/100/D",
+  "editorial_url": "https://codeforces.com/blog/entry/2359",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are a lot of rumors in the media these days. One day Aida decided to find out how rumors are made. She asked n of her friends to help her. They all formed a circle and Aida told the person to her right a piece of news which was just a simple string. Then each person told the string to the person on his/her right. But they didn't tell the string exactly as they'd heard it. Each person made at most one of these two types of changes: Removing one character from the end of the heard string. Adding a character to the end of the heard string. Finally when the rumor passed exactly n moves (a complete cycle), Aida heard something quite different from what she expected from the person on her left. She thinks someone has cheated and made some changes other than those explained above. Now she wants you to write a Pike piece of code which gets the initial and final strings and tells Aida whether it's possible to get to the final string from the initial one, by the rules described above.",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 8 × 10 6 ), the number of Aida's friends. The following two lines contain a non-empty string each — initial and final strings. The lengths of strings are at most 10 7 and they only contain English alphabet letters.",
+  "output_specification": "Write a single YES or NO . Write YES only if it's possible to get to the final string from the initial string.",
+  "sample_testcases": [
+    {
+      "input": "100\nCodeforces\nMMIODPC",
+      "output": "Yes"
+    },
+    {
+      "input": "5\nMMIOD\nCF",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:03",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

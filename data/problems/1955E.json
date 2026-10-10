@@ -1,0 +1,37 @@
+{
+  "id": "1955E",
+  "source": "problemset",
+  "contest_id": 1955,
+  "problem_index": "E",
+  "name": "Long Inversions",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 10937,
+  "problem_url": "https://codeforces.com/problemset/problem/1955/E",
+  "editorial_url": "https://codeforces.com/blog/entry/128243",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A binary string $$$s$$$ of length $$$n$$$ is given. A binary string is a string consisting only of the characters ' 1 ' and ' 0 '. You can choose an integer $$$k$$$ ($$$1 \\le k \\le n$$$) and then apply the following operation any number of times: choose $$$k$$$ consecutive characters of the string and invert them, i.e., replace all ' 0 ' with ' 1 ' and vice versa. Using these operations, you need to make all the characters in the string equal to ' 1 '. For example, if $$$n=5$$$, $$$s=00100$$$, you can choose $$$k=3$$$ and proceed as follows: choose the substring from the $$$1$$$-st to the $$$3$$$-rd character and obtain $$$s=\\color{blue}{110}00$$$; choose the substring from the $$$3$$$-rd to the $$$5$$$-th character and obtain $$$s=11\\color{blue}{111}$$$; Find the maximum value of $$$k$$$ for which it is possible to make all the characters in the string equal to ' 1 ' using the described operations. Note that the number of operations required to achieve this is not important.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of each test case contains an integer $$$n$$$ ($$$1 \\le n \\le 5000$$$) — the length of the string $$$s$$$. The second line of each test case contains a string $$$s$$$ of length $$$n$$$, consisting of the characters ' 1 ' and ' 0 '. It is guaranteed that the sum of the values $$$n^2$$$ over all test cases in the test does not exceed $$$25 \\cdot 10^6$$$.",
+  "output_specification": "For each test case, output the maximum integer $$$k$$$ ($$$1 \\le k \\le n$$$) for which it is possible to obtain a string $$$s$$$ consisting only of the characters ' 1 ' using the described operations.",
+  "sample_testcases": [
+    {
+      "input": "5\n5\n00100\n5\n01000\n7\n1011101\n3\n000\n2\n10",
+      "output": "3\n2\n4\n3\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:21",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,40 @@
+{
+  "id": "845C",
+  "source": "problemset",
+  "contest_id": 845,
+  "problem_index": "C",
+  "name": "Two TVs",
+  "rating": 1500,
+  "tags": [
+    "data structures",
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 15242,
+  "problem_url": "https://codeforces.com/problemset/problem/845/C",
+  "editorial_url": "https://codeforces.com/blog/entry/53986",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp is a great fan of television. He wrote down all the TV programs he is interested in for today. His list contains n shows, i -th of them starts at moment l i and ends at moment r i . Polycarp owns two TVs. He can watch two different shows simultaneously with two TVs but he can only watch one show at any given moment on a single TV. If one show ends at the same moment some other show starts then you can't watch them on a single TV. Polycarp wants to check out all n shows. Are two TVs enough to do so?",
+  "input_specification": "The first line contains one integer n ( 1 ≤ n ≤ 2·10 5 ) — the number of shows. Each of the next n lines contains two integers l i and r i ( 0 ≤ l i < r i ≤ 10 9 ) — starting and ending time of i -th show.",
+  "output_specification": "If Polycarp is able to check out all the shows using only two TVs then print \" YES \" (without quotes). Otherwise, print \" NO \" (without quotes).",
+  "sample_testcases": [
+    {
+      "input": "3\n1 2\n2 3\n4 5",
+      "output": "YES"
+    },
+    {
+      "input": "4\n1 2\n2 3\n2 3\n1 2",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:53",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

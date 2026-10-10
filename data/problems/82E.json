@@ -1,0 +1,38 @@
+{
+  "id": "82E",
+  "source": "problemset",
+  "contest_id": 82,
+  "problem_index": "E",
+  "name": "Corridor",
+  "rating": 2600,
+  "tags": [
+    "geometry"
+  ],
+  "solved_count": 278,
+  "problem_url": "https://codeforces.com/problemset/problem/82/E",
+  "editorial_url": "https://codeforces.com/blog/entry/1889",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Consider a house plan. Let the house be represented by an infinite horizontal strip defined by the inequality - h ≤ y ≤ h . Strictly outside the house there are two light sources at the points (0, f ) and (0,  - f ) . Windows are located in the walls, the windows are represented by segments on the lines y = h and y =  - h . Also, the windows are arranged symmetrically about the line y = 0 . Your task is to find the area of the floor at the home, which will be lighted by the sources of light.",
+  "input_specification": "The first line of the input file contains three integers n , h and f ( 1 ≤ n ≤ 500 , 1 ≤ h ≤ 10 , h < f ≤ 1000 ). Next, n lines contain two integers each l i , r i ( - 5000 ≤ l i < r i ≤ 5000 ), each entry indicates two segments. Endpoints of the first segment are ( l i , h ) - ( r i , h ) , and endpoints of the second segment are ( l i ,  - h ) - ( r i ,  - h ) . These segments describe location of windows. Numbers in the lines are space-separated. It is guaranteed that no two distinct segments have common points.",
+  "output_specification": "Print the single real number — the area of the illuminated part of the floor with an absolute or relative error of no more than 10 - 4 .",
+  "sample_testcases": [
+    {
+      "input": "1 1 2\n-1 1",
+      "output": "10.0000000000"
+    },
+    {
+      "input": "2 2 4\n-1 0\n1 2",
+      "output": "23.3333333333"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:09",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

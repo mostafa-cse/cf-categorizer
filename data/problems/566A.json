@@ -1,0 +1,36 @@
+{
+  "id": "566A",
+  "source": "problemset",
+  "contest_id": 566,
+  "problem_index": "A",
+  "name": "Matching Names",
+  "rating": 2300,
+  "tags": [
+    "dfs and similar",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 1113,
+  "problem_url": "https://codeforces.com/problemset/problem/566/A",
+  "editorial_url": "https://codeforces.com/blog/entry/19518",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Teachers of one programming summer school decided to make a surprise for the students by giving them names in the style of the \"Hobbit\" movie. Each student must get a pseudonym maximally similar to his own name. The pseudonym must be a name of some character of the popular saga and now the teachers are busy matching pseudonyms to student names. There are n students in a summer school. Teachers chose exactly n pseudonyms for them. Each student must get exactly one pseudonym corresponding to him. Let us determine the relevance of a pseudonym b to a student with name a as the length of the largest common prefix a and b . We will represent such value as . Then we can determine the quality of matching of the pseudonyms to students as a sum of relevances of all pseudonyms to the corresponding students. Find the matching between students and pseudonyms with the maximum quality .",
+  "input_specification": "The first line contains number n ( 1 ≤ n ≤ 100 000 ) — the number of students in the summer school. Next n lines contain the name of the students. Each name is a non-empty word consisting of lowercase English letters. Some names can be repeating. The last n lines contain the given pseudonyms. Each pseudonym is a non-empty word consisting of small English letters. Some pseudonyms can be repeating. The total length of all the names and pseudonyms doesn't exceed 800 000 characters.",
+  "output_specification": "In the first line print the maximum possible quality of matching pseudonyms to students. In the next n lines describe the optimal matching. Each line must have the form a b ( 1 ≤ a , b ≤ n ), that means that the student who was number a in the input, must match to the pseudonym number b in the input. The matching should be a one-to-one correspondence, that is, each student and each pseudonym should occur exactly once in your output. If there are several optimal answers, output any.",
+  "sample_testcases": [
+    {
+      "input": "5\ngennady\ngalya\nboris\nbill\ntoshik\nbilbo\ntorin\ngendalf\nsmaug\ngaladriel",
+      "output": "11\n4 1\n2 5\n1 3\n5 2\n3 4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:01",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

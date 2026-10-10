@@ -1,0 +1,44 @@
+{
+  "id": "1515E",
+  "source": "problemset",
+  "contest_id": 1515,
+  "problem_index": "E",
+  "name": "Phoenix and Computers",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 4816,
+  "problem_url": "https://codeforces.com/problemset/problem/1515/E",
+  "editorial_url": "https://codeforces.com/blog/entry/90236",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are $$$n$$$ computers in a row, all originally off, and Phoenix wants to turn all of them on. He will manually turn on computers one at a time. At any point, if computer $$$i-1$$$ and computer $$$i+1$$$ are both on, computer $$$i$$$ $$$(2 \\le i \\le n-1)$$$ will turn on automatically if it is not already on. Note that Phoenix cannot manually turn on a computer that already turned on automatically. If we only consider the sequence of computers that Phoenix turns on manually, how many ways can he turn on all the computers? Two sequences are distinct if either the set of computers turned on manually is distinct, or the order of computers turned on manually is distinct. Since this number may be large, please print it modulo $$$M$$$.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$M$$$ ($$$3 \\le n \\le 400$$$; $$$10^8 \\le M \\le 10^9$$$) — the number of computers and the modulo. It is guaranteed that $$$M$$$ is prime.",
+  "output_specification": "Print one integer — the number of ways to turn on the computers modulo $$$M$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 100000007",
+      "output": "6"
+    },
+    {
+      "input": "4 100000007",
+      "output": "20"
+    },
+    {
+      "input": "400 234567899",
+      "output": "20914007"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

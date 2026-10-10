@@ -1,0 +1,38 @@
+{
+  "id": "527D",
+  "source": "problemset",
+  "contest_id": 527,
+  "problem_index": "D",
+  "name": "Clique Problem",
+  "rating": 1800,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 5159,
+  "problem_url": "https://codeforces.com/problemset/problem/527/D",
+  "editorial_url": "https://codeforces.com/blog/entry/17020",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The clique problem is one of the most well-known NP-complete problems. Under some simplification it can be formulated as follows. Consider an undirected graph G . It is required to find a subset of vertices C of the maximum size such that any two of them are connected by an edge in graph G . Sounds simple, doesn't it? Nobody yet knows an algorithm that finds a solution to this problem in polynomial time of the size of the graph. However, as with many other NP-complete problems, the clique problem is easier if you consider a specific type of a graph. Consider n distinct points on a line. Let the i -th point have the coordinate x i and weight w i . Let's form graph G , whose vertices are these points and edges connect exactly the pairs of points ( i , j ) , such that the distance between them is not less than the sum of their weights, or more formally: | x i - x j | ≥ w i + w j . Find the size of the maximum clique in such graph.",
+  "input_specification": "The first line contains the integer n ( 1 ≤ n ≤ 200 000 ) — the number of points. Each of the next n lines contains two numbers x i , w i ( 0 ≤ x i ≤ 10 9 , 1 ≤ w i ≤ 10 9 ) — the coordinate and the weight of a point. All x i are different.",
+  "output_specification": "Print a single number — the number of vertexes in the maximum clique of the given graph.",
+  "sample_testcases": [
+    {
+      "input": "4\n2 3\n3 1\n6 1\n0 2",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:09",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

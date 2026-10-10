@@ -1,0 +1,35 @@
+{
+  "id": "120E",
+  "source": "problemset",
+  "contest_id": 120,
+  "problem_index": "E",
+  "name": "Put Knight!",
+  "rating": 1400,
+  "tags": [
+    "games",
+    "math"
+  ],
+  "solved_count": 3036,
+  "problem_url": "https://codeforces.com/problemset/problem/120/E",
+  "editorial_url": "https://codeforces.com/blog/entry/2892",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Petya and Gena play a very interesting game \"Put a Knight!\" on a chessboard n × n in size. In this game they take turns to put chess pieces called \"knights\" on the board so that no two knights could threat each other. A knight located in square ( r , c ) can threat squares ( r - 1, c + 2) , ( r - 1, c - 2) , ( r + 1, c + 2) , ( r + 1, c - 2) , ( r - 2, c + 1) , ( r - 2, c - 1) , ( r + 2, c + 1) and ( r + 2, c - 1) (some of the squares may be located outside the chessboard). The player who can't put a new knight during his move loses. Determine which player wins considering that both players play optimally well and Petya starts.",
+  "input_specification": "The first line contains integer T ( 1 ≤ T ≤ 100 ) — the number of boards, for which you should determine the winning player. Next T lines contain T integers n i ( 1 ≤ n i ≤ 10000 ) — the sizes of the chessboards.",
+  "output_specification": "For each n i × n i board print on a single line \" 0 \" if Petya wins considering both players play optimally well. Otherwise, print \" 1 \".",
+  "sample_testcases": [
+    {
+      "input": "2\n2\n1",
+      "output": "1\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:57",
+  "main_topic": "Game Theory",
+  "subtopic": "Grundy Number / Nim",
+  "subsubtopic": "472. Grundy Number and Basic Game Theory",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Compute Sprague-Grundy values g(u) = mex({g(v) : u -> v}). Game state is winning iff XOR sum of independent game components is non-zero."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "731E",
+  "source": "problemset",
+  "contest_id": 731,
+  "problem_index": "E",
+  "name": "Funny Game",
+  "rating": 2200,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 1943,
+  "problem_url": "https://codeforces.com/problemset/problem/731/E",
+  "editorial_url": "https://codeforces.com/blog/entry/47840",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Once upon a time Petya and Gena gathered after another programming competition and decided to play some game. As they consider most modern games to be boring, they always try to invent their own games. They have only stickers and markers, but that won't stop them. The game they came up with has the following rules. Initially, there are n stickers on the wall arranged in a row. Each sticker has some number written on it. Now they alternate turn, Petya moves first. One move happens as follows. Lets say there are m ≥ 2 stickers on the wall. The player, who makes the current move, picks some integer k from 2 to m and takes k leftmost stickers (removes them from the wall). After that he makes the new sticker, puts it to the left end of the row, and writes on it the new integer, equal to the sum of all stickers he took on this move. Game ends when there is only one sticker left on the wall. The score of the player is equal to the sum of integers written on all stickers he took during all his moves. The goal of each player is to maximize the difference between his score and the score of his opponent. Given the integer n and the initial sequence of stickers on the wall, define the result of the game, i.e. the difference between the Petya's and Gena's score if both players play optimally.",
+  "input_specification": "The first line of input contains a single integer n ( 2 ≤ n ≤ 200 000 ) — the number of stickers, initially located on the wall. The second line contains n integers a 1 , a 2 , ..., a n ( - 10 000 ≤ a i ≤ 10 000 ) — the numbers on stickers in order from left to right.",
+  "output_specification": "Print one integer — the difference between the Petya's score and Gena's score at the end of the game if both players play optimally.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 4 8",
+      "output": "14"
+    },
+    {
+      "input": "4\n1 -7 -2 3",
+      "output": "-3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:21",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

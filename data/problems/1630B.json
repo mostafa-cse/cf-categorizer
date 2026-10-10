@@ -1,0 +1,38 @@
+{
+  "id": "1630B",
+  "source": "problemset",
+  "contest_id": 1630,
+  "problem_index": "B",
+  "name": "Range and Partition",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "data structures",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 6593,
+  "problem_url": "https://codeforces.com/problemset/problem/1630/B",
+  "editorial_url": "https://codeforces.com/blog/entry/99384",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Given an array $$$a$$$ of $$$n$$$ integers, find a range of values $$$[x, y]$$$ ($$$x \\le y$$$), and split $$$a$$$ into exactly $$$k$$$ ($$$1 \\le k \\le n$$$) subarrays in such a way that: Each subarray is formed by several continuous elements of $$$a$$$, that is, it is equal to $$$a_l, a_{l+1}, \\ldots, a_r$$$ for some $$$l$$$ and $$$r$$$ ($$$1 \\leq l \\leq r \\leq n$$$). Each element from $$$a$$$ belongs to exactly one subarray. In each subarray the number of elements inside the range $$$[x, y]$$$ (inclusive) is strictly greater than the number of elements outside the range. An element with index $$$i$$$ is inside the range $$$[x, y]$$$ if and only if $$$x \\le a_i \\le y$$$. Print any solution that minimizes $$$y - x$$$.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 3 \\cdot 10^4$$$) — the number of test cases. Description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 2 \\cdot 10^5$$$) — the length of the array $$$a$$$ and the number of subarrays required in the partition. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) where $$$a_i$$$ is the $$$i$$$-th element of the array. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot10^5$$$.",
+  "output_specification": "For each test case, print $$$k+1$$$ lines. In the first line, print $$$x$$$ and $$$y$$$ — the limits of the found range. Then print $$$k$$$ lines, the $$$i$$$-th should contain $$$l_i$$$ and $$$r_i$$$ ($$$1\\leq l_i \\leq r_i \\leq n$$$) — the limits of the $$$i$$$-th subarray. You can print the subarrays in any order.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 1\n1 2\n4 2\n1 2 2 2\n11 3\n5 5 5 1 5 5 1 5 5 5 1",
+      "output": "1 2\n1 2\n2 2\n1 3\n4 4\n5 5\n1 1\n2 2\n3 11"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

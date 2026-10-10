@@ -1,0 +1,48 @@
+{
+  "id": "1129C",
+  "source": "problemset",
+  "contest_id": 1129,
+  "problem_index": "C",
+  "name": "Morse Code",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dp",
+    "hashing",
+    "sortings",
+    "string suffix structures",
+    "strings"
+  ],
+  "solved_count": 1065,
+  "problem_url": "https://codeforces.com/problemset/problem/1129/C",
+  "editorial_url": "https://codeforces.com/blog/entry/65520",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In Morse code, an letter of English alphabet is represented as a string of some length from $$$1$$$ to $$$4$$$. Moreover, each Morse code representation of an English letter contains only dots and dashes. In this task, we will represent a dot with a \" 0 \" and a dash with a \" 1 \". Because there are $$$2^1+2^2+2^3+2^4 = 30$$$ strings with length $$$1$$$ to $$$4$$$ containing only \" 0 \" and/or \" 1 \", not all of them correspond to one of the $$$26$$$ English letters. In particular, each string of \" 0 \" and/or \" 1 \" of length at most $$$4$$$ translates into a distinct English letter, except the following four strings that do not correspond to any English alphabet: \" 0011 \", \" 0101 \", \" 1110 \", and \" 1111 \". You will work with a string $$$S$$$, which is initially empty. For $$$m$$$ times, either a dot or a dash will be appended to $$$S$$$, one at a time. Your task is to find and report, after each of these modifications to string $$$S$$$, the number of non-empty sequences of English letters that are represented with some substring of $$$S$$$ in Morse code. Since the answers can be incredibly tremendous, print them modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first line contains an integer $$$m$$$ ($$$1 \\leq m \\leq 3\\,000$$$) — the number of modifications to $$$S$$$. Each of the next $$$m$$$ lines contains either a \" 0 \" (representing a dot) or a \" 1 \" (representing a dash), specifying which character should be appended to $$$S$$$.",
+  "output_specification": "Print $$$m$$$ lines, the $$$i$$$-th of which being the answer after the $$$i$$$-th modification to $$$S$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1\n1\n1",
+      "output": "1\n3\n7"
+    },
+    {
+      "input": "5\n1\n0\n1\n0\n1",
+      "output": "1\n4\n10\n22\n43"
+    },
+    {
+      "input": "9\n1\n1\n0\n0\n0\n1\n1\n0\n1",
+      "output": "1\n3\n10\n24\n51\n109\n213\n421\n833"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:50",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

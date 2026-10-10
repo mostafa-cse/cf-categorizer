@@ -1,0 +1,39 @@
+{
+  "id": "1830C",
+  "source": "problemset",
+  "contest_id": 1830,
+  "problem_index": "C",
+  "name": "Hyperregular Bracket Strings",
+  "rating": 2400,
+  "tags": [
+    "combinatorics",
+    "greedy",
+    "hashing",
+    "math",
+    "number theory",
+    "sortings"
+  ],
+  "solved_count": 2401,
+  "problem_url": "https://codeforces.com/problemset/problem/1830/C",
+  "editorial_url": "https://codeforces.com/blog/entry/116527",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$ and $$$k$$$ intervals. The $$$i$$$-th interval is $$$[l_i,r_i]$$$ where $$$1 \\leq l_i \\leq r_i \\leq n$$$. Let us call a regular bracket sequence$$$^{\\dagger,\\ddagger}$$$ of length $$$n$$$ hyperregular if for each $$$i$$$ such that $$$1 \\leq i \\leq k$$$, the substring $$$\\overline{s_{l_i} s_{l_{i}+1} \\ldots s_{r_i}}$$$ is also a regular bracket sequence. Your task is to count the number of hyperregular bracket sequences. Since this number can be really large, you are only required to find it modulo $$$998\\,244\\,353$$$. $$$^\\dagger$$$ A bracket sequence is a string containing only the characters \" ( \" and \" ) \". $$$^\\ddagger$$$ A bracket sequence is called regular if one can turn it into a valid math expression by adding characters + and 1 . For example, sequences (())() , () , (()(())) and the empty string are regular, while )( , (() , and (()))( are not.",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^5$$$) — the number of test cases. The description of test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le n \\le 3 \\cdot 10^5$$$, $$$0 \\le k \\le 3 \\cdot 10^5$$$) — the length of the hyperregular bracket sequences and the number of intervals respectively. The following $$$k$$$ lines of each test case contains two integers $$$l_i$$$ and $$$r_i$$$ ($$$1 \\le l \\le r \\le n$$$). It is guaranteed that the sum of $$$n$$$ across all test cases does not exceed $$$3 \\cdot 10^5$$$ and the sum of $$$k$$$ across all test cases does not exceed $$$3 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output the number of hyperregular bracket sequences modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\n6 0\n5 0\n8 1\n1 3\n10 2\n3 4\n6 9\n1000 3\n100 701\n200 801\n300 901\n28 5\n1 12\n3 20\n11 14\n4 9\n18 19\n4 3\n1 4\n1 4\n1 4",
+      "output": "5\n0\n0\n4\n839415253\n140\n2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:55",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

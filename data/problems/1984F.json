@@ -1,0 +1,36 @@
+{
+  "id": "1984F",
+  "source": "problemset",
+  "contest_id": 1984,
+  "problem_index": "F",
+  "name": "Reconstruction",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "dp",
+    "math"
+  ],
+  "solved_count": 1203,
+  "problem_url": "https://codeforces.com/problemset/problem/1984/F",
+  "editorial_url": "https://codeforces.com/blog/entry/130252",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There is a hidden array $$$a_1, a_2, \\ldots, a_n$$$ of length $$$n$$$ whose elements are integers between $$$-m$$$ and $$$m$$$, inclusive. You are given an array $$$b_1, b_2, \\ldots, b_n$$$ of length $$$n$$$ and a string $$$s$$$ of length $$$n$$$ consisting of the characters $$$\\texttt{P}$$$, $$$\\texttt{S}$$$, and $$$\\texttt{?}$$$. For each $$$i$$$ from $$$1$$$ to $$$n$$$ inclusive, we must have: If $$$s_i = \\texttt{P}$$$, $$$b_i$$$ is the sum of $$$a_1$$$ through $$$a_i$$$. If $$$s_i = \\texttt{S}$$$, $$$b_i$$$ is the sum of $$$a_i$$$ through $$$a_n$$$. Output the number of ways to replace all $$$\\texttt{?}$$$ in $$$s$$$ with either $$$\\texttt{P}$$$ or $$$\\texttt{S}$$$ such that there exists an array $$$a_1, a_2, \\ldots, a_n$$$ with elements not exceeding $$$m$$$ by absolute value satisfying the constraints given by the array $$$b_1, b_2, \\ldots, b_n$$$ and the string $$$s$$$. Since the answer may be large, output it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 10^3$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^3$$$, $$$2 \\leq m \\leq 10^{9}$$$) — the length of the hidden array $$$a_1, a_2, \\ldots, a_n$$$ and the maximum absolute value of an element $$$a_i$$$. The second line of each test case contains a string $$$s$$$ of length $$$n$$$ consisting of characters $$$\\texttt{P}$$$, $$$\\texttt{S}$$$, and $$$\\texttt{?}$$$. The third line of each test case contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$|b_i| \\leq m \\cdot n$$$). The sum of $$$n$$$ over all test cases does not exceed $$$5 \\cdot 10^3$$$.",
+  "output_specification": "For each test case, output a single integer — the number of ways to replace all $$$\\texttt{?}$$$ in $$$s$$$ with either $$$\\texttt{P}$$$ or $$$\\texttt{S}$$$ that result in the existence of a valid array $$$a_1, a_2, \\ldots, a_n$$$, modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n4 10\nPSPP\n1 9 8 10\n4 1000000000\n????\n1 1 1 4000000000\n8 1000000000\n?P?SSP?P\n-857095623 -1424391899 -851974476 673437144 471253851 -543483033 364945701 -178537332\n4 7\nPPSS\n4 2 1 3\n9 20\n?????????\n1 2 3 4 5 6 7 8 9\n3 1000000000\nP??\n-145463248 -974068460 -1287458396",
+      "output": "1\n0\n2\n1\n14\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

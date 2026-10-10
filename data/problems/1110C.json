@@ -1,0 +1,36 @@
+{
+  "id": "1110C",
+  "source": "problemset",
+  "contest_id": 1110,
+  "problem_index": "C",
+  "name": "Meaningless Operations",
+  "rating": 1500,
+  "tags": [
+    "constructive algorithms",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 10162,
+  "problem_url": "https://codeforces.com/problemset/problem/1110/C",
+  "editorial_url": "https://codeforces.com/blog/entry/65079",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Can the greatest common divisor and bitwise operations have anything in common? It is time to answer this question. Suppose you are given a positive integer $$$a$$$. You want to choose some integer $$$b$$$ from $$$1$$$ to $$$a - 1$$$ inclusive in such a way that the greatest common divisor (GCD) of integers $$$a \\oplus b$$$ and $$$a \\ \\gt \\& \\ \\gt b$$$ is as large as possible. In other words, you'd like to compute the following function: $$$$$$f(a) = \\max_{0 \\lt b \\lt a}{gcd(a \\oplus b, a \\ \\gt \\& \\ \\gt b)}.$$$$$$ Here $$$\\oplus$$$ denotes the bitwise XOR operation , and $$$\\&$$$ denotes the bitwise AND operation . The greatest common divisor of two integers $$$x$$$ and $$$y$$$ is the largest integer $$$g$$$ such that both $$$x$$$ and $$$y$$$ are divided by $$$g$$$ without remainder. You are given $$$q$$$ integers $$$a_1, a_2, \\ldots, a_q$$$. For each of these integers compute the largest possible value of the greatest common divisor (when $$$b$$$ is chosen optimally).",
+  "input_specification": "The first line contains an integer $$$q$$$ ($$$1 \\le q \\le 10^3$$$) — the number of integers you need to compute the answer for. After that $$$q$$$ integers are given, one per line: $$$a_1, a_2, \\ldots, a_q$$$ ($$$2 \\le a_i \\le 2^{25} - 1$$$) — the integers you need to compute the answer for.",
+  "output_specification": "For each integer, print the answer in the same order as the integers are given in input.",
+  "sample_testcases": [
+    {
+      "input": "3\n2\n3\n5",
+      "output": "3\n1\n7"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:53",
+  "main_topic": "Number Theory",
+  "subtopic": "Euclidean Algorithm",
+  "subsubtopic": "262. Euclidean Algorithm",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Euclidean Algorithm paradigm under the Number Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

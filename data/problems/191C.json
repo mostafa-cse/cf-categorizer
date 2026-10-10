@@ -1,0 +1,40 @@
+{
+  "id": "191C",
+  "source": "problemset",
+  "contest_id": 191,
+  "problem_index": "C",
+  "name": "Fools and Roads",
+  "rating": 1900,
+  "tags": [
+    "data structures",
+    "dfs and similar",
+    "trees"
+  ],
+  "solved_count": 10146,
+  "problem_url": "https://codeforces.com/problemset/problem/191/C",
+  "editorial_url": "https://codeforces.com/blog/entry/4634",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "They say that Berland has exactly two problems, fools and roads. Besides, Berland has n cities, populated by the fools and connected by the roads. All Berland roads are bidirectional. As there are many fools in Berland, between each pair of cities there is a path (or else the fools would get upset). Also, between each pair of cities there is no more than one simple path (or else the fools would get lost). But that is not the end of Berland's special features. In this country fools sometimes visit each other and thus spoil the roads. The fools aren't very smart, so they always use only the simple paths. A simple path is the path which goes through every Berland city not more than once. The Berland government knows the paths which the fools use. Help the government count for each road, how many distinct fools can go on it. Note how the fools' paths are given in the input.",
+  "input_specification": "The first line contains a single integer n ( 2 ≤ n ≤ 10 5 ) — the number of cities. Each of the next n - 1 lines contains two space-separated integers u i , v i ( 1 ≤ u i , v i ≤ n , u i ≠ v i ), that means that there is a road connecting cities u i and v i . The next line contains integer k ( 0 ≤ k ≤ 10 5 ) — the number of pairs of fools who visit each other. Next k lines contain two space-separated numbers. The i -th line ( i > 0) contains numbers a i , b i ( 1 ≤ a i , b i ≤ n ). That means that the fool number 2 i - 1 lives in city a i and visits the fool number 2 i , who lives in city b i . The given pairs describe simple paths, because between every pair of cities there is only one simple path.",
+  "output_specification": "Print n - 1 integer. The integers should be separated by spaces. The i -th number should equal the number of fools who can go on the i -th road. The roads are numbered starting from one in the order, in which they occur in the input.",
+  "sample_testcases": [
+    {
+      "input": "5\n1 2\n1 3\n2 4\n2 5\n2\n1 4\n3 5",
+      "output": "2 1 1 1"
+    },
+    {
+      "input": "5\n3 4\n4 5\n1 4\n2 4\n3\n2 3\n1 3\n3 5",
+      "output": "3 1 1 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:24",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

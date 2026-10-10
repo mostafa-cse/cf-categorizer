@@ -1,0 +1,39 @@
+{
+  "id": "248B",
+  "source": "problemset",
+  "contest_id": 248,
+  "problem_index": "B",
+  "name": "Chilly Willy",
+  "rating": 1400,
+  "tags": [
+    "math",
+    "number theory"
+  ],
+  "solved_count": 5915,
+  "problem_url": "https://codeforces.com/problemset/problem/248/B",
+  "editorial_url": "https://codeforces.com/blog/entry/5979",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Chilly Willy loves playing with numbers. He only knows prime numbers that are digits yet. These numbers are 2 , 3 , 5 and 7 . But Willy grew rather bored of such numbers, so he came up with a few games that were connected with them. Chilly Willy wants to find the minimum number of length n , such that it is simultaneously divisible by all numbers Willy already knows ( 2 , 3 , 5 and 7 ). Help him with that. A number's length is the number of digits in its decimal representation without leading zeros.",
+  "input_specification": "A single input line contains a single integer n ( 1 ≤ n ≤ 10 5 ).",
+  "output_specification": "Print a single integer — the answer to the problem without leading zeroes, or \" -1 \" (without the quotes), if the number that meet the problem condition does not exist.",
+  "sample_testcases": [
+    {
+      "input": "1",
+      "output": "-1"
+    },
+    {
+      "input": "5",
+      "output": "10080"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:58",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

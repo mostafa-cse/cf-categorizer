@@ -1,0 +1,49 @@
+{
+  "id": "356D",
+  "source": "problemset",
+  "contest_id": 356,
+  "problem_index": "D",
+  "name": "Bags and Coins",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 1179,
+  "problem_url": "https://codeforces.com/problemset/problem/356/D",
+  "editorial_url": "https://codeforces.com/blog/entry/9210",
+  "time_limit": "2.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "When you were a child you must have been told a puzzle of bags and coins. Anyway, here's one of its versions: A horse has three bags. The first bag has one coin, the second bag has one coin and the third bag has three coins. In total, the horse has three coins in the bags. How is that possible? The answer is quite simple. The third bag contains a coin and two other bags. This problem is a generalization of the childhood puzzle. You have n bags. You know that the first bag contains a 1 coins, the second bag contains a 2 coins, ..., the n -th bag contains a n coins. In total, there are s coins. Find the way to arrange the bags and coins so that they match the described scenario or else state that it is impossible to do.",
+  "input_specification": "The first line contains two integers n and s (1 ≤ n , s ≤ 70000) — the number of bags and the total number of coins. The next line contains n integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 70000) , where a i shows the number of coins in the i -th bag.",
+  "output_specification": "If the answer doesn't exist, print -1 . Otherwise, print n lines, on the i -th line print the contents of the i -th bag. The first number in the line, c i (0 ≤ c i ≤ a i ) , must represent the number of coins lying directly in the i -th bag (the coins in the bags that are in the i -th bag are not taken into consideration). The second number in the line, k i (0 ≤ k i < n ) must represent the number of bags that lie directly in the i -th bag (the bags that are inside the bags lying in the i -th bag are not taken into consideration). Next, the line must contain k i integers — the numbers of the bags that are lying directly in the i -th bag. The total number of coins in the solution must equal s . If we count the total number of coins the i -th bag in the solution has, we should get a i . No bag can directly lie in more than one bag. The bags can be nested in more than one level (see the second test case). If there are multiple correct answers, you can print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 3 1",
+      "output": "1 0\n1 2 3 1\n1 0"
+    },
+    {
+      "input": "3 3\n1 3 1",
+      "output": "1 0\n2 1 3\n0 1 1"
+    },
+    {
+      "input": "1 2\n1",
+      "output": "-1"
+    },
+    {
+      "input": "8 10\n2 7 3 4 1 3 1 2",
+      "output": "2 0\n1 2 1 4\n0 2 7 8\n0 2 5 6\n1 0\n3 0\n1 0\n2 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:08",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

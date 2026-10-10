@@ -1,0 +1,37 @@
+{
+  "id": "1286C1",
+  "source": "problemset",
+  "contest_id": 1286,
+  "problem_index": "C1",
+  "name": "Madhouse (Easy version)",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "interactive",
+    "math"
+  ],
+  "solved_count": 1635,
+  "problem_url": "https://codeforces.com/problemset/problem/1286/C1",
+  "editorial_url": "https://codeforces.com/blog/entry/72867",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "This problem is different with hard version only by constraints on total answers length It is an interactive problem Venya joined a tour to the madhouse, in which orderlies play with patients the following game. Orderlies pick a string $$$s$$$ of length $$$n$$$, consisting only of lowercase English letters. The player can ask two types of queries: ? l r – ask to list all substrings of $$$s[l..r]$$$. Substrings will be returned in random order, and in every substring, all characters will be randomly shuffled. ! s – guess the string picked by the orderlies. This query can be asked exactly once, after that the game will finish. If the string is guessed correctly, the player wins, otherwise he loses. The player can ask no more than $$$3$$$ queries of the first type. To make it easier for the orderlies, there is an additional limitation: the total number of returned substrings in all queries of the first type must not exceed $$$(n+1)^2$$$. Venya asked you to write a program, which will guess the string by interacting with the orderlies' program and acting by the game's rules. Your program should immediately terminate after guessing the string using a query of the second type. In case your program guessed the string incorrectly, or it violated the game rules, it will receive verdict Wrong answer . Note that in every test case the string is fixed beforehand and will not change during the game, which means that the interactor is not adaptive.",
+  "input_specification": "First line contains number $$$n$$$ ($$$1 \\le n \\le 100$$$) — the length of the picked string.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "4\n\na\naa\na\n\ncb\nb\nc\n\nc",
+      "output": "? 1 2\n\n? 3 4\n\n? 4 4\n\n! aabc"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:08",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

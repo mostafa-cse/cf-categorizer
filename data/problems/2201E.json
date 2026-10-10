@@ -1,0 +1,37 @@
+{
+  "id": "2201E",
+  "source": "problemset",
+  "contest_id": 2201,
+  "problem_index": "E",
+  "name": "ABBA Counting",
+  "rating": 2900,
+  "tags": [
+    "fft",
+    "math",
+    "number theory",
+    "strings"
+  ],
+  "solved_count": 316,
+  "problem_url": "https://codeforces.com/problemset/problem/2201/E",
+  "editorial_url": "https://codeforces.com/blog/entry/151515",
+  "time_limit": "3.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$T$$$ of length $$$n$$$ ( $$$n$$$ is even ), which consists of ' a ', ' b ', and ' ? '. Please count the strings $$$S$$$ which satisfy the following conditions: $$$|S|=n$$$; $$$S_i$$$ is either ' a ' or ' b ' for all $$$1 \\le i \\le n$$$; $$$S_i=T_i$$$ for all $$$1 \\le i \\le n$$$ such that $$$T_i$$$ is not ' ? '; There exist two (possibly empty) strings $$$A$$$ and $$$B$$$ such that $$$S=A+B+B+A$$$. Here, $$$+$$$ denotes string concatenation . As the answer may be inexplicably huge, you are only asked to compute it modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\le n \\le 400\\,000$$$, $$$n$$$ is even ). The second line of each test case contains a string $$$T$$$ of length $$$n$$$, consisting of ' a ', ' b ', and ' ? '. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$400\\,000$$$.",
+  "output_specification": "For each test case, output the answer modulo $$$998\\,244\\,353$$$ on a separate line.",
+  "sample_testcases": [
+    {
+      "input": "6\n2\na?\n2\n??\n4\na??a\n4\nab??\n12\n??a?b??a??ba\n12\n?ab???b??a??",
+      "output": "1\n2\n2\n2\n10\n22"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:35",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

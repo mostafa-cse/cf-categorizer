@@ -1,0 +1,37 @@
+{
+  "id": "1771B",
+  "source": "problemset",
+  "contest_id": 1771,
+  "problem_index": "B",
+  "name": "Hossam and Friends",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "dp",
+    "two pointers"
+  ],
+  "solved_count": 23435,
+  "problem_url": "https://codeforces.com/problemset/problem/1771/B",
+  "editorial_url": "https://codeforces.com/blog/entry/110092",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Hossam makes a big party, and he will invite his friends to the party. He has $$$n$$$ friends numbered from $$$1$$$ to $$$n$$$. They will be arranged in a queue as follows: $$$1, 2, 3, \\ldots, n$$$. Hossam has a list of $$$m$$$ pairs of his friends that don't know each other. Any pair not present in this list are friends. A subsegment of the queue starting from the friend $$$a$$$ and ending at the friend $$$b$$$ is $$$[a, a + 1, a + 2, \\ldots, b]$$$. A subsegment of the queue is called good when all pairs of that segment are friends. Hossam wants to know how many pairs $$$(a, b)$$$ there are ($$$1 \\le a \\le b \\le n$$$), such that the subsegment starting from the friend $$$a$$$ and ending at the friend $$$b$$$ is good.",
+  "input_specification": "The input consists of multiple test cases. The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$), the number of test cases. Description of the test cases follows. The first line of each test case contains two integer numbers $$$n$$$ and $$$m$$$ ($$$2 \\le n \\le 10^5$$$, $$$0 \\le m \\le 10^5$$$) representing the number of friends and the number of pairs, respectively. The $$$i$$$-th of the next $$$m$$$ lines contains two integers $$$x_i$$$ and $$$y_i$$$ ($$$1 \\le x_i, y_i\\le n$$$, $$$x_i \\neq y_i$$$) representing a pair of Hossam's friends that don't know each other. Note that pairs can be repeated. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$, and the sum of $$$m$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case print an integer — the number of good subsegments.",
+  "sample_testcases": [
+    {
+      "input": "2\n3 2\n1 3\n2 3\n4 2\n1 2\n2 3",
+      "output": "4\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:09",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

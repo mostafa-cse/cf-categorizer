@@ -1,0 +1,38 @@
+{
+  "id": "19A",
+  "source": "problemset",
+  "contest_id": 19,
+  "problem_index": "A",
+  "name": "World Football Cup",
+  "rating": 1400,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3287,
+  "problem_url": "https://codeforces.com/problemset/problem/19/A",
+  "editorial_url": "https://codeforces.com/blog/entry/559",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "Everyone knows that 2010 FIFA World Cup is being held in South Africa now. By the decision of BFA (Berland's Football Association) next World Cup will be held in Berland. BFA took the decision to change some World Cup regulations: the final tournament features n teams ( n is always even) the first n / 2 teams (according to the standings) come through to the knockout stage the standings are made on the following principle: for a victory a team gets 3 points, for a draw — 1 point, for a defeat — 0 points. In the first place, teams are ordered in the standings in decreasing order of their points; in the second place — in decreasing order of the difference between scored and missed goals; in the third place — in the decreasing order of scored goals it's written in Berland's Constitution that the previous regulation helps to order the teams without ambiguity. You are asked to write a program that, by the given list of the competing teams and the results of all the matches, will find the list of teams that managed to get through to the knockout stage.",
+  "input_specification": "The first input line contains the only integer n ( 1 ≤ n ≤ 50 ) — amount of the teams, taking part in the final tournament of World Cup. The following n lines contain the names of these teams, a name is a string of lower-case and upper-case Latin letters, its length doesn't exceed 30 characters. The following n ·( n - 1) / 2 lines describe the held matches in the format name1-name2 num1:num2 , where name 1 , name 2 — names of the teams; num 1 , num 2 ( 0 ≤ num 1, num 2 ≤ 100 ) — amount of the goals, scored by the corresponding teams. Accuracy of the descriptions is guaranteed: there are no two team names coinciding accurate to the letters' case; there is no match, where a team plays with itself; each match is met in the descriptions only once.",
+  "output_specification": "Output n / 2 lines — names of the teams, which managed to get through to the knockout stage in lexicographical order. Output each name in a separate line. No odd characters (including spaces) are allowed. It's guaranteed that the described regulations help to order the teams without ambiguity.",
+  "sample_testcases": [
+    {
+      "input": "4\nA\nB\nC\nD\nA-B 1:1\nA-C 2:2\nA-D 1:0\nB-C 1:0\nB-D 0:3\nC-D 0:3",
+      "output": "A\nD"
+    },
+    {
+      "input": "2\na\nA\na-A 2:1",
+      "output": "a"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": false,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

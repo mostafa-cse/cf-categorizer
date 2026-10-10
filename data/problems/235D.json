@@ -1,0 +1,42 @@
+{
+  "id": "235D",
+  "source": "problemset",
+  "contest_id": 235,
+  "problem_index": "D",
+  "name": "Graph Game",
+  "rating": 3000,
+  "tags": [
+    "graphs"
+  ],
+  "solved_count": 728,
+  "problem_url": "https://codeforces.com/problemset/problem/235/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5592",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In computer science, there is a method called \"Divide And Conquer By Node\" to solve some hard problems about paths on a tree. Let's desribe how this method works by function: solve ( t ) ( t is a tree): Chose a node x (it's common to chose weight-center) in tree t . Let's call this step \"Line A\". Deal with all paths that pass x . Then delete x from tree t . After that t becomes some subtrees. Apply solve on each subtree. This ends when t has only one node because after deleting it, there's nothing. Now, WJMZBMR has mistakenly believed that it's ok to chose any node in \"Line A\". So he'll chose a node at random. To make the situation worse, he thinks a \"tree\" should have the same number of edges and nodes! So this procedure becomes like that. Let's define the variable totalCost . Initially the value of totalCost equal to 0 . So, solve ( t ) (now t is a graph): totalCost = totalCost + ( size of t ) . The operation \" = \" means assignment. ( Size of t ) means the number of nodes in t . Choose a node x in graph t at random (uniformly among all nodes of t ). Then delete x from graph t . After that t becomes some connected components. Apply solve on each component. He'll apply solve on a connected graph with n nodes and n edges. He thinks it will work quickly, but it's very slow. So he wants to know the expectation of totalCost of this procedure. Can you help him?",
+  "input_specification": "The first line contains an integer n ( 3 ≤ n ≤ 3000 ) — the number of nodes and edges in the graph. Each of the next n lines contains two space-separated integers a i , b i (0 ≤ a i , b i ≤ n - 1) indicating an edge between nodes a i and b i . Consider that the graph nodes are numbered from 0 to ( n - 1) . It's guaranteed that there are no self-loops, no multiple edges in that graph. It's guaranteed that the graph is connected.",
+  "output_specification": "Print a single real number — the expectation of totalCost . Your answer will be considered correct if its absolute or relative error does not exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "5\n3 4\n2 3\n2 4\n0 4\n1 2",
+      "output": "13.166666666666666"
+    },
+    {
+      "input": "3\n0 1\n1 2\n0 2",
+      "output": "6.000000000000000"
+    },
+    {
+      "input": "5\n0 1\n1 2\n2 0\n3 0\n4 1",
+      "output": "13.166666666666666"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:05",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

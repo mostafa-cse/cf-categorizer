@@ -1,0 +1,35 @@
+{
+  "id": "1910G",
+  "source": "problemset",
+  "contest_id": 1910,
+  "problem_index": "G",
+  "name": "Pool Records",
+  "rating": 2700,
+  "tags": [
+    "*special",
+    "greedy"
+  ],
+  "solved_count": 79,
+  "problem_url": "https://codeforces.com/problemset/problem/1910/G",
+  "editorial_url": "https://codeforces.com/blog/entry/123261",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Alice and Bob are swimming in the pool under the guidance of their instructor Monocarp. The pool can be represented as a segment on the OX-axis from $$$0$$$ to $$$50$$$. Both Alice and Bob started at moment $$$0$$$ at point $$$0$$$ with positive real speeds $$$v_A$$$ and $$$v_B$$$ correspondingly. Both Alice and Bob swim from $$$0$$$ to point $$$50$$$, then instantly turn back and swim from $$$50$$$ to $$$0$$$. At $$$0$$$ they turn back again and swim to $$$50$$$ and so on. Monocarp logged all valuable info about Alice and Bob, including moments of time when they met at the same point (Alice and Bob swim on parallel lanes, so they don't bother each other). Let's name that moments of time as sequence $$$t_1, t_2, \\dots, t_n$$$. Due to some incident, Monocarp lost almost all data he recorded, and all he has now is array $$$t$$$. Monocarp remembers that Alice and Bob had distinct positive real swimming speeds $$$v_A$$$ and $$$v_B$$$ ($$$v_A \\gt 0$$$; $$$v_B \\gt 0$$$; $$$v_A \\neq v_B$$$) and that sequence $$$t$$$ contains the first $$$n$$$ meeting moments. But looking at sequence $$$t$$$ he noticed that all $$$t_i$$$ are integer values, and now he doubts is sequence $$$t$$$ valid or there are some errors in it. Help Monocarp to check array $$$t$$$!",
+  "input_specification": "The first line contains a single integer $$$c$$$ ($$$1 \\le c \\le 10^4$$$) — the number of test cases. Then $$$c$$$ cases follow. The first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the size of array $$$t$$$. The second line of each test case contains $$$n$$$ integers $$$t_1, t_2, \\dots, t_n$$$ ($$$1 \\le t_1 \\lt t_2 \\lt \\dots \\lt t_n \\le 10^9$$$) — the meeting moments in the increasing order. It's guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, print VALID if the array $$$t$$$ is a valid array, or (in other words) exist such real values $$$v_A$$$ and $$$v_B$$$ ($$$v_A, v_B \\gt 0$$$; $$$v_A \\neq v_B$$$) that array $$$t$$$ contains the first $$$n$$$ meeting moments of Alice and Bob in the pool. Otherwise, print INVALID . You can output the answer in any case (upper or lower). For example, the strings \" vALid \", \" valid \", \" Valid \", and \" VALID \" will be recognized as positive responses.",
+  "sample_testcases": [
+    {
+      "input": "7\n1\n42\n4\n3 4 6 8\n5\n1 2 3 4 5\n3\n999999998 999999999 1000000000\n5\n4 6 8 12 16\n4\n6 11 12 14\n2\n10 30",
+      "output": "VALID\nVALID\nVALID\nINVALID\nVALID\nINVALID\nINVALID"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

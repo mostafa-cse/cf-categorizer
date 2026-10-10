@@ -1,0 +1,38 @@
+{
+  "id": "665A",
+  "source": "problemset",
+  "contest_id": 665,
+  "problem_index": "A",
+  "name": "Buses Between Cities",
+  "rating": 1600,
+  "tags": [
+    "implementation"
+  ],
+  "solved_count": 3248,
+  "problem_url": "https://codeforces.com/problemset/problem/665/A",
+  "editorial_url": "https://codeforces.com/blog/entry/44466",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Buses run between the cities A and B , the first one is at 05:00 AM and the last one departs not later than at 11:59 PM. A bus from the city A departs every a minutes and arrives to the city B in a t a minutes, and a bus from the city B departs every b minutes and arrives to the city A in a t b minutes. The driver Simion wants to make his job diverse, so he counts the buses going towards him. Simion doesn't count the buses he meet at the start and finish. You know the time when Simion departed from the city A to the city B . Calculate the number of buses Simion will meet to be sure in his counting.",
+  "input_specification": "The first line contains two integers a , t a ( 1 ≤ a , t a ≤ 120 ) — the frequency of the buses from the city A to the city B and the travel time. Both values are given in minutes. The second line contains two integers b , t b ( 1 ≤ b , t b ≤ 120 ) — the frequency of the buses from the city B to the city A and the travel time. Both values are given in minutes. The last line contains the departure time of Simion from the city A in the format hh:mm . It is guaranteed that there are a bus from the city A at that time. Note that the hours and the minutes are given with exactly two digits.",
+  "output_specification": "Print the only integer z — the number of buses Simion will meet on the way. Note that you should not count the encounters in cities A and B .",
+  "sample_testcases": [
+    {
+      "input": "10 30\n10 35\n05:20",
+      "output": "5"
+    },
+    {
+      "input": "60 120\n24 100\n13:00",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:36",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

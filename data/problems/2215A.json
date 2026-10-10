@@ -1,0 +1,37 @@
+{
+  "id": "2215A",
+  "source": "problemset",
+  "contest_id": 2215,
+  "problem_index": "A",
+  "name": "Interval Mod",
+  "rating": 1700,
+  "tags": [
+    "constructive algorithms",
+    "dp",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 4123,
+  "problem_url": "https://codeforces.com/problemset/problem/2215/A",
+  "editorial_url": "https://codeforces.com/blog/entry/152930",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array $$$a$$$ consisting of $$$n$$$ integers, as well as a parameter $$$k$$$ and an integer set $$$M=\\{p, q\\}$$$. You can perform the following operation on $$$a$$$ an arbitrary number of times (possibly zero): First, choose an interval $$$[l,r]$$$ ($$$1 \\le l \\le r \\le n$$$) of length at least $$$k$$$ (i.e., $$$r-l+1\\ge k$$$) and an integer $$$m \\in M$$$; Then, set $$$a_i \\gets a_i \\bmod m$$$ for each $$$l \\le i \\le r$$$. You have to find the minimum possible value of $$$\\sum \\limits_{i=1}^n a_i$$$ after all operations.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The first line of each test case contains four integers $$$n$$$, $$$k$$$, $$$p$$$, and $$$q$$$ ($$$1\\le k\\le n\\le 10^5$$$, $$$1\\le p \\lt q\\le 10^9$$$) — the length of $$$a$$$, the parameter, and the elements of $$$M$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1\\le a_i\\le 10^9$$$) — the elements of $$$a$$$. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum possible value of $$$\\sum \\limits_{i=1}^n a_i$$$ after all operations.",
+  "sample_testcases": [
+    {
+      "input": "6\n1 1 3 4\n2026\n3 2 10 20\n31 41 59\n4 3 3 4\n1 2 3 4\n6 4 9 20\n18 27 180 9 45 99\n7 4 3 5\n6 7 14 12 100 78 4\n9 4 244 353\n9982 4435 3998 2443 5399 8244 3539 9824 4353",
+      "output": "1\n11\n3\n0\n4\n569"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:31",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Classic DP",
+  "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+}

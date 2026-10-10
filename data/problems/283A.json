@@ -1,0 +1,40 @@
+{
+  "id": "283A",
+  "source": "problemset",
+  "contest_id": 283,
+  "problem_index": "A",
+  "name": "Cows and Sequence",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "data structures",
+    "implementation"
+  ],
+  "solved_count": 6948,
+  "problem_url": "https://codeforces.com/problemset/problem/283/A",
+  "editorial_url": "https://codeforces.com/blog/entry/7037",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Bessie and the cows are playing with sequences and need your help. They start with a sequence, initially containing just the number 0, and perform n operations. Each operation is one of the following: Add the integer x i to the first a i elements of the sequence. Append an integer k i to the end of the sequence. (And hence the size of the sequence increases by 1) Remove the last element of the sequence. So, the size of the sequence decreases by one. Note, that this operation can only be done if there are at least two elements in the sequence. After each operation, the cows would like to know the average of all the numbers in the sequence. Help them!",
+  "input_specification": "The first line contains a single integer n (1 ≤ n ≤ 2·10 5 ) — the number of operations. The next n lines describe the operations. Each line will start with an integer t i (1 ≤ t i ≤ 3) , denoting the type of the operation (see above). If t i = 1 , it will be followed by two integers a i , x i (| x i | ≤ 10 3 ; 1 ≤ a i ) . If t i = 2 , it will be followed by a single integer k i (| k i | ≤ 10 3 ) . If t i = 3 , it will not be followed by anything. It is guaranteed that all operations are correct (don't touch nonexistent elements) and that there will always be at least one element in the sequence.",
+  "output_specification": "Output n lines each containing the average of the numbers in the sequence after the corresponding operation. The answer will be considered correct if its absolute or relative error doesn't exceed 10 - 6 .",
+  "sample_testcases": [
+    {
+      "input": "5\n2 1\n3\n2 3\n2 1\n3",
+      "output": "0.500000\n0.000000\n1.500000\n1.333333\n1.500000"
+    },
+    {
+      "input": "6\n2 1\n1 2 20\n2 2\n1 2 -3\n3\n3",
+      "output": "0.500000\n20.500000\n14.333333\n12.333333\n17.500000\n17.000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

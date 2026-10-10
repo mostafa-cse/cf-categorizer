@@ -1,0 +1,36 @@
+{
+  "id": "685D",
+  "source": "problemset",
+  "contest_id": 685,
+  "problem_index": "D",
+  "name": "Kay and Eternity",
+  "rating": 2600,
+  "tags": [
+    "brute force",
+    "implementation",
+    "sortings"
+  ],
+  "solved_count": 564,
+  "problem_url": "https://codeforces.com/problemset/problem/685/D",
+  "editorial_url": "https://codeforces.com/blog/entry/45558",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Snow Queen told Kay to form a word \"eternity\" using pieces of ice. Kay is eager to deal with the task, because he will then become free, and Snow Queen will give him all the world and a pair of skates. Behind the palace of the Snow Queen there is an infinite field consisting of cells. There are n pieces of ice spread over the field, each piece occupying exactly one cell and no two pieces occupying the same cell. To estimate the difficulty of the task Kay looks at some squares of size k × k cells, with corners located at the corners of the cells and sides parallel to coordinate axis and counts the number of pieces of the ice inside them. This method gives an estimation of the difficulty of some part of the field. However, Kay also wants to estimate the total difficulty, so he came up with the following criteria: for each x ( 1 ≤ x ≤ n ) he wants to count the number of squares of size k × k , such that there are exactly x pieces of the ice inside. Please, help Kay estimate the difficulty of the task given by the Snow Queen.",
+  "input_specification": "The first line of the input contains two integers n and k ( 1 ≤ n ≤ 100 000 , 1 ≤ k ≤ 300 ) — the number of pieces of the ice and the value k , respectively. Each of the next n lines contains two integers x i and y i ( - 10 9 ≤ x i , y i ≤ 10 9 ) — coordinates of the cell containing i -th piece of the ice. It's guaranteed, that no two pieces of the ice occupy the same cell.",
+  "output_specification": "Print n integers: the number of squares of size k × k containing exactly 1, 2, ..., n pieces of the ice.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n4 5\n4 6\n5 5\n5 6\n7 7",
+      "output": "10 8 1 4 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:31",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

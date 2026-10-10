@@ -1,0 +1,39 @@
+{
+  "id": "379C",
+  "source": "problemset",
+  "contest_id": 379,
+  "problem_index": "C",
+  "name": "New Year Ratings Change",
+  "rating": 1400,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 7113,
+  "problem_url": "https://codeforces.com/problemset/problem/379/C",
+  "editorial_url": "https://codeforces.com/blog/entry/10171",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "One very well-known internet resource site (let's call it X) has come up with a New Year adventure. Specifically, they decided to give ratings to all visitors. There are n users on the site, for each user we know the rating value he wants to get as a New Year Present. We know that user i wants to get at least a i rating units as a present. The X site is administered by very creative and thrifty people. On the one hand, they want to give distinct ratings and on the other hand, the total sum of the ratings in the present must be as small as possible. Help site X cope with the challenging task of rating distribution. Find the optimal distribution.",
+  "input_specification": "The first line contains integer n (1 ≤ n ≤ 3·10 5 ) — the number of users on the site. The next line contains integer sequence a 1 , a 2 , ..., a n (1 ≤ a i ≤ 10 9 ) .",
+  "output_specification": "Print a sequence of integers b 1 , b 2 , ..., b n . Number b i means that user i gets b i of rating as a present. The printed sequence must meet the problem conditions. If there are multiple optimal solutions, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 1 1",
+      "output": "5 1 2"
+    },
+    {
+      "input": "1\n1000000000",
+      "output": "1000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:55",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

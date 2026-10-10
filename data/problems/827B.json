@@ -1,0 +1,41 @@
+{
+  "id": "827B",
+  "source": "problemset",
+  "contest_id": 827,
+  "problem_index": "B",
+  "name": "High Load",
+  "rating": 1800,
+  "tags": [
+    "constructive algorithms",
+    "greedy",
+    "implementation",
+    "trees"
+  ],
+  "solved_count": 3757,
+  "problem_url": "https://codeforces.com/problemset/problem/827/B",
+  "editorial_url": "https://codeforces.com/blog/entry/53268",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Arkady needs your help again! This time he decided to build his own high-speed Internet exchange point. It should consist of n nodes connected with minimum possible number of wires into one network (a wire directly connects two nodes). Exactly k of the nodes should be exit-nodes, that means that each of them should be connected to exactly one other node of the network, while all other nodes should be connected to at least two nodes in order to increase the system stability. Arkady wants to make the system as fast as possible, so he wants to minimize the maximum distance between two exit-nodes. The distance between two nodes is the number of wires a package needs to go through between those two nodes. Help Arkady to find such a way to build the network that the distance between the two most distant exit-nodes is as small as possible.",
+  "input_specification": "The first line contains two integers n and k ( 3 ≤ n ≤ 2·10 5 , 2 ≤ k ≤ n - 1 ) — the total number of nodes and the number of exit-nodes. Note that it is always possible to build at least one network with n nodes and k exit-nodes within the given constraints.",
+  "output_specification": "In the first line print the minimum possible distance between the two most distant exit-nodes. In each of the next n - 1 lines print two integers: the ids of the nodes connected by a wire. The description of each wire should be printed exactly once. You can print wires and wires' ends in arbitrary order. The nodes should be numbered from 1 to n . Exit-nodes can have any ids. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "3 2",
+      "output": "2\n1 2\n2 3"
+    },
+    {
+      "input": "5 3",
+      "output": "3\n1 2\n2 3\n3 4\n3 5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:57",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

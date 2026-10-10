@@ -1,0 +1,43 @@
+{
+  "id": "887F",
+  "source": "problemset",
+  "contest_id": 887,
+  "problem_index": "F",
+  "name": "Row of Models",
+  "rating": 2500,
+  "tags": [
+    "greedy",
+    "sortings"
+  ],
+  "solved_count": 216,
+  "problem_url": "https://codeforces.com/problemset/problem/887/F",
+  "editorial_url": "https://codeforces.com/blog/entry/55584",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "During the final part of fashion show all models come to the stage and stay in one row and fashion designer stays to right to model on the right. During the rehearsal, Izabella noticed, that row isn't nice, but she can't figure out how to fix it. Like many other creative people, Izabella has a specific sense of beauty. Evaluating beauty of row of models Izabella looks at heights of models. She thinks that row is nice if for each model distance to nearest model with less height (model or fashion designer) to the right of her doesn't exceed k (distance between adjacent people equals 1, the distance between people with exactly one man between them equals 2, etc). She wants to make row nice, but fashion designer has his own sense of beauty, so she can at most one time select two models from the row and swap their positions if the left model from this pair is higher than the right model from this pair. Fashion designer (man to the right of rightmost model) has less height than all models and can't be selected for exchange. You should tell if it's possible to make at most one exchange in such a way that row becomes nice for Izabella.",
+  "input_specification": "In first line there are two integers n and k ( 1 ≤ n ≤ 5·10 5 , 1 ≤ k ≤ n ) — number of models and required distance. Second line contains n space-separated integers a i ( 1 ≤ a i ≤ 10 9 ) — height of each model. Pay attention that height of fashion designer is not given and can be less than 1.",
+  "output_specification": "Print « YES » (without quotes) if it's possible to make row nice using at most one exchange, and « NO » (without quotes) otherwise.",
+  "sample_testcases": [
+    {
+      "input": "5 4\n2 3 5 2 5",
+      "output": "NO"
+    },
+    {
+      "input": "5 2\n3 6 2 2 1",
+      "output": "YES"
+    },
+    {
+      "input": "5 2\n5 3 6 5 2",
+      "output": "YES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

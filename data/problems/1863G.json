@@ -1,0 +1,45 @@
+{
+  "id": "1863G",
+  "source": "problemset",
+  "contest_id": 1863,
+  "problem_index": "G",
+  "name": "Swaps",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "graphs",
+    "math"
+  ],
+  "solved_count": 1080,
+  "problem_url": "https://codeforces.com/problemset/problem/1863/G",
+  "editorial_url": "https://codeforces.com/blog/entry/119902",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an array of integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le n$$$). You can perform the following operation several (possibly, zero) times: pick an arbitrary $$$i$$$ and perform swap $$$(a_i, a_{a_i})$$$. How many distinct arrays is it possible to attain? Output the answer modulo $$$(10^9 + 7)$$$.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$1 \\le n \\le 10^6$$$). The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1\\le a_i\\le n$$$).",
+  "output_specification": "Output the number of attainable arrays modulo $$$(10^9 + 7)$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1 2",
+      "output": "2"
+    },
+    {
+      "input": "4\n2 1 4 3",
+      "output": "4"
+    },
+    {
+      "input": "6\n2 3 1 1 1 2",
+      "output": "18"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:48",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

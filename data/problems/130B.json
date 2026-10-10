@@ -1,0 +1,40 @@
+{
+  "id": "130B",
+  "source": "problemset",
+  "contest_id": 130,
+  "problem_index": "B",
+  "name": "Gnikool Ssalg",
+  "rating": 1400,
+  "tags": [
+    "*special",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 571,
+  "problem_url": "https://codeforces.com/problemset/problem/130/B",
+  "editorial_url": "https://codeforces.com/blog/entry/3226",
+  "time_limit": "2 seconds",
+  "memory_limit": "64 megabytes",
+  "description": "You are given a string. Reverse its characters.",
+  "input_specification": "The only line of input contains a string between 1 and 100 characters long. Each character of the string has ASCII-code between 33 (exclamation mark) and 126 (tilde), inclusive.",
+  "output_specification": "Output the characters of this string in reverse order.",
+  "sample_testcases": [
+    {
+      "input": "secrofedoc",
+      "output": "codeforces"
+    },
+    {
+      "input": "!ssalg-gnikool5",
+      "output": "5looking-glass!"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:51",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": false,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

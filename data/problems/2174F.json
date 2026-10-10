@@ -1,0 +1,38 @@
+{
+  "id": "2174F",
+  "source": "problemset",
+  "contest_id": 2174,
+  "problem_index": "F",
+  "name": "Mosaic Tree",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "fft",
+    "math",
+    "trees"
+  ],
+  "solved_count": 525,
+  "problem_url": "https://codeforces.com/problemset/problem/2174/F",
+  "editorial_url": "https://codeforces.com/blog/entry/149003",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The master creates a composition of $$$n$$$ colored mosaic elements. Each element is painted in one of $$$m$$$ possible colors (the colors are numbered from $$$1$$$ to $$$m$$$). The master arranges the composition in such a way that it can be represented as a tree. The composition is considered beautiful if for each color $$$i$$$, the total degree of all vertices of color $$$i$$$ has a specified parity $$$\\mathrm{mask}_i$$$, where $$$\\mathrm{mask}$$$ is an array of $$$m$$$ numbers $$$0$$$ or $$$1$$$. Help the master count the number of ways to create a beautiful composition. Output the answer modulo $$$10^9 + 7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 100$$$). The description of the test cases follows. The first line of each test case contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 10^4$$$) — the number of vertices and the number of possible colors, respectively. The second line of each test case contains $$$n$$$ integers $$$c_i$$$ ($$$1 \\le c_i \\le m$$$) — the color of vertex $$$i$$$. The third line of each test case contains $$$m$$$ integers $$$\\mathrm{mask}_i$$$ ($$$\\mathrm{mask}_i \\in \\{0, 1\\}$$$) — the parity of color $$$i$$$ (if the total degree of vertices of color $$$i$$$ should be even, $$$\\mathrm{mask}_i = 0$$$, otherwise — $$$\\mathrm{mask}_i = 1$$$). It is guaranteed that the sum of the values of $$$n$$$ across all test cases does not exceed $$$10^4$$$, and it is also guaranteed that the sum of the values of $$$m$$$ across all test cases does not exceed $$$10^4$$$.",
+  "output_specification": "For each test case, output a single integer on a separate line — the number of ways to create a beautiful composition modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "5\n4 2\n1 2 1 2\n0 0\n4 1\n1 1 1 1\n1\n5 1\n1 1 1 1 1\n0\n6 4\n1 2 1 2 1 4\n0 1 0 1\n1 3\n3\n1 0 0",
+      "output": "8\n0\n125\n384\n0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:43",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

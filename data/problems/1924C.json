@@ -1,0 +1,36 @@
+{
+  "id": "1924C",
+  "source": "problemset",
+  "contest_id": 1924,
+  "problem_index": "C",
+  "name": "Fractal Origami",
+  "rating": 2400,
+  "tags": [
+    "geometry",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 1418,
+  "problem_url": "https://codeforces.com/problemset/problem/1924/C",
+  "editorial_url": "https://codeforces.com/blog/entry/125137",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have a square piece of paper with a side length equal to $$$1$$$ unit. In one operation, you fold each corner of the square to the center of the paper, thus forming another square with a side length equal to $$$\\dfrac{1}{\\sqrt{2}}$$$ units. By taking this square as a new square, you do the operation again and repeat this process a total of $$$N$$$ times. Performing operations for $$$N = 2$$$. After performing the set of operations, you open the paper with the same side up you started with and see some crease lines on it. Every crease line is one of two types: a mountain or a valley. A mountain is when the paper folds outward, and a valley is when the paper folds inward. You calculate the sum of the length of all mountain crease lines on the paper and call it $$$M$$$. Similarly, you calculate for valley crease lines and call it $$$V$$$. You want to find the value of $$$\\dfrac{M}{V}$$$. It can be proved that this value can be represented in the form of $$$A + B\\sqrt{2}$$$, where $$$A$$$ and $$$B$$$ are rational numbers. Let this $$$B$$$ be represented as an irreducible fraction $$$\\dfrac{p}{q}$$$, your task is to print $$$p*inv(q)$$$ modulo $$$999\\,999\\,893$$$ (note the unusual modulo) , where $$$inv(q)$$$ is the modular inverse of $$$q$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$). Description of the test cases follows. The only line of each test case contains an integer $$$N$$$ ($$$1 \\leq N \\leq 10^9$$$), the number of operations you perform on the square paper.",
+  "output_specification": "For each test case, print on a new line the required answer.",
+  "sample_testcases": [
+    {
+      "input": "3\n1\n2\n3",
+      "output": "0\n1\n714285638"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:31",
+  "main_topic": "Math",
+  "subtopic": "Matrices",
+  "subsubtopic": "355. Matrix Exponentiation",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Formulate linear recurrence as state transition vector V_{n+1} = M * V_n. Compute M^K via binary matrix exponentiation in O(D^3 log K) time."
+}

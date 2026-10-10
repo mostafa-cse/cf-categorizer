@@ -1,0 +1,42 @@
+{
+  "id": "626F",
+  "source": "problemset",
+  "contest_id": 626,
+  "problem_index": "F",
+  "name": "Group Projects",
+  "rating": 2400,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 3916,
+  "problem_url": "https://codeforces.com/problemset/problem/626/F",
+  "editorial_url": "https://codeforces.com/blog/entry/23522",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n students in a class working on group projects. The students will divide into groups (some students may be in groups alone), work on their independent pieces, and then discuss the results together. It takes the i -th student a i minutes to finish his/her independent piece. If students work at different paces, it can be frustrating for the faster students and stressful for the slower ones. In particular, the imbalance of a group is defined as the maximum a i in the group minus the minimum a i in the group. Note that a group containing a single student has an imbalance of 0 . How many ways are there for the students to divide into groups so that the total imbalance of all groups is at most k ? Two divisions are considered distinct if there exists a pair of students who work in the same group in one division but different groups in the other.",
+  "input_specification": "The first line contains two space-separated integers n and k ( 1 ≤ n ≤ 200 , 0 ≤ k ≤ 1000 ) — the number of students and the maximum total imbalance allowed, respectively. The second line contains n space-separated integers a i ( 1 ≤ a i ≤ 500 ) — the time it takes the i -th student to complete his/her independent piece of work.",
+  "output_specification": "Print a single integer, the number of ways the students can form groups. As the answer may be large, print its value modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n2 4 5",
+      "output": "3"
+    },
+    {
+      "input": "4 3\n7 8 9 10",
+      "output": "13"
+    },
+    {
+      "input": "4 0\n5 10 20 21",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:47",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

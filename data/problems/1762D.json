@@ -1,0 +1,36 @@
+{
+  "id": "1762D",
+  "source": "problemset",
+  "contest_id": 1762,
+  "problem_index": "D",
+  "name": "GCD Queries ",
+  "rating": 2100,
+  "tags": [
+    "constructive algorithms",
+    "interactive",
+    "number theory"
+  ],
+  "solved_count": 4633,
+  "problem_url": "https://codeforces.com/problemset/problem/1762/D",
+  "editorial_url": "https://codeforces.com/blog/entry/110169",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is an interactive problem. There is a secret permutation $$$p$$$ of $$$[0,1,2,\\ldots,n-1]$$$. Your task is to find $$$2$$$ indices $$$x$$$ and $$$y$$$ ($$$1 \\leq x, y \\leq n$$$, possibly $$$x=y$$$) such that $$$p_x=0$$$ or $$$p_y=0$$$. In order to find it, you are allowed to ask at most $$$2n$$$ queries. In one query, you give two integers $$$i$$$ and $$$j$$$ ($$$1 \\leq i, j \\leq n$$$, $$$i \\neq j$$$) and receive the value of $$$\\gcd(p_i,p_j)^\\dagger$$$. Note that the permutation $$$p$$$ is fixed before any queries are made and does not depend on the queries. $$$^\\dagger$$$ $$$\\gcd(x, y)$$$ denotes the greatest common divisor (GCD) of integers $$$x$$$ and $$$y$$$. Note that $$$\\gcd(x,0)=\\gcd(0,x)=x$$$ for all positive integers $$$x$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$). The description of the test cases follows. The first line of each test case contains a single integer $$$n$$$ ($$$2 \\leq n \\leq 2 \\cdot 10^4$$$). After reading the integer $$$n$$$ for each test case, you should begin the interaction. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^4$$$.",
+  "output_specification": "",
+  "sample_testcases": [
+    {
+      "input": "2\n2\n\n1\n\n1\n5\n\n2\n\n4\n\n1",
+      "output": "? 1 2\n\n! 1 2\n\n\n? 1 2\n\n? 2 3\n\n! 3 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:13",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Interactive Problems",
+  "subsubtopic": "542. Interactive Problems",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Design an adaptive query strategy maintaining uncertainty bounds. Halve candidate space or probe tree centroids using at most the allowed query budget."
+}

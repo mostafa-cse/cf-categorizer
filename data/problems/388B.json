@@ -1,0 +1,46 @@
+{
+  "id": "388B",
+  "source": "problemset",
+  "contest_id": 388,
+  "problem_index": "B",
+  "name": "Fox and Minimal path",
+  "rating": 1900,
+  "tags": [
+    "bitmasks",
+    "constructive algorithms",
+    "graphs",
+    "implementation",
+    "math"
+  ],
+  "solved_count": 2624,
+  "problem_url": "https://codeforces.com/problemset/problem/388/B",
+  "editorial_url": "https://codeforces.com/blog/entry/10629",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Fox Ciel wants to write a task for a programming contest. The task is: \"You are given a simple undirected graph with n vertexes. Each its edge has unit length. You should calculate the number of shortest paths between vertex 1 and vertex 2.\" Same with some writers, she wants to make an example with some certain output: for example, her birthday or the number of her boyfriend. Can you help her to make a test case with answer equal exactly to k ?",
+  "input_specification": "The first line contains a single integer k ( 1 ≤ k ≤ 10 9 ).",
+  "output_specification": "You should output a graph G with n vertexes ( 2 ≤ n ≤ 1000 ). There must be exactly k shortest paths between vertex 1 and vertex 2 of the graph. The first line must contain an integer n . Then adjacency matrix G with n rows and n columns must follow. Each element of the matrix must be ' N ' or ' Y '. If G ij is ' Y ', then graph G has a edge connecting vertex i and vertex j . Consider the graph vertexes are numbered from 1 to n . The graph must be undirected and simple: G ii = ' N ' and G ij = G ji must hold. And there must be at least one path between vertex 1 and vertex 2. It's guaranteed that the answer exists. If there multiple correct answers, you can output any of them.",
+  "sample_testcases": [
+    {
+      "input": "2",
+      "output": "4\nNNYY\nNNYY\nYYNN\nYYNN"
+    },
+    {
+      "input": "9",
+      "output": "8\nNNYYYNNN\nNNNNNYYY\nYNNNNYYY\nYNNNNYYY\nYNNNNYYY\nNYYYYNNN\nNYYYYNNN\nNYYYYNNN"
+    },
+    {
+      "input": "1",
+      "output": "2\nNY\nYN"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:51",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

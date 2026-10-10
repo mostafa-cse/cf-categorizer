@@ -1,0 +1,43 @@
+{
+  "id": "721E",
+  "source": "problemset",
+  "contest_id": 721,
+  "problem_index": "E",
+  "name": "Road to Home",
+  "rating": 2700,
+  "tags": [
+    "binary search",
+    "dp"
+  ],
+  "solved_count": 388,
+  "problem_url": "https://codeforces.com/problemset/problem/721/E",
+  "editorial_url": "https://codeforces.com/blog/entry/47457",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Once Danil the student was returning home from tram stop lately by straight road of length L . The stop is located at the point x = 0 , but the Danil's home — at the point x = L . Danil goes from x = 0 to x = L with a constant speed and does not change direction of movement. There are n street lights at the road, each of which lights some continuous segment of the road. All of the n lightened segments do not share common points. Danil loves to sing, thus he wants to sing his favourite song over and over again during his walk. As soon as non-lightened segments of the road scare him, he sings only when he goes through the lightened segments. Danil passes distance p while performing his favourite song once. Danil can't start another performance if the segment passed while performing is not fully lightened. Moreover, if Danil has taken a pause between two performances, he is not performing while not having passed a segment of length at least t . Formally, Danil can start single performance at a point x only if every point of segment [ x , x + p ] is lightened; If Danil has finished performing at a point x + p , then the next performance can be started only at a point y such that y = x + p or y ≥ x + p + t satisfying the statement under the point 1 . Blue half-circles denote performances. Please note that just after Danil has taken a pause in performing, he has not sang for a path of length of at least t . Determine how many times Danil can perform his favourite song during his walk from x = 0 to x = L . Please note that Danil does not break a single performance, thus, started singing another time, he finishes singing when having a segment of length of p passed from the performance start point.",
+  "input_specification": "The first line of the input contains four integers L , n , p and t ( 1 ≤ L ≤ 10 9 , 0 ≤ n ≤ 100 000 , 1 ≤ p ≤ 10 9 , 1 ≤ t ≤ 10 9 ) — the length of the Danil's path, the number of street lights at the road, the distance Danil passes while doing single performance and the minimum distance of pause respectively. The next n lines describe segments lightened by street lights. i -th of them contains two integers l i , r i ( 0 ≤ l i < r i ≤ L ) — the endpoints of the segment lightened by i -th street light. It is guaranteed that no two segments are intersecting, nesting, or touching each other. The segments are given in the order from left to right.",
+  "output_specification": "Print the only integer — the maximum number of performances of Danil's favourite song on the path from x = 0 to x = L .",
+  "sample_testcases": [
+    {
+      "input": "17 2 2 6\n0 9\n13 17",
+      "output": "5"
+    },
+    {
+      "input": "12 2 2 2\n0 5\n6 11",
+      "output": "4"
+    },
+    {
+      "input": "12 2 2 4\n0 5\n6 11",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:23",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

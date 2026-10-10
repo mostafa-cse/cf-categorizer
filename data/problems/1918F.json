@@ -1,0 +1,43 @@
+{
+  "id": "1918F",
+  "source": "problemset",
+  "contest_id": 1918,
+  "problem_index": "F",
+  "name": "Caterpillar on a Tree",
+  "rating": 2500,
+  "tags": [
+    "dfs and similar",
+    "graphs",
+    "greedy",
+    "implementation",
+    "sortings",
+    "trees"
+  ],
+  "solved_count": 1183,
+  "problem_url": "https://codeforces.com/problemset/problem/1918/F",
+  "editorial_url": "https://codeforces.com/blog/entry/125300",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "The caterpillar decided to visit every node of the tree. Initially, it is sitting at the root. The tree is represented as a rooted tree with the root at the node $$$1$$$. Each crawl to a neighboring node takes $$$1$$$ minute for the caterpillar. And there is a trampoline under the tree. If the caterpillar detaches from the tree and falls onto the trampoline, it will end up at the root of the tree in $$$0$$$ seconds. But the trampoline is old and can withstand no more than $$$k$$$ caterpillar's falls. What is the minimum time the caterpillar can take to visit all the nodes of the tree? More formally, we need to find the minimum time required to visit all the nodes of the tree, if the caterpillar starts at the root (node $$$1$$$) and moves using two methods. Crawl along an edge to one of the neighboring nodes: takes $$$1$$$ minute. Teleport to the root: takes no time, no new nodes become visited. The second method (teleportation) can be used at most $$$k$$$ times. The caterpillar can finish the journey at any node.",
+  "input_specification": "The first line of the input contains two integers: $$$n$$$ ($$$2 \\le n \\le 2\\cdot 10^5$$$) — the number of nodes in the tree, and $$$k$$$ ($$$0 \\le k \\le 10^9$$$) — the maximum number of teleports to the root. The second line contains $$$n-1$$$ integers $$$p_2$$$, $$$p_3$$$, ..., $$$p_n$$$ ($$$1 \\le p_i \\le n$$$) — the ancestors in the tree for nodes $$$2, 3, \\ldots, n$$$; node $$$1$$$ is the root.",
+  "output_specification": "Print a single number in a single line — the minimum number of minutes required to visit all the nodes of the tree.",
+  "sample_testcases": [
+    {
+      "input": "8 1\n1 1 2 2 4 3 3",
+      "output": "9"
+    },
+    {
+      "input": "4 0\n4 4 1",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:34",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

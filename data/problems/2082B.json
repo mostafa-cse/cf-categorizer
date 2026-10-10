@@ -1,0 +1,35 @@
+{
+  "id": "2082B",
+  "source": "problemset",
+  "contest_id": 2082,
+  "problem_index": "B",
+  "name": "Floor or Ceil",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "greedy"
+  ],
+  "solved_count": 8768,
+  "problem_url": "https://codeforces.com/problemset/problem/2082/B",
+  "editorial_url": "https://codeforces.com/blog/entry/140702",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Ecrade has an integer $$$x$$$. There are two kinds of operations. Replace $$$x$$$ with $$$\\left\\lfloor \\dfrac{x}{2}\\right\\rfloor$$$, where $$$\\left\\lfloor \\dfrac{x}{2}\\right\\rfloor$$$ is the greatest integer $$$\\le \\dfrac{x}{2}$$$. Replace $$$x$$$ with $$$\\left\\lceil \\dfrac{x}{2}\\right\\rceil$$$, where $$$\\left\\lceil \\dfrac{x}{2}\\right\\rceil$$$ is the smallest integer $$$\\ge \\dfrac{x}{2}$$$. Ecrade will perform exactly $$$n$$$ first operations and $$$m$$$ second operations in any order. He wants to know the minimum and the maximum possible value of $$$x$$$ after $$$n+m$$$ operations. However, it seems a little difficult, so please help him!",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. The only line of each test case contains three integers $$$x$$$, $$$n$$$, and $$$m$$$ ($$$0 \\le x, n, m \\le 10^9$$$).",
+  "output_specification": "For each test case, print two integers in one line, representing the minimum and the maximum possible value of $$$x$$$ after $$$n + m$$$ operations.",
+  "sample_testcases": [
+    {
+      "input": "5\n12 1 2\n12 1 1\n12 0 0\n12 1000000000 1000000000\n706636307 0 3",
+      "output": "1 2\n3 3\n12 12\n0 0\n88329539 88329539"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:30",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

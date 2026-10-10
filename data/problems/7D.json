@@ -1,0 +1,39 @@
+{
+  "id": "7D",
+  "source": "problemset",
+  "contest_id": 7,
+  "problem_index": "D",
+  "name": "Palindrome Degree",
+  "rating": 2200,
+  "tags": [
+    "hashing",
+    "strings"
+  ],
+  "solved_count": 4887,
+  "problem_url": "https://codeforces.com/problemset/problem/7/D",
+  "editorial_url": null,
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "String s of length n is called k -palindrome, if it is a palindrome itself, and its prefix and suffix of length are ( k - 1) -palindromes. By definition, any string (even empty) is 0-palindrome. Let's call the palindrome degree of string s such a maximum number k , for which s is k -palindrome. For example, \" abaaba \" has degree equals to 3 . You are given a string. Your task is to find the sum of the palindrome degrees of all its prefixes.",
+  "input_specification": "The first line of the input data contains a non-empty string, consisting of Latin letters and digits. The length of the string does not exceed 5·10 6 . The string is case-sensitive.",
+  "output_specification": "Output the only number — the sum of the polindrome degrees of all the string's prefixes.",
+  "sample_testcases": [
+    {
+      "input": "a2A",
+      "output": "1"
+    },
+    {
+      "input": "abacaba",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:54",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

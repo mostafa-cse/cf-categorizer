@@ -1,0 +1,39 @@
+{
+  "id": "430B",
+  "source": "problemset",
+  "contest_id": 430,
+  "problem_index": "B",
+  "name": "Balls Game",
+  "rating": 1400,
+  "tags": [
+    "brute force",
+    "two pointers"
+  ],
+  "solved_count": 4176,
+  "problem_url": "https://codeforces.com/problemset/problem/430/B",
+  "editorial_url": "https://codeforces.com/blog/entry/12265",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Iahub is training for the IOI. What is a better way to train than playing a Zuma-like game? There are n balls put in a row. Each ball is colored in one of k colors. Initially the row doesn't contain three or more contiguous balls with the same color. Iahub has a single ball of color x . He can insert his ball at any position in the row (probably, between two other balls). If at any moment there are three or more contiguous balls of the same color in the row, they are destroyed immediately. This rule is applied multiple times, until there are no more sets of 3 or more contiguous balls of the same color. For example, if Iahub has the row of balls [black, black, white, white, black, black] and a white ball, he can insert the ball between two white balls. Thus three white balls are destroyed, and then four black balls become contiguous, so all four balls are destroyed. The row will not contain any ball in the end, so Iahub can destroy all 6 balls. Iahub wants to destroy as many balls as possible. You are given the description of the row of balls, and the color of Iahub's ball. Help Iahub train for the IOI by telling him the maximum number of balls from the row he can destroy.",
+  "input_specification": "The first line of input contains three integers: n ( 1 ≤ n ≤ 100 ), k ( 1 ≤ k ≤ 100 ) and x ( 1 ≤ x ≤ k ). The next line contains n space-separated integers c 1 , c 2 , ..., c n ( 1 ≤ c i ≤ k ). Number c i means that the i -th ball in the row has color c i . It is guaranteed that the initial row of balls will never contain three or more contiguous balls of the same color.",
+  "output_specification": "Print a single integer — the maximum number of balls Iahub can destroy.",
+  "sample_testcases": [
+    {
+      "input": "6 2 2\n1 1 2 2 1 1",
+      "output": "6"
+    },
+    {
+      "input": "1 1 1\n1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:35",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,46 @@
+{
+  "id": "1081E",
+  "source": "problemset",
+  "contest_id": 1081,
+  "problem_index": "E",
+  "name": "Missing Numbers",
+  "rating": 1900,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "greedy",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 2858,
+  "problem_url": "https://codeforces.com/problemset/problem/1081/E",
+  "editorial_url": "https://codeforces.com/blog/entry/63888",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Chouti is working on a strange math problem. There was a sequence of $$$n$$$ positive integers $$$x_1, x_2, \\ldots, x_n$$$, where $$$n$$$ is even. The sequence was very special, namely for every integer $$$t$$$ from $$$1$$$ to $$$n$$$, $$$x_1+x_2+...+x_t$$$ is a square of some integer number (that is, a perfect square ). Somehow, the numbers with odd indexes turned to be missing, so he is only aware of numbers on even positions, i.e. $$$x_2, x_4, x_6, \\ldots, x_n$$$. The task for him is to restore the original sequence. Again, it's your turn to help him. The problem setter might make mistakes, so there can be no possible sequence at all. If there are several possible sequences, you can output any.",
+  "input_specification": "The first line contains an even number $$$n$$$ ($$$2 \\le n \\le 10^5$$$). The second line contains $$$\\frac{n}{2}$$$ positive integers $$$x_2, x_4, \\ldots, x_n$$$ ($$$1 \\le x_i \\le 2 \\cdot 10^5$$$).",
+  "output_specification": "If there are no possible sequence, print \" No \". Otherwise, print \" Yes \" and then $$$n$$$ positive integers $$$x_1, x_2, \\ldots, x_n$$$ ($$$1 \\le x_i \\le 10^{13}$$$), where $$$x_2, x_4, \\ldots, x_n$$$ should be same as in input data. If there are multiple answers, print any. Note, that the limit for $$$x_i$$$ is larger than for input data. It can be proved that in case there is an answer, there must be a possible sequence satisfying $$$1 \\le x_i \\le 10^{13}$$$.",
+  "sample_testcases": [
+    {
+      "input": "6\n5 11 44",
+      "output": "Yes\n4 5 16 11 64 44"
+    },
+    {
+      "input": "2\n9900",
+      "output": "Yes\n100 9900"
+    },
+    {
+      "input": "6\n314 1592 6535",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

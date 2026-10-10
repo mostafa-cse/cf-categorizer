@@ -1,0 +1,39 @@
+{
+  "id": "69D",
+  "source": "problemset",
+  "contest_id": 69,
+  "problem_index": "D",
+  "name": "Dot",
+  "rating": 1900,
+  "tags": [
+    "dp",
+    "games"
+  ],
+  "solved_count": 1172,
+  "problem_url": "https://codeforces.com/problemset/problem/69/D",
+  "editorial_url": "https://codeforces.com/blog/entry/1571",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Anton and Dasha like to play different games during breaks on checkered paper. By the 11th grade they managed to play all the games of this type and asked Vova the programmer to come up with a new game. Vova suggested to them to play a game under the code name \"dot\" with the following rules: On the checkered paper a coordinate system is drawn. A dot is initially put in the position ( x , y ) . A move is shifting a dot to one of the pre-selected vectors. Also each player can once per game symmetrically reflect a dot relatively to the line y = x . Anton and Dasha take turns. Anton goes first. The player after whose move the distance from the dot to the coordinates' origin exceeds d , loses. Help them to determine the winner.",
+  "input_specification": "The first line of the input file contains 4 integers x , y , n , d ( - 200 ≤ x , y ≤ 200, 1 ≤ d ≤ 200, 1 ≤ n ≤ 20 ) — the initial coordinates of the dot, the distance d and the number of vectors. It is guaranteed that the initial dot is at the distance less than d from the origin of the coordinates. The following n lines each contain two non-negative numbers x i and y i ( 0 ≤ x i , y i ≤ 200 ) — the coordinates of the i-th vector. It is guaranteed that all the vectors are nonzero and different.",
+  "output_specification": "You should print \" Anton \", if the winner is Anton in case of both players play the game optimally, and \" Dasha \" otherwise.",
+  "sample_testcases": [
+    {
+      "input": "0 0 2 3\n1 1\n1 2",
+      "output": "Anton"
+    },
+    {
+      "input": "0 0 2 4\n1 1\n1 2",
+      "output": "Dasha"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

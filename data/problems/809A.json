@@ -1,0 +1,40 @@
+{
+  "id": "809A",
+  "source": "problemset",
+  "contest_id": 809,
+  "problem_index": "A",
+  "name": "Do you want a date?",
+  "rating": 1500,
+  "tags": [
+    "implementation",
+    "math",
+    "sortings"
+  ],
+  "solved_count": 4927,
+  "problem_url": "https://codeforces.com/problemset/problem/809/A",
+  "editorial_url": "https://codeforces.com/blog/entry/52099",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Leha decided to move to a quiet town Vičkopolis, because he was tired by living in Bankopolis. Upon arrival he immediately began to expand his network of hacked computers. During the week Leha managed to get access to n computers throughout the town. Incidentally all the computers, which were hacked by Leha, lie on the same straight line, due to the reason that there is the only one straight street in Vičkopolis. Let's denote the coordinate system on this street. Besides let's number all the hacked computers with integers from 1 to n . So the i -th hacked computer is located at the point x i . Moreover the coordinates of all computers are distinct. Leha is determined to have a little rest after a hard week. Therefore he is going to invite his friend Noora to a restaurant. However the girl agrees to go on a date with the only one condition: Leha have to solve a simple task. Leha should calculate a sum of F ( a ) for all a , where a is a non-empty subset of the set, that consists of all hacked computers. Formally, let's denote A the set of all integers from 1 to n . Noora asks the hacker to find value of the expression . Here F ( a ) is calculated as the maximum among the distances between all pairs of computers from the set a . Formally, . Since the required sum can be quite large Noora asks to find it modulo 10 9 + 7 . Though, Leha is too tired. Consequently he is not able to solve this task. Help the hacker to attend a date.",
+  "input_specification": "The first line contains one integer n (1 ≤ n ≤ 3·10 5 ) denoting the number of hacked computers. The second line contains n integers x 1 , x 2 , ..., x n (1 ≤ x i ≤ 10 9 ) denoting the coordinates of hacked computers. It is guaranteed that all x i are distinct.",
+  "output_specification": "Print a single integer — the required sum modulo 10 9 + 7 .",
+  "sample_testcases": [
+    {
+      "input": "2\n4 7",
+      "output": "3"
+    },
+    {
+      "input": "3\n4 3 1",
+      "output": "9"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:01",
+  "main_topic": "Basics",
+  "subtopic": "Basic Sorting Algorithms",
+  "subsubtopic": "42. C++ STL Sort and Custom Comparator",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply C++ STL Sort and Custom Comparator paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

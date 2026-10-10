@@ -1,0 +1,44 @@
+{
+  "id": "1056G",
+  "source": "problemset",
+  "contest_id": 1056,
+  "problem_index": "G",
+  "name": "Take Metro",
+  "rating": 2900,
+  "tags": [
+    "brute force",
+    "data structures",
+    "graphs"
+  ],
+  "solved_count": 372,
+  "problem_url": "https://codeforces.com/problemset/problem/1056/G",
+  "editorial_url": "https://codeforces.com/blog/entry/63461",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Having problems with tram routes in the morning, Arkady decided to return home by metro. Fortunately for Arkady, there is only one metro line in the city. Unfortunately for Arkady, the line is circular. It means that the stations are enumerated from $$$1$$$ to $$$n$$$ and there is a tunnel between any pair of consecutive stations as well as between the station $$$1$$$ and the station $$$n$$$. Trains that go in clockwise direction visit the stations in order $$$1 \\to 2 \\to 3 \\to \\ldots \\to n \\to 1$$$ while the trains that go in the counter-clockwise direction visit the stations in the reverse order. The stations that have numbers from $$$1$$$ to $$$m$$$ have interior mostly in red colors while the stations that have numbers from $$$m + 1$$$ to $$$n$$$ have blue interior. Arkady entered the metro at station $$$s$$$ and decided to use the following algorithm to choose his way home. Initially he has a positive integer $$$t$$$ in his mind. If the current station has red interior, he takes a clockwise-directed train, otherwise he takes a counter-clockwise-directed train. He rides exactly $$$t$$$ stations on the train and leaves the train. He decreases $$$t$$$ by one. If $$$t$$$ is still positive, he returns to step $$$2$$$. Otherwise he exits the metro. You have already realized that this algorithm most probably won't bring Arkady home. Find the station he will exit the metro at so that you can continue helping him.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$3 \\le n \\le 10^5$$$, $$$1 \\le m \\lt n$$$) — the total number of stations and the number of stations that have red interior. The second line contains two integers $$$s$$$ and $$$t$$$ ($$$1 \\le s \\le n$$$, $$$1 \\le t \\le 10^{12}$$$) — the starting station and the initial value of $$$t$$$.",
+  "output_specification": "Output the only integer — the station where Arkady will exit the metro.",
+  "sample_testcases": [
+    {
+      "input": "10 4\n3 1",
+      "output": "4"
+    },
+    {
+      "input": "10 4\n3 5",
+      "output": "4"
+    },
+    {
+      "input": "10543 437\n5492 1947349",
+      "output": "438"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:07",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

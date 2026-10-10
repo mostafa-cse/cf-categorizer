@@ -1,0 +1,51 @@
+{
+  "id": "1780G",
+  "source": "problemset",
+  "contest_id": 1780,
+  "problem_index": "G",
+  "name": "Delicious Dessert",
+  "rating": 2400,
+  "tags": [
+    "binary search",
+    "dsu",
+    "hashing",
+    "math",
+    "number theory",
+    "string suffix structures"
+  ],
+  "solved_count": 1087,
+  "problem_url": "https://codeforces.com/problemset/problem/1780/G",
+  "editorial_url": "https://codeforces.com/blog/entry/111841",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Today is an important day for chef Tonio — an auditor has arrived in his hometown of Morioh. He has also arrived at Tonio's restaurant and ordered dessert. Tonio has not been prepared for this turn of events. As you know, dessert is a string of lowercase English letters. Tonio remembered the rule of desserts — a string $$$s$$$ of length $$$n$$$. Any dessert $$$t$$$ is delicious if the number of occurrences of $$$t$$$ in $$$s$$$ as a substring is divisible by the length of $$$t$$$. Now Tonio wants to know the number of delicious substrings of $$$s$$$. If the substring occurs several times in the string $$$s$$$, then all occurrences must be taken into account.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$1 \\leq n \\leq 10^6$$$) — the length of the rule $$$s$$$. The second line contains the string $$$s$$$ of length $$$n$$$ — the rule. The rule consists only of lowercase English letters.",
+  "output_specification": "In a single line print the number of delicious substrings of $$$s$$$.",
+  "sample_testcases": [
+    {
+      "input": "7\nabacaba",
+      "output": "11"
+    },
+    {
+      "input": "8\nabaababa",
+      "output": "11"
+    },
+    {
+      "input": "10\ndeadinside",
+      "output": "12"
+    },
+    {
+      "input": "5\naaaaa",
+      "output": "12"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:05",
+  "main_topic": "Strings",
+  "subtopic": "Suffix Structures",
+  "subsubtopic": "416. Suffix Array",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Sort all suffixes lexicographically with LCP array in O(N log N) using prefix doubling. Answer pattern matching and distinct substring queries in O(log N)."
+}

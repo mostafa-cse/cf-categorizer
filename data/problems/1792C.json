@@ -1,0 +1,38 @@
+{
+  "id": "1792C",
+  "source": "problemset",
+  "contest_id": 1792,
+  "problem_index": "C",
+  "name": "Min Max Sort",
+  "rating": 1500,
+  "tags": [
+    "binary search",
+    "brute force",
+    "greedy",
+    "math",
+    "two pointers"
+  ],
+  "solved_count": 17302,
+  "problem_url": "https://codeforces.com/problemset/problem/1792/C",
+  "editorial_url": "https://codeforces.com/blog/entry/111835",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a permutation $$$p$$$ of length $$$n$$$ (a permutation of length $$$n$$$ is an array of length $$$n$$$ in which each integer from $$$1$$$ to $$$n$$$ occurs exactly once). You can perform the following operation any number of times (possibly zero): choose two different elements $$$x$$$ and $$$y$$$ and erase them from the permutation; insert the minimum of $$$x$$$ and $$$y$$$ into the permutation in such a way that it becomes the first element; insert the maximum of $$$x$$$ and $$$y$$$ into the permutation in such a way that it becomes the last element. For example, if $$$p = [1, 5, 4, 2, 3]$$$ and we want to apply the operation to the elements $$$3$$$ and $$$5$$$, then after the first step of the operation, the permutation becomes $$$p = [1, 4, 2]$$$; and after we insert the elements, it becomes $$$p = [3, 1, 4, 2, 5]$$$. Your task is to calculate the minimum number of operations described above to sort the permutation $$$p$$$ in ascending order (i. e. transform $$$p$$$ so that $$$p_1 \\lt p_2 \\lt \\dots \\lt p_n$$$).",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The first line of the test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the number of elements in the permutation. The second line of the test case contains $$$n$$$ distinct integers from $$$1$$$ to $$$n$$$ — the given permutation $$$p$$$. The sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output a single integer — the minimum number of operations described above to sort the array $$$p$$$ in ascending order.",
+  "sample_testcases": [
+    {
+      "input": "4\n5\n1 5 4 2 3\n3\n1 2 3\n4\n2 1 4 3\n6\n5 2 4 1 6 3",
+      "output": "2\n0\n1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:03",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

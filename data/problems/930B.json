@@ -1,0 +1,44 @@
+{
+  "id": "930B",
+  "source": "problemset",
+  "contest_id": 930,
+  "problem_index": "B",
+  "name": "Game with String",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "probabilities",
+    "strings"
+  ],
+  "solved_count": 3240,
+  "problem_url": "https://codeforces.com/problemset/problem/930/B",
+  "editorial_url": "https://codeforces.com/blog/entry/58177",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vasya and Kolya play a game with a string, using the following rules. Initially, Kolya creates a string s , consisting of small English letters, and uniformly at random chooses an integer k from a segment [0, len ( s ) - 1] . He tells Vasya this string s , and then shifts it k letters to the left, i. e. creates a new string t = s k + 1 s k + 2 ... s n s 1 s 2 ... s k . Vasya does not know the integer k nor the string t , but he wants to guess the integer k . To do this, he asks Kolya to tell him the first letter of the new string, and then, after he sees it, open one more letter on some position, which Vasya can choose. Vasya understands, that he can't guarantee that he will win, but he wants to know the probability of winning, if he plays optimally. He wants you to compute this probability. Note that Vasya wants to know the value of k uniquely, it means, that if there are at least two cyclic shifts of s that fit the information Vasya knowns, Vasya loses. Of course, at any moment of the game Vasya wants to maximize the probability of his win.",
+  "input_specification": "The only string contains the string s of length l (3 ≤ l ≤ 5000) , consisting of small English letters only.",
+  "output_specification": "Print the only number — the answer for the problem. You answer is considered correct, if its absolute or relative error does not exceed 10 - 6 . Formally, let your answer be a , and the jury's answer be b . Your answer is considered correct if",
+  "sample_testcases": [
+    {
+      "input": "technocup",
+      "output": "1.000000000000000"
+    },
+    {
+      "input": "tictictactac",
+      "output": "0.333333333333333"
+    },
+    {
+      "input": "bbaabaabbb",
+      "output": "0.100000000000000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

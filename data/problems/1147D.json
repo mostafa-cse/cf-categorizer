@@ -1,0 +1,47 @@
+{
+  "id": "1147D",
+  "source": "problemset",
+  "contest_id": 1147,
+  "problem_index": "D",
+  "name": "Palindrome XOR",
+  "rating": 2400,
+  "tags": [
+    "dfs and similar",
+    "graphs"
+  ],
+  "solved_count": 887,
+  "problem_url": "https://codeforces.com/problemset/problem/1147/D",
+  "editorial_url": "https://codeforces.com/blog/entry/66878",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string $$$s$$$ consisting of characters \" 1 \", \" 0 \", and \" ? \". The first character of $$$s$$$ is guaranteed to be \" 1 \". Let $$$m$$$ be the number of characters in $$$s$$$. Count the number of ways we can choose a pair of integers $$$a, b$$$ that satisfies the following: $$$1 \\leq a \\lt b \\lt 2^m$$$ When written without leading zeros, the base-2 representations of $$$a$$$ and $$$b$$$ are both palindromes. The base-2 representation of bitwise XOR of $$$a$$$ and $$$b$$$ matches the pattern $$$s$$$. We say that $$$t$$$ matches $$$s$$$ if the lengths of $$$t$$$ and $$$s$$$ are the same and for every $$$i$$$, the $$$i$$$-th character of $$$t$$$ is equal to the $$$i$$$-th character of $$$s$$$, or the $$$i$$$-th character of $$$s$$$ is \" ? \". Compute this count modulo $$$998244353$$$.",
+  "input_specification": "The first line contains a single string $$$s$$$ ($$$1 \\leq |s| \\leq 1\\,000$$$). $$$s$$$ consists only of characters \" 1 \", \" 0 \" and \" ? \". It is guaranteed that the first character of $$$s$$$ is a \" 1 \".",
+  "output_specification": "Print a single integer, the count of pairs that satisfy the conditions modulo $$$998244353$$$.",
+  "sample_testcases": [
+    {
+      "input": "10110",
+      "output": "3"
+    },
+    {
+      "input": "1?0???10",
+      "output": "44"
+    },
+    {
+      "input": "1?????????????????????????????????????",
+      "output": "519569202"
+    },
+    {
+      "input": "1",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:46",
+  "main_topic": "Graph Theory",
+  "subtopic": "Graph Traversal",
+  "subsubtopic": "139. Depth First Search (DFS)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Depth First Search (DFS) paradigm under the Graph Theory framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "1906M",
+  "source": "problemset",
+  "contest_id": 1906,
+  "problem_index": "M",
+  "name": "Triangle Construction",
+  "rating": 1700,
+  "tags": [
+    "greedy",
+    "math"
+  ],
+  "solved_count": 3594,
+  "problem_url": "https://codeforces.com/problemset/problem/1906/M",
+  "editorial_url": "https://codeforces.com//competition.binus.ac.id/icpc2023/problem_analysis.pdf",
+  "time_limit": "1 second",
+  "memory_limit": "1024 megabytes",
+  "description": "You are given a regular $$$N$$$-sided polygon. Label one arbitrary side as side $$$1$$$, then label the next sides in clockwise order as side $$$2$$$, $$$3$$$, $$$\\dots$$$, $$$N$$$. There are $$$A_i$$$ special points on side $$$i$$$. These points are positioned such that side $$$i$$$ is divided into $$$A_i + 1$$$ segments with equal length. For instance, suppose that you have a regular $$$4$$$-sided polygon, i.e., a square. The following illustration shows how the special points are located within each side when $$$A = [3, 1, 4, 6]$$$. The uppermost side is labelled as side $$$1$$$. You want to create as many non-degenerate triangles as possible while satisfying the following requirements. Each triangle consists of $$$3$$$ distinct special points (not necessarily from different sides) as its corners. Each special point can only become the corner of at most $$$1$$$ triangle. All triangles must not intersect with each other. Determine the maximum number of non-degenerate triangles that you can create. A triangle is non-degenerate if it has a positive area.",
+  "input_specification": "The first line consists of an integer $$$N$$$ ($$$3 \\leq N \\leq 200\\,000$$$). The following line consists of $$$N$$$ integers $$$A_i$$$ ($$$1 \\leq A_i \\leq 2 \\cdot 10^9$$$).",
+  "output_specification": "Output a single integer representing the maximum number of non-degenerate triangles that you can create.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 1 4 6",
+      "output": "4"
+    },
+    {
+      "input": "6\n1 2 1 2 1 2",
+      "output": "3"
+    },
+    {
+      "input": "3\n1 1 1",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:38",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

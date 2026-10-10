@@ -1,0 +1,40 @@
+{
+  "id": "877F",
+  "source": "problemset",
+  "contest_id": 877,
+  "problem_index": "F",
+  "name": "Ann and Books",
+  "rating": 2300,
+  "tags": [
+    "data structures",
+    "flows",
+    "hashing"
+  ],
+  "solved_count": 2528,
+  "problem_url": "https://codeforces.com/problemset/problem/877/F",
+  "editorial_url": "https://codeforces.com/blog/entry/55362",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "In Ann's favorite book shop are as many as n books on math and economics. Books are numbered from 1 to n . Each of them contains non-negative number of problems. Today there is a sale: any subsegment of a segment from l to r can be bought at a fixed price. Ann decided that she wants to buy such non-empty subsegment that the sale operates on it and the number of math problems is greater than the number of economics problems exactly by k . Note that k may be positive, negative or zero. Unfortunately, Ann is not sure on which segment the sale operates, but she has q assumptions. For each of them she wants to know the number of options to buy a subsegment satisfying the condition (because the time she spends on choosing depends on that). Currently Ann is too busy solving other problems, she asks you for help. For each her assumption determine the number of subsegments of the given segment such that the number of math problems is greaten than the number of economics problems on that subsegment exactly by k .",
+  "input_specification": "The first line contains two integers n and k ( 1 ≤ n ≤ 100 000 , - 10 9 ≤ k ≤ 10 9 ) — the number of books and the needed difference between the number of math problems and the number of economics problems. The second line contains n integers t 1 , t 2 , ..., t n ( 1 ≤ t i ≤ 2 ), where t i is 1 if the i -th book is on math or 2 if the i -th is on economics. The third line contains n integers a 1 , a 2 , ..., a n ( 0 ≤ a i ≤ 10 9 ), where a i is the number of problems in the i -th book. The fourth line contains a single integer q ( 1 ≤ q ≤ 100 000 ) — the number of assumptions. Each of the next q lines contains two integers l i and r i ( 1 ≤ l i ≤ r i ≤ n ) describing the i -th Ann's assumption.",
+  "output_specification": "Print q lines, in the i -th of them print the number of subsegments for the i -th Ann's assumption.",
+  "sample_testcases": [
+    {
+      "input": "4 1\n1 1 1 2\n1 1 1 1\n4\n1 2\n1 3\n1 4\n3 4",
+      "output": "2\n3\n4\n1"
+    },
+    {
+      "input": "4 0\n1 2 1 2\n0 0 0 0\n1\n1 4",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:45",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "241D",
+  "source": "problemset",
+  "contest_id": 241,
+  "problem_index": "D",
+  "name": "Numbers",
+  "rating": 2900,
+  "tags": [],
+  "solved_count": 419,
+  "problem_url": "https://codeforces.com/problemset/problem/241/D",
+  "editorial_url": "https://codeforces.com/blog/entry/5722",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a sequence of n distinct integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ n ) . You want to remove some integers in such a way that the resulting sequence of integers satisfies the following three conditions: the resulting sequence is not empty; the exclusive or ( xor operation) of all the integers in the resulting sequence equals 0 ; if you write all the integers of the resulting sequence (from beginning to the end) in a row in the decimal numeral system and without any spaces, the written number is divisible by p . You are given the sequence of n integers a and a prime number p , find a way to satisfy the described conditions.",
+  "input_specification": "The first line of the input contains two integers n and p (1 ≤ n , p ≤ 50000) . Next line contains n space-separated distinct integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ n ) . It is guaranteed that p is a prime number.",
+  "output_specification": "If there is no solution for the given input, print \" No \" (without quotes) in the only line of the output. Otherwise print \" Yes \" in the first line of output. The second line should contain an integer k ( k > 0) specifying the number of remaining elements and the third line should contain k distinct integers x 1 , x 2 , ..., x k (1 ≤ x i ≤ n ) . These integers mean that you should remove all integers from the sequence except integers a x 1 , a x 2 , ..., a x k to satisfy the described conditions. If there are multiple solutions, any of them will be accepted.",
+  "sample_testcases": [
+    {
+      "input": "3 3\n1 2 3",
+      "output": "Yes\n3\n1 2 3"
+    },
+    {
+      "input": "3 5\n1 2 3",
+      "output": "No"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:23:02",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

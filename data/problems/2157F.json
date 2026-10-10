@@ -1,0 +1,38 @@
+{
+  "id": "2157F",
+  "source": "problemset",
+  "contest_id": 2157,
+  "problem_index": "F",
+  "name": "Git Gud",
+  "rating": 2400,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "divide and conquer",
+    "math",
+    "ternary search"
+  ],
+  "solved_count": 1899,
+  "problem_url": "https://codeforces.com/problemset/problem/2157/F",
+  "editorial_url": "https://codeforces.com/blog/entry/148631",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "lianhua - CITRUS! ⠀ You are an adventurer working for the futuristic corporation RoboCorp. Your current skill level is an integer $$$s$$$ in the range $$$[1, n]$$$, but you don't know its exact value. Your goal is to reach skill $$$\\geq n$$$ by completing missions for RoboCorp, but each mission costs precious robocoins. You can choose missions of any difficulty and any positive integer duration (in hours). However, the cost depends both on the new mission's length, and on how the new mission's difficulty compares to your most recent one. Let $$$x$$$ be the difficulty of your most recent mission. If you want to undertake a new mission of difficulty $$$y$$$ and duration $$$l$$$: If it is your first mission, or $$$y \\leq x$$$, the cost is $$$l$$$ robocoins. If $$$y \\gt x$$$, the cost is $$$1000 + l$$$ robocoins. Your skill improves only when you take on a mission whose difficulty exactly matches your current skill: If $$$y = s$$$, then your skill increases by $$$l$$$. Otherwise, your skill does not change. After each mission, you still don't know your actual skill value. You start with $$$10^6$$$ robocoins. Find a strategy (a sequence of missions) that does not exceed your budget and guarantees your skill becomes at least $$$n$$$, no matter what your initial skill was.",
+  "input_specification": "The input contains a single line with an integer $$$n$$$ ($$$n = 4$$$ or $$$n = 250\\,000$$$) — the target skill level (that is, by the end, your skill must be $$$\\geq n$$$). There are exactly $$$2$$$ tests in this problem (including the example). The example has $$$n = 4$$$, and the other test has $$$n = 250\\,000$$$. Hacks are not allowed in this problem.",
+  "output_specification": "In the first line, print a single integer $$$k$$$ ($$$0 \\leq k \\leq 10^6$$$) — the number of missions you plan to complete. Then, print $$$k$$$ lines. The $$$i$$$-th line must contain two integers $$$y$$$ and $$$l$$$ ($$$1 \\leq y, l \\leq 10^6$$$) — the difficulty and duration (in hours) of the $$$i$$$-th mission, respectively.",
+  "sample_testcases": [
+    {
+      "input": "4",
+      "output": "4\n1 4\n3 1\n2 1\n3 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:46",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Search Techniques",
+  "subsubtopic": "538. Ternary Search",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Ternary Search paradigm under the Miscellaneous framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

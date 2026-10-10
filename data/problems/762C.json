@@ -1,0 +1,45 @@
+{
+  "id": "762C",
+  "source": "problemset",
+  "contest_id": 762,
+  "problem_index": "C",
+  "name": "Two strings",
+  "rating": 2100,
+  "tags": [
+    "binary search",
+    "hashing",
+    "strings",
+    "two pointers"
+  ],
+  "solved_count": 3096,
+  "problem_url": "https://codeforces.com/problemset/problem/762/C",
+  "editorial_url": "https://codeforces.com/blog/entry/50010",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given two strings a and b . You have to remove the minimum possible number of consecutive (standing one after another) characters from string b in such a way that it becomes a subsequence of string a . It can happen that you will not need to remove any characters at all, or maybe you will have to remove all of the characters from b and make it empty. Subsequence of string s is any such string that can be obtained by erasing zero or more characters ( not necessarily consecutive ) from string s .",
+  "input_specification": "The first line contains string a , and the second line — string b . Both of these strings are nonempty and consist of lowercase letters of English alphabet. The length of each string is no bigger than 10 5 characters.",
+  "output_specification": "On the first line output a subsequence of string a , obtained from b by erasing the minimum number of consecutive characters. If the answer consists of zero characters, output « - » (a minus sign).",
+  "sample_testcases": [
+    {
+      "input": "hi\nbob",
+      "output": "-"
+    },
+    {
+      "input": "abca\naccepted",
+      "output": "ac"
+    },
+    {
+      "input": "abacaba\nabcdcba",
+      "output": "abcba"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:12",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

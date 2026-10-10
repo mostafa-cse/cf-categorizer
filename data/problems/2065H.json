@@ -1,0 +1,39 @@
+{
+  "id": "2065H",
+  "source": "problemset",
+  "contest_id": 2065,
+  "problem_index": "H",
+  "name": "Bro Thinks He's Him",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "divide and conquer",
+    "dp",
+    "math",
+    "matrices"
+  ],
+  "solved_count": 2077,
+  "problem_url": "https://codeforces.com/problemset/problem/2065/H",
+  "editorial_url": "https://codeforces.com/blog/entry/139327",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Skibidus thinks he's Him! He proved it by solving this difficult task. Can you also prove yourself? Given a binary string$$$^{\\text{∗}}$$$ $$$t$$$, $$$f(t)$$$ is defined as the minimum number of contiguous substrings, each consisting of identical characters, into which $$$t$$$ can be partitioned. For example, $$$f(\\texttt{00110001}) = 4$$$ because $$$t$$$ can be partitioned as $$$\\texttt{[00][11][000][1]}$$$ where each bracketed segment consists of identical characters. Skibidus gives you a binary string $$$s$$$ and $$$q$$$ queries. In each query, a single character of the string is flipped (i.e. $$$\\texttt{0}$$$ changes to $$$\\texttt{1}$$$ and $$$\\texttt{1}$$$ changes to $$$\\texttt{0}$$$); changes are saved after the query is processed. After each query, output the sum over all $$$f(b)$$$ where $$$b$$$ is a non-empty subsequence$$$^{\\text{†}}$$$ of $$$s$$$, modulo $$$998\\,244\\,353$$$. $$$^{\\text{∗}}$$$A binary string consists of only characters $$$\\texttt{0}$$$ and $$$\\texttt{1}$$$. $$$^{\\text{†}}$$$A subsequence of a string is a string which can be obtained by removing several (possibly zero) characters from the original string.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains a binary string $$$s$$$ ($$$1 \\leq |s| \\leq 2 \\cdot 10^5$$$). The following line of each test case contains an integer $$$q$$$ ($$$1 \\leq q \\leq 2 \\cdot 10^5$$$) — the number of queries. The following line contains $$$q$$$ integers $$$v_1, v_2, \\ldots, v_q$$$ ($$$1 \\leq v_i \\leq |s|$$$), denoting $$$s_{v_i}$$$ is flipped for the $$$i$$$'th query. It is guaranteed that the sum of $$$|s|$$$ and the sum of $$$q$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output $$$q$$$ integers on a single line — the answer after each query modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n101\n2\n1 3\n10110\n3\n1 2 3\n101110101\n5\n7 2 4 4 1",
+      "output": "10 7 \n61 59 67 \n1495 1169 1417 1169 1396"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:35",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

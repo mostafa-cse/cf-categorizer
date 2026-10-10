@@ -1,0 +1,38 @@
+{
+  "id": "463E",
+  "source": "problemset",
+  "contest_id": 463,
+  "problem_index": "E",
+  "name": "Caisa and Tree",
+  "rating": 2100,
+  "tags": [
+    "brute force",
+    "dfs and similar",
+    "math",
+    "number theory",
+    "trees"
+  ],
+  "solved_count": 1859,
+  "problem_url": "https://codeforces.com/problemset/problem/463/E",
+  "editorial_url": "https://codeforces.com/blog/entry/13631",
+  "time_limit": "10 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Caisa is now at home and his son has a simple task for him. Given a rooted tree with n vertices, numbered from 1 to n (vertex 1 is the root). Each vertex of the tree has a value. You should answer q queries. Each query is one of the following: Format of the query is \"1 v \". Let's write out the sequence of vertices along the path from the root to vertex v : u 1 , u 2 , ..., u k ( u 1 = 1; u k = v ) . You need to output such a vertex u i that gcd ( value of u i , value of v ) > 1 and i < k . If there are several possible vertices u i pick the one with maximum value of i . If there is no such vertex output -1 . Format of the query is \"2 v w \". You must change the value of vertex v to w . You are given all the queries, help Caisa to solve the problem.",
+  "input_specification": "The first line contains two space-separated integers n , q (1 ≤ n , q ≤ 10 5 ) . The second line contains n integers a 1 , a 2 , ..., a n (1 ≤ a i ≤ 2·10 6 ) , where a i represent the value of node i . Each of the next n - 1 lines contains two integers x i and y i (1 ≤ x i , y i ≤ n ; x i ≠ y i ) , denoting the edge of the tree between vertices x i and y i . Each of the next q lines contains a query in the format that is given above. For each query the following inequalities hold: 1 ≤ v ≤ n and 1 ≤ w ≤ 2·10 6 . Note that : there are no more than 50 queries that changes the value of a vertex.",
+  "output_specification": "For each query of the first type output the result of the query.",
+  "sample_testcases": [
+    {
+      "input": "4 6\n10 8 4 3\n1 2\n2 3\n3 4\n1 1\n1 2\n1 3\n1 4\n2 1 9\n1 4",
+      "output": "-1\n1\n2\n-1\n1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:24",
+  "main_topic": "Graph Theory",
+  "subtopic": "Lowest Common Ancestor (LCA)",
+  "subsubtopic": "146. Binary Lifting and LCA",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute 2^k ancestor jumps up[u][k] and node depths in O(N log N). Compute LCA and path aggregates in O(log N) per query."
+}

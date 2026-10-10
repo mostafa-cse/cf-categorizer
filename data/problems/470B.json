@@ -1,0 +1,42 @@
+{
+  "id": "470B",
+  "source": "problemset",
+  "contest_id": 470,
+  "problem_index": "B",
+  "name": "Hexakosioihexekontahexaphobia",
+  "rating": 1800,
+  "tags": [
+    "*special"
+  ],
+  "solved_count": 274,
+  "problem_url": "https://codeforces.com/problemset/problem/470/B",
+  "editorial_url": "https://codeforces.com/blog/entry/13777",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This (unpronounceable) word means simply fear of number 666. You are given a string of digits. Check whether it is scary for a person suffering from this phobia, i.e., whether it contains number 666 as a substring.",
+  "input_specification": "The input will consist of a single string p . The string contains between 1 and 100 digits ('0'-'9'), inclusive. The string doesn't contain any other characters except digits.",
+  "output_specification": "Output \" YES \" if given string contains number 666, and \" NO \" otherwise (quotes for clarity only).",
+  "sample_testcases": [
+    {
+      "input": "123098",
+      "output": "NO"
+    },
+    {
+      "input": "16660",
+      "output": "YES"
+    },
+    {
+      "input": "1606061",
+      "output": "NO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

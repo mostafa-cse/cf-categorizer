@@ -1,0 +1,40 @@
+{
+  "id": "938F",
+  "source": "problemset",
+  "contest_id": 938,
+  "problem_index": "F",
+  "name": "Erasing Substrings",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "dp",
+    "greedy"
+  ],
+  "solved_count": 684,
+  "problem_url": "https://codeforces.com/problemset/problem/938/F",
+  "editorial_url": "https://codeforces.com/blog/entry/57840",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string s , initially consisting of n lowercase Latin letters. After that, you perform k operations with it, where . During i -th operation you must erase some substring of length exactly 2 i - 1 from s . Print the lexicographically minimal string you may obtain after performing k such operations.",
+  "input_specification": "The only line contains one string s consisting of n lowercase Latin letters ( 1 ≤ n ≤ 5000 ).",
+  "output_specification": "Print the lexicographically minimal string you may obtain after performing k operations.",
+  "sample_testcases": [
+    {
+      "input": "adcbca",
+      "output": "aba"
+    },
+    {
+      "input": "abacabadabacaba",
+      "output": "aabacaba"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

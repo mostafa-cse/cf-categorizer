@@ -1,0 +1,39 @@
+{
+  "id": "932C",
+  "source": "problemset",
+  "contest_id": 932,
+  "problem_index": "C",
+  "name": "Permutation Cycle",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms"
+  ],
+  "solved_count": 4276,
+  "problem_url": "https://codeforces.com/problemset/problem/932/C",
+  "editorial_url": "https://codeforces.com/blog/entry/57796",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "For a permutation P [1... N ] of integers from 1 to N , function f is defined as follows: Let g ( i ) be the minimum positive integer j such that f ( i , j ) = i . We can show such j always exists. For given N , A , B , find a permutation P of integers from 1 to N such that for 1 ≤ i ≤ N , g ( i ) equals either A or B .",
+  "input_specification": "The only line contains three integers N , A , B ( 1 ≤ N ≤ 10 6 , 1 ≤ A , B ≤ N ).",
+  "output_specification": "If no such permutation exists, output -1 . Otherwise, output a permutation of integers from 1 to N .",
+  "sample_testcases": [
+    {
+      "input": "9 2 5",
+      "output": "6 5 8 3 4 1 9 2 7"
+    },
+    {
+      "input": "3 2 1",
+      "output": "1 2 3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "45. Basic Constructive Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Uncover mathematical invariant or parity constraint. Construct the solution step-by-step maintaining the validity condition without exhaustive search."
+}

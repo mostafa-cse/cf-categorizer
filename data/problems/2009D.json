@@ -1,0 +1,35 @@
+{
+  "id": "2009D",
+  "source": "problemset",
+  "contest_id": 2009,
+  "problem_index": "D",
+  "name": "Satyam and Counting",
+  "rating": 1400,
+  "tags": [
+    "geometry",
+    "math"
+  ],
+  "solved_count": 19492,
+  "problem_url": "https://codeforces.com/problemset/problem/2009/D",
+  "editorial_url": "https://codeforces.com/blog/entry/133296",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Satyam is given $$$n$$$ distinct points on the 2D coordinate plane. It is guaranteed that $$$0 \\leq y_i \\leq 1$$$ for all given points $$$(x_i, y_i)$$$. How many different nondegenerate right triangles$$$^{\\text{∗}}$$$ can be formed from choosing three different points as its vertices? Two triangles $$$a$$$ and $$$b$$$ are different if there is a point $$$v$$$ such that $$$v$$$ is a vertex of $$$a$$$ but not a vertex of $$$b$$$. $$$^{\\text{∗}}$$$A nondegenerate right triangle has positive area and an interior $$$90^{\\circ}$$$ angle.",
+  "input_specification": "The first line contains an integer $$$t$$$ ($$$1 \\leq t \\leq 10^4$$$) — the number of test cases. The first line of each test case contains an integer $$$n$$$ ($$$3 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of points. The following $$$n$$$ lines contain two integers $$$x_i$$$ and $$$y_i$$$ ($$$0 \\leq x_i \\leq n$$$, $$$0 \\leq y_i \\leq 1$$$) — the $$$i$$$'th point that Satyam can choose from. It is guaranteed that all $$$(x_i, y_i)$$$ are pairwise distinct. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "Output an integer for each test case, the number of distinct nondegenerate right triangles that can be formed from choosing three points.",
+  "sample_testcases": [
+    {
+      "input": "3\n5\n1 0\n1 1\n3 0\n5 0\n2 1\n3\n0 0\n1 0\n3 0\n9\n1 0\n2 0\n3 0\n4 0\n5 0\n2 1\n7 1\n8 1\n9 1",
+      "output": "4\n0\n8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:51",
+  "main_topic": "Geometry",
+  "subtopic": "Geometry 2D",
+  "subsubtopic": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D) paradigm under the Geometry framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

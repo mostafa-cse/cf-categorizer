@@ -1,0 +1,47 @@
+{
+  "id": "1066B",
+  "source": "problemset",
+  "contest_id": 1066,
+  "problem_index": "B",
+  "name": "Heaters",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 9525,
+  "problem_url": "https://codeforces.com/problemset/problem/1066/B",
+  "editorial_url": "https://codeforces.com/blog/entry/62419",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Vova's house is an array consisting of $$$n$$$ elements (yeah, this is the first problem, I think, where someone lives in the array). There are heaters in some positions of the array. The $$$i$$$-th element of the array is $$$1$$$ if there is a heater in the position $$$i$$$, otherwise the $$$i$$$-th element of the array is $$$0$$$. Each heater has a value $$$r$$$ ($$$r$$$ is the same for all heaters). This value means that the heater at the position $$$pos$$$ can warm up all the elements in range $$$[pos - r + 1; pos + r - 1]$$$. Vova likes to walk through his house while he thinks, and he hates cold positions of his house. Vova wants to switch some of his heaters on in such a way that each element of his house will be warmed up by at least one heater. Vova's target is to warm up the whole house (all the elements of the array), i.e. if $$$n = 6$$$, $$$r = 2$$$ and heaters are at positions $$$2$$$ and $$$5$$$, then Vova can warm up the whole house if he switches all the heaters in the house on (then the first $$$3$$$ elements will be warmed up by the first heater and the last $$$3$$$ elements will be warmed up by the second heater). Initially, all the heaters are off. But from the other hand, Vova didn't like to pay much for the electricity. So he wants to switch the minimum number of heaters on in such a way that each element of his house is warmed up by at least one heater. Your task is to find this number of heaters or say that it is impossible to warm up the whole house.",
+  "input_specification": "The first line of the input contains two integers $$$n$$$ and $$$r$$$ ($$$1 \\le n, r \\le 1000$$$) — the number of elements in the array and the value of heaters. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$0 \\le a_i \\le 1$$$) — the Vova's house description.",
+  "output_specification": "Print one integer — the minimum number of heaters needed to warm up the whole house or -1 if it is impossible to do it.",
+  "sample_testcases": [
+    {
+      "input": "6 2\n0 1 1 0 0 1",
+      "output": "3"
+    },
+    {
+      "input": "5 3\n1 0 0 0 1",
+      "output": "2"
+    },
+    {
+      "input": "5 10\n0 0 0 0 0",
+      "output": "-1"
+    },
+    {
+      "input": "10 3\n0 0 1 1 0 1 0 0 0 1",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:06",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

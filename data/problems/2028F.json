@@ -1,0 +1,37 @@
+{
+  "id": "2028F",
+  "source": "problemset",
+  "contest_id": 2028,
+  "problem_index": "F",
+  "name": "Alice's Adventures in Addition",
+  "rating": 2700,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 568,
+  "problem_url": "https://codeforces.com/problemset/problem/2028/F",
+  "editorial_url": "https://codeforces.com/blog/entry/136096",
+  "time_limit": "3 seconds",
+  "memory_limit": "32 megabytes",
+  "description": "Note that the memory limit is unusual. The Cheshire Cat has a riddle for Alice: given $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ and a target $$$m$$$, is there a way to insert $$$+$$$ and $$$\\times$$$ into the circles of the expression $$$$$$a_1 \\circ a_2 \\circ \\cdots \\circ a_n = m$$$$$$ to make it true? We follow the usual order of operations: $$$\\times$$$ is done before $$$+$$$. Although Alice is excellent at chess, she is not good at math. Please help her so she can find a way out of Wonderland!",
+  "input_specification": "Each test contains multiple test cases. The first line of input contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows. The first line of each test case contains two integers $$$n, m$$$ ($$$1\\le n\\le 2\\cdot 10^5$$$; $$$1\\le m\\le 10^4$$$) — the number of integers and the target, respectively. The second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0\\le a_i\\le 10^4$$$) — the elements of the array $$$a$$$. The sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.",
+  "output_specification": "For each test case, output \" YES \" without quotes if it is possible to get the target by inserting $$$+$$$ or $$$\\times$$$ and \" NO \" otherwise. You can output each letter in any case (for example, the strings \" yEs \", \" yes \", \" Yes \", and \" YES \" will be recognized as a positive answer).",
+  "sample_testcases": [
+    {
+      "input": "6\n5 4\n2 1 1 1 2\n5 5\n2 1 1 1 2\n5 6\n2 1 1 1 2\n5 7\n2 1 1 1 2\n5 8\n2 1 1 1 2\n5 6\n2 0 2 2 3",
+      "output": "YES\nYES\nYES\nYES\nNO\nYES"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:49",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

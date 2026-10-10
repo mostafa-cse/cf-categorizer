@@ -1,0 +1,40 @@
+{
+  "id": "1422C",
+  "source": "problemset",
+  "contest_id": 1422,
+  "problem_index": "C",
+  "name": "Bargain",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 8924,
+  "problem_url": "https://codeforces.com/problemset/problem/1422/C",
+  "editorial_url": "https://codeforces.com/blog/entry/83452",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Sometimes it is not easy to come to an agreement in a bargain. Right now Sasha and Vova can't come to an agreement: Sasha names a price as high as possible, then Vova wants to remove as many digits from the price as possible. In more details, Sasha names some integer price $$$n$$$, Vova removes a non-empty substring of (consecutive) digits from the price, the remaining digits close the gap, and the resulting integer is the price. For example, is Sasha names $$$1213121$$$, Vova can remove the substring $$$1312$$$, and the result is $$$121$$$. It is allowed for result to contain leading zeros. If Vova removes all digits, the price is considered to be $$$0$$$. Sasha wants to come up with some constraints so that Vova can't just remove all digits, but he needs some arguments supporting the constraints. To start with, he wants to compute the sum of all possible resulting prices after Vova's move. Help Sasha to compute this sum. Since the answer can be very large, print it modulo $$$10^9 + 7$$$.",
+  "input_specification": "The first and only line contains a single integer $$$n$$$ ($$$1 \\le n \\lt 10^{10^5}$$$).",
+  "output_specification": "In the only line print the required sum modulo $$$10^9 + 7$$$.",
+  "sample_testcases": [
+    {
+      "input": "107",
+      "output": "42"
+    },
+    {
+      "input": "100500100500",
+      "output": "428101984"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:33",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

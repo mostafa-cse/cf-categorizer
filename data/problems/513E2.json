@@ -1,0 +1,38 @@
+{
+  "id": "513E2",
+  "source": "problemset",
+  "contest_id": 513,
+  "problem_index": "E2",
+  "name": "Subarray Cuts",
+  "rating": 2700,
+  "tags": [
+    "dp"
+  ],
+  "solved_count": 666,
+  "problem_url": "https://codeforces.com/problemset/problem/513/E2",
+  "editorial_url": "https://codeforces.com/blog/entry/16260",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "You are given an array of length n and a number k . Let's pick k non-overlapping non-empty subarrays of the initial array. Let s i be the sum of the i -th subarray in order from left to right. Compute the maximum value of the following expression: | s 1 - s 2 | + | s 2 - s 3 | + ... + | s k - 1 - s k | Here subarray is a contiguous part of an array.",
+  "input_specification": "The first line of input contains two integers n and k . The second line contains n integers — the elements of the array. The absolute values of elements do not exceed 10 4 . The problem consists of two subproblems. The subproblems have different constraints on the input. You will get some score for the correct submission of the subproblem. The description of the subproblems follows. In subproblem E1 ( 9 points), constraints 2 ≤ n ≤ 400 , 2 ≤ k ≤ min ( n , 50) will hold. In subproblem E2 ( 12 points), constraints 2 ≤ n ≤ 30000 , 2 ≤ k ≤ min ( n , 200) will hold.",
+  "output_specification": "Output a single integer — the maximum possible value.",
+  "sample_testcases": [
+    {
+      "input": "5 3\n5 2 4 3 1",
+      "output": "12"
+    },
+    {
+      "input": "4 2\n7 4 3 7",
+      "output": "8"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:13",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

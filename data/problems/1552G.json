@@ -1,0 +1,49 @@
+{
+  "id": "1552G",
+  "source": "problemset",
+  "contest_id": 1552,
+  "problem_index": "G",
+  "name": "A Serious Referee",
+  "rating": 3000,
+  "tags": [
+    "bitmasks",
+    "brute force",
+    "dfs and similar",
+    "sortings"
+  ],
+  "solved_count": 703,
+  "problem_url": "https://codeforces.com/problemset/problem/1552/G",
+  "editorial_url": "https://codeforces.com/blog/entry/93199",
+  "time_limit": "1 second",
+  "memory_limit": "512 megabytes",
+  "description": "Andrea has come up with what he believes to be a novel sorting algorithm for arrays of length $$$n$$$. The algorithm works as follows. Initially there is an array of $$$n$$$ integers $$$a_1,\\, a_2,\\, \\dots,\\, a_n$$$. Then, $$$k$$$ steps are executed. For each $$$1\\le i\\le k$$$, during the $$$i$$$-th step the subsequence of the array $$$a$$$ with indexes $$$j_{i,1} \\lt j_{i,2} \\lt \\dots \\lt j_{i, q_i}$$$ is sorted, without changing the values with the remaining indexes. So, the subsequence $$$a_{j_{i,1}},\\, a_{j_{i,2}},\\, \\dots,\\, a_{j_{i,q_i}}$$$ is sorted and all other elements of $$$a$$$ are left untouched. Andrea, being eager to share his discovery with the academic community, sent a short paper describing his algorithm to the journal \"Annals of Sorting Algorithms\" and you are the referee of the paper (that is, the person who must judge the correctness of the paper). You must decide whether Andrea's algorithm is correct, that is, if it sorts any array $$$a$$$ of $$$n$$$ integers.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ ($$$1\\le n\\le 40$$$, $$$0\\le k\\le 10$$$) — the length of the arrays handled by Andrea's algorithm and the number of steps of Andrea's algorithm. Then $$$k$$$ lines follow, each describing the subsequence considered in a step of Andrea's algorithm. The $$$i$$$-th of these lines contains the integer $$$q_i$$$ ($$$1\\le q_i\\le n$$$) followed by $$$q_i$$$ integers $$$j_{i,1},\\,j_{i,2},\\,\\dots,\\, j_{i,q_i}$$$ ($$$1\\le j_{i,1} \\lt j_{i,2} \\lt \\cdots \\lt j_{i,q_i}\\le n$$$) — the length of the subsequence considered in the $$$i$$$-th step and the indexes of the subsequence.",
+  "output_specification": "If Andrea's algorithm is correct print ACCEPTED , otherwise print REJECTED .",
+  "sample_testcases": [
+    {
+      "input": "4 3\n3 1 2 3\n3 2 3 4\n2 1 2",
+      "output": "ACCEPTED"
+    },
+    {
+      "input": "4 3\n3 1 2 3\n3 2 3 4\n3 1 3 4",
+      "output": "REJECTED"
+    },
+    {
+      "input": "3 4\n1 1\n1 2\n1 3\n2 1 3",
+      "output": "REJECTED"
+    },
+    {
+      "input": "5 2\n3 2 3 4\n5 1 2 3 4 5",
+      "output": "ACCEPTED"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:03",
+  "main_topic": "Basics",
+  "subtopic": "Bitwise Thinking",
+  "subsubtopic": "13. Bitwise Operations and Bitmasks",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Bitwise Operations and Bitmasks paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

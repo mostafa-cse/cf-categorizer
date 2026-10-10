@@ -1,0 +1,47 @@
+{
+  "id": "1244E",
+  "source": "problemset",
+  "contest_id": 1244,
+  "problem_index": "E",
+  "name": "Minimizing Difference",
+  "rating": 2000,
+  "tags": [
+    "binary search",
+    "constructive algorithms",
+    "greedy",
+    "sortings",
+    "ternary search",
+    "two pointers"
+  ],
+  "solved_count": 7052,
+  "problem_url": "https://codeforces.com/problemset/problem/1244/E",
+  "editorial_url": "https://codeforces.com/blog/entry/70553",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a sequence $$$a_1, a_2, \\dots, a_n$$$ consisting of $$$n$$$ integers. You may perform the following operation on this sequence: choose any element and either increase or decrease it by one. Calculate the minimum possible difference between the maximum element and the minimum element in the sequence, if you can perform the aforementioned operation no more than $$$k$$$ times.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$k$$$ $$$(2 \\le n \\le 10^{5}, 1 \\le k \\le 10^{14})$$$ — the number of elements in the sequence and the maximum number of times you can perform the operation, respectively. The second line contains a sequence of integers $$$a_1, a_2, \\dots, a_n$$$ $$$(1 \\le a_i \\le 10^{9})$$$.",
+  "output_specification": "Print the minimum possible difference between the maximum element and the minimum element in the sequence, if you can perform the aforementioned operation no more than $$$k$$$ times.",
+  "sample_testcases": [
+    {
+      "input": "4 5\n3 1 7 5",
+      "output": "2"
+    },
+    {
+      "input": "3 10\n100 100 100",
+      "output": "0"
+    },
+    {
+      "input": "10 9\n4 5 5 7 5 4 5 2 4 3",
+      "output": "1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:20",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

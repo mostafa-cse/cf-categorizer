@@ -1,0 +1,40 @@
+{
+  "id": "1285F",
+  "source": "problemset",
+  "contest_id": 1285,
+  "problem_index": "F",
+  "name": "Classical?",
+  "rating": 2900,
+  "tags": [
+    "binary search",
+    "combinatorics",
+    "number theory"
+  ],
+  "solved_count": 1419,
+  "problem_url": "https://codeforces.com/problemset/problem/1285/F",
+  "editorial_url": "https://codeforces.com/blog/entry/72950",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Given an array $$$a$$$, consisting of $$$n$$$ integers, find: $$$$$$\\max\\limits_{1 \\le i \\lt j \\le n} LCM(a_i,a_j),$$$$$$ where $$$LCM(x, y)$$$ is the smallest positive integer that is divisible by both $$$x$$$ and $$$y$$$. For example, $$$LCM(6, 8) = 24$$$, $$$LCM(4, 12) = 12$$$, $$$LCM(2, 3) = 6$$$.",
+  "input_specification": "The first line contains an integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — the number of elements in the array $$$a$$$. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^5$$$) — the elements of the array $$$a$$$.",
+  "output_specification": "Print one integer, the maximum value of the least common multiple of two elements in the array $$$a$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n13 35 77",
+      "output": "1001"
+    },
+    {
+      "input": "6\n1 2 4 8 16 32",
+      "output": "32"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:08",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

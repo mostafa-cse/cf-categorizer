@@ -1,0 +1,39 @@
+{
+  "id": "91A",
+  "source": "problemset",
+  "contest_id": 91,
+  "problem_index": "A",
+  "name": "Newspaper Headline",
+  "rating": 1500,
+  "tags": [
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 4048,
+  "problem_url": "https://codeforces.com/problemset/problem/91/A",
+  "editorial_url": "https://codeforces.com/blog/entry/2182",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A newspaper is published in Walrusland. Its heading is s 1 , it consists of lowercase Latin letters. Fangy the little walrus wants to buy several such newspapers, cut out their headings, glue them one to another in order to get one big string. After that walrus erase several letters from this string in order to get a new word s 2 . It is considered that when Fangy erases some letter, there's no whitespace formed instead of the letter. That is, the string remains unbroken and it still only consists of lowercase Latin letters. For example, the heading is \" abc \". If we take two such headings and glue them one to the other one, we get \" abcabc \". If we erase the letters on positions 1 and 5 , we get a word \" bcac \". Which least number of newspaper headings s 1 will Fangy need to glue them, erase several letters and get word s 2 ?",
+  "input_specification": "The input data contain two lines. The first line contain the heading s 1 , the second line contains the word s 2 . The lines only consist of lowercase Latin letters ( 1 ≤ | s 1 | ≤ 10 4 , 1 ≤ | s 2 | ≤ 10 6 ).",
+  "output_specification": "If it is impossible to get the word s 2 in the above-described manner, print \"-1\" (without the quotes). Otherwise, print the least number of newspaper headings s 1 , which Fangy will need to receive the word s 2 .",
+  "sample_testcases": [
+    {
+      "input": "abc\nxyz",
+      "output": "-1"
+    },
+    {
+      "input": "abcd\ndabc",
+      "output": "2"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:06",
+  "main_topic": "Strings",
+  "subtopic": "String Matching",
+  "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+}

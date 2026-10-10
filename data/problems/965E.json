@@ -1,0 +1,46 @@
+{
+  "id": "965E",
+  "source": "problemset",
+  "contest_id": 965,
+  "problem_index": "E",
+  "name": "Short Code",
+  "rating": 2200,
+  "tags": [
+    "data structures",
+    "dp",
+    "greedy",
+    "strings",
+    "trees"
+  ],
+  "solved_count": 2073,
+  "problem_url": "https://codeforces.com/problemset/problem/965/E",
+  "editorial_url": "https://codeforces.com/blog/entry/59105",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Arkady's code contains $$$n$$$ variables. Each variable has a unique name consisting of lowercase English letters only. One day Arkady decided to shorten his code. He wants to replace each variable name with its non-empty prefix so that these new names are still unique (however, a new name of some variable can coincide with some old name of another or same variable). Among such possibilities he wants to find the way with the smallest possible total length of the new names. A string $$$a$$$ is a prefix of a string $$$b$$$ if you can delete some (possibly none) characters from the end of $$$b$$$ and obtain $$$a$$$. Please find this minimum possible total length of new names.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of variables. The next $$$n$$$ lines contain variable names, one per line. Each name is non-empty and contains only lowercase English letters. The total length of these strings is not greater than $$$10^5$$$. The variable names are distinct.",
+  "output_specification": "Print a single integer — the minimum possible total length of new variable names.",
+  "sample_testcases": [
+    {
+      "input": "3\ncodeforces\ncodehorses\ncode",
+      "output": "6"
+    },
+    {
+      "input": "5\nabba\nabb\nab\naa\naacada",
+      "output": "11"
+    },
+    {
+      "input": "3\ntelegram\ndigital\nresistance",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:24",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "888C",
+  "source": "problemset",
+  "contest_id": 888,
+  "problem_index": "C",
+  "name": "K-Dominant Character",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "implementation",
+    "two pointers"
+  ],
+  "solved_count": 9173,
+  "problem_url": "https://codeforces.com/problemset/problem/888/C",
+  "editorial_url": "https://codeforces.com/blog/entry/55701",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a string s consisting of lowercase Latin letters. Character c is called k -dominant iff each substring of s with length at least k contains this character c . You have to find minimum k such that there exists at least one k -dominant character.",
+  "input_specification": "The first line contains string s consisting of lowercase Latin letters ( 1 ≤ | s | ≤ 100000 ).",
+  "output_specification": "Print one number — the minimum value of k such that there exists at least one k -dominant character.",
+  "sample_testcases": [
+    {
+      "input": "abacaba",
+      "output": "2"
+    },
+    {
+      "input": "zzzzz",
+      "output": "1"
+    },
+    {
+      "input": "abcde",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:44",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "1303C",
+  "source": "problemset",
+  "contest_id": 1303,
+  "problem_index": "C",
+  "name": "Perfect Keyboard",
+  "rating": 1600,
+  "tags": [
+    "dfs and similar",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 13126,
+  "problem_url": "https://codeforces.com/problemset/problem/1303/C",
+  "editorial_url": "https://codeforces.com/blog/entry/73872",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp wants to assemble his own keyboard. Layouts with multiple rows are too complicated for him — his keyboard will consist of only one row, where all $$$26$$$ lowercase Latin letters will be arranged in some order. Polycarp uses the same password $$$s$$$ on all websites where he is registered (it is bad, but he doesn't care). He wants to assemble a keyboard that will allow to type this password very easily. He doesn't like to move his fingers while typing the password, so, for each pair of adjacent characters in $$$s$$$, they should be adjacent on the keyboard. For example, if the password is abacaba , then the layout cabdefghi... is perfect, since characters a and c are adjacent on the keyboard, and a and b are adjacent on the keyboard. It is guaranteed that there are no two adjacent equal characters in $$$s$$$, so, for example, the password cannot be password (two characters s are adjacent). Can you help Polycarp with choosing the perfect layout of the keyboard, if it is possible?",
+  "input_specification": "The first line contains one integer $$$T$$$ ($$$1 \\le T \\le 1000$$$) — the number of test cases. Then $$$T$$$ lines follow, each containing one string $$$s$$$ ($$$1 \\le |s| \\le 200$$$) representing the test case. $$$s$$$ consists of lowercase Latin letters only. There are no two adjacent equal characters in $$$s$$$.",
+  "output_specification": "For each test case, do the following: if it is impossible to assemble a perfect keyboard, print NO (in upper case, it matters in this problem ); otherwise, print YES (in upper case), and then a string consisting of $$$26$$$ lowercase Latin letters — the perfect layout. Each Latin letter should appear in this string exactly once. If there are multiple answers, print any of them.",
+  "sample_testcases": [
+    {
+      "input": "5\nababa\ncodedoca\nabcda\nzxzytyz\nabcdefghijklmnopqrstuvwxyza",
+      "output": "YES\nbacdefghijklmnopqrstuvwxyz\nYES\nedocabfghijklmnpqrstuvwxyz\nNO\nYES\nxzytabcdefghijklmnopqrsuvw\nNO"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:03",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

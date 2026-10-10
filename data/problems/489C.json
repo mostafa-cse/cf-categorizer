@@ -1,0 +1,40 @@
+{
+  "id": "489C",
+  "source": "problemset",
+  "contest_id": 489,
+  "problem_index": "C",
+  "name": "Given Length and Sum of Digits...",
+  "rating": 1400,
+  "tags": [
+    "dp",
+    "greedy",
+    "implementation"
+  ],
+  "solved_count": 53342,
+  "problem_url": "https://codeforces.com/problemset/problem/489/C",
+  "editorial_url": "https://codeforces.com/blog/entry/14741",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have a positive integer m and a non-negative integer s . Your task is to find the smallest and the largest of the numbers that have length m and sum of digits s . The required numbers should be non-negative integers written in the decimal base without leading zeroes.",
+  "input_specification": "The single line of the input contains a pair of integers m , s ( 1 ≤ m ≤ 100, 0 ≤ s ≤ 900 ) — the length and the sum of the digits of the required numbers.",
+  "output_specification": "In the output print the pair of the required non-negative integer numbers — first the minimum possible number, then — the maximum possible number. If no numbers satisfying conditions required exist, print the pair of numbers \" -1 -1 \" (without the quotes).",
+  "sample_testcases": [
+    {
+      "input": "2 15",
+      "output": "69 96"
+    },
+    {
+      "input": "3 0",
+      "output": "-1 -1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:18",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Digit DP",
+  "subsubtopic": "439. Digit DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+}

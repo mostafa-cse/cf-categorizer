@@ -1,0 +1,48 @@
+{
+  "id": "2003F",
+  "source": "problemset",
+  "contest_id": 2003,
+  "problem_index": "F",
+  "name": "Turtle and Three Sequences",
+  "rating": 2800,
+  "tags": [
+    "brute force",
+    "data structures",
+    "dp",
+    "greedy",
+    "math",
+    "probabilities",
+    "two pointers"
+  ],
+  "solved_count": 859,
+  "problem_url": "https://codeforces.com/problemset/problem/2003/F",
+  "editorial_url": "https://codeforces.com/contest/2003/attachments/download/26890/sol-zh.pdf",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Piggy gives Turtle three sequences $$$a_1, a_2, \\ldots, a_n$$$, $$$b_1, b_2, \\ldots, b_n$$$, and $$$c_1, c_2, \\ldots, c_n$$$. Turtle will choose a subsequence of $$$1, 2, \\ldots, n$$$ of length $$$m$$$, let it be $$$p_1, p_2, \\ldots, p_m$$$. The subsequence should satisfy the following conditions: $$$a_{p_1} \\le a_{p_2} \\le \\cdots \\le a_{p_m}$$$; All $$$b_{p_i}$$$ for all indices $$$i$$$ are pairwise distinct , i.e., there don't exist two different indices $$$i$$$, $$$j$$$ such that $$$b_{p_i} = b_{p_j}$$$. Help him find the maximum value of $$$\\sum\\limits_{i = 1}^m c_{p_i}$$$, or tell him that it is impossible to choose a subsequence of length $$$m$$$ that satisfies the conditions above. Recall that a sequence $$$a$$$ is a subsequence of a sequence $$$b$$$ if $$$a$$$ can be obtained from $$$b$$$ by the deletion of several (possibly, zero or all) elements.",
+  "input_specification": "The first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 3000$$$, $$$1 \\le m \\le 5$$$) — the lengths of the three sequences and the required length of the subsequence. The second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — the elements of the sequence $$$a$$$. The third line contains $$$n$$$ integers $$$b_1, b_2, \\ldots, b_n$$$ ($$$1 \\le b_i \\le n$$$) — the elements of the sequence $$$b$$$. The fourth line contains $$$n$$$ integers $$$c_1, c_2, \\ldots, c_n$$$ ($$$1 \\le c_i \\le 10^4$$$) — the elements of the sequence $$$c$$$.",
+  "output_specification": "Output a single integer — the maximum value of $$$\\sum\\limits_{i = 1}^m c_{p_i}$$$. If it is impossible to choose a subsequence of length $$$m$$$ that satisfies the conditions above, output $$$-1$$$.",
+  "sample_testcases": [
+    {
+      "input": "4 2\n2 3 4 2\n1 3 3 2\n1 4 2 3",
+      "output": "5"
+    },
+    {
+      "input": "7 3\n1 4 5 2 3 6 7\n1 2 2 1 1 3 2\n1 5 6 7 3 2 4",
+      "output": "13"
+    },
+    {
+      "input": "5 3\n1 2 3 4 5\n1 1 2 1 2\n5 4 3 2 1",
+      "output": "-1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:53",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

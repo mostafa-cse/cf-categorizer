@@ -1,0 +1,38 @@
+{
+  "id": "1332C",
+  "source": "problemset",
+  "contest_id": 1332,
+  "problem_index": "C",
+  "name": "K-Complete Word",
+  "rating": 1500,
+  "tags": [
+    "dfs and similar",
+    "dsu",
+    "greedy",
+    "implementation",
+    "strings"
+  ],
+  "solved_count": 22231,
+  "problem_url": "https://codeforces.com/problemset/problem/1332/C",
+  "editorial_url": "https://codeforces.com/blog/entry/75432",
+  "time_limit": "2 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "Word $$$s$$$ of length $$$n$$$ is called $$$k$$$-complete if $$$s$$$ is a palindrome, i.e. $$$s_i=s_{n+1-i}$$$ for all $$$1 \\le i \\le n$$$; $$$s$$$ has a period of $$$k$$$, i.e. $$$s_i=s_{k+i}$$$ for all $$$1 \\le i \\le n-k$$$. For example, \" abaaba \" is a $$$3$$$-complete word, while \" abccba \" is not. Bob is given a word $$$s$$$ of length $$$n$$$ consisting of only lowercase Latin letters and an integer $$$k$$$, such that $$$n$$$ is divisible by $$$k$$$. He wants to convert $$$s$$$ to any $$$k$$$-complete word. To do this Bob can choose some $$$i$$$ ($$$1 \\le i \\le n$$$) and replace the letter at position $$$i$$$ with some other lowercase Latin letter. So now Bob wants to know the minimum number of letters he has to replace to convert $$$s$$$ to any $$$k$$$-complete word. Note that Bob can do zero changes if the word $$$s$$$ is already $$$k$$$-complete. You are required to answer $$$t$$$ test cases independently .",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t\\le 10^5$$$) — the number of test cases. The first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\lt n \\le 2 \\cdot 10^5$$$, $$$n$$$ is divisible by $$$k$$$). The second line of each test case contains a word $$$s$$$ of length $$$n$$$. It is guaranteed that word $$$s$$$ only contains lowercase Latin letters. And it is guaranteed that the sum of $$$n$$$ over all test cases will not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, output one integer, representing the minimum number of characters he has to replace to convert $$$s$$$ to any $$$k$$$-complete word.",
+  "sample_testcases": [
+    {
+      "input": "4\n6 2\nabaaba\n6 3\nabaaba\n36 9\nhippopotomonstrosesquippedaliophobia\n21 7\nwudixiaoxingxingheclp",
+      "output": "2\n0\n23\n16"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

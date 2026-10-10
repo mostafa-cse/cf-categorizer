@@ -1,0 +1,37 @@
+{
+  "id": "1624D",
+  "source": "problemset",
+  "contest_id": 1624,
+  "problem_index": "D",
+  "name": "Palindromes Coloring",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "greedy",
+    "sortings",
+    "strings"
+  ],
+  "solved_count": 19544,
+  "problem_url": "https://codeforces.com/problemset/problem/1624/D",
+  "editorial_url": "https://codeforces.com/blog/entry/98942",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have a string $$$s$$$ consisting of lowercase Latin alphabet letters. You can color some letters in colors from $$$1$$$ to $$$k$$$. It is not necessary to paint all the letters. But for each color, there must be a letter painted in that color. Then you can swap any two symbols painted in the same color as many times as you want. After that, $$$k$$$ strings will be created, $$$i$$$-th of them will contain all the characters colored in the color $$$i$$$, written in the order of their sequence in the string $$$s$$$. Your task is to color the characters of the string so that all the resulting $$$k$$$ strings are palindromes, and the length of the shortest of these $$$k$$$ strings is as large as possible. Read the note for the first test case of the example if you need a clarification. Recall that a string is a palindrome if it reads the same way both from left to right and from right to left. For example, the strings abacaba , cccc , z and dxd are palindromes, but the strings abab and aaabaa — are not.",
+  "input_specification": "The first line of input data contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of input data sets in the test. The descriptions of the input data sets follow. The first line of the description of each input data set contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 2 \\cdot 10^5$$$) — the length of the string and the number of colors in which its letters can be painted. The second line of the description of each input data set contains a string $$$s$$$ of length $$$n$$$ consisting of lowercase letters of the Latin alphabet. It is guaranteed that the sum of n over all test cases does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each set of input data, output a single integer  — the maximum length of the shortest palindrome string that can be obtained.",
+  "sample_testcases": [
+    {
+      "input": "10\n8 2\nbxyaxzay\n6 3\naaaaaa\n6 1\nabcdef\n6 6\nabcdef\n3 2\ndxd\n11 2\nabcabcabcac\n6 6\nsipkic\n7 2\neatoohd\n3 1\nllw\n6 2\nbfvfbv",
+      "output": "3\n2\n1\n1\n1\n5\n1\n1\n3\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:44",
+  "main_topic": "Strings",
+  "subtopic": "Palindromes",
+  "subsubtopic": "422. Palindromic Tree / Eertree",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Palindromic Tree / Eertree paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "483B",
+  "source": "problemset",
+  "contest_id": 483,
+  "problem_index": "B",
+  "name": "Friends and Presents",
+  "rating": 1800,
+  "tags": [
+    "binary search",
+    "math"
+  ],
+  "solved_count": 4470,
+  "problem_url": "https://codeforces.com/problemset/problem/483/B",
+  "editorial_url": "https://codeforces.com/blog/entry/14417",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You have two friends. You want to present each of them several positive integers. You want to present cnt 1 numbers to the first friend and cnt 2 numbers to the second friend. Moreover, you want all presented numbers to be distinct, that also means that no number should be presented to both friends. In addition, the first friend does not like the numbers that are divisible without remainder by prime number x . The second one does not like the numbers that are divisible without remainder by prime number y . Of course, you're not going to present your friends numbers they don't like. Your task is to find such minimum number v , that you can form presents using numbers from a set 1, 2, ..., v . Of course you may choose not to present some numbers at all. A positive integer number greater than 1 is called prime if it has no positive divisors other than 1 and itself.",
+  "input_specification": "The only line contains four positive integers cnt 1 , cnt 2 , x , y ( 1 ≤ cnt 1 , cnt 2 < 10 9 ; cnt 1 + cnt 2 ≤ 10 9 ; 2 ≤ x < y ≤ 3·10 4 ) — the numbers that are described in the statement. It is guaranteed that numbers x , y are prime.",
+  "output_specification": "Print a single integer — the answer to the problem.",
+  "sample_testcases": [
+    {
+      "input": "3 1 2 3",
+      "output": "5"
+    },
+    {
+      "input": "1 3 2 3",
+      "output": "4"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:15:19",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "1814B",
+  "source": "problemset",
+  "contest_id": 1814,
+  "problem_index": "B",
+  "name": "Long Legs",
+  "rating": 1700,
+  "tags": [
+    "brute force",
+    "math"
+  ],
+  "solved_count": 11926,
+  "problem_url": "https://codeforces.com/problemset/problem/1814/B",
+  "editorial_url": "https://codeforces.com/blog/entry/114854",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "A robot is placed in a cell $$$(0, 0)$$$ of an infinite grid. This robot has adjustable length legs. Initially, its legs have length $$$1$$$. Let the robot currently be in the cell $$$(x, y)$$$ and have legs of length $$$m$$$. In one move, it can perform one of the following three actions: jump into the cell $$$(x + m, y)$$$; jump into the cell $$$(x, y + m)$$$; increase the length of the legs by $$$1$$$, i. e. set it to $$$m + 1$$$. What's the smallest number of moves robot has to make to reach a cell $$$(a, b)$$$?",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 100$$$) — the number of test cases. The only line of each test case contains two integers $$$a$$$ and $$$b$$$ ($$$1 \\le a, b \\le 10^9$$$) — the ending cell.",
+  "output_specification": "For each test case, print a single integer — the smallest number of moves the robot is required to make to reach a cell $$$(a, b)$$$ from a cell $$$(0, 0)$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n1 1\n1 6\n8 4",
+      "output": "2\n5\n6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:09:57",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

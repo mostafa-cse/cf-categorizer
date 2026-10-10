@@ -1,0 +1,40 @@
+{
+  "id": "283E",
+  "source": "problemset",
+  "contest_id": 283,
+  "problem_index": "E",
+  "name": "Cow Tennis Tournament",
+  "rating": 2800,
+  "tags": [
+    "combinatorics",
+    "data structures",
+    "math"
+  ],
+  "solved_count": 963,
+  "problem_url": "https://codeforces.com/problemset/problem/283/E",
+  "editorial_url": "https://codeforces.com/blog/entry/7037",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Farmer John is hosting a tennis tournament with his n cows. Each cow has a skill level s i , and no two cows having the same skill level. Every cow plays every other cow exactly once in the tournament, and each cow beats every cow with skill level lower than its own. However, Farmer John thinks the tournament will be demoralizing for the weakest cows who lose most or all of their matches, so he wants to flip some of the results. In particular, at k different instances, he will take two integers a i , b i ( a i < b i ) and flip all the results between cows with skill level between a i and b i inclusive. That is, for any pair x , y he will change the result of the match on the final scoreboard (so if x won the match, the scoreboard will now display that y won the match, and vice versa). It is possible that Farmer John will change the result of a match multiple times. It is not guaranteed that a i and b i are equal to some cow's skill level. Farmer John wants to determine how balanced he made the tournament results look. In particular, he wants to count the number of triples of cows ( p , q , r ) for which the final leaderboard shows that cow p beats cow q , cow q beats cow r , and cow r beats cow p . Help him determine this number. Note that two triples are considered different if they do not contain the same set of cows (i.e. if there is a cow in one triple that is not in the other).",
+  "input_specification": "On the first line are two space-separated integers, n and k (3 ≤ n ≤ 10 5 ; 0 ≤ k ≤ 10 5 ) . On the next line are n space-separated distinct integers, s 1 , s 2 , ..., s n (1 ≤ s i ≤ 10 9 ) , denoting the skill levels of the cows. On the next k lines are two space separated integers, a i and b i (1 ≤ a i < b i ≤ 10 9 ) representing the changes Farmer John made to the scoreboard in the order he makes it.",
+  "output_specification": "A single integer, containing the number of triples of cows ( p , q , r ) for which the final leaderboard shows that cow p beats cow q , cow q beats cow r , and cow r beats cow p . Please do not use the %lld specifier to read or write 64-bit integers in С++. It is preferred to use the cin , cout streams or the %I64d specifier.",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2 3\n1 2\n2 3",
+      "output": "1"
+    },
+    {
+      "input": "5 3\n5 9 4 1 7\n1 7\n2 8\n3 9",
+      "output": "3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:22:45",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

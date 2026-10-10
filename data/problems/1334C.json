@@ -1,0 +1,37 @@
+{
+  "id": "1334C",
+  "source": "problemset",
+  "contest_id": 1334,
+  "problem_index": "C",
+  "name": "Circle of Monsters",
+  "rating": 1600,
+  "tags": [
+    "brute force",
+    "constructive algorithms",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 18304,
+  "problem_url": "https://codeforces.com/problemset/problem/1334/C",
+  "editorial_url": "https://codeforces.com/blog/entry/75877",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "You are playing another computer game, and now you have to slay $$$n$$$ monsters. These monsters are standing in a circle, numbered clockwise from $$$1$$$ to $$$n$$$. Initially, the $$$i$$$-th monster has $$$a_i$$$ health. You may shoot the monsters to kill them. Each shot requires exactly one bullet and decreases the health of the targeted monster by $$$1$$$ (deals $$$1$$$ damage to it). Furthermore, when the health of some monster $$$i$$$ becomes $$$0$$$ or less than $$$0$$$, it dies and explodes, dealing $$$b_i$$$ damage to the next monster (monster $$$i + 1$$$, if $$$i \\lt n$$$, or monster $$$1$$$, if $$$i = n$$$). If the next monster is already dead, then nothing happens. If the explosion kills the next monster, it explodes too, damaging the monster after it and possibly triggering another explosion, and so on. You have to calculate the minimum number of bullets you have to fire to kill all $$$n$$$ monsters in the circle.",
+  "input_specification": "The first line contains one integer $$$T$$$ ($$$1 \\le T \\le 150000$$$) — the number of test cases. Then the test cases follow, each test case begins with a line containing one integer $$$n$$$ ($$$2 \\le n \\le 300000$$$) — the number of monsters. Then $$$n$$$ lines follow, each containing two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le 10^{12}$$$) — the parameters of the $$$i$$$-th monster in the circle. It is guaranteed that the total number of monsters in all test cases does not exceed $$$300000$$$.",
+  "output_specification": "For each test case, print one integer — the minimum number of bullets you have to fire to kill all of the monsters.",
+  "sample_testcases": [
+    {
+      "input": "1\n3\n7 15\n2 14\n5 3",
+      "output": "6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:11:56",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

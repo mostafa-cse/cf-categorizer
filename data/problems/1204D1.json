@@ -1,0 +1,48 @@
+{
+  "id": "1204D1",
+  "source": "problemset",
+  "contest_id": 1204,
+  "problem_index": "D1",
+  "name": "Kirk and a Binary String (easy version)",
+  "rating": 2000,
+  "tags": [
+    "brute force",
+    "greedy",
+    "strings"
+  ],
+  "solved_count": 3314,
+  "problem_url": "https://codeforces.com/problemset/problem/1204/D1",
+  "editorial_url": "https://codeforces.com/blog/entry/69244",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The only difference between easy and hard versions is the length of the string. You can hack this problem only if you solve both problems. Kirk has a binary string $$$s$$$ (a string which consists of zeroes and ones) of length $$$n$$$ and he is asking you to find a binary string $$$t$$$ of the same length which satisfies the following conditions: For any $$$l$$$ and $$$r$$$ ($$$1 \\leq l \\leq r \\leq n$$$) the length of the longest non-decreasing subsequence of the substring $$$s_{l}s_{l+1} \\ldots s_{r}$$$ is equal to the length of the longest non-decreasing subsequence of the substring $$$t_{l}t_{l+1} \\ldots t_{r}$$$; The number of zeroes in $$$t$$$ is the maximum possible. A non-decreasing subsequence of a string $$$p$$$ is a sequence of indices $$$i_1, i_2, \\ldots, i_k$$$ such that $$$i_1 \\lt i_2 \\lt \\ldots \\lt i_k$$$ and $$$p_{i_1} \\leq p_{i_2} \\leq \\ldots \\leq p_{i_k}$$$. The length of the subsequence is $$$k$$$. If there are multiple substrings which satisfy the conditions, output any.",
+  "input_specification": "The first line contains a binary string of length not more than $$$2\\: 000$$$.",
+  "output_specification": "Output a binary string which satisfied the above conditions. If there are many such strings, output any of them.",
+  "sample_testcases": [
+    {
+      "input": "110",
+      "output": "010"
+    },
+    {
+      "input": "010",
+      "output": "010"
+    },
+    {
+      "input": "0001111",
+      "output": "0000000"
+    },
+    {
+      "input": "0111001100111011101000",
+      "output": "0011001100001011101000"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:12:30",
+  "main_topic": "Strings",
+  "subtopic": "Longest Common Subsequence (LCS)",
+  "subsubtopic": "427. Longest Common Subsequence (LCS)",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Longest Common Subsequence (LCS) paradigm under the Strings framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

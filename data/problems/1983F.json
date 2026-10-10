@@ -1,0 +1,38 @@
+{
+  "id": "1983F",
+  "source": "problemset",
+  "contest_id": 1983,
+  "problem_index": "F",
+  "name": "array-value",
+  "rating": 2500,
+  "tags": [
+    "binary search",
+    "bitmasks",
+    "data structures",
+    "greedy",
+    "two pointers"
+  ],
+  "solved_count": 1627,
+  "problem_url": "https://codeforces.com/problemset/problem/1983/F",
+  "editorial_url": "https://codeforces.com/blog/entry/131268",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You have an array of non-negative integers $$$a_1, a_2, \\ldots, a_n$$$. The value of a sub-array of length $$$\\ge 2$$$, $$$a[l, r] = [a_l, a_{l+1}, \\ldots, a_r]$$$ is the minimum value of $$$a_i \\oplus a_j$$$ such that $$$l \\le i \\lt j \\le r$$$, where $$$\\oplus$$$ is the xor (exclusive-or) operator. You have to find the $$$k$$$-th smallest value over all sub-arrays of length $$$\\ge 2$$$.",
+  "input_specification": "The first line of the input contains multiple test cases $$$t$$$ ($$$1 \\le t \\le 2 \\cdot 10^4$$$). The first line of each test case contains integer numbers $$$n$$$ and $$$k$$$ ($$$2 \\le n \\le 10^5$$$, $$$1 \\le k \\le \\frac{n\\cdot(n-1)}{2}$$$). The second line of the input contains $$$n$$$ non-negative integer numbers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\le a_i \\le 10^9$$$) — the array itself. It is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$10^5$$$.",
+  "output_specification": "Print the $$$k$$$-th smallest value obtained over all subarrays of length at least $$$2$$$.",
+  "sample_testcases": [
+    {
+      "input": "4\n5 2\n1 2 3 4 5\n2 1\n4 3\n4 6\n1 2 4 8\n5 9\n1 2 3 4 5",
+      "output": "1\n7\n12\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:05",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "34. Two Pointers",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+}

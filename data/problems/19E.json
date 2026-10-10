@@ -1,0 +1,40 @@
+{
+  "id": "19E",
+  "source": "problemset",
+  "contest_id": 19,
+  "problem_index": "E",
+  "name": "Fairy",
+  "rating": 2900,
+  "tags": [
+    "dfs and similar",
+    "divide and conquer",
+    "dsu"
+  ],
+  "solved_count": 2721,
+  "problem_url": "https://codeforces.com/problemset/problem/19/E",
+  "editorial_url": "https://codeforces.com/blog/entry/559",
+  "time_limit": "1.5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Once upon a time there lived a good fairy A. One day a fine young man B came to her and asked to predict his future. The fairy looked into her magic ball and said that soon the fine young man will meet the most beautiful princess ever and will marry her. Then she drew on a sheet of paper n points and joined some of them with segments, each of the segments starts in some point and ends in some other point. Having drawn that picture, she asked the young man to erase one of the segments from the sheet. Then she tries to colour each point red or blue so, that there is no segment having points of the same colour as its ends. If she manages to do so, the prediction will come true. B wants to meet the most beautiful princess, that's why he asks you to help him. Find all the segments that will help him to meet the princess.",
+  "input_specification": "The first input line contains two integer numbers: n — amount of the drawn points and m — amount of the drawn segments ( 1 ≤ n ≤ 10 4 , 0 ≤ m ≤ 10 4 ). The following m lines contain the descriptions of the segments. Each description contains two different space-separated integer numbers v , u ( 1 ≤ v ≤ n , 1 ≤ u ≤ n ) — indexes of the points, joined by this segment. No segment is met in the description twice.",
+  "output_specification": "In the first line output number k — amount of the segments in the answer. In the second line output k space-separated numbers — indexes of these segments in ascending order. Each index should be output only once. Segments are numbered from 1 in the input order.",
+  "sample_testcases": [
+    {
+      "input": "4 4\n1 2\n1 3\n2 4\n3 4",
+      "output": "4\n1 2 3 4"
+    },
+    {
+      "input": "4 5\n1 2\n2 3\n3 4\n4 1\n1 3",
+      "output": "1\n5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:24:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

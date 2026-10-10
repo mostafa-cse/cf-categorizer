@@ -1,0 +1,36 @@
+{
+  "id": "926I",
+  "source": "problemset",
+  "contest_id": 926,
+  "problem_index": "I",
+  "name": "A Vital Problem",
+  "rating": 1700,
+  "tags": [],
+  "solved_count": 817,
+  "problem_url": "https://codeforces.com/problemset/problem/926/I",
+  "editorial_url": "https://codeforces.com/blog/entry/58424",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Polycarp has a strict daily schedule. He has n alarms set for each day, and the i -th alarm rings each day at the same time during exactly one minute. Determine the longest time segment when Polycarp can sleep, i. e. no alarm rings in that period. It is possible that Polycarp begins to sleep in one day, and wakes up in another.",
+  "input_specification": "The first line contains a single integer n ( 1 ≤ n ≤ 100 ) — the number of alarms. Each of the next n lines contains a description of one alarm. Each description has a format \" hh:mm \", where hh is the hour when the alarm rings, and mm is the minute of that hour when the alarm rings. The number of hours is between 0 and 23 , and the number of minutes is between 0 and 59 . All alarm times are distinct. The order of the alarms is arbitrary. Each alarm starts ringing in the beginning of the corresponding minute and rings for exactly one minute (i. e. stops ringing in the beginning of the next minute). Polycarp can start sleeping instantly when no alarm is ringing, and he wakes up at the moment when some alarm starts ringing.",
+  "output_specification": "Print a line in format \" hh:mm \", denoting the maximum time Polycarp can sleep continuously. hh denotes the number of hours, and mm denotes the number of minutes. The number of minutes should be between 0 and 59 . Look through examples to understand the format better.",
+  "sample_testcases": [
+    {
+      "input": "1\n05:43",
+      "output": "23:59"
+    },
+    {
+      "input": "4\n22:00\n03:21\n16:03\n09:59",
+      "output": "06:37"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:34",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

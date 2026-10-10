@@ -1,0 +1,39 @@
+{
+  "id": "467C",
+  "source": "problemset",
+  "contest_id": 467,
+  "problem_index": "C",
+  "name": "George and Job",
+  "rating": 1700,
+  "tags": [
+    "dp",
+    "implementation"
+  ],
+  "solved_count": 17281,
+  "problem_url": "https://codeforces.com/problemset/problem/467/C",
+  "editorial_url": "https://codeforces.com/blog/entry/13797",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The new ITone 6 has been released recently and George got really keen to buy it. Unfortunately, he didn't have enough money, so George was going to work as a programmer. Now he faced the following problem at the work. Given a sequence of n integers p 1 , p 2 , ..., p n . You are to choose k pairs of integers: [ l 1 , r 1 ], [ l 2 , r 2 ], ..., [ l k , r k ] (1 ≤ l 1 ≤ r 1 < l 2 ≤ r 2 < ... < l k ≤ r k ≤ n ; r i - l i + 1 = m ), in such a way that the value of sum is maximal possible. Help George to cope with the task.",
+  "input_specification": "The first line contains three integers n , m and k (1 ≤ ( m × k ) ≤ n ≤ 5000) . The second line contains n integers p 1 , p 2 , ..., p n (0 ≤ p i ≤ 10 9 ) .",
+  "output_specification": "Print an integer in a single line — the maximum possible value of sum.",
+  "sample_testcases": [
+    {
+      "input": "5 2 1\n1 2 3 4 5",
+      "output": "9"
+    },
+    {
+      "input": "7 1 3\n2 10 7 18 5 33 0",
+      "output": "61"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:21:15",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

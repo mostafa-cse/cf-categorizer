@@ -1,0 +1,46 @@
+{
+  "id": "1731F",
+  "source": "problemset",
+  "contest_id": 1731,
+  "problem_index": "F",
+  "name": "Function Sum",
+  "rating": 2500,
+  "tags": [
+    "brute force",
+    "combinatorics",
+    "dp",
+    "fft",
+    "math"
+  ],
+  "solved_count": 936,
+  "problem_url": "https://codeforces.com/problemset/problem/1731/F",
+  "editorial_url": "https://codeforces.com/blog/entry/110630",
+  "time_limit": "4 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Suppose you have an integer array $$$a_1, a_2, \\dots, a_n$$$. Let $$$\\operatorname{lsl}(i)$$$ be the number of indices $$$j$$$ ($$$1 \\le j \\lt i$$$) such that $$$a_j \\lt a_i$$$. Analogically, let $$$\\operatorname{grr}(i)$$$ be the number of indices $$$j$$$ ($$$i \\lt j \\le n$$$) such that $$$a_j \\gt a_i$$$. Let's name position $$$i$$$ good in the array $$$a$$$ if $$$\\operatorname{lsl}(i) \\lt \\operatorname{grr}(i)$$$. Finally, let's define a function $$$f$$$ on array $$$a$$$ $$$f(a)$$$ as the sum of all $$$a_i$$$ such that $$$i$$$ is good in $$$a$$$. Given two integers $$$n$$$ and $$$k$$$, find the sum of $$$f(a)$$$ over all arrays $$$a$$$ of size $$$n$$$ such that $$$1 \\leq a_i \\leq k$$$ for all $$$1 \\leq i \\leq n$$$ modulo $$$998\\,244\\,353$$$.",
+  "input_specification": "The first and only line contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n \\leq 50$$$; $$$2 \\leq k \\lt 998\\,244\\,353$$$).",
+  "output_specification": "Output a single integer — the sum of $$$f$$$ over all arrays $$$a$$$ of size $$$n$$$ modulo $$$998\\,244\\,353$$$.",
+  "sample_testcases": [
+    {
+      "input": "3 3",
+      "output": "28"
+    },
+    {
+      "input": "5 6",
+      "output": "34475"
+    },
+    {
+      "input": "12 30",
+      "output": "920711694"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:19",
+  "main_topic": "Math",
+  "subtopic": "Convolution",
+  "subsubtopic": "326. Fast Fourier Transform (FFT)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Transform coefficient polynomials to point-value form via FFT/NTT in O(N log N). Multiply point values in O(N) and invert back to achieve fast polynomial convolution."
+}

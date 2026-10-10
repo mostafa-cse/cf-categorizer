@@ -1,0 +1,43 @@
+{
+  "id": "1614E",
+  "source": "problemset",
+  "contest_id": 1614,
+  "problem_index": "E",
+  "name": "Divan and a Cottage",
+  "rating": 2600,
+  "tags": [
+    "binary search",
+    "data structures"
+  ],
+  "solved_count": 1006,
+  "problem_url": "https://codeforces.com/problemset/problem/1614/E",
+  "editorial_url": "https://codeforces.com/blog/entry/97283",
+  "time_limit": "2 seconds",
+  "memory_limit": "1024 megabytes",
+  "description": "Divan 's new cottage is finally complete! However, after a thorough inspection, it turned out that the workers had installed the insulation incorrectly, and now the temperature in the house directly depends on the temperature outside. More precisely, if the temperature in the house is $$$P$$$ in the morning, and the street temperature is $$$T$$$, then by the next morning the temperature in the house changes according to the following rule: $$$P_{new} = P + 1$$$, if $$$P \\lt T$$$, $$$P_{new} = P - 1$$$, if $$$P \\gt T$$$, $$$P_{new} = P$$$, if $$$P = T$$$. Here $$$P_{new}$$$ is the temperature in the house next morning. Divan is a very busy businessman, so sometimes he is not at home for long periods and does not know what the temperature is there now, so he hired you to find it. You will work for $$$n$$$ days. In the beginning of the $$$i$$$-th day, the temperature outside $$$T_i$$$ is first given to you. After that, on the $$$i$$$-th day, you will receive $$$k_i$$$ queries. Each query asks the following: \"if the temperature in the house was $$$x_i$$$ at the morning of the first day, what would be the temperature in the house next morning (after day $$$i$$$)?\" Please answer all the businessman's queries.",
+  "input_specification": "The first line of the input contains the number $$$n$$$ ($$$1 \\leq n \\leq 2 \\cdot 10^5$$$) — the number of days. The following is a description of $$$n$$$ days in the following format. The first line of the description contains an integer $$$T_i$$$ ($$$0 \\leq T_i \\leq 10^9$$$) — the temperature on that day. The second line contains a non-negative integer $$$k_i$$$ ($$$0 \\le k_i \\le 2 \\cdot 10^5$$$) — the number of queries that day. The third line contains $$$k$$$ integers $$$x'_i$$$ ($$$0 \\leq x'_{i} \\leq 10^9$$$) — the encrypted version of Divan's queries. Let $$$lastans = 0$$$ initially. Divan's actual queries are given by $$$x_i = (x'_i + lastans) \\bmod (10^9 + 1)$$$, where $$$a \\bmod b$$$ is the reminder when $$$a$$$ is divided by $$$b$$$. After answering the query, set $$$lastans$$$ to the answer. It is guaranteed that the total number of queries (the sum of all $$$k_i$$$) does not exceed $$$2 \\cdot 10^5$$$.",
+  "output_specification": "For each query, output a single integer — the temperature in the house after day $$$i$$$.",
+  "sample_testcases": [
+    {
+      "input": "3\n50\n3\n1 2 3\n50\n3\n4 5 6\n0\n3\n7 8 9",
+      "output": "2\n5\n9\n15\n22\n30\n38\n47\n53"
+    },
+    {
+      "input": "4\n728\n3\n859 1045 182\n104\n1\n689\n346\n6\n634 356 912 214 1 1\n755\n3\n241 765 473",
+      "output": "858\n1902\n2083\n2770\n3401\n3754\n4663\n4874\n4872\n4870\n5107\n5868\n6337"
+    },
+    {
+      "input": "2\n500000000\n3\n1000000000 999999999 888888888\n250000000\n5\n777777777 666666666 555555555 444444444 333333333",
+      "output": "999999999\n999999996\n888888882\n666666656\n333333321\n888888874\n333333317\n666666648"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:10:48",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Segment Tree",
+  "subsubtopic": "57. Segment Tree (Point Update Range Query)",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Build a Segment Tree over the array. Implement point update and associative range query operations in O(log N) time per query."
+}

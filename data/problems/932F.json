@@ -1,0 +1,40 @@
+{
+  "id": "932F",
+  "source": "problemset",
+  "contest_id": 932,
+  "problem_index": "F",
+  "name": "Escape Through Leaf",
+  "rating": 2700,
+  "tags": [
+    "data structures",
+    "dp",
+    "geometry"
+  ],
+  "solved_count": 4463,
+  "problem_url": "https://codeforces.com/problemset/problem/932/F",
+  "editorial_url": "https://codeforces.com/blog/entry/57796",
+  "time_limit": "3 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given a tree with n nodes (numbered from 1 to n ) rooted at node 1 . Also, each node has two values associated with it. The values for i -th node are a i and b i . You can jump from a node to any node in its subtree. The cost of one jump from node x to node y is the product of a x and b y . The total cost of a path formed by one or more jumps is sum of costs of individual jumps. For every node, calculate the minimum total cost to reach any leaf from that node. Pay attention, that root can never be leaf, even if it has degree 1 . Note that you cannot jump from a node to itself.",
+  "input_specification": "The first line of input contains an integer n ( 2 ≤ n ≤ 10 5 ) — the number of nodes in the tree. The second line contains n space-separated integers a 1 , a 2 ,  ..., a n ( - 10 5 ≤ a i ≤  10 5 ) . The third line contains n space-separated integers b 1 , b 2 ,  ..., b n ( - 10 5 ≤ b i ≤  10 5 ) . Next n -  1 lines contains two space-separated integers u i and v i ( 1 ≤ u i , v i ≤ n ) describing edge between nodes u i and v i in the tree.",
+  "output_specification": "Output n space-separated integers, i -th of which denotes the minimum cost of a path from node i to reach any leaf.",
+  "sample_testcases": [
+    {
+      "input": "3\n2 10 -1\n7 -7 5\n2 3\n2 1",
+      "output": "10 50 0"
+    },
+    {
+      "input": "4\n5 -10 5 7\n-8 -80 -3 -10\n2 1\n2 4\n1 3",
+      "output": "-300 100 0 0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:32",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Define tree DP state dp[u][state] computing optimal subproblem values for the subtree rooted at u. Aggregate transitions across children in post-order traversal in O(N × S) time."
+}

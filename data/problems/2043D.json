@@ -1,0 +1,37 @@
+{
+  "id": "2043D",
+  "source": "problemset",
+  "contest_id": 2043,
+  "problem_index": "D",
+  "name": "Problem about GCD",
+  "rating": 1800,
+  "tags": [
+    "brute force",
+    "flows",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 8023,
+  "problem_url": "https://codeforces.com/problemset/problem/2043/D",
+  "editorial_url": "https://codeforces.com/blog/entry/137801",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Given three integers $$$l$$$, $$$r$$$, and $$$G$$$, find two integers $$$A$$$ and $$$B$$$ ($$$l \\le A \\le B \\le r$$$) such that their greatest common divisor (GCD) equals $$$G$$$ and the distance $$$|A - B|$$$ is maximized. If there are multiple such pairs, choose the one where $$$A$$$ is minimized. If no such pairs exist, output \" -1 -1 \".",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^3$$$) — the number of test cases. Then, $$$t$$$ test cases follow. Each test case consists of a single line containing three integers $$$l, r, G$$$ ($$$1 \\le l \\le r \\le 10^{18}$$$; $$$1 \\le G \\le 10^{18}$$$) — the range boundaries and the required GCD.",
+  "output_specification": "For each test case, output two integers $$$A$$$ and $$$B$$$ — the solution to the problem, or \" -1 -1 \" if no such pair exists.",
+  "sample_testcases": [
+    {
+      "input": "4\n4 8 2\n4 8 3\n4 8 4\n5 7 6",
+      "output": "4 6\n-1 -1\n4 8\n6 6"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:41",
+  "main_topic": "Graph Theory",
+  "subtopic": "Flow and Min Cut",
+  "subsubtopic": "215. Maximum Flow / Minimum Cut",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Construct a residual flow network with source S and sink T. Apply Dinic's blocking flow algorithm with level graphs and scaling in O(V^2 E) time."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "621C",
+  "source": "problemset",
+  "contest_id": 621,
+  "problem_index": "C",
+  "name": "Wet Shark and Flowers",
+  "rating": 1700,
+  "tags": [
+    "combinatorics",
+    "math",
+    "number theory",
+    "probabilities"
+  ],
+  "solved_count": 6631,
+  "problem_url": "https://codeforces.com/problemset/problem/621/C",
+  "editorial_url": "https://codeforces.com/blog/entry/23196",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "There are n sharks who grow flowers for Wet Shark. They are all sitting around the table, such that sharks i and i + 1 are neighbours for all i from 1 to n - 1 . Sharks n and 1 are neighbours too. Each shark will grow some number of flowers s i . For i -th shark value s i is random integer equiprobably chosen in range from l i to r i . Wet Shark has it's favourite prime number p , and he really likes it! If for any pair of neighbouring sharks i and j the product s i · s j is divisible by p , then Wet Shark becomes happy and gives 1000 dollars to each of these sharks. At the end of the day sharks sum all the money Wet Shark granted to them. Find the expectation of this value.",
+  "input_specification": "The first line of the input contains two space-separated integers n and p ( 3 ≤ n ≤ 100 000, 2 ≤ p ≤ 10 9 ) — the number of sharks and Wet Shark's favourite prime number. It is guaranteed that p is prime. The i -th of the following n lines contains information about i -th shark — two space-separated integers l i and r i ( 1 ≤ l i ≤ r i ≤ 10 9 ), the range of flowers shark i can produce. Remember that s i is chosen equiprobably among all integers from l i to r i , inclusive.",
+  "output_specification": "Print a single real number — the expected number of dollars that the sharks receive in total. You answer will be considered correct if its absolute or relative error does not exceed 10 - 6 . Namely: let's assume that your answer is a , and the answer of the jury is b . The checker program will consider your answer correct, if .",
+  "sample_testcases": [
+    {
+      "input": "3 2\n1 2\n420 421\n420420 420421",
+      "output": "4500.0"
+    },
+    {
+      "input": "3 5\n1 4\n2 3\n11 14",
+      "output": "0.0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:49",
+  "main_topic": "Combinatorics",
+  "subtopic": "Factorials and Binomial Coefficients (nCr)",
+  "subsubtopic": "310. Large Factorials and Binomial Coefficients",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute factorials and inverse factorials up to N using Fermat's Little Theorem (mod 10^9+7 or 998244353). Answer nCr queries in O(1) time per query."
+}

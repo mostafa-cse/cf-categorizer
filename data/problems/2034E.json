@@ -1,0 +1,38 @@
+{
+  "id": "2034E",
+  "source": "problemset",
+  "contest_id": 2034,
+  "problem_index": "E",
+  "name": "Permutations Harmony",
+  "rating": 2200,
+  "tags": [
+    "combinatorics",
+    "constructive algorithms",
+    "greedy",
+    "hashing",
+    "math"
+  ],
+  "solved_count": 2104,
+  "problem_url": "https://codeforces.com/problemset/problem/2034/E",
+  "editorial_url": "https://codeforces.com/blog/entry/136579",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Rayan wants to present a gift to Reyhaneh to win her heart. However, Reyhaneh is particular and will only accept a k-harmonic set of permutations . We define a k-harmonic set of permutations as a set of $$$k$$$ pairwise distinct permutations $$$p_1, p_2, \\ldots, p_k$$$ of size $$$n$$$ such that for every pair of indices $$$i$$$ and $$$j$$$ (where $$$1 \\leq i, j \\leq n$$$), the following condition holds: $$$$$$ p_1[i] + p_2[i] + \\ldots + p_k[i] = p_1[j] + p_2[j] + \\ldots + p_k[j] $$$$$$ Your task is to help Rayan by either providing a valid k-harmonic set of permutations for given values of $$$n$$$ and $$$k$$$ or by determining that such a set does not exist. We call a sequence of length $$$n$$$ a permutation if it contains every integer from $$$1$$$ to $$$n$$$ exactly once.",
+  "input_specification": "The first line contains a single integer $$$t$$$ ($$$1 \\leq t \\leq 1000$$$), the number of test cases. Each test case consists of two integers $$$n$$$ and $$$k$$$ ($$$1 \\leq n, k \\leq 10^5$$$). The sum of $$$n \\cdot k$$$ over all test cases does not exceed $$$5 \\cdot 10^5$$$.",
+  "output_specification": "For each test case, if a k-harmonic set of permutations exists, print YES on the first line. Then, print $$$k$$$ lines, each containing a distinct permutation of the integers from $$$1$$$ to $$$n$$$. If no such set exists, print NO on the first line. You can output \"YES\" and \"NO\" in any case (for example, strings \"yEs\", \"yes\", and \"Yes\" will be recognized as a positive response). If multiple answers are possible, you can output any of them.",
+  "sample_testcases": [
+    {
+      "input": "4\n3 3\n4 2\n5 1\n3 2",
+      "output": "YES\n1 2 3\n2 3 1\n3 1 2\nYES\n1 2 3 4\n4 3 2 1\nNO\nYES\n1 2 3\n3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:48",
+  "main_topic": "Strings",
+  "subtopic": "Hashing",
+  "subsubtopic": "410. String Hashing",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Compute polynomial rolling hashes hash(s[0..i]) with prime base B and large modulo M. Check substring equality s[l1..r1] == s[l2..r2] in O(1) time."
+}

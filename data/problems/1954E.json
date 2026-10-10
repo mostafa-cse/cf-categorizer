@@ -1,0 +1,48 @@
+{
+  "id": "1954E",
+  "source": "problemset",
+  "contest_id": 1954,
+  "problem_index": "E",
+  "name": "Chain Reaction",
+  "rating": 2200,
+  "tags": [
+    "binary search",
+    "data structures",
+    "dsu",
+    "greedy",
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 3174,
+  "problem_url": "https://codeforces.com/problemset/problem/1954/E",
+  "editorial_url": "https://codeforces.com/blog/entry/128421",
+  "time_limit": "3 seconds",
+  "memory_limit": "512 megabytes",
+  "description": "There are $$$n$$$ monsters standing in a row. The $$$i$$$-th monster has $$$a_i$$$ health points. Every second, you can choose one alive monster and launch a chain lightning at it. The lightning deals $$$k$$$ damage to it, and also spreads to the left (towards decreasing $$$i$$$) and to the right (towards increasing $$$i$$$) to alive monsters, dealing $$$k$$$ damage to each. When the lightning reaches a dead monster or the beginning/end of the row, it stops. A monster is considered alive if its health points are strictly greater than $$$0$$$. For example, consider the following scenario: there are three monsters with health equal to $$$[5, 2, 7]$$$, and $$$k = 3$$$. You can kill them all in $$$4$$$ seconds: launch a chain lightning at the $$$3$$$-rd monster, then their health values are $$$[2, -1, 4]$$$; launch a chain lightning at the $$$1$$$-st monster, then their health values are $$$[-1, -1, 4]$$$; launch a chain lightning at the $$$3$$$-rd monster, then their health values are $$$[-1, -1, 1]$$$; launch a chain lightning at the $$$3$$$-th monster, then their health values are $$$[-1, -1, -2]$$$. For each $$$k$$$ from $$$1$$$ to $$$\\max(a_1, a_2, \\dots, a_n)$$$, calculate the minimum number of seconds it takes to kill all the monsters.",
+  "input_specification": "The first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 10^5$$$) — the number of monsters. The second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 10^5$$$) — the health points of the $$$i$$$-th monster.",
+  "output_specification": "For each $$$k$$$ from $$$1$$$ to $$$\\max(a_1, a_2, \\dots, a_n)$$$, output the minimum number of seconds it takes to kill all the monsters.",
+  "sample_testcases": [
+    {
+      "input": "3\n5 2 7",
+      "output": "10 6 4 3 2 2 1"
+    },
+    {
+      "input": "4\n7 7 7 7",
+      "output": "7 4 3 2 2 2 1"
+    },
+    {
+      "input": "10\n1 9 7 6 2 4 7 8 1 3",
+      "output": "17 9 5 4 3 3 3 2 1"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:02:21",
+  "main_topic": "Data Structures (DS)",
+  "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic": "80. DSU / Union Find",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+}

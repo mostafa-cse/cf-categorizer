@@ -1,0 +1,45 @@
+{
+  "id": "808E",
+  "source": "problemset",
+  "contest_id": 808,
+  "problem_index": "E",
+  "name": "Selling Souvenirs",
+  "rating": 2300,
+  "tags": [
+    "binary search",
+    "dp",
+    "greedy",
+    "ternary search"
+  ],
+  "solved_count": 2287,
+  "problem_url": "https://codeforces.com/problemset/problem/808/E",
+  "editorial_url": "https://codeforces.com/blog/entry/52010",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "After several latest reforms many tourists are planning to visit Berland, and Berland people understood that it's an opportunity to earn money and changed their jobs to attract tourists. Petya, for example, left the IT corporation he had been working for and started to sell souvenirs at the market. This morning, as usual, Petya will come to the market. Petya has n different souvenirs to sell; i th souvenir is characterised by its weight w i and cost c i . Petya knows that he might not be able to carry all the souvenirs to the market. So Petya wants to choose a subset of souvenirs such that its total weight is not greater than m , and total cost is maximum possible. Help Petya to determine maximum possible total cost.",
+  "input_specification": "The first line contains two integers n and m ( 1 ≤ n ≤ 100000 , 1 ≤ m ≤ 300000 ) — the number of Petya's souvenirs and total weight that he can carry to the market. Then n lines follow. i th line contains two integers w i and c i ( 1 ≤ w i ≤ 3 , 1 ≤ c i ≤ 10 9 ) — the weight and the cost of i th souvenir.",
+  "output_specification": "Print one number — maximum possible total cost of souvenirs that Petya can carry to the market.",
+  "sample_testcases": [
+    {
+      "input": "1 1\n2 1",
+      "output": "0"
+    },
+    {
+      "input": "2 2\n1 3\n2 2",
+      "output": "3"
+    },
+    {
+      "input": "4 3\n3 10\n2 7\n2 8\n1 1",
+      "output": "10"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:03",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Intro to DP",
+  "subsubtopic": "437. Knapsack and Basic Dynamic Programming",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Knapsack and Basic Dynamic Programming paradigm under the Dynamic Programming (DP) framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

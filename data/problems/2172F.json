@@ -1,0 +1,40 @@
+{
+  "id": "2172F",
+  "source": "problemset",
+  "contest_id": 2172,
+  "problem_index": "F",
+  "name": "Cluster Computing System",
+  "rating": 1600,
+  "tags": [
+    "graphs",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 4530,
+  "problem_url": "https://codeforces.com/problemset/problem/2172/F",
+  "editorial_url": "https://codeforces.com/blog/entry/148325",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "The ICPC company plans to build a cluster computing system consisting of $$$n$$$ servers. Each server has a database protocol type represented by a positive integer. Specifically, the $$$i$$$-th server has a protocol type $$$p_i$$$. Initially, all servers are independent. The company wants to establish connections between servers so that, in the resulting network, every server can reach every other server (either directly or indirectly). To achieve full connectivity, you may establish several connections. Each time you establish a connection, you must choose two servers $$$u$$$ and $$$v$$$ ($$$u \\lt v$$$). The cost of establishing the connection between $$$u$$$ and $$$v$$$ is defined as the common protocol of the databases in the range from $$$u$$$ to $$$v$$$, calculated as $$$\\gcd(p_u, p_{u+1}, \\ldots, p_v)$$$ $$$^{\\text{∗}}$$$. Determine the minimum total cost required to fully connect all $$$n$$$ servers so that every server is reachable from every other server. An illustration for sample input 2. $$$^{\\text{∗}}$$$$$$\\mathrm{gcd}$$$ is the largest positive integer that divides every integer in that set without leaving a remainder.",
+  "input_specification": "The first line contains a single integer $$$n$$$, representing the number of servers. The second line contains $$$n$$$ positive integers $$$p_1, p_2, \\ldots, p_n$$$, where $$$p_i$$$ is the database protocol type of the $$$i$$$-th server. $$$2\\leq n\\leq 2\\times 10^5$$$ $$$1\\leq p_i \\leq 10^9$$$",
+  "output_specification": "Output a single integer in a line, representing the minimum total cost required to fully connect the cluster computing system.",
+  "sample_testcases": [
+    {
+      "input": "3\n4 2 6",
+      "output": "4"
+    },
+    {
+      "input": "6\n2 4 6 7 14 21",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:00:43",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "2252E",
+  "source": "problemset",
+  "contest_id": 2252,
+  "problem_index": "E",
+  "name": "Generational Triplets",
+  "rating": 2100,
+  "tags": [
+    "bitmasks",
+    "combinatorics",
+    "dp",
+    "math"
+  ],
+  "solved_count": 2042,
+  "problem_url": "https://codeforces.com/problemset/problem/2252/E",
+  "editorial_url": "https://codeforces.com/blog/entry/155741",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "You are given an integer $$$n$$$. Find the number of triplets of integers $$$(a, b, c)$$$ such that: $$$1 \\le a \\lt b \\lt c \\le n$$$; $$$a$$$, $$$b$$$, and $$$c$$$ form an arithmetic progression (i.e., $$$b - a = c - b$$$); $$$a \\oplus b \\oplus c = 0$$$, where $$$\\oplus$$$ denotes the bitwise XOR operation . As the answer may be huge, you are only asked to output the answer modulo $$$10^9+7$$$.",
+  "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 10^4$$$). The description of the test cases follows. Each test case contains a single integer $$$n$$$ ($$$3 \\le n \\le 10^{18}$$$).",
+  "output_specification": "For each test case, output a single integer — the number of valid triplets $$$(a, b, c)$$$ modulo $$$10^9 + 7$$$, on a separate line.",
+  "sample_testcases": [
+    {
+      "input": "4\n3\n10\n15\n1000000000000000000",
+      "output": "1\n2\n5\n353768760"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 05:59:46",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Bit Related DP",
+  "subsubtopic": "450. Bitmask DP",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Define state dp[mask][i] capturing the subset of visited/chosen elements. Transition by iterating over valid unset bits in O(2^N × N) time."
+}

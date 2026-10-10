@@ -1,0 +1,41 @@
+{
+  "id": "995E",
+  "source": "problemset",
+  "contest_id": 995,
+  "problem_index": "E",
+  "name": "Number Clicker",
+  "rating": 2700,
+  "tags": [
+    "divide and conquer",
+    "graphs",
+    "meet-in-the-middle",
+    "number theory"
+  ],
+  "solved_count": 1008,
+  "problem_url": "https://codeforces.com/problemset/problem/995/E",
+  "editorial_url": "https://codeforces.com/blog/entry/60217",
+  "time_limit": "5 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Allen is playing Number Clicker on his phone. He starts with an integer $$$u$$$ on the screen. Every second, he can press one of 3 buttons. Turn $$$u \\to u+1 \\pmod{p}$$$. Turn $$$u \\to u+p-1 \\pmod{p}$$$. Turn $$$u \\to u^{p-2} \\pmod{p}$$$. Allen wants to press at most 200 buttons and end up with $$$v$$$ on the screen. Help him!",
+  "input_specification": "The first line of the input contains 3 positive integers: $$$u, v, p$$$ ($$$0 \\le u, v \\le p-1$$$, $$$3 \\le p \\le 10^9 + 9$$$). $$$p$$$ is guaranteed to be prime.",
+  "output_specification": "On the first line, print a single integer $$$\\ell$$$, the number of button presses. On the second line, print integers $$$c_1, \\dots, c_\\ell$$$, the button presses. For $$$1 \\le i \\le \\ell$$$, $$$1 \\le c_i \\le 3$$$. We can show that the answer always exists.",
+  "sample_testcases": [
+    {
+      "input": "1 3 5",
+      "output": "2\n1 1"
+    },
+    {
+      "input": "3 2 5",
+      "output": "1\n3"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:20",
+  "main_topic": "Miscellaneous",
+  "subtopic": "Techniques",
+  "subsubtopic": "554. Meet in the Middle",
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Split N-element search space into two halves of size N/2. Compute states for each half in O(2^(N/2)) and combine via sorting / two pointers / hash map."
+}

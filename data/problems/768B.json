@@ -1,0 +1,40 @@
+{
+  "id": "768B",
+  "source": "problemset",
+  "contest_id": 768,
+  "problem_index": "B",
+  "name": "Code For 1",
+  "rating": 1600,
+  "tags": [
+    "constructive algorithms",
+    "dfs and similar",
+    "divide and conquer"
+  ],
+  "solved_count": 7289,
+  "problem_url": "https://codeforces.com/problemset/problem/768/B",
+  "editorial_url": "https://codeforces.com/blog/entry/50550",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Jon fought bravely to rescue the wildlings who were attacked by the white-walkers at Hardhome. On his arrival, Sam tells him that he wants to go to Oldtown to train at the Citadel to become a maester, so he can return and take the deceased Aemon's place as maester of Castle Black. Jon agrees to Sam's proposal and Sam sets off his journey to the Citadel. However becoming a trainee at the Citadel is not a cakewalk and hence the maesters at the Citadel gave Sam a problem to test his eligibility. Initially Sam has a list with a single element n . Then he has to perform certain operations on this list. In each operation Sam must remove any element x , such that x > 1 , from the list and insert at the same position , , sequentially. He must continue with these operations until all the elements in the list are either 0 or 1 . Now the masters want the total number of 1 s in the range l to r ( 1 -indexed). Sam wants to become a maester but unfortunately he cannot solve this problem. Can you help Sam to pass the eligibility test?",
+  "input_specification": "The first line contains three integers n , l , r ( 0 ≤ n < 2 50 , 0 ≤ r - l ≤ 10 5 , r ≥ 1 , l ≥ 1 ) – initial element and the range l to r . It is guaranteed that r is not greater than the length of the final list.",
+  "output_specification": "Output the total number of 1 s in the range l to r in the final sequence.",
+  "sample_testcases": [
+    {
+      "input": "7 2 5",
+      "output": "4"
+    },
+    {
+      "input": "10 3 10",
+      "output": "5"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:11",
+  "main_topic": "Basics",
+  "subtopic": "Divide and Conquer",
+  "subsubtopic": "43. Divide and Conquer",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Divide and Conquer paradigm under the Basics framework. Exploit problem invariants to reduce state space and achieve optimal complexity."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "1082B",
+  "source": "problemset",
+  "contest_id": 1082,
+  "problem_index": "B",
+  "name": "Vova and Trophies",
+  "rating": 1600,
+  "tags": [
+    "greedy"
+  ],
+  "solved_count": 8114,
+  "problem_url": "https://codeforces.com/problemset/problem/1082/B",
+  "editorial_url": "https://codeforces.com/blog/entry/63544",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "Vova has won $$$n$$$ trophies in different competitions. Each trophy is either golden or silver. The trophies are arranged in a row. The beauty of the arrangement is the length of the longest subsegment consisting of golden trophies. Vova wants to swap two trophies (not necessarily adjacent ones) to make the arrangement as beautiful as possible — that means, to maximize the length of the longest such subsegment. Help Vova! Tell him the maximum possible beauty of the arrangement if he is allowed to do at most one swap.",
+  "input_specification": "The first line contains one integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — the number of trophies. The second line contains $$$n$$$ characters, each of them is either G or S . If the $$$i$$$-th character is G , then the $$$i$$$-th trophy is a golden one, otherwise it's a silver trophy.",
+  "output_specification": "Print the maximum possible length of a subsegment of golden trophies, if Vova is allowed to do at most one swap.",
+  "sample_testcases": [
+    {
+      "input": "10\nGGGSGGGSGG",
+      "output": "7"
+    },
+    {
+      "input": "4\nGGGG",
+      "output": "4"
+    },
+    {
+      "input": "3\nSSS",
+      "output": "0"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:13:02",
+  "main_topic": "Basics",
+  "subtopic": "Greedy and Constructive",
+  "subsubtopic": "44. Basic Greedy Algorithms",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+}

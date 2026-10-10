@@ -1,0 +1,40 @@
+{
+  "id": "678C",
+  "source": "problemset",
+  "contest_id": 678,
+  "problem_index": "C",
+  "name": "Joty and Chocolate",
+  "rating": 1600,
+  "tags": [
+    "implementation",
+    "math",
+    "number theory"
+  ],
+  "solved_count": 11326,
+  "problem_url": "https://codeforces.com/problemset/problem/678/C",
+  "editorial_url": "https://codeforces.com/blog/entry/45405",
+  "time_limit": "1 second",
+  "memory_limit": "256 megabytes",
+  "description": "Little Joty has got a task to do. She has a line of n tiles indexed from 1 to n . She has to paint them in a strange pattern. An unpainted tile should be painted Red if it's index is divisible by a and an unpainted tile should be painted Blue if it's index is divisible by b . So the tile with the number divisible by a and b can be either painted Red or Blue. After her painting is done, she will get p chocolates for each tile that is painted Red and q chocolates for each tile that is painted Blue. Note that she can paint tiles in any order she wants. Given the required information, find the maximum number of chocolates Joty can get.",
+  "input_specification": "The only line contains five integers n , a , b , p and q ( 1 ≤ n , a , b , p , q ≤ 10 9 ).",
+  "output_specification": "Print the only integer s — the maximum number of chocolates Joty can get. Note that the answer can be too large, so you should use 64 -bit integer type to store it. In C++ you can use the long long integer type and in Java you can use long integer type.",
+  "sample_testcases": [
+    {
+      "input": "5 2 3 12 15",
+      "output": "39"
+    },
+    {
+      "input": "20 2 3 3 5",
+      "output": "51"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:14:33",
+  "main_topic": "Number Theory",
+  "subtopic": "Primes and Divisors",
+  "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+}

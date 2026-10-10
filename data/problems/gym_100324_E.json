@@ -1,0 +1,21 @@
+{
+  "id": "gym_100324_E",
+  "source": "gym",
+  "contest_id": 100324,
+  "problem_index": "E",
+  "name": "Formula 1",
+  "rating": null,
+  "tags": [],
+  "solved_count": 0,
+  "problem_url": "https://codeforces.com/gym/100324/problem/E",
+  "editorial_url": null,
+  "time_limit": null,
+  "memory_limit": null,
+  "description": null,
+  "input_specification": null,
+  "output_specification": null,
+  "sample_testcases": [],
+  "statement_status": "pending",
+  "created_at": "2026-10-10 06:30:30",
+  "updated_at": "2026-10-10 06:30:30"
+}

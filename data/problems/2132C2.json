@@ -1,0 +1,36 @@
+{
+  "id": "2132C2",
+  "source": "problemset",
+  "contest_id": 2132,
+  "problem_index": "C2",
+  "name": "The Cunning Seller (hard version)",
+  "rating": 1400,
+  "tags": [
+    "binary search",
+    "greedy",
+    "math"
+  ],
+  "solved_count": 14030,
+  "problem_url": "https://codeforces.com/problemset/problem/2132/C2",
+  "editorial_url": "https://codeforces.com/blog/entry/145692",
+  "time_limit": "2 seconds",
+  "memory_limit": "256 megabytes",
+  "description": "This is the hard version of the problem. The easy version differs from the hard one in that it requires determining the minimum cost with the least number of deals, while the hard version requires determining the minimum cost with a limited number of deals. After the cunning seller sold three watermelons instead of one, he decided to increase his profit — namely, he bought even more watermelons. Now he can sell $$$3^x$$$ watermelons for $$$3^{x+1} + x \\cdot 3^{x-1}$$$ coins, where $$$x$$$ is a non-negative integer. Such a sale is called a deal. A calculating buyer came to him, but he has little time, so the buyer can make no more than $$$k$$$ deals and plans to buy exactly $$$n$$$ watermelons. The buyer is in a hurry and has therefore turned to you to determine the minimum number of coins he must pay the seller for $$$n$$$ watermelons if he makes no more than $$$k$$$ deals. If it is impossible to buy exactly $$$n$$$ watermelons while making no more than $$$k$$$ deals, output $$$-1$$$.",
+  "input_specification": "The first line contains an integer $$$t$$$ $$$(1 \\le t \\le 10^4)$$$ — the number of test cases. The description of each test case follows. In a single line of each test case, there are two integers $$$n$$$ and $$$k$$$ $$$(1 \\le n, k \\le 10^9)$$$ — how many watermelons need to be bought and how many deals can be made.",
+  "output_specification": "For each test case, output a single integer — the minimum cost of the watermelons or $$$-1$$$ if it is impossible to buy the watermelons while meeting all the conditions.",
+  "sample_testcases": [
+    {
+      "input": "8\n1 1\n3 3\n8 3\n2 4\n10 10\n20 14\n3 2\n9 1",
+      "output": "3\n9\n-1\n6\n30\n63\n10\n33"
+    }
+  ],
+  "statement_status": "completed",
+  "created_at": "2026-10-10 05:57:12",
+  "updated_at": "2026-10-10 06:01:18",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "importance": "**",
+  "is_selected_quality": true,
+  "approach_summary": "Verify predicate monotonicity: P(x) is true for x ≤ K and false otherwise. Binary search over the answer domain to find the boundary in O(log(Range) × Verify_Time)."
+}
