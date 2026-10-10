@@ -6,6 +6,7 @@
 const state = {
   taxonomy: [],
   stats: null,
+  catalog: null, // Full catalog for instant client-side filtering on GitHub Pages
   activeMainTopic: null,
   activeSubtopic: null,
   activeSubsubtopicId: null,
@@ -116,27 +117,59 @@ function setupEventListeners() {
   }
 }
 
-// Load User Progress
+// Load User Progress (localStorage + API sync)
 async function loadUserProgress() {
   try {
+    const local = localStorage.getItem('cf_user_progress');
+    if (local) {
+      const parsed = JSON.parse(local);
+      state.userProgress.solved = new Set(parsed.solved || []);
+      state.userProgress.bookmarked = new Set(parsed.bookmarked || []);
+      state.userProgress.notes = parsed.notes || {};
+    }
+  } catch (e) {
+    console.warn('localStorage progress read error:', e);
+  }
+
+  // Optional background sync with backend if running locally
+  try {
     const res = await fetch('/api/user/progress');
-    const data = await res.json();
-    state.userProgress.solved = new Set(data.solved || []);
-    state.userProgress.bookmarked = new Set(data.bookmarked || []);
-    state.userProgress.notes = data.notes || {};
-    updateHeaderCounters();
+    if (res.ok) {
+      const data = await res.json();
+      (data.solved || []).forEach(id => state.userProgress.solved.add(id));
+      (data.bookmarked || []).forEach(id => state.userProgress.bookmarked.add(id));
+      state.userProgress.notes = { ...state.userProgress.notes, ...(data.notes || {}) };
+      persistUserProgress();
+    }
   } catch (err) {
-    console.error('Failed to load user progress:', err);
+    // Expected on static GitHub Pages
+  }
+  updateHeaderCounters();
+}
+
+function persistUserProgress() {
+  try {
+    const payload = {
+      solved: Array.from(state.userProgress.solved),
+      bookmarked: Array.from(state.userProgress.bookmarked),
+      notes: state.userProgress.notes
+    };
+    localStorage.setItem('cf_user_progress', JSON.stringify(payload));
+  } catch (e) {
+    console.warn('localStorage persist error:', e);
   }
 }
 
-// Load Stats
+// Load Stats (Static fallback to API)
 async function loadStats() {
   try {
-    const res = await fetch('/api/stats');
-    const data = await res.json();
-    state.stats = data;
-    renderTopStats(data);
+    let res = await fetch('./data/stats.json');
+    if (!res.ok) res = await fetch('/api/stats');
+    if (res.ok) {
+      const data = await res.json();
+      state.stats = data;
+      renderTopStats(data);
+    }
   } catch (err) {
     console.error('Failed to load stats:', err);
   }
@@ -187,10 +220,13 @@ function updateHeaderCounters() {
 // Load Taxonomy Tree
 async function loadTaxonomy() {
   try {
-    const res = await fetch('/api/taxonomy');
-    const data = await res.json();
-    state.taxonomy = data;
-    renderTaxonomyTree();
+    let res = await fetch('./data/taxonomy.json');
+    if (!res.ok) res = await fetch('/api/taxonomy');
+    if (res.ok) {
+      const data = await res.json();
+      state.taxonomy = data;
+      renderTaxonomyTree();
+    }
   } catch (err) {
     console.error('Failed to load taxonomy:', err);
   }
@@ -430,7 +466,21 @@ function updateBreadcrumbs() {
   }
 }
 
-// Load Problems API
+async function ensureCatalogLoaded() {
+  if (state.catalog && state.catalog.length > 0) return true;
+  try {
+    const res = await fetch('./data/problems_catalog.json');
+    if (res.ok) {
+      state.catalog = await res.json();
+      return true;
+    }
+  } catch (e) {
+    console.warn('Static catalog not available, falling back to API:', e);
+  }
+  return false;
+}
+
+// Load Problems API / Static In-Memory Engine
 async function loadProblems() {
   const grid = document.getElementById('problems-container');
   if (!grid) return;
@@ -438,10 +488,81 @@ async function loadProblems() {
   grid.innerHTML = `
     <div class="col-span-full py-20 flex flex-col items-center justify-center text-slate-400">
       <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-sky-500 mb-4"></div>
-      <p class="text-sm font-medium">Loading problems from curriculum database...</p>
+      <p class="text-sm font-medium">Loading problems from curriculum catalog...</p>
     </div>
   `;
 
+  const catalogReady = await ensureCatalogLoaded();
+  if (catalogReady && state.catalog) {
+    let filtered = state.catalog;
+
+    if (state.activeMainTopic) {
+      filtered = filtered.filter(p => p.main_topic === state.activeMainTopic);
+    }
+    if (state.activeSubtopic) {
+      filtered = filtered.filter(p => p.subtopic === state.activeSubtopic);
+    }
+    if (state.activeSubsubtopicId) {
+      filtered = filtered.filter(p => p.subsubtopic_id === state.activeSubsubtopicId);
+    }
+    if (state.filters.importance !== 'all') {
+      filtered = filtered.filter(p => p.importance === state.filters.importance);
+    }
+    if (state.filters.minRating) {
+      filtered = filtered.filter(p => p.rating && p.rating >= state.filters.minRating);
+    }
+    if (state.filters.maxRating) {
+      filtered = filtered.filter(p => p.rating && p.rating <= state.filters.maxRating);
+    }
+    if (state.filters.status === 'solved') {
+      filtered = filtered.filter(p => state.userProgress.solved.has(p.id));
+    } else if (state.filters.status === 'unsolved') {
+      filtered = filtered.filter(p => !state.userProgress.solved.has(p.id));
+    } else if (state.filters.status === 'bookmarked') {
+      filtered = filtered.filter(p => state.userProgress.bookmarked.has(p.id));
+    }
+    if (state.filters.searchQuery) {
+      const q = state.filters.searchQuery.toLowerCase();
+      filtered = filtered.filter(p => {
+        return p.id.toLowerCase().includes(q) ||
+               (p.name && p.name.toLowerCase().includes(q)) ||
+               (p.approach_summary && p.approach_summary.toLowerCase().includes(q)) ||
+               (Array.isArray(p.tags) && p.tags.some(t => t.toLowerCase().includes(q)));
+      });
+    }
+
+    // Sort
+    const sortBy = state.filters.sortBy;
+    filtered = [...filtered].sort((a, b) => {
+      if (sortBy === 'rating_desc') {
+        return (b.rating || 0) - (a.rating || 0) || (b.solved_count || 0) - (a.solved_count || 0);
+      } else if (sortBy === 'solves_desc') {
+        return (b.solved_count || 0) - (a.solved_count || 0) || (a.rating || 0) - (b.rating || 0);
+      } else if (sortBy === 'id_asc') {
+        return a.id.localeCompare(b.id, undefined, { numeric: true });
+      } else if (sortBy === 'importance_desc') {
+        const score = imp => imp === '***' ? 1 : (imp === '**' ? 2 : 3);
+        return score(a.importance) - score(b.importance) || (a.rating || 0) - (b.rating || 0);
+      } else { // rating_asc
+        return (a.rating || 9999) - (b.rating || 9999) || (b.solved_count || 0) - (a.solved_count || 0);
+      }
+    });
+
+    const total = filtered.length;
+    const page = state.filters.page;
+    const pageSize = state.filters.pageSize;
+    const totalPages = Math.max(1, Math.ceil(total / pageSize));
+    const pagedProblems = filtered.slice((page - 1) * pageSize, page * pageSize);
+
+    state.problems = pagedProblems;
+    state.pagination = { total, page, totalPages };
+
+    renderProblems();
+    renderPagination();
+    return;
+  }
+
+  // Fallback to API if static catalog not available
   const params = new URLSearchParams();
   if (state.activeMainTopic) params.append('main_topic', state.activeMainTopic);
   if (state.activeSubtopic) params.append('subtopic', state.activeSubtopic);
@@ -695,61 +816,57 @@ function resetFilters() {
 
 // User Actions
 async function toggleSolved(problemId) {
-  try {
-    const res = await fetch(`/api/user/toggle_solved/${problemId}`, { method: 'POST' });
-    const data = await res.json();
-    if (data.is_solved) {
-      state.userProgress.solved.add(problemId);
-    } else {
-      state.userProgress.solved.delete(problemId);
-    }
-    updateHeaderCounters();
-    renderProblems();
-    if (state.activeProblem && state.activeProblem.id === problemId) {
-      state.activeProblem.is_solved = data.is_solved;
-      updateModalActionButtons();
-    }
-  } catch (err) {
-    console.error('Error toggling solved:', err);
+  const isCurrentlySolved = state.userProgress.solved.has(problemId);
+  if (isCurrentlySolved) {
+    state.userProgress.solved.delete(problemId);
+  } else {
+    state.userProgress.solved.add(problemId);
   }
+  persistUserProgress();
+  updateHeaderCounters();
+  renderProblems();
+  if (state.activeProblem && state.activeProblem.id === problemId) {
+    state.activeProblem.is_solved = !isCurrentlySolved;
+    updateModalActionButtons();
+  }
+  try {
+    fetch(`/api/user/toggle_solved/${problemId}`, { method: 'POST' }).catch(() => {});
+  } catch (err) {}
 }
 
 async function toggleBookmark(problemId) {
-  try {
-    const res = await fetch(`/api/user/toggle_bookmark/${problemId}`, { method: 'POST' });
-    const data = await res.json();
-    if (data.is_bookmarked) {
-      state.userProgress.bookmarked.add(problemId);
-    } else {
-      state.userProgress.bookmarked.delete(problemId);
-    }
-    updateHeaderCounters();
-    renderProblems();
-    if (state.activeProblem && state.activeProblem.id === problemId) {
-      state.activeProblem.is_bookmarked = data.is_bookmarked;
-      updateModalActionButtons();
-    }
-  } catch (err) {
-    console.error('Error toggling bookmark:', err);
+  const isCurrentlyBookmarked = state.userProgress.bookmarked.has(problemId);
+  if (isCurrentlyBookmarked) {
+    state.userProgress.bookmarked.delete(problemId);
+  } else {
+    state.userProgress.bookmarked.add(problemId);
   }
+  persistUserProgress();
+  updateHeaderCounters();
+  renderProblems();
+  if (state.activeProblem && state.activeProblem.id === problemId) {
+    state.activeProblem.is_bookmarked = !isCurrentlyBookmarked;
+    updateModalActionButtons();
+  }
+  try {
+    fetch(`/api/user/toggle_bookmark/${problemId}`, { method: 'POST' }).catch(() => {});
+  } catch (err) {}
 }
 
 async function saveNotes(problemId) {
   const textarea = document.getElementById('problem-notes-input');
   if (!textarea) return;
   const notes = textarea.value.trim();
-
+  state.userProgress.notes[problemId] = notes;
+  persistUserProgress();
+  showToast('Notes saved successfully!');
   try {
-    await fetch(`/api/user/save_note/${problemId}`, {
+    fetch(`/api/user/save_note/${problemId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ notes })
-    });
-    state.userProgress.notes[problemId] = notes;
-    showToast('Notes saved successfully!');
-  } catch (err) {
-    console.error('Failed to save notes:', err);
-  }
+    }).catch(() => {});
+  } catch (err) {}
 }
 
 // Problem Modal View
@@ -768,8 +885,40 @@ async function openProblemModal(problemId, defaultTab = 'statement') {
   `;
 
   try {
-    const res = await fetch(`/api/problems/${problemId}`);
-    const p = await res.json();
+    let p = null;
+    try {
+      let res = await fetch(`./data/problems/${encodeURIComponent(problemId)}.json`);
+      if (!res.ok) res = await fetch(`/api/problems/${problemId}`);
+      if (res.ok) p = await res.json();
+    } catch (e) {
+      try {
+        const res = await fetch(`/api/problems/${problemId}`);
+        if (res.ok) p = await res.json();
+      } catch (err) {}
+    }
+
+    if (!p) {
+      modalContent.innerHTML = `<div class="p-8 text-center text-rose-400">Failed to load problem statement.</div>`;
+      return;
+    }
+
+    // Normalize topic_editorial from static JSON
+    if (p.topic_editorial) {
+      p.editorial_title = p.editorial_title || p.topic_editorial.title;
+      p.editorial_key_invariant = p.editorial_key_invariant || p.topic_editorial.key_invariant;
+      p.editorial_solution_walkthrough = p.editorial_solution_walkthrough || p.topic_editorial.solution_walkthrough;
+      p.editorial_complexity_analysis = p.editorial_complexity_analysis || p.topic_editorial.complexity_analysis;
+      p.editorial_cpp_code = p.editorial_cpp_code || p.topic_editorial.cpp_code;
+    }
+
+    // Attempt to load full markdown editorial if not present
+    if (!p.editorial_full_markdown) {
+      try {
+        const mdRes = await fetch(`./data/editorials/${encodeURIComponent(problemId)}.md`);
+        if (mdRes.ok) p.editorial_full_markdown = await mdRes.text();
+      } catch (e) {}
+    }
+
     state.activeProblem = p;
 
     const ratingClass = getRatingClass(p.rating);

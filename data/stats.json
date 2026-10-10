@@ -1,0 +1,59 @@
+{
+  "total_problems": 28371,
+  "problemset_rated_count": 7101,
+  "gym_problems_count": 21270,
+  "curriculum_quality_count": 28338,
+  "stars": {
+    "***": 13520,
+    "**": 13930,
+    "*": 888
+  },
+  "topic_breakdown": [
+    {
+      "topic": "Dynamic Programming (DP)",
+      "count": 7399
+    },
+    {
+      "topic": "Basics",
+      "count": 6935
+    },
+    {
+      "topic": "Data Structures (DS)",
+      "count": 4730
+    },
+    {
+      "topic": "Graph Theory",
+      "count": 4660
+    },
+    {
+      "topic": "Strings",
+      "count": 1023
+    },
+    {
+      "topic": "Game Theory",
+      "count": 877
+    },
+    {
+      "topic": "Geometry",
+      "count": 853
+    },
+    {
+      "topic": "Math",
+      "count": 783
+    },
+    {
+      "topic": "Number Theory",
+      "count": 610
+    },
+    {
+      "topic": "Miscellaneous",
+      "count": 240
+    },
+    {
+      "topic": "Combinatorics",
+      "count": 228
+    }
+  ],
+  "user_solved_count": 0,
+  "user_bookmarked_count": 0
+}

@@ -26,11 +26,18 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-WEB_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'web')
-os.makedirs(WEB_DIR, exist_ok=True)
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATIC_DIR = os.path.join(ROOT_DIR, 'static')
+DATA_DIR = os.path.join(ROOT_DIR, 'data')
+WEB_DIR = os.path.join(ROOT_DIR, 'web')
 
-# Mount static files if web directory exists
-app.mount("/static", StaticFiles(directory=WEB_DIR), name="static")
+# Mount static directory
+static_mount_dir = STATIC_DIR if os.path.exists(STATIC_DIR) else WEB_DIR
+app.mount("/static", StaticFiles(directory=static_mount_dir), name="static")
+
+# Mount data directory for static asset fallback
+if os.path.exists(DATA_DIR):
+    app.mount("/data", StaticFiles(directory=DATA_DIR), name="data")
 
 
 class NotePayload(BaseModel):
@@ -38,12 +45,13 @@ class NotePayload(BaseModel):
 
 
 @app.get("/", response_class=HTMLResponse)
+@app.get("/index.html", response_class=HTMLResponse)
 async def serve_index():
-    index_file = os.path.join(WEB_DIR, 'index.html')
-    if os.path.exists(index_file):
-        with open(index_file, 'r', encoding='utf-8') as f:
-            return HTMLResponse(content=f.read())
-    return HTMLResponse("<h1>CF Categorizer: web/index.html not found</h1>", status_code=404)
+    for candidate in [os.path.join(ROOT_DIR, 'index.html'), os.path.join(WEB_DIR, 'index.html')]:
+        if os.path.exists(candidate):
+            with open(candidate, 'r', encoding='utf-8') as f:
+                return HTMLResponse(content=f.read())
+    return HTMLResponse("<h1>CF Categorizer: index.html not found</h1>", status_code=404)
 
 
 @app.get("/api/taxonomy")

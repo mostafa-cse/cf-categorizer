@@ -1,0 +1,5576 @@
+[
+  {
+    "name": "Basics",
+    "total_problems": 6935,
+    "total_masterpieces": 1076,
+    "subtopics": [
+      {
+        "name": "Intro to Programming",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 1,
+            "name": "What is Programming?",
+            "full_title": "1. What is Programming?",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Learn a Language",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 2,
+            "name": "Intro to C++ and Setting up the Environment",
+            "full_title": "2. Intro to C++ and Setting up the Environment",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 3,
+            "name": "Data Types, Variables and Input Output",
+            "full_title": "3. Data Types, Variables and Input Output",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 4,
+            "name": "Operators",
+            "full_title": "4. Operators",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 5,
+            "name": "Conditional Statements",
+            "full_title": "5. Conditional Statements",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 6,
+            "name": "Loops",
+            "full_title": "6. Loops",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 7,
+            "name": "Functions",
+            "full_title": "7. Functions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 8,
+            "name": "Arrays",
+            "full_title": "8. Arrays",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 9,
+            "name": "Strings",
+            "full_title": "9. Strings",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 10,
+            "name": "Pointers and References",
+            "full_title": "10. Pointers and References",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 11,
+            "name": "Structures",
+            "full_title": "11. Structures",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Intro to Competitive Programming",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 12,
+            "name": "What is Competitive Programming?",
+            "full_title": "12. What is Competitive Programming?",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Bitwise Thinking",
+        "total_problems": 84,
+        "total_masterpieces": 24,
+        "subsubtopics": [
+          {
+            "id": 13,
+            "name": "Bitwise Operations and Bitmasks",
+            "full_title": "13. Bitwise Operations and Bitmasks",
+            "problem_count": 84,
+            "masterpiece_count": 24,
+            "core_count": 60
+          }
+        ]
+      },
+      {
+        "name": "Complexity Analysis",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 14,
+            "name": "Big O Notation and Time and Space Complexity Analysis",
+            "full_title": "14. Big O Notation and Time and Space Complexity Analysis",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 15,
+            "name": "Fast Input Output",
+            "full_title": "15. Fast Input Output",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Recursion",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 16,
+            "name": "Recursion",
+            "full_title": "16. Recursion",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Very Basic Math",
+        "total_problems": 207,
+        "total_masterpieces": 89,
+        "subsubtopics": [
+          {
+            "id": 17,
+            "name": "Divisors",
+            "full_title": "17. Divisors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 18,
+            "name": "GCD and LCM",
+            "full_title": "18. GCD and LCM",
+            "problem_count": 207,
+            "masterpiece_count": 89,
+            "core_count": 110
+          },
+          {
+            "id": 19,
+            "name": "Harmonic Number",
+            "full_title": "19. Harmonic Number",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Range Queries Without Updates",
+        "total_problems": 1626,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 20,
+            "name": "Prefix Sum",
+            "full_title": "20. Prefix Sum",
+            "problem_count": 1626,
+            "masterpiece_count": 0,
+            "core_count": 1626
+          },
+          {
+            "id": 21,
+            "name": "Prefix XOR",
+            "full_title": "21. Prefix XOR",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Standard Template Library (STL)",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 22,
+            "name": "Intro to STL, Containers and Iterators",
+            "full_title": "22. Intro to STL, Containers and Iterators",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 23,
+            "name": "Pairs and Tuples",
+            "full_title": "23. Pairs and Tuples",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 24,
+            "name": "Vector",
+            "full_title": "24. Vector",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 25,
+            "name": "Stack",
+            "full_title": "25. Stack",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 26,
+            "name": "Queue",
+            "full_title": "26. Queue",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 27,
+            "name": "Priority Queue / Heap",
+            "full_title": "27. Priority Queue / Heap",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 28,
+            "name": "Deque",
+            "full_title": "28. Deque",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 29,
+            "name": "Set, Unordered Set and Multiset",
+            "full_title": "29. Set, Unordered Set and Multiset",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 30,
+            "name": "Map and Unordered Map",
+            "full_title": "30. Map and Unordered Map",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 31,
+            "name": "Bitset",
+            "full_title": "31. Bitset",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 32,
+            "name": "List / Linked List",
+            "full_title": "32. List / Linked List",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Leveraging Monotonicity",
+        "total_problems": 1154,
+        "total_masterpieces": 553,
+        "subsubtopics": [
+          {
+            "id": 33,
+            "name": "Binary Search",
+            "full_title": "33. Binary Search",
+            "problem_count": 430,
+            "masterpiece_count": 41,
+            "core_count": 164
+          },
+          {
+            "id": 34,
+            "name": "Two Pointers",
+            "full_title": "34. Two Pointers",
+            "problem_count": 724,
+            "masterpiece_count": 512,
+            "core_count": 186
+          }
+        ]
+      },
+      {
+        "name": "Basic Sorting Algorithms",
+        "total_problems": 161,
+        "total_masterpieces": 29,
+        "subsubtopics": [
+          {
+            "id": 35,
+            "name": "Bubble Sort",
+            "full_title": "35. Bubble Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 36,
+            "name": "Selection Sort",
+            "full_title": "36. Selection Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 37,
+            "name": "Insertion Sort",
+            "full_title": "37. Insertion Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 38,
+            "name": "Counting Sort",
+            "full_title": "38. Counting Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 39,
+            "name": "Merge Sort",
+            "full_title": "39. Merge Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 40,
+            "name": "Quick Sort",
+            "full_title": "40. Quick Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 41,
+            "name": "Radix Sort",
+            "full_title": "41. Radix Sort",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 42,
+            "name": "C++ STL Sort and Custom Comparator",
+            "full_title": "42. C++ STL Sort and Custom Comparator",
+            "problem_count": 161,
+            "masterpiece_count": 29,
+            "core_count": 130
+          }
+        ]
+      },
+      {
+        "name": "Divide and Conquer",
+        "total_problems": 23,
+        "total_masterpieces": 14,
+        "subsubtopics": [
+          {
+            "id": 43,
+            "name": "Divide and Conquer",
+            "full_title": "43. Divide and Conquer",
+            "problem_count": 23,
+            "masterpiece_count": 14,
+            "core_count": 9
+          }
+        ]
+      },
+      {
+        "name": "Greedy and Constructive",
+        "total_problems": 3545,
+        "total_masterpieces": 311,
+        "subsubtopics": [
+          {
+            "id": 44,
+            "name": "Basic Greedy Algorithms",
+            "full_title": "44. Basic Greedy Algorithms",
+            "problem_count": 3255,
+            "masterpiece_count": 196,
+            "core_count": 2514
+          },
+          {
+            "id": 45,
+            "name": "Basic Constructive Algorithms",
+            "full_title": "45. Basic Constructive Algorithms",
+            "problem_count": 290,
+            "masterpiece_count": 115,
+            "core_count": 172
+          }
+        ]
+      },
+      {
+        "name": "2D Prefix Sum",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 46,
+            "name": "2D Prefix Sum",
+            "full_title": "46. 2D Prefix Sum",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "More Techniques",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 47,
+            "name": "Difference Array",
+            "full_title": "47. Difference Array",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 48,
+            "name": "Sliding Window Technique",
+            "full_title": "48. Sliding Window Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Bit Manipulation",
+        "total_problems": 94,
+        "total_masterpieces": 40,
+        "subsubtopics": [
+          {
+            "id": 49,
+            "name": "Bit Manipulation",
+            "full_title": "49. Bit Manipulation",
+            "problem_count": 5,
+            "masterpiece_count": 0,
+            "core_count": 3
+          },
+          {
+            "id": 50,
+            "name": "The XOR Trick",
+            "full_title": "50. The XOR Trick",
+            "problem_count": 89,
+            "masterpiece_count": 40,
+            "core_count": 45
+          }
+        ]
+      },
+      {
+        "name": "Basic Modular Arithmetic",
+        "total_problems": 31,
+        "total_masterpieces": 14,
+        "subsubtopics": [
+          {
+            "id": 51,
+            "name": "Binary Exponentiation and Basic Modular Arithmetic",
+            "full_title": "51. Binary Exponentiation and Basic Modular Arithmetic",
+            "problem_count": 8,
+            "masterpiece_count": 4,
+            "core_count": 4
+          },
+          {
+            "id": 52,
+            "name": "Fermat's Little Theorem and Modular Inverse",
+            "full_title": "52. Fermat's Little Theorem and Modular Inverse",
+            "problem_count": 23,
+            "masterpiece_count": 10,
+            "core_count": 11
+          }
+        ]
+      },
+      {
+        "name": "Basic Counting",
+        "total_problems": 10,
+        "total_masterpieces": 2,
+        "subsubtopics": [
+          {
+            "id": 53,
+            "name": "Permutations, Combinations and Basic Counting Problems",
+            "full_title": "53. Permutations, Combinations and Basic Counting Problems",
+            "problem_count": 10,
+            "masterpiece_count": 2,
+            "core_count": 8
+          },
+          {
+            "id": 54,
+            "name": "Stars and Bars",
+            "full_title": "54. Stars and Bars",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 55,
+            "name": "Pigeonhole Principle",
+            "full_title": "55. Pigeonhole Principle",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Very Basic Graphs",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 56,
+            "name": "Introduction to Graphs | Definitions and Representations",
+            "full_title": "56. Introduction to Graphs | Definitions and Representations",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Data Structures (DS)",
+    "total_problems": 4730,
+    "total_masterpieces": 3230,
+    "subtopics": [
+      {
+        "name": "Segment Tree",
+        "total_problems": 1934,
+        "total_masterpieces": 786,
+        "subsubtopics": [
+          {
+            "id": 57,
+            "name": "Segment Tree (Point Update Range Query)",
+            "full_title": "57. Segment Tree (Point Update Range Query)",
+            "problem_count": 1907,
+            "masterpiece_count": 772,
+            "core_count": 1135
+          },
+          {
+            "id": 58,
+            "name": "Segment Tree with Lazy Propagation",
+            "full_title": "58. Segment Tree with Lazy Propagation",
+            "problem_count": 27,
+            "masterpiece_count": 14,
+            "core_count": 13
+          },
+          {
+            "id": 59,
+            "name": "Persistent Segment Tree",
+            "full_title": "59. Persistent Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 60,
+            "name": "Persistent Segment Tree with Lazy Propagation",
+            "full_title": "60. Persistent Segment Tree with Lazy Propagation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 61,
+            "name": "2D Segment Tree",
+            "full_title": "61. 2D Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 62,
+            "name": "Dynamic Segment Tree",
+            "full_title": "62. Dynamic Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 63,
+            "name": "2D Dynamic Segment Tree",
+            "full_title": "63. 2D Dynamic Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 64,
+            "name": "Merge Sort Tree",
+            "full_title": "64. Merge Sort Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 65,
+            "name": "Iterative Segment Tree",
+            "full_title": "65. Iterative Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 66,
+            "name": "Segment Tree Merging",
+            "full_title": "66. Segment Tree Merging",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 67,
+            "name": "Segment Tree Beats",
+            "full_title": "67. Segment Tree Beats",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 68,
+            "name": "XOR Segment Tree",
+            "full_title": "68. XOR Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 69,
+            "name": "Historic Information on Segment Trees",
+            "full_title": "69. Historic Information on Segment Trees",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Binary Indexed Tree (BIT)",
+        "total_problems": 75,
+        "total_masterpieces": 38,
+        "subsubtopics": [
+          {
+            "id": 70,
+            "name": "BIT / Fenwick Tree",
+            "full_title": "70. BIT / Fenwick Tree",
+            "problem_count": 75,
+            "masterpiece_count": 38,
+            "core_count": 37
+          },
+          {
+            "id": 71,
+            "name": "Lower bound on BIT",
+            "full_title": "71. Lower bound on BIT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 72,
+            "name": "BIT with Range Update and Range Query",
+            "full_title": "72. BIT with Range Update and Range Query",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 73,
+            "name": "2D BIT",
+            "full_title": "73. 2D BIT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 74,
+            "name": "2D BIT with Range Update and Range Query",
+            "full_title": "74. 2D BIT with Range Update and Range Query",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Sparse Table",
+        "total_problems": 4,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 75,
+            "name": "Sparse Table",
+            "full_title": "75. Sparse Table",
+            "problem_count": 4,
+            "masterpiece_count": 0,
+            "core_count": 4
+          },
+          {
+            "id": 76,
+            "name": "Sparse Table 2D",
+            "full_title": "76. Sparse Table 2D",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 77,
+            "name": "Disjoint Sparse Table",
+            "full_title": "77. Disjoint Sparse Table",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Trie",
+        "total_problems": 160,
+        "total_masterpieces": 26,
+        "subsubtopics": [
+          {
+            "id": 78,
+            "name": "Trie on Strings and Bits",
+            "full_title": "78. Trie on Strings and Bits",
+            "problem_count": 160,
+            "masterpiece_count": 26,
+            "core_count": 118
+          },
+          {
+            "id": 79,
+            "name": "Persistent Trie",
+            "full_title": "79. Persistent Trie",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Disjoint Set Union (DSU)",
+        "total_problems": 215,
+        "total_masterpieces": 97,
+        "subsubtopics": [
+          {
+            "id": 80,
+            "name": "DSU / Union Find",
+            "full_title": "80. DSU / Union Find",
+            "problem_count": 204,
+            "masterpiece_count": 86,
+            "core_count": 118
+          },
+          {
+            "id": 81,
+            "name": "DSU with Rollbacks",
+            "full_title": "81. DSU with Rollbacks",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 82,
+            "name": "Reachability Tree / DSU Tree / Kruskal Reconstruction Tree (KRT)",
+            "full_title": "82. Reachability Tree / DSU Tree / Kruskal Reconstruction Tree (KRT)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 83,
+            "name": "Partially Persistent DSU",
+            "full_title": "83. Partially Persistent DSU",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 84,
+            "name": "Persistent DSU",
+            "full_title": "84. Persistent DSU",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 85,
+            "name": "Augmented DSU / Weighted DSU",
+            "full_title": "85. Augmented DSU / Weighted DSU",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 86,
+            "name": "DSU on Tree and Small to Large Merging",
+            "full_title": "86. DSU on Tree and Small to Large Merging",
+            "problem_count": 11,
+            "masterpiece_count": 11,
+            "core_count": 0
+          },
+          {
+            "id": 87,
+            "name": "[Trick] Maintaining Log N DSU / Range Parallel DSU",
+            "full_title": "87. [Trick] Maintaining Log N DSU / Range Parallel DSU",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Square Root Decomposition",
+        "total_problems": 2,
+        "total_masterpieces": 1,
+        "subsubtopics": [
+          {
+            "id": 88,
+            "name": "Basic SQRT Decomposition",
+            "full_title": "88. Basic SQRT Decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 89,
+            "name": "Splitting Objects into Light and Heavy / Case Processing",
+            "full_title": "89. Splitting Objects into Light and Heavy / Case Processing",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 90,
+            "name": "Batch Processing / SQRT Decomposition on Queries",
+            "full_title": "90. Batch Processing / SQRT Decomposition on Queries",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 91,
+            "name": "SQRT Decomposition Split and Build Technique",
+            "full_title": "91. SQRT Decomposition Split and Build Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 92,
+            "name": "SQRT Fragmented Tree / Block Tree / SQRT Decomposition on Trees",
+            "full_title": "92. SQRT Fragmented Tree / Block Tree / SQRT Decomposition on Trees",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 93,
+            "name": "Mo's Algorithm",
+            "full_title": "93. Mo's Algorithm",
+            "problem_count": 2,
+            "masterpiece_count": 1,
+            "core_count": 1
+          },
+          {
+            "id": 94,
+            "name": "Rollback Mo and Mo's with DSU",
+            "full_title": "94. Rollback Mo and Mo's with DSU",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 95,
+            "name": "Mo's on Tree",
+            "full_title": "95. Mo's on Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 96,
+            "name": "Sweepline Mo",
+            "full_title": "96. Sweepline Mo",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 97,
+            "name": "Mo's with Update / 3D Mo (Offline)",
+            "full_title": "97. Mo's with Update / 3D Mo (Offline)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 98,
+            "name": "Mo's with Update / 3D Mo (Online)",
+            "full_title": "98. Mo's with Update / 3D Mo (Online)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 99,
+            "name": "4D Mo",
+            "full_title": "99. 4D Mo",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Heavy Light Decomposition (HLD)",
+        "total_problems": 582,
+        "total_masterpieces": 582,
+        "subsubtopics": [
+          {
+            "id": 100,
+            "name": "Heavy Light Decomposition (HLD) ft Subtrees and Path Query",
+            "full_title": "100. Heavy Light Decomposition (HLD) ft Subtrees and Path Query",
+            "problem_count": 582,
+            "masterpiece_count": 582,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Centroid Decomposition",
+        "total_problems": 1071,
+        "total_masterpieces": 1071,
+        "subsubtopics": [
+          {
+            "id": 101,
+            "name": "Centroid Decomposition",
+            "full_title": "101. Centroid Decomposition",
+            "problem_count": 1071,
+            "masterpiece_count": 1071,
+            "core_count": 0
+          },
+          {
+            "id": 102,
+            "name": "Persistent Centroid Decomposition",
+            "full_title": "102. Persistent Centroid Decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Long Path Decomposition",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 103,
+            "name": "Long Path Decomposition",
+            "full_title": "103. Long Path Decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "BST",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 104,
+            "name": "Binary Search Tree (BST)",
+            "full_title": "104. Binary Search Tree (BST)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Balanced Binary Search Tree (BBST)",
+        "total_problems": 673,
+        "total_masterpieces": 624,
+        "subsubtopics": [
+          {
+            "id": 105,
+            "name": "Treap",
+            "full_title": "105. Treap",
+            "problem_count": 673,
+            "masterpiece_count": 624,
+            "core_count": 49
+          },
+          {
+            "id": 106,
+            "name": "Implicit Treap",
+            "full_title": "106. Implicit Treap",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 107,
+            "name": "Persistent Treap",
+            "full_title": "107. Persistent Treap",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 108,
+            "name": "Rope",
+            "full_title": "108. Rope",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 109,
+            "name": "Splay Tree",
+            "full_title": "109. Splay Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Link Cut Tree (LCT)",
+        "total_problems": 1,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 110,
+            "name": "Link Cut Tree (LCT)",
+            "full_title": "110. Link Cut Tree (LCT)",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          },
+          {
+            "id": 111,
+            "name": "Euler Tour Tree (ETT)",
+            "full_title": "111. Euler Tour Tree (ETT)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 112,
+            "name": "Top Tree / AAA Tree",
+            "full_title": "112. Top Tree / AAA Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 113,
+            "name": "Link Cut Cactus",
+            "full_title": "113. Link Cut Cactus",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Policy Based Data Structures",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 114,
+            "name": "Ordered Set",
+            "full_title": "114. Ordered Set",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 115,
+            "name": "GP Hash Table",
+            "full_title": "115. GP Hash Table",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "More Tree Data Structures",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 116,
+            "name": "Wavelet Tree",
+            "full_title": "116. Wavelet Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 117,
+            "name": "Cartesian Tree",
+            "full_title": "117. Cartesian Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 118,
+            "name": "K-Dimensional Tree (KD Tree)",
+            "full_title": "118. K-Dimensional Tree (KD Tree)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 119,
+            "name": "SQRT Tree",
+            "full_title": "119. SQRT Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 120,
+            "name": "Permutation Tree",
+            "full_title": "120. Permutation Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 121,
+            "name": "PQ Tree",
+            "full_title": "121. PQ Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Dynamic Connectivity",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 122,
+            "name": "Dynamic Connectivity Problem (Offline)",
+            "full_title": "122. Dynamic Connectivity Problem (Offline)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 123,
+            "name": "Dynamic Connectivity Problem (Online) / HDLT Algorithm",
+            "full_title": "123. Dynamic Connectivity Problem (Online) / HDLT Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Monotonic Data Structures",
+        "total_problems": 13,
+        "total_masterpieces": 5,
+        "subsubtopics": [
+          {
+            "id": 124,
+            "name": "Monotonic Stack: All Nearest Smaller Values and All Subarray Maximum/Minimum",
+            "full_title": "124. Monotonic Stack: All Nearest Smaller Values and All Subarray Maximum/Minimum",
+            "problem_count": 13,
+            "masterpiece_count": 5,
+            "core_count": 8
+          },
+          {
+            "id": 125,
+            "name": "Monotonic Queue",
+            "full_title": "125. Monotonic Queue",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 126,
+            "name": "Monotonic Queue 2D",
+            "full_title": "126. Monotonic Queue 2D",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 127,
+            "name": "Monotonic Deque",
+            "full_title": "127. Monotonic Deque",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 128,
+            "name": "Interval Set",
+            "full_title": "128. Interval Set",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 129,
+            "name": "Persistent Array",
+            "full_title": "129. Persistent Array",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 130,
+            "name": "Persistent Queue",
+            "full_title": "130. Persistent Queue",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 131,
+            "name": "Persistent Meldable Heap / Leftist Heap",
+            "full_title": "131. Persistent Meldable Heap / Leftist Heap",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Techniques",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 132,
+            "name": "Venice Technique",
+            "full_title": "132. Venice Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 133,
+            "name": "Offline Queries",
+            "full_title": "133. Offline Queries",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 134,
+            "name": "Static to Dynamic Trick / Log Decomposition",
+            "full_title": "134. Static to Dynamic Trick / Log Decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 135,
+            "name": "Divide and Conquer on Queries",
+            "full_title": "135. Divide and Conquer on Queries",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 136,
+            "name": "CDQ Divide and Conquer",
+            "full_title": "136. CDQ Divide and Conquer",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 137,
+            "name": "Queue Undo Trick",
+            "full_title": "137. Queue Undo Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 138,
+            "name": "Priority Queue Undo Trick",
+            "full_title": "138. Priority Queue Undo Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Graph Theory",
+    "total_problems": 4660,
+    "total_masterpieces": 2950,
+    "subtopics": [
+      {
+        "name": "Graph Traversal",
+        "total_problems": 1177,
+        "total_masterpieces": 63,
+        "subsubtopics": [
+          {
+            "id": 139,
+            "name": "Depth First Search (DFS)",
+            "full_title": "139. Depth First Search (DFS)",
+            "problem_count": 103,
+            "masterpiece_count": 48,
+            "core_count": 53
+          },
+          {
+            "id": 140,
+            "name": "Breadth First Search (BFS)",
+            "full_title": "140. Breadth First Search (BFS)",
+            "problem_count": 1042,
+            "masterpiece_count": 3,
+            "core_count": 1037
+          },
+          {
+            "id": 141,
+            "name": "DFS Tree",
+            "full_title": "141. DFS Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 142,
+            "name": "Topological Sorting",
+            "full_title": "142. Topological Sorting",
+            "problem_count": 19,
+            "masterpiece_count": 7,
+            "core_count": 12
+          },
+          {
+            "id": 143,
+            "name": "Tree Diameter",
+            "full_title": "143. Tree Diameter",
+            "problem_count": 11,
+            "masterpiece_count": 4,
+            "core_count": 7
+          },
+          {
+            "id": 144,
+            "name": "Euler Tour Technique",
+            "full_title": "144. Euler Tour Technique",
+            "problem_count": 2,
+            "masterpiece_count": 1,
+            "core_count": 1
+          },
+          {
+            "id": 145,
+            "name": "Inverse Graph",
+            "full_title": "145. Inverse Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Lowest Common Ancestor (LCA)",
+        "total_problems": 379,
+        "total_masterpieces": 121,
+        "subsubtopics": [
+          {
+            "id": 146,
+            "name": "Binary Lifting and LCA",
+            "full_title": "146. Binary Lifting and LCA",
+            "problem_count": 379,
+            "masterpiece_count": 121,
+            "core_count": 258
+          },
+          {
+            "id": 147,
+            "name": "LCA in O(1)",
+            "full_title": "147. LCA in O(1)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Graph Connectivity",
+        "total_problems": 73,
+        "total_masterpieces": 33,
+        "subsubtopics": [
+          {
+            "id": 148,
+            "name": "Strongly Connected Components (SCC)",
+            "full_title": "148. Strongly Connected Components (SCC)",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          },
+          {
+            "id": 149,
+            "name": "Incremental SCC",
+            "full_title": "149. Incremental SCC",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 150,
+            "name": "Articulation Bridges and Bridge Tree",
+            "full_title": "150. Articulation Bridges and Bridge Tree",
+            "problem_count": 72,
+            "masterpiece_count": 33,
+            "core_count": 35
+          },
+          {
+            "id": 151,
+            "name": "Online Articulation Bridges",
+            "full_title": "151. Online Articulation Bridges",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 152,
+            "name": "Articulation Points and Block Cut Tree",
+            "full_title": "152. Articulation Points and Block Cut Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 153,
+            "name": "Three Edge Connectivity",
+            "full_title": "153. Three Edge Connectivity",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 154,
+            "name": "Four Edge Connectivity",
+            "full_title": "154. Four Edge Connectivity",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 155,
+            "name": "Dynamic K-Connectivity",
+            "full_title": "155. Dynamic K-Connectivity",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 156,
+            "name": "Ear Decomposition",
+            "full_title": "156. Ear Decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Orientation",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 157,
+            "name": "Strong Orientation",
+            "full_title": "157. Strong Orientation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 158,
+            "name": "ST-numbering / Bipolar Orientation",
+            "full_title": "158. ST-numbering / Bipolar Orientation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Minimum Spanning Tree (MST)",
+        "total_problems": 817,
+        "total_masterpieces": 637,
+        "subsubtopics": [
+          {
+            "id": 159,
+            "name": "Minimum Spanning Tree (MST) - Prim's and Kruskal's",
+            "full_title": "159. Minimum Spanning Tree (MST) - Prim's and Kruskal's",
+            "problem_count": 817,
+            "masterpiece_count": 637,
+            "core_count": 178
+          },
+          {
+            "id": 160,
+            "name": "Steiner Tree Problem",
+            "full_title": "160. Steiner Tree Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 161,
+            "name": "Boruvka's Algorithm",
+            "full_title": "161. Boruvka's Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 162,
+            "name": "Minimum Diameter Spanning Tree",
+            "full_title": "162. Minimum Diameter Spanning Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 163,
+            "name": "Manhattan MST",
+            "full_title": "163. Manhattan MST",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 164,
+            "name": "Euclidean MST",
+            "full_title": "164. Euclidean MST",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 165,
+            "name": "Directed MST",
+            "full_title": "165. Directed MST",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 166,
+            "name": "Dynamic MST",
+            "full_title": "166. Dynamic MST",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 167,
+            "name": "Kirchoffs Theorem ft Number of MSTs",
+            "full_title": "167. Kirchoffs Theorem ft Number of MSTs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Shortest Paths",
+        "total_problems": 903,
+        "total_masterpieces": 792,
+        "subsubtopics": [
+          {
+            "id": 168,
+            "name": "Dijkstra's Algorithm",
+            "full_title": "168. Dijkstra's Algorithm",
+            "problem_count": 896,
+            "masterpiece_count": 789,
+            "core_count": 107
+          },
+          {
+            "id": 169,
+            "name": "[Trick] Dijkstra on Segment Tree",
+            "full_title": "169. [Trick] Dijkstra on Segment Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 170,
+            "name": "Floyd Warshall",
+            "full_title": "170. Floyd Warshall",
+            "problem_count": 7,
+            "masterpiece_count": 3,
+            "core_count": 3
+          },
+          {
+            "id": 171,
+            "name": "Bellman Ford",
+            "full_title": "171. Bellman Ford",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 172,
+            "name": "Shortest Path Faster Algorithm (SPFA)",
+            "full_title": "172. Shortest Path Faster Algorithm (SPFA)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 173,
+            "name": "Johnson's Alogrithm",
+            "full_title": "173. Johnson's Alogrithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 174,
+            "name": "0/1 BFS",
+            "full_title": "174. 0/1 BFS",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 175,
+            "name": "Dial's algorithm",
+            "full_title": "175. Dial's algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 176,
+            "name": "Eppsteins Algorithm",
+            "full_title": "176. Eppsteins Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 177,
+            "name": "Suurballe's Algorithm",
+            "full_title": "177. Suurballe's Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 178,
+            "name": "A* Algorithm",
+            "full_title": "178. A* Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Cycles",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 179,
+            "name": "Cycle Detection",
+            "full_title": "179. Cycle Detection",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 180,
+            "name": "[Problem] Minimum Weight Cycle For Each Vertex",
+            "full_title": "180. [Problem] Minimum Weight Cycle For Each Vertex",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 181,
+            "name": "[Problem] Minimum Weight Cycle For Each Edge",
+            "full_title": "181. [Problem] Minimum Weight Cycle For Each Edge",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 182,
+            "name": "Minimum Mean Weight Cycle",
+            "full_title": "182. Minimum Mean Weight Cycle",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 183,
+            "name": "Number of 3 and 4 length Cycles",
+            "full_title": "183. Number of 3 and 4 length Cycles",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "More Tree Stuff",
+        "total_problems": 1,
+        "total_masterpieces": 1,
+        "subsubtopics": [
+          {
+            "id": 184,
+            "name": "Virtual Tree / Auxiliary Tree",
+            "full_title": "184. Virtual Tree / Auxiliary Tree",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 185,
+            "name": "Rerooting Technique",
+            "full_title": "185. Rerooting Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 186,
+            "name": "Union of Two Paths on a Tree",
+            "full_title": "186. Union of Two Paths on a Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 187,
+            "name": "Intersection of Two Paths on a Tree",
+            "full_title": "187. Intersection of Two Paths on a Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 188,
+            "name": "[Problem] Number of Paths of Each Length in a Tree",
+            "full_title": "188. [Problem] Number of Paths of Each Length in a Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 189,
+            "name": "Dynamic Online Tree Diameter",
+            "full_title": "189. Dynamic Online Tree Diameter",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 190,
+            "name": "[Problem] Tree Orientation to Maximize Pairs of Reachable Nodes",
+            "full_title": "190. [Problem] Tree Orientation to Maximize Pairs of Reachable Nodes",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Satisfiability",
+        "total_problems": 32,
+        "total_masterpieces": 32,
+        "subsubtopics": [
+          {
+            "id": 191,
+            "name": "2 SAT",
+            "full_title": "191. 2 SAT",
+            "problem_count": 32,
+            "masterpiece_count": 32,
+            "core_count": 0
+          },
+          {
+            "id": 192,
+            "name": "3 SAT",
+            "full_title": "192. 3 SAT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 193,
+            "name": "System Of Difference Constraints",
+            "full_title": "193. System Of Difference Constraints",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Eulerian Path",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 194,
+            "name": "Eulerian Path and Cycle",
+            "full_title": "194. Eulerian Path and Cycle",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Hamiltonian Path",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 195,
+            "name": "Hamiltonian Path and Cycle",
+            "full_title": "195. Hamiltonian Path and Cycle",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 196,
+            "name": "Hamiltonian Path Heuristic Algorithm",
+            "full_title": "196. Hamiltonian Path Heuristic Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Cliques and Independent Sets",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 197,
+            "name": "Maximum Clique",
+            "full_title": "197. Maximum Clique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 198,
+            "name": "Maximum Independent Set (MIS)",
+            "full_title": "198. Maximum Independent Set (MIS)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Graph Coloring",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 199,
+            "name": "Chromatic Number",
+            "full_title": "199. Chromatic Number",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 200,
+            "name": "Welsh-Powell Algorithm",
+            "full_title": "200. Welsh-Powell Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 201,
+            "name": "Chromatic Polynomial ft Number of DAGs",
+            "full_title": "201. Chromatic Polynomial ft Number of DAGs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 202,
+            "name": "Edge Coloring of Simple Graph",
+            "full_title": "202. Edge Coloring of Simple Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 203,
+            "name": "Edge Coloring of Bipartite Graph",
+            "full_title": "203. Edge Coloring of Bipartite Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Graph Counting",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 204,
+            "name": "Counting Labeled Graphs",
+            "full_title": "204. Counting Labeled Graphs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 205,
+            "name": "Prufer Code",
+            "full_title": "205. Prufer Code",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 206,
+            "name": "[Problem] Number of Arborescences with n Nodes",
+            "full_title": "206. [Problem] Number of Arborescences with n Nodes",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 207,
+            "name": "Tuttes Theorem ft Arborescences in a Graph",
+            "full_title": "207. Tuttes Theorem ft Arborescences in a Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 208,
+            "name": "BEST Theorem",
+            "full_title": "208. BEST Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Dynamic Acyclic Graphs (DAG)",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 209,
+            "name": "DAG Reachability",
+            "full_title": "209. DAG Reachability",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 210,
+            "name": "Incremental DAG Reachability",
+            "full_title": "210. Incremental DAG Reachability",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Dominators",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 211,
+            "name": "Dominator Tree",
+            "full_title": "211. Dominator Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Special Graphs",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 212,
+            "name": "Cactus Graph",
+            "full_title": "212. Cactus Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 213,
+            "name": "Tournament Graph",
+            "full_title": "213. Tournament Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 214,
+            "name": "Chordal Graph",
+            "full_title": "214. Chordal Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Flow and Min Cut",
+        "total_problems": 1273,
+        "total_masterpieces": 1269,
+        "subsubtopics": [
+          {
+            "id": 215,
+            "name": "Maximum Flow / Minimum Cut",
+            "full_title": "215. Maximum Flow / Minimum Cut",
+            "problem_count": 728,
+            "masterpiece_count": 728,
+            "core_count": 0
+          },
+          {
+            "id": 216,
+            "name": "Min Cost Max Flow (MCMF)",
+            "full_title": "216. Min Cost Max Flow (MCMF)",
+            "problem_count": 541,
+            "masterpiece_count": 541,
+            "core_count": 0
+          },
+          {
+            "id": 217,
+            "name": "Min Cost Max Flow with Negative Cycles",
+            "full_title": "217. Min Cost Max Flow with Negative Cycles",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 218,
+            "name": "Maximum Closure Problem",
+            "full_title": "218. Maximum Closure Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 219,
+            "name": "L-R Flow",
+            "full_title": "219. L-R Flow",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 220,
+            "name": "Gomory-Hu Tree",
+            "full_title": "220. Gomory-Hu Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 221,
+            "name": "Gomory-Hu Tree of a Planar Graph",
+            "full_title": "221. Gomory-Hu Tree of a Planar Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 222,
+            "name": "Stoer Wagner Algorithm",
+            "full_title": "222. Stoer Wagner Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 223,
+            "name": "Chinese Postman Problem",
+            "full_title": "223. Chinese Postman Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 224,
+            "name": "Uniqueness of Min Cut",
+            "full_title": "224. Uniqueness of Min Cut",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 225,
+            "name": "Maximum Density Subgraph",
+            "full_title": "225. Maximum Density Subgraph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 226,
+            "name": "Min Cut in a Planar Graph",
+            "full_title": "226. Min Cut in a Planar Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 227,
+            "name": "Max Cut in a Planar Graph",
+            "full_title": "227. Max Cut in a Planar Graph",
+            "problem_count": 4,
+            "masterpiece_count": 0,
+            "core_count": 4
+          }
+        ]
+      },
+      {
+        "name": "Matching",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 228,
+            "name": "Bipartite Matching (HopCroft Karp Algorithm and Kuhn's Algorithm)",
+            "full_title": "228. Bipartite Matching (HopCroft Karp Algorithm and Kuhn's Algorithm)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 229,
+            "name": "Hungarian Algorithm / Bipartite Weighted Matching",
+            "full_title": "229. Hungarian Algorithm / Bipartite Weighted Matching",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 230,
+            "name": "Blossom Algorithm Unweighted / General Matching / Randomized General Matching",
+            "full_title": "230. Blossom Algorithm Unweighted / General Matching / Randomized General Matching",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 231,
+            "name": "Blossom Algorithm Weighted / General Weighted Matching",
+            "full_title": "231. Blossom Algorithm Weighted / General Weighted Matching",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 232,
+            "name": "Stable Marriage Problem",
+            "full_title": "232. Stable Marriage Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 233,
+            "name": "Konig's Theorem and Maximum Independent Set in Bipartite Graphs",
+            "full_title": "233. Konig's Theorem and Maximum Independent Set in Bipartite Graphs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 234,
+            "name": "Halls Theorem",
+            "full_title": "234. Halls Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 235,
+            "name": "Matching using Determinants",
+            "full_title": "235. Matching using Determinants",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Partially Ordered Set (POSET)",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 236,
+            "name": "POSET ft Dilworth's and Mirsky's Theorem",
+            "full_title": "236. POSET ft Dilworth's and Mirsky's Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 5,
+        "total_masterpieces": 2,
+        "subsubtopics": [
+          {
+            "id": 237,
+            "name": "Functional Graphs",
+            "full_title": "237. Functional Graphs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 238,
+            "name": "Degree Sequences, Erdos-Gallai Theorem, Gale-Ryser Theorem and Havel\u2013Hakimi Algorithm",
+            "full_title": "238. Degree Sequences, Erdos-Gallai Theorem, Gale-Ryser Theorem and Havel\u2013Hakimi Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 239,
+            "name": "Tree Isomorphism",
+            "full_title": "239. Tree Isomorphism",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 240,
+            "name": "Binarizing a Tree",
+            "full_title": "240. Binarizing a Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 241,
+            "name": "Planarity Check",
+            "full_title": "241. Planarity Check",
+            "problem_count": 5,
+            "masterpiece_count": 2,
+            "core_count": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Number Theory",
+    "total_problems": 610,
+    "total_masterpieces": 227,
+    "subtopics": [
+      {
+        "name": "Primes and Divisors",
+        "total_problems": 343,
+        "total_masterpieces": 97,
+        "subsubtopics": [
+          {
+            "id": 242,
+            "name": "Sieve, Prime Factorization and Divisors",
+            "full_title": "242. Sieve, Prime Factorization and Divisors",
+            "problem_count": 343,
+            "masterpiece_count": 97,
+            "core_count": 243
+          },
+          {
+            "id": 243,
+            "name": "Linear Sieve",
+            "full_title": "243. Linear Sieve",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 244,
+            "name": "Segmented Sieve",
+            "full_title": "244. Segmented Sieve",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 245,
+            "name": "Sieve upto 1e9",
+            "full_title": "245. Sieve upto 1e9",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 246,
+            "name": "Miller-Rabin Primality Test",
+            "full_title": "246. Miller-Rabin Primality Test",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 247,
+            "name": "Pollard Rho",
+            "full_title": "247. Pollard Rho",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 248,
+            "name": "Prime Counting Function",
+            "full_title": "248. Prime Counting Function",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 249,
+            "name": "Prime Gap",
+            "full_title": "249. Prime Gap",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 250,
+            "name": "[Problem] Counting Numbers Having Exactly K Divisors",
+            "full_title": "250. [Problem] Counting Numbers Having Exactly K Divisors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 251,
+            "name": "[Problem] Smallest Number Having Exactly K Divisors",
+            "full_title": "251. [Problem] Smallest Number Having Exactly K Divisors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 252,
+            "name": "Sum of The Number of Divisors in cbrt(n)",
+            "full_title": "252. Sum of The Number of Divisors in cbrt(n)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 253,
+            "name": "Wilson's Theorem",
+            "full_title": "253. Wilson's Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 254,
+            "name": "Implicit Prime Factorization",
+            "full_title": "254. Implicit Prime Factorization",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Multiplicative Functions",
+        "total_problems": 1,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 255,
+            "name": "Number of Divisors / Sum of Divisors / Sigma Function",
+            "full_title": "255. Number of Divisors / Sum of Divisors / Sigma Function",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 256,
+            "name": "Euler's Totient Function / Phi Function",
+            "full_title": "256. Euler's Totient Function / Phi Function",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 257,
+            "name": "Power Tower / Generalized Euler theorem",
+            "full_title": "257. Power Tower / Generalized Euler theorem",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          },
+          {
+            "id": 258,
+            "name": "Mobius Function and Mobius Inversion",
+            "full_title": "258. Mobius Function and Mobius Inversion",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 259,
+            "name": "Dirichlet convolution",
+            "full_title": "259. Dirichlet convolution",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 260,
+            "name": "Min_25 Sieve",
+            "full_title": "260. Min_25 Sieve",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 261,
+            "name": "Powerful Number Sieve / PN Sieve",
+            "full_title": "261. Powerful Number Sieve / PN Sieve",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Euclidean Algorithm",
+        "total_problems": 61,
+        "total_masterpieces": 23,
+        "subsubtopics": [
+          {
+            "id": 262,
+            "name": "Euclidean Algorithm",
+            "full_title": "262. Euclidean Algorithm",
+            "problem_count": 61,
+            "masterpiece_count": 23,
+            "core_count": 38
+          },
+          {
+            "id": 263,
+            "name": "Extended Euclid",
+            "full_title": "263. Extended Euclid",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 264,
+            "name": "Bezout's Identity",
+            "full_title": "264. Bezout's Identity",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 265,
+            "name": "Chicken McNugget Theorem",
+            "full_title": "265. Chicken McNugget Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Modular Arithmetic",
+        "total_problems": 35,
+        "total_masterpieces": 25,
+        "subsubtopics": [
+          {
+            "id": 266,
+            "name": "Linear Congruence Equation",
+            "full_title": "266. Linear Congruence Equation",
+            "problem_count": 18,
+            "masterpiece_count": 9,
+            "core_count": 9
+          },
+          {
+            "id": 267,
+            "name": "Chinese Remainder Theorem (CRT)",
+            "full_title": "267. Chinese Remainder Theorem (CRT)",
+            "problem_count": 15,
+            "masterpiece_count": 15,
+            "core_count": 0
+          },
+          {
+            "id": 268,
+            "name": "Primitive Root",
+            "full_title": "268. Primitive Root",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 269,
+            "name": "Multiplicative Order and Carmichael's Lambda Function",
+            "full_title": "269. Multiplicative Order and Carmichael's Lambda Function",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 270,
+            "name": "Discrete Log / Baby Step Giant Step",
+            "full_title": "270. Discrete Log / Baby Step Giant Step",
+            "problem_count": 2,
+            "masterpiece_count": 1,
+            "core_count": 1
+          },
+          {
+            "id": 271,
+            "name": "Discrete Root",
+            "full_title": "271. Discrete Root",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 272,
+            "name": "Discrete Root in O(P^(1/4))",
+            "full_title": "272. Discrete Root in O(P^(1/4))",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 273,
+            "name": "Discrete Square Root, Tonelli Shanks Algorithm, Cipolla's Algorithm",
+            "full_title": "273. Discrete Square Root, Tonelli Shanks Algorithm, Cipolla's Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 274,
+            "name": "Number of Distinct Kth Powers Modulo N",
+            "full_title": "274. Number of Distinct Kth Powers Modulo N",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 275,
+            "name": "Number of Solutions to X^2 = 1 mod M",
+            "full_title": "275. Number of Solutions to X^2 = 1 mod M",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Linear Diophantine Equations",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 276,
+            "name": "Linear Diophantine Equation with Two Variables",
+            "full_title": "276. Linear Diophantine Equation with Two Variables",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 277,
+            "name": "Linear Diophantine Equation with N Variables",
+            "full_title": "277. Linear Diophantine Equation with N Variables",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 278,
+            "name": "Trivariable Linear Diophantine Equation with Nonnegative Solutions",
+            "full_title": "278. Trivariable Linear Diophantine Equation with Nonnegative Solutions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 279,
+            "name": "Multivariable Linear Diophantine Equation with Nonnegative Solutions",
+            "full_title": "279. Multivariable Linear Diophantine Equation with Nonnegative Solutions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 280,
+            "name": "Linear Diophantine With N Unknowns and Two Equations",
+            "full_title": "280. Linear Diophantine With N Unknowns and Two Equations",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Solutions to Equations",
+        "total_problems": 2,
+        "total_masterpieces": 1,
+        "subsubtopics": [
+          {
+            "id": 281,
+            "name": "Number of Solutions to a Basic Linear Algebraic Equation",
+            "full_title": "281. Number of Solutions to a Basic Linear Algebraic Equation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 282,
+            "name": "Number of Solutions to a Basic Linear Algebraic Equation using Meet in the Middle",
+            "full_title": "282. Number of Solutions to a Basic Linear Algebraic Equation using Meet in the Middle",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 283,
+            "name": "Number of Nonnegative Integer Solutions to ax + by \u2264 c",
+            "full_title": "283. Number of Nonnegative Integer Solutions to ax + by \u2264 c",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 284,
+            "name": "Number of Integer Solutions to 1/x + 1/y = 1/k",
+            "full_title": "284. Number of Integer Solutions to 1/x + 1/y = 1/k",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 285,
+            "name": "Two / Three / Four Squares Theorem",
+            "full_title": "285. Two / Three / Four Squares Theorem",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          },
+          {
+            "id": 286,
+            "name": "Pell's Equation",
+            "full_title": "286. Pell's Equation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Floor Sum",
+        "total_problems": 42,
+        "total_masterpieces": 15,
+        "subsubtopics": [
+          {
+            "id": 287,
+            "name": "Sum of Floors",
+            "full_title": "287. Sum of Floors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 288,
+            "name": "Floor Sum and Mod Sum of Arithmetic Progression",
+            "full_title": "288. Floor Sum and Mod Sum of Arithmetic Progression",
+            "problem_count": 42,
+            "masterpiece_count": 15,
+            "core_count": 26
+          },
+          {
+            "id": 289,
+            "name": "Generalized Floor Sum of Arithmetic Progression",
+            "full_title": "289. Generalized Floor Sum of Arithmetic Progression",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Fibonacci Numbers",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 290,
+            "name": "Fibonacci Numbers",
+            "full_title": "290. Fibonacci Numbers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 291,
+            "name": "[Problem] LCM of Fibonacci Numbers",
+            "full_title": "291. [Problem] LCM of Fibonacci Numbers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 292,
+            "name": "Pisano Period",
+            "full_title": "292. Pisano Period",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 293,
+            "name": "Phi Field",
+            "full_title": "293. Phi Field",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 126,
+        "total_masterpieces": 66,
+        "subsubtopics": [
+          {
+            "id": 294,
+            "name": "Pythagorean Triplets",
+            "full_title": "294. Pythagorean Triplets",
+            "problem_count": 126,
+            "masterpiece_count": 66,
+            "core_count": 56
+          },
+          {
+            "id": 295,
+            "name": "[Problem] Min of Mod of Arithmetic Progression",
+            "full_title": "295. [Problem] Min of Mod of Arithmetic Progression",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 296,
+            "name": "Sqrt Decomposition of Mod of Arithmetic Progression",
+            "full_title": "296. Sqrt Decomposition of Mod of Arithmetic Progression",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 297,
+            "name": "Factorial Number System",
+            "full_title": "297. Factorial Number System",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 298,
+            "name": "Stern-Brocot Tree and Rational Approximation",
+            "full_title": "298. Stern-Brocot Tree and Rational Approximation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 299,
+            "name": "[Problem] Number of a * x mod p in a Range",
+            "full_title": "299. [Problem] Number of a * x mod p in a Range",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 300,
+            "name": "[Problem] Smallest Nonnegative Integer x s.t. l \u2264 a * x mod p \u2264 r",
+            "full_title": "300. [Problem] Smallest Nonnegative Integer x s.t. l \u2264 a * x mod p \u2264 r",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Combinatorics",
+    "total_problems": 228,
+    "total_masterpieces": 94,
+    "subtopics": [
+      {
+        "name": "Techniques",
+        "total_problems": 1,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 301,
+            "name": "Contribution Technique",
+            "full_title": "301. Contribution Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 302,
+            "name": "Product Trick",
+            "full_title": "302. Product Trick",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Catalan",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 303,
+            "name": "Catalan Numbers",
+            "full_title": "303. Catalan Numbers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 304,
+            "name": "Catalan Convolution",
+            "full_title": "304. Catalan Convolution",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Inclusion Exclusion",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 305,
+            "name": "Principle of Inclusion and Exclusion (PIE)",
+            "full_title": "305. Principle of Inclusion and Exclusion (PIE)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 306,
+            "name": "Derangements",
+            "full_title": "306. Derangements",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 307,
+            "name": "Inclusion Exclusion on Multiples",
+            "full_title": "307. Inclusion Exclusion on Multiples",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Factorials and Binomial Coefficients (nCr)",
+        "total_problems": 224,
+        "total_masterpieces": 93,
+        "subsubtopics": [
+          {
+            "id": 308,
+            "name": "Lucas Theorem",
+            "full_title": "308. Lucas Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 309,
+            "name": "nCr Modulo Any Mod",
+            "full_title": "309. nCr Modulo Any Mod",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 310,
+            "name": "Large Factorials and Binomial Coefficients",
+            "full_title": "310. Large Factorials and Binomial Coefficients",
+            "problem_count": 224,
+            "masterpiece_count": 93,
+            "core_count": 131
+          },
+          {
+            "id": 311,
+            "name": "Legendre's Formula",
+            "full_title": "311. Legendre's Formula",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 312,
+            "name": "Prefix Sum Queries of Binomial Coefficients",
+            "full_title": "312. Prefix Sum Queries of Binomial Coefficients",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 313,
+            "name": "Prefix Sum of Binomial Coefficients for a Fixed Large N",
+            "full_title": "313. Prefix Sum of Binomial Coefficients for a Fixed Large N",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 314,
+            "name": "Sum of nCr Over a Fixed Congruence Class",
+            "full_title": "314. Sum of nCr Over a Fixed Congruence Class",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 315,
+            "name": "[Problem] Sum of nCr(a[i], K) for each K from 1 to N",
+            "full_title": "315. [Problem] Sum of nCr(a[i], K) for each K from 1 to N",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Stirling Numbers",
+        "total_problems": 1,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 316,
+            "name": "Stirling Numbers (Basic)",
+            "full_title": "316. Stirling Numbers (Basic)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 317,
+            "name": "Stirling Number of the First Kind for Fixed N",
+            "full_title": "317. Stirling Number of the First Kind for Fixed N",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 318,
+            "name": "Stirling Number of the First Kind for Fixed K",
+            "full_title": "318. Stirling Number of the First Kind for Fixed K",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 319,
+            "name": "Stirling Number of the Second Kind for Fixed N",
+            "full_title": "319. Stirling Number of the Second Kind for Fixed N",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 320,
+            "name": "Stirling Number of the Second Kind for Fixed K",
+            "full_title": "320. Stirling Number of the Second Kind for Fixed K",
+            "problem_count": 1,
+            "masterpiece_count": 0,
+            "core_count": 1
+          }
+        ]
+      },
+      {
+        "name": "Partitions",
+        "total_problems": 2,
+        "total_masterpieces": 1,
+        "subsubtopics": [
+          {
+            "id": 321,
+            "name": "Partitions of an Integer, Partition Function and Pentagonal Number Theorem",
+            "full_title": "321. Partitions of an Integer, Partition Function and Pentagonal Number Theorem",
+            "problem_count": 2,
+            "masterpiece_count": 1,
+            "core_count": 1
+          },
+          {
+            "id": 322,
+            "name": "Partitions of a Set / Bell Number",
+            "full_title": "322. Partitions of a Set / Bell Number",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 323,
+            "name": "Burnside's Lemma / Polya Enumeration Theorem",
+            "full_title": "323. Burnside's Lemma / Polya Enumeration Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 324,
+            "name": "Bertrand's Ballot Theorem",
+            "full_title": "324. Bertrand's Ballot Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 325,
+            "name": "Young Tableaus and the Hook Length Formula",
+            "full_title": "325. Young Tableaus and the Hook Length Formula",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Math",
+    "total_problems": 783,
+    "total_masterpieces": 736,
+    "subtopics": [
+      {
+        "name": "Convolution",
+        "total_problems": 101,
+        "total_masterpieces": 86,
+        "subsubtopics": [
+          {
+            "id": 326,
+            "name": "Fast Fourier Transform (FFT)",
+            "full_title": "326. Fast Fourier Transform (FFT)",
+            "problem_count": 70,
+            "masterpiece_count": 70,
+            "core_count": 0
+          },
+          {
+            "id": 327,
+            "name": "Number Theoretic Transform (NTT)",
+            "full_title": "327. Number Theoretic Transform (NTT)",
+            "problem_count": 31,
+            "masterpiece_count": 16,
+            "core_count": 15
+          },
+          {
+            "id": 328,
+            "name": "2D FFT / NTT",
+            "full_title": "328. 2D FFT / NTT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 329,
+            "name": "Online FFT / NTT",
+            "full_title": "329. Online FFT / NTT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 330,
+            "name": "Fast Walsh Hadamard Transform (FWHT) and its Variations",
+            "full_title": "330. Fast Walsh Hadamard Transform (FWHT) and its Variations",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 331,
+            "name": "GCD Convolution",
+            "full_title": "331. GCD Convolution",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 332,
+            "name": "LCM Convolution",
+            "full_title": "332. LCM Convolution",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Polynomial",
+        "total_problems": 598,
+        "total_masterpieces": 598,
+        "subsubtopics": [
+          {
+            "id": 333,
+            "name": "Generating Functions",
+            "full_title": "333. Generating Functions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 334,
+            "name": "Polynomial Inverse",
+            "full_title": "334. Polynomial Inverse",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 335,
+            "name": "Polynomial Exp",
+            "full_title": "335. Polynomial Exp",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 336,
+            "name": "Polynomial Log",
+            "full_title": "336. Polynomial Log",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 337,
+            "name": "Polynomial Pow",
+            "full_title": "337. Polynomial Pow",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 338,
+            "name": "Polynomial Sqrt",
+            "full_title": "338. Polynomial Sqrt",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 339,
+            "name": "Polynomial Composition",
+            "full_title": "339. Polynomial Composition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 340,
+            "name": "Multipoint Evaluation",
+            "full_title": "340. Multipoint Evaluation",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 341,
+            "name": "Chirp Z Transform",
+            "full_title": "341. Chirp Z Transform",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 342,
+            "name": "Polynomial Interpolation",
+            "full_title": "342. Polynomial Interpolation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 343,
+            "name": "Polynomial Shift",
+            "full_title": "343. Polynomial Shift",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 344,
+            "name": "Shift of Sampling Points of Polynomial",
+            "full_title": "344. Shift of Sampling Points of Polynomial",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 345,
+            "name": "Polyomial Division and Remainder",
+            "full_title": "345. Polyomial Division and Remainder",
+            "problem_count": 595,
+            "masterpiece_count": 595,
+            "core_count": 0
+          },
+          {
+            "id": 346,
+            "name": "Polynomial Roots Under a Modulo",
+            "full_title": "346. Polynomial Roots Under a Modulo",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 347,
+            "name": "Resultant of Two Polynomials and Half-GCD Algorithm",
+            "full_title": "347. Resultant of Two Polynomials and Half-GCD Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 348,
+            "name": "Lagrange Interpolation",
+            "full_title": "348. Lagrange Interpolation",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 349,
+            "name": "[Problem] Sum of r^i * poly(i)",
+            "full_title": "349. [Problem] Sum of r^i * poly(i)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 350,
+            "name": "Polynomial with Binomial Coefficients",
+            "full_title": "350. Polynomial with Binomial Coefficients",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 351,
+            "name": "Subset Sum Problem using Generating Functions",
+            "full_title": "351. Subset Sum Problem using Generating Functions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 352,
+            "name": "Polynomial Factorization of (x^n - 1) and Cyclotomic Polynomials",
+            "full_title": "352. Polynomial Factorization of (x^n - 1) and Cyclotomic Polynomials",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 353,
+            "name": "Schwartz\u2013Zippel Lemma",
+            "full_title": "353. Schwartz\u2013Zippel Lemma",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 354,
+            "name": "Lagrange Inversion Theorem",
+            "full_title": "354. Lagrange Inversion Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Matrices",
+        "total_problems": 50,
+        "total_masterpieces": 37,
+        "subsubtopics": [
+          {
+            "id": 355,
+            "name": "Matrix Exponentiation",
+            "full_title": "355. Matrix Exponentiation",
+            "problem_count": 50,
+            "masterpiece_count": 37,
+            "core_count": 13
+          },
+          {
+            "id": 356,
+            "name": "Permanent of a Matrix",
+            "full_title": "356. Permanent of a Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 357,
+            "name": "Freivald's Algorithm",
+            "full_title": "357. Freivald's Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 358,
+            "name": "Vandermonde Matrix",
+            "full_title": "358. Vandermonde Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 359,
+            "name": "Hafnian of a Matrix / Number of Perfect Matchings in a Graph",
+            "full_title": "359. Hafnian of a Matrix / Number of Perfect Matchings in a Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 360,
+            "name": "Frobenius Form of a Matrix and Fast Matrix Power",
+            "full_title": "360. Frobenius Form of a Matrix and Fast Matrix Power",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Linear Recurrence",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 361,
+            "name": "Linear Recurrence Relations",
+            "full_title": "361. Linear Recurrence Relations",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 362,
+            "name": "Linear Recurrence using Cayley-Hamilton Theorem in O(N^2 log K)",
+            "full_title": "362. Linear Recurrence using Cayley-Hamilton Theorem in O(N^2 log K)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 363,
+            "name": "Linear Recurrence using Generating Functions in O(N log N log K)",
+            "full_title": "363. Linear Recurrence using Generating Functions in O(N log N log K)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 364,
+            "name": "Linear Recurrence with Polynomial Coefficients",
+            "full_title": "364. Linear Recurrence with Polynomial Coefficients",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 365,
+            "name": "Linear Recurrence on Matrices",
+            "full_title": "365. Linear Recurrence on Matrices",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 366,
+            "name": "Generating Function of a Linear Recurrence",
+            "full_title": "366. Generating Function of a Linear Recurrence",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 367,
+            "name": "Berlekamp Massey",
+            "full_title": "367. Berlekamp Massey",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 368,
+            "name": "Reeds-Sloane Algorithm",
+            "full_title": "368. Reeds-Sloane Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Linear Algebra",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 369,
+            "name": "Gaussian Elimination",
+            "full_title": "369. Gaussian Elimination",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 370,
+            "name": "Gaussian Elimination Modulo 2",
+            "full_title": "370. Gaussian Elimination Modulo 2",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 371,
+            "name": "Determinant of a Matrix",
+            "full_title": "371. Determinant of a Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 372,
+            "name": "Determinant under Composite Modulo",
+            "full_title": "372. Determinant under Composite Modulo",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 373,
+            "name": "Characteristic Polynomial and Hesserberg Matrix",
+            "full_title": "373. Characteristic Polynomial and Hesserberg Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 374,
+            "name": "[Problem] Determinant of Product Matrix",
+            "full_title": "374. [Problem] Determinant of Product Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 375,
+            "name": "Determinant of Sparse Matrix and Black Box Linear Algebra",
+            "full_title": "375. Determinant of Sparse Matrix and Black Box Linear Algebra",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 376,
+            "name": "[Problem] Determinant of Permutant and Circulant Matrix",
+            "full_title": "376. [Problem] Determinant of Permutant and Circulant Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 377,
+            "name": "GCD Determinant / Smith's Determinant",
+            "full_title": "377. GCD Determinant / Smith's Determinant",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 378,
+            "name": "Cauchy\u2013Binet formula",
+            "full_title": "378. Cauchy\u2013Binet formula",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 379,
+            "name": "Inverse of a Matrix",
+            "full_title": "379. Inverse of a Matrix",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 380,
+            "name": "Inverse of a Matrix modulo 2",
+            "full_title": "380. Inverse of a Matrix modulo 2",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 381,
+            "name": "Thomas Algorithm",
+            "full_title": "381. Thomas Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 382,
+            "name": "Vector Space and XOR Basis",
+            "full_title": "382. Vector Space and XOR Basis",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 383,
+            "name": "[Technique] XOR Basis ft Reduced Row Echelon Form",
+            "full_title": "383. [Technique] XOR Basis ft Reduced Row Echelon Form",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 384,
+            "name": "[Technique] XOR Basis ft Lexicographically Largest Basis",
+            "full_title": "384. [Technique] XOR Basis ft Lexicographically Largest Basis",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 385,
+            "name": "XOR Basis with Deletions (Online)",
+            "full_title": "385. XOR Basis with Deletions (Online)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 386,
+            "name": "q Binomial",
+            "full_title": "386. q Binomial",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Formulas",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 387,
+            "name": "Gauss's Eureka Theorem",
+            "full_title": "387. Gauss's Eureka Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 388,
+            "name": "Titu's Lemma",
+            "full_title": "388. Titu's Lemma",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 389,
+            "name": "Lifting-the-exponent(LTE) Lemma",
+            "full_title": "389. Lifting-the-exponent(LTE) Lemma",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 390,
+            "name": "Faulhaber's Formula and Bernoulli Numbers",
+            "full_title": "390. Faulhaber's Formula and Bernoulli Numbers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Calculus",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 391,
+            "name": "Differentiation and Integration",
+            "full_title": "391. Differentiation and Integration",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 392,
+            "name": "Line Integral",
+            "full_title": "392. Line Integral",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Probabilities and Expected Values",
+        "total_problems": 12,
+        "total_masterpieces": 5,
+        "subsubtopics": [
+          {
+            "id": 393,
+            "name": "Probabilities and Expected Values",
+            "full_title": "393. Probabilities and Expected Values",
+            "problem_count": 12,
+            "masterpiece_count": 5,
+            "core_count": 7
+          },
+          {
+            "id": 394,
+            "name": "Expected Value Powers Technique",
+            "full_title": "394. Expected Value Powers Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 395,
+            "name": "The Slime Trick",
+            "full_title": "395. The Slime Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 396,
+            "name": "Expected Occurrence Time as Substring",
+            "full_title": "396. Expected Occurrence Time as Substring",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 397,
+            "name": "Gambler's Ruin",
+            "full_title": "397. Gambler's Ruin",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 398,
+            "name": "Martingale",
+            "full_title": "398. Martingale",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Mathematical Optimization",
+        "total_problems": 22,
+        "total_masterpieces": 10,
+        "subsubtopics": [
+          {
+            "id": 399,
+            "name": "Lagrange Multiplier",
+            "full_title": "399. Lagrange Multiplier",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 400,
+            "name": "Linear Programming / Simplex Algorithm",
+            "full_title": "400. Linear Programming / Simplex Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 401,
+            "name": "Duality in Linear Programming (LP <> Flow)",
+            "full_title": "401. Duality in Linear Programming (LP <> Flow)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 402,
+            "name": "Dinkelbach Algorithm",
+            "full_title": "402. Dinkelbach Algorithm",
+            "problem_count": 22,
+            "masterpiece_count": 10,
+            "core_count": 12
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 403,
+            "name": "Continued Fractions",
+            "full_title": "403. Continued Fractions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 404,
+            "name": "Polynomial Real Roots",
+            "full_title": "404. Polynomial Real Roots",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 405,
+            "name": "Finite Field Arithmetic Binary",
+            "full_title": "405. Finite Field Arithmetic Binary",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Strings",
+    "total_problems": 1023,
+    "total_masterpieces": 936,
+    "subtopics": [
+      {
+        "name": "String Matching",
+        "total_problems": 141,
+        "total_masterpieces": 141,
+        "subsubtopics": [
+          {
+            "id": 406,
+            "name": "Knuth Morris Pratt (KMP) and Prefix Automaton",
+            "full_title": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
+            "problem_count": 141,
+            "masterpiece_count": 141,
+            "core_count": 0
+          },
+          {
+            "id": 407,
+            "name": "Z Algorithm",
+            "full_title": "407. Z Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 408,
+            "name": "String Matching using Bitsets",
+            "full_title": "408. String Matching using Bitsets",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 409,
+            "name": "String Matching with FFT ft Wildcard Matching",
+            "full_title": "409. String Matching with FFT ft Wildcard Matching",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Hashing",
+        "total_problems": 131,
+        "total_masterpieces": 78,
+        "subsubtopics": [
+          {
+            "id": 410,
+            "name": "String Hashing",
+            "full_title": "410. String Hashing",
+            "problem_count": 118,
+            "masterpiece_count": 71,
+            "core_count": 47
+          },
+          {
+            "id": 411,
+            "name": "2D String Hashing",
+            "full_title": "411. 2D String Hashing",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 412,
+            "name": "XOR Hashing",
+            "full_title": "412. XOR Hashing",
+            "problem_count": 13,
+            "masterpiece_count": 7,
+            "core_count": 5
+          },
+          {
+            "id": 413,
+            "name": "Multiset Hashing",
+            "full_title": "413. Multiset Hashing",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Aho Corasick",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 414,
+            "name": "Aho Corasick",
+            "full_title": "414. Aho Corasick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 415,
+            "name": "Dynamic Aho Corasick",
+            "full_title": "415. Dynamic Aho Corasick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Suffix Structures",
+        "total_problems": 724,
+        "total_masterpieces": 709,
+        "subsubtopics": [
+          {
+            "id": 416,
+            "name": "Suffix Array",
+            "full_title": "416. Suffix Array",
+            "problem_count": 45,
+            "masterpiece_count": 32,
+            "core_count": 13
+          },
+          {
+            "id": 417,
+            "name": "Isomorphic Suffix Array",
+            "full_title": "417. Isomorphic Suffix Array",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 418,
+            "name": "Dynamic Suffix Array",
+            "full_title": "418. Dynamic Suffix Array",
+            "problem_count": 3,
+            "masterpiece_count": 1,
+            "core_count": 2
+          },
+          {
+            "id": 419,
+            "name": "Suffix Automaton",
+            "full_title": "419. Suffix Automaton",
+            "problem_count": 676,
+            "masterpiece_count": 676,
+            "core_count": 0
+          },
+          {
+            "id": 420,
+            "name": "[Problem] Distinct Substring Queries in Range",
+            "full_title": "420. [Problem] Distinct Substring Queries in Range",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 421,
+            "name": "Suffix Tree",
+            "full_title": "421. Suffix Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Palindromes",
+        "total_problems": 15,
+        "total_masterpieces": 5,
+        "subsubtopics": [
+          {
+            "id": 422,
+            "name": "Palindromic Tree / Eertree",
+            "full_title": "422. Palindromic Tree / Eertree",
+            "problem_count": 14,
+            "masterpiece_count": 4,
+            "core_count": 10
+          },
+          {
+            "id": 423,
+            "name": "Persistent Palindromic Tree",
+            "full_title": "423. Persistent Palindromic Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 424,
+            "name": "Manachers Algorithm",
+            "full_title": "424. Manachers Algorithm",
+            "problem_count": 1,
+            "masterpiece_count": 1,
+            "core_count": 0
+          },
+          {
+            "id": 425,
+            "name": "[Problem] Minimum Palindrome Factorization",
+            "full_title": "425. [Problem] Minimum Palindrome Factorization",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 426,
+            "name": "[Problem] Number of Palindromes in Range",
+            "full_title": "426. [Problem] Number of Palindromes in Range",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Longest Common Subsequence (LCS)",
+        "total_problems": 12,
+        "total_masterpieces": 3,
+        "subsubtopics": [
+          {
+            "id": 427,
+            "name": "Longest Common Subsequence (LCS)",
+            "full_title": "427. Longest Common Subsequence (LCS)",
+            "problem_count": 12,
+            "masterpiece_count": 3,
+            "core_count": 9
+          },
+          {
+            "id": 428,
+            "name": "All Substring Longest Common Subsequence",
+            "full_title": "428. All Substring Longest Common Subsequence",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 429,
+            "name": "Bit LCS",
+            "full_title": "429. Bit LCS",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 430,
+            "name": "Cyclic LCS",
+            "full_title": "430. Cyclic LCS",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 431,
+            "name": "LCS on RLE compressed string",
+            "full_title": "431. LCS on RLE compressed string",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 432,
+            "name": "Balanced Brackets",
+            "full_title": "432. Balanced Brackets",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 433,
+            "name": "Expression Parsing",
+            "full_title": "433. Expression Parsing",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 434,
+            "name": "Lyndon Factorization / Duval Algorithm",
+            "full_title": "434. Lyndon Factorization / Duval Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 435,
+            "name": "Finding Repetitions / Main-Lorentz Algorithm",
+            "full_title": "435. Finding Repetitions / Main-Lorentz Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 436,
+            "name": "De Bruijn Sequence",
+            "full_title": "436. De Bruijn Sequence",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dynamic Programming (DP)",
+    "total_problems": 7399,
+    "total_masterpieces": 3355,
+    "subtopics": [
+      {
+        "name": "Intro to DP",
+        "total_problems": 2723,
+        "total_masterpieces": 540,
+        "subsubtopics": [
+          {
+            "id": 437,
+            "name": "Knapsack and Basic Dynamic Programming",
+            "full_title": "437. Knapsack and Basic Dynamic Programming",
+            "problem_count": 2723,
+            "masterpiece_count": 540,
+            "core_count": 2183
+          },
+          {
+            "id": 438,
+            "name": "Knapsack and Subset Sum Optimizations",
+            "full_title": "438. Knapsack and Subset Sum Optimizations",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Digit DP",
+        "total_problems": 117,
+        "total_masterpieces": 46,
+        "subsubtopics": [
+          {
+            "id": 439,
+            "name": "Digit DP",
+            "full_title": "439. Digit DP",
+            "problem_count": 117,
+            "masterpiece_count": 46,
+            "core_count": 71
+          }
+        ]
+      },
+      {
+        "name": "DP Optimizations",
+        "total_problems": 890,
+        "total_masterpieces": 890,
+        "subsubtopics": [
+          {
+            "id": 440,
+            "name": "Divide and Conquer Optimization",
+            "full_title": "440. Divide and Conquer Optimization",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 441,
+            "name": "Knuth Optimization",
+            "full_title": "441. Knuth Optimization",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 442,
+            "name": "Aliens Trick / WQS Binary Search",
+            "full_title": "442. Aliens Trick / WQS Binary Search",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 443,
+            "name": "1D1D DP Optimization",
+            "full_title": "443. 1D1D DP Optimization",
+            "problem_count": 890,
+            "masterpiece_count": 890,
+            "core_count": 0
+          },
+          {
+            "id": 444,
+            "name": "DP Optimization using Data Structures [Some Practice Problems]",
+            "full_title": "444. DP Optimization using Data Structures [Some Practice Problems]",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Convex Hull Trick (CHT)",
+        "total_problems": 4,
+        "total_masterpieces": 4,
+        "subsubtopics": [
+          {
+            "id": 445,
+            "name": "Convex Hull Trick (CHT) and Dynamic CHT",
+            "full_title": "445. Convex Hull Trick (CHT) and Dynamic CHT",
+            "problem_count": 4,
+            "masterpiece_count": 4,
+            "core_count": 0
+          },
+          {
+            "id": 446,
+            "name": "Persistent CHT",
+            "full_title": "446. Persistent CHT",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Li Chao Tree",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 447,
+            "name": "Li Chao Tree",
+            "full_title": "447. Li Chao Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 448,
+            "name": "Persistent Li Chao Tree",
+            "full_title": "448. Persistent Li Chao Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 449,
+            "name": "Extended Li Chao tree",
+            "full_title": "449. Extended Li Chao tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Bit Related DP",
+        "total_problems": 986,
+        "total_masterpieces": 206,
+        "subsubtopics": [
+          {
+            "id": 450,
+            "name": "Bitmask DP",
+            "full_title": "450. Bitmask DP",
+            "problem_count": 981,
+            "masterpiece_count": 201,
+            "core_count": 780
+          },
+          {
+            "id": 451,
+            "name": "Sum Over Subsets DP (SOS DP)",
+            "full_title": "451. Sum Over Subsets DP (SOS DP)",
+            "problem_count": 5,
+            "masterpiece_count": 5,
+            "core_count": 0
+          },
+          {
+            "id": 452,
+            "name": "[Problem] Subset Union of Bitsets",
+            "full_title": "452. [Problem] Subset Union of Bitsets",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 453,
+            "name": "Subset Convolution",
+            "full_title": "453. Subset Convolution",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 454,
+            "name": "[Trick] Dynamic Submask Count",
+            "full_title": "454. [Trick] Dynamic Submask Count",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 455,
+            "name": "[Problem] XOR Equation",
+            "full_title": "455. [Problem] XOR Equation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "More Tricks",
+        "total_problems": 113,
+        "total_masterpieces": 83,
+        "subsubtopics": [
+          {
+            "id": 456,
+            "name": "Open and Close Interval Trick",
+            "full_title": "456. Open and Close Interval Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 457,
+            "name": "Slope Trick",
+            "full_title": "457. Slope Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 458,
+            "name": "x2 +1 Trick",
+            "full_title": "458. x2 +1 Trick",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 459,
+            "name": "Combining Subtrees Technique",
+            "full_title": "459. Combining Subtrees Technique",
+            "problem_count": 113,
+            "masterpiece_count": 83,
+            "core_count": 30
+          }
+        ]
+      },
+      {
+        "name": "Classic DP",
+        "total_problems": 962,
+        "total_masterpieces": 771,
+        "subsubtopics": [
+          {
+            "id": 460,
+            "name": "Longest Increasing Subsequence (LIS)",
+            "full_title": "460. Longest Increasing Subsequence (LIS)",
+            "problem_count": 233,
+            "masterpiece_count": 68,
+            "core_count": 161
+          },
+          {
+            "id": 461,
+            "name": "Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+            "full_title": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
+            "problem_count": 729,
+            "masterpiece_count": 703,
+            "core_count": 26
+          },
+          {
+            "id": 462,
+            "name": "Edit Distance",
+            "full_title": "462. Edit Distance",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Dp on Different Structures",
+        "total_problems": 1604,
+        "total_masterpieces": 815,
+        "subsubtopics": [
+          {
+            "id": 463,
+            "name": "DP on Trees and DAGs",
+            "full_title": "463. DP on Trees and DAGs",
+            "problem_count": 1604,
+            "masterpiece_count": 815,
+            "core_count": 789
+          },
+          {
+            "id": 464,
+            "name": "DP over Divisors",
+            "full_title": "464. DP over Divisors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 465,
+            "name": "Substring DP",
+            "full_title": "465. Substring DP",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 466,
+            "name": "DP on Convex Hulls",
+            "full_title": "466. DP on Convex Hulls",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 467,
+            "name": "Connected Component DP",
+            "full_title": "467. Connected Component DP",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 468,
+            "name": "Broken Profile DP / Plug DP",
+            "full_title": "468. Broken Profile DP / Plug DP",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 469,
+            "name": "Hirschberg's Algorithm",
+            "full_title": "469. Hirschberg's Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 470,
+            "name": "[Problem] Number of Subsequences Having Product at least K",
+            "full_title": "470. [Problem] Number of Subsequences Having Product at least K",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 471,
+            "name": "[Problem] Range LIS Query",
+            "full_title": "471. [Problem] Range LIS Query",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Game Theory",
+    "total_problems": 877,
+    "total_masterpieces": 414,
+    "subtopics": [
+      {
+        "name": "Grundy Number / Nim",
+        "total_problems": 869,
+        "total_masterpieces": 411,
+        "subsubtopics": [
+          {
+            "id": 472,
+            "name": "Grundy Number and Basic Game Theory",
+            "full_title": "472. Grundy Number and Basic Game Theory",
+            "problem_count": 338,
+            "masterpiece_count": 159,
+            "core_count": 179
+          },
+          {
+            "id": 473,
+            "name": "Nimber",
+            "full_title": "473. Nimber",
+            "problem_count": 531,
+            "masterpiece_count": 252,
+            "core_count": 262
+          }
+        ]
+      },
+      {
+        "name": "Hackenbush",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 474,
+            "name": "Green Hackenbush on Trees and Graphs",
+            "full_title": "474. Green Hackenbush on Trees and Graphs",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 475,
+            "name": "Blue Red HackenBush",
+            "full_title": "475. Blue Red HackenBush",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Graph Games",
+        "total_problems": 8,
+        "total_masterpieces": 3,
+        "subsubtopics": [
+          {
+            "id": 476,
+            "name": "Games on Arbitrary Graphs",
+            "full_title": "476. Games on Arbitrary Graphs",
+            "problem_count": 8,
+            "masterpiece_count": 3,
+            "core_count": 5
+          },
+          {
+            "id": 477,
+            "name": "[Problem] Matching Game On A Graph",
+            "full_title": "477. [Problem] Matching Game On A Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 478,
+            "name": "Alpha Beta Pruning",
+            "full_title": "478. Alpha Beta Pruning",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Geometry",
+    "total_problems": 853,
+    "total_masterpieces": 379,
+    "subtopics": [
+      {
+        "name": "Euclidean Geometry",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 479,
+            "name": "Euclidean Geometry",
+            "full_title": "479. Euclidean Geometry",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Geometry 2D",
+        "total_problems": 853,
+        "total_masterpieces": 379,
+        "subsubtopics": [
+          {
+            "id": 480,
+            "name": "Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+            "full_title": "480. Points, Vectors, Transformations, Dot Products, Cross Products, Precision Issues and Polar Sort(2D)",
+            "problem_count": 191,
+            "masterpiece_count": 99,
+            "core_count": 91
+          },
+          {
+            "id": 481,
+            "name": "Lines, Segments, Rays, Distance and Relation Between Two Structures, Projections and Reflections(2D)",
+            "full_title": "481. Lines, Segments, Rays, Distance and Relation Between Two Structures, Projections and Reflections(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 482,
+            "name": "Circles, Circle Relations, Intersections, Inscribed Circles and Circumcircles(2D)",
+            "full_title": "482. Circles, Circle Relations, Intersections, Inscribed Circles and Circumcircles(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 483,
+            "name": "Tangents(2D)",
+            "full_title": "483. Tangents(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 484,
+            "name": "Circles of Apollonius(2D)",
+            "full_title": "484. Circles of Apollonius(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 485,
+            "name": "Circle Union(2D)",
+            "full_title": "485. Circle Union(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 486,
+            "name": "Polygons(2D)",
+            "full_title": "486. Polygons(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 487,
+            "name": "Centroid of a Polygon(2D)",
+            "full_title": "487. Centroid of a Polygon(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 488,
+            "name": "Geometric Median(2D)",
+            "full_title": "488. Geometric Median(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 489,
+            "name": "Convex Hull(2D)",
+            "full_title": "489. Convex Hull(2D)",
+            "problem_count": 3,
+            "masterpiece_count": 3,
+            "core_count": 0
+          },
+          {
+            "id": 490,
+            "name": "Point in Convex Polygon in log(N)(2D)",
+            "full_title": "490. Point in Convex Polygon in log(N)(2D)",
+            "problem_count": 537,
+            "masterpiece_count": 226,
+            "core_count": 300
+          },
+          {
+            "id": 491,
+            "name": "Winding Number and Point in Simple Polygon(2D)",
+            "full_title": "491. Winding Number and Point in Simple Polygon(2D)",
+            "problem_count": 40,
+            "masterpiece_count": 25,
+            "core_count": 14
+          },
+          {
+            "id": 492,
+            "name": "Extreme Vertex(2D)",
+            "full_title": "492. Extreme Vertex(2D)",
+            "problem_count": 63,
+            "masterpiece_count": 22,
+            "core_count": 41
+          },
+          {
+            "id": 493,
+            "name": "Rotating Calipers ft Diameter and Width of a Convex Polygon and Minimum Enclosing Rectangle(2D)",
+            "full_title": "493. Rotating Calipers ft Diameter and Width of a Convex Polygon and Minimum Enclosing Rectangle(2D)",
+            "problem_count": 9,
+            "masterpiece_count": 1,
+            "core_count": 7
+          },
+          {
+            "id": 494,
+            "name": "Minimum Enclosing Circle(2D)",
+            "full_title": "494. Minimum Enclosing Circle(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 495,
+            "name": "Polygon Line and Convex Line Intersection, and Polygon Cutting(2D)",
+            "full_title": "495. Polygon Line and Convex Line Intersection, and Polygon Cutting(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 496,
+            "name": "Tangents from Point to Convex and Convex to Convex(2D)",
+            "full_title": "496. Tangents from Point to Convex and Convex to Convex(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 497,
+            "name": "Distance from Point to Convex, Convex to Line and Convex to Convex(2D)",
+            "full_title": "497. Distance from Point to Convex, Convex to Line and Convex to Convex(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 498,
+            "name": "Maximum Distance from Convex to Convex(2D)",
+            "full_title": "498. Maximum Distance from Convex to Convex(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 499,
+            "name": "Polygon Union(2D)",
+            "full_title": "499. Polygon Union(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 500,
+            "name": "Polygon Triangulation(2D)",
+            "full_title": "500. Polygon Triangulation(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 501,
+            "name": "Maximum Circle Cover(2D)",
+            "full_title": "501. Maximum Circle Cover(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 502,
+            "name": "Maximum Inscribed Circle in a Convex(2D)",
+            "full_title": "502. Maximum Inscribed Circle in a Convex(2D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 503,
+            "name": "Triangle Circle and Polygon Circle Intersection(2D)",
+            "full_title": "503. Triangle Circle and Polygon Circle Intersection(2D)",
+            "problem_count": 10,
+            "masterpiece_count": 3,
+            "core_count": 7
+          }
+        ]
+      },
+      {
+        "name": "Geometry 3D",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 504,
+            "name": "Points, Vectors, Dot Products, Cross Products and Mixed Products(3D)",
+            "full_title": "504. Points, Vectors, Dot Products, Cross Products and Mixed Products(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 505,
+            "name": "Planes(3D)",
+            "full_title": "505. Planes(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 506,
+            "name": "Plane Based Coordinate System(3D)",
+            "full_title": "506. Plane Based Coordinate System(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 507,
+            "name": "Lines, Segments, and Distances, Angles and Intersections Between Lines and Planes(3D)",
+            "full_title": "507. Lines, Segments, and Distances, Angles and Intersections Between Lines and Planes(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 508,
+            "name": "Triangles and Distance from Triangle to Triangle(3D)",
+            "full_title": "508. Triangles and Distance from Triangle to Triangle(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 509,
+            "name": "Spherical Geometry and Winding Number(3D)",
+            "full_title": "509. Spherical Geometry and Winding Number(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 510,
+            "name": "Minimum Enclosing Sphere(3D)",
+            "full_title": "510. Minimum Enclosing Sphere(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 511,
+            "name": "Polyhedron, Pyramid, Cone and Cylinder(3D)",
+            "full_title": "511. Polyhedron, Pyramid, Cone and Cylinder(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 512,
+            "name": "Convex Hull(3D)",
+            "full_title": "512. Convex Hull(3D)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Delaunay",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 513,
+            "name": "Delaunay Triangulation and Voronoi Diagram",
+            "full_title": "513. Delaunay Triangulation and Voronoi Diagram",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Half Plane",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 514,
+            "name": "Half Plane Intersection",
+            "full_title": "514. Half Plane Intersection",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 515,
+            "name": "Dynamic Half Plane Intersection",
+            "full_title": "515. Dynamic Half Plane Intersection",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Convex Polygon",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 516,
+            "name": "Minkowski Sum",
+            "full_title": "516. Minkowski Sum",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 517,
+            "name": "Dynamic Convex Hull",
+            "full_title": "517. Dynamic Convex Hull",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 518,
+            "name": "Onion Decomposition / Convex Layers",
+            "full_title": "518. Onion Decomposition / Convex Layers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Lattice Points",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 519,
+            "name": "Picks Theorem",
+            "full_title": "519. Picks Theorem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 520,
+            "name": "Lattice Points inside a Non-Lattice Polygon",
+            "full_title": "520. Lattice Points inside a Non-Lattice Polygon",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Sweep Line",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 521,
+            "name": "Sweep Line Algorithm and Radial Sweep",
+            "full_title": "521. Sweep Line Algorithm and Radial Sweep",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 522,
+            "name": "Closest Pair of Points",
+            "full_title": "522. Closest Pair of Points",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 523,
+            "name": "Rectangle Union",
+            "full_title": "523. Rectangle Union",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 524,
+            "name": "All Pair Segment Intersection.",
+            "full_title": "524. All Pair Segment Intersection.",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 525,
+            "name": "Vertical decomposition",
+            "full_title": "525. Vertical decomposition",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Planar Geometry",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 526,
+            "name": "Faces in Planar Graph",
+            "full_title": "526. Faces in Planar Graph",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 527,
+            "name": "Point Location",
+            "full_title": "527. Point Location",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 528,
+            "name": "Hill Climbing and Simulated Annealing",
+            "full_title": "528. Hill Climbing and Simulated Annealing",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 529,
+            "name": "[Trick] Linear Combination of Vectors",
+            "full_title": "529. [Trick] Linear Combination of Vectors",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 530,
+            "name": "Reflections on a Rectangle",
+            "full_title": "530. Reflections on a Rectangle",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 531,
+            "name": "[Problem] Maximum Area of a Triangle from Given Lengths",
+            "full_title": "531. [Problem] Maximum Area of a Triangle from Given Lengths",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 532,
+            "name": "[Problem] Maximum Area of a Polygon using Given Lengths in CCW Order",
+            "full_title": "532. [Problem] Maximum Area of a Polygon using Given Lengths in CCW Order",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 533,
+            "name": "[Problem] Circle/Polygon Inclusion Tree",
+            "full_title": "533. [Problem] Circle/Polygon Inclusion Tree",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "total_problems": 240,
+    "total_masterpieces": 123,
+    "subtopics": [
+      {
+        "name": "Greedy Algorithms",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 534,
+            "name": "Activity Selection Problem",
+            "full_title": "534. Activity Selection Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 535,
+            "name": "Fractional Knapsack Problem",
+            "full_title": "535. Fractional Knapsack Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 536,
+            "name": "Huffman Coding",
+            "full_title": "536. Huffman Coding",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 537,
+            "name": "Exchange Arguments",
+            "full_title": "537. Exchange Arguments",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Search Techniques",
+        "total_problems": 36,
+        "total_masterpieces": 12,
+        "subsubtopics": [
+          {
+            "id": 538,
+            "name": "Ternary Search",
+            "full_title": "538. Ternary Search",
+            "problem_count": 36,
+            "masterpiece_count": 12,
+            "core_count": 24
+          },
+          {
+            "id": 539,
+            "name": "Parallel Binary Search",
+            "full_title": "539. Parallel Binary Search",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 540,
+            "name": "Fraction Binary Search",
+            "full_title": "540. Fraction Binary Search",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 541,
+            "name": "Fracturing Search",
+            "full_title": "541. Fracturing Search",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Interactive Problems",
+        "total_problems": 189,
+        "total_masterpieces": 103,
+        "subsubtopics": [
+          {
+            "id": 542,
+            "name": "Interactive Problems",
+            "full_title": "542. Interactive Problems",
+            "problem_count": 189,
+            "masterpiece_count": 103,
+            "core_count": 86
+          },
+          {
+            "id": 543,
+            "name": "Interactive Problems on Centroids",
+            "full_title": "543. Interactive Problems on Centroids",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Communication / Run-Twice Problems",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 544,
+            "name": "Communication / Run-Twice Problems",
+            "full_title": "544. Communication / Run-Twice Problems",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Permutations",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 545,
+            "name": "Permutations and Permutation Cycles",
+            "full_title": "545. Permutations and Permutation Cycles",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 546,
+            "name": "[Problem] K-th Root of a Permutation",
+            "full_title": "546. [Problem] K-th Root of a Permutation",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 547,
+            "name": "Schreier\u2013Sims Algorithm",
+            "full_title": "547. Schreier\u2013Sims Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Matroids",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 548,
+            "name": "Matroid Intersection",
+            "full_title": "548. Matroid Intersection",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Chess",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 549,
+            "name": "[Problem] Knight Moves in Infinity Grid",
+            "full_title": "549. [Problem] Knight Moves in Infinity Grid",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 550,
+            "name": "[Problem] Knight's Tour Problem",
+            "full_title": "550. [Problem] Knight's Tour Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 551,
+            "name": "[Problem] Bishop Placement",
+            "full_title": "551. [Problem] Bishop Placement",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Techniques",
+        "total_problems": 15,
+        "total_masterpieces": 8,
+        "subsubtopics": [
+          {
+            "id": 552,
+            "name": "Coordinate Compression",
+            "full_title": "552. Coordinate Compression",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 553,
+            "name": "Direction Array",
+            "full_title": "553. Direction Array",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 554,
+            "name": "Meet in the Middle",
+            "full_title": "554. Meet in the Middle",
+            "problem_count": 15,
+            "masterpiece_count": 8,
+            "core_count": 7
+          },
+          {
+            "id": 555,
+            "name": "Invariants and Monovariants",
+            "full_title": "555. Invariants and Monovariants",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 556,
+            "name": "Manhattan <> Chebyshev",
+            "full_title": "556. Manhattan <> Chebyshev",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 557,
+            "name": "LCM OR Technique",
+            "full_title": "557. LCM OR Technique",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 558,
+            "name": "[Trick] Logarithmic Subarray Aggregator (LSA Trick)",
+            "full_title": "558. [Trick] Logarithmic Subarray Aggregator (LSA Trick)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 559,
+            "name": "Bitwise Disjoint Partitioning",
+            "full_title": "559. Bitwise Disjoint Partitioning",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 560,
+            "name": "[Trick] Efficient Non-Increasing Sequence Recovery of Length n with a[i] <= n/i",
+            "full_title": "560. [Trick] Efficient Non-Increasing Sequence Recovery of Length n with a[i] <= n/i",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Min Plus Convolution",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 561,
+            "name": "Min Plus Convolution (Convex and Convex)",
+            "full_title": "561. Min Plus Convolution (Convex and Convex)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 562,
+            "name": "SMAWK Algorithm and Min Plus Convolution (Convex and Arbitrary)",
+            "full_title": "562. SMAWK Algorithm and Min Plus Convolution (Convex and Arbitrary)",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Randomized",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 563,
+            "name": "Randomized Algorithms",
+            "full_title": "563. Randomized Algorithms",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 564,
+            "name": "Birthday Paradox",
+            "full_title": "564. Birthday Paradox",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Bigint",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 565,
+            "name": "Big Integers",
+            "full_title": "565. Big Integers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 566,
+            "name": "Trygub Numbers",
+            "full_title": "566. Trygub Numbers",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      },
+      {
+        "name": "Miscellaneous",
+        "total_problems": 0,
+        "total_masterpieces": 0,
+        "subsubtopics": [
+          {
+            "id": 567,
+            "name": "Inversions",
+            "full_title": "567. Inversions",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 568,
+            "name": "Josephus Problem",
+            "full_title": "568. Josephus Problem",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 569,
+            "name": "Gray Code",
+            "full_title": "569. Gray Code",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 570,
+            "name": "Backtracking",
+            "full_title": "570. Backtracking",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 571,
+            "name": "[Problem] MEX of all Subarrays",
+            "full_title": "571. [Problem] MEX of all Subarrays",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 572,
+            "name": "Lindstrom Gessel Viennot(LGV) Lemma",
+            "full_title": "572. Lindstrom Gessel Viennot(LGV) Lemma",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 573,
+            "name": "Dynamic Bitsets",
+            "full_title": "573. Dynamic Bitsets",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 574,
+            "name": "Pragmas",
+            "full_title": "574. Pragmas",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 575,
+            "name": "Boyer\u2013Moore Majority Voting Algorithm and Misra\u2013Gries Algorithm",
+            "full_title": "575. Boyer\u2013Moore Majority Voting Algorithm and Misra\u2013Gries Algorithm",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          },
+          {
+            "id": 576,
+            "name": "Heavy Implementation Problems",
+            "full_title": "576. Heavy Implementation Problems",
+            "problem_count": 0,
+            "masterpiece_count": 0,
+            "core_count": 0
+          }
+        ]
+      }
+    ]
+  }
+]

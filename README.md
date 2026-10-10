@@ -27,23 +27,54 @@ Comprehensive dataset importer and statement scraper for Codeforces problems, de
 
 ---
 
+## 🌐 Live Web Application on GitHub Pages
+
+The application is fully configured for static hosting on **GitHub Pages**:
+🔗 **Live URL**: [https://mostafa-cse.github.io/cf-categorizer/](https://mostafa-cse.github.io/cf-categorizer/)
+
+### How to Enable GitHub Pages in your Repository:
+1. Go to your GitHub repository: `https://github.com/mostafa-cse/cf-categorizer`
+2. Click **Settings** ⚙️ $\rightarrow$ **Pages** (in the left sidebar).
+3. Under **Build and deployment**:
+   - **Source**: Select `Deploy from a branch`
+   - **Branch**: Select `main`
+   - **Folder**: Select `/ (root)`
+4. Click **Save**.
+5. Within 1–2 minutes, your website is live at `https://mostafa-cse.github.io/cf-categorizer/`!
+
+*(Alternatively, you can select **Source: GitHub Actions**, which utilizes the pre-configured `.github/workflows/deploy-pages.yml` workflow).*
+
+---
+
 ## Directory Structure
 
 ```
 CF categorizer/
-├── data/
-│   ├── cf_problems.db             # Primary SQLite database (28.7 MB)
-│   ├── problemset_1400_3000.json  # Master JSON for rated problemset (18.9 MB)
-│   ├── gym_problems.json          # Master JSON for Gym problems (12.8 MB)
-│   └── problems/                  # 28,371 individual JSON files (<id>.json)
-├── src/
-│   ├── db.py                      # SQLite models, upsert, stats, and JSON export
-│   ├── cf_api.py                  # Codeforces API client
-│   ├── parser.py                  # Statement HTML/PDF and editorial parser
-│   ├── importer_problemset.py     # Stage 1: Problemset metadata & statement scraper
-│   ├── importer_gym.py            # Stage 2: Gym contests & problems importer
-│   └── exporter.py                # Statistics reporting and data export
-├── main.py                        # Unified CLI interface
+├── index.html                     # Main entrypoint for GitHub Pages (at repository root)
+├── .nojekyll                      # Disables Jekyll processing on GitHub Pages
+├── .github/
+│   └── workflows/
+│       └── deploy-pages.yml       # GitHub Actions automated Pages deployment workflow
+├── static/                        # Frontend UI assets
+│   ├── style.css                  # Modern dark theme styles
+│   └── app.js                     # Dual-mode engine (GitHub Pages static + local API)
+├── data/                          # Curriculum data and exports
+│   ├── stats.json                 # Precomputed curriculum statistics
+│   ├── taxonomy.json              # Complete 576-technique tree with problem counts
+│   ├── problems_catalog.json      # Compact in-memory catalog for instant filtering
+│   ├── cf_problems.db             # Primary SQLite database (Git LFS)
+│   ├── problems/                  # 28,371 individual JSON files (<id>.json)
+│   └── editorials/                # 28,338 markdown topic editorials (<id>.md)
+├── web/                           # Synchronized web root (for backward compatibility)
+├── src/                           # Python backend & pipelines
+│   ├── server.py                  # FastAPI server supporting static & API routes
+│   ├── export_static_data.py      # Static JSON exporter for GitHub Pages
+│   ├── gym_curriculum_pipeline.py # 21,270 Gym problems pipeline
+│   ├── taxonomy.py                # 576-technique curriculum definitions
+│   └── db.py                      # Database models and helpers
+├── tests/
+│   └── test_all_features.py       # 24-step automated verification suite
+├── run_web.py                     # Local web application launcher
 ├── requirements.txt
 └── README.md
 ```
