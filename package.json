@@ -1,0 +1,23 @@
+{
+  "name": "cf-categorizer",
+  "version": "1.0.0",
+  "description": "576-Technique Competitive Programming Curriculum & Problem Explorer for Codeforces and Gym",
+  "main": "index.html",
+  "scripts": {
+    "start": "python run_web.py",
+    "test": "node tests/test_vercel_api.js"
+  },
+  "keywords": [
+    "codeforces",
+    "competitive-programming",
+    "algorithms",
+    "data-structures",
+    "curriculum",
+    "editorials"
+  ],
+  "author": "Mostafa Kamal",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.13.1"
+  }
+}

@@ -27,22 +27,46 @@ Comprehensive dataset importer and statement scraper for Codeforces problems, de
 
 ---
 
-## 🌐 Live Web Application on GitHub Pages
+## 🚀 Vercel Deployment & Dynamic Database Setup
 
-The application is fully configured for static hosting on **GitHub Pages**:
+The project is fully configured for deployment on **Vercel** with **Google Sign-In** and **Serverless PostgreSQL Database** sync.
+
+### Quick Deployment to Vercel:
+1. Push your repository to GitHub: `https://github.com/mostafa-cse/cf-categorizer`
+2. Go to [Vercel Dashboard](https://vercel.com/new) and click **"Add New..."** $\rightarrow$ **"Project"**.
+3. Import your `cf-categorizer` repository.
+4. Framework Preset: **Other** (Root directory: `./`).
+5. (Optional) Set Environment Variables:
+   - `DATABASE_URL`: Your PostgreSQL connection string (Vercel Postgres, Supabase, Neon).
+   - `GOOGLE_CLIENT_ID`: Your Google OAuth 2.0 Web Client ID.
+6. Click **Deploy**!
+
+### Database Integration (PostgreSQL):
+- When `DATABASE_URL` is configured, the serverless API automatically creates the following tables:
+  - `users`: Stores user profile info (Google ID, email, name, avatar).
+  - `user_progress`: Persists solved problems and bookmarks per user.
+  - `user_notes`: Persists private algorithmic notes per problem per user.
+- If `DATABASE_URL` is omitted, the application runs in high-performance **Local-First Storage mode** using browser `localStorage` without any errors!
+
+### Google Authentication Setup:
+1. Go to [Google Cloud Console Credentials](https://console.cloud.google.com/apis/credentials).
+2. Create an **OAuth 2.0 Client ID** (Application type: *Web application*).
+3. Under **Authorized JavaScript origins**, add your Vercel domain (e.g., `https://your-app.vercel.app` and `http://localhost:3000`).
+4. Copy the Client ID into your Vercel Environment Variables as `GOOGLE_CLIENT_ID`.
+
+---
+
+## 🌐 Alternative: Live Static on GitHub Pages
+
+The application also supports static hosting on **GitHub Pages**:
 🔗 **Live URL**: [https://mostafa-cse.github.io/cf-categorizer/](https://mostafa-cse.github.io/cf-categorizer/)
 
-### How to Enable GitHub Pages in your Repository:
-1. Go to your GitHub repository: `https://github.com/mostafa-cse/cf-categorizer`
-2. Click **Settings** ⚙️ $\rightarrow$ **Pages** (in the left sidebar).
-3. Under **Build and deployment**:
+### How to Enable GitHub Pages:
+1. Go to **Settings** ⚙️ $\rightarrow$ **Pages**.
+2. Under **Build and deployment**:
    - **Source**: Select `Deploy from a branch`
-   - **Branch**: Select `main`
-   - **Folder**: Select `/ (root)`
-4. Click **Save**.
-5. Within 1–2 minutes, your website is live at `https://mostafa-cse.github.io/cf-categorizer/`!
-
-*(Alternatively, you can select **Source: GitHub Actions**, which utilizes the pre-configured `.github/workflows/deploy-pages.yml` workflow).*
+   - **Branch**: Select `main` | **Folder**: `/ (root)`
+3. Click **Save**.
 
 ---
 

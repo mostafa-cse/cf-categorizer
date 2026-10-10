@@ -17,3 +17,10 @@ logs/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Node.js & Vercel
+node_modules/
+.vercel/
+.env
+.env.local
+.env.*.local

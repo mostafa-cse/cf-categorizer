@@ -829,6 +829,9 @@ async function toggleSolved(problemId) {
     state.activeProblem.is_solved = !isCurrentlySolved;
     updateModalActionButtons();
   }
+  if (typeof syncProgressToVercel === 'function') {
+    syncProgressToVercel(problemId, 'toggle_solved');
+  }
   try {
     fetch(`/api/user/toggle_solved/${problemId}`, { method: 'POST' }).catch(() => {});
   } catch (err) {}
@@ -848,6 +851,9 @@ async function toggleBookmark(problemId) {
     state.activeProblem.is_bookmarked = !isCurrentlyBookmarked;
     updateModalActionButtons();
   }
+  if (typeof syncProgressToVercel === 'function') {
+    syncProgressToVercel(problemId, 'toggle_bookmark');
+  }
   try {
     fetch(`/api/user/toggle_bookmark/${problemId}`, { method: 'POST' }).catch(() => {});
   } catch (err) {}
@@ -860,6 +866,9 @@ async function saveNotes(problemId) {
   state.userProgress.notes[problemId] = notes;
   persistUserProgress();
   showToast('Notes saved successfully!');
+  if (typeof syncNoteToVercel === 'function') {
+    syncNoteToVercel(problemId, notes);
+  }
   try {
     fetch(`/api/user/save_note/${problemId}`, {
       method: 'POST',

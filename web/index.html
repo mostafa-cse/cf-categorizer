@@ -48,6 +48,9 @@
   <!-- Marked.js for rendering markdown editorials -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+  <!-- Google Identity Services (Google Sign-In) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./static/style.css">
 </head>
@@ -108,11 +111,117 @@
         <span>🎲</span>
         <span class="hidden sm:inline">Random</span>
       </button>
+
+      <!-- User Auth / Profile Dropdown -->
+      <div id="header-auth-container" class="relative">
+        <!-- Injected via auth.js -->
+      </div>
     </div>
   </header>
 
+  <!-- Landing Page Hero View with Google Sign-In -->
+  <section id="landing-hero-view" class="relative overflow-hidden py-10 md:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full flex flex-col items-center justify-center animate-fade-in">
+    <!-- Glowing background lights -->
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Curriculum Pill -->
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-medium text-slate-300 mb-6 shadow-lg shadow-sky-500/5">
+      <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="text-sky-300 font-bold">576 Canonical Techniques</span>
+      <span class="text-slate-500">•</span>
+      <span>28,338 Rated & Gym Problems</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-purple-300 font-semibold">13,520 Masterpieces</span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-center tracking-tight text-white max-w-4xl leading-tight">
+      Master Competitive Programming <br class="hidden sm:inline">
+      <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+        By Technique, Not By Chance
+      </span>
+    </h1>
+    <p class="mt-4 text-sm sm:text-base text-slate-400 text-center max-w-2xl leading-relaxed">
+      A structured 576-technique curriculum across 28,338 Codeforces & Gym problems. Every single problem features its core mathematical invariant, full editorial walkthrough, verified C++ reference code, and personal tracking synced to a cloud database.
+    </p>
+
+    <!-- Google Authentication & Getting Started Card -->
+    <div class="mt-8 w-full max-w-md p-6 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-2xl backdrop-blur-xl relative z-10 text-center">
+      <div class="text-xs uppercase font-bold text-slate-400 tracking-wider mb-4">
+        Sign in to Sync Solved Problems & Notes
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-3 w-full">
+        <!-- Official Google Sign-In button container -->
+        <div id="g_id_signin_button" class="w-full flex justify-center min-h-[42px]"></div>
+
+        <!-- Continue with Google Trigger Button -->
+        <button id="custom-google-signin-btn" onclick="triggerGoogleSignIn()" class="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-900 font-semibold text-xs flex items-center justify-center gap-3 transition-all shadow-md hover:shadow-lg">
+          <svg class="w-4 h-4" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <div class="flex items-center gap-2 w-full my-1">
+          <div class="h-px bg-slate-800 flex-1"></div>
+          <span class="text-[11px] text-slate-500 font-medium">OR</span>
+          <div class="h-px bg-slate-800 flex-1"></div>
+        </div>
+
+        <!-- Continue as Guest Button -->
+        <button onclick="continueAsGuest()" class="w-full py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-slate-200 text-xs font-semibold flex items-center justify-center gap-2 transition-all border border-slate-700">
+          <span>⚡</span> Continue as Guest (Offline Mode)
+        </button>
+      </div>
+
+      <p class="text-[11px] text-slate-500 mt-4 leading-normal">
+        🔒 Connected with Vercel Serverless & PostgreSQL cloud database.
+      </p>
+    </div>
+
+    <!-- 4 Pillars Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 w-full">
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-2xl mb-2">🌲</div>
+          <h3 class="text-sm font-bold text-white mb-1">576 Canonical Techniques</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Hierarchical map from Basic Loops and Bitmasks up to Centroid Decomposition and FFT across 11 main domains.</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-2xl mb-2">💡</div>
+          <h3 class="text-sm font-bold text-white mb-1">Mathematical Invariants</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Every editorial explains the "Aha!" invariant and state transition logic with rendered MathJax LaTeX math.</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-2xl mb-2">⚡</div>
+          <h3 class="text-sm font-bold text-white mb-1">Reference C++ Solutions</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Fast I/O, clean templates, copy code, and one-click .cpp file download for all 28,338 problems.</p>
+        </div>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col justify-between">
+        <div>
+          <div class="text-2xl mb-2">☁️</div>
+          <h3 class="text-sm font-bold text-white mb-1">Cloud Database Sync</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Track your solved list, bookmarked masterpieces, and private notes synced across all your devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Main Layout Container -->
-  <div class="flex-1 flex flex-col md:flex-row overflow-hidden max-w-[1920px] w-full mx-auto">
+  <div id="app-main-layout" class="flex-1 flex flex-col md:flex-row overflow-hidden max-w-[1920px] w-full mx-auto hidden">
 
     <!-- Left Sidebar: Taxonomy Explorer (11 Topics -> 68 Subtopics -> 576 Subsubtopics) -->
     <aside class="w-full md:w-80 lg:w-96 border-r border-slate-800/80 bg-slate-950/50 flex flex-col shrink-0 h-[calc(100vh-4rem)] sticky top-16">
@@ -277,7 +386,8 @@
     </div>
   </div>
 
-  <!-- Custom App JS -->
+  <!-- Custom App & Auth JS -->
+  <script src="./static/auth.js"></script>
   <script src="./static/app.js"></script>
 </body>
 </html>
