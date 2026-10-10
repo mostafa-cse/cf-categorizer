@@ -143,6 +143,11 @@ async function loadStats() {
 }
 
 function renderTopStats(stats) {
+  const totalBadge = document.getElementById('header-total-problems-count');
+  if (totalBadge && stats.curriculum_quality_count) {
+    totalBadge.textContent = `${stats.curriculum_quality_count.toLocaleString()} Problems`;
+  }
+
   const container = document.getElementById('top-stats-container');
   if (!container) return;
 
@@ -213,7 +218,7 @@ function renderTaxonomyTree() {
     <div class="mb-2">
       <button onclick="selectAllTopics()" class="w-full text-left px-3 py-2 rounded-xl text-xs font-semibold flex items-center justify-between transition-colors ${!state.activeMainTopic ? 'bg-sky-500/15 text-sky-300 border border-sky-500/30 font-bold' : 'text-slate-300 hover:bg-slate-900/60 border border-transparent'}">
         <span class="flex items-center gap-2"><span>📚</span> All Topics</span>
-        <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono border border-slate-700/60">7,068</span>
+        <span class="text-[11px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-mono border border-slate-700/60">${state.stats?.curriculum_quality_count?.toLocaleString() || '28,338'}</span>
       </button>
     </div>
   `;

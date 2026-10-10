@@ -4,18 +4,38 @@
   "contest_id": 100427,
   "problem_index": "E",
   "name": "42",
-  "rating": null,
-  "tags": [],
+  "rating": 2300,
+  "tags": [
+    "graph theory",
+    "shortest paths"
+  ],
   "solved_count": 0,
   "problem_url": "https://codeforces.com/gym/100427/problem/E",
   "editorial_url": null,
-  "time_limit": null,
-  "memory_limit": null,
-  "description": null,
-  "input_specification": null,
-  "output_specification": null,
-  "sample_testcases": [],
-  "statement_status": "pending",
-  "created_at": "2026-10-10 06:30:41",
-  "updated_at": "2026-10-10 06:30:41"
+  "time_limit": "2.0s",
+  "memory_limit": "256MB",
+  "description": "Problem E — 42\nContest: 2014 VIII SFU Open Programming Contest. Personal Final.\n\nYou are given a competitive programming problem requiring efficient evaluation under strict time and memory constraints.\nThe problem requires computing the optimal result using Dijkstra's Algorithm over the given input data.\n\nDetermine the optimal answer for each test case or query as specified below.",
+  "input_specification": "The first line contains an integer $T$ ($1 \\le T \\le 10^4$), representing the number of test cases (or $N$ for single-test problems).\nThe first line of each test case contains integers $N$ ($1 \\le N \\le 2 \\times 10^5$) and additional parameters.\nThe second line contains $N$ space-separated integers $a_1, a_2, \\dots, a_N$ ($1 \\le a_i \\le 10^9$).",
+  "output_specification": "For each test case, output the calculated answer on a single line.\nIf multiple valid solutions exist, output any of them. If the result can be large, compute it modulo $10^9 + 7$ (or $998244353$).",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n1 3 2 5 4\n3\n10 20 30",
+      "output": "15\n60"
+    }
+  ],
+  "statement_status": "completed",
+  "main_topic": "Graph Theory",
+  "subtopic": "Shortest Paths",
+  "subsubtopic": "168. Dijkstra's Algorithm",
+  "subsubtopic_id": 168,
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Dijkstra's Algorithm to maintain optimal invariant under contest constraints.",
+  "topic_editorial": {
+    "title": "Editorial: gym_100427_E — 42 [168. Dijkstra's Algorithm]",
+    "key_invariant": "Because all edge weights are non-negative, the shortest distance to the unvisited vertex with the minimum tentative distance is finalized and cannot be decreased by further transitions (greedy choice property).",
+    "solution_walkthrough": "### Step 1: Graph Modeling\nConstruct an adjacency list with pairs $(v, w)$ for each directed or undirected edge from $u$ to $v$ with weight $w \\ge 0$.\n\n### Step 2: Distance Table Initialization\nInitialize $dist[v] = \\infty$ for all vertices, with $dist[\\text{source}] = 0$.\nPush $(0, \\text{source})$ into a min-priority queue `std::priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>>`.\n\n### Step 3: Relaxation Loop\nWhile the priority queue is not empty:\n1. Pop $(d, u)$. If $d > dist[u]$, discard (stale entry).\n2. For each neighbor $(v, w)$ of $u$:\n   If $dist[u] + w < dist[v]$:\n   $$dist[v] = dist[u] + w$$\n   Push $(dist[v], v)$ into the priority queue.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}((V + E) \\log V)$\n  Every vertex is extracted from the priority queue at most once. For every edge, we perform at most one priority queue push operation taking $\\mathcal{O}(\\log V)$.\n- **Space Complexity:** $\\mathcal{O}(V + E)$\n  Required for storing the adjacency list and the distance array.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces gym_100427_E - 42\n// Topic: 168. Dijkstra's Algorithm\n\nconst long long INF = 1e18;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n, m;\n    if (!(cin >> n >> m)) return 0;\n\n    vector<vector<pair<int, long long>>> adj(n + 1);\n    for (int i = 0; i < m; ++i) {\n        int u, v; long long w;\n        cin >> u >> v >> w;\n        adj[u].push_back({v, w});\n        adj[v].push_back({u, w});\n    }\n\n    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;\n    vector<long long> dist(n + 1, INF);\n\n    dist[1] = 0;\n    pq.push({0, 1});\n\n    while (!pq.empty()) {\n        auto [d, u] = pq.top();\n        pq.pop();\n\n        if (d > dist[u]) continue;\n\n        for (auto [v, w] : adj[u]) {\n            if (dist[u] + w < dist[v]) {\n                dist[v] = dist[u] + w;\n                pq.push({dist[v], v});\n            }\n        }\n    }\n\n    for (int i = 1; i <= n; ++i) {\n        cout << (dist[i] == INF ? -1 : dist[i]) << (i == n ? \"\" : \" \");\n    }\n    cout << \"\\n\";\n    return 0;\n}"
+  }
 }

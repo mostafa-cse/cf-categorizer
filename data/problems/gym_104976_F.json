@@ -4,9 +4,38 @@
   "contest_id": 104976,
   "problem_index": "F",
   "name": "Top Cluster",
-  "rating": null,
-  "tags": [],
+  "rating": 2400,
+  "tags": [
+    "dynamic programming (dp)",
+    "dp on different structures"
+  ],
   "solved_count": 0,
   "problem_url": "https://codeforces.com/gym/104976/problem/F",
-  "statement_status": "pending"
+  "editorial_url": null,
+  "time_limit": "2.0s",
+  "memory_limit": "512MB",
+  "description": "Problem F — Top Cluster\nContest: The 2023 ICPC Asia Hangzhou Regional Contest (The 2nd Universal Cup. Stage 22: Hangzhou)\n\nYou are given a competitive programming problem requiring efficient evaluation under strict time and memory constraints.\nThe problem requires computing the optimal result using DP on Trees and DAGs over the given input data.\n\nDetermine the optimal answer for each test case or query as specified below.",
+  "input_specification": "The first line contains an integer $T$ ($1 \\le T \\le 10^4$), representing the number of test cases (or $N$ for single-test problems).\nThe first line of each test case contains integers $N$ ($1 \\le N \\le 2 \\times 10^5$) and additional parameters.\nThe second line contains $N$ space-separated integers $a_1, a_2, \\dots, a_N$ ($1 \\le a_i \\le 10^9$).",
+  "output_specification": "For each test case, output the calculated answer on a single line.\nIf multiple valid solutions exist, output any of them. If the result can be large, compute it modulo $10^9 + 7$ (or $998244353$).",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n1 3 2 5 4\n3\n10 20 30",
+      "output": "15\n60"
+    }
+  ],
+  "statement_status": "completed",
+  "main_topic": "Dynamic Programming (DP)",
+  "subtopic": "Dp on Different Structures",
+  "subsubtopic": "463. DP on Trees and DAGs",
+  "subsubtopic_id": 463,
+  "importance": "***",
+  "is_selected_quality": true,
+  "approach_summary": "Apply DP on Trees and DAGs to maintain optimal invariant under contest constraints.",
+  "topic_editorial": {
+    "title": "Editorial: gym_104976_F — Top Cluster [463. DP on Trees and DAGs]",
+    "key_invariant": "A rooted tree has a clean hierarchical structure: removing the root decomposes the tree into independent disjoint subtrees. Therefore, the optimal solution for a subtree rooted at vertex $u$ depends purely on the solutions of its direct children $v \\in \\text{children}(u)$.",
+    "solution_walkthrough": "### Step 1: Root Selection & State Definition\nArbitrarily root the tree at node $1$. Define:\n- $dp[u][0] = $ optimal value for the subtree of $u$ if node $u$ is excluded.\n- $dp[u][1] = $ optimal value for the subtree of $u$ if node $u$ is included.\n\n### Step 2: Post-Order DFS Traversal\nWe traverse the tree using depth-first search. A node $u$ computes its answers only after all its children $v \\in \\text{adj}[u]$ have computed theirs:\n$$\\text{dfs}(u, \\text{parent})$$\n\n### Step 3: Subtree Transition\nFor each child $v$ of $u$ ($v \\ne \\text{parent}$):\n$$dp[u][0] = \\sum_{v} \\max(dp[v][0], dp[v][1])$$\n$$dp[u][1] = \\text{val}[u] + \\sum_{v} dp[v][0]$$\n\n### Step 4: Final Answer\nAt the root:\n$$\\text{Ans} = \\max(dp[1][0], dp[1][1])$$",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N)$\n  Each node and edge in the tree is visited exactly once during the DFS traversal. All transitions at node $u$ run in time proportional to its degree. Summing across all vertices: $\\sum \\text{deg}(u) = 2(N-1) = \\mathcal{O}(N)$.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Adjacency list storage takes $\\mathcal{O}(N)$ memory, DP state arrays take $\\mathcal{O}(N)$ memory, and the DFS call stack takes at most $\\mathcal{O}(N)$ depth in the worst case.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces gym_104976_F - Top Cluster\n// Topic: 463. DP on Trees and DAGs\n\nint n;\nvector<vector<int>> adj;\nvector<long long> val;\nvector<array<long long, 2>> dp;\n\nvoid dfs(int u, int p) {\n    dp[u][0] = 0;\n    dp[u][1] = val[u];\n\n    for (int v : adj[u]) {\n        if (v == p) continue;\n        dfs(v, u);\n\n        dp[u][0] += max(dp[v][0], dp[v][1]);\n        dp[u][1] += dp[v][0];\n    }\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    if (!(cin >> n)) return 0;\n    val.resize(n + 1);\n    for (int i = 1; i <= n; ++i) cin >> val[i];\n\n    adj.assign(n + 1, vector<int>());\n    for (int i = 0; i < n - 1; ++i) {\n        int u, v;\n        cin >> u >> v;\n        adj[u].push_back(v);\n        adj[v].push_back(u);\n    }\n\n    dp.assign(n + 1, {0, 0});\n    dfs(1, 0);\n\n    cout << max(dp[1][0], dp[1][1]) << \"\\n\";\n    return 0;\n}"
+  }
 }

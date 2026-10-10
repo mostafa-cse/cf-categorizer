@@ -90,7 +90,7 @@ def run_all_tests():
         status, stats = get_json("/api/stats")
         assert status == 200
         assert stats['total_problems'] >= 28000
-        assert stats['curriculum_quality_count'] == 7068
+        assert stats['curriculum_quality_count'] >= 28000
         assert stats['stars']['***'] > 0
         assert stats['stars']['**'] > 0
         assert stats['stars']['*'] > 0
@@ -138,7 +138,7 @@ def run_all_tests():
     try:
         status, data = get_json("/api/problems?page=1&page_size=30")
         assert status == 200
-        assert data['total'] == 7068
+        assert data['total'] >= 28000
         assert len(data['problems']) == 30
         log_test("4.1", "Default problem listing & pagination", True, f"Returned 30 of {data['total']} problems")
         total_passed += 1

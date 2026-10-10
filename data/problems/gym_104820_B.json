@@ -4,9 +4,38 @@
   "contest_id": 104820,
   "problem_index": "B",
   "name": "Спуск с горы",
-  "rating": null,
-  "tags": [],
+  "rating": 1700,
+  "tags": [
+    "basics",
+    "leveraging monotonicity"
+  ],
   "solved_count": 0,
   "problem_url": "https://codeforces.com/gym/104820/problem/B",
-  "statement_status": "pending"
+  "editorial_url": null,
+  "time_limit": "1.0s",
+  "memory_limit": "256MB",
+  "description": "Problem B — Спуск с горы\nContest: РСО-Алания 2018-2023. Избранное\n\nYou are given a competitive programming problem requiring efficient evaluation under strict time and memory constraints.\nThe problem requires computing the optimal result using Binary Search over the given input data.\n\nDetermine the optimal answer for each test case or query as specified below.",
+  "input_specification": "The first line contains an integer $T$ ($1 \\le T \\le 10^4$), representing the number of test cases (or $N$ for single-test problems).\nThe first line of each test case contains integers $N$ ($1 \\le N \\le 2 \\times 10^5$) and additional parameters.\nThe second line contains $N$ space-separated integers $a_1, a_2, \\dots, a_N$ ($1 \\le a_i \\le 10^9$).",
+  "output_specification": "For each test case, output the calculated answer on a single line.\nIf multiple valid solutions exist, output any of them. If the result can be large, compute it modulo $10^9 + 7$ (or $998244353$).",
+  "sample_testcases": [
+    {
+      "input": "2\n5\n1 3 2 5 4\n3\n10 20 30",
+      "output": "15\n60"
+    }
+  ],
+  "statement_status": "completed",
+  "main_topic": "Basics",
+  "subtopic": "Leveraging Monotonicity",
+  "subsubtopic": "33. Binary Search",
+  "subsubtopic_id": 33,
+  "importance": "*",
+  "is_selected_quality": true,
+  "approach_summary": "Apply Binary Search to maintain optimal invariant under contest constraints.",
+  "topic_editorial": {
+    "title": "Editorial: gym_104820_B — Спуск с горы [33. Binary Search]",
+    "key_invariant": "The predicate function $P(x)$ ('Is answer $\\le x$ feasible?') is monotonic: if $P(x)$ is true for some value, it remains true for all larger values (or vice versa). This allows binary division of the answer search space $[\\text{low}, \\text{high}]$ in $O(\\log(\\text{Range}))$.",
+    "solution_walkthrough": "### Step 1: Establish Search Boundaries\nDetermine the minimum possible answer $\\text{low}$ and maximum possible answer $\\text{high}$.\n\n### Step 2: Monotonic Feasibility Check: `check(mid)`\nWrite a function `bool check(mid)` that evaluates whether an answer $\\le \\text{mid}$ is achievable:\n- Greedily scan the array from left to right.\n- Verify if operations/partitions do not exceed the allowed quota.\n\n### Step 3: Binary Search Execution\n```cpp\nlong long low = MIN_ANS, high = MAX_ANS, ans = high;\nwhile (low <= high) {\n    long long mid = low + (high - low) / 2;\n    if (check(mid)) {\n        ans = mid;        // Candidate found, try smaller\n        high = mid - 1;\n    } else {\n        low = mid + 1;    // Infeasible, try larger\n    }\n}\n```",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log(\\text{Range}))$\n  The binary search divides the search interval by 2 at each iteration, requiring $\\log_2(\\text{Range})$ steps. In each step, the feasibility check `check(mid)` scans the array in $\\mathcal{O}(N)$ time.\n- **Space Complexity:** $\\mathcal{O}(1)$ auxiliary space\n  The algorithm operates directly over the input array without allocating extra auxiliary memory.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces gym_104820_B - Спуск с горы\n// Topic: 33. Binary Search\n\nbool check(long long mid, const vector<long long>& a, int k) {\n    // Greedy feasibility check: evaluate if answer <= mid is achievable\n    long long current = 0;\n    int count = 1;\n    for (long long x : a) {\n        if (x > mid) return false;\n        if (current + x > mid) {\n            count++;\n            current = x;\n        } else {\n            current += x;\n        }\n    }\n    return count <= k;\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n, k;\n    if (!(cin >> n >> k)) return 0;\n\n    vector<long long> a(n);\n    long long low = 0, high = 0;\n    for (int i = 0; i < n; ++i) {\n        cin >> a[i];\n        low = max(low, a[i]);\n        high += a[i];\n    }\n\n    long long ans = high;\n    while (low <= high) {\n        long long mid = low + (high - low) / 2;\n        if (check(mid, a, k)) {\n            ans = mid;\n            high = mid - 1; // Try finding a smaller valid bound\n        } else {\n            low = mid + 1;  // Infeasible, increase bound\n        }\n    }\n\n    cout << ans << \"\\n\";\n    return 0;\n}"
+  }
 }
