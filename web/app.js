@@ -527,8 +527,11 @@ function renderProblems() {
               <input type="checkbox" ${isSolved ? 'checked' : ''} onchange="toggleSolved('${p.id}')" class="rounded border-slate-700 text-emerald-500 focus:ring-0 bg-slate-800 cursor-pointer">
               <span>Solved</span>
             </label>
-            <button onclick="openProblemModal('${p.id}')" class="px-2.5 py-1 rounded bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 transition-colors font-medium text-[11px]">
+            <button onclick="openProblemModal('${p.id}', 'statement')" class="px-2.5 py-1 rounded bg-sky-500/15 text-sky-400 hover:bg-sky-500/25 border border-sky-500/30 transition-colors font-medium text-[11px]">
               View Details
+            </button>
+            <button onclick="openProblemModal('${p.id}', 'editorial')" class="px-2.5 py-1 rounded bg-purple-500/15 text-purple-300 hover:bg-purple-500/25 border border-purple-500/30 transition-colors font-medium text-[11px] flex items-center gap-1">
+              <span>📖</span> Editorial
             </button>
           </div>
         </div>
@@ -698,7 +701,7 @@ async function saveNotes(problemId) {
 }
 
 // Problem Modal View
-async function openProblemModal(problemId) {
+async function openProblemModal(problemId, defaultTab = 'statement') {
   const modal = document.getElementById('problem-modal');
   const modalContent = document.getElementById('problem-modal-content');
   if (!modal || !modalContent) return;
@@ -707,7 +710,7 @@ async function openProblemModal(problemId) {
   modalContent.innerHTML = `
     <div class="py-24 flex flex-col items-center justify-center text-slate-400">
       <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-sky-500 mb-4"></div>
-      <p>Loading full problem statement & trick details...</p>
+      <p>Loading problem statement, topic editorial & C++ solution...</p>
     </div>
   `;
 
@@ -754,6 +757,35 @@ async function openProblemModal(problemId) {
       `;
     }
 
+    // Render Editorial content using marked if available
+    let editorialBodyHtml = '';
+    if (p.editorial_full_markdown && window.marked) {
+      editorialBodyHtml = window.marked.parse(p.editorial_full_markdown);
+    } else {
+      editorialBodyHtml = `
+        <div class="space-y-6">
+          <div class="p-4 rounded-xl bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/30">
+            <h3 class="text-amber-400 font-bold text-sm mb-1.5 flex items-center gap-1.5">
+              <span>💡</span> The Core Invariant ("Aha!" Moment)
+            </h3>
+            <p class="text-sm leading-relaxed text-slate-200">${escapeHtml(p.editorial_key_invariant || p.approach_summary || '')}</p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-2">Step-by-Step Walkthrough</h3>
+            <div class="text-sm text-slate-200 leading-relaxed whitespace-pre-wrap">${escapeHtml(p.editorial_solution_walkthrough || '')}</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800">
+            <h3 class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-1">Complexity Analysis</h3>
+            <div class="text-xs text-slate-300 leading-relaxed whitespace-pre-wrap">${escapeHtml(p.editorial_complexity_analysis || '')}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    const cppCode = p.editorial_cpp_code || '// C++ solution placeholder';
+
     modalContent.innerHTML = `
       <!-- Modal Top Bar -->
       <div class="p-6 border-b border-slate-800 bg-slate-900/60 sticky top-0 z-10 backdrop-blur-md flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -786,7 +818,7 @@ async function openProblemModal(problemId) {
           </a>
           ${p.editorial_url ? `
             <a href="${p.editorial_url}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-purple-600/30 text-purple-300 border border-purple-500/40 text-xs font-semibold hover:bg-purple-600/40 transition-colors">
-              Editorial ↗
+              Official CF Blog ↗
             </a>
           ` : ''}
           <button onclick="closeProblemModal()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors text-base font-bold ml-2">
@@ -795,8 +827,18 @@ async function openProblemModal(problemId) {
         </div>
       </div>
 
-      <!-- Modal Body -->
-      <div class="p-6 md:p-8 space-y-6">
+      <!-- Modal Tabs Header -->
+      <div class="flex items-center gap-2 px-6 pt-3 border-b border-slate-800 bg-slate-900/40">
+        <button id="modal-tab-btn-statement" onclick="switchModalTab('statement')" class="px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 ${defaultTab === 'statement' ? 'border-b-2 border-sky-500 text-sky-400 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
+          <span>📄</span> Problem Statement & Samples
+        </button>
+        <button id="modal-tab-btn-editorial" onclick="switchModalTab('editorial')" class="px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 ${defaultTab === 'editorial' ? 'border-b-2 border-purple-500 text-purple-300 bg-slate-800/80 font-bold' : 'border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
+          <span>💡</span> Topic Editorial & C++ Solution
+        </button>
+      </div>
+
+      <!-- Tab 1: Statement Pane -->
+      <div id="modal-tab-statement" class="${defaultTab === 'statement' ? '' : 'hidden'} p-6 md:p-8 space-y-6">
         <!-- Prominent Solution Trick & Technique Callout -->
         <div class="p-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/30 text-slate-200">
           <div class="flex items-center gap-2 text-amber-400 font-bold text-sm mb-1.5">
@@ -870,6 +912,39 @@ async function openProblemModal(problemId) {
           <textarea id="problem-notes-input" rows="3" placeholder="Write your own solution observations, tricky edge cases, or takeaways here..." class="w-full rounded-xl bg-slate-900 border border-slate-800 p-3 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition-colors font-mono">${escapeHtml(currentNotes)}</textarea>
         </div>
       </div>
+
+      <!-- Tab 2: Topic-Based Editorial & C++ Solution Pane -->
+      <div id="modal-tab-editorial" class="${defaultTab === 'editorial' ? '' : 'hidden'} p-6 md:p-8 space-y-6">
+        <!-- Technique Callout Bar -->
+        <div class="flex items-center justify-between p-3.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs">
+          <div class="flex items-center gap-2 text-purple-300 font-mono">
+            <span>🎯 Curriculum Technique:</span>
+            <span class="font-bold text-white px-2 py-0.5 rounded bg-purple-900/60 border border-purple-600/40">${p.subsubtopic}</span>
+          </div>
+          <button onclick="copyToClipboard(\`${escapeForAttr(cppCode)}\`, 'C++ Code copied!')" class="px-3 py-1 rounded-lg bg-sky-500 text-white hover:bg-sky-400 transition-colors text-xs font-semibold flex items-center gap-1.5 shadow-sm">
+            <span>📋</span> Copy C++ Code
+          </button>
+        </div>
+
+        <!-- Rendered Editorial Body -->
+        <div class="prose prose-invert max-w-none text-slate-200 text-sm leading-relaxed space-y-4">
+          ${editorialBodyHtml}
+        </div>
+
+        <!-- Standalone C++ Solution Box -->
+        <div class="mt-8 rounded-xl border border-slate-800 bg-slate-950 overflow-hidden shadow-xl">
+          <div class="flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-800">
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-300 font-mono">
+              <span class="text-emerald-400">⚡</span>
+              <span>C++ Reference Implementation — ${p.id} (${p.subsubtopic})</span>
+            </div>
+            <button onclick="copyToClipboard(\`${escapeForAttr(cppCode)}\`, 'C++ Code copied!')" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-xs font-medium transition-colors flex items-center gap-1">
+              <span>📋</span> Copy
+            </button>
+          </div>
+          <pre class="p-4 text-xs font-mono text-emerald-300 overflow-x-auto whitespace-pre leading-relaxed bg-slate-950/90 select-all"><code>${escapeHtml(cppCode)}</code></pre>
+        </div>
+      </div>
     `;
 
     // Typeset LaTeX equations with MathJax
@@ -878,7 +953,31 @@ async function openProblemModal(problemId) {
     }
   } catch (err) {
     console.error('Failed to load problem detail:', err);
-    modalContent.innerHTML = `<div class="p-12 text-center text-rose-400">Failed to load problem statement.</div>`;
+    modalContent.innerHTML = `<div class="p-12 text-center text-rose-400">Failed to load problem statement and editorial.</div>`;
+  }
+}
+
+function switchModalTab(tab) {
+  const btnStatement = document.getElementById('modal-tab-btn-statement');
+  const btnEditorial = document.getElementById('modal-tab-btn-editorial');
+  const paneStatement = document.getElementById('modal-tab-statement');
+  const paneEditorial = document.getElementById('modal-tab-editorial');
+  if (!btnStatement || !btnEditorial || !paneStatement || !paneEditorial) return;
+
+  if (tab === 'statement') {
+    btnStatement.className = 'px-4 py-2.5 text-xs font-bold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-sky-500 text-sky-400 bg-slate-800/80';
+    btnEditorial.className = 'px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40';
+    paneStatement.classList.remove('hidden');
+    paneEditorial.classList.add('hidden');
+  } else {
+    btnEditorial.className = 'px-4 py-2.5 text-xs font-bold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-purple-500 text-purple-300 bg-slate-800/80';
+    btnStatement.className = 'px-4 py-2.5 text-xs font-semibold rounded-t-lg transition-colors flex items-center gap-1.5 border-b-2 border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/40';
+    paneStatement.classList.add('hidden');
+    paneEditorial.classList.remove('hidden');
+  }
+
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    window.MathJax.typesetPromise([tab === 'statement' ? paneStatement : paneEditorial]).catch(() => {});
   }
 }
 

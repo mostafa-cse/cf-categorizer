@@ -31,8 +31,17 @@
   "updated_at": "2026-10-10 06:23:21",
   "main_topic": "Graph Theory",
   "subtopic": "Shortest Paths",
+  "subsubtopic_id": 168,
   "subsubtopic": "168. Dijkstra's Algorithm",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V)."
+  "quality_score": 75,
+  "approach_summary": "Formulate the state transition graph with non-negative weights. Execute Dijkstra's algorithm with priority queue to find shortest paths in O((V + E) log V).",
+  "topic_editorial": {
+    "title": "Editorial: 198B — Jumping on Walls [168. Dijkstra's Algorithm]",
+    "summary": "Single-source shortest path using Dijkstra's algorithm.",
+    "key_invariant": "Because all edge weights are non-negative, the shortest distance to the unvisited vertex with the minimum tentative distance is finalized and cannot be decreased by further transitions (greedy choice property).",
+    "solution_walkthrough": "### Step 1: Graph Modeling\nConstruct an adjacency list with pairs $(v, w)$ for each directed or undirected edge from $u$ to $v$ with weight $w \\ge 0$.\n\n### Step 2: Distance Table Initialization\nInitialize $dist[v] = \\infty$ for all vertices, with $dist[\\text{source}] = 0$.\nPush $(0, \\text{source})$ into a min-priority queue `std::priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>>`.\n\n### Step 3: Relaxation Loop\nWhile the priority queue is not empty:\n1. Pop $(d, u)$. If $d > dist[u]$, discard (stale entry).\n2. For each neighbor $(v, w)$ of $u$:\n   If $dist[u] + w < dist[v]$:\n   $$dist[v] = dist[u] + w$$\n   Push $(dist[v], v)$ into the priority queue.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}((V + E) \\log V)$\n  Every vertex is extracted from the priority queue at most once. For every edge, we perform at most one priority queue push operation taking $\\mathcal{O}(\\log V)$.\n- **Space Complexity:** $\\mathcal{O}(V + E)$\n  Required for storing the adjacency list and the distance array.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 198B - Jumping on Walls\n// Topic: 168. Dijkstra's Algorithm\n\nconst long long INF = 1e18;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int n, m;\n    if (!(cin >> n >> m)) return 0;\n\n    vector<vector<pair<int, long long>>> adj(n + 1);\n    for (int i = 0; i < m; ++i) {\n        int u, v; long long w;\n        cin >> u >> v >> w;\n        adj[u].push_back({v, w});\n        adj[v].push_back({u, w});\n    }\n\n    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<>> pq;\n    vector<long long> dist(n + 1, INF);\n\n    dist[1] = 0;\n    pq.push({0, 1});\n\n    while (!pq.empty()) {\n        auto [d, u] = pq.top();\n        pq.pop();\n\n        if (d > dist[u]) continue;\n\n        for (auto [v, w] : adj[u]) {\n            if (dist[u] + w < dist[v]) {\n                dist[v] = dist[u] + w;\n                pq.push({dist[v], v});\n            }\n        }\n    }\n\n    for (int i = 1; i <= n; ++i) {\n        cout << (dist[i] == INF ? -1 : dist[i]) << (i == n ? \"\" : \" \");\n    }\n    cout << \"\\n\";\n    return 0;\n}"
+  }
 }

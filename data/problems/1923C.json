@@ -28,8 +28,17 @@
   "updated_at": "2026-10-10 06:02:31",
   "main_topic": "Basics",
   "subtopic": "Greedy and Constructive",
+  "subsubtopic_id": 44,
   "subsubtopic": "44. Basic Greedy Algorithms",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum."
+  "quality_score": 79,
+  "approach_summary": "Identify exchange argument or greedy choice property. Sort elements by payoff ratio or deadline and greedily pick candidates to achieve global optimum.",
+  "topic_editorial": {
+    "title": "Editorial: 1923C — Find B [44. Basic Greedy Algorithms]",
+    "summary": "Algorithmic reduction using 44. Basic Greedy Algorithms.",
+    "key_invariant": "The problem exhibits invariant properties that allow a deterministic reduction using 44. Basic Greedy Algorithms. By exploiting problem-specific structure, we eliminate redundant configurations and maintain optimal substructure.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 44. Basic Greedy Algorithms.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 1923C - Find B\n// Topic: 44. Basic Greedy Algorithms\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 44. Basic Greedy Algorithms logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

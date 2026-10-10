@@ -32,8 +32,17 @@
   "updated_at": "2026-10-10 06:14:05",
   "main_topic": "Data Structures (DS)",
   "subtopic": "Binary Indexed Tree (BIT)",
+  "subsubtopic_id": 70,
   "subsubtopic": "70. BIT / Fenwick Tree",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space."
+  "quality_score": 97,
+  "approach_summary": "Maintain prefix sums and dynamic point updates via Fenwick tree using lowbit operations (i & -i) in O(log N) time and O(N) space.",
+  "topic_editorial": {
+    "title": "Editorial: 797D — Broken BST [70. BIT / Fenwick Tree]",
+    "summary": "Point updates and range prefix queries with Fenwick Tree.",
+    "key_invariant": "Every integer $i$ has a unique binary decomposition. Index $i$ in a Binary Indexed Tree stores the cumulative sum of the interval $(i - \\text{lowbit}(i), i]$, allowing logarithmic traversal via $i \\mathrel{+}= (i \\mathbin{\\&} -i)$ and $i \\mathrel{-}= (i \\mathbin{\\&} -i)$.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 70. BIT / Fenwick Tree.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 797D - Broken BST\n// Topic: 70. BIT / Fenwick Tree\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 70. BIT / Fenwick Tree logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

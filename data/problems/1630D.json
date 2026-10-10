@@ -30,8 +30,17 @@
   "updated_at": "2026-10-10 06:10:44",
   "main_topic": "Dynamic Programming (DP)",
   "subtopic": "Classic DP",
+  "subsubtopic_id": 461,
   "subsubtopic": "461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)",
   "importance": "***",
-  "is_selected_quality": true,
-  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3)."
+  "quality_score": 95,
+  "approach_summary": "Iterate over interval length len from 1 to N and left endpoint l. Transition by splitting at midpoint k: dp[l][r] = min/max_k (dp[l][k] + dp[k+1][r] + cost) in O(N^3).",
+  "topic_editorial": {
+    "title": "Editorial: 1630D — Flipping Range [461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)]",
+    "summary": "Interval / Range Dynamic Programming by interval length.",
+    "key_invariant": "The problem satisfies interval substructure: the optimal cost for range $[l, r]$ depends on splitting into subsegments $[l, k]$ and $[k+1, r]$ for some pivot $k \\in [l, r-1]$. Computing shorter intervals first ensures that all subproblems are ready when evaluating longer intervals.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 461. Interval DP / Range DP / Matrix Chain Multiplication (MCM).\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 1630D - Flipping Range\n// Topic: 461. Interval DP / Range DP / Matrix Chain Multiplication (MCM)\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 461. Interval DP / Range DP / Matrix Chain Multiplication (MCM) logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

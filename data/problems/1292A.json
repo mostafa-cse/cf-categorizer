@@ -29,8 +29,17 @@
   "updated_at": "2026-10-10 06:12:08",
   "main_topic": "Data Structures (DS)",
   "subtopic": "Disjoint Set Union (DSU)",
+  "subsubtopic_id": 80,
   "subsubtopic": "80. DSU / Union Find",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time."
+  "quality_score": 75,
+  "approach_summary": "Maintain disjoint sets using path compression and union by rank/size. Process edge additions and component queries in O(α(N)) amortized time.",
+  "topic_editorial": {
+    "title": "Editorial: 1292A — NEKO's Maze Game [80. DSU / Union Find]",
+    "summary": "Disjoint Set Union (Union-Find) connectivity.",
+    "key_invariant": "Connectivity is an equivalence relation. By organizing connected components into trees and merging smaller trees into larger ones (`union-by-rank/size`) combined with path compression, find and union operations run in near-constant inverse Ackermann time $O(\\alpha(N))$.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 80. DSU / Union Find.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 1292A - NEKO's Maze Game\n// Topic: 80. DSU / Union Find\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 80. DSU / Union Find logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

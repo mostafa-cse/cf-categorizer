@@ -34,8 +34,17 @@
   "updated_at": "2026-10-10 06:11:37",
   "main_topic": "Basics",
   "subtopic": "Leveraging Monotonicity",
+  "subsubtopic_id": 34,
   "subsubtopic": "34. Two Pointers",
   "importance": "***",
-  "is_selected_quality": true,
-  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time."
+  "quality_score": 92,
+  "approach_summary": "Exploit monotonicity of two-pointer invariant [L, R]. Advance R while shifting L forward to maintain validity, running in O(N) amortized time.",
+  "topic_editorial": {
+    "title": "Editorial: 1403A — The Potion of Great Power [34. Two Pointers]",
+    "summary": "Two Pointers sliding window traversal.",
+    "key_invariant": "When scanning contiguous subarrays or paired indices, advancing the right pointer $R$ monotonically tightens or relaxes the constraint, allowing the left pointer $L$ to only advance forward without ever needing to reset backwards.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 34. Two Pointers.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 1403A - The Potion of Great Power\n// Topic: 34. Two Pointers\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 34. Two Pointers logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

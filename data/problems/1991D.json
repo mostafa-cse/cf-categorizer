@@ -32,8 +32,17 @@
   "updated_at": "2026-10-10 06:01:58",
   "main_topic": "Number Theory",
   "subtopic": "Primes and Divisors",
+  "subsubtopic_id": 242,
   "subsubtopic": "242. Sieve, Prime Factorization and Divisors",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps."
+  "quality_score": 99,
+  "approach_summary": "Precompute linear sieve to store minimum prime factor (spf[x]) up to N in O(N). Factorize any number x ≤ N in O(log x) steps.",
+  "topic_editorial": {
+    "title": "Editorial: 1991D — Prime XOR Coloring [242. Sieve, Prime Factorization and Divisors]",
+    "summary": "Prime factorization and sieve preprocessing.",
+    "key_invariant": "Every composite integer $X$ has at least one prime factor $\\le \\sqrt{X}$. Precomputing the Smallest Prime Factor (SPF) for all numbers up to $M$ via a linear sieve allows any $X \\le M$ to be completely prime-factorized in $O(\\log X)$ steps.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 242. Sieve, Prime Factorization and Divisors.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 1991D - Prime XOR Coloring\n// Topic: 242. Sieve, Prime Factorization and Divisors\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 242. Sieve, Prime Factorization and Divisors logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

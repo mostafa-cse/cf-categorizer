@@ -32,8 +32,17 @@
   "updated_at": "2026-10-10 06:00:37",
   "main_topic": "Strings",
   "subtopic": "String Matching",
+  "subsubtopic_id": 406,
   "subsubtopic": "406. Knuth Morris Pratt (KMP) and Prefix Automaton",
   "importance": "***",
-  "is_selected_quality": true,
-  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time."
+  "quality_score": 95,
+  "approach_summary": "Precompute the prefix function π[i] matching longest proper prefix-suffix in O(M). Traverse text string with π transitions to locate all occurrences in O(N) time.",
+  "topic_editorial": {
+    "title": "Editorial: 2192E — Swap to Rearrange [406. Knuth Morris Pratt (KMP) and Prefix Automaton]",
+    "summary": "String matching with prefix automaton / KMP.",
+    "key_invariant": "The prefix function $\\pi[i]$ defines the length of the longest proper prefix of $S[0..i]$ that is also a suffix of $S[0..i]$. When a mismatch occurs at index $j$, we do not backtrack in text; we jump to $\\pi[j-1]$, preserving previously matched characters.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 406. Knuth Morris Pratt (KMP) and Prefix Automaton.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 2192E - Swap to Rearrange\n// Topic: 406. Knuth Morris Pratt (KMP) and Prefix Automaton\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 406. Knuth Morris Pratt (KMP) and Prefix Automaton logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

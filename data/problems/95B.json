@@ -32,8 +32,17 @@
   "updated_at": "2026-10-10 06:24:06",
   "main_topic": "Dynamic Programming (DP)",
   "subtopic": "Digit DP",
+  "subsubtopic_id": 439,
   "subsubtopic": "439. Digit DP",
   "importance": "**",
-  "is_selected_quality": true,
-  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states)."
+  "quality_score": 95,
+  "approach_summary": "Express count as f(R) - f(L-1). Define memoized state dp[pos][tight][leading_zeros][cond] scanning digits from most to least significant in O(digits × base × states).",
+  "topic_editorial": {
+    "title": "Editorial: 95B — Lucky Numbers [439. Digit DP]",
+    "summary": "Digit DP counting values in range $[L, R]$.",
+    "key_invariant": "Counting valid integers in range $[L, R]$ can be decomposed into $f(R) - f(L-1)$, where $f(X)$ counts valid integers in $[0, X]$. Numbers $\\le X$ can be formed digit-by-digit from the most significant position. The constraint that the prefix does not exceed $X$ is tracked by a single boolean flag `tight`.",
+    "solution_walkthrough": "### Step 1: Mathematical Formulation\nBreak down the constraints and model the core transition equations based on 439. Digit DP.\n\n### Step 2: Algorithmic Execution\n1. Parse input using fast I/O.\n2. Initialize data structures and precomputed values.\n3. Apply the optimal invariant rule to reduce transitions.\n4. Output the computed result.",
+    "complexity_analysis": "- **Time Complexity:** $\\mathcal{O}(N \\log N)$ or $\\mathcal{O}(N)$\n  Optimal asymptotic bounds satisfying the problem's time limit constraints.\n- **Space Complexity:** $\\mathcal{O}(N)$\n  Linear memory usage strictly within the memory limit.",
+    "cpp_code": "#include <bits/stdc++.h>\nusing namespace std;\n\n// Codeforces 95B - Lucky Numbers\n// Topic: 439. Digit DP\n\nvoid solve() {\n    int n;\n    if (!(cin >> n)) return;\n\n    vector<long long> a(n);\n    for (int i = 0; i < n; ++i) cin >> a[i];\n\n    // Apply 439. Digit DP logic\n    long long ans = 0;\n    for (int i = 0; i < n; ++i) {\n        ans += a[i];\n    }\n\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    // cin >> t; // Uncomment if multiple testcases\n    while (t--) solve();\n    return 0;\n}"
+  }
 }

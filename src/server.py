@@ -314,10 +314,17 @@ async def get_problem_detail(problem_id: str):
         c.importance, c.quality_score, c.approach_summary,
         COALESCE(u.is_solved, 0) as is_solved,
         COALESCE(u.is_bookmarked, 0) as is_bookmarked,
-        COALESCE(u.notes, '') as notes
+        COALESCE(u.notes, '') as notes,
+        e.title as editorial_title,
+        e.key_invariant as editorial_key_invariant,
+        e.solution_walkthrough as editorial_solution_walkthrough,
+        e.complexity_analysis as editorial_complexity_analysis,
+        e.cpp_code as editorial_cpp_code,
+        e.full_markdown as editorial_full_markdown
     FROM problems p
     LEFT JOIN categorized_problems c ON p.id = c.problem_id
     LEFT JOIN user_progress u ON p.id = u.problem_id
+    LEFT JOIN problem_editorials e ON p.id = e.problem_id
     WHERE p.id = ?
     """, (problem_id,))
 
@@ -344,6 +351,19 @@ async def get_problem_detail(problem_id: str):
     d['is_bookmarked'] = bool(d['is_bookmarked'])
 
     return d
+
+
+@app.get("/api/problems/{problem_id}/editorial")
+async def get_problem_editorial(problem_id: str):
+    """Returns markdown and structured editorial for a problem."""
+    conn = db.get_db_connection()
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM problem_editorials WHERE problem_id = ?", (problem_id,))
+    row = cur.fetchone()
+    conn.close()
+    if not row:
+        raise HTTPException(status_code=404, detail="Editorial not found")
+    return dict(row)
 
 
 @app.post("/api/user/toggle_solved/{problem_id}")
